@@ -1,0 +1,735 @@
+{
+  "schema_version": "1.0.0",
+  "file_id": "natura-biology",
+  "authored_utc": "2026-07-15",
+  "source_corpus_commit_at_authorship": "f1be794",
+  "reviewer": "NONE - PENDING EXPERT REVIEW. An adversarial CITATION AUDIT (not an expert review) was run 2026-07-15 -- see adversarial_audit_2026_07_15. It checked the authorities; it did NOT check the Sanskrit or Latin competence of the renderings, and it is not a substitute for the expert review still owed.",
+
+  "adversarial_audit_2026_07_15": {
+    "what_was_done": "Every Sanskrit and Latin headword quoted in this file was independently re-retrieved from the named authority and compared against this file's quotation of it. Cologne Digital Sanskrit Dictionaries MWScan 2020 getword.php for: koSikA, koSa, tvac, JillI, rUpa, janana, prakfti. Perseus Digital Library Perseus:text:1999.04.0059 for: cellula, cella, membrana, evolutio, natura, auctoritas.",
+    "headline_result": "NO FABRICATED HEADWORD WAS FOUND. Every headword this file cites EXISTS in the authority it names, and the great majority of the quotations are faithful, including the two sharpest and most checkable claims: 'koSikA f. a drinking-vessel, L.' and 'JillI f. a cricket, BhP. v'. Both re-read verbatim. The file's central finding -- that the modern words for 'cell' and 'membrane' are not carried by MW in those senses -- SURVIVES the audit intact. No pseudopropheta was found in this file.",
+    "defects_found_and_corrected": [
+      "FALSE BLANKET ATTRIBUTION (the most serious): kośa's five anatomical senses were tagged '(all L.)'. MW gives three of them literary authorities -- 'the membrane covering an egg (in the womb)' (Suśr.; VarBṛ.; MārkP.), 'a testicle or the scrotum' (Suśr.; VarBṛS.), 'the penis' (W.). Only 'the vulva' and 'an egg' are L. Corrected in two places. This is a SIGNUM SIGNUM MANET failure -- an attribution merged across five senses that do not share one -- and it made the entry's own trap look SMALLER than it is.",
+      "SELECTIVE QUOTATION propping up a false claim: the L&S cellula quotation dropped its trailing 'acc. to cella, II. D., Petr. 11, 1', and that omission was the sole support for the claim that the diminutive 'narrows to the store-room'. cella II. D. is a room in a brothel. Claim struck, quotation restored.",
+      "CITED OVERCLAIM against the file's own status_vocabulary: membrana was marked flatly 'CITED' and called the register where 'the authority carries the claimed sense outright', while the same entry's ambiguity_notes state 'the word does not carry the chemistry'. Both could not stand. Scoped to 'CITED (as covering -- NOT as lipid bilayer)', matching the discipline already applied to tvac.",
+      "DROPPED GRAMMATICAL QUALIFIER: MW marks janana's adjectival sense 'ifc.'; this file quoted it as plain 'mfn.' and dropped the qualifier. janana is the final member of the proposed rūpajanana, so the marking is directly load-bearing and points at a parse the file's literal_gloss does not admit. Also restored the omitted 'race, lineage, L.' sense.",
+      "UNRECORDED FREIGHT: L&S natura II. D. is 'the natural organs of generation'. The author catalogued this exact near-miss class for kośa and missed it in his own Latin.",
+      "BANNED WORD IN AUTHOR VOICE: 'perfect' used twice of citations, in a file that cites rule 18.14 against it."
+    ],
+    "the_pattern_in_the_defects": "Every one of the six ran in the SAME DIRECTION: each made a register look better-attested, or a trap look smaller, than the authority supports. None was a fabrication and none was random. That is the signature of motivated quotation rather than invention, and it is the failure mode a file this rigorous is actually exposed to -- the author was hunting Sanskrit metaphysics, treated Latin as the safe register, and trimmed quotations that complicated a point he had already reached. A reviewer should assume the LATIN registers here received materially less scrutiny than the Sanskrit ones.",
+    "what_this_audit_did_NOT_do": "It verified that the authorities say what this file says they say. It did NOT verify that the renderings are good Sanskrit or good Latin, did NOT run a single back_translation_test, and raises NO UNI rung. Every test in this file remains NOT-RUN. A dictionary citation is not a UNI gate, and an audit of citations is not one either.",
+    "falsifier": "Re-retrieve any headword listed under what_was_done and show that this audit's correction is itself wrong. The endpoints are named and the lookups are repeatable."
+  },
+
+  "task_premise_refuted": {
+    "what_was_asked": "Author the five registers for every concept in lexicon/CONCEPTS.json whose domain matches 'natura-biology', and write them to lexicon/terms/natura-biology.json.",
+    "what_was_observed": "The domain 'natura-biology' DOES NOT EXIST in CONCEPTS.json and matches ZERO concepts. The string 'natura-biology' appears in 0 files of this repository (grep, whole tree excluding .git, 2026-07-15).",
+    "evidence": "CONCEPTS.json declares a CLOSED enum at .domains_registered with exactly eight values: active-inference-math, pomdp-tensors, markov-blanket, method, sovereign-vocabulary, natura, world-context, build-objects. A count of the .concepts[].domain field returns active-inference-math 29, pomdp-tensors 9, markov-blanket 14, method 21, sovereign-vocabulary 27, natura 20, world-context 3, build-objects 7 = 130, which reconciles exactly with .counts_at_authorship.concepts = 130. The source file is internally consistent; the requested domain is simply not one of its values.",
+    "why_this_block_exists_instead_of_an_empty_file": "Writing this path with an empty concepts array would have satisfied the instruction literally while asserting a falsehood structurally: the filename plus an empty array reads to every future reader as 'the natura-biology domain exists and happens to contain nothing', when the observed fact is that no such domain was ever registered. That is fabrication by artifact, and RES IPSAE NON SIMULACRA forbids it.",
+    "why_the_enum_was_not_widened": "Writing \"domain\": \"natura-biology\" into any entry would manufacture precisely the defect CONCEPTS.json's own falsifier list names: 'a domain is outside domains_registered'. Every entry below therefore carries its TRUE domain value, \"natura\", copied unaltered from CONCEPTS.json. The join key (concept_id) and the closed enum are left uncorrupted. This file's NAME is the orchestrator's; this file's DATA is the corpus's.",
+    "falsifier": "Produce a commit of CONCEPTS.json in which .domains_registered contains 'natura-biology'. That would refute this block, and this file should then be re-authored against the real partition."
+  },
+
+  "selection": {
+    "criterion_applied": "From the 20 concepts in the registered domain 'natura', the 8 whose SUBJECT is life were authored. This subset is an EDITORIAL CHOICE MADE BY THE AUTHOR OF THIS FILE. It is NOT carried by CONCEPTS.json, which draws no biology/physics line inside 'natura'. It is recorded here so it can be overruled rather than inherited silently.",
+    "authored_here": [
+      "CELL",
+      "MEMBRANE",
+      "MORPHOGENESIS",
+      "ALLOMETRY",
+      "CONVERGENT_EVOLUTION",
+      "CONSTRAINT_OPTIMUM",
+      "NATURE_AS_AUTHORITY",
+      "ADAPTATIONIST_COUNTERWEIGHT"
+    ],
+    "not_authored_here_and_therefore_still_owed": {
+      "note": "NO WORK LEFT BEHIND: these 12 registered 'natura' concepts are NOT covered by any file as of this commit. They are listed so the gap is visible rather than silent. Their subject is measurement, physics or dynamics, not life.",
+      "concept_ids": [
+        "RATIO",
+        "DIMENSIONLESS_NUMBER",
+        "REYNOLDS_NUMBER",
+        "SCALING_LAW",
+        "REGIME_BOUNDARY",
+        "SCALE_LADDER",
+        "RUNG",
+        "EMERGENCE",
+        "FREQUENCY",
+        "RESONANCE",
+        "DIFFUSION",
+        "GRADIENT"
+      ],
+      "diffusion_exclusion_receipt": "DIFFUSION was excluded on the corpus's OWN words, not on the author's judgement: its CONCEPTS.json note ends 'the constraint is geometric, not biological.'",
+      "falsifier": "If the orchestrator intended 'natura-biology' to mean the whole 'natura' domain, this file is 12 concepts short and must be extended."
+    }
+  },
+
+  "authorities_consulted": {
+    "sanskrit": "Monier-Williams, A Sanskrit-English Dictionary (Oxford, 1899), read via the Cologne Digital Sanskrit Dictionaries (sanskrit-lexicon.uni-koeln.de), MWScan 2020 webtc getword.php endpoint, all lookups 2026-07-15. Every Sanskrit headword quoted below was retrieved and read; none is recalled from memory.",
+    "latin": "Lewis & Short, A Latin Dictionary (Oxford, 1879), read via the Perseus Digital Library (Perseus:text:1999.04.0059), all lookups 2026-07-15. Every Latin headword quoted below was retrieved and read; none is recalled from memory.",
+    "hindi": "Platts, A Dictionary of Urdu, Classical Hindi and English (1884), read via the Digital South Asia Library (dsal.uchicago.edu), 2026-07-15. McGregor, Oxford Hindi-English Dictionary, WAS NOT CONSULTED in this pass. Every Hindi register below is therefore PENDING-CITATION.",
+    "spanish": "Diccionario de la lengua espanola (RAE, dle.rae.es) returned HTTP 403 to every request in this pass and COULD NOT BE READ. No Spanish dictionary was consulted. Every Spanish register below is therefore PENDING-CITATION, and its gloss is the author's working knowledge, unsourced.",
+    "honest_bound": "Sanskrit and Latin registers rest on a read entry. Hindi and Spanish registers rest on NOTHING but the author's working knowledge and are fenced accordingly. That asymmetry is real and is not smoothed over."
+  },
+
+  "status_vocabulary": {
+    "CITED": "The headword was retrieved from the named authority AND that authority carries it in the claimed sense. The entry quotes what the authority actually says.",
+    "PENDING-CITATION": "Plausible, but the authority was not read in this pass, or was read and does not settle the sense. Carries the exact falsifier that would close it.",
+    "COINED": "The authority carries NO term in the claimed sense. A compound is proposed and MUST carry its morphological derivation, with the attestation state of each member stated separately.",
+    "NOT-ATTEMPTED": "No rendering is proposed. Proposing one without a read member would be a pseudopropheta, so nothing is proposed.",
+    "a_note_on_the_sharpest_case": "Two registers below sit in a state the four labels do not cleanly name: the HEADWORD was found and read, but the authority carries it in a DIFFERENT sense than the modern one. kosika and jhilli are both of this kind. They are marked COINED (the claimed sense is a modern coinage on an old headword), and the field headword_as_in_lexicon quotes what the lexicon ACTUALLY says so the reader can see the gap rather than take the author's word for it."
+  },
+
+  "falsifiers": [
+    "Any Sanskrit or Latin headword below is shown not to exist in the cited authority, or not to carry the sense in which this file quotes it. That entry is a pseudopropheta and must be struck to PENDING-CITATION.",
+    "Any entry marked CITED is shown to rest on a sense the authority does not carry.",
+    "Any COINED entry is shown to have an attested classical equivalent that was missed. The coinage must then be withdrawn in favour of the attestation.",
+    "Any back_translation_test below is RUN and FAILS. Every test in this file is NOT-RUN; no register here has passed anything.",
+    "Any entry is shown to render a TRUE-store concept with a term that asserts an experiencer, a soul, or a metaphysics the definition withholds.",
+    "A domain value other than 'natura' appears in any entry of this file.",
+    "Any quotation of an authority in this file is shown to be TRIMMED, re-attributed, or otherwise shaped so as to make a register look better-attested than the authority supports. This falsifier was ADDED 2026-07-15 after an adversarial audit found six such defects, all running in that one direction (see adversarial_audit_2026_07_15). The original falsifier list guarded only against INVENTED entries; it did not guard against motivated quotation of real ones, which is the defect this file actually had."
+  ],
+
+  "not_claimed": [
+    "No register in this file is claimed to be a correct translation. Per rule 18.14 of the operator's charter ('Do not claim perfect translation'), every rendering below travels PENDING / SUB EXAMINE until its back-translation test is run by a competent reader who is not the author.",
+    "No back_translation_test in this file has been run. The tests are written; none has an outcome.",
+    "This file raises no UNI rung, discharges no gate, and states no fact about nature. A dictionary citation is not a UNI gate.",
+    "The Hindi and Spanish registers are not claimed at all: no dictionary was successfully read for either."
+  ],
+
+  "terms": [
+    {
+      "concept_id": "CELL",
+      "domain": "natura",
+      "store": "TRUE",
+      "definition_from_concepts_json": "The design unit of biology and the canonical Markov blanket, plasma-membrane bounded and dominated by viscosity and diffusion at Re of order 1e-5.",
+      "sanskrit": {
+        "devanagari": "कोशिका",
+        "iast": "kosika",
+        "iast_precise": "kosika (kośikā)",
+        "headword_as_in_lexicon": "koSikA f. a drinking-vessel, L. -- AND -- koSikA f. of koSaka, q.v.",
+        "grammar": "f., derived from kośa (m./n.) + the diminutive/feminine suffix -ikā",
+        "literal_gloss": "little vessel; little container",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (Oxford, 1899), s.v. कोशिका kośikā, read via Cologne Digital Sanskrit Dictionaries, MWScan 2020, getword.php?key=koSikA, 2026-07-15. Parent headword read at s.v. कोश kośa, getword.php?key=koSa, same date.",
+        "status": "COINED",
+        "derivation": "kośa + -ikā. The parent kośa IS richly attested (MW s.v. कोश): 'a cask, vessel for holding liquids' (RV.; AV.; Suśr.), 'a sheath, scabbard' (MBh.; R.; VarBṛS.), 'a case, covering, cover' (AV.; ChUp.; MuṇḍUp.; TUp.), 'the sheath or integument of a plant, pod, nut-shell' (MārkP.), 'the cocoon of a silk-worm' (Yājñ.), 'the membrane covering an egg (in the womb)' (Suśr.; VarBṛ.; MārkP. -- CORRECTED 2026-07-15: this sense was previously mis-cited here to 'L.', which understated its attestation by a whole class. MW gives it literary authorities in the medical corpus. The misattribution was the author's, not the authority's).",
+        "why_coined_and_not_cited": "THIS IS THE ENTRY MOST LIKELY TO BE FAKED, SO READ THE GAP. कोशिका is the standard MODERN Sanskrit/Hindi word for the biological cell, and a translator would reach for it instantly and report it as attested. Monier-Williams 1899 DOES carry the headword -- but ONLY as 'a drinking-vessel', and only on the authority 'L.' (lexicographers: attested in native word-lists, with NO literary citation behind it). MW does not carry the biological sense at all. The biological sense is a modern scientific coinage laid on an old headword. Marking this CITED would be a pseudopropheta.",
+        "attestation_weakness_note": "Even the drinking-vessel sense is MW's weakest class: 'L.' means the word is known from lexicographers only, not from any text in the corpus. The headword is thinly attested even in the sense MW does give it."
+      },
+      "latin": {
+        "form": "cellula",
+        "headword_as_in_lexicon": "cellŭla, ae, f. dim. cella -- I. 'a small store-room or apartment' (Ter. Eun. 2, 3, 19; Col. 8, 9, 3); and 'acc. to cella, II. D.' (Petr. 11, 1). QUOTATION CORRECTED 2026-07-15: an earlier version of this field quoted only the store-room sense and SILENTLY DROPPED the trailing cross-reference to cella II. D. That omission was not neutral -- it was the sole evidence for this entry's now-struck claim that the diminutive 'narrows' to the store-room. L&S s.v. cella II. D. was re-read: it is 'a room in a brothel' (Petr.; Juv.). cellula inherits it explicitly, on Petronius.",
+        "grammar": "f., 1st declension; diminutive of cella",
+        "literal_gloss": "a small store-room; a little chamber",
+        "citation": "Lewis & Short, A Latin Dictionary (Oxford, 1879), s.v. cellula, read via Perseus Digital Library, Perseus:text:1999.04.0059:entry=cellula, 2026-07-15. Parent headword read at s.v. cella, same source and date.",
+        "classical_or_post_classical": "POST-CLASSICAL IN THE CLAIMED SENSE. The FORM cellula is classical and is carried by L&S with Terence and Columella behind it. The BIOLOGICAL SENSE is not in L&S at all; L&S gives only the store-room/apartment sense.",
+        "status": "CITED (form only, NOT the biological sense)",
+        "provenance_of_the_biological_sense": "Standard histories attribute the biological sense to Robert Hooke, Micrographia (1665), likening the pores of cork to the cells of a monastery. THAT ATTRIBUTION IS NOT-CONFIRMED: the primary was not read in this pass, and it is recorded at one remove. Falsifier: read Micrographia and confirm or strike.",
+        "why_not_cella": "cella alone is worse -- see forbidden_mistranslations -- BUT NOT AS MUCH WORSE AS THIS FILE ORIGINALLY CLAIMED. Struck 2026-07-15: the original argument was that the diminutive 'narrows to the store-room'. L&S refutes it. cellula's own entry ends 'acc. to cella, II. D., Petr. 11, 1', and cella II. D. is a room in a brothel. The diminutive therefore carries that register too, on the authority's own cross-reference. The honest position is now weaker: cellula avoids the TEMPLE-SANCTUARY sense (cella II. A.) and the bath-house sense (II. B.), which is a real if modest gain, and it does NOT escape the brothel sense. The proposal stands on the diminutive's smaller sense-range, not on a narrowing that does not exist."
+      },
+      "english": {
+        "term": "cell",
+        "definition": "The design unit of biology and the canonical Markov blanket, plasma-membrane bounded and dominated by viscosity and diffusion at Re of order 1e-5."
+      },
+      "hindi": {
+        "devanagari": "कोशिका",
+        "transliteration": "kosika (kośikā)",
+        "gloss": "cell (biological) -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE. Platts, A Dictionary of Urdu, Classical Hindi and English (1884), read via dsal.uchicago.edu 2026-07-15, returned 'No results for search term कोशिका' -- a READ NEGATIVE, recorded as such. Platts does not carry the headword at all. McGregor's Oxford Hindi-English Dictionary was not consulted.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Consult McGregor, Oxford Hindi-English Dictionary, s.v. कोशिका. If it carries the biological sense, this closes to CITED. The Platts negative is itself informative: it corroborates that the cell sense post-dates 1884 and is not classical Hindi-Urdu."
+      },
+      "spanish": {
+        "term": "celula (célula)",
+        "gloss": "cell (biological) -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE. dle.rae.es returned HTTP 403 to every request in this pass; no RAE entry was read.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Read the RAE Diccionario de la lengua espanola, s.v. celula, and quote its numbered biological sense and etymology."
+      },
+      "ambiguity_notes": [
+        "kośa/kośikā is a CONTAINER word. Its whole attested field is vessel, cask, box, sheath, scabbard, pod, nut-shell, cocoon. It therefore imports the image of a hollow thing whose interesting property is that it holds something. A cell is not primarily a container: the definition's load-bearing property is the BOUNDARY and its conditional independence, not the volume enclosed.",
+        "THE HEAVIEST FREIGHT IN THIS FILE: MW s.v. कोश explicitly carries 'the three sheaths' as a Vedanta technical sense (authority: Vedāntas.). This is the pancakosa doctrine, in which the kosas are the sheaths ENVELOPING THE ATMAN. Rendering 'cell' as kośa/kośikā to a reader trained in Vedanta says that a cell is a sheath around a self. That asserts exactly the metaphysics the corpus withholds, and it does so invisibly, because the word looks like a neutral technical term.",
+        "MW s.v. कोश also gives 'a dictionary, lexicon or vocabulary'. A word meaning 'lexicon' is a poor choice of headword INSIDE a lexicon file: kośa is the standard Sanskrit word for the genre this very file belongs to (cf. Amarakosa). The collision is real and will confuse readers of this document specifically.",
+        "MW s.v. कोश carries anatomical senses that are near-misses and therefore dangerous. CORRECTED 2026-07-15 BY ADVERSARIAL RE-READ: an earlier version of this note attributed all five to 'L.' That blanket attribution was FALSE and has been struck. MW's actual authorities, re-read at getword.php?key=koSa: 'the membrane covering an egg (in the womb)' -- Suśr.; VarBṛ.; MārkP. (NOT L.); 'a testicle or the scrotum' -- Suśr.; VarBṛS. (NOT L.); 'the penis' -- W. (Wilson, NOT L.); 'the vulva' -- L.; 'an egg' -- L. Only two of the five are L. THE CORRECTION CUTS AGAINST THE AUTHOR AND SHARPENS THE WARNING: kośa's anatomical senses are NOT lexicographers-only curiosities, they are attested in Suśruta -- the classical medical corpus itself. A reader may therefore take kośa as already-anatomical, ON GOOD LITERARY EVIDENCE, and conclude the biological sense is attested. It is attested for THOSE organs, in medicine, and NOT for the cell. The false '(all L.)' had made this trap look smaller than it is.",
+        "Latin cellula imports a SMALL ROOM: the monastic and domestic register. A room is a negative space defined by its walls; the concept's boundary is an active, selectively permeable, physically-constituted surface. The metaphor inverts which part is the object.",
+        "The definition calls the cell 'the canonical Markov blanket'. Read this WITH the MEMBRANE entry: 'canonical' names the standard EXAMPLE, and does not mean I(mu;eta|b) was ever estimated for a cell. It was not. No register may be chosen so as to make the blanket claim sound settled.",
+        "Re of order 1e-5 is a scope, not a decoration: it fixes the cell in the viscous regime. A rendering that ports the word to a macroscopic 'chamber' loses the only property that makes the physics of the referent what it is."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit जीव jiva ('living being, soul, life-principle')",
+          "why_wrong": "Imports an animating soul and, in Jain and Vedantic usage, a transmigrating self. The concept is a membrane-bounded physical unit. This asserts an experiencer where the definition names none, and it is the single most attractive wrong answer because 'cell' and 'living thing' feel adjacent in English."
+        },
+        {
+          "rendering": "Sanskrit अणु anu ('atom, minute particle')",
+          "why_wrong": "Wrong rung of the scale ladder by roughly five orders of magnitude, and it imports Vaisesika atomism. A cell is not a minimal particle; it is a bounded system with interior dynamics."
+        },
+        {
+          "rendering": "Latin cella, unmodified",
+          "why_wrong": "L&S s.v. cella gives, alongside the storeroom sense, 'The part of a temple in which the image of a god stood, the chapel' (II. A.), an apartment in a bathing-house (II. B.), the chamber of servants and slaves, and a room in a brothel (II. D., Petr.; Juv.). Every one of those registers is imported with the word. LAST SENTENCE STRUCK 2026-07-15 AS REFUTED BY THE CITED AUTHORITY: it read 'The diminutive cellula at least narrows to the store-room, which is why the diminutive and not the parent is proposed.' L&S s.v. cellula explicitly carries 'acc. to cella, II. D., Petr. 11, 1' -- the brothel sense passes straight into the diminutive. cellula escapes the temple and bath senses, not the brothel one. That is a smaller argument for the diminutive than this file made, and the smaller one is the true one."
+        },
+        {
+          "rendering": "Latin cellula presented as a classical biological term",
+          "why_wrong": "L&S was read and REFUTES this: it carries only 'a small store-room or apartment' (Ter.; Col.). Presenting the biological sense as classical fabricates an attestation that the authority does not contain."
+        },
+        {
+          "rendering": "Sanskrit कोशिका presented as MW-attested in the biological sense",
+          "why_wrong": "MW was read and REFUTES this: 'koSikA f. a drinking-vessel, L.' The headword is real; the sense is modern. This is the exact shape of the pseudopropheta the brief warns against -- a real headword carrying a sense its authority never gave it."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the bare rendering (कोशिका / cellula) with NO English gloss and no surrounding context to at least two readers competent in the register, blind to this file and to each other. Ask each: (1) render this word back into English; (2) state which of these it names -- (a) a room or storeroom, (b) a vessel or container, (c) a sheath enveloping a self, (d) a lexicon, (e) the membrane-bounded design unit of biology; (3) state whether the word, as you read it, asserts that the thing is alive, has a soul, or has an inside and an outside that are statistically independent given its surface.",
+        "pass_criterion": "PASS iff BOTH readers independently return (e) at step 2, AND neither back-translation at step 1 asserts a soul, an experiencer, or a Markov blanket at step 3. Any reader returning (a), (b), (c) or (d) FAILS this register to PENDING-CITATION and the coinage must be re-cut.",
+        "expected_outcome_on_current_evidence": "Given that MW carries kośikā ONLY as 'a drinking-vessel' and L&S carries cellula ONLY as 'a small store-room', the honest prediction is that a classically-trained reader FAILS both renderings, returning (b) for the Sanskrit and (a) for the Latin. This test is written expecting to fail. That is the point of writing it.",
+        "status": "NOT-RUN"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "Sanskrit: headword read, claimed sense REFUTED by the authority -- coinage stands or falls on expert review. Latin: form read and carried, biological sense read and ABSENT. Hindi: read negative in Platts, unsourced otherwise. Spanish: unsourced. Overall: LOW. The most valuable content in this entry is the gap between the modern word and what the 1899 and 1879 authorities actually say."
+    },
+    {
+      "concept_id": "MEMBRANE",
+      "domain": "natura",
+      "store": "TRUE",
+      "definition_from_concepts_json": "A selectively permeable lipid boundary, which is a surface for reasons of lipid physics and history, and whose satisfying I(mu;eta|b) = 0 is a DIFFERENT question whose answer is NOT-MEASURED.",
+      "sanskrit": {
+        "devanagari": "त्वच्",
+        "iast": "tvac",
+        "headword_as_in_lexicon": "tvac f. 'skin (of men, serpents &c.), hide (of goats, cows &c.)' (RV. &c.); 'bark, rind, peel' (RV. &c.); 'a leather bag' (RV. v, 33, 7); 'a horse's covering' (RV. viii, 1, 32); 'Earth's surface'; 'darkness (as black cover)'; 'a mystical name for the letter ya'. Verb, cl. 6, tvacati 'to cover' (Dhatup.).",
+        "grammar": "f., consonant stem; root sense 'to cover' (tvacati, Dhatup.)",
+        "literal_gloss": "skin; hide; bark; a covering",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (Oxford, 1899), s.v. त्वच् tvac, read via Cologne Digital Sanskrit Dictionaries, MWScan 2020, getword.php?key=tvac, 2026-07-15.",
+        "status": "CITED (as 'covering/skin' -- NOT as 'lipid bilayer')",
+        "scope_note": "tvac is CITED in the sense 'a covering', and that is a real match to the concept's structural role. It is NOT cited, and cannot be, in the concept's defining sense: a SELECTIVELY PERMEABLE LIPID boundary. tvac names a macroscopic integument -- the skin of a man, the hide of a cow, the bark of a tree. The concept names a molecular bilayer. The word is right about the topology and silent about the chemistry, the scale, and the permeability, which are the whole definition.",
+        "why_not_jhilli": "See forbidden_mistranslations. The obvious modern word is a trap and was read."
+      },
+      "latin": {
+        "form": "membrana",
+        "headword_as_in_lexicon": "membrāna, ae, f. membrum, I. 'the skin or membrane that covers parts of the body (class.)'",
+        "grammar": "f., 1st declension; from membrum",
+        "literal_gloss": "the skin or membrane covering parts of the body",
+        "citation": "Lewis & Short, A Latin Dictionary (Oxford, 1879), s.v. membrana, read via Perseus Digital Library, Perseus:text:1999.04.0059:entry=membrana, 2026-07-15. L&S cites inter alia Cic. N.D. 2, 57, 142 ('natura oculos membranis tenuissimis vestivit'), with further citations to Pliny, Celsus, Ovid and Lucan; and, in the transferred sense 'parchment', to Quintilian and Horace.",
+        "classical_or_post_classical": "CLASSICAL IN THE ANATOMICAL-COVERING SENSE. L&S marks that sense 'class.' explicitly. The concept's defining sense is NOT classical and is not in L&S at all.",
+        "status": "CITED (as 'the skin or membrane that covers parts of the body' -- NOT as 'a selectively permeable LIPID boundary')",
+        "status_downgraded_2026_07_15": "This field previously read, flatly, 'CITED'. That was an overclaim BY THIS FILE'S OWN status_vocabulary, which defines CITED as requiring that the authority carry the headword IN THE CLAIMED SENSE. The claimed sense here is a selectively permeable lipid bilayer. L&S carries no such sense. The scoping discipline this file applies to tvac -- 'CITED (as X, NOT as Y)' -- was not applied to membrana, and the inconsistency flattered the Latin. It is now applied.",
+        "why_this_is_the_best_attested_register_in_the_file": "REWRITTEN 2026-07-15. This field previously asserted that 'the authority carries the claimed sense outright'. That sentence was FALSE and is struck: it is contradicted by this entry's OWN ambiguity_notes, which state 'L&S carries the word, and the word does not carry the chemistry'. The two could not both stand. What is true and survives: membrana is the best-ATTESTED register in this file. Its headword is read, its anatomical-covering sense is carried, marked 'class.' by L&S, with Cicero behind it, and it is neither a coinage nor a modernism. That is attestation of the TOPOLOGY only. It is not attestation of the concept, and the gap between those two is the entry's real content -- see the scale trap in ambiguity_notes. It is also, for that reason, the entry where a translator is most likely to stop reading."
+      },
+      "english": {
+        "term": "membrane",
+        "definition": "A selectively permeable lipid boundary, which is a surface for reasons of lipid physics and history, and whose satisfying I(mu;eta|b) = 0 is a DIFFERENT question whose answer is NOT-MEASURED."
+      },
+      "hindi": {
+        "devanagari": "झिल्ली",
+        "transliteration": "jhilli (jhillī)",
+        "gloss": "membrane -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE consulted for the Hindi register. NOTE the Sanskrit reading below: MW s.v. झिल्ली does NOT carry 'membrane'. Whether modern Hindi has moved the word is a SEPARATE question that this pass did not settle.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Consult McGregor, Oxford Hindi-English Dictionary, s.v. झिल्ली. If modern Hindi carries 'membrane', this closes to CITED for Hindi ONLY -- and would sharpen, not soften, the Sanskrit warning: the same string means 'cricket' in the classical register and 'membrane' in the modern one."
+      },
+      "spanish": {
+        "term": "membrana",
+        "gloss": "membrane -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE. dle.rae.es returned HTTP 403 in this pass; no RAE entry was read.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Read the RAE Diccionario de la lengua espanola, s.v. membrana, and quote its numbered biological sense."
+      },
+      "ambiguity_notes": [
+        "THE SCALE TRAP, and it is the sharpest one here BECAUSE the Latin is genuinely CITED. Classical membrana is a TISSUE-SCALE object you could see and peel: Cicero's 'natura oculos membranis tenuissimis vestivit' is about the coats of the eye. The concept is a MOLECULAR lipid bilayer roughly 5 nm thick, whose defining properties are lipid physics and selective permeability. A fully-sourced classical citation can still be the wrong referent, and here it is: L&S carries the word, and the word does not carry the chemistry. An entry can be CITED and still not mean what you need it to mean -- this file's own worked example of that. ('A perfect classical citation' was the original wording; 'perfect' is banned in author voice by the same charter rule 18.14 this file invokes in not_claimed, and the word was doing rhetorical work here that the evidence does not need.)",
+        "membrana's transferred classical sense is 'parchment' (L&S, citing Quintilian and Horace). Parchment is a DEAD, PROCESSED, IMPERMEABLE sheet. That is the near-exact inverse of a selectively permeable living boundary, and it is a sense a classically-trained reader carries as live.",
+        "THE FREIGHT THE DEFINITION ITSELF GUARDS: the concept's own definition says the membrane's satisfying I(mu;eta|b) = 0 is a DIFFERENT question whose answer is NOT-MEASURED. So no register may be chosen because it suggests boundary-hood in the blanket sense. The corpus's note on this concept is blunt -- 'the observation that organisms have surfaces is not evidence that the surface is a Markov blanket' -- and it names the rule: do not let a membrane and a blanket be rendered with one term. Whatever renders MARKOV_BLANKET, it must not be tvac and must not be membrana.",
+        "tvac's ritual register is live and specific: MW carries 'a cow's hide used in Soma pressing' and 'a leather bag' (RV. v, 33, 7). The word arrives carrying sacrificial equipment. It also carries 'darkness (as black cover)' and 'a mystical name for the letter ya', either of which will read as deliberate symbolism to a Sanskritist encountering it in a technical document.",
+        "tvac means bark as readily as skin. Bark is dead secondary tissue. If the rendering is read botanically, the referent becomes a dead structural layer -- again the inverse of the living, selectively permeable object."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit झिल्ली jhilli, offered as the Sanskrit for 'membrane'",
+          "why_wrong": "READ AND REFUTED. MW s.v. झिल्ली gives: 'JillI f. a cricket, BhP. v; the wick of a lamp, L.; = JallikA, q.v., L.; rice burnt by cooking in a saucepan, L.; cymbals, W.; parchment, W.' The FIRST and only literarily-attested sense (BhP.) is A CRICKET -- the insect. jhilli is the standard MODERN word for membrane and a translator will reach for it with total confidence; a reader of classical Sanskrit receives 'a cricket'. This is the most concrete pseudopropheta this file found. Note that MW does give 'parchment, W.' (Wilson) -- which converges on membrana's dead-sheet sense, not on the living bilayer, so even the closest MW sense fails the concept."
+        },
+        {
+          "rendering": "Any rendering shared with MARKOV_BLANKET",
+          "why_wrong": "Forbidden by the concept's own definition and by the corpus note attached to it. Sharing a term silently converts 'organisms have surfaces' (observed) into 'that surface is a Markov blanket' (NOT-MEASURED for every real biological system). This is the wing's single sharpest discipline and a shared word would defeat it in one stroke."
+        },
+        {
+          "rendering": "Latin pellis ('hide, skin') or corium ('leather, hide')",
+          "why_wrong": "Both name the macroscopic integument as material -- hide to be worked. They lose permeability entirely and import the tanner's register. membrana is the better Latin precisely because L&S ties it to membrum and to the coats of the eye."
+        },
+        {
+          "rendering": "Sanskrit त्वच् tvac presented as attesting the LIPID or PERMEABLE sense",
+          "why_wrong": "MW was read: it gives skin, hide, bark, covering, leather bag, Earth's surface, darkness. Nothing in the entry touches selectivity, permeability, or lipid. Citing tvac for the concept's defining properties would claim a sense the authority does not carry."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the bare rendering (त्वच् / membrana) with NO gloss to at least two readers competent in the register, blind to this file and to each other. Ask each: (1) render it back into English; (2) state the THICKNESS and the MATERIAL of the thing named, to an order of magnitude; (3) state whether the thing named is alive, dead, or unspecified; (4) state whether the word asserts that what is inside is statistically independent of what is outside, given the surface.",
+        "pass_criterion": "PASS iff both readers return a boundary/covering at step 1, AND at least one returns a molecular-scale or unspecified-scale answer at step 2 rather than a tissue-scale one, AND neither returns 'dead' at step 3, AND BOTH return 'no' at step 4. A 'yes' at step 4 from either reader is a HARD FAIL of the whole entry, not a demotion: it means the rendering has merged membrane with blanket, which the definition forbids.",
+        "expected_outcome_on_current_evidence": "The honest prediction is FAIL at step 2 for both registers: L&S's membrana is tissue-scale (the coats of the eye) and MW's tvac is skin/hide/bark. Step 4 is predicted to PASS, since neither word has any statistical content whatever. Predicting a partial failure in advance is what makes this a test rather than a formality.",
+        "status": "NOT-RUN"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "Latin: the best-attested register in this file -- headword read, COVERING sense carried, marked classical by L&S, Cicero cited; the concept's defining sense (lipid, selectively permeable) read for and ABSENT. 'Sense carried' was struck 2026-07-15 as ambiguous between those two and read as the second. Sanskrit: tvac read and carried in the covering sense, silent on every defining property. Hindi: unsourced, and the obvious candidate was read and refuted in the classical register. Spanish: unsourced. Overall: MEDIUM for Latin topology, LOW for the concept's actual discriminating properties, which NO register here carries."
+    },
+    {
+      "concept_id": "MORPHOGENESIS",
+      "domain": "natura",
+      "store": "TRUE",
+      "definition_from_concepts_json": "The generation of form from local rules during growth, in which pattern arises without a blueprint.",
+      "sanskrit": {
+        "devanagari": "रूपजनन",
+        "iast": "rupajanana (rūpajanana)",
+        "headword_as_in_lexicon": "NOT A HEADWORD. MW carries no entry for रूपजनन. This compound is proposed by this file and does not exist in the authority.",
+        "grammar": "n., proposed tatpurusa compound: rūpa (n., 'form') + janana (n., 'production, causation'). CONTESTED 2026-07-15: MW marks janana's adjectival sense 'ifc.', which is the position it occupies here. The neuter action-noun parse asserted by this field is the author's and is NOT settled -- see ambiguity_notes.",
+        "literal_gloss": "the production of form -- CLAIMED, NOT SETTLED. The competing parse, which MW's own 'ifc.' marking points at, is the adjectival 'form-producing'. This file cannot adjudicate between them and does not.",
+        "citation": "NO CITATION FOR THE COMPOUND -- it is coined here. Both MEMBERS are read and cited: (1) MW s.v. रूप rūpa: 'any outward appearance or phenomenon or colour ... form, shape, figure, RV. &c. &c.'; also 'nature, character, peculiarity, feature, mark, sign, symptom, VS. &c.'; read via Cologne CDSL getword.php?key=rUpa, 2026-07-15. (2) MW s.v. जनन janana: 'mf(ī)n. IFC. generating, begetting, producing, causing' (Mn. ix, 81; MBh.; Hariv.); n. 'production, causation' (R.; Kum. i, 43; Samkhyak.; Sarvad.); n. 'birth, coming into existence' (TandyaBr. xxi, 9; KatySr.; Mn.); m. 'a progenitor, creator' (RV. ii, 40, 1); 'race, lineage, L.'; read via getword.php?key=janana, 2026-07-15. QUOTATION CORRECTED 2026-07-15: an earlier version of this field rendered the adjectival sense as plain 'mfn.' and SILENTLY DROPPED MW's 'ifc.' qualifier, and omitted the 'race, lineage' sense entirely. Both omissions cut against the coinage -- see ambiguity_notes.",
+        "status": "COINED",
+        "derivation": "rūpa + janana, both members read in MW and both carried in the senses used ('form' and 'production/causation' respectively). The compound is the author's; the members are the authority's. This is the honest COINED shape: a proposal whose parts can each be checked against a real entry, and whose whole is admitted by nobody yet.",
+        "member_attestation_state": "rūpa: CITED (RV. &c.). janana: CITED (Mn.; MBh.; Hariv.; R.; Kum.; Samkhyak.). Compound: UNATTESTED, proposed."
+      },
+      "latin": {
+        "form": "NOT-ATTEMPTED",
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE. No Latin member was read for this concept in this pass.",
+        "classical_or_post_classical": "N/A -- nothing proposed.",
+        "status": "NOT-ATTEMPTED",
+        "why_not_attempted": "'Morphogenesis' is Greek-rooted (morphe + genesis) and entered scientific use in the modern period; classical Latin has no term for it. A Latin coinage is available in principle (formae generatio, formatio, and similar), but NO member was read against L&S in this pass, and proposing a compound out of half-remembered Latin is precisely the pseudopropheta this file exists to refuse. Nothing is proposed rather than something unsourced.",
+        "falsifier": "Read L&S s.v. forma, s.v. generatio and s.v. formatio, then coin against what they actually carry. Note in advance that formatio and generatio each carry their own freight and must be checked for a creator/agent sense before use."
+      },
+      "english": {
+        "term": "morphogenesis",
+        "definition": "The generation of form from local rules during growth, in which pattern arises without a blueprint."
+      },
+      "hindi": {
+        "devanagari": null,
+        "transliteration": null,
+        "gloss": null,
+        "citation": "NONE consulted.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Consult McGregor, Oxford Hindi-English Dictionary for a modern Hindi scientific term for morphogenesis; if none, record the absence rather than coin."
+      },
+      "spanish": {
+        "term": "morfogenesis (morfogénesis)",
+        "gloss": "morphogenesis -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE. dle.rae.es returned HTTP 403 in this pass.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Read the RAE entry s.v. morfogenesis and quote it. Spanish is the register most likely to close cleanly here, since the Greek-rooted scientific term ports directly -- which is a reason for suspicion, not comfort: a word that ports without friction has not been tested."
+      },
+      "ambiguity_notes": [
+        "THE DEFINITION'S LOAD-BEARING CLAUSE IS 'WITHOUT A BLUEPRINT', AND THE PROPOSED SANSKRIT MEMBER ATTACKS IT DIRECTLY. MW s.v. जनन carries, as a masculine, 'a progenitor, creator' with a Rgveda citation (RV. ii, 40, 1). The whole point of morphogenesis is that form arises from LOCAL RULES with NO designer and NO plan: the corpus's own exemplar is phyllotaxis, where 'nothing golden was put in -- repulsion, advection and periodic deposition were put in, and the golden angle came out'. A member word that can read as 'creator' imports the exact agent the concept exists to eliminate. This is recorded, not smoothed: it may be sufficient reason to reject the coinage outright.",
+        "rūpa carries heavy Buddhist doctrinal freight: MW gives '(with Buddhists) material form i.e. the organized body ... one of the 5 constituent elements or Skandhas'. To a Buddhist-trained reader, rūpa is the rūpa-skandha, the first aggregate, and arrives inside a whole analysis of person-constituents. The concept means geometric form arising in growth and asserts nothing about aggregates, persons, or the constituents of experience.",
+        "rūpa also means 'beauty, loveliness, grace, splendour' (MW, RV. &c.). A term for form-that-is-beautiful will quietly re-import the aesthetic teleology this wing spends its effort removing -- the golden-ratio-hunting the corpus explicitly warns against under RATIO. The word carries the very bias the chapter guards.",
+        "MW also gives rūpa as '(in alg.) the arithmetical unit' and as a term for the number 'one' (VarBrS.; Ganit.). In a document that is partly mathematical, a headword meaning 'the arithmetical unit' is a live collision.",
+        "janana's neuter 'birth, coming into existence' is closer to the concept than the masculine 'progenitor' -- so the coinage's viability turns on the compound forcing the neuter reading. That is a real grammatical question and it is NOT settled here. It is exactly what an expert reviewer is for.",
+        "ADDED 2026-07-15 BY ADVERSARIAL RE-READ, AND IT WORSENS THE COINAGE'S POSITION: MW marks the adjectival sense of janana 'IFC.' -- in fine compositi, i.e. THAT is the sense the word carries WHEN IT STANDS AT THE END OF A COMPOUND. In रूपजनन, janana stands at the end of a compound. So the authority's own marking predicts the reading 'form-producing' / 'form-generating' -- an ADJECTIVE, describing whatever produces form -- rather than the neuter action-noun 'the production of form' that this file's literal_gloss claims. The note above framed the neuter-vs-masculine question as open; the sharper and previously-unstated problem is that MW's ifc. marking points AWAY from the noun reading altogether, toward an adjective that presupposes a producer. That compounds the 'creator' freight already recorded, rather than relieving it. This does NOT settle the grammar -- a tatpuruṣa in -ana can be a legitimate action-noun and the author is not competent to adjudicate it -- but it means the coinage now faces TWO independent routes to importing an agent, both flagged by the authority itself, and neither yet answered.",
+        "ALSO ADDED 2026-07-15: MW carries a further sense of janana omitted from this entry's original citation -- 'race, lineage, L.' A term for morphogenesis whose final member can read as 'lineage' will collide directly with CONVERGENT_EVOLUTION, whose whole evidential content is INDEPENDENT LINEAGES. Two entries in this same file would then share a member word across concepts the corpus requires be kept apart. Attestation is L. (lexicographers only), so the collision is weak -- but it was not recorded at all, and an unrecorded weak collision is still an unrecorded one."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Any Sanskrit rendering built on सृष्टि srsti ('creation, emission') or on a nirmana/kartr root",
+          "why_wrong": "srsti is the cosmological creation-word and arrives with a creator and an act of creation. The concept is pattern WITHOUT a blueprint. Using a creation word for a blueprint-free process asserts the opposite of the definition while sounding elevated and correct."
+        },
+        {
+          "rendering": "Any rendering glossing morphogenesis as 'development according to a plan' or 'unfolding of a design'",
+          "why_wrong": "This is preformationism -- the discredited view that the form is already present and merely made visible. The definition says pattern ARISES; local rules generate what was not there. Cf. the CONVERGENT_EVOLUTION entry, where Latin evolutio has this same defect built into its root sense."
+        },
+        {
+          "rendering": "रूपजनन presented as attested",
+          "why_wrong": "MW carries no such headword. It is coined here. Presenting it as attested would fabricate an entry, which is the worst defect available in this repo."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present रूपजनन with NO gloss to at least two readers competent in Sanskrit, blind to this file and to each other. Ask each: (1) render it into English; (2) state whether the word implies SOMEONE who does the producing; (3) state whether the form produced was already specified in advance, or arose from the process; (4) state whether the word implies the result is beautiful.",
+        "pass_criterion": "PASS iff both readers return a form/production sense at step 1, AND BOTH answer 'no' at step 2, AND BOTH answer 'arose' at step 3, AND BOTH answer 'no' at step 4. A 'yes' at step 2 or step 3 from EITHER reader is a HARD FAIL and the coinage must be withdrawn, not softened -- those two answers are the definition's whole content.",
+        "expected_outcome_on_current_evidence": "The honest prediction is FAIL at step 2, because MW attests janana as 'a progenitor, creator' in the Rgveda and readers carry that. The author expects this coinage to be rejected by review. It is proposed anyway, with the predicted failure written down, so that the rejection is a result rather than an embarrassment.",
+        "status": "NOT-RUN"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "Sanskrit: both members read and cited; the compound is proposed and is predicted by its own author to fail its own test on the agent question. Latin: nothing proposed, honestly. Hindi: nothing proposed. Spanish: unsourced. Overall: LOW, and the entry's value is the recorded conflict between janana's 'creator' sense and the definition's 'without a blueprint'."
+    },
+    {
+      "concept_id": "ALLOMETRY",
+      "domain": "natura",
+      "store": "TRUE",
+      "definition_from_concepts_json": "The scaling of a biological quantity with body mass, canonically BMR proportional to M^b, whose exponent moves with analysis choices and changes at the major evolutionary transitions.",
+      "sanskrit": {
+        "devanagari": null,
+        "iast": null,
+        "headword_as_in_lexicon": "NONE. No Sanskrit headword was read for this concept in this pass.",
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE.",
+        "status": "NOT-ATTEMPTED",
+        "why_not_attempted": "This is the honest outcome the brief predicted, in its purest form: Sanskrit technical vocabulary for modern quantitative biology DOES NOT EXIST as attested classical terms. 'Allometry' names a fitted power-law exponent relating a physiological rate to body mass -- an object that requires regression, a mass scale, and a rate measure. No classical Sanskrit term means this, and none could. A compound could be assembled (from words for 'body', 'measure' and 'ratio'), but NO member was read against MW in this pass, and a coinage whose members are unread is a pseudopropheta with extra syllables. Nothing is proposed.",
+        "falsifier": "Read MW s.v. मान māna ('measure'), s.v. देह deha or शरीर śarīra ('body'), and s.v. अनुपात anupāta ('proportion'), then coin against what those entries actually carry. Check each for doctrinal freight BEFORE composing -- māna in particular collides with the Nyaya epistemological family (pramāṇa), and śarīra carries the sarira/atman distinction."
+      },
+      "latin": {
+        "form": null,
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE. No Latin member was read for this concept in this pass.",
+        "classical_or_post_classical": "N/A -- nothing proposed. Any Latin term would be POST-CLASSICAL by necessity: the concept requires regression analysis, which postdates the language's classical period by roughly eighteen centuries.",
+        "status": "NOT-ATTEMPTED",
+        "provenance_of_the_english_term": "The English term is standardly attributed to Julian Huxley and Georges Teissier (1936), who coined it jointly to settle a terminological dispute. THAT ATTRIBUTION IS NOT-CONFIRMED: the primary was not read in this pass. Falsifier: read Huxley & Teissier, 'Terminology of relative growth', Nature 137 (1936), and confirm or strike.",
+        "falsifier": "Read L&S s.v. mensura, s.v. ratio and s.v. corpus, then coin against what they carry."
+      },
+      "english": {
+        "term": "allometry",
+        "definition": "The scaling of a biological quantity with body mass, canonically BMR proportional to M^b, whose exponent moves with analysis choices and changes at the major evolutionary transitions."
+      },
+      "hindi": {
+        "devanagari": null,
+        "transliteration": null,
+        "gloss": null,
+        "citation": "NONE consulted.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Consult McGregor for a modern Hindi scientific term; if none exists, record the absence rather than coin one."
+      },
+      "spanish": {
+        "term": "alometria (alometría)",
+        "gloss": "allometry -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE. dle.rae.es returned HTTP 403 in this pass.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Read the RAE entry s.v. alometria. If RAE does not carry it, say so: a scientific term absent from the general dictionary is a fact about the register, and should be recorded rather than papered over with a specialist glossary."
+      },
+      "ambiguity_notes": [
+        "THE CONCEPT IS NOT A CONSTANT AND NO REGISTER MAY MAKE IT SOUND LIKE ONE. The definition says the exponent MOVES -- with which taxa are excluded, with whether body temperature is normalised, with whether the regression unit is species or order. CONCEPTS.json records that this mobility IS the dispute and classes it OBSERVED-CONTESTED. Any rendering that reads as 'the law of body-size scaling' asserts a settled exponent and takes a side in a live dispute by wording alone. The safest renderings will sound tentative; that is correct, not weak.",
+        "'Allometry' in English is a term of art with a specific antonym (isometry) and a specific home (relative growth). A rendering that back-translates to the ordinary sense 'measurement of bodies' loses the entire content -- the point is not that bodies are measured but that a quantity scales as a POWER of mass with an exponent that is not 1.",
+        "The definition ties the exponent's change to 'the major evolutionary transitions'. Read with the TRANSITION entry in CONCEPTS.json, which registers a three-way homonym: the POMDP B-tensor transition, the evolutionary MAJOR_TRANSITION (Maynard Smith & Szathmary), and the DD-TDD state transition. A register that renders 'transition' with one word across this corpus will merge three unrelated objects. That trap is inherited by this entry through its definition.",
+        "CONCEPTS.json records the curvature finding: superlinear in prokaryotes, linear in protists, sublinear in metazoans -- 'a rung boundary showing up in the residuals'. So 'the' exponent is not one number even in principle across the ladder. A singular-definite rendering in any register is false to the concept.",
+        "BMR is a scoped measurand (basal metabolic rate, under stated conditions), not 'energy use'. A register that glosses it as 'the body's energy' drops the scope, and per the honesty rail a number quoted outside its scope is a defect even when the number is right."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Any rendering meaning 'the law of proportion of bodies' or 'body-proportion'",
+          "why_wrong": "Imports the artist's canon of proportion (Vitruvian, Polykleitan) -- a normative aesthetic ideal of how a body OUGHT to be proportioned. Allometry is a fitted, contested, regime-dependent empirical exponent describing how rates actually scale. The two are opposite in kind: one prescribes, one measures."
+        },
+        {
+          "rendering": "Any rendering meaning 'Kleiber's law' or importing the value 3/4",
+          "why_wrong": "Pins a contested exponent into the term itself. CONCEPTS.json classes the exponent OBSERVED-CONTESTED and records under MODELED that West-Brown-Enquist derive b = 3/4 from three assumptions, any one of which dropped means 3/4 does not follow. Naming the concept after one contested value would let the word decide the dispute."
+        },
+        {
+          "rendering": "A Sanskrit compound assembled from unread members because one 'is fairly sure' of them",
+          "why_wrong": "This is the specific failure this entry refuses. A confident compound built from half-remembered headwords is indistinguishable, to every downstream reader, from a compound built from read ones -- and that is what makes it the worst defect available here. NOT-ATTEMPTED is the honest status and it costs nothing but the appearance of completeness."
+        }
+      ],
+      "back_translation_test": {
+        "test": "NOT WRITABLE YET -- there is nothing to test. No Sanskrit, Latin or Hindi rendering is proposed, and the Spanish is unsourced. When a rendering is proposed, the test shall be: present it with no gloss to two competent readers, blind, and ask each (1) to render it back; (2) whether the word names a fixed constant or a fitted quantity; (3) whether the word commits to any particular exponent; (4) whether the word implies bodies OUGHT to have some proportion. PASS iff both return a fitted-quantity reading at (2), 'no' at (3), and 'no' at (4).",
+        "pass_criterion": "N/A -- no rendering exists to submit. Recording the test now, before any coinage, is deliberate: it pre-registers the bar so that a future coinage cannot be judged by a bar written after it.",
+        "status": "NOT-RUN (no candidate)"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "Sanskrit: nothing proposed. Latin: nothing proposed. Hindi: nothing proposed. Spanish: unsourced. Overall: this entry carries NO rendering in four of five registers, and that emptiness is its honest content. The brief predicted that Sanskrit technical vocabulary for modern quantitative science largely does not exist; this entry is that prediction coming true rather than being worked around."
+    },
+    {
+      "concept_id": "CONVERGENT_EVOLUTION",
+      "domain": "natura",
+      "store": "TRUE",
+      "definition_from_concepts_json": "Independent lineages arriving at the same solution, which is EVIDENCE of a constraint-optimum and never proof of one.",
+      "sanskrit": {
+        "devanagari": null,
+        "iast": null,
+        "headword_as_in_lexicon": "NONE. No Sanskrit headword was read for this concept in this pass.",
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE.",
+        "status": "NOT-ATTEMPTED",
+        "why_not_attempted": "The concept requires 'lineage', 'independence' and 'evolution' in the Darwinian sense simultaneously. No attested classical Sanskrit term carries Darwinian evolution -- the theory postdates the corpus by millennia -- and a coinage would need every member read first. No member was read in this pass. Nothing is proposed.",
+        "freight_warning_for_whoever_attempts_it": "Sanskrit has a rich vocabulary for lineage and descent (vamsa, kula, gotra) and a rich one for transformation (parinama, vikara, vikrti). BOTH families are pre-loaded. The parinama family is Samkhya's technical term for the transformation of prakrti and imports that whole metaphysics; note that MW s.v. प्रकृति explicitly opposes prakrti to vi-krti. The vamsa/gotra family imports human descent-group and caste structure. Whoever coins here must check the freight BEFORE composing, not after."
+      },
+      "latin": {
+        "form": null,
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "The obvious candidate WAS read and is REFUTED -- see forbidden_mistranslations. Lewis & Short, s.v. evolutio, read via Perseus:text:1999.04.0059:entry=evolutio, 2026-07-15.",
+        "classical_or_post_classical": "Any Latin rendering of 'evolution' in the Darwinian sense is necessarily POST-CLASSICAL. The classical word for the FORM exists and means something else entirely.",
+        "status": "NOT-ATTEMPTED",
+        "why_not_attempted": "The Latin-looking word is a trap that was read and sprung (below). A correct Latin rendering would need to avoid evolutio AND avoid the preformationist image its root carries, and would need convergere checked for classical status -- which was not done in this pass. Rather than propose a compound half-checked, nothing is proposed.",
+        "falsifier": "Read L&S s.v. convergo / convergens and establish whether it is classical, late, or absent; then coin a phrase that does NOT use evolutio."
+      },
+      "english": {
+        "term": "convergent evolution",
+        "definition": "Independent lineages arriving at the same solution, which is EVIDENCE of a constraint-optimum and never proof of one."
+      },
+      "hindi": {
+        "devanagari": null,
+        "transliteration": null,
+        "gloss": null,
+        "citation": "NONE consulted.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Consult McGregor for the modern Hindi scientific term for evolution and for convergence."
+      },
+      "spanish": {
+        "term": "evolucion convergente (evolución convergente)",
+        "gloss": "convergent evolution -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE. dle.rae.es returned HTTP 403 in this pass.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Read the RAE entry s.v. evolucion and check whether its biological sense is carried, and whether the Spanish inherits the same unrolling etymology as the Latin (it does, etymologically -- so the ambiguity note below applies to Spanish TOO, and closing this citation will not clear it)."
+      },
+      "ambiguity_notes": [
+        "THE ETYMOLOGY IS NOT NEUTRAL AND IT IS NOT DEAD -- IT IS THE DISCREDITED THEORY. Lewis & Short, s.v. evolutio, was read and gives exactly one sense: 'an unrolling or opening of a book; hence, a reading' (Cic. Fin. 1.7.25). The image is a scroll being unrolled: EVERYTHING WAS ALREADY WRITTEN, and unrolling merely makes it visible. That is preformationism -- the view that the adult form is already present and only becomes manifest. Darwinian evolution is the REFUTATION of that view. The English word 'evolution' carries this defect silently because the metaphor is dead in English; in LATIN THE METAPHOR IS ALIVE AND IS THE PRIMARY SENSE. A Latin-register reader receives the wrong theory, stated confidently, from the word itself. This is the strongest single argument in this file for not reaching for the cognate.",
+        "'Convergent' in English is itself a metaphor from geometry: lines approaching a point. The concept is not about approach but about ARRIVAL AT THE SAME SOLUTION from independent starts. A register that renders convergence as 'moving toward one another' imports an interaction between lineages -- which is exactly what did NOT happen, and independence is the whole evidential content.",
+        "THE DEFINITION'S FENCE IS THE HARD PART TO TRANSLATE AND THE EASIEST TO DROP: convergence is EVIDENCE of a constraint-optimum and NEVER proof of one. The concept and CONSTRAINT_OPTIMUM are deliberately separate entries in CONCEPTS.json, whose note reads: 'The evidence; CONSTRAINT_OPTIMUM is what it is evidence OF. Do not render as one term.' A register that fuses them turns a defeasible inference into a conclusion, in one word, invisibly.",
+        "The counterweight travels with this concept EVERYWHERE (see ADAPTATIONIST_COUNTERWEIGHT). A rendering that reads as 'lineages discovering the best design' has already violated it: not every trait is an adaptation, and convergence is a hypothesis generator, never a proof of optimality.",
+        "'Solution' in the definition is engineering register, not biology's. Nothing was solving anything. A register that renders it with a word for answering a question or overcoming a difficulty imports a problem-solver and hence an agent -- the same freight the AGENT entry in CONCEPTS.json guards against."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin evolutio, for 'evolution'",
+          "why_wrong": "READ AND REFUTED. L&S s.v. evolutio carries ONE sense: 'an unrolling or opening of a book; hence, a reading', citing Cicero, de Finibus 1.7.25. It does not mean biological evolution and it never did. Worse than merely absent: the root image (a scroll whose text is already written, merely being unrolled) asserts preformationism, the theory Darwinian evolution overturned. The word does not fail to carry the meaning -- it carries the opposite one."
+        },
+        {
+          "rendering": "Any Sanskrit rendering via परिणाम parinama ('transformation')",
+          "why_wrong": "parinama is Samkhya's technical term for the transformation of prakrti, and arrives inside satkaryavada -- the doctrine that the effect PRE-EXISTS in its cause. That is preformationism again, arriving by a second route and in a second language. Any register reaching for a transformation-word must be checked against this specific failure, because the two most natural candidates in two different languages share it."
+        },
+        {
+          "rendering": "Any rendering that makes convergence and constraint-optimum one term",
+          "why_wrong": "Forbidden by CONCEPTS.json's own note on both entries. It converts evidence into proof by vocabulary, which is the cheapest possible way to make an unearned claim and the hardest to spot after the fact."
+        },
+        {
+          "rendering": "Any rendering meaning 'lineages growing together' or 'merging'",
+          "why_wrong": "Asserts contact or fusion between the lineages. The lineages are INDEPENDENT -- that independence is the entire reason the resemblance is evidence of anything at all. A rendering implying contact destroys the inference while looking like a translation of 'converge'."
+        }
+      ],
+      "back_translation_test": {
+        "test": "NOT WRITABLE YET for Sanskrit, Latin or Hindi -- no rendering is proposed. When one is proposed, the test shall be: present it with no gloss to two competent readers, blind, and ask each (1) to render it back; (2) whether the lineages named ever touched, met, or influenced one another; (3) whether the form produced was already present and merely revealed; (4) whether the word says the shared solution is the BEST solution, or only a repeated one. PASS iff both return 'no' at (2), 'no' at (3), and 'only a repeated one' at (4).",
+        "pass_criterion": "N/A for four registers -- no candidate exists. For any future Latin candidate, use of evolutio is an AUTOMATIC FAIL at step 3 on evidence already in hand: L&S was read, and the primary sense is the unrolling of a text already written.",
+        "status": "NOT-RUN (no candidate)"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "Sanskrit: nothing proposed. Latin: nothing proposed, and the obvious candidate was read and refuted. Hindi: nothing proposed. Spanish: unsourced, and etymologically inherits the same defect. Overall: LOW as a lexicon entry, and the entry's real value is the read refutation of evolutio -- a term a translator would have used without hesitation, which carries the discredited theory in its root sense."
+    },
+    {
+      "concept_id": "CONSTRAINT_OPTIMUM",
+      "domain": "natura",
+      "store": "TRUE",
+      "definition_from_concepts_json": "A solution repeatedly rediscovered by independent lineages under real physical constraints, which is what convergent evolution is evidence of.",
+      "sanskrit": {
+        "devanagari": null,
+        "iast": null,
+        "headword_as_in_lexicon": "NONE. No Sanskrit headword was read for this concept in this pass.",
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE.",
+        "status": "NOT-ATTEMPTED",
+        "why_not_attempted": "The concept is a compound of 'optimum' (a maximum over a feasible set) and 'constraint' (the feasible set's boundary) -- both mathematical-programming notions with no attested classical Sanskrit equivalent. No member was read in this pass. Nothing is proposed rather than something unsourced.",
+        "freight_warning_for_whoever_attempts_it": "The natural Sanskrit candidates for 'best' (srestha, uttama) are EVALUATIVE and hierarchical, carrying 'best/highest' in a social and ritual register. The concept's 'optimum' is optimal WITHIN constraints and is defeasible -- see ambiguity_notes. An evaluative superlative will assert unqualified superiority, which is the precise error the counterweight forbids."
+      },
+      "latin": {
+        "form": null,
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE. Neither optimum nor a constraint-word was read against L&S in this pass.",
+        "classical_or_post_classical": "N/A -- nothing proposed. NOTE: optimus is unquestionably classical as the superlative of bonus, but the substantive 'an optimum' in the mathematical sense (a maximum over a feasible set) is a modern usage and would be POST-CLASSICAL. The form's classical status must not be allowed to launder the sense's modernity -- the same defect this file records at cellula.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Read L&S s.v. optimus and s.v. finis / terminus / modus, and establish whether any carries a constraint sense that is not merely 'boundary'. Then coin."
+      },
+      "english": {
+        "term": "constraint-optimum",
+        "definition": "A solution repeatedly rediscovered by independent lineages under real physical constraints, which is what convergent evolution is evidence of."
+      },
+      "hindi": {
+        "devanagari": null,
+        "transliteration": null,
+        "gloss": null,
+        "citation": "NONE consulted.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Consult McGregor. Note the term is a corpus coinage in English too; a Hindi equivalent may simply not exist, and that absence should be recorded rather than filled."
+      },
+      "spanish": {
+        "term": null,
+        "gloss": null,
+        "citation": "NONE. The English term is itself a coinage of this corpus, not a standard term of art, so a standard published Spanish dictionary WILL NOT carry it and consulting RAE would be the wrong instrument.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "None available from a general dictionary. This register can only be closed by a translator working from the definition, then tested by back-translation -- which is the method the whole file is built on and is the correct route here."
+      },
+      "ambiguity_notes": [
+        "'OPTIMUM' IS BOUNDED AND THE BOUND IS THE CONCEPT. CONCEPTS.json's note is explicit: it is optimal WITHIN the constraints that obtained, not optimal simpliciter, and the inference from convergence to optimality is DEFEASIBLE. Every register's superlative vocabulary is unbounded by default -- 'the best' does not natively carry 'given these constraints, and revisably'. The rendering must carry the bound or it asserts something the corpus refuses.",
+        "'Rediscovered' does NOT imply a discoverer. Read with the AGENT entry in CONCEPTS.json: no experiencer, no selfhood, no intention. A register whose word for discovery implies a mind that searched has imported an agent into a statement about lineages. English hides this because 'evolution discovered X' is a dead idiom; in a register where the metaphor is live, it will read as a claim.",
+        "'Real physical constraints' is doing load-bearing work and is not decoration. The constraints are physics -- viscosity, diffusion, gravity, the square-cube relation -- not preferences, not costs, not trade-offs in the economic sense. A rendering via an economics or optimisation-theory register will import a cost function and an optimiser, neither of which the definition contains.",
+        "This entry and CONVERGENT_EVOLUTION are deliberately separate and MUST NOT share a term: one is the evidence, the other is what the evidence is OF. CONCEPTS.json states this twice, once in each note. It is the same discipline as MEMBRANE and MARKOV_BLANKET not sharing a term, and it fails the same way: silently, by vocabulary, converting a defeasible inference into a conclusion.",
+        "The counterweight applies here with full force: phylogenetic inertia, drift, developmental constraint and contingency mean a repeatedly-rediscovered solution may still not be optimal. The vertebrate retina is wired backwards and is nonetheless near-universal among vertebrates. Repetition is not optimality, and no register may let the word suggest it is."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Any rendering meaning 'the best design' or 'the perfect solution'",
+          "why_wrong": "Drops the constraint-bound and the defeasibility in one move, and lands exactly on the adaptationist error Gould & Lewontin named. Nature is full of frozen accidents; a near-universal solution can be a constraint of history rather than an optimum of physics."
+        },
+        {
+          "rendering": "Any rendering via an evaluative or hierarchical superlative (Sanskrit srestha / uttama; Latin optimus standing alone)",
+          "why_wrong": "These assert unqualified superiority in a register (social, ritual, moral) that has nothing to do with a maximum over a feasible set. optimus alone additionally carries 'best' as a moral and social judgement throughout classical usage -- Iuppiter Optimus Maximus is the god's cult title. The word arrives with a deity attached."
+        },
+        {
+          "rendering": "Any rendering meaning 'nature's design' or 'nature's intention'",
+          "why_wrong": "Imports a designer. The whole apparatus of NATURE_AS_AUTHORITY plus its counterweight exists to permit nature to be used as a hypothesis generator WITHOUT asserting that anything was designed or intended."
+        },
+        {
+          "rendering": "Any rendering that also serves CONVERGENT_EVOLUTION",
+          "why_wrong": "Explicitly forbidden by CONCEPTS.json's notes on both entries: 'The evidence; CONSTRAINT_OPTIMUM is what it is evidence OF. Do not render as one term.'"
+        }
+      ],
+      "back_translation_test": {
+        "test": "NOT WRITABLE YET -- no rendering is proposed in any register. When one is proposed, the test shall be: present it with no gloss to two competent readers, blind, and ask each (1) to render it back; (2) whether the word says this is the best solution ABSOLUTELY or the best GIVEN some limits; (3) whether anyone or anything chose, designed or intended it; (4) whether the claim could turn out to be wrong. PASS iff both return 'given some limits' at (2), 'no' at (3), and 'yes' at (4).",
+        "pass_criterion": "N/A -- no candidate exists. Step (4) is the discriminating one and is where an evaluative superlative will fail: 'the best' does not sound revisable in any of these registers, and the concept is explicitly defeasible.",
+        "status": "NOT-RUN (no candidate)"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "No rendering is proposed in any of the four non-English registers. The entry's content is its ambiguity_notes and its forbidden_mistranslations, both of which are usable now by a translator who attempts what this pass did not."
+    },
+    {
+      "concept_id": "NATURE_AS_AUTHORITY",
+      "domain": "natura",
+      "store": "META",
+      "store_note": "META, not TRUE. This concept names a DOCTRINE about how signals are used, not a signal. Per SIGNUM SIGNUM MANET the commentary travels separately from the signal, and META is never True.",
+      "definition_from_concepts_json": "The doctrine, defensible in exactly one form, that nature is authoritative because it is the only system that has already run the experiment -- a very long parallel search under real physical constraints in which the failures were deleted.",
+      "sanskrit": {
+        "devanagari": "प्रकृति",
+        "iast": "prakrti (prakṛti)",
+        "headword_as_in_lexicon": "prakrti f. \"'making or placing before or at first', the original or natural form or condition of anything, original or primary substance (opp. to vi-kfti)\" (Prāt.; Nir.; Jaim.; MBh.); \"(in the Sāṃkhya phil.) the original producer of (or rather passive power of creating) the material world (consisting of 3 constituent essences or Gunas called sattva, rajas and tamas), Nature (distinguished from puruza, Spirit as Maya is d. from Brahman in the Vedantas)\"; \"cause, original source\" (Mn.; MBh.; Sak.); \"nature, character, constitution, temper, disposition\" (MBh.; Kav.; Susr.); in politics \"a king's ministers\" or \"the constituent elements or powers of the state\"; in grammar \"the crude or elementary form of a word, base, root, an uninflected word\".",
+        "grammar": "f., i-stem; pra + kr ('to make') + -ti",
+        "literal_gloss": "the original or natural form or condition of anything; primary substance",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (Oxford, 1899), s.v. प्रकृति prakṛti, read via Cologne Digital Sanskrit Dictionaries, MWScan 2020, getword.php?key=prakfti, 2026-07-15.",
+        "status": "CITED (headword and the sense 'nature') -- BUT SEE THE FREIGHT, WHICH MAY DISQUALIFY IT",
+        "disqualification_risk": "This register is CITED and may STILL be the wrong choice. MW itself, unprompted, states the Samkhya sense in the entry -- this file did not go looking for the freight, the authority volunteered it. Being able to cite a headword is necessary and NOT sufficient; the freight test is separate and this term may fail it. See ambiguity_notes."
+      },
+      "latin": {
+        "form": "natura ut auctoritas",
+        "headword_as_in_lexicon": "PHRASE NOT ATTESTED. The two MEMBERS are attested and were read: (1) L&S s.v. natura: 'nātūra, ae, f.', senses including birth (literal, very rare), 'nature/natural constitution, property, or quality of things', 'character, natural disposition', 'the nature/course/order of things', 'the world/universe', 'an element, thing, or substance'; AND, ADDED 2026-07-15 ON RE-READ, sense II. D., 'the natural organs of generation' -- i.e. the genitals. L&S marks the transferred senses 'freq. and class.', citing Cicero (most frequently), Caesar, Vergil, Sallust, Livy, Lucretius, Quintilian, Terence, Valerius Maximus and Horace. (2) L&S s.v. auctoritas: 'auctōrĭtas (not autōr- nor authōr-), ātis, f.', senses including 'A producing, production, invention, cause' (rare), 'A view, opinion, judgment', 'Might, power, authority, reputation, dignity, influence, weight' (very frequent), 'A warrant, security for establishing a fact, assertion, credibility'; citing Plautus, Terence, Cicero (extensively), Caesar, Livy, Suetonius, Pliny, Varro.",
+        "grammar": "phrase: natura (f. nom. sg.) + ut (conj., 'as') + auctoritas (f. nom. sg.)",
+        "literal_gloss": "nature as authority / nature as warrant",
+        "citation": "Lewis & Short, A Latin Dictionary (Oxford, 1879), s.v. natura (Perseus:text:1999.04.0059:entry=natura) and s.v. auctoritas (Perseus:text:1999.04.0059:entry=auctoritas), both read 2026-07-15. The PHRASE is composed by this file and is cited to nobody.",
+        "classical_or_post_classical": "Both members CLASSICAL and heavily attested. The PHRASE is a modern composition and is not offered as an attested locution.",
+        "status": "COINED (phrase) -- both members CITED",
+        "derivation": "natura + ut + auctoritas. The composition is the author's. Its viability turns on which sense of auctoritas a reader selects: 'warrant, security for establishing a fact, credibility' is the sense wanted; 'might, power, dignity, influence' is the sense L&S marks 'very frequent' and is the wrong one. See ambiguity_notes.",
+        "why_auctoritas_and_not_potestas": "auctoritas at least CONTAINS the evidential sense ('a warrant, security for establishing a fact, assertion, credibility'), which is what the doctrine means. potestas would carry only power-to-command and has no evidential sense at all."
+      },
+      "english": {
+        "term": "nature as the authority",
+        "definition": "The doctrine, defensible in exactly one form, that nature is authoritative because it is the only system that has already run the experiment -- a very long parallel search under real physical constraints in which the failures were deleted."
+      },
+      "hindi": {
+        "devanagari": "प्रकृति",
+        "transliteration": "prakrti / prakriti",
+        "gloss": "nature -- the author's working knowledge, UNSOURCED for the Hindi register specifically",
+        "citation": "NONE consulted for Hindi. The Sanskrit entry above is read and cited, but Sanskrit attestation is NOT Hindi attestation and must not be presented as such: the tatsama form is shared, and the modern sense may have shifted.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Consult McGregor, Oxford Hindi-English Dictionary, s.v. प्रकृति, and establish whether modern Hindi carries the Samkhya freight actively or whether the term has secularised to 'nature/the environment'. The answer changes the ambiguity note materially and cannot be assumed from the Sanskrit."
+      },
+      "spanish": {
+        "term": "la naturaleza como autoridad",
+        "gloss": "nature as the authority -- the author's working knowledge, UNSOURCED",
+        "citation": "NONE. dle.rae.es returned HTTP 403 in this pass.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Read the RAE entries s.v. naturaleza and s.v. autoridad and check whether autoridad carries an evidential/warrant sense or only an institutional-power sense. If only the latter, this rendering fails for the same reason auctoritas is at risk."
+      },
+      "ambiguity_notes": [
+        "THE HEAVIEST DOCTRINAL FREIGHT IN THIS FILE, AND MONIER-WILLIAMS NAMES IT HIMSELF. The entry states that in Samkhya, prakrti is 'the original producer of (or rather passive power of creating) the material world (consisting of 3 constituent essences or Gunas called sattva, rajas and tamas), Nature (distinguished from puruza, Spirit)'. Rendering 'nature' as prakrti therefore imports, in one word: (a) Samkhya's dualism of prakrti and purusa -- matter against spirit; (b) the three gunas as the constituents of matter; (c) a cosmology in which nature is a productive principle. The corpus's doctrine means nothing of the kind: it means the observed biosphere, whose authority is the empirical fact that it has already run a long parallel search under physical constraints. This is the exact failure the operator's own charter names -- Sanskrit does not automatically prevent ambiguity -- and it is worse here than mere ambiguity, because the word does not merely admit a metaphysics, it IS a metaphysics' technical term.",
+        "The freight cuts a second way, and this one is subtle enough to miss: Samkhya's prakrti is the ACTIVE PRODUCER of the world, opposed to purusa the passive witness. The corpus's doctrine is that nature is an authority to LEARN FROM -- an evidential relation, not a productive one. prakrti says nature MAKES; the doctrine says nature SHOWS. Even setting the dualism aside, the term points at the wrong relation.",
+        "MW gives prakrti in politics as 'a king's ministers' and 'the constituent elements or powers of the state'. In a corpus that also carries governance rules, an approval plane, and a sovereignty vocabulary, a headword meaning 'the powers of the state' is a live collision -- the same class of trap CONCEPTS.json registers for POLICY and for HIERARCHY.",
+        "ADDED 2026-07-15 BY ADVERSARIAL RE-READ -- A FREIGHT THIS ENTRY MISSED IN ITS OWN LATIN WHILE CATALOGUING THE SANSKRIT'S: L&S s.v. natura carries, at II. D., 'the natural organs of generation' -- the genitals. This is precisely the near-miss class this file flags at kośa ('the vulva', 'a testicle or the scrotum'), and the author caught it in the Sanskrit and missed it in the Latin. The asymmetry is recorded rather than quietly repaired: a reviewer should assume the Latin registers in this file received LESS freight-scrutiny than the Sanskrit ones, because the author was hunting Sanskrit metaphysics and treating Latin as the safe register. It is not the safe register. Note also that prakṛti carries the SAME sense -- MW gives 'the male or female organ of generation, L.' -- so the collision is bilingual, and a reader of either register may take a doctrine about evidence as a statement about genitals. This is low-probability in context and non-zero, and it is exactly what a bare, unglossed back-translation test is built to surface.",
+        "auctoritas is at risk from the OTHER direction and L&S's own frequency marking is the evidence. The sense wanted is 'a warrant, security for establishing a fact, assertion, credibility' -- nature as EVIDENCE. The sense L&S marks 'very frequent' is 'Might, power, authority, reputation, dignity, influence, weight' -- nature as a POWER whose pronouncements are to be deferred to. The doctrine is 'defensible in exactly one form' and that form is evidential; the frequent sense converts it into an argument from authority, which is a fallacy and is the precise misreading the counterweight exists to prevent. A word that is right in its rare sense and wrong in its frequent one is a bad word, and this is a real argument for rejecting the phrase.",
+        "'The failures were deleted' is doing exact work and is easy to soften. It means extinction: the search's negative results are not recorded anywhere, they are ABSENT. This is a survivorship-bias statement, and it is the reason nature-as-authority is only a hypothesis GENERATOR. A register that renders it as 'nature perfected its designs' inverts it: the deletion of failures is why we cannot read the search's results as optimal.",
+        "This concept is META store and its rendering must never be admissible as a TRUE signal. Rendering it in a register whose word for 'authority' also means 'valid means of knowledge' -- Sanskrit pramana is the obvious such word, and it is Nyaya's technical term for exactly that -- would silently convert a doctrine about how to use evidence into a claim that nature IS a pramana, i.e. a valid means of knowledge in its own right. That is a metaphysical claim, in the META store, asserted by vocabulary. It is registered here as forbidden."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit प्रमाण pramana, for 'authority'",
+          "why_wrong": "pramana is Nyaya's technical term for a VALID MEANS OF KNOWLEDGE (perception, inference, comparison, testimony). Rendering nature-as-authority via pramana asserts that nature is a pramana -- a whole epistemological claim, made by word choice, in a META-store entry that is never True. It also imports the entire Nyaya-Mimamsa apparatus of which pramanas are valid, a live doctrinal dispute the corpus takes no side in. NOT read against MW in this pass and NOT proposed; recorded here as forbidden so a later pass does not reach for it."
+        },
+        {
+          "rendering": "Any rendering meaning 'nature is perfect' or 'nature knows best'",
+          "why_wrong": "Refuted by the concept's own mandatory companion. Gould & Lewontin's counterweight travels with this doctrine EVERYWHERE: the vertebrate retina is wired backwards, the recurrent laryngeal nerve takes its detour. Nature is full of frozen accidents. 'Nature does it this way' is a hypothesis generator and never a proof."
+        },
+        {
+          "rendering": "Any rendering of prakrti as 'Nature' capitalised, as a personified or divine principle",
+          "why_wrong": "MW records that in mythology prakrti is 'a goddess, the personified will of the Supreme in the creation'. The doctrine concerns an evidential relation to the observed biosphere. Personification imports a deity, and the corpus's GAIA entry records that the literal claim that the Earth is an organism is INADMISSIBLE -- with the same heavy doctrinal freight noted there: 'the name is a deity'."
+        },
+        {
+          "rendering": "Latin natura sola magistra or similar rhetorical mottoes",
+          "why_wrong": "A motto asserts the doctrine instead of naming it, and asserts it in the undefended form. The concept is 'defensible in exactly one form' and carries a mandatory counterweight; a motto carries neither the form nor the counterweight."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the bare rendering (प्रकृति / natura ut auctoritas) with NO gloss to at least two readers competent in the register, blind to this file and to each other. Ask each: (1) render it back into English; (2) does this word or phrase say nature MAKES the world, or that nature SHOWS us something? (3) is nature here a source of EVIDENCE, or a POWER to be deferred to? (4) does the phrase commit you to any view about what the world is made of? (5) does it imply nature is optimal or perfect?",
+        "pass_criterion": "PASS iff both readers return 'shows' at (2), 'evidence' at (3), 'no' at (4), and 'no' at (5). A 'makes' at (2) or a 'yes' at (4) is a HARD FAIL for the Sanskrit and the coinage must be withdrawn -- those answers mean the Samkhya cosmology came through. A 'power to be deferred to' at (3) is a HARD FAIL for the Latin: it means auctoritas's frequent sense won and the doctrine has become an argument from authority.",
+        "expected_outcome_on_current_evidence": "The honest prediction is that the Sanskrit FAILS at (2) and (4) for any Samkhya-literate reader, since MW itself gives prakrti as the producer of the material world consisting of the three gunas; and that the Latin FAILS at (3) for most readers, since L&S marks the power sense 'very frequent' and the evidential sense is the rarer one. BOTH proposals are predicted by their own author to fail. They are recorded anyway, with the predicted failures written down in advance, because a proposal with a pre-registered falsifier is a result and a proposal without one is decoration.",
+        "status": "NOT-RUN"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "Sanskrit: headword read and CITED in the 'nature' sense, and simultaneously carrying a metaphysics that may disqualify it -- the citation is solid and the choice is not. Latin: both members read and CITED; the phrase is composed and is at risk from auctoritas's frequent sense. Hindi: unsourced, and must not inherit the Sanskrit's citation. Spanish: unsourced. Overall: LOW-to-MEDIUM on citation, LOW on suitability. This entry is the file's clearest demonstration that a SOLID citation and a correct rendering are two different achievements. ('A perfect citation' was the original wording; struck 2026-07-15, 'perfect' being banned in author voice.)"
+    },
+    {
+      "concept_id": "ADAPTATIONIST_COUNTERWEIGHT",
+      "domain": "natura",
+      "store": "META",
+      "store_note": "META, not TRUE. This names a discipline applied to commentary about signals, not a signal.",
+      "definition_from_concepts_json": "Gould & Lewontin's mandatory companion to nature-as-authority: not every trait is an adaptation, because phylogenetic inertia, drift, developmental constraint, pleiotropy and historical contingency all produce features that are not optimal solutions to anything.",
+      "sanskrit": {
+        "devanagari": null,
+        "iast": null,
+        "headword_as_in_lexicon": "NONE. No Sanskrit headword was read for this concept in this pass.",
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE.",
+        "status": "NOT-ATTEMPTED",
+        "why_not_attempted": "The concept is a named position in a 1979 dispute in evolutionary biology, resting on five technical mechanisms (phylogenetic inertia, drift, developmental constraint, pleiotropy, historical contingency), NONE of which has an attested classical Sanskrit term, and each of which would need its own read citation before any compound could be honestly assembled. Nothing is proposed."
+      },
+      "latin": {
+        "form": null,
+        "grammar": null,
+        "literal_gloss": null,
+        "citation": "NONE. No Latin member was read for this concept in this pass.",
+        "classical_or_post_classical": "N/A -- nothing proposed. Any rendering would be POST-CLASSICAL by necessity.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Read L&S for candidate members before composing anything. Note that the English term itself is this corpus's coinage for Gould & Lewontin's position, not the authors' own label -- so there is no original term to translate, only a definition."
+      },
+      "english": {
+        "term": "the adaptationist counterweight",
+        "definition": "Gould & Lewontin's mandatory companion to nature-as-authority: not every trait is an adaptation, because phylogenetic inertia, drift, developmental constraint, pleiotropy and historical contingency all produce features that are not optimal solutions to anything."
+      },
+      "hindi": {
+        "devanagari": null,
+        "transliteration": null,
+        "gloss": null,
+        "citation": "NONE consulted.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Consult McGregor for the five mechanism-terms individually before attempting the whole."
+      },
+      "spanish": {
+        "term": null,
+        "gloss": null,
+        "citation": "NONE. The English term is this corpus's own coinage for a named position, so a general Spanish dictionary is the wrong instrument and RAE would not carry it.",
+        "status": "NOT-ATTEMPTED",
+        "falsifier": "Not closable from a general dictionary. Route: a translator works from the definition, and the result is tested by back-translation against the five mechanisms."
+      },
+      "ambiguity_notes": [
+        "THE PROVENANCE IS AT ONE REMOVE AND IS FENCED. This entry's content is CONCEPTS.json's characterisation of Gould & Lewontin's position. The primary -- standardly cited as Gould & Lewontin, 'The Spandrels of San Marco and the Panglossian Paradigm', Proc. R. Soc. Lond. B 205 (1979) -- WAS NOT READ IN THIS PASS. That attribution is therefore NOT-CONFIRMED: the chain is known and unwalked. Falsifier: read the primary and confirm or strike. This fence is on the CORPUS'S OWN HOMEWORK, not on the state of the literature, and the two must never be merged.",
+        "'Counterweight' is this corpus's word, not Gould & Lewontin's. It is an engineering metaphor: a mass on the other arm of a lever. The doctrinal content is that the counterweight is MANDATORY and travels with nature-as-authority EVERYWHERE. A register that renders it as 'objection' or 'criticism' makes it optional and separable -- something one might raise, or might not. The concept is that it is not detachable.",
+        "'Spandrel', the term the primary is famous for, is itself an architectural loan (the space between an arch and its frame) used to name a byproduct of a design constraint rather than an adaptation. Any register attempting it inherits an architectural metaphor from a second language on top of an evolutionary argument in a first. Do not attempt it lightly, and do not attempt it at all without reading the primary.",
+        "The five mechanisms are NOT a rhetorical list and must not be compressed. Phylogenetic inertia, drift, developmental constraint, pleiotropy and historical contingency are five DIFFERENT causes, each producing non-adaptive features by a different route. A register that renders them as 'chance' or 'accident' collapses five mechanisms into one and destroys the argument's force -- drift is stochastic, but developmental constraint and pleiotropy are not chance at all.",
+        "'Not optimal solutions to anything' is stronger than 'suboptimal' and the difference is the point. A suboptimal solution is still a solution to some problem. The claim is that some features solve NOTHING -- they are byproducts, inheritances, or side-effects. A register that renders it as 'imperfect adaptation' has conceded the adaptationist premise while appearing to state the objection to it.",
+        "The concept is META store: it disciplines commentary, and is never itself a TRUE signal. It cannot be falsified by a measurement of an organism, because it is not a claim about any organism -- it is a claim about what may be inferred from organisms."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Any rendering meaning 'nature is imperfect' or 'nature makes mistakes'",
+          "why_wrong": "Imports a standard nature is failing to meet, and hence a designer with intentions who erred. The claim is that some features are not solutions to anything AT ALL -- not that they are failed solutions. 'Mistake' presupposes an attempt."
+        },
+        {
+          "rendering": "Any rendering meaning 'the objection to adaptationism' or 'the critique'",
+          "why_wrong": "Makes it detachable. CONCEPTS.json says it is the MANDATORY companion and that it travels with nature-as-authority EVERYWHERE. An objection is something one may answer and move past; a counterweight is structural and always present. The wrong word here would let the whole discipline be dropped politely."
+        },
+        {
+          "rendering": "Any rendering collapsing the five mechanisms into 'chance' or 'randomness'",
+          "why_wrong": "Only drift is stochastic. Phylogenetic inertia is history, developmental constraint is mechanism, pleiotropy is genetic architecture, contingency is path-dependence. Collapsing them concedes that non-adaptive features are mere noise -- which is exactly the adaptationist reply the argument is built to block."
+        },
+        {
+          "rendering": "Any rendering that lets the counterweight sound like a reason to distrust biomimicry entirely",
+          "why_wrong": "Overshoots in the other direction. CONCEPTS.json's gate is precise: a nature-derived design must beat a tuned baseline on a pre-registered metric or be recorded NEGATIVE. That gate is 'the entire difference between this wing and cargo-cult biomimicry' -- it disciplines the method, it does not abolish it."
+        }
+      ],
+      "back_translation_test": {
+        "test": "NOT WRITABLE YET -- no rendering is proposed in any register. When one is proposed, the test shall be: present it with no gloss to two competent readers, blind, and ask each (1) to render it back; (2) whether it says nature is imperfect, or that some features are not solutions at all; (3) whether the thing named is optional or mandatory when reasoning from nature; (4) how many distinct causes it names. PASS iff both return 'not solutions at all' at (2), 'mandatory' at (3), and five or 'several distinct' at (4).",
+        "pass_criterion": "N/A -- no candidate exists. Step (3) is the discriminating one: every natural rendering of 'counterweight' or 'objection' in every register the author can anticipate will read as optional, and the concept is that it is not. A rendering that passes (3) is the hard part of this entry and is the reason nothing is proposed casually.",
+        "status": "NOT-RUN (no candidate)"
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "No rendering is proposed in any of the four non-English registers, and the primary source is NOT-CONFIRMED (not read in this pass). The entry's usable content is its ambiguity_notes and forbidden_mistranslations. Recording the unwalked provenance chain is part of the entry, not a gap in it: NOT-CONFIRMED is a fence on this corpus's own homework and is stated as such."
+    }
+  ]
+}

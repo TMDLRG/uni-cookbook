@@ -1,0 +1,884 @@
+{
+  "schema_version": "1.0.0",
+  "domain": "pomdp-tensors",
+  "source_concepts": "lexicon/CONCEPTS.json",
+  "source_concepts_schema_version": "1.0.0",
+  "concepts_in_domain": 9,
+  "authored_utc": "2026-07-15",
+  "corpus_commit_at_authorship": "f1be794",
+  "reviewer": "NONE - PENDING EXPERT REVIEW",
+  "what_this_is": "The five-register lexicon file for the nine concepts whose domain is 'pomdp-tensors' in lexicon/CONCEPTS.json. Each entry renders ONE concept -- fixed by its definition, never by its English headword -- into Sanskrit, Latin, English, Hindi and Spanish, and records what each rendering gets WRONG alongside what it gets right. NOTHING HERE IS A CLAIM OF PERFECT TRANSLATION. Per rule 18.14 of the operator's charter ('Do not claim perfect translation'), every rendering here is PENDING until an independent back-translation test is RUN, and no test in this file has been run: no translator has been engaged and the reviewer field is NONE for all nine entries. Statuses record what was SEARCHED and FOUND on 2026-07-15 against the named authorities, including the negative results. This file raises no UNI rung, discharges no gate, and states no fact about nature.",
+  "authorities_consulted": {
+    "sanskrit": "Monier-Williams, A Sanskrit-English Dictionary (1899), consulted via the Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php (SLP1 keys), all lookups 2026-07-15. Printed-book page/column references are those returned by the Cologne interface. Apte and Boehtlingk-Roth were NOT consulted this session; where a claim would depend on them it is marked PENDING-CITATION.",
+    "latin": "Lewis & Short, A Latin Dictionary, consulted via Perseus, https://www.perseus.tufts.edu/hopper/ (text 1999.04.0059), all lookups 2026-07-15. Whitaker's WORDS and Allen & Greenough were NOT consulted this session.",
+    "hindi": "NO standard published dictionary was successfully consulted this session (shabdkosh.com returned a redirect loop; no CSTT/Commission-for-Scientific-and-Technical-Terminology glossary was fetched). Every Hindi register in this file is therefore PENDING-CITATION or NOT-ATTEMPTED. The one Hindi attestation obtained is an ENCYCLOPEDIA, not a dictionary, and is recorded as such.",
+    "spanish": "Real Academia Espanola, Diccionario de la lengua espanola (DLE), dle.rae.es -- direct fetch returned HTTP 403; the entry text for 'verosimilitud' was obtained via search result summary only and is recorded at that reduced evidence grade. No Spanish entry in this file rests on a full first-party fetch."
+  },
+  "adversarial_citation_audit": {
+    "performed_utc": "2026-07-15",
+    "performed_by": "ADVERSARIAL BACK-TRANSLATION PASS -- an automated adversary, NOT a human expert and NOT a Sanskritist or Latinist. This audit does NOT satisfy the 'reviewer' field, which remains 'NONE - PENDING EXPERT REVIEW' throughout, and it is NOT a back-translation test: every back_translation_test in this file remains NOT YET RUN, because no translator has been engaged. An audit of whether a citation says what it is quoted as saying is a DIFFERENT test from whether a rendering back-translates to the concept. Do not let the presence of this record be read as either of the other two.",
+    "what_was_tested": "One question only, applied to the citations listed below: does the cited authority actually carry that headword, at the stated page/column, in the sense quoted? The stated purpose was to find fabricated headwords and downgrade them to PENDING-CITATION, on the rule that an invented Monier-Williams or Lewis & Short entry is the worst thing this repo could contain.",
+    "result_headline": "ZERO FABRICATED CITATIONS FOUND. Every citation re-checked held, verbatim, at its stated page and column. NO status was downgraded on fabrication grounds, because there was nothing to downgrade. The file's citations are sound; its ERRORS were errors of OMISSION -- senses present in the cited entries that the entries here did not record, two of which materially damage HIDDEN_STATE's central argument.",
+    "re_verified_monier_williams": [
+      "praty-akṣa [674,2] -- CONFIRMED verbatim, including the parenthetical '(opp. to paro'kza, q.v.)'. The file's only CITED status survives. Re-read additionally found unrecorded noun senses 'ocular evidence, direct perception, apprehension by the senses' and 'superintendence of, care for'.",
+      "parokṣa [589, cols. 1-2] -- lead gloss CONFIRMED verbatim ('beyond the range of sight, invisible, absent, unknown, unintelligible, AV. &c. &c.'). FOUND UNRECORDED: the sense 'past, completed'; adverbials parokṣam / parokṣeṇa / parokṣāt / parokṣe glossing 'behind one's back', 'secretly', 'without the knowledge of'; parokṣa m. 'an ascetic'; parokṣā f. 'a termination of the perfect tense'. This is the audit's material finding.",
+      "avasthā [106,1] -- CONFIRMED. Both striking glosses are real: 'ava-sTA (A), f. appearance (in a court of justice), [Mn. viii, 60]' and 'ava-sTA (As), f. pl. the female organs of generation, [RV. v, 19, 1]'.",
+      "pra-diś [679,3] -- CONFIRMED verbatim ('pointing to or out, indication, direction, order, command, dominion, RV.; AV.; VS.'), AND the negative confirmed: NO mathematical sense appears anywhere in the entry. SD-02's central evidence holds.",
+      "saṃbhāvanā [1179,1] -- CONFIRMED: entry exists, and the sense 'probability' is ABSENT. The negative_lexical_finding is accurate.",
+      "vāsanā [947,3] -- CONFIRMED both quotations, including the mathematical sense, which reads '(in math.) proof, demonstration (= upapatti), Gol.'",
+      "1. iṣṭa [169,2] and 2. iṣṭa [169,3] -- CONFIRMED as two distinct headwords with the √iṣ / √yaj split exactly as described. The homonym trap in C_TENSOR is real and correctly cited.",
+      "saṃ-kramaṇa [1127] -- CONFIRMED all three senses, including 'passage into another world, decease death, MBh.; R.' and the zodiac sense, which MW marks 'Jyot.' -- so the jyotiṣa-import claim is supported by MW's own citation label.",
+      "nir-ṇaya [555,1] -- CONFIRMED 'complete ascertainment, decision, determination, settlement', plus '(in logic) deduction, inference, conclusion, demonstration' and '(in law) sentence, verdict'.",
+      "gūḍha [360,3] -- CONFIRMED verbatim ('covered, hidden, concealed, invisible, secret, private, RV. &c.'); the 'disguised' sub-entry is real and sits at [361,1] (Mn. ix, 261; MBh. iii, 17311)."
+    ],
+    "re_verified_lewis_and_short": [
+      "observabilis -- CONFIRMED: gloss 'remarkable, observable', marked post-Aug., citing Quint. 9.1.20, Apul. M. 11 p. 267,8, and Vulg. Exod. 12.42. POMDP's 'most dangerous word' note is accurately sourced, Vulgate citation included.",
+      "lateo -- CONFIRMED: headword line reads 'lătĕo, ŭi, 2, v. n.'; sense I 'to lurk, be or lie hid or concealed, to skulk (class.)'. The 'v. n.' marking that selects latens over occultus is real, and it is the best-grounded argument in the file.",
+      "verisimilis -- CONFIRMED: 'more correctly written separately, vērī similis, etc., v. under verus and similis, etc.', and there is NO independent verisimilitudo entry. The decisive negative against verisimilitudo holds."
+    ],
+    "re_verified_repo_receipts": [
+      "cookbook/01-kitchen-rules.md -- the A/B/D/E learning claim (C excluded) appears at lines 72 and 130, inside the cited ranges 'lines 71-72' and 'lines 129-130'. Both receipts land."
+    ],
+    "NOT_audited_still_resting_on_the_original_session": "COVERAGE IS PARTIAL AND MUST NOT BE READ AS TOTAL. NOT re-checked this pass: MW gaṇanā [343,3], pūrva [643,1], tantra [436], aṃśa [p. 1], prakriyā [653]; L&S processus, decisio, partim, transitus, opto, status, consuetudo, observo, tendo. These retain exactly the evidence grade the original session gave them -- no better, no worse. Every item this file marks as a flagged suspicion (pariṇāma, icchā, saṃskāra, avyakta, rahasya, dṛṣṭi, habitus, pūrva-pakṣa, the monastic prior, the Transitus Mariae sense, parokṣa-jñāna, the Nyāya-pramāṇa claim, the abhyāsa Yoga freight) remains UNVERIFIED and is untouched by this audit. Every PENDING-CITATION remains PENDING: no Hindi dictionary and no CSTT glossary was consulted, and dle.rae.es was not retried.",
+    "falsifier": "Re-run any lookup above against the named authority. If any quoted gloss, page or column does not match, this audit is wrong and the affected entry must be struck to PENDING-CITATION regardless of what this record says. A record of an audit is not the audit; the falsifier is the lookup."
+  },
+  "status_vocabulary": {
+    "CITED": "The headword was searched for in the named authority, FOUND, and the entry text is quoted in the citation field, in the sense claimed.",
+    "PENDING-CITATION": "Plausible and possibly standard, but the claimed headword-plus-sense was NOT confirmed against the named authority this session. Carries a falsifier.",
+    "COINED": "No attested term carries this sense. A compound or derivation is proposed and MUST carry its morphological derivation. A coinage is never upgraded to CITED by repetition.",
+    "NOT-ATTEMPTED": "No rendering offered.",
+    "_field_contract": "status is ALWAYS exactly one bare token from {CITED, PENDING-CITATION, COINED, NOT-ATTEMPTED} so the fence is machine-checkable. Where a rendering is mixed -- e.g. a coined compound whose members are individually cited -- status takes the WEAKEST applicable value (the coinage), and status_note carries the breakdown. Rounding UP to the strength of the best member would be the characteristic dishonesty of this file; a compound of two cited words is still a coinage."
+  },
+  "standing_decisions": [
+    {
+      "id": "SD-01-LETTER-LABELS",
+      "applies_to": [
+        "A_TENSOR",
+        "B_TENSOR",
+        "C_TENSOR",
+        "D_TENSOR",
+        "E_TENSOR"
+      ],
+      "decision": "The Roman letters A/B/C/D/E are RETAINED unchanged in every register, as bare indices.",
+      "grounds": "CONCEPTS.json fixes this for the domain: 'The letters A/B/C/D/E are conventional labels, not abbreviations; a register must transliterate or index them, never translate them as words.' The note licenses either transliteration or indexing; indexing is chosen because every transliteration considered introduced a false assertion.",
+      "rejected_alternatives": [
+        "Devanagari letter-order indices (क ख ग घ ङ = ka kha ga gha na): REJECTED. That series is ordinal, and would assert that A is 'the first' tensor. A is the likelihood; it is first in no respect. The same objection defeats Latin PRIMUS/SECUNDUS and Sanskrit prathama/dvitiya.",
+        "Transliterating the letter-NAME (English /eɪ/ -> Devanagari ए): REJECTED. ए is the vowel e; the result is unreadable as a label and collides with a real Devanagari grapheme.",
+        "Translating the parenthetical role-word (likelihood/transition/preferences/prior/habits) as if it were the term: REJECTED. Those are glosses of the tensor's ROLE, not the tensor's name. The name is the letter."
+      ],
+      "falsifier": "A reader of any register file reads A/B/C/D/E as ordinal, alphabetical, or abbreviational rather than as an arbitrary index. If that happens the policy has failed and the index must be re-cut."
+    },
+    {
+      "id": "SD-02-NO-ATTESTED-WORD-FOR-TENSOR",
+      "applies_to": [
+        "A_TENSOR",
+        "B_TENSOR",
+        "C_TENSOR",
+        "D_TENSOR",
+        "E_TENSOR"
+      ],
+      "decision": "NEITHER Sanskrit NOR Latin has an attested word for the mathematical object 'tensor'. Both registers are COINED for all five tensor concepts. This is the honest outcome and is not a defect of this file.",
+      "evidence_latin": "Lewis & Short was searched for the headword 'tensor' via Perseus resolveform (exact, lang=la) on 2026-07-15. Result, quoted: 'Your search for tensor returned no results.' There is NO Lewis & Short entry for tensor. The word is New Latin: the anatomical 'musculus tensor' postdates the classical corpus, and the mathematical sense is later still (Hamilton's 1846 coinage, re-cut to the modern sense by Voigt in the 1890s -- BOTH attributions are PENDING-CITATION, not checked against a primary source this session).",
+      "evidence_sanskrit": "Monier-Williams was searched for pradis (SLP1 pradiS) on 2026-07-15. The entry, quoted verbatim: 'pra-diS f. pointing to or out, indication, direction, order, command, dominion, RV.; AV.; VS.' [MW printed p. 679 col. 3]. MW carries NO mathematical sense whatsoever for this word. The modern Hindi/Sanskrit technical use of प्रदिश for 'tensor' is a 20th-century coinage; MW does not carry it in the claimed sense, and per the corpus rule an authority that does not carry the claimed sense cannot license the entry.",
+      "why_it_matters": "This is exactly the case CONCEPTS.json predicted: 'Sanskrit technical vocabulary for modern math and physics largely DOES NOT EXIST as attested classical terms; the honest expectation is many coined entries.' The prediction held. Recording the coinage as a coinage is the whole point; an entry claiming MW attests 'tensor' would be a pseudopropheta."
+    }
+  ],
+  "negative_lexical_findings": [
+    {
+      "searched": "tensor",
+      "authority": "Lewis & Short via Perseus resolveform",
+      "result": "NO ENTRY -- 'Your search for tensor returned no results.'",
+      "consequence": "Latin register COINED for all five tensor concepts."
+    },
+    {
+      "searched": "optatum (as an independent neuter substantive headword)",
+      "authority": "Lewis & Short via Perseus resolveform",
+      "result": "NO ENTRY -- 'Your search for optatum returned no results.'",
+      "consequence": "OPTATUM is a regular but non-lexicalized substantival use of the PPP of opto; recorded COINED, not CITED."
+    },
+    {
+      "searched": "observatum (as an independent neuter substantive headword)",
+      "authority": "Lewis & Short via Perseus resolveform",
+      "result": "NO ENTRY -- 'Your search for observatum returned no results.'",
+      "consequence": "OBSERVATUM is a regular but non-lexicalized substantival use of the PPP of observo; recorded COINED, not CITED."
+    },
+    {
+      "searched": "verisimilitudo",
+      "authority": "Lewis & Short via Perseus",
+      "result": "No independent entry. The headword reads, quoted verbatim: 'vērĭsĭmĭlis, vērĭsĭmĭlĭter, and vērĭsĭmĭlĭtūdo, more correctly written separately, vērī simĭlis, etc., v. under verus and similis, etc.' The word is analysed as veri + similis, 'like the truth'.",
+      "consequence": "Decisive against using verisimilitudo for statistical likelihood. See A_TENSOR.forbidden_mistranslations."
+    },
+    {
+      "searched": "amsatah (SLP1 aMSataH)",
+      "authority": "Monier-Williams via Cologne",
+      "result": "NOT FOUND.",
+      "consequence": "The adverb is recorded COINED (regular -tas/-taḥ adverbial from the attested stem aṃśa [MW p. 1]), not CITED."
+    },
+    {
+      "searched": "sambhavana (SLP1 samBAvanA) in the sense 'probability'",
+      "authority": "Monier-Williams via Cologne",
+      "result": "Entry FOUND [MW printed p. 1179 col. 1] but the sense 'probability' is ABSENT. Quoted: 'imagination, supposition, assumption (also as a rhet. figure, described by some as the use of the verb in the Imperative or Potential mood'.",
+      "consequence": "sambhāvanā may NOT be used for 'likelihood'. The authority does not carry the claimed sense. See A_TENSOR."
+    },
+    {
+      "searched": "verosimilitud, statistical sense",
+      "authority": "Real Academia Espanola, DLE",
+      "result": "The DLE entry gives sense 1 only: 'f. Cualidad de verosimil.' NO statistical or mathematical sense is recorded in the DLE. [Evidence grade reduced: obtained via search-result summary, not a first-party fetch -- dle.rae.es returned HTTP 403.]",
+      "consequence": "Spanish 'verosimilitud' is the CONVENTIONAL term of art in Spanish-language statistics ('estimacion de maxima verosimilitud'), but the DLE does not license the sense. Spanish A_TENSOR status is PENDING-CITATION, not CITED."
+    }
+  ],
+  "falsifiers": [
+    "Any register entry marked CITED whose quoted authority does not in fact carry that headword, or does not carry it in the sense claimed. That entry is a pseudopropheta and must be struck to PENDING-CITATION.",
+    "Any COINED entry lacking its morphological derivation.",
+    "Any back_translation_test reported as PASSED while reviewer remains 'NONE - PENDING EXPERT REVIEW'. No test in this file has been run; a PASS appearing without a named tester is a forgery.",
+    "A register renders GENERATIVE_MODEL and GENERATIVE_PROCESS with one term (cross-domain; those concepts live in active-inference-math, but a tensor entry that blurs the model/process line trips the same wire).",
+    "Any entry that lets a Sanskrit doctrinal term quietly assert a metaphysics -- e.g. rendering HIDDEN_STATE with avyakta (Samkhya's unmanifest prakrti) or E_TENSOR with vasana (karmic latency). The ambiguity_notes exist precisely to catch this and are the most load-bearing field in each entry.",
+    "Any entry that treats the C tensor as learned, or the A/B/D/E tensors as set. The asymmetry is OBSERVED in the corpus (01-kitchen-rules M13: learning covers A/B/D/E, never C) and a register that loses it has lost the concept.",
+    "A status field holds anything other than one bare token from {CITED, PENDING-CITATION, COINED, NOT-ATTEMPTED}, or a mixed rendering is graded at the strength of its strongest member rather than its weakest. Run the enum validator in this file's header comment; a compound of cited members is COINED, never CITED."
+  ],
+  "terms": [
+    {
+      "concept_id": "POMDP",
+      "definition_from_concepts_json": "A discrete formalism of hidden states, observations and actions in which states are not directly visible, over which this corpus's engine runs the loop perceive, EFE-plan, act, learn.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "अंशतःप्रत्यक्षा मार्कोव-निर्णय-प्रक्रिया",
+        "iast": "aṃśataḥ-pratyakṣā mārkova-nirṇaya-prakriyā",
+        "headword_as_in_lexicon": "NONE -- COINED compound. No MW headword denotes this object or could; the formalism postdates the lexicon by ~70 years.",
+        "grammar": "f. tatpuruṣa compound (mārkova-nirṇaya-prakriyā, 'a decision-procedure of Markov'), qualified by the adverbial aṃśataḥ-pratyakṣā, 'perceptible in part'. Head: prakriyā f.",
+        "literal_gloss": "a Markov decision-procedure, perceptible in part",
+        "morphological_derivation": "aṃśataḥ < aṃśa m. 'a share, portion, part' [MW p. 1] + the productive adverbial/ablatival taddhita suffix -tas/-taḥ. NOTE: the derived form aṃśataḥ was searched in MW on 2026-07-15 and NOT FOUND; only the stem is attested, so the adverb is part of the coinage, not a citation. pratyakṣā < praty-akṣa [MW 674,2]. nirṇaya m. [MW 555,1]. prakriyā f. [MW 653]. mārkova = transliteration of the proper name Markov; a proper name is not a lexical item and is not claimed as one.",
+        "citation": "Members: MW s.v. aṃśa, printed p. 1: 'aMSa m. ... a share, portion, part, party'. MW s.v. praty-akṣa, printed p. 674 col. 2: 'praty-akza mf(A)n. present before the eyes, visible, perceptible (opp. to paro'kza, q.v.), Up.; MBh. &c.' MW s.v. nirṇaya, printed p. 555 col. 1: 'complete ascertainment, decision, determination, settlement, ib.' MW s.v. prakriyā, printed p. 653: 'procedure, way, manner'; 'a ceremony, observance, formality'; 'a chapter (esp. the introductory ch. of a work)'. All via Cologne Digital Sanskrit Dictionaries, retrieved 2026-07-15.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "PROCESSUS DECISIONIS MARKOVIANUS PARTIM OBSERVABILIS",
+        "grammar": "processus, ūs, m., head noun; decisionis, gen. sg. of decisio, ōnis, f.; Markovianus and observabilis, adjs. agreeing with processus (m. nom. sg.); partim, adv., modifying observabilis.",
+        "literal_gloss": "a Markovian process of decision, observable in part",
+        "morphological_derivation": "Markovianus = a modern -ianus denominative from the proper name Markov; irreducibly post-classical, since the man is a 19th-century mathematician. The word order places the adjectives on processus deliberately: it is the PROCESS that is Markovian and partly observable, not the decision. 'processus decisionis Markovianae' would misassign both adjectives to decisio and is rejected.",
+        "citation": "L&S s.v. processus (entry processus2), short def.: 'an advance, course, progression, progress, process, movement'. L&S s.v. decisio: 'dēcīsĭo, ōnis, f.' [from decīdo], I. 'A diminishing' (lit., rare); II. 'A decision, settlement, agreement' (fig.). L&S s.v. partim, entry reads in full: 'partim, v. pars' -- an attested headword whose gloss is carried at pars; the gloss 'partly, in part' was NOT read at pars this session and is PENDING-CITATION. L&S s.v. observabilis: 'observābĭlis, e, adj. observo', gloss 'remarkable, observable', marked post-Aug., citing Quint. 9.1.20; Apul. M. 11 p. 267,8; Vulg. Exod. 12.42. All via Perseus, retrieved 2026-07-15.",
+        "classical_or_post_classical": "[POST-CLASSICAL] as a whole and irreducibly so. processus, decisio and partim are classical; observabilis is post-Augustan by L&S's own label; Markovianus is modern. No arrangement of Latin words can make this term classical, because its referent is 20th-century mathematics.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "partially observable Markov decision process",
+        "definition": "A discrete formalism of hidden states, observations and actions in which the states are not directly visible, so that an agent must act from a belief over states rather than from the states themselves; the formalism over which this corpus's engine runs perceive, EFE-plan, act, learn."
+      },
+      "hindi": {
+        "devanagari": "आंशिक रूप से प्रेक्षणीय मार्कोव निर्णय प्रक्रिया",
+        "transliteration": "āṃśik rūp se prekṣaṇīya mārkov nirṇay prakriyā",
+        "gloss": "partially observable Markov decision process",
+        "citation": "NONE OBTAINED. No standard published Hindi dictionary or CSTT glossary was successfully consulted on 2026-07-15 (shabdkosh.com returned a redirect loop). This rendering is the compositional form a Hindi technical writer would be expected to reach for; it is NOT sourced.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Look the term up in the CSTT (वैज्ञानिक तथा तकनीकी शब्दावली आयोग) computer-science/mathematics glossary. If CSTT carries a different standardised rendering, this entry is wrong and CSTT wins."
+      },
+      "spanish": {
+        "term": "proceso de decisión de Márkov parcialmente observable",
+        "gloss": "partially observable Markov decision process",
+        "citation": "NONE OBTAINED from a standard published dictionary. This is the established calque in Spanish-language literature (and the accent 'Márkov' follows the RAE's transliteration practice for Cyrillic proper names), but no RAE or other dictionary entry was fetched for it on 2026-07-15; dle.rae.es returned HTTP 403.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm against a published Spanish-language text on decision processes, or the RAE's Diccionario panhispanico. If the established form omits the accent or uses 'Markov', correct it."
+      },
+      "ambiguity_notes": [
+        "THE MOST DANGEROUS WORD IN THE LATIN IS observabilis. L&S glosses it 'remarkable, observable' and marks it post-Augustan, and its attested uses do not mean 'capable of being observed' in the technical sense of observability theory. The Vulgate citation L&S gives -- Exod. 12.42, 'nox ista est observabilis Domini' -- means 'this is the night TO BE KEPT/celebrated of the Lord', i.e. a night to be religiously OBSERVED. Latin observo carries both 'to watch/note' and 'to keep/observe (a rite, a law)', and observabilis inherits the second. To a Latinist, PARTIM OBSERVABILIS therefore risks reading 'partly remarkable' or 'partly to-be-ritually-kept'. The word is retained for want of a better deverbative, but this trap is live and is the first thing a reviewer should attack.",
+        "'Partially observable' is the load-bearing qualifier (CONCEPTS.json) and the reason a recognition density is needed at all. A register that drops 'partim'/'aṃśataḥ' does not name a weaker version of the concept -- it names a DIFFERENT formalism (a plain MDP), in which no belief state and no inference are required. The qualifier is not decoration.",
+        "Sanskrit nirṇaya [MW 555,1] leads with 'COMPLETE ascertainment'. That is precisely what a partially observable process denies: in a POMDP the ascertainment is constitutively incomplete. The compound therefore sets its own qualifier fighting its own head noun. This is recorded rather than repaired because every alternative considered was worse; it is the single weakest joint in the Sanskrit entry.",
+        "nirṇaya further carries legal 'sentence, verdict' and logical 'deduction, inference' senses [MW 555,1]. The decision in a POMDP is an action selection under uncertainty -- neither a juridical verdict nor a deductive conclusion.",
+        "Sanskrit prakriyā [MW 653] carries 'a ceremony, observance, formality' and 'a chapter (esp. the introductory chapter of a work)'. A POMDP is neither a rite nor a book-division. Note the accidental rhyme with the Latin trap above: BOTH registers' words for the process/observing drift toward RITUAL OBSERVANCE. That is a coincidence of two independent lexicons, not evidence of anything, and must not be presented as a finding.",
+        "Latin decisio is literally 'a cutting off' (from decīdo) and its figurative sense II is 'a decision, SETTLEMENT, AGREEMENT' -- Cicero's uses are of legal settlements between parties. A POMDP decision is not negotiated and has no counterparty.",
+        "'Markov' names a person and imports nothing but the memorylessness property. No register may gloss it descriptively (e.g. as 'memoryless'), because the concept is fixed to the formalism's conventional name, and a descriptive gloss would silently assert which property is meant."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin: PROCESSUS DECISIONIS MARKOVIANAE PARTIM OBSERVABILIS",
+          "why_wrong": "Puts Markovianae in agreement with decisionis. It is the process that carries the Markov property, not the decision. A grammatically fluent error that inverts the formalism."
+        },
+        {
+          "rendering": "Any register: dropping 'partially' / 'partim' / 'aṃśataḥ'",
+          "why_wrong": "Yields a Markov decision process -- a different and strictly easier formalism, with no hidden state, no belief, and no need for inference. This is not a translation of the concept but a replacement of it."
+        },
+        {
+          "rendering": "Sanskrit: गूढ-निर्णय-प्रक्रिया (gūḍha-nirṇaya-prakriyā)",
+          "why_wrong": "gūḍha [MW 360,3] means 'covered, hidden, concealed, invisible, SECRET, PRIVATE'. It would assert that the process is clandestine. See HIDDEN_STATE."
+        },
+        {
+          "rendering": "Spanish: 'proceso de decisión de Markov parcialmente observado'",
+          "why_wrong": "'observado' (observed) for 'observable'. The states are not partly observed; they are partly OBSERVABLE -- a modal claim about what could be seen, not a report of what was."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator competent in the register ONLY the rendering, with this file's definition withheld. Ask: 'What object does this term denote? Answer in English in one sentence.'",
+        "pass_criterion": "PASS iff the back-translation (a) names a decision formalism, (b) asserts that the states are not directly visible / only partly observable, and (c) does NOT assert ritual observance, secrecy, a legal settlement, or complete ascertainment. FAIL on any one of the three.",
+        "status": "NOT YET RUN -- no translator engaged. Any PASS recorded here without a named tester is a forgery."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW for Sanskrit and Latin (both wholesale coinages for a 20th-century formalism; the Latin observabilis trap and the Sanskrit nirṇaya 'completeness' conflict are unrepaired). MEDIUM for Spanish (established calque, unsourced). LOW for Hindi (unsourced). HIGH only for English, which is the concept's own label and not a translation."
+    },
+    {
+      "concept_id": "A_TENSOR",
+      "definition_from_concepts_json": "The tensor encoding p(o|s), mapping hidden states to observations, and one of the four tensors this corpus's engine learns by conjugate-Dirichlet counts.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "A-प्रदिश",
+        "iast": "A-pradiśa",
+        "headword_as_in_lexicon": "NONE for the sense 'tensor'. MW s.v. pra-diś IS attested but NOT in the claimed sense. See SD-02.",
+        "grammar": "m./f. The Roman letter A is retained as a bare index per SD-01. pradiś is f. in MW; as the second member of this coinage it is treated as a stem in -a (pradiśa) for compounding, which is itself part of the coinage.",
+        "literal_gloss": "the A-tensor (lit., by MW's attested sense, 'the A-indication/direction' -- which is NOT what is meant)",
+        "morphological_derivation": "pradiś < pra- + √diś 'to point out'. The 20th-century Hindi/Sanskrit technical series adiś (scalar, 'no direction') / sadiś (vector, 'with direction') / pradiś (tensor) extends the root. MW carries the morpheme [679,3] but carries NO mathematical sense; the technical sense is the coinage.",
+        "citation": "MW s.v. pra-diś, printed p. 679 col. 3, via Cologne, retrieved 2026-07-15: 'pra-diS f. pointing to or out, indication, direction, order, command, dominion, RV.; AV.; VS.' NOTE THE ABSENCE: no mathematical sense appears in the entry. This citation is offered as evidence for the morpheme ONLY and expressly does NOT license the sense 'tensor'.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "TENSOR A",
+        "grammar": "tensor, ōris, m. (agent noun); A indeclinable, retained as a bare index per SD-01.",
+        "literal_gloss": "the A-stretcher / the A-tensor",
+        "morphological_derivation": "A regular -tor agent noun built on the supine stem tēns- of tendō. This derivation is licensed by L&S's own principal parts: 'tendo (tenno), tĕtendi, tentum and tensum, 3, v. a. and n.' -- tēnsum is an attested supine. So the FORMATION is regular Latin even though the WORD is not attested: the derivation is sound, the lexeme is New Latin.",
+        "citation": "L&S s.v. tendo, via Perseus, retrieved 2026-07-15: 'tendo (tenno), tĕtendi, tentum and tensum, 3, v. a. and n.', I. 'to stretch, extend, distend'; the entry notes the root relation to teneo and Greek τείνω. For 'tensor' itself: SEARCHED in L&S via Perseus resolveform 2026-07-15, result 'Your search for tensor returned no results.' NO ENTRY.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- New Latin. The word enters Latin in anatomy (musculus tensor, 'the muscle that stretches'); the mathematical sense is a 19th-century re-cutting. Both attributions are PENDING-CITATION: no primary source for either was checked this session.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "A tensor (likelihood)",
+        "definition": "The tensor encoding p(o|s) -- the probability of each observation given each hidden state -- which maps hidden states to observations and is one of the four tensors (A, B, D, E) that this corpus's engine learns by conjugate-Dirichlet counts."
+      },
+      "hindi": {
+        "devanagari": "A-प्रदिश",
+        "transliteration": "A-pradiś",
+        "gloss": "the A tensor",
+        "citation": "PARTIAL, and NOT from a dictionary. Hindi Wikipedia's article प्रदिश opens, quoted verbatim: 'प्रदिश या टेंसर (Tensors) वे ज्यामितीय वस्तुएं हैं जो...' -- which attests प्रदिश = tensor and टेंसर as the transliterated loan. AN ENCYCLOPEDIA IS NOT A STANDARD PUBLISHED DICTIONARY; per the corpus rule this is not admissible as the citation, and is recorded as supporting evidence only.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Find प्रदिश = tensor in the CSTT glossary or a standard published Hindi dictionary. If only टेंसर (the loan) is standard, prefer it and downgrade this entry."
+      },
+      "spanish": {
+        "term": "tensor A (verosimilitud)",
+        "gloss": "the A tensor (likelihood)",
+        "citation": "The DLE entry for 'verosimilitud' gives sense 1 only: 'f. Cualidad de verosimil' -- 'the quality of being verisimilar/credible'. NO statistical sense is recorded in the DLE. [Evidence grade reduced: search-result summary, not a first-party fetch; dle.rae.es returned 403.] No DLE entry for the mathematical sense of 'tensor' was fetched.",
+        "status": "PENDING-CITATION",
+        "falsifier": "'Verosimilitud' IS the conventional term of art in Spanish-language statistics ('estimacion de maxima verosimilitud'). Cite a published Spanish statistics text carrying verosimilitud = p(o|s). Until then the DLE positively does NOT license the sense, and this entry may not be marked CITED."
+      },
+      "ambiguity_notes": [
+        "THE CENTRAL TRAP OF THIS ENTRY: a likelihood is NOT a probability of the hidden state. p(o|s) read as a function of s is not a distribution over s and does not normalise over s. Every register word here that means 'how probable the state is' or 'how true it is' names a different object -- the posterior, or worse, a truth-value.",
+        "This is why Latin verisimilitudo is fatal and not merely infelicitous. L&S does not even grant it an independent entry; the headword reads 'vērĭsĭmĭlis, vērĭsĭmĭlĭter, and vērĭsĭmĭlĭtūdo, more correctly written separately, vērī simĭlis, etc., v. under verus and similis' -- i.e. the word IS 'veri similis', LIKE THE TRUTH. It asserts likeness-to-truth, which is exactly the assertion a likelihood does not make.",
+        "SPANISH AND LATIN DIVERGE HERE, AND THE DIVERGENCE MUST NOT BE LAUNDERED. Spanish has conventionalised 'verosimilitud' for statistical likelihood; Latin has not. The Spanish convention is a fait accompli of usage and is admissible in Spanish on those terms. It may NOT be back-borrowed into Latin on the strength of the cognate: the Latin word's attested semantics actively contradict the concept. A translator who reasons 'Spanish says verosimilitud, so Latin says verisimilitudo' has produced a pseudopropheta by cognate.",
+        "Sanskrit pradiś [MW 679,3] carries 'order, command, dominion'. The A tensor commands nothing and has dominion over nothing. These senses are wholly absent from the concept and are live in the attested word.",
+        "tantra [MW 436,1-2] is the tempting etymological parallel: MW gives 'a loom', 'the warp', and 'the leading or principal or essential part, main point, characteristic feature, model, type, system, framework'. The loom/warp sense is a genuine semantic cousin of Latin tendo's 'stretch'. It is nevertheless FORBIDDEN (below), because MW's same entry gives 'a class of works teaching magical and mystical formularies'. Using tantra would import the entire Tantric corpus into a likelihood matrix.",
+        "CONCEPTS.json: 'ambiguity lives in A, controllability lives in B'. A register that renders A and B with interchangeable words for 'matrix/array' loses the division of labour that makes the pair mean anything.",
+        "The parenthetical '(likelihood)' is a gloss of the tensor's ROLE, not part of its name. The name is the letter A (SD-01). A register that translates 'likelihood' and drops the A has named the role and lost the object."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin: TENSOR VERISIMILITUDINIS",
+          "why_wrong": "L&S analyses the word as vērī simĭlis, 'like the truth'. It asserts probability-of-being-true. A likelihood is not the probability that the state is true; it is the probability of the DATUM given the state. This inverts the conditional."
+        },
+        {
+          "rendering": "Sanskrit: सम्भावना (sambhāvanā)",
+          "why_wrong": "TWO independent failures. (1) MW [1179,1] gives 'imagination, supposition, assumption (also as a rhet. figure...)' and does NOT carry 'probability' -- the authority does not license the sense. (2) Even if it did, 'probability' is the wrong object: likelihood is not a probability over states. The modern Hindi सम्भावना = probability is a later development and cannot be retrojected onto MW."
+        },
+        {
+          "rendering": "Sanskrit: तन्त्र (tantra)",
+          "why_wrong": "Etymologically apt (MW 436: 'a loom', 'the warp' -- the stretch-sense that also gives Latin tensor), and doctrinally catastrophic: MW's same entry gives 'a class of works teaching magical and mystical formularies'. Imports the Tantric corpus wholesale. A metaphysics smuggled in on an etymology is the exact failure CONCEPTS.json warns of."
+        },
+        {
+          "rendering": "Any register: rendering A as 'first' (प्रथम / PRIMUS / primero)",
+          "why_wrong": "Violates SD-01. A is an arbitrary index, not an ordinal. A is the likelihood; it is first in nothing. The letters are conventional labels, not abbreviations."
+        },
+        {
+          "rendering": "Spanish: 'tensor de probabilidad A'",
+          "why_wrong": "Collapses likelihood into probability, discarding the conditional direction that is the whole content of p(o|s)."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering plus the bare phrase 'in a decision formalism', definition withheld. Ask: 'What does this denote, and what is conditioned on what?'",
+        "pass_criterion": "PASS iff the back-translation states that the object gives the probability of an OBSERVATION GIVEN a STATE (o conditioned on s), and does NOT state that it gives the probability, truth, or credibility OF the state. The direction of the conditional is the discriminating property; a back-translation that is vague about direction is a FAIL, not a partial pass.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. Both learned registers are coinages for an object neither lexicon knows, the Spanish rests on a convention its own dictionary does not record, and the Hindi is unsourced. The one thing here held with confidence is a NEGATIVE: verisimilitudo is decisively wrong, and that is evidenced."
+    },
+    {
+      "concept_id": "B_TENSOR",
+      "definition_from_concepts_json": "The tensor encoding p(s'|s,u), mapping a hidden state and an action to the next hidden state, and one of the four tensors learned by conjugate-Dirichlet counts.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "B-प्रदिश",
+        "iast": "B-pradiśa",
+        "headword_as_in_lexicon": "NONE for 'tensor' (SD-02). The role-gloss uses saṃkramaṇa, which IS attested: MW s.v. saṃ-kramaṇa.",
+        "grammar": "m./f. B retained as bare index (SD-01). Role-gloss compound: संक्रमण-प्रदिश (saṃkramaṇa-pradiśa), 'transition-tensor', tatpuruṣa.",
+        "literal_gloss": "the B-tensor; role-gloss 'the transference-tensor'",
+        "morphological_derivation": "saṃkramaṇa < sam- + √kram 'to step, stride' + -ana (action noun). pradiśa as in A_TENSOR (COINED sense).",
+        "citation": "MW s.v. saṃ-kramaṇa, printed p. 1127, via Cologne, retrieved 2026-07-15: 'going or meeting together, union with, entrance into, transference to'; the entry further gives 'passage into another world, decease, death' and the sun's passage from one sign of the zodiac to another. For pradiś see A_TENSOR: attested [MW 679,3], NOT in the sense 'tensor'.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word (pradiśa). The role-gloss member saṃkramaṇa IS cited [MW 1127], but not in any technical sense -- MW knows no state transitions."
+      },
+      "latin": {
+        "form": "TENSOR B",
+        "grammar": "tensor, ōris, m.; B indeclinable index (SD-01). Role-gloss: TENSOR TRANSITUS, 'tensor of passage'.",
+        "literal_gloss": "the B-tensor; role-gloss 'the tensor of passing-over'",
+        "morphological_derivation": "tensor as in A_TENSOR: regular -tor agent noun on the attested supine tēns- [L&S s.v. tendo], word itself NOT in L&S. transitus, ūs, m. < trans- + eō.",
+        "citation": "L&S s.v. transitus (the noun, transitus, ūs, m.), via Perseus resolveform, retrieved 2026-07-15, short def.: 'a going over, passing over, passage'. For tensor: NO ENTRY (see negative_lexical_findings).",
+        "classical_or_post_classical": "transitus classical; tensor [POST-CLASSICAL] New Latin. The compound term is post-classical.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word. The role-gloss member transitus is CITED [L&S]."
+      },
+      "english": {
+        "term": "B tensor (transition)",
+        "definition": "The tensor encoding p(s'|s,u) -- the probability of the next hidden state given the current hidden state AND the action taken -- and one of the four tensors (A, B, D, E) learned by conjugate-Dirichlet counts."
+      },
+      "hindi": {
+        "devanagari": "B-प्रदिश (संक्रमण)",
+        "transliteration": "B-pradiś (saṅkramaṇ)",
+        "gloss": "the B tensor (transition)",
+        "citation": "NONE OBTAINED from a standard published dictionary. See authorities_consulted.hindi.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm संक्रमण = transition and प्रदिश = tensor in the CSTT glossary. Note संक्रमण in current Hindi usage strongly means 'infection' (as in an epidemic) -- if CSTT does not carry the transition sense, this entry is actively misleading and must be re-cut."
+      },
+      "spanish": {
+        "term": "tensor B (transición)",
+        "gloss": "the B tensor (transition)",
+        "citation": "NONE OBTAINED. dle.rae.es returned HTTP 403.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm 'transición' in the DLE and in a published Spanish text on Markov processes."
+      },
+      "ambiguity_notes": [
+        "THE DISCRIMINATING PROPERTY IS THE ACTION-CONDITIONING, and every register loses it by default. p(s'|s,u) is conditioned on u, the ACTION. A word meaning bare 'change', 'transition', or 'passage' names p(s'|s) -- an uncontrolled Markov chain. CONCEPTS.json: 'ambiguity lives in A, controllability lives in B'. Drop u and B stops being the seat of controllability and the agent stops being an agent.",
+        "Sanskrit saṃkramaṇa [MW 1127] carries 'passage into another world, DECEASE, DEATH'. संक्रमण-प्रदिश is therefore readable as a death-tensor. This is not a remote sense; it is in the entry.",
+        "saṃkramaṇa [MW 1127] also names the sun's passage from one zodiac sign to another -- the Saṃkrānti. This is the sense a Sanskrit reader is MOST likely to reach first, and it imports jyotiṣa (astrology/astronomy). A state transition is not a solar ingress.",
+        "MW's lead sense for saṃkramaṇa is 'going or meeting together, UNION WITH'. Union is not transition: it names arrival at a joint state, not a conditional step from one state to a next. The lead sense is thus the wrong one, and only the later 'transference to' fits.",
+        "Modern Hindi संक्रमण predominantly means INFECTION (संक्रामक = contagious). A Hindi reader in 2026 reads 'संक्रमण-प्रदिश' as an infection-tensor before a transition-tensor. This is a case where the Sanskrit parent and the Hindi daughter have diverged and the register files must not assume the daughter inherits the parent's sense.",
+        "Latin transitus is suspected of carrying an ecclesiastical 'passing away/death' sense (cf. the Transitus Mariae) -- which would mirror the Sanskrit death-drift exactly. THIS IS NOT VERIFIED: no L&S sense-list beyond the short definition 'a going over, passing over, passage' was read this session. Recorded as a suspicion with a falsifier, NOT as a note. Falsifier: read the full L&S entry for transitus and Du Cange for the ecclesiastical sense.",
+        "B and D are both about hidden states and are easily merged. B is the CONDITIONAL step s -> s'; D is the prior at t=0. A register that renders both with a bare 'state-prior' word collapses the dynamics into the initial condition."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Any register: a word for bare 'change' or 'transition' with no action-conditioning (e.g. Spanish 'tensor de cambio', Latin TENSOR MUTATIONIS)",
+          "why_wrong": "Names p(s'|s), an uncontrolled Markov chain. Deletes u, and with it the entire controllability of the model. The agent could no longer act."
+        },
+        {
+          "rendering": "Sanskrit: परिणाम (pariṇāma)",
+          "why_wrong": "REJECTED on doctrinal-freight grounds: in Samkhya, pariṇāma-vāda names the doctrine of the real transformation of prakṛti, and the word would import that metaphysics into a transition matrix. NOTE THE EVIDENCE GRADE: this freight claim was NOT verified against MW or Apte this session. It is a flagged suspicion, not a citation. Falsifier: read MW s.v. pariṇāma before relying on this rejection."
+        },
+        {
+          "rendering": "Hindi: संक्रमण without a disambiguating qualifier",
+          "why_wrong": "Reads as 'infection' to a contemporary Hindi speaker. The tensor is not epidemiological."
+        },
+        {
+          "rendering": "Any register: rendering B as 'second' (द्वितीय / SECUNDUS / segundo)",
+          "why_wrong": "Violates SD-01. B is an index, not an ordinal."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering plus 'in a decision formalism', definition withheld. Ask: 'What does this denote? What quantities does it depend on?'",
+        "pass_criterion": "PASS iff the back-translation names BOTH the current state AND the action as the things conditioned on, and the next state as the thing distributed. A back-translation naming only 'change of state' is a FAIL -- the omission of the action is the failure, not a shortfall in detail. Any back-translation mentioning death, infection, or a solar/zodiacal passage is a FAIL.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. The tensor-word is coined in both learned registers; the best attested Sanskrit candidate for the role-gloss carries death and astrology in its own entry; the Hindi cognate has drifted to 'infection'. The action-conditioning -- the one property that matters -- survives in NO register's word and lives only in the definition."
+    },
+    {
+      "concept_id": "C_TENSOR",
+      "definition_from_concepts_json": "The tensor encoding the prior p(o|C) over preferred observations, which -- alone among A, B, C, D and E -- is SET rather than learned by Dirichlet counts, being fixed in this corpus by the Z affect modulator.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "C-प्रदिश (इष्टप्रत्यक्ष)",
+        "iast": "C-pradiśa (iṣṭa-pratyakṣa)",
+        "headword_as_in_lexicon": "NONE for 'tensor' (SD-02). Role-gloss members attested: MW s.v. 1. iṣṭa; MW s.v. praty-akṣa.",
+        "grammar": "m./f. C retained as bare index (SD-01). Role-gloss इष्टप्रत्यक्ष = karmadhāraya, 'preferred observation'.",
+        "literal_gloss": "the C-tensor; role-gloss 'preferred-percept'",
+        "morphological_derivation": "1. iṣṭa = p.p. of √iṣ 'to seek, wish'. praty-akṣa < prati + akṣa 'eye'. pradiśa as in A_TENSOR (COINED sense).",
+        "citation": "MW s.v. 1. iṣṭa, printed p. 169 col. 2, via Cologne, retrieved 2026-07-15: 'iṣṭa mfn. (for 2. See s.v.), sought, ŚBr. wished, desired... cherished, RV.; ŚBr.; KātyŚr.; Mn.; Pañcat.; Śak. &c.' MW s.v. praty-akṣa, printed p. 674 col. 2 (quoted at POMDP). For pradiś: [MW 679,3], NOT in the sense 'tensor'.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word. Both role-gloss members are CITED (1. iṣṭa [MW 169,2]; praty-akṣa [MW 674,2]) -- but see the iṣṭa homonym trap in ambiguity_notes."
+      },
+      "latin": {
+        "form": "TENSOR C",
+        "grammar": "tensor, ōris, m.; C indeclinable index (SD-01). Role-gloss: TENSOR OPTATORUM, 'tensor of the things preferred', optatorum gen. pl. of the neuter substantive optatum.",
+        "literal_gloss": "the C-tensor; role-gloss 'tensor of the chosen/preferred things'",
+        "morphological_derivation": "optatum = neuter substantival use of optātus, PPP of optō. SEARCHED in L&S 2026-07-15: 'Your search for optatum returned no results' -- NO independent headword. The substantival use is a regular Latin move but is not lexicalised, so OPTATUM is part of the coinage. The base verb IS attested: L&S s.v. opto, short def. 'to choose, select, prefer'.",
+        "citation": "L&S s.v. opto, via Perseus resolveform, retrieved 2026-07-15, short def.: 'to choose, select, prefer'. For optatum: NO ENTRY. For tensor: NO ENTRY.",
+        "classical_or_post_classical": "opto classical; optatum an unlexicalised substantival formation; tensor [POST-CLASSICAL]. The compound term is post-classical.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word and to the unlexicalised substantive OPTATUM. The base verb opto is CITED [L&S]."
+      },
+      "english": {
+        "term": "C tensor (preferences)",
+        "definition": "The tensor encoding the prior p(o|C) over PREFERRED OBSERVATIONS -- what the agent expects to see if things go as it prefers -- which alone among A, B, C, D and E is SET rather than learned by Dirichlet counts, being fixed in this corpus by the Z affect modulator."
+      },
+      "hindi": {
+        "devanagari": "C-प्रदिश (अभिरुचि)",
+        "transliteration": "C-pradiś (abhiruci)",
+        "gloss": "the C tensor (preferences)",
+        "citation": "NONE OBTAINED from a standard published dictionary.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm अभिरुचि = preference (and not 'taste/interest') in a standard Hindi dictionary; confirm प्रदिश in CSTT."
+      },
+      "spanish": {
+        "term": "tensor C (preferencias)",
+        "gloss": "the C tensor (preferences)",
+        "citation": "NONE OBTAINED. dle.rae.es returned HTTP 403.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm 'preferencia' in the DLE. Check specifically whether the DLE sense implies a ranking between alternatives -- see ambiguity_notes."
+      },
+      "ambiguity_notes": [
+        "THE HOMONYM TRAP, AND IT IS SEVERE: MW carries TWO distinct iṣṭa entries. 1. iṣṭa [169,2] from √iṣ = 'sought, wished, desired... cherished'. 2. iṣṭa [169,3] = 'p.p. fr. √yaj' = 'SACRIFICED, WORSHIPPED WITH SACRIFICES'. The two are formally identical in Devanagari and IAST. इष्टप्रत्यक्ष is therefore readable, with full lexical warrant, as 'SACRIFICED OBSERVATION' -- a sacrificial offering of the percept. This is not a strained reading; it is MW's second headword on the facing column. Any use of iṣṭa in a corpus about observations must carry this note.",
+        "THE ASYMMETRY IS THE CONCEPT AND NO REGISTER'S WORD CARRIES IT. C is SET, never learned -- OBSERVED in the corpus (01-kitchen-rules M13: learning covers A/B/D/E, never C; grep-confirmed in this repo at cookbook/01-kitchen-rules.md lines 71-72 and 129-130). CONCEPTS.json states the reason: 'A goal that were learned from its own counts would have no purchase; C is where the goal enters from outside.' A register word implying acquisition, habituation, or learning falsifies C outright. This must be carried by the definition, because no word in any of the five registers carries it.",
+        "C IS A PRIOR OVER PREFERRED OBSERVATIONS, NOT A GOAL-STATE. This is the second-most-common error after the learning one. The preference is over o, not over s. A register that renders C as 'goal', 'end', 'telos', 'target' asserts a preferred STATE OF THE WORLD; C ranges over what the agent expects to SEE. The distinction is the whole reason C multiplies against the A tensor's outputs rather than the B tensor's.",
+        "Latin opto's L&S gloss is 'to choose, SELECT, prefer'. The 'choose/select' senses imply an ACT of choosing between presented alternatives. C is not an act and does not choose; it is a standing distribution, fixed before any alternative is presented. The agent's choosing happens in policy selection, scored against C -- not in C.",
+        "Sanskrit iṣṭa 1 [MW 169,2] glosses include 'cherished' and 'desired'. 'Desired' shades toward a felt state. C asserts nothing about feeling. That this corpus's C is fixed by a modulator NAMED 'affect' makes the trap worse, not better: the name is a label on a mechanism, and no register may let it become a claim about experienced desire. TRUE and HONEST signals are sovereign; C is a TRUE-store object and may not be given a lived-experience word.",
+        "Spanish 'preferencia' and Hindi 'अभिरुचि' both tend to imply a RANKING among options, and the Hindi word additionally shades toward 'taste, inclination, interest'. C is a distribution, not an ordering and not a taste. A distribution induces an ordering; it is not one."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: इष्टप्रत्यक्ष read via iṣṭa 2",
+          "why_wrong": "MW [169,3] gives iṣṭa from √yaj = 'sacrificed, worshipped with sacrifices'. The compound then means 'sacrificed observation'. The form is identical to the intended iṣṭa 1 [169,2] and the misreading is fully licensed by the lexicon. If the rendering survives review at all it must be accompanied by the disambiguation."
+        },
+        {
+          "rendering": "Any register: rendering C as 'goal', 'end', 'telos', 'objetivo', 'लक्ष्य', FINIS",
+          "why_wrong": "Asserts a preferred state of the world. C is a prior over preferred OBSERVATIONS. Preferring to see o is not preferring that s obtain -- the two come apart exactly when the A tensor is ambiguous, which is the case the whole formalism exists to handle."
+        },
+        {
+          "rendering": "Any register: a word implying C is acquired, learned, or habituated",
+          "why_wrong": "Contradicts the corpus's OBSERVED asymmetry: learning covers A/B/D/E, never C (M13). C is set. A learned C would have no purchase, per CONCEPTS.json."
+        },
+        {
+          "rendering": "Sanskrit: इच्छा (icchā)",
+          "why_wrong": "REJECTED on doctrinal-freight grounds: icchā is a quality (guṇa) of the ātman in Vaiśeṣika and icchā-śakti is a technical term in Śaiva metaphysics; the word imports a theory of a desiring self, which C -- a TRUE-store distribution -- must not assert. NOTE THE EVIDENCE GRADE: this freight claim was NOT verified against MW or Apte this session. Flagged suspicion, not citation. Falsifier: read MW s.v. icchā."
+        },
+        {
+          "rendering": "Any register: rendering C as 'third'",
+          "why_wrong": "Violates SD-01."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering plus 'in a decision formalism', definition withheld. Ask two questions: (1) 'What does this denote?' (2) 'Is this something the system is given, or something it acquires from experience?'",
+        "pass_criterion": "PASS iff (a) the back-translation says the object ranges over OBSERVATIONS (what is seen), not over states of the world or goals; (b) the answer to (2) is 'given/set', not 'acquired/learned'; and (c) no sacrificial, ritual, or felt-desire sense appears. Question (2) is the load-bearing half of this test: a rendering that back-translates as a plausible preference-word but that a competent reader takes to be learned has FAILED, because the set/learned asymmetry is the concept's differentia.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW, and lowest of the five tensor entries. The Sanskrit role-gloss sits on a homonym whose alternate reading is 'sacrificed'; the Latin leans on an unlexicalised substantive; and the concept's actual differentia -- SET, not learned; over OBSERVATIONS, not states -- is carried by no word in any register and survives only in the definition. That is a real weakness of the rendering, not a formatting gap."
+    },
+    {
+      "concept_id": "D_TENSOR",
+      "definition_from_concepts_json": "The tensor encoding the prior over hidden states at the start of a trial or episode, and one of the four tensors learned by conjugate-Dirichlet counts.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "D-प्रदिश (पूर्वावस्थाप्रत्यय)",
+        "iast": "D-pradiśa (pūrvāvasthā-pratyaya)",
+        "headword_as_in_lexicon": "NONE for 'tensor' (SD-02). Role-gloss members attested: MW s.v. pūrva; MW s.v. avasthā. NOTE: pratyaya is used here for 'prior (distribution)' and was NOT looked up this session -- see status.",
+        "grammar": "m./f. D retained as bare index (SD-01). Role-gloss = tatpuruṣa.",
+        "literal_gloss": "the D-tensor; role-gloss 'the prior-state belief'",
+        "morphological_derivation": "pūrva 'former, prior' [MW 643,1] + avasthā 'state' [MW 106,1], compounded pūrvāvasthā by savarṇa-dīrgha sandhi (a + a > ā). pratyaya is APPENDED WITHOUT A CITATION and is the weakest member of this coinage.",
+        "citation": "MW s.v. pūrva, printed p. 643 col. 1, via Cologne, retrieved 2026-07-15: 'being before or in front, fore, first'; 'former, prior, preceding, previous to, earlier than'; and, as a distinct sense, 'eastern, to the east of (abl.)'. MW s.v. avasthā (f.), printed p. 106 col. 1: 'state, condition, situation (five are distinguished in dramas, Sāh.), circumstance of age or position, stage, degree'. pratyaya: NOT LOOKED UP 2026-07-15.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word. pūrva [MW 643,1] and avasthā [MW 106,1] are CITED; the third member pratyaya is PENDING-CITATION -- it was never looked up."
+      },
+      "latin": {
+        "form": "TENSOR D",
+        "grammar": "tensor, ōris, m.; D indeclinable index (SD-01). Role-gloss: TENSOR STATUS INITIALIS, 'tensor of the initial state', status gen. sg.",
+        "literal_gloss": "the D-tensor; role-gloss 'tensor of the initial state'",
+        "morphological_derivation": "tensor as in A_TENSOR (COINED). status, ūs, m. [L&S]. initialis: NOT LOOKED UP this session -- see status.",
+        "citation": "L&S s.v. status (the noun; entry status2), via Perseus, retrieved 2026-07-15: 'stătus, ūs, m.' [etym. 'sto and sisto'], with I. corporeal senses ('mode or way of standing... posture, position, attitude, station, carriage'; 'size, height, stature'; 'a position, place') and II. tropical: 'condition, state, position, situation, circumstances'. L&S also carries a separate participial status ('set, fixed, appointed, regular', p.p. of sisto). For tensor: NO ENTRY. initialis: NOT LOOKED UP.",
+        "classical_or_post_classical": "status classical; tensor [POST-CLASSICAL]; initialis PENDING (suspected classical/late but unchecked). Compound term post-classical.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word. status is CITED [L&S]; initialis is PENDING-CITATION -- it was never looked up."
+      },
+      "english": {
+        "term": "D tensor (initial state prior)",
+        "definition": "The tensor encoding the prior over hidden states at t=0 -- the start of a trial or episode -- and one of the four tensors (A, B, D, E) learned by conjugate-Dirichlet counts."
+      },
+      "hindi": {
+        "devanagari": "D-प्रदिश (प्रारंभिक अवस्था पूर्वप्रायिकता)",
+        "transliteration": "D-pradiś (prārambhik avasthā pūrva-prāyikatā)",
+        "gloss": "the D tensor (initial state prior probability)",
+        "citation": "NONE OBTAINED from a standard published dictionary.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm पूर्वप्रायिकता = prior probability in the CSTT statistics glossary. If CSTT carries a different standardised form, CSTT wins."
+      },
+      "spanish": {
+        "term": "tensor D (distribución a priori del estado inicial)",
+        "gloss": "the D tensor (initial state prior distribution)",
+        "citation": "NONE OBTAINED. dle.rae.es returned HTTP 403. 'A priori' is a Latin borrowing naturalised in Spanish statistical usage; the DLE entry was not fetched.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm 'distribucion a priori' against a published Spanish statistics text; check whether 'previa' is preferred over 'a priori' in the target dialect."
+      },
+      "ambiguity_notes": [
+        "D IS THE PRIOR AT t=0, NOT THE RUNNING PRIOR. CONCEPTS.json states this explicitly: 'Distinct from PRIOR in general: D is specifically the prior at t=0, not the running prior.' Every register's word for 'prior' is the general word, so every register under-specifies D by default. The word 'initial' is doing all the work and must never be dropped as redundant -- without it the term names a different object that the corpus separately defines.",
+        "SANSKRIT पूर्व READS AS 'EAST' FIRST. MW [643,1] gives 'eastern, to the east of (abl.)' as a distinct sense, and pūrva is the ordinary Sanskrit word for the eastern quarter. A reader meeting पूर्वावस्था without context may well take 'the eastern state'. This is not a fringe sense; it is standard.",
+        "pūrva additionally carries philosophical freight as pūrva-pakṣa (the prima facie position stated in order to be refuted, in the classical debate format). A 'pūrva' view in a śāstra is one that is going to be DEMOLISHED. A prior in Bayesian inference is updated, not refuted, and a register that lets pūrva import the pakṣa sense turns D into a strawman. [Freight claim NOT verified against MW/Apte this session -- flagged suspicion. Falsifier: read MW s.v. pūrva-pakṣa.]",
+        "LATIN 'prior' IS AN ADJECTIVE, NOT A DISTRIBUTION. L&S short def.: 'former, previous, prior, first'. It is a comparative adjective about temporal order. The statistical 'prior' is a substantivised English term of art naming a DISTRIBUTION; Latin prior names no such object and asserts only earlier-ness. Using PRIOR alone in Latin would say 'the earlier one', not 'the prior distribution'. This is why the Latin role-gloss above avoids 'prior' and says STATUS INITIALIS instead.",
+        "Latin prior post-classically also names a monastic superior (the prior of a house). [NOT verified this session -- flagged suspicion; falsifier: check Du Cange.] If confirmed, PRIOR in a Latin register is doubly compromised.",
+        "Latin status's L&S sense I is corporeal -- 'posture, position, attitude, station, carriage', even 'size, height, stature'. The concept needs sense II, 'condition, state'. STATUS INITIALIS is readable as 'the starting posture' (a bodily stance), which is precisely the wrong Markov blanket: WORLD/BODY/MIND are typed separately (M12), and a posture-reading drags a MIND-side object onto the BODY side.",
+        "L&S carries a SECOND status -- the participle of sisto, 'set, fixed, appointed, regular'. This homonym is dangerous here in a specific way: it would make STATUS INITIALIS read 'fixed at the start', i.e. SET. D is LEARNED (by Dirichlet counts); C is the one that is set. The homonym thus points D at exactly C's differentia and would invert the only asymmetry the domain has.",
+        "avasthā [MW 106,1] carries, per MW, 'appearance (in a court of justice)' and 'the female organs of generation' in specific textual contexts. Both are wholly absent from the concept and both are in the entry."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin: TENSOR PRIOR, or PRIOR used as a noun for the distribution",
+          "why_wrong": "L&S: 'former, previous, prior, first' -- a comparative ADJECTIVE of temporal order. Latin prior denotes no distribution. The rendering says 'the earlier tensor', which is false (D is not earlier than A) and empty (it names no object)."
+        },
+        {
+          "rendering": "Any register: a bare word for 'prior' with no 'initial' (Sanskrit पूर्वप्रत्यय alone; Spanish 'tensor a priori')",
+          "why_wrong": "Names the running prior, which the corpus distinguishes from D. D is specifically t=0. Dropping 'initial' silently merges two concepts the ledger keeps apart."
+        },
+        {
+          "rendering": "Sanskrit: पूर्वावस्था read as 'the eastern state'",
+          "why_wrong": "MW [643,1] carries 'eastern' as a live sense of pūrva. Fully licensed misreading; the rendering cannot stand without disambiguation."
+        },
+        {
+          "rendering": "Latin: STATUS INITIALIS read via the participial status (p.p. of sisto, 'set, fixed, appointed')",
+          "why_wrong": "Yields 'fixed at the start' = SET. D is LEARNED by Dirichlet counts; C is the set one. The misreading inverts the domain's central asymmetry, which makes it the most costly error available in this entry."
+        },
+        {
+          "rendering": "Any register: rendering D as 'origin', 'first cause', 'मूल', CAUSA PRIMA",
+          "why_wrong": "Imports cosmogony. D is a bookkeeping distribution over where an episode might start, re-initialised every trial. It explains nothing and originates nothing."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering plus 'in a decision formalism', definition withheld. Ask: (1) 'What does this denote?' (2) 'At what time does it apply?' (3) 'Is it set or learned?'",
+        "pass_criterion": "PASS iff (a) it denotes a distribution/belief over hidden states; (b) the answer to (2) is 'at the start / t=0 / the beginning of an episode' and NOT 'at every step'; (c) the answer to (3) is 'learned'; and (d) no eastern-quarter, courtroom, posture, or cosmogonic sense appears. Failing (b) means the rendering has named the running prior; failing (c) means it has been read as C.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. Two members of the proposed renderings (Sanskrit pratyaya, Latin initialis) were never looked up and are honestly marked PENDING rather than dressed as citations. The attested members are solid but each carries a live wrong sense -- pūrva 'east', status 'posture' and the sisto-homonym 'fixed'. The last is the worst: it points D at C's differentia."
+    },
+    {
+      "concept_id": "E_TENSOR",
+      "definition_from_concepts_json": "The tensor encoding the prior over policies, biasing policy selection before any expected-free-energy score is computed, and one of the four tensors learned by conjugate-Dirichlet counts.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "E-प्रदिश",
+        "iast": "E-pradiśa",
+        "headword_as_in_lexicon": "NONE for 'tensor' (SD-02). NO Sanskrit role-gloss is offered: every candidate word for 'habit' inspected this session carried disqualifying doctrinal freight. See ambiguity_notes and forbidden_mistranslations.",
+        "grammar": "m./f. E retained as bare index (SD-01).",
+        "literal_gloss": "the E-tensor",
+        "morphological_derivation": "pradiśa as in A_TENSOR (COINED sense).",
+        "citation": "For pradiś: MW [679,3], attested but NOT in the sense 'tensor'. For the role-gloss: NONE OFFERED -- see status.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word. NO role-gloss is offered at all: every Sanskrit habit-candidate carried disqualifying doctrinal freight, so that slot is NOT-ATTEMPTED by deliberate choice, not by omission."
+      },
+      "latin": {
+        "form": "TENSOR E",
+        "grammar": "tensor, ōris, m.; E indeclinable index (SD-01). Role-gloss: TENSOR CONSUETUDINIS, 'tensor of custom', consuetudinis gen. sg.",
+        "literal_gloss": "the E-tensor; role-gloss 'tensor of habit/custom'",
+        "morphological_derivation": "tensor as in A_TENSOR (COINED). consuetudo, inis, f. < consuesco.",
+        "citation": "L&S s.v. consuetudo, via Perseus, retrieved 2026-07-15: 'consŭētūdo, ĭnis, f. consuesco', I. 'A being accustomed, custom, habit, use, usage'; II. 'Social intercourse, companionship, familiarity, conversation'. For tensor: NO ENTRY.",
+        "classical_or_post_classical": "consuetudo classical; tensor [POST-CLASSICAL]. Compound term post-classical.",
+        "status": "COINED",
+        "status_note": "COINED applies to the tensor-word. The role-gloss member consuetudo is CITED [L&S] and is the best register-fit in this file -- though its sense II is an intimate liaison."
+      },
+      "english": {
+        "term": "E tensor (habits / policy prior)",
+        "definition": "The tensor encoding the prior over policies -- a standing bias toward some courses of action over others, applied BEFORE any expected-free-energy score is computed -- and one of the four tensors (A, B, D, E) learned by conjugate-Dirichlet counts."
+      },
+      "hindi": {
+        "devanagari": "E-प्रदिश",
+        "transliteration": "E-pradiś",
+        "gloss": "the E tensor",
+        "citation": "NONE OBTAINED. No role-gloss offered: आदत (ādat) and अभ्यास (abhyās) were both considered and rejected -- see forbidden_mistranslations -- and no unfreighted candidate was found.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Find a CSTT-standardised Hindi rendering of 'policy prior' in a statistics/AI glossary. Prefer a policy-prior term over any habit-word."
+      },
+      "spanish": {
+        "term": "tensor E (hábitos / distribución a priori sobre políticas)",
+        "gloss": "the E tensor (habits / prior over policies)",
+        "citation": "NONE OBTAINED. dle.rae.es returned HTTP 403.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm 'politica' is the established Spanish rendering of 'policy' in the decision-process sense and not merely the political sense; check a published Spanish text on reinforcement learning or decision processes."
+      },
+      "ambiguity_notes": [
+        "THE CONCEPT DISCLAIMS FEELING AND THE OBVIOUS WORDS ALL ASSERT IT. CONCEPTS.json is explicit: E 'names a prior over policies and asserts nothing about a felt disposition'. Nearly every natural-language word for 'habit' in every register asserts a felt or embodied disposition. This is the entry where the register vocabulary and the concept are most directly at odds, and it is why the Sanskrit role-gloss is left NOT-ATTEMPTED rather than filled with a plausible-looking wrong word.",
+        "'Habit' is the corpus's own word (the Z modulator sets habits), so English gets it for free and the other registers do not. English's licence here is historical accident, not a warrant for the other four.",
+        "SANSKRIT vāsanā IS THE TRAP THIS ENTRY EXISTS TO REFUSE. MW [947,3] gives 'the impression of anything remaining unconsciously in the mind, the present consciousness of past perceptions, knowledge derived from memory' (citing Śaṃk., Kāv., Kathās.). It is the standard word a translator reaches for, and it fails twice over: it asserts an UNCONSCIOUS MENTAL IMPRESSION (the felt disposition the concept disclaims), and in Advaita, Yoga and Buddhist usage it is bound into karma and rebirth -- vāsanās are the latent traces that propagate across lives. Rendering E as vāsanā would make the corpus assert a doctrine of karmic latency in a matrix of policy counts. FORBIDDEN.",
+        "MW's vāsanā entry [947,3] also lists, among secondary senses, a MATHEMATICAL one: 'proof, demonstration'. A tensor named vāsanā in a mathematical corpus could be read as 'the proof tensor'. Noted for completeness; it is not the main objection.",
+        "LATIN consuetudo's L&S sense II is 'social intercourse, companionship, familiarity, conversation' -- and in classical idiom consuetudo commonly denotes an intimate liaison. TENSOR CONSUETUDINIS is therefore readable as 'the tensor of the love-affair'. The word is retained because sense I ('a being accustomed, custom, habit, use, usage') is exactly right and classical, but the reviewer should know sense II is live.",
+        "E APPLIES BEFORE EFE IS COMPUTED. That is its position in the loop and half its content: E biases policy selection prior to scoring, so it is not a score, not a value, and not a preference over outcomes. A register word meaning 'tendency to succeed' or 'what works' imports the score E precedes.",
+        "E IS A PRIOR OVER POLICIES; C IS A PRIOR OVER OBSERVATIONS. Both are 'what the agent leans toward' in loose English, and loose English is how they get merged. They are different objects over different spaces, and E is learned while C is set.",
+        "Latin habitus was considered for the role-gloss and NOT used: it carries Aristotelian hexis and, in modern usage, Bourdieu's sociological term. [Attestation and freight NOT verified against L&S this session -- flagged suspicion. Falsifier: read L&S s.v. habitus before either using or citing this rejection.]"
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: वासना (vāsanā)",
+          "why_wrong": "MW [947,3]: 'the impression of anything remaining unconsciously in the mind, the present consciousness of past perceptions, knowledge derived from memory'. Two disqualifications: (1) it asserts an unconscious mental impression -- a felt disposition, which CONCEPTS.json says E does NOT assert; (2) in Advaita/Yoga/Buddhist doctrine vāsanās are karmic latencies carried across rebirths, so the word imports a metaphysics of karma into a policy prior. This is the textbook case of the doctrinal-freight failure CONCEPTS.json warns of."
+        },
+        {
+          "rendering": "Sanskrit: संस्कार (saṃskāra)",
+          "why_wrong": "Rejected for the same class of reason as vāsanā -- it names formative latent impressions in Yoga/Buddhist psychology (and, separately, a life-cycle sacrament in dharmaśāstra). It would assert both a felt latency and a ritual. NOTE THE EVIDENCE GRADE: NOT verified against MW this session; flagged suspicion, not citation. Falsifier: read MW s.v. saṃskāra."
+        },
+        {
+          "rendering": "Hindi: अभ्यास (abhyās) or आदत (ādat)",
+          "why_wrong": "अभ्यास means practice/repetition/exercise and additionally carries Yoga-technical freight (abhyāsa as sustained practice, e.g. in the Yoga Sūtra pairing abhyāsa-vairāgya); it names an activity, not a prior. आदत names a personal habit of a person -- a felt disposition, which E disclaims. [Yoga freight NOT verified this session -- flagged suspicion.]"
+        },
+        {
+          "rendering": "Any register: a word meaning 'what tends to work' / 'tendency to succeed'",
+          "why_wrong": "Imports the expected-free-energy score that E explicitly PRECEDES. E biases selection before any EFE is computed; a success-word makes E a function of the very quantity it is prior to, which is circular."
+        },
+        {
+          "rendering": "Any register: merging E with C under one 'preference/tendency' word",
+          "why_wrong": "E is a prior over POLICIES and is learned; C is a prior over OBSERVATIONS and is set. Different spaces, opposite sides of the domain's one asymmetry."
+        },
+        {
+          "rendering": "Any register: rendering E as 'fifth'",
+          "why_wrong": "Violates SD-01."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering plus 'in a decision formalism', definition withheld. Ask: (1) 'What does this denote?' (2) 'Does it describe something the system FEELS or is disposed to?' (3) 'Does it range over actions/plans, or over things seen?'",
+        "pass_criterion": "PASS iff (a) it denotes a standing bias over COURSES OF ACTION (policies); (b) the answer to (2) is NO -- any answer asserting a felt, unconscious, or karmic disposition is a FAIL, and this is the criterion the Sanskrit candidates were rejected on in advance; (c) the answer to (3) is 'actions/plans', not 'things seen' (which would be C). A Sanskrit rendering cannot currently be tested because none is offered.",
+        "status": "NOT YET RUN -- no translator engaged. Sanskrit role-gloss NOT-ATTEMPTED, so untestable by construction."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. Latin consuetudo is the single best register-fit in this file for a role-gloss (sense I is exactly 'custom, habit, use, usage' and classical), but its sense II is an intimate liaison. Sanskrit is deliberately left NOT-ATTEMPTED: every candidate asserted a felt or karmic disposition that the concept expressly disclaims, and an empty field is the honest result. A future entry filling it with vāsanā would be a regression, not progress."
+    },
+    {
+      "concept_id": "DIRICHLET_LEARNING",
+      "definition_from_concepts_json": "The exact update of the A, B, D and E tensors by counts + lr * sufficient_stat, which is conjugate and therefore requires no gradient, no autodiff, and no backpropagation.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "दिरिक्ले-गणना",
+        "iast": "dirikle-gaṇanā",
+        "headword_as_in_lexicon": "NONE as a compound. The head member IS attested: MW s.v. gaṇanā. 'दिरिक्ले' is a transliteration of the proper name Dirichlet and is not a lexical item.",
+        "grammar": "f. tatpuruṣa compound; head gaṇanā f.",
+        "literal_gloss": "Dirichlet-counting / Dirichlet-reckoning",
+        "morphological_derivation": "gaṇanā < √gaṇ 'to count, reckon' + -ana + fem. -ā. dirikle = transliteration of the proper name Dirichlet; the transliteration itself is proposed, not attested, and no standard Devanagari form of the name was checked this session.",
+        "citation": "MW s.v. gaṇanā, printed p. 343 col. 3, via Cologne, retrieved 2026-07-15: 'gaRanA f. id., MBh. iii ; Megh.; Ragh. &c.' -- referring to gaṇana, 'reckoning, counting, calculation'. The entry further gives 'the being enumerated among', 'considering, supposing', and 'regarding, taking notice of'.",
+        "status": "COINED",
+        "status_note": "COINED applies to the compound. The head member gaṇanā is CITED [MW 343,3]; the transliteration of the proper name Dirichlet is proposed and unverified."
+      },
+      "latin": {
+        "form": "NUMERATIO DIRICHLETIANA",
+        "grammar": "numeratio, ōnis, f., head noun; Dirichletiana adj. agreeing.",
+        "literal_gloss": "Dirichletian counting/numbering",
+        "morphological_derivation": "numeratio = a regular -tio action noun on numero. Dirichletiana = a modern -ianus/-iana denominative from the proper name Dirichlet; irreducibly post-classical.",
+        "citation": "NONE OBTAINED. numeratio was NOT looked up in L&S this session. The word is suspected classical (cf. numero, 'to count') but is NOT cited, and per this file's own rules an unchecked headword may not be marked CITED.",
+        "classical_or_post_classical": "[POST-CLASSICAL] as a whole (Dirichlet is a 19th-century mathematician). numeratio's own status is PENDING.",
+        "status": "PENDING-CITATION"
+      },
+      "english": {
+        "term": "conjugate Dirichlet learning",
+        "definition": "The exact update of the A, B, D and E tensors by counts + lr * sufficient_stat -- an update that is conjugate, and therefore closed-form, requiring no gradient, no autodiff and no backpropagation."
+      },
+      "hindi": {
+        "devanagari": "दिरिक्ले संयुग्मी अधिगम",
+        "transliteration": "dirikle saṃyugmī adhigam",
+        "gloss": "conjugate Dirichlet learning",
+        "citation": "NONE OBTAINED from a standard published dictionary.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm संयुग्मी = conjugate (in the Bayesian, not the chemical or grammatical, sense) and अधिगम = learning in the CSTT glossary. The Bayesian sense of 'conjugate' is narrow and a general 'conjugate' word will probably be wrong."
+      },
+      "spanish": {
+        "term": "aprendizaje conjugado de Dirichlet",
+        "gloss": "conjugate Dirichlet learning",
+        "citation": "NONE OBTAINED. dle.rae.es returned HTTP 403.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm 'conjugado' carries the Bayesian sense (prior conjugado) in a published Spanish statistics text."
+      },
+      "ambiguity_notes": [
+        "THE WHOLE POINT IS THAT LEARNING HERE IS COUNTING, NOT DESCENDING. CONCEPTS.json: 'Learning here is counting, not descending.' The corpus enforces it mechanically -- an AST guard rejects autodiff/optax/torch/grad/backward in the loop (M13; visible in this repo at cookbook/01-kitchen-rules.md lines 71-72). Every register's ordinary word for 'learning' in an ML context now connotes gradient descent, because that is what the field does. So every register's natural word actively asserts the thing this concept denies. The registers are fighting the concept, not carrying it.",
+        "'Conjugate' is the load-bearing technical qualifier and is the REASON no gradient is needed: conjugacy makes the posterior update closed-form. A register that renders 'Dirichlet learning' and drops 'conjugate' has removed the explanation and left an unexplained assertion. Worse, 'conjugate' is a heavy homonym in every register -- grammatical conjugation, chemical conjugation, complex conjugates, conjugal relations -- and the Bayesian sense is the rarest of them.",
+        "Sanskrit gaṇanā [MW 343,3] carries 'considering, supposing' and 'regarding, taking notice of' alongside 'reckoning, counting, calculation'. The concept means the arithmetic count ONLY. The 'considering/supposing' senses would reintroduce exactly the deliberative flavour the mechanism lacks: nothing considers anything; counts are incremented.",
+        "gaṇanā also carries 'the being enumerated among' [MW 343,3] -- membership in a class rather than the act of counting. A tensor update is not a membership claim.",
+        "The 'lr' (learning rate) in 'counts + lr * sufficient_stat' is a scaling factor on the count increment, NOT a step size along a gradient. Its name is borrowed from gradient methods and is misleading in every register. No register should render 'lr' with a word implying descent or step-size, and the safest course is to leave the formula untranslated -- the math is the fence.",
+        "Dirichlet is a person (Peter Gustav Lejeune Dirichlet). No register may gloss the name descriptively. The Devanagari transliteration दिरिक्ले proposed here is itself unverified: the name is French-German and its standard Devanagari form, if one exists, was not checked. [Falsifier: check a Hindi mathematics text for the standard form.]"
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Any register: a word for 'learning' that connotes gradient descent, optimisation, or training (Spanish 'entrenamiento'; Latin EXERCITATIO; Hindi प्रशिक्षण)",
+          "why_wrong": "Directly contradicts the definition: 'requires no gradient, no autodiff, and no backpropagation'. The corpus enforces this with an AST guard (M13). A register asserting descent describes a machine this corpus refuses to build."
+        },
+        {
+          "rendering": "Any register: dropping 'conjugate'",
+          "why_wrong": "Conjugacy is WHY the update is exact and gradient-free. Without it the term states a result and deletes its reason, and the no-backprop claim becomes unmotivated assertion."
+        },
+        {
+          "rendering": "Sanskrit: अभ्यास (abhyāsa) for 'learning'",
+          "why_wrong": "Names repetition/practice -- an activity performed over time by a practitioner -- and carries Yoga-technical freight. A conjugate update is a single closed-form arithmetic step, not a practice. [Freight claim NOT verified this session -- flagged suspicion.]"
+        },
+        {
+          "rendering": "Sanskrit: गणना read via 'considering, supposing'",
+          "why_wrong": "MW [343,3] carries those senses. They import deliberation into what is strictly increment-a-counter. Licensed misreading; needs disambiguation."
+        },
+        {
+          "rendering": "Any register: rendering 'conjugate' with the grammatical, chemical, or conjugal homonym",
+          "why_wrong": "The Bayesian sense (prior and likelihood in the same family, so the posterior stays in that family) is unrelated to all three. This is the likeliest single error in this entry and the hardest for a non-statistician translator to avoid."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld. Ask: (1) 'What does this denote?' (2) 'Does it involve gradients or derivatives?' (3) 'What does conjugate mean here?'",
+        "pass_criterion": "PASS iff (a) the back-translation names counting/tallying as the update mechanism; (b) the answer to (2) is NO; and (c) the answer to (3) names the Bayesian sense (posterior stays in the prior's family), not conjugation of verbs, chemical conjugation, or conjugal relations. Criterion (b) is decisive: a rendering that back-translates as any gradient-based learning has failed regardless of how fluent it is.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. The Sanskrit head member gaṇanā is genuinely well-fitted ('reckoning, counting, calculation' is exactly the mechanism) and is the best-attested role-word in this file after parokṣa/pratyakṣa. But the Latin head (numeratio) was never looked up and is honestly PENDING; the Devanagari form of Dirichlet's name is unverified; and 'conjugate' -- the qualifier that carries the argument -- is unsourced in all four non-English registers."
+    },
+    {
+      "concept_id": "HIDDEN_STATE",
+      "definition_from_concepts_json": "The quantity s that an agent cannot observe directly and must infer, and about which the recognition density is a belief.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "परोक्षावस्था",
+        "iast": "parokṣāvasthā",
+        "headword_as_in_lexicon": "COMPOUND, coined from TWO attested headwords: MW s.v. parokṣa [p. 589] and MW s.v. avasthā [p. 106 col. 1]. The compound itself is not an MW headword.",
+        "grammar": "f. karmadhāraya compound; parokṣa mfn. qualifying avasthā f. Sandhi: parokṣa + avasthā > parokṣāvasthā (savarṇa-dīrgha, a + a > ā).",
+        "literal_gloss": "a state beyond the range of sight",
+        "morphological_derivation": "parokṣa < paras 'beyond' + akṣa 'eye' (lit. 'beyond the eye'). avasthā < ava- + √sthā 'to stand'. Both members attested; the compounding is regular.",
+        "citation": "MW s.v. parokṣa, printed p. 589, via Cologne, retrieved 2026-07-15: 'beyond the range of sight, invisible, absent, unknown, unintelligible'; the entry further notes '(ibc.) in an invisible or imperceptible manner'. MW s.v. avasthā (f.), printed p. 106 col. 1: 'state, condition, situation (five are distinguished in dramas, Sāh.), circumstance of age or position, stage, degree'. SUPPORTING: MW s.v. praty-akṣa [674,2] defines pratyakṣa expressly as 'opp. to paro'kza, q.v.' -- so the lexicon itself fixes parokṣa and pratyakṣa as an antonym pair, which is exactly the hidden/observed opposition this domain needs. That pairing is lexicographic, not invented here. RE-READ 2026-07-15 UNDER ADVERSARIAL CITATION AUDIT: the full parokṣa entry (p. 589, cols. 1-2) was read again in its entirety. Everything quoted above is CONFIRMED verbatim ('beyond the range of sight, invisible, absent, unknown, unintelligible, AV. &c. &c.'), and the avasthā and praty-akṣa quotations are CONFIRMED at their stated pages and columns. But the re-read found material the original citation did not record: (a) the adjective carries a FOURTH attested sense the entry below did not list -- 'past, completed'; (b) the entry carries adverbial forms whose glosses were never read: parokṣam 'out of sight, behind one's back, in the absence or without the knowledge of'; parokṣeṇa 'out of sight, secretly, mysteriously'; parokṣāt 'secretly, without the knowledge of'; parokṣe 'behind the back of'; (c) parokṣa m. 'an ascetic' (lex.); parokṣā f. 'a past or completed action' (ĀpŚr.) and 'a termination of the perfect tense' (Kāt.). Items (a) and (b) damage this entry's central argument and are recorded in ambiguity_notes.",
+        "status": "COINED",
+        "status_note": "COINED applies to the COMPOUND only. BOTH members are CITED (parokṣa [MW 589]; avasthā [MW 106,1]), and MW itself pairs parokṣa against pratyakṣa as antonyms."
+      },
+      "latin": {
+        "form": "STATUS LATENS",
+        "grammar": "status, ūs, m., head noun; latens, -entis, pres. part. of lateō, agreeing. The PHRASE is coined; both words are attested.",
+        "literal_gloss": "a state that lies hidden",
+        "morphological_derivation": "latens = present active participle of lateō, ēre. The participle is chosen over an adjective deliberately: lateō is INTRANSITIVE ('to lie hid'), so latens attributes hiddenness to the state itself without positing anyone who hides it. That is the exact semantic requirement, and it is the reason this is the strongest Latin rendering in the file.",
+        "citation": "L&S s.v. status (the noun; entry status2), via Perseus, retrieved 2026-07-15: 'stătus, ūs, m.' [etym. 'sto and sisto'], II. tropical: 'condition, state, position, situation, circumstances'. L&S s.v. lateo, retrieved 2026-07-15: 'lătĕo, ŭi, 2, v. n.', I. 'to lurk, be or lie hid or concealed, to skulk (class.)'; II. tropically, 'to be concealed from, be unknown to' (with acc., dat., or absolutely). The 'v. n.' -- verb neuter, i.e. intransitive -- is the load-bearing part of the headword line here.",
+        "classical_or_post_classical": "Both words classical. The phrase is a coinage, but a coinage of two classical words in a regular construction -- not a New Latin lexeme.",
+        "status": "COINED",
+        "status_note": "COINED applies to the PHRASE only. BOTH words are classical and CITED (status [L&S]; lateo [L&S], marked v. n. = intransitive, which is what selects latens over occultus)."
+      },
+      "english": {
+        "term": "hidden state",
+        "definition": "The quantity s that an agent cannot observe directly and must therefore infer, and about which the recognition density is a belief."
+      },
+      "hindi": {
+        "devanagari": "प्रच्छन्न अवस्था",
+        "transliteration": "prachchhanna avasthā",
+        "gloss": "hidden state",
+        "citation": "NONE OBTAINED from a standard published dictionary.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm प्रच्छन्न in a standard Hindi dictionary and check whether it implies deliberate concealment -- if it does, it fails for the same reason gūḍha does, and अप्रत्यक्ष (apratyakṣa) should be tried instead as the Hindi reflex of the MW antonym pair."
+      },
+      "spanish": {
+        "term": "estado oculto",
+        "gloss": "hidden state",
+        "citation": "NONE OBTAINED. dle.rae.es returned HTTP 403. This IS the established Spanish term of art (cf. 'modelo oculto de Markov'), but it is unsourced here.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm 'oculto' in the DLE. Note in advance that 'oculto' shares the concealment problem of Latin occultus (see ambiguity_notes); the Spanish term of art is nevertheless established by usage, and usage would win for Spanish where it does not for Latin."
+      },
+      "ambiguity_notes": [
+        "THE CONCEPT'S OWN NOTE IS THE FENCE: CONCEPTS.json states \"'Hidden' means not directly observable, NOT concealed, secret, or withheld by anyone.\" There is no agent doing the hiding. Every register has an obvious word for 'hidden' that smuggles a concealer in, and choosing between them is the entire work of this entry.",
+        "WHY LATIN latens AND NOT occultus: lateō is marked 'v. n.' in L&S -- verb NEUTER, i.e. intransitive. It means 'to lie hid' as something the subject does, or rather undergoes, with no agent. occultus and absconditus are participles of occulō and abscondō, transitive verbs of actively hiding, and both therefore imply someone who hid the thing. The grammar of the Latin verb, not a stylistic preference, is what selects latens.",
+        "parokṣa's OWN GLOSS CONTAINS FOUR SENSES THE CONCEPT DENIES. MW [589]: 'beyond the range of sight, invisible, ABSENT, UNKNOWN, unintelligible', and -- found only on the adversarial re-read of 2026-07-15 -- 'PAST, COMPLETED'. The hidden state is NOT absent -- it is present and doing causal work, which is why it can be inferred at all. It is not unknown in principle -- it is precisely what the recognition density is a belief ABOUT. 'Unintelligible' is worse still: an unintelligible state could not be inferred. And 'past, completed' is worse than all three: s is the CURRENT hidden state, live at time t and causing o right now; a word that reads 'the completed state' names something finished and gone, which is the one thing s must not be. The count in this note previously read 'two' in its heading and 'three' in its body, and both were wrong: the best-attested Sanskrit word carries FOUR wrong senses alongside its one right one.",
+        "THE SECRECY OBJECTION THIS ENTRY RAISES AGAINST गूढ APPLIES TO ITS OWN CHOSEN WORD, AND THAT WAS MISSED UNTIL THE ADVERSARIAL RE-READ. This entry rejects gūḍha because MW [360,3] gives 'SECRET, PRIVATE' -- i.e. it posits a concealer, which the concept forbids. But MW's parokṣa entry [589] carries, in its own adverbial forms: parokṣeṇa 'out of sight, SECRETLY, mysteriously'; parokṣāt 'SECRETLY, without the knowledge of'; parokṣam 'out of sight, BEHIND ONE'S BACK, in the absence or WITHOUT THE KNOWLEDGE OF'; parokṣe 'BEHIND THE BACK OF'. 'Behind one's back' and 'without the knowledge of' are not merely secrecy-adjacent -- they are agentive: they presuppose a party FROM WHOM something is kept. That is the precise implicature the concept's own fence forbids ('NOT concealed, secret, or withheld by anyone') and the precise ground on which this entry rejects gūḍha. The defence available is narrow and must not be overstated: the ADJECTIVE parokṣa in its lead sense is agent-neutral ('beyond the range of sight'), and it is the adjective, not the adverbs, that enters parokṣāvasthā. But the adverbial senses are in the same entry, they are the forms a reader meets most often in texts, and they establish that Sanskrit parokṣa is NOT the clean agent-free word this entry represented it as. The Latin rendering has a real structural defence here that the Sanskrit does not: lateō's intransitivity is a GRAMMATICAL fact about the verb that excludes an agent, whereas parokṣa's agent-neutrality is only a fact about which sense one selects. STATUS LATENS is therefore better grounded than parokṣāvasthā, and this entry previously implied they were equally strong.",
+        "parokṣa carries Advaita epistemological freight: parokṣa-jñāna (mediate/indirect knowledge) is opposed to aparokṣa-jñāna (immediate knowledge), and the pair is technical in Vedanta. Using parokṣa may import a theory of mediate cognition. [Freight claim NOT verified against MW/Apte this session -- flagged suspicion, not citation. Falsifier: read MW s.v. parokṣa-jñāna and aparokṣa.]",
+        "avasthā [MW 106,1] carries 'appearance (in a court of justice)' and, per MW, 'the female organs of generation' in specific textual contexts. Neither is in the concept; both are in the entry.",
+        "LATIN status's SENSE I IS BODILY. L&S I.A: 'mode or way of standing, of holding one's body (at rest), posture, position, attitude, station, carriage'; I.C 'size, height, stature'. The concept needs sense II ('condition, state'). A posture-reading is not merely odd here -- it lands the term on the wrong side of the WORLD/BODY/MIND typing (M12), where hidden states are MIND-side inferential objects and postures are BODY-side interoceptive ones.",
+        "L&S carries a second, participial status ('set, fixed, appointed, regular', from sisto). STATUS LATENS is largely protected from this reading by latens, but the homonym is live in the bare word and matters for D_TENSOR.",
+        "SPANISH AND LATIN DIVERGE, AS THEY DID FOR verosimilitud. Spanish 'estado oculto' is the settled term of art despite 'oculto' descending from occulō and carrying exactly the concealment implicature Latin occultus is rejected for. Usage has bleached the Spanish word; it has not bleached the Latin one. A translator may NOT reason from 'estado oculto' back to STATUS OCCULTUS -- that is the pseudopropheta-by-cognate move, the same error as verisimilitudo, and this file rejects it in both directions."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: गूढ (gūḍha) / गूढावस्था",
+          "why_wrong": "MW [360,3]: 'gUQa mfn. covered, hidden, concealed, invisible, SECRET, PRIVATE, RV. &c.', with 'disguised' in a sub-entry (Manu, MBh.). Asserts secrecy and disguise -- someone has hidden something. The concept's note forbids exactly this: not concealed, secret, or withheld by anyone."
+        },
+        {
+          "rendering": "Latin: STATUS OCCULTUS or STATUS ABSCONDITUS",
+          "why_wrong": "Both are participles of TRANSITIVE verbs of hiding (occulō, abscondō) and so posit a concealer. The concept has none. Contrast lateō, marked 'v. n.' in L&S -- intransitive, no agent. [The L&S entries for occultus and absconditus were NOT read this session; the claim rests on the transitivity of their base verbs. Falsifier: read both entries.]"
+        },
+        {
+          "rendering": "Sanskrit: अव्यक्त (avyakta)",
+          "why_wrong": "REJECTED on doctrinal-freight grounds: in Samkhya, avyakta names the unmanifest prakṛti/pradhāna -- primordial undifferentiated matter -- so the word would make the hidden state an item of Samkhya cosmology. NOTE THE EVIDENCE GRADE: NOT verified against MW this session; flagged suspicion, not citation. Falsifier: read MW s.v. avyakta."
+        },
+        {
+          "rendering": "Sanskrit: रहस्य (rahasya)",
+          "why_wrong": "Means secret/mystery -- and in many contexts an esoteric doctrine. Asserts both secrecy and initiatory withholding. [NOT verified against MW this session -- flagged suspicion.]"
+        },
+        {
+          "rendering": "Spanish: 'estado secreto'",
+          "why_wrong": "Asserts secrecy outright. Note this is NOT an objection to the established 'estado oculto', which usage has bleached; 'secreto' has not been bleached and reintroduces the concealer."
+        },
+        {
+          "rendering": "Any register: a word meaning 'unknowable' or 'imperceptible in principle'",
+          "why_wrong": "The state is inferable -- that is the entire premise. parokṣa's 'unknown, unintelligible' senses [MW 589] drift this way and must be fenced off. A state that could not be known could not be the object of a recognition density."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld. Ask: (1) 'What does this denote?' (2) 'Is anyone hiding it?' (3) 'Can it be known?' (4) 'Is the thing it denotes happening now, or is it finished and past?'",
+        "pass_criterion": "PASS iff (a) the back-translation asserts 'not directly observable / must be inferred'; (b) the answer to (2) is NO -- any answer naming a concealer, secrecy, disguise, or withholding is a FAIL; (c) the answer to (3) is 'yes, indirectly/by inference' -- 'no' is a FAIL, since it would name an unknowable rather than a hidden state; and (d) the answer to (4) is 'happening now' -- 'finished/past' is a FAIL, since s is the live current state causing o. Criteria (b), (c) and (d) are the discriminators; (a) alone is not sufficient, because gūḍha and occultus both satisfy (a) and fail (b). QUESTION (4) WAS ADDED BY THE ADVERSARIAL RE-READ OF 2026-07-15 and it is aimed at this entry's OWN Sanskrit: MW [589] attests 'past, completed' for parokṣa, and parokṣā f. is the Kātantra's term for a perfect-tense termination, so a Sanskrit reader may well return 'the completed state'. Note the resulting exposure honestly: parokṣāvasthā is now at live risk on BOTH (b) (parokṣeṇa/parokṣāt 'secretly'; parokṣam 'behind one's back, without the knowledge of') and (d). The Sanskrit rendering offered by this entry is therefore a candidate for FAILING the very test this entry designed to eliminate its rivals, and it has not been run.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "SPLIT BY REGISTER AFTER THE ADVERSARIAL RE-READ OF 2026-07-15; the previous single rating of MEDIUM ('the highest in this file') is WITHDRAWN as too high for the Sanskrit. LATIN: MEDIUM, and now the strongest rendering in the file outright. STATUS LATENS is well-grounded and the ground was re-checked -- L&S's headword line 'lătĕo, ŭi, 2, v. n.' was read again and the 'v. n.' (intransitive) marking is confirmed verbatim, so the exclusion of an agent is a grammatical fact about the verb rather than a preference. SANSKRIT: LOW-to-MEDIUM, downgraded. Both members remain genuinely cited and MW's own parokṣa/pratyakṣa antonym pairing is confirmed verbatim at [674,2], so the opposition is still lexicographic rather than imposed -- that much survives. But the re-read of the full p. 589 entry found (i) a fourth denied sense, 'past, completed', which the previous rating did not know about and which points at the live/current state s in exactly the wrong direction, and (ii) adverbial forms glossing 'secretly', 'behind one's back', 'without the knowledge of' -- the agentive-concealment implicature for which this very entry rejects gūḍha. The entry was rating its own word against a standard it had not applied to it. The two registers are NOT equally grounded and the previous rating implied they were: Latin excludes the concealer by grammar, Sanskrit only by sense-selection. The Advaita parokṣa-jñāna freight remains flagged and unverified, so it contributes nothing to either rating."
+    },
+    {
+      "concept_id": "OBSERVATION",
+      "definition_from_concepts_json": "The quantity o that actually arrived at the sensor, which is what a belief is scored against and what a receipt records.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "प्रत्यक्ष",
+        "iast": "pratyakṣa",
+        "headword_as_in_lexicon": "praty-akṣa -- ATTESTED as an MW headword [p. 674 col. 2].",
+        "grammar": "mf(ā)n. per MW; used substantivally (n.) for the percept/datum.",
+        "literal_gloss": "present before the eyes; that which is present before the eyes",
+        "morphological_derivation": "prati 'towards, before' + akṣa 'eye' -- 'before the eye'.",
+        "citation": "MW s.v. praty-akṣa, printed p. 674 col. 2, via Cologne, retrieved 2026-07-15: 'praty-akza mf(A)n. present before the eyes, visible, perceptible (opp. to paro'kza, q.v.), Up.; MBh. &c.' RE-READ 2026-07-15 UNDER ADVERSARIAL CITATION AUDIT: confirmed verbatim, at the stated page and column -- the headword is at printed p. 674, col. 2, and the parenthetical '(opp. to paro'kza, q.v.)' is present exactly as quoted. This is the only fully CITED headword-in-sense in the file and the audit did not dislodge it. The re-read did find substantive noun senses the citation had not recorded: 'ocular evidence, direct perception, apprehension by the senses' and 'superintendence of, care for'. The first of these bears directly on the pramāṇa problem and is treated in ambiguity_notes.",
+        "status": "CITED",
+        "status_note": "CITED, and re-confirmed under adversarial audit 2026-07-15: MW carries praty-akṣa [674,2] in exactly the sense claimed, parenthetical included. ATTESTATION IS NOT ADMISSIBILITY -- the pramāṇa freight may still disqualify this rendering, and the audit STRENGTHENED that objection by finding an evidentiary sense in MW's own noun glosses. See ambiguity_notes."
+      },
+      "latin": {
+        "form": "OBSERVATUM",
+        "grammar": "n., substantival use of observātum, PPP of observō. Gen. observati; pl. observata.",
+        "literal_gloss": "the thing observed; a thing that has been noted",
+        "morphological_derivation": "observātum = neuter of the perfect passive participle of observō, used substantivally ('the thing that has been observed'). SEARCHED in L&S 2026-07-15: 'Your search for observatum returned no results' -- NO independent headword. The substantival use of a neuter PPP is a regular Latin construction, but the lexeme is not lexicalised, so this is a coinage on an attested base. The PARTICIPLE is attested via the verb's principal parts.",
+        "citation": "L&S s.v. observo, via Perseus, retrieved 2026-07-15: 'ob-servo, āvi, ātum, 1', I. 'to watch, note, heed, observe a thing; to take notice of, pay attention to' (citing Plautus, Vergil, Cicero); the entry also gives 'to watch for, seek to catch'. The 'ātum' in the principal parts is what licenses observātum. For observatum as a headword: NO ENTRY.",
+        "classical_or_post_classical": "observō classical; the substantive OBSERVATUM is a coinage on classical material, not a New Latin lexeme.",
+        "status": "COINED",
+        "status_note": "COINED applies to the substantive OBSERVATUM, which L&S does not carry as a headword. The base verb observo is CITED [L&S]."
+      },
+      "english": {
+        "term": "observation",
+        "definition": "The quantity o that actually arrived at the sensor -- what a belief is scored against, and what a receipt records."
+      },
+      "hindi": {
+        "devanagari": "प्रेक्षण",
+        "transliteration": "prekṣaṇ",
+        "gloss": "observation",
+        "citation": "NONE OBTAINED from a standard published dictionary.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm प्रेक्षण in a standard Hindi dictionary, and check specifically whether it names the ACT of observing rather than the datum obtained -- if it names the act, it fails for the same reason Latin observatio does, and अवलोकन/प्रेक्षित should be tried."
+      },
+      "spanish": {
+        "term": "observación",
+        "gloss": "observation",
+        "citation": "NONE OBTAINED. dle.rae.es returned HTTP 403.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Confirm in the DLE. Expect the DLE to gloss it primarily as the ACT ('accion y efecto de observar') -- the 'y efecto' half is what would license the datum-sense. If the DLE gives only the act, the Spanish register has the same act/datum ambiguity as the Latin and must be qualified ('el dato observado')."
+      },
+      "ambiguity_notes": [
+        "THE ACT/DATUM SPLIT IS THE FIRST TRAP AND IT CATCHES THREE REGISTERS. The concept is the QUANTITY o that arrived -- a datum, a thing. It is not the act of observing. Latin observatio, Spanish observación and Hindi प्रेक्षण all name the act primarily (Spanish softens this with 'accion Y EFECTO de'). This is why the Latin here is OBSERVATUM (the thing observed) and not observatio, and it is the one place in this file where the coined form is clearly better than the attested alternative.",
+        "THE PRAMĀṆA PROBLEM, AND IT MAY BE FATAL TO THE SANSKRIT. In Nyāya, pratyakṣa is the first of the pramāṇas -- the MEANS OF VALID KNOWLEDGE. The word does not merely name a percept; in its technical use it certifies the percept as veridical. But o is 'the quantity that ACTUALLY ARRIVED at the sensor' -- arrival, not validity. A sensor can deliver a corrupt, noisy, or miscalibrated reading and it is still o; that is precisely why the A tensor is needed and why ambiguity lives in A. Rendering OBSERVATION as pratyakṣa therefore risks asserting that every observation is valid knowledge -- a metaphysical claim the corpus must not make, and one that would quietly dissolve the whole point of a likelihood. This is the exact hazard CONCEPTS.json names ('Sanskrit philosophical vocabulary carries DOCTRINAL FREIGHT... no translation choice may quietly assert a metaphysics') and the operator's charter names ('Do not assume Sanskrit automatically prevents ambiguity'). The Nyāya-pramāṇa claim is NOT verified against MW or a Nyāya source this session -- it is flagged, not cited. Falsifier: read MW s.v. pramāṇa and a Nyāya-sūtra reference on pratyakṣa as pramāṇa. If confirmed, the CITED status above stands for the word but the rendering may still have to be struck on freight grounds -- attestation and admissibility are different tests, and passing the first does not pass the second. UPDATE, ADVERSARIAL RE-READ 2026-07-15: the objection is now PARTLY GROUNDED IN MW ITSELF and no longer rests solely on the unverified Nyāya claim. The re-read of [674,2] found noun senses the entry had not recorded, among them 'OCULAR EVIDENCE, direct perception, apprehension by the senses'. 'Evidence' is an evidentiary/probative word: it says the percept ESTABLISHES something. o establishes nothing -- it is what arrived, veridical or not, and a corrupt sensor reading is still o. So the validity implicature this note feared is visible in MW's plain lexical glosses, without any appeal to Nyāya. State the evidence grades separately and do not merge them: the LEXICAL evidentiary sense is now CITED [MW 674,2]; the NYĀYA-pramāṇa doctrinal claim remains UNVERIFIED and flagged. The first is sufficient on its own to keep the rendering under examination. The re-read also found 'superintendence of, care for' -- a supervisory sense wholly absent from the concept; o supervises nothing.",
+        "pratyakṣa's LEXICAL SENSE IS OCULAR ('present before the EYES', MW 674,2; the word is literally prati + akṣa, 'before the eye'). o is whatever arrived at ANY sensor -- a thermometer reading, a byte count, an interoceptive hardware signal (M12). The register word is narrower than the concept in modality and would have to be stretched.",
+        "THE BRIDGE NOTE, WHICH IS THIS CONCEPT'S REASON FOR EXISTING: CONCEPTS.json says o in an equation and a receipt in a ledger are 'the same kind of object, which is why a confabulated observation corrupts the model rather than merely embarrassing the author'. Any register that renders o as a mere 'impression', 'appearance', or 'sense-datum' -- something mental and private -- severs that bridge. The word must be able to denote a LOGGED, EXTERNAL, CHECKABLE thing, because a receipt is one.",
+        "Latin observō carries 'to watch FOR, seek to catch' [L&S] -- purposive, anticipatory watching. o is passive arrival; nothing is sought. The verb also carries the 'keep/observe a rite or law' sense that makes observabilis so treacherous in POMDP.",
+        "OBSERVATION is the counterpart of HIDDEN_STATE and the lexicon already knows it: MW defines praty-akṣa expressly as 'opp. to parokṣa'. Whatever this entry finally settles on, it must remain the antonym of whatever HIDDEN_STATE settles on. If pratyakṣa is struck on pramāṇa grounds, parokṣāvasthā loses its lexicographic anchor and BOTH entries must be re-cut together."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin: OBSERVATIO",
+          "why_wrong": "L&S gives 'an observing, watching' -- the ACT. The concept is the DATUM that arrived. Rendering the act for the thing makes o a process rather than a quantity, and a process cannot be what a belief is scored against."
+        },
+        {
+          "rendering": "Sanskrit: प्रमाण (pramāṇa)",
+          "why_wrong": "Names a MEANS OF VALID KNOWLEDGE. It asserts validity, which o does not have and does not need -- o is what arrived, veridical or not. This is the sharpest form of the pramāṇa problem and the reason it must be fenced even for pratyakṣa."
+        },
+        {
+          "rendering": "Sanskrit: दृष्टि (dṛṣṭi)",
+          "why_wrong": "Names sight/the faculty of seeing (and, in Buddhist usage, a VIEW in the doctrinal sense -- micchā-dṛṣṭi, 'wrong view'). Names the faculty or a doctrine, not the datum. [NOT verified against MW this session -- flagged suspicion.]"
+        },
+        {
+          "rendering": "Any register: a word meaning 'impression', 'appearance', 'sense-datum', 'what seemed'",
+          "why_wrong": "Makes o mental and private. o must be able to be a LOGGED external quantity -- a receipt -- because CONCEPTS.json makes the equation's o and the ledger's receipt the same kind of object. A private impression cannot be a receipt."
+        },
+        {
+          "rendering": "Any register: a word implying the observation is correct, valid, or true",
+          "why_wrong": "o is what ARRIVED, not what is the case. A corrupt sensor reading is still o. Any validity-word collapses the distinction between the observation and the hidden state it is evidence about -- which is the distinction the entire domain is built on."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld. Ask: (1) 'Does this denote an act or a thing?' (2) 'Does it imply the thing is true or valid?' (3) 'Could this word denote a number written into a log by a machine?'",
+        "pass_criterion": "PASS iff (1) = 'a thing/datum'; (2) = NO; and (3) = YES. Criterion (2) is what pratyakṣa is at risk on and criterion (1) is what observatio fails. Criterion (3) is the receipt-bridge test and no register has yet been checked against it. A rendering passing (1) and (2) but failing (3) has produced a private percept, not an observation.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW-to-MEDIUM. The comparative that previously stood here -- 'lower than HIDDEN_STATE' -- is WITHDRAWN: the adversarial re-read of 2026-07-15 downgraded HIDDEN_STATE's Sanskrit to LOW-to-MEDIUM as well, so the two Sanskrit renderings now sit at the same grade and this entry is no longer the lower of the pair. Attestation is not admissibility: pratyakṣa is attested exactly as claimed [MW 674,2] -- re-confirmed verbatim under audit, parenthetical included, and it remains the only fully CITED headword-in-sense in this file -- and it may still be inadmissible, because MW's own noun gloss 'ocular EVIDENCE' asserts probative force that o does not have, before the unverified Nyāya-pramāṇa objection is even reached. That gap -- CITED, re-confirmed, yet possibly forbidden -- is the most important thing in this entry, and the audit widened it rather than closing it: the evidentiary objection got STRONGER (it is now lexical, not merely doctrinal) at the same time as the citation got firmer. Attestation and admissibility moved in opposite directions on the same re-read, which is precisely why the file keeps them as two tests. The reason the domain's two best-attested Sanskrit words may both have to be re-cut together is unchanged and now better evidenced on both sides."
+    }
+  ]
+}

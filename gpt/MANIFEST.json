@@ -1,0 +1,268 @@
+{
+  "pack": "UNI Encyclopedia & Cookbook — OpenAI Custom GPT pack",
+  "repo": "https://github.com/TMDLRG/UNI-Encyclopedia-Cookbook",
+  "built_by": "tools/build_gpt_pack.py (reproducible build; the repo is the source of truth)",
+  "target": "OpenAI Custom GPT builder — chat UI (chatgpt.com), NOT the Assistants API",
+  "limits_observed": {
+    "max_knowledge_files": 20,
+    "knowledge_files_in_pack": 20,
+    "instructions_char_limit": 8000,
+    "instructions_chars_used": 7595,
+    "max_file_size": "512 MB per file",
+    "per_file_token_cap": "2M tokens per text/document file",
+    "source": "help.openai.com — 'Creating and editing GPTs' / 'File uploads FAQ', confirmed 2026-07-15"
+  },
+  "upload_steps": [
+    "1. chatgpt.com -> Explore GPTs -> your GPT -> Edit -> Configure tab.",
+    "2. Name: paste gpt-config/CONFIG.json .name",
+    "3. Description: paste gpt-config/CONFIG.json .description",
+    "4. Instructions: paste the ENTIRE contents of gpt-config/INSTRUCTIONS.md",
+    "5. Conversation starters: paste each string from CONFIG.json .conversation_starters",
+    "6. Knowledge: upload ALL 20 files from knowledge/ (drag the folder contents in).",
+    "7. Capabilities: set per CONFIG.json .capabilities",
+    "8. Save / Update."
+  ],
+  "sovereignty_rule": "SOVEREIGNTY RULE (binding, do not merge the two ledgers): this corpus carries TWO sovereign evidence vocabularies. The UNI 4-value fence (proven / designed / hypothesized / not-yet-built) describes ONLY UNI's own build status and is governed by encyclopedia/CLAIM-LEDGER.md. The NATURA 12-value class, in three groups, describes ONLY nature's observed regularities and is governed by encyclopedia/NATURE-LEDGER.md: group A / measured = OBSERVED-REPLICATED, OBSERVED-SINGLE, OBSERVED-CONTESTED; group B / derived = MODELED, MODELED-CONTESTED, HYPOTHESIZED; group C / fenced = INADMISSIBLE, SUPERSEDED, NOT-MEASURED, NOT-SOURCED, NOT-CONFIRMED, NOT-LOCATED. Six of the twelve were registered by NA-00 amendment 2026-07-15-A after the corpus refuted the original 'six classes and only six' at 72 of 919 ledger rows; twelve is a MEASURED property of the corpus, not a design target. NEVER read NOT-SOURCED as NOT-MEASURED: the first says we could not trace the source (a fact about us), the second says nobody has measured it (a claim about the frontier of science). A nature citation is NEVER a UNI gate. Cross-reference between them by explicit link only, never by merge.",
+  "total_knowledge_chars": 2307721,
+  "files": [
+    {
+      "slot": "K01-START-HERE-how-to-use-this-corpus.md",
+      "title": "START HERE — the map of this corpus and its two sovereign vocabularies",
+      "chars": 72873,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/00-INDEX.md",
+        "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md"
+      ]
+    },
+    {
+      "slot": "K02-NATURE-as-the-authority.md",
+      "title": "Nature as the authority — and the discipline that keeps it honest",
+      "chars": 32687,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-01-nature-as-the-authority.md"
+      ]
+    },
+    {
+      "slot": "K03-METHOD-the-one-loop-active-inference.md",
+      "title": "The one loop — active inference (VFE to understand, EFE to choose)",
+      "chars": 25999,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-02-the-one-loop.md"
+      ]
+    },
+    {
+      "slot": "K04-METHOD-how-to-make-new-science.md",
+      "title": "How to research, observe, and make new science with falsifiable evidence",
+      "chars": 37278,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-03-how-to-make-new-science.md"
+      ]
+    },
+    {
+      "slot": "K05-MIND-BODY-WORLD.md",
+      "title": "MIND / BODY / MIND.BODY / WORLD — the Markov blanket, nested across scales",
+      "chars": 30218,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-04-mind-body-world.md"
+      ]
+    },
+    {
+      "slot": "K06-RATIOS-scaling-laws.md",
+      "title": "The ratios — allometry and scaling laws across 20+ orders of magnitude",
+      "chars": 57598,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-05-ratios-and-scaling-laws.md"
+      ]
+    },
+    {
+      "slot": "K07-FREQUENCIES-rhythm-and-resonance.md",
+      "title": "The frequencies — rhythm, resonance, and the honest fence around them",
+      "chars": 35643,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-06-frequencies-rhythm-and-resonance.md"
+      ]
+    },
+    {
+      "slot": "K08-DIMENSIONLESS-numbers.md",
+      "title": "The dimensionless numbers — the cross-scale design toolkit",
+      "chars": 33041,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-07-dimensionless-numbers.md"
+      ]
+    },
+    {
+      "slot": "K09-CELL-level-design.md",
+      "title": "Design down to the cell level — the cell as an engineered system",
+      "chars": 35306,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-08-cell-level-design.md"
+      ]
+    },
+    {
+      "slot": "K10-MORPHOGENESIS-and-development.md",
+      "title": "Morphogenesis — how a pattern comes from no pattern",
+      "chars": 31875,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-09-morphogenesis-and-development.md"
+      ]
+    },
+    {
+      "slot": "K11-SCALE-LADDER-and-gradients.md",
+      "title": "The scale ladder — quark to galaxy, and the gradients between",
+      "chars": 46771,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-NATURA/NA-10-the-scale-ladder-and-gradients.md"
+      ]
+    },
+    {
+      "slot": "K12-RECIPES-substrate-rocks-water-air-stars.md",
+      "title": "Build the substrate — rocks, water, air, stars",
+      "chars": 184177,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "cookbook/recipes-natura/CN-01-rocks.md",
+        "cookbook/recipes-natura/CN-02-water.md",
+        "cookbook/recipes-natura/CN-03-air.md",
+        "cookbook/recipes-natura/CN-04-stars.md"
+      ]
+    },
+    {
+      "slot": "K13-RECIPES-life-dna-and-sperm.md",
+      "title": "Build life's information layer — DNA and the delivery vehicle",
+      "chars": 103080,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "cookbook/recipes-natura/CN-05-dna.md",
+        "cookbook/recipes-natura/CN-06-sperm.md"
+      ]
+    },
+    {
+      "slot": "K14-RECIPES-ants-the-collective.md",
+      "title": "Build the collective — ants, stigmergy, and the colony blanket",
+      "chars": 51855,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "cookbook/recipes-natura/CN-07-ants.md"
+      ]
+    },
+    {
+      "slot": "K15-RECIPES-dinosaurs-whales-bats.md",
+      "title": "Build the animals — scaling limits, low-frequency sound, and measurable active inference",
+      "chars": 174184,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "cookbook/recipes-natura/CN-08-dinosaurs.md",
+        "cookbook/recipes-natura/CN-09-whales.md",
+        "cookbook/recipes-natura/CN-10-bats.md"
+      ]
+    },
+    {
+      "slot": "K16-RECIPES-humans-and-the-open-question.md",
+      "title": "Build the human — and the permanent open question beyond it",
+      "chars": 95659,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "cookbook/recipes-natura/CN-11-humans.md",
+        "cookbook/recipes-natura/CN-12-beyond-human-open-question.md"
+      ]
+    },
+    {
+      "slot": "K17-UNI-method-and-governance.md",
+      "title": "The UNI program — its method constitution, evidence discipline, and honest posture",
+      "chars": 247532,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "cookbook/00-INDEX.md",
+        "cookbook/00-front-matter.md",
+        "cookbook/01-kitchen-rules.md",
+        "cookbook/02-the-pantry.md",
+        "cookbook/99-closing.md",
+        "cookbook/UNI-GPT-CONSULT-PACKAGE.md",
+        "cookbook/UNI-GPT-CONSULT-2026-06-27.md",
+        "encyclopedia/00-INDEX.md",
+        "encyclopedia/wing-E/E0-how-to-read-this-work.md",
+        "encyclopedia/wing-E/E1-calibration-ledger.md",
+        "encyclopedia/wing-mu/mu1-evidence-constitution.md",
+        "encyclopedia/wing-mu/mu2-bars-before-build.md",
+        "encyclopedia/wing-mu/mu3-negatives-bounds-two-tier.md",
+        "encyclopedia/wing-mu/mu4-engine-framing-invariants.md",
+        "encyclopedia/wing-mu/mu5-lab-team-ship-gate.md",
+        "encyclopedia/wing-N/N1-fep-public-lens.md",
+        "encyclopedia/wing-N/N2-same-math-many-scales.md",
+        "encyclopedia/wing-N/N3-what-active-inference-is-not.md",
+        "encyclopedia/wing-M/Mv1-honesty-fence-is-the-pitch.md",
+        "encyclopedia/wing-M/Mv2-open-falsification.md"
+      ]
+    },
+    {
+      "slot": "K18-UNI-claim-ledger-and-master-plans.md",
+      "title": "The UNI claim ledger (single source of truth) and the authoring master plans",
+      "chars": 252720,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/CLAIM-LEDGER.md",
+        "encyclopedia/MASTER-PLAN.md",
+        "cookbook/MASTER-PLAN.md"
+      ]
+    },
+    {
+      "slot": "K19-UNI-science-ladder-and-recipes.md",
+      "title": "The UNI L0-L12 developmental ladder, its recipes, the continuity substrate, and Track-A",
+      "chars": 368971,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "encyclopedia/wing-S/S-C-continuity-substrate.md",
+        "encyclopedia/wing-S/S-L0-genome-zygote.md",
+        "encyclopedia/wing-S/S-L1-cellular.md",
+        "encyclopedia/wing-S/S-L2-metabolism.md",
+        "encyclopedia/wing-S/S-L3-organ-heart-lab.md",
+        "encyclopedia/wing-S/S-L4-affect-as-precision.md",
+        "encyclopedia/wing-S/S-L5-sensorimotor.md",
+        "encyclopedia/wing-S/S-L6-perception-world-c.md",
+        "encyclopedia/wing-S/S-L7-language.md",
+        "encyclopedia/wing-S/S-L8-self-model-metacognition.md",
+        "encyclopedia/wing-S/S-L9-to-L12-parked-frontier.md",
+        "cookbook/recipes/L0-genome-zygote.md",
+        "cookbook/recipes/L1-cellular.md",
+        "cookbook/recipes/L10-wisdom.md",
+        "cookbook/recipes/L11-dreaming.md",
+        "cookbook/recipes/L12-creativity-awareness.md",
+        "cookbook/recipes/L2-metabolism.md",
+        "cookbook/recipes/L3-organ-heart-lab.md",
+        "cookbook/recipes/L4-affect-as-precision.md",
+        "cookbook/recipes/L5-sensorimotor.md",
+        "cookbook/recipes/L6-perception.md",
+        "cookbook/recipes/L7-language.md",
+        "cookbook/recipes/L8-self-model-metacognition.md",
+        "cookbook/recipes/L9-reasoning-conscience.md",
+        "cookbook/continuity-substrate.md",
+        "encyclopedia/appendix-TA/TA-A-no-api-content-model.md",
+        "encyclopedia/appendix-TA/TA-B-commercial-proof.md",
+        "encyclopedia/appendix-TA/TA-C-website-self-driving.md",
+        "encyclopedia/appendix-TA/TA-D-engagement-pricing-brand.md",
+        "encyclopedia/appendix-TA/TA-E-delivery-route-auth-triage.md",
+        "encyclopedia/appendix-TA/TA-N-negatives-parks-open-threads.md"
+      ]
+    },
+    {
+      "slot": "K20-constants-ratios-and-nature-ledger.json",
+      "title": "Machine-readable: every constant, ratio, frequency, dimensionless number, and the nature ledger with its INADMISSIBLE register",
+      "chars": 390254,
+      "upload_to": "Knowledge",
+      "merged_from": [
+        "(authored by the corpus workflow)"
+      ]
+    }
+  ]
+}

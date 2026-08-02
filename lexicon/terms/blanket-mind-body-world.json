@@ -1,0 +1,1341 @@
+{
+  "schema_version": "1.0.0",
+  "file": "lexicon/terms/blanket-mind-body-world.json",
+  "authored_utc": "2026-07-15",
+  "reviewer": "NONE - PENDING EXPERT REVIEW",
+  "what_this_is": "The five-register lexicon file (Sanskrit / Latin / English / Hindi / Spanish) for the blanket / mind / body / world concept cluster. It renders the 14 concepts of the markov-blanket domain of lexicon/CONCEPTS.json and NOTHING ELSE. Per rule 18.14 of the operator's charter ('Do not claim perfect translation'), NO term in this file is claimed to be a correct or perfect rendering. Each register carries a status (CITED | PENDING-CITATION | COINED | NOT-ATTEMPTED), and every entry carries a back_translation_test that has NOT BEEN RUN. The definitions, carried verbatim from CONCEPTS.json, are the translatable object and the test object; the words are candidates. Where a register's word is likely to mislead, that is recorded in ambiguity_notes rather than smoothed over -- those notes, and not the headwords, are the useful content of this file.",
+  "domain_selected": "markov-blanket",
+  "domain_string_discrepancy": "HONEST DISCREPANCY, recorded rather than silently resolved. The authoring instruction was to take concepts whose domain matches 'blanket-mind-body-world'. NO SUCH DOMAIN EXISTS in CONCEPTS.json. Its domains_registered are: active-inference-math, pomdp-tensors, markov-blanket, method, sovereign-vocabulary, natura, world-context, build-objects. This file takes the 14 concepts of domain 'markov-blanket', on the grounds that (a) it is the only registered domain whose members are the blanket/mind/body/world cluster (MARKOV_BLANKET, MIND, BODY, MIND_BODY, WORLD, ...), and (b) the target filename blanket-mind-body-world.json names that cluster. The adjacent domain 'world-context' (GAIA, LABORATORY, TOY_WORLD) was NOT taken: it is a separately registered domain, and the WORLD concept's own note expressly disambiguates against it as a sovereign homonym ('not world as Earth/biosphere (see WORLD_CONTEXT entries)'). Falsifier: if the operator intended 'blanket-mind-body-world' to span world-context as well, this file is under-scoped by 3 concepts and must be extended.",
+  "source": {
+    "concepts_file": "lexicon/CONCEPTS.json",
+    "concepts_schema_version": "1.0.0",
+    "corpus_commit_at_authorship": "2e9acaf",
+    "concepts_in_domain": 14,
+    "note": "Each entry's english.definition is carried VERBATIM from CONCEPTS.json. It is not re-authored here. Where CONCEPTS.json's notes field carried a translation trap or a scope violation, it is reproduced in ambiguity_notes rather than paraphrased."
+  },
+  "admission_authorities": {
+    "sanskrit": "Monier-Williams, A Sanskrit-English Dictionary (1899), consulted via the Cologne Digital Sanskrit Dictionaries (sanskrit-lexicon.uni-koeln.de). Retrieval route: getword.php?key=<SLP1 transliteration> -- note the endpoint requires SLP1, NOT Kyoto-Harvard (avasTA, not avasthA); a Kyoto-Harvard key returns 'not found' and would be easy to misread as 'no such headword'. All retrievals 2026-07-15.",
+    "latin": "Lewis & Short, A Latin Dictionary (1879), consulted via the Perseus Digital Library (text 1999.04.0059). Retrieval route: ?doc=Perseus:text:1999.04.0059:entry=<headword>. Homograph note: some entries require a disambiguating numeral (status2, lapsus2, sensus2); the bare form 302-redirects to invalidquery.jsp, which again must NOT be misread as 'no such headword'.",
+    "hindi": "R. S. McGregor, The Oxford Hindi-English Dictionary (1993), consulted via the Digital Dictionaries of South Asia (dsal.uchicago.edu). Retrieval route: mcgregor_query.py?qs=<transliteration>&searchhws=yes. All retrievals 2026-07-15.",
+    "spanish": "Diccionario de la lengua espanola (Real Academia Espanola), dle.rae.es -- NOT CONSULTED. The site returned HTTP 403 to the retrieval agent on 2026-07-15 for every lemma attempted. NO Spanish register in this file is CITED, and none pretends to be. See spanish_register_status."
+  },
+  "spanish_register_status": "ALL 14 Spanish registers are PENDING-CITATION, for one reason, recorded once here rather than disguised as 14 separate judgements: the admission authority was UNREACHABLE (HTTP 403), not consulted-and-found-wanting. This is a defect of the retrieval, not a finding about Spanish. The candidate terms given are the author's and carry NO dictionary warrant. A search-engine paraphrase of a DRAE entry WAS available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence): quoting a summary of a dictionary is not reading the dictionary. Falsifier for every Spanish register: open dle.rae.es/<lemma> in a browser, read the numbered sense, and either promote to CITED or strike the term.",
+  "rendering_architecture": "ONE decision governs this whole file and is stated once here. The blanket partition is rendered STRUCTURALLY -- off attested POSITION words and attested STATE words (Sanskrit antar / bahis + avasthā; Latin interior / exterior + status; Hindi āntarik / bāhya + avasthā) -- and NEVER off substance words. The reason: the MIND concept's own note names the danger, which is that a register will render μ with a word for mind (manas, citta, ātman, mens, animus) and thereby assert an experiencer that the mathematics does not contain and the corpus explicitly disclaims. The same logic bans world-words for η (loka, jagat, mundus) and body-words for b (śarīra, kāya, corpus). The resulting renderings are deliberately flat and slightly awkward. FLATNESS IS THE FEATURE: a set of states is what the formalism contains, the formalism admits partitions for a Newton's cradle and a burning fuse, and a rendering elegant enough to sound like a person has falsified the concept in the act of translating it. Every substance-word that a competent translator would reach for is recorded in forbidden_mistranslations with the reason and, where retrieved, the lexicon's own gloss against it.",
+  "status_vocabulary": {
+    "CITED": "The headword was retrieved from its admission authority on 2026-07-15 and the authority's own text is quoted in the citation field. NOTE: CITED warrants that the HEADWORD EXISTS AND CARRIES THE QUOTED SENSES. It does NOT warrant that the term is a correct rendering of the concept -- see ACTIVE_STATES (Latin activus), which is CITED and whose attested sense actively fights the concept.",
+    "PENDING-CITATION": "Plausible but unverified: either the authority was unreachable (all Spanish), or the headword was simply not retrieved by this file. The gloss is the author's and carries no warrant. Every instance names its falsifier.",
+    "COINED": "No attested term; the file proposes a compound. EVERY coinage carries a morphological derivation and a component_provenance map stating which components are CITED and which are not. A coinage built from CITED components is still a coinage.",
+    "NOT-ATTEMPTED": "Not used in this file. No register was skipped."
+  },
+  "counts": {
+    "entries": 14,
+    "registers_per_entry": 5,
+    "back_translation_tests_specified": 14,
+    "back_translation_tests_RUN": 0,
+    "back_translation_tests_PASSED": 0,
+    "expert_reviews_completed": 0,
+    "sanskrit_headwords_retrieved_from_monier_williams": 17,
+    "latin_headwords_retrieved_from_lewis_and_short": 11,
+    "hindi_headwords_retrieved_from_mcgregor": 6,
+    "spanish_headwords_retrieved": 0,
+    "registers_marked_CITED": 1,
+    "count_correction_note": "The Sanskrit and Latin retrieval counts were first written as 13 and 10 by hand, and both were wrong; a recount against the retrieval log gave 17 and 11. The erroneous figures are recorded here rather than quietly overwritten, on the same principle CONCEPTS.json applies to its own hand-count correction.",
+    "retrieval_log": {
+      "note": "Every headword this file retrieved from an authority on 2026-07-15, listed so the counts above are auditable rather than asserted. A headword appearing here was READ; a headword absent from here is NOT cited anywhere in this file.",
+      "monier_williams_slp1_keys": [
+        "avasTA",
+        "antar",
+        "bahis",
+        "vyavaDAna",
+        "saMyoga",
+        "AvaraRa",
+        "indriya",
+        "upADi",
+        "manas",
+        "sApekza",
+        "sKalana",
+        "paraspara",
+        "nirapekza",
+        "tala",
+        "garBa",
+        "praveSa",
+        "nirgama"
+      ],
+      "lewis_and_short_entries": [
+        "velamen",
+        "status2",
+        "superficies",
+        "mutuus",
+        "informatio",
+        "interior",
+        "exter",
+        "lapsus2",
+        "sensus2",
+        "nidus",
+        "activus"
+      ],
+      "mcgregor_headwords": [
+        "avasthā",
+        "āntarik",
+        "bāhya",
+        "kambal",
+        "satah",
+        "paraspar"
+      ],
+      "rae_headwords": []
+    }
+  },
+  "back_translation_adversary_pass": {
+    "what_this_is": "An adversarial re-retrieval pass run 2026-07-15 by a back-translation adversary AGAINST this file, recorded here because a file that audits itself and never records who checked it is asking to be trusted. This is NOT the expert review. It engaged NO reader competent in any register, and it therefore RAN NO BACK-TRANSLATION TEST. back_translation_tests_RUN remains 0 and back_translation_tests_PASSED remains 0. This pass raises no UNI rung and discharges no gate; a NATURE-side or dictionary-side confirmation is never a UNI gate.",
+    "method": "Every headword this file claims to have retrieved was independently re-retrieved from the SAME admission authority at the SAME URL recorded in its citation field, and the returned entry text was compared against the file's quoted string, sense by sense.",
+    "scope_checked": "34 headwords: all 17 Monier-Williams SLP1 keys, all 11 Lewis & Short entries, and all 6 McGregor headwords in the retrieval_log. PLUS: the 14 english.definition strings were diffed programmatically against lexicon/CONCEPTS.json (corpus commit f1be794); the domain membership and store routing were re-derived from CONCEPTS.json; and the file was grepped for the charter's banned author-voice vocabulary.",
+    "result_fabricated_citations": "ZERO. This is the finding that matters and it is stated plainly because it was the thing most worth doubting: NOT ONE cited headword was invented. All 17 Monier-Williams headwords exist and carry the claimed senses. All 11 Lewis & Short headwords exist and carry the claimed senses, including the homographs behind status2 / lapsus2 / sensus2. All 6 McGregor headwords exist and carry the claimed senses, and the two recorded page numbers (āntarik p.76, bāhya p.729) are both correct. Falsifier #1 of this file - 'a headword marked CITED is not in the named authority, or is not there in the quoted sense', the pseudopropheta defect, the worst thing this file could contain - DID NOT FIRE ANYWHERE. No register was downgraded to PENDING-CITATION for a bad headword, because none earned it.",
+    "result_cited_vs_coined": "NO register was found claiming CITED where it should say COINED. The single CITED register (Latin BODY, superficies) is genuinely used as its lexicon carries it, and its section II.B mathematical sense is real. The file's own accounting - 14 Sanskrit registers all COINED, exactly 1 CITED across 56 non-English registers, 17 and 11 headwords consumed as COMPONENTS of coinages rather than as terms - is accurate. Coinages built from CITED components are correctly still labelled coinages.",
+    "result_citation_string_defects": "TWO. **CORRECTED 2026-07-15-B: THIS FIELD SAID 'THREE' AND WAS WRONG.** Its defect (1) was not a defect; it was a false accusation, and it is struck. The original text of this field is preserved below with (1) marked WITHDRAWN, because this file does not silently edit its own record — the wrong count stays visible, dated, and attributed to the pass that made it. Falsifier #2 - 'a quoted citation string does not match what the authority's page actually says' - fired TWICE, at (2) and (3). See BODY / latin / citation for the full counter-correction, the verbatim struck text, and the named class of error (a negative result treated as a finding without a positive control). The pattern note at the end of this field was written to cover three cases and is TRUE OF TWO; its closing claim that 'three of its quotations were reconstructions rather than transcriptions' is now false and reads TWO. **(1) WITHDRAWN — FALSE ACCUSATION, NOT A DEFECT.** Struck 2026-07-15-B on two further independent re-retrievals plus an external cross-check. The Digest IS in the superficies entry, five times, at sense II.A and at the SVPERFICIVM collateral form. The original wording of (1) is retained here exactly as it was written so the error can be read rather than described: 'BODY / Latin superficies: the citation attributed the entry to \"...Livy and the Digest\". The Digest is NOT in the superficies entry; the slot is Vulg. Gen. 2, 6, and \"Digest\" appears in the adjacent status entry, from which it evidently bled. A FABRICATED AUTHOR, in the one register the file marks CITED. Struck.' The calibrate-down lands on THIS PASS, not on the citation it attacked. (2) CONDITIONAL_MUTUAL_INFORMATION / Latin mutuus: quoted as 'II. Trop., reciprocal, mutual'; Lewis & Short marks that section Transf., not Trop., and its gloss opens 'in return, in exchange'. Corrected, and the ambiguity_note that was resting on the 'Trop.' label corrected with it (the note's substance survived; the label did not). (3) MIND / Latin interior: quoted as 'inner, interior; nearer (comparative from inter; superlative intimus)', which fused the entry's etymology bracket into its gloss and dropped Lewis & Short's '(class.)'. Corrected to the entry's actual text. NOTE THE PATTERN AND DO NOT MINIMISE IT: in all three cases the HEADWORD and the SENSE were sound and only the quotation drifted - but 'the authority's own text is quoted in the citation field' is what this file's own status_vocabulary promises CITED means, and three of its quotations were reconstructions rather than transcriptions. The senses survived the check; the transcription discipline did not.",
+    "result_doctrinal_freight": "ONE unrecorded risk found and added, to WORLD: the bāhya-artha / external-object dispute, in which the outside-word is the term of art for whether objects outside cognition exist at all. The entry had logged only the COSMOLOGICAL freight (η misread as a place); it had not logged the EPISTEMOLOGICAL freight (η's existence asserted by vocabulary), which is the same failure mode the file already rejects āvaraṇa for. The added note is UNCITED and says so: Monier-Williams s.v. bāhya was retrieved expressly to warrant it and does not warrant it. WORLD's confidence was DOWNGRADED medium-high -> medium in consequence, and BLANKET_SLIDE's now-stale 'joint-highest with WORLD' cross-reference was corrected. Everything else held: the four doctrinal-freight instances in doctrinal_freight_note (āvaraṇa, manas, saṃyoga, indriya) are each grounded in retrieved lexicon text, and all four were re-confirmed - including Monier-Williams's own manas entry stating that manas is 'always regarded as distinct from Ātman and puruṣa' and 'belonging only to the body ... considered perishable', which is what the ātman warning rests on and which does say what the file says it says.",
+    "result_rail": "CLEAN. No register anywhere is described as correct, perfect, exact, verified or proven. Every occurrence of 'perfect', 'verified' and 'proven' in the file is a negation, a prohibition, a falsifier, or the substring in 'provenance'. Falsifier #4 did not fire. Falsifier #5 ('a back_translation_test is reported as passed while tests_RUN remains 0') did not fire: all 14 tests read NOT-RUN.",
+    "result_source_fidelity": "CLEAN. All 14 english.definition strings are byte-identical to CONCEPTS.json - the 'carried VERBATIM' claim holds under a programmatic diff, not an eyeball. The domain_string_discrepancy note is accurate: CONCEPTS.json registers 8 domains and 'blanket-mind-body-world' is not among them; domain 'markov-blanket' holds exactly 14 concepts and they are the 14 rendered here. BLANKET_SLIDE really is store=META in CONCEPTS.json, so the store routing this file calls load-bearing is correctly reported. The ambiguity_notes that quote source notes (the vagus scope violation, the 'blanket-nesting appears in 0 files' attestation, the Pearl-sparsity scope note) reproduce them faithfully.",
+    "what_this_pass_does_not_establish": "That any term is a correct rendering. That is not what re-retrieving a dictionary can show, and no amount of it would. Confirming that vyavadhāna exists and means 'screen' says NOTHING about whether vyavadhāna renders b, and the file's own ACTIVE_STATES entry is the standing proof of the gap: activus is CITED, was re-confirmed CITED by this pass, and its attested sense ('practical, opposed to contemplative', Sen. Ep. 95.10) still actively fights the concept. A CITED headword with the wrong sense is not a better rendering than an honest coinage. The 14 back-translation tests remain the only instrument that could settle any of this, and they remain unrun."
+  },
+  "honest_position": "NOTHING IN THIS FILE IS ADMITTED TO THE TREE. Not one term has passed its back-translation test, because not one test has been run; no expert has reviewed any entry; and the Spanish register has no citations at all. The count that matters is: 14 tests specified, 0 run, 0 passed. Under the operator's own charter a pre-registered gate is not an earned result, and this file is a bench of pre-registered gates. Its defensible content is (a) the retrieved dictionary text, quoted; (b) the morphological derivations of the coinages; and (c) the ambiguity_notes and forbidden_mistranslations, which are the reason to have built it -- they record what each register's word WOULD assert that the concept does not mean, which is the failure mode that translation cannot detect from inside. This file raises no UNI rung and discharges no gate. It is a lexicon bench.",
+  "expected_coinage_note": "THE CHARTER'S PREDICTION HELD, and the exact shape of it is worth recording. Sanskrit and Latin technical vocabulary for modern mathematics largely DOES NOT EXIST as attested classical terms, and this file found none: ALL 14 Sanskrit registers are COINED, and across all 56 non-English registers exactly ONE is CITED -- the Latin BODY (superficies), the only headword used as its lexicon carries it. 17 Sanskrit and 11 Latin headwords were retrieved and they were all consumed as COMPONENTS of coinages, not as terms. The clearest case is CONDITIONAL_MUTUAL_INFORMATION: there is NO word for Shannon information in either classical language, because the quantity was defined in 1948. Where a genuine classical term DID fit -- avasthā (state), antar (within), bahis (outside), status, interior, exterior, superficies, lapsus, skhalana, paraspara, mutuus -- it was used and cited. Where none fitted, a coinage was made and labelled a coinage. No attested word was pretended to mean a modern technical term.",
+  "doctrinal_freight_note": "Sanskrit philosophical vocabulary carries DOCTRINAL FREIGHT: a Sāṃkhya or Vedānta term imports a whole metaphysics. This file's ambiguity_notes are where that is recorded, per CONCEPTS.json's own instruction. The four sharpest instances found, each grounded in retrieved lexicon text: (1) āvaraṇa for the blanket -- Monier-Williams gives 'covering, hiding, concealing' and the Jain 'mental blindness'; in Advaita it names māyā's veiling power, so it would assert a real hidden world, i.e. make the FRISTON_BLANKET claim true by vocabulary. (2) manas for μ -- Monier-Williams itself glosses it 'the internal organ or antaḥkaraṇa of perception and cognition ... by which objects of sense affect the soul', which installs a soul. (3) saṃyoga for mind.body -- correct as a RELATION (a Nyāya guṇa, not a dravya), but the same entry glosses it 'direct material contact' and it presupposes substances to inhere in. (4) indriya for sensory states -- an ORGAN, and in Vedānta one of fourteen including manas, buddhi, ahaṃkāra and citta, each with a presiding deity. In no case has this file let a translation choice quietly assert a metaphysics; in every case the freight is named and left unresolved for an expert.",
+  "falsifiers": [
+    "A headword marked CITED is not in the named authority, or is not there in the quoted sense. That entry is a pseudopropheta and must be struck to PENDING-CITATION immediately. This is the worst defect this file could contain.",
+    "A quoted citation string does not match what the authority's page actually says at the given retrieval URL.",
+    "A register marked COINED lacks a morphological derivation, or its derivation invokes a component whose status is not stated in component_provenance.",
+    "Any register anywhere in this file is described as correct, perfect, verified, or proven. Charter rule 18.14 forbids it and no test has been run that could support it.",
+    "A back_translation_test is reported as passed while back_translation_tests_RUN remains 0.",
+    "An entry renders μ with a word for mind/soul/consciousness, η with a word for cosmos/earth, or b with a word for anatomy -- the three failures the rendering_architecture exists to prevent.",
+    "MIND_BODY is rendered as a compound noun in any register, thereby naming a third substance and reopening dualism.",
+    "SENSORY_STATES and ACTIVE_STATES are rendered with one word, or with words that do not distinguish the direction of influence -- the sparsity condition is then unexpressible.",
+    "PEARL_BLANKET and FRISTON_BLANKET are rendered with the same term with no distinguishing name, which performs the BLANKET_SLIDE in the lexicon itself.",
+    "BLANKET_SLIDE's entry is filed, cited or merged as a TRUE-store observation. Its store is META and crossing the stores is the cardinal sin.",
+    "This file is cited as evidence that any system has a Markov blanket, that I(mu;eta|b) has been estimated for anything, or that any biological hierarchy is nested. It says none of those things and names all three as NOT-MEASURED.",
+    "The Spanish register is promoted to CITED without someone actually reading dle.rae.es."
+  ],
+  "entries": [
+    {
+      "concept_id": "MARKOV_BLANKET",
+      "sanskrit": {
+        "devanagari": "मार्कोव-व्यवधानम्",
+        "iast": "mārkova-vyavadhānam",
+        "headword_as_in_lexicon": "vyavadhāna (व्यवधान); SLP1 key vyavaDAna. The compound and the proper name mārkova are NOT in the lexicon.",
+        "grammar": "n., tatpuruṣa compound; vyavadhāna is a neuter action/instrument noun in -ana",
+        "literal_gloss": "the Markov intervening-screen; that which is placed between, named for Markov",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. vy-avadhāna -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=vyavaDAna ; retrieved 2026-07-15. Entry reads: “intervening, intervention (esp. in gram. 'the intervention of a syllable or letter'); obstruction, hiding from view; covering, a cover, screen; separation, division; interruption; cessation, termination; interval, space”",
+        "status": "COINED",
+        "derivation": "vi- (apart) + ava- (down) + √dhā (to place, put) + -ana (kṛt suffix forming a neuter action/instrument noun) > vyavadhāna, 'that which is placed between'. Prefixed with mārkova, a transliteration of the proper name Markov, in a tatpuruṣa. The base vyavadhāna is CITED; the compound is the author's coinage and is attested nowhere.",
+        "component_provenance": {
+          "vyavadhāna": "CITED (Monier-Williams)",
+          "mārkova": "COINED - transliteration of a proper name, no lexicon warrant"
+        }
+      },
+      "latin": {
+        "form": "velamen Markovianum",
+        "grammar": "n. sg.; velamen, -inis, n. + coined adjective Markovianum, -a, -um agreeing in n. sg.",
+        "literal_gloss": "the Markovian covering / veil",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. vēlāmen -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=velamen ; retrieved 2026-07-15. Entry reads: “a cover, covering, clothing, robe, garment, veil (poet. and in post-Aug. prose)” Cited there to Verg. A. 1.649 and 6.221; Ov. M. 6.566; Ov. F. 4.147, 6.579; Juv. 3.178; Sen. Helv. 11.2; Tac. G. 17.",
+        "classical_or_post_classical": "MIXED: velamen is classical (Vergil, Ovid, Tacitus). Markovianum is [POST-CLASSICAL] - a coinage of this file, formed on the proper name Markov with the Latin adjectival suffix -ianus, on the model of Ciceronianus. It has no source and is admitted only as a naming convention.",
+        "status": "COINED",
+        "component_provenance": {
+          "velamen": "CITED (Lewis & Short)",
+          "Markovianum": "COINED [POST-CLASSICAL], no source"
+        }
+      },
+      "english": {
+        "term": "Markov blanket",
+        "definition": "The set b = {s,a} of sensory and active states whose conditioning renders internal and external states independent, so that p(mu,eta|b) = p(mu|b)p(eta|b), equivalently I(mu;eta|b) = 0."
+      },
+      "hindi": {
+        "devanagari": "मार्कोव व्यवधान",
+        "transliteration": "mārkov vyavadhān",
+        "gloss": "the Markov intervening-screen",
+        "citation": "PENDING-CITATION. The Sanskrit base vyavadhāna is CITED in Monier-Williams, but the Hindi reflex vyavadhān was NOT looked up in McGregor by the retrieval agent, and the compound is in no dictionary. Falsifier: query dsal.uchicago.edu McGregor for vyavadhan; if the headword carries 'intervention/screen', promote the component to CITED - the compound remains COINED regardless.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "manta de Markov",
+        "gloss": "the Markov blanket (calque of the English)",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term. SEPARATELY: 'manta de Markov' does circulate in Spanish-language technical prose (e.g. an es.statisticseasily.com glossary entry so titled, retrieved via search 2026-07-15), but technical web prose is NOT a standard published dictionary and does not meet this file's admission bar. es.wikipedia.org/wiki/Manta_de_Markov returned HTTP 404, so even the encyclopedic attestation is unconfirmed.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "vyavadhāna carries 'obstruction, hiding from view' alongside 'intervening'. The blanket does NOT hide the world from the mind and does not obstruct anything; it MEDIATES. A reader taking the concealment sense has been handed the Friston reading (a real thing being hidden behind a real surface) at no evidential cost. This is the reason the term is admitted with its definition attached and never alone.",
+        "vyavadhāna also carries 'cessation, termination' and, in grammar, the very narrow 'intervention of a syllable or letter'. Neither is meant.",
+        "velamen is a CLOTH word - a veil or garment. It therefore renders the English metaphor faithfully, which is precisely the risk: it reproduces 'blanket' rather than repairing it. Per the source concept's own note, this register is rendering a METAPHOR, not a mechanism, and that fact is recorded here rather than smoothed over.",
+        "'Blanket' in English is already a bad metaphor for b: a blanket on a bed covers by lying on top and does its work by hiding. b does its work by conditioning. Every register inherits this defect from the English and none of them repairs it. The definition, not the word, is the object.",
+        "The name 'Markov' attaches to a construct Markov did not define in this form; the term is eponymous convention, and no register should be read as a claim about Markov's own work."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "sanskrit",
+          "wrong": "आवरण (āvaraṇa)",
+          "why_wrong": "Monier-Williams gives āvaraṇa as 'covering, hiding, concealing'; 'the act of covering, concealing, hiding'; 'an obstruction'; and, in the Jain sense, 'mental blindness'. Rendering the blanket āvaraṇa asserts that b CONCEALS η from μ. It does not. Worse: in Advaita Vedānta āvaraṇa names māyā's veiling power, which hides a reality that IS there. That single word therefore smuggles in (a) a real external world, (b) the claim that it is hidden, and (c) a Vedānta metaphysics - i.e. it asserts the FRISTON_BLANKET reading by vocabulary alone, in a corpus that explicitly declines it. This is the worst available rendering and it is also the most natural one."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "उपाधि (upādhi)",
+          "why_wrong": "Tempting, because Vedānta uses upādhi for a limiting adjunct and b does limit. But Monier-Williams gives its primary sense as 'that which is put in the place of another thing, a substitute, substitution', and it also carries 'appearance, phantom' and 'deception'. b is not a substitute for anything and is not an illusion; in the Advaita usage the adjunct is precisely what is to be SEEN THROUGH, which inverts the concept - b is the only thing there is to see."
+        },
+        {
+          "register": "hindi",
+          "wrong": "मार्कोव कंबल (mārkov kambal)",
+          "why_wrong": "McGregor gives कंबल kambal, m., as 'a blanket' - the textile, the thing on a bed. This is the literal calque a translator or a machine reaches for first, and it renders a conditional-independence structure as bedding. It is the single most plausible failure in this register."
+        },
+        {
+          "register": "latin",
+          "wrong": "stragulum / tegumentum",
+          "why_wrong": "Both are 'covering' words reached for by the same cloth instinct as velamen but WITHOUT even velamen's advantage of being the conventional calque. This file did not retrieve either headword from Lewis & Short, so the glosses here are the author's recollection and are NOT cited; they are listed as traps to check, not as facts. Falsifier: retrieve both from Perseus before anyone uses them."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering that translates 'blanket' as a physical object without the definition attached",
+          "why_wrong": "b is a SET OF STATES, not a thing. Every noun in every register here is a metaphor for a set. The admission rule is that the term never travels without p(μ,η|b) = p(μ|b)p(η|b) beside it."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term TOGETHER WITH its literal gloss, but WITHOUT the English term and WITHOUT the formal definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render this into English; (2) state what relation, if any, it asserts between the thing inside and the thing outside.",
+        "pass_criterion": "PASS iff 3/3 return an English rendering naming a covering/screen associated with Markov, AND 0/3 answer question (2) with a concealment relation ('it hides the outside from the inside', 'the outside is really there but veiled'). ANY concealment answer is a FAIL for that register and forces the term back to the coinage bench, because concealment is the FRISTON_BLANKET claim and this corpus does not make it.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low. vyavadhāna and velamen are both CITED and both carry a concealment sense the concept forbids; they are the best of a bad field rather than good renderings. The English metaphor is defective at the root and no register inspected here repairs it."
+    },
+    {
+      "concept_id": "MIND",
+      "sanskrit": {
+        "devanagari": "अन्तरवस्थाः",
+        "iast": "antaravasthāḥ",
+        "headword_as_in_lexicon": "antar (अन्तर्), SLP1 key antar; avasthā (अवस्था), SLP1 key avasTA. The compound is NOT in the lexicon.",
+        "grammar": "f. nom. pl.; karmadhāraya of the indeclinable antar used adjectivally + avasthā, f.",
+        "literal_gloss": "the states that are within; the interior states",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. antar -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=antar ; retrieved 2026-07-15. Entry reads: “within, between, amongst, in the middle or interior. (As a prep. with loc.) in the middle, in, between, into; (with acc.) between; (with gen.) in, in the middle” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. ava-sthā -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=avasTA ; retrieved 2026-07-15. Entry reads: “state, condition, situation ... stage, degree”",
+        "status": "COINED",
+        "derivation": "antar, ind. 'within', which Monier-Williams expressly notes 'is sometimes compounded with a following word like an adjective, meaning interior, internal, intermediate' - so the adjectival use in compound is the lexicon's own licence, not this file's invention. + avasthā, f. 'state, condition' (< ava- + √sthā, 'to stand down/remain'). Nom. pl. antaravasthāḥ, 'the interior states'. Both components CITED; the compound COINED.",
+        "component_provenance": {
+          "antar": "CITED (Monier-Williams)",
+          "avasthā": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "status interiores",
+        "grammar": "m. nom. pl.; status, -us, m. (4th decl.) + interior, -ius, comparative adj., agreeing",
+        "literal_gloss": "the inner states / the interior conditions",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. stătus -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=status2 ; retrieved 2026-07-15. Entry reads: “stătus, ūs, m. sto and sisto. I. Mode or way of standing, of holding one's body (at rest), posture, position, attitude, station, carriage. II. Trop.: condition, state, position, situation, circumstances” || Lewis & Short, A Latin Dictionary (1879), s.v. interior -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=interior ; retrieved 2026-07-15. Entry reads: “intĕrĭor, us, adj. [comp. from inter, whence also sup. intimus] ... inner, interior; nearer (class.)” ADVERSARY CORRECTION 2026-07-15 (independent re-retrieval): this string previously read “inner, interior; nearer (comparative from inter; superlative intimus)”, which FUSED the entry's etymology bracket into its gloss and presented the result as the entry's own wording, while silently dropping Lewis & Short's '(class.)' marking. The headword exists and carries the claimed sense - the CITED component_provenance below stands - but the quotation was a reconstruction, not the authority's text, which is this file's own falsifier #2.",
+        "classical_or_post_classical": "CLASSICAL in both components. status is cited to Plautus, Terence, Cicero, Quintilian, Livy, Lucretius, Ovid, Tacitus and the jurists; interior to Cicero, Livy, Ovid, Vergil, Horace, Tacitus. The PHRASE is this file's construction.",
+        "status": "COINED",
+        "component_provenance": {
+          "status": "CITED (Lewis & Short)",
+          "interior": "CITED (Lewis & Short)"
+        }
+      },
+      "english": {
+        "term": "mind (internal states, μ)",
+        "definition": "The internal states mu inside a blanket, which have no term in external states and whose only evidence about the world is the sensory states."
+      },
+      "hindi": {
+        "devanagari": "आंतरिक अवस्थाएँ",
+        "transliteration": "āntarik avasthāẹṁ (āntarik avasthā̃)",
+        "gloss": "internal states",
+        "citation": "R. S. McGregor, The Oxford Hindi-English Dictionary (1993), s.v. आंतरिक āntarik, p. 76 -- Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=antarik&searchhws=yes ; retrieved 2026-07-15. Entry reads: “आंतरिक āntărik [S.], adj. inner, internal.” || R. S. McGregor, The Oxford Hindi-English Dictionary (1993), s.v. अवस्था avasthā, p. unrecorded by the retrieval agent -- Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=avastha&searchhws=yes ; retrieved 2026-07-15. Entry reads: “अवस्था (avasthā) state, condition; circumstances, situation. 2. stage (of life, progress); age.”",
+        "status": "COINED",
+        "note": "Both components CITED in McGregor; the phrase is this file's construction. The page number for avasthā was not returned by the retrieval agent and is therefore left unrecorded rather than guessed."
+      },
+      "spanish": {
+        "term": "estados internos",
+        "gloss": "internal states",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "THIS IS THE MOST DANGEROUS ENTRY IN THE FILE, and the danger is not that a register will render μ badly - it is that every register will render μ BEAUTIFULLY, with a word for mind that has two thousand years of philosophy behind it, and thereby assert what the corpus explicitly disclaims. Nothing in the partition names an experiencer. The formalism admits partitions for a Newton's cradle and a burning fuse.",
+        "The whole design of this file follows from that: μ is rendered STRUCTURALLY (antar + avasthā / status + interior), off position-and-state words, precisely so that no register's vocabulary can quietly install a subject. The renderings are deliberately flat. Flatness is the feature.",
+        "antar is an indeclinable, not a substance-noun, and avasthā is a condition, not a bearer of conditions. The Sanskrit therefore says 'the states that are within' and says nothing about whose states they are or whether it is like anything to be them. That silence is the accurate rendering of the mathematics.",
+        "Residual freight even so: avasthā in McGregor carries 'stage (of life, progress); age', and in Indian philosophical usage the avasthā-s are canonically the states of the SELF (waking, dream, deep sleep, turīya). A Sanskritist reading antaravasthāḥ may hear the avasthā-traya doctrine and supply an ātman to have the states. The word does not say it; the tradition may hear it. Recorded, not resolved.",
+        "Latin status is comparatively clean, but its section I is corporeal - 'posture, position, attitude, carriage'. status interiores could be misread as 'inner posture' (a bearing, a mood). The Trop. sense II ('condition, state, situation') is the one meant."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "sanskrit",
+          "wrong": "मनस् (manas)",
+          "why_wrong": "Monier-Williams gives manas as 'mind (in its widest sense as applied to all the mental powers), intellect, intelligence, understanding, perception, sense, conscience, will', and philosophically as 'the internal organ or antaḥkaraṇa of perception and cognition, the faculty or instrument through which thoughts enter or by which objects of sense affect the soul'. Every one of those is a capacity of a cognizer. μ is a set of states. Rendering μ as manas asserts that there is a soul being affected, which is exactly the claim the corpus refuses to make about UNI or about any system."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "चित्त (citta)",
+          "why_wrong": "Imports Yoga/Buddhist psychology wholesale - citta is the mind-stream that is to be stilled or purified, a thing with a career and a soteriology. μ has neither. NOT retrieved from Monier-Williams by this file; the gloss is the author's and is NOT cited. Falsifier: retrieve citta before anyone relies on this reasoning."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "आत्मन् (ātman)",
+          "why_wrong": "The worst of the three. ātman is the self/soul, and Monier-Williams's OWN entry for manas distinguishes manas from ātman and calls manas perishable and belonging to the body - i.e. the lexicon itself treats ātman as the eternal subject. Rendering μ as ātman asserts a persisting experiencer behind the internal states. The partition contains no such thing. NOT retrieved directly by this file; the reasoning rests on the manas entry, which WAS retrieved and which does state the distinction."
+        },
+        {
+          "register": "latin",
+          "wrong": "mens / animus / anima",
+          "why_wrong": "Same defect as manas, in Latin: all three name a cognizing or animating principle rather than a set of states, and anima additionally imports the soul. NOT retrieved from Lewis & Short by this file - listed as traps to check, not as cited facts."
+        },
+        {
+          "register": "hindi",
+          "wrong": "मन (man)",
+          "why_wrong": "The ordinary Hindi word for mind/heart, and the reflex of manas; it carries the full folk-psychological load (mind, heart, inclination, desire). NOT retrieved from McGregor by this file. Falsifier: query McGregor for man before relying on this."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering containing 'consciousness', 'awareness', 'subject', 'experiencer', or 'self'",
+          "why_wrong": "Banned outright. None of these is in the definition. μ is defined by two negative structural facts - no term in η, and evidence only via s - and by nothing else. A register that adds an experiencer has not translated the concept; it has replaced it."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO formal definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression, by itself, imply that something is aware, or that there is someone whose states these are? (3) could this expression truthfully describe the interior of a burning fuse?",
+        "pass_criterion": "PASS iff 3/3 render (1) as some form of 'internal/interior states' WITHOUT introducing mind, soul, consciousness or self; AND 3/3 answer (2) 'no'; AND 3/3 answer (3) 'yes'. A single 'yes' to (2) or 'no' to (3) is a FAIL for that register - the rendering has installed a subject, which is the defect this entire entry exists to prevent. This is the strictest test in the file and it is meant to be.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium for the Sanskrit and Latin as STRUCTURES (both built from CITED components, both deliberately free of substance-nouns); low that any reader steeped in the philosophical registers will hear them as flatly as they are meant. The avasthā-traya resonance is a live, unresolved risk."
+    },
+    {
+      "concept_id": "BODY",
+      "sanskrit": {
+        "devanagari": "व्यवधानतलम्",
+        "iast": "vyavadhāna-talam",
+        "headword_as_in_lexicon": "vyavadhāna (व्यवधान), SLP1 key vyavaDAna; tala (तल), SLP1 key tala. The compound is NOT in the lexicon.",
+        "grammar": "n. sg.; tatpuruṣa: vyavadhāna (n.) + tala (n.)",
+        "literal_gloss": "the surface of the intervening screen; the intervening surface",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. vy-avadhāna -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=vyavaDAna ; retrieved 2026-07-15. Entry reads: “intervening, intervention; obstruction, hiding from view; covering, a cover, screen; separation, division; interruption; interval, space” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. tala -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=tala ; retrieved 2026-07-15. Entry reads: “tala (m., L.) n. (√str̥) surface, level, flat roof (of a house), MBh. &c.”",
+        "status": "COINED",
+        "derivation": "vyavadhāna (see MARKOV_BLANKET) + tala, n., 'surface, level'. The compound picks out the SURFACE aspect of b rather than its screening aspect, because the definition makes b the surface that carries every dependency. Both components CITED; compound COINED.",
+        "component_provenance": {
+          "vyavadhāna": "CITED (Monier-Williams)",
+          "tala": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "superficies",
+        "grammar": "f. sg., 5th decl.; superficies, -ei, f. < super + facies",
+        "literal_gloss": "the surface; the upper side of a thing",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. sŭperfĭcīes -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=superficies ; retrieved 2026-07-15. Entry reads: “the upper side of a thing, the top, surface” Lewis & Short section II.B records a MATHEMATICAL sense: a two-dimensional surface having only length and breadth (Plin. 11, 48, 108, § 260). Cited to Pliny the Elder, Columella, Cicero, Livy, the Digest and the Vulgate (Vulg. Gen. 2, 6). COUNTER-CORRECTION 2026-07-15-B (two further independent re-retrievals of the URL above, the second prompted adversarially with an explicit escape hatch — 'if the string Dig. does not appear in that sense, reply NO DIG PRESENT' — which it did not take; plus an external cross-check that Digest 43.18 is in fact titled De superficiebus, which is what the entry quotes). THIS STRIKES THE 'ADVERSARY CORRECTION 2026-07-15' THAT STOOD HERE. That correction is itself the error, and it is quoted verbatim below rather than deleted. THE DIGEST IS ATTESTED IN THIS ENTRY, at sense II.A (Jurid. Lat., 'a building, as standing above the ground'), which reads in the entry's own text: “cum aedes ex duabus rebus constent ex solo et superficie,” Dig. 41, 3, 23: “De superficiebus,” ib. 43, 18: “superficiem consules ex senatusconsulto aestimabunt,” Cic. Att. 4, 1, 7; 4, 2, 5; Liv. 5, 54, 2; Dig. 23, 3, 32; 43, 17, 3, § 5; Col. 1, 5, 9; Inscr. Orell. 3286 al. — and once more at the collateral form SVPERFICIVM (Dig. 31, 3, 39). That is five Digest citations, four of them in the sense the adversary reported it had searched. 'and the Digest' is RESTORED to the author list above. THE STRUCK TEXT, ON RECORD VERBATIM BECAUSE CALIBRATION HERE IS DOWN-ONLY AND NEVER SILENT: “ADVERSARY CORRECTION 2026-07-15 (back-translation adversary, independent re-retrieval of the URL above): this citation string previously ended 'and the Digest'. THE DIGEST APPEARS NOWHERE IN THE SUPERFICIES ENTRY. The slot it was occupying is held by 'terrae,' Vulg. Gen. 2, 6; 'Digest' does appear in the ADJACENT status entry (Gaius, Digest), from which it appears to have bled during authoring. The false attribution is STRUCK. The headword, the quoted gloss, the post-Aug. marking of sense I, the juridical sense II.A and the mathematical sense II.B were all re-confirmed on re-retrieval, so the CITED status STANDS — but note that this was the ONLY register in the entire file marked CITED, and its citation string nevertheless carried a fabricated author. Falsifier: re-open the URL and read the author list.” WHAT WAS WRONG WITH IT, precisely, because the precision is the whole lesson: (a) its central claim is false — the Digest is in the entry, five times, and the falsifier it offered ('re-open the URL and read the author list') is exactly what overturns it; (b) the 'slot' it awarded to Vulg. Gen. 2, 6 is at the END OF SENSE I, while the Digest's citations are in SENSE II.A — the two never occupied one slot and never contended for one, so the substitution it described could not have happened; (c) the 'bleed' from the status entry is a narrative invented to explain an absence that did not exist. Read (c) carefully, because it is the most instructive part and the easiest to get wrong in the other direction: THE ADVERSARY'S SUPPORTING OBSERVATION WAS TRUE. The status2 entry really does cite Gaius and the Digest (Gai. Dig. 4, 5, 1; Gai. Inst. 1, 159; Dig. 4, 5, 11; Dig. 3, 3, 39, § 5 and others, at its own sense II.A; re-retrieved 2026-07-15 for this counter-correction). A true neighbouring fact was recruited into a causal story for a non-event, and the plausibility of the invented mechanism was then read back as corroboration of the absence the mechanism had been invented to explain. A correct observation, a coherent mechanism, and a false conclusion — that is what this failure looks like from the inside, which is why it passed. CLASS OF ERROR, NAMED: A NEGATIVE RESULT TREATED AS A FINDING WITHOUT A POSITIVE CONTROL. The adversary never established that its retrieval could see sense II.A AT ALL before concluding that sense II.A lacked the Digest; a lookup that failed, or that returned a truncated entry, was read as a proven absence. THIS FILE WARNS AGAINST THAT EXACT ERROR TWICE, IN ITS OWN admission_authorities NOTE, once per authority — 'a Kyoto-Harvard key returns not found and would be easy to misread as no such headword', and, of Perseus specifically, 'the bare form 302-redirects to invalidquery.jsp, which again must NOT be misread as no such headword'. The warning was written in the file the adversary was auditing; the adversary made that mistake anyway, against Perseus, in the one register the file marks CITED. THE CALIBRATE-DOWN IS ON THE ADVERSARY PASS, NOT ON THIS CITATION. The citation was true when it was written and is true now; no author here was ever fabricated; the only fabrication in this episode was the accusation of fabrication. A DECLINED INFERENCE, recorded because declining it is part of the correction: the adversary being wrong once does not make its two OTHER citation-string defects (mutuus 'Trop.' for 'Transf.'; interior's fused etymology bracket) wrong, and neither is re-opened here — each was checked on its own text and each stands. A pass that is wrong somewhere is not thereby wrong everywhere; that inference would be the same error with its sign flipped. What is calibrated down is one count and one standing: result_citation_string_defects reported THREE defects and has TWO. STANDING REQUIREMENT ON ANY FUTURE PASS THAT REPORTS AN ABSENCE IN THIS FIELD: quote the sense you searched and show your retrieval reached it, or your absence is not a finding and may not strike anything. Falsifier for THIS counter-correction, stated so it can kill this text the way this text killed the last one: open the URL, read sense II.A, and count the occurrences of 'Dig.'. If the count is 0, this counter-correction is wrong, the adversary was right, 'and the Digest' must be struck again — and the strike must carry the quotation that settles it, which is the thing the first strike never had.",
+        "classical_or_post_classical": "CLASSICAL, with the caveat that Lewis & Short marks the general sense post-Augustan; the mathematical sense (II.B) and the juridical sense (II.A) are both recorded. This file uses the term in its own sense and relies on the attested mathematical sense only as evidence that the word can carry an abstract surface, not as evidence that it carries THIS one.",
+        "status": "CITED",
+        "note": "This is the only single-word register in the file whose headword is used AS the lexicon carries it, without compounding. Even so the sense is this file's, not Lewis & Short's."
+      },
+      "english": {
+        "term": "body (the blanket, b)",
+        "definition": "The blanket b = {s,a} itself: the surface that carries every dependency between mind and world, and that thereby determines what is inferable at all."
+      },
+      "hindi": {
+        "devanagari": "व्यवधान-सतह",
+        "transliteration": "vyavadhān-satah",
+        "gloss": "the intervening surface",
+        "citation": "R. S. McGregor, The Oxford Hindi-English Dictionary (1993), s.v. सतह satah, p. unrecorded by the retrieval agent -- Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=satah&searchhws=yes ; retrieved 2026-07-15. Entry reads: “सतह satah [A. saṭ̥ḥ], f. 1. surface. 2. a flat surface. 3. level (as of achievement, or activity).” The component satah is CITED; the component vyavadhān was NOT retrieved from McGregor and is PENDING-CITATION; the compound is COINED.",
+        "status": "COINED",
+        "note": "Mixed provenance: satah CITED, vyavadhān PENDING-CITATION. Note also that satah is marked [A.] in McGregor - it is an Arabic loan, not a Sanskrit inheritance, so this Hindi rendering does NOT track the Sanskrit one etymologically. Recorded because a reader may expect the registers to be cognate and here they are not."
+      },
+      "spanish": {
+        "term": "superficie",
+        "gloss": "surface",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "b is NOT the anatomical body except by modeling choice. The source concept says so outright. Every register here therefore refuses the anatomy words and takes the SURFACE words instead - which is why the Latin is superficies and not corpus.",
+        "The cost of that choice: 'surface' in every register suggests a thin outer skin of a solid object, and b is not the outside of anything. b is a set of states that happens to factorize the dependency. A surface word is a metaphor exactly as much as a blanket word is; it is merely a less misleading one, because it carries mediation rather than concealment.",
+        "The concept's real content is a claim most readers will miss and no register conveys: change the surface and you change the set of possible minds behind it, because you have changed the only evidence there will ever be. Embodiment is not decoration. No word in any register says this; only the definition does.",
+        "tala in Monier-Williams also carries 'the lower part, base', 'the palm of the hand', 'the sole of the foot', and it is the name of a hell. The 'base/bottom' sense is a live misreading: tala alone would suggest that b is the BOTTOM of something rather than its boundary. The compound with vyavadhāna is what pins the intended sense, and it does so weakly.",
+        "superficies carries a strong pejorative shadow in the modern European languages descended from it - superficial, superficialidad, meaning shallow or trivial. b is the opposite of trivial: it is the only thing that carries anything. A Spanish or English reader may hear 'superficial' where 'surface' is meant."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "sanskrit",
+          "wrong": "शरीर (śarīra) / काय (kāya)",
+          "why_wrong": "Both are the anatomical/physical body - flesh, frame, corpse. b is a set of states, not tissue, and the source concept explicitly says b is NOT the anatomical body except by modeling choice. śarīra additionally imports the body/soul contrast (the śarīra is what the ātman wears and sheds), which reinstalls exactly the dualism this partition dissolves. NEITHER headword was retrieved from Monier-Williams by this file; the glosses are the author's and are NOT cited. Falsifier: retrieve both before relying on this."
+        },
+        {
+          "register": "latin",
+          "wrong": "corpus",
+          "why_wrong": "The direct calque of the English label 'body', and therefore the first thing a translator reaches for - which is precisely why it is banned. corpus is a physical body; b is the blanket. Choosing corpus turns a claim about conditional independence into a claim about anatomy, and quietly answers the modeling question (where does the organism end?) that the corpus insists must be measured, not assumed. NOT retrieved from Lewis & Short by this file; listed as a trap, not a cited fact."
+        },
+        {
+          "register": "hindi",
+          "wrong": "शरीर (śarīr) / देह (deh)",
+          "why_wrong": "Same anatomy defect as the Sanskrit. NOT retrieved from McGregor by this file. Falsifier: query McGregor before relying on this."
+        },
+        {
+          "register": "spanish",
+          "wrong": "cuerpo",
+          "why_wrong": "Same defect as corpus, from which it descends. PENDING-CITATION like the whole Spanish register."
+        },
+        {
+          "register": "any",
+          "wrong": "'membrane', 'boundary', 'interface', 'skin'",
+          "why_wrong": "All four are better than 'body' and all four are still wrong in the same direction: each names a physical partition of a physical thing. b is a partition of a STATE SPACE. 'Boundary' is the most dangerous of them, because in this literature 'boundary of the organism' is the FRISTON_BLANKET claim - a rendering that calls b a boundary has performed the BLANKET_SLIDE inside a single word."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression name a part of an animal's anatomy? (3) if the expression named the surface of a system, would changing that surface change what the interior could ever find out?",
+        "pass_criterion": "PASS iff 3/3 render (1) with a surface/intervening-surface expression and NOT with 'body', 'flesh' or 'skin'; AND 3/3 answer (2) 'no'. Question (3) is DIAGNOSTIC ONLY and does not gate: it tests whether the register conveys the concept's load-bearing consequence (embodiment is not decoration), and the author's prediction is that it will NOT - that no register conveys it and only the definition does. If 3/3 answer (3) 'yes', that prediction is refuted and this note must be corrected.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "medium. superficies is the one CITED single-word rendering here and it is a good fit for 'the surface that carries the dependencies'. The Sanskrit compound is weaker: tala's 'base/bottom' sense pulls against the intended reading and only the vyavadhāna element holds it in place.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "MIND_BODY",
+      "sanskrit": {
+        "devanagari": "अन्तरवस्था-व्यवधान-संयोगः",
+        "iast": "antaravasthā-vyavadhāna-saṃyogaḥ",
+        "headword_as_in_lexicon": "saṃyoga (संयोग), SLP1 key saMyoga; with antar, avasthā, vyavadhāna as above. The compound is NOT in the lexicon.",
+        "grammar": "m. sg.; tatpuruṣa whose head is saṃyoga, m., a RELATIONAL noun",
+        "literal_gloss": "the conjunction of the interior states with the intervening screen",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. saṃyoga -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=saMyoga ; retrieved 2026-07-15. Entry reads: “conjunction, combination, connection; ... (in philosophy) direct material contact [enumerated among the 24 Guṇas of the Nyāya]; carnal contact, sexual union; matrimonial connection; alliance or peace made between two kings; agreement of opinion, consensus; conjunct consonant; dependence of one case upon another, syntax; conjunction of two or more heavenly bodies; total amount, sum; a name for Śiva”",
+        "status": "COINED",
+        "derivation": "sam- (together) + √yuj (to join) + -a (kṛt suffix, m. action noun) > saṃyoga, 'a joining-together'. Chosen against the alternatives BECAUSE the head is a relation-noun and not a substance-noun: in Vaiśeṣika/Nyāya, saṃyoga is technically a guṇa (quality) and a saṃbandha (relation), NOT a dravya (substance). That is the exact structural requirement the source concept imposes. Head CITED; compound COINED.",
+        "component_provenance": {
+          "saṃyoga": "CITED (Monier-Williams)",
+          "antar": "CITED",
+          "avasthā": "CITED",
+          "vyavadhāna": "CITED"
+        }
+      },
+      "latin": {
+        "form": "coniunctio statuum interiorum cum superficie",
+        "grammar": "f. sg. + objective genitive plural + cum + abl.; deliberately a PHRASE, not a compound noun",
+        "literal_gloss": "the joining of the inner states with the surface",
+        "citation": "PENDING-CITATION. coniunctio was NOT retrieved from Lewis & Short by this file. Its components status (CITED), interior (CITED) and superficies (CITED) are all warranted; the head noun coniunctio is not. Falsifier: retrieve coniunctio from Perseus and either promote to COINED-from-cited-parts or replace the head.",
+        "classical_or_post_classical": "UNDETERMINED pending retrieval of coniunctio. status, interior and superficies are all classical.",
+        "status": "PENDING-CITATION",
+        "note": "Rendered as a genitive-and-preposition PHRASE on purpose. See ambiguity_notes: a compound noun here would name a third thing, and there is no third thing."
+      },
+      "english": {
+        "term": "mind.body (the interface)",
+        "definition": "The coupling mu to b -- a pair of one-way doors, sensory states the world's only route in and active states the mind's only route out -- which is not a fifth thing but the interface itself."
+      },
+      "hindi": {
+        "devanagari": "आंतरिक अवस्थाओं का सतह से संयोग",
+        "transliteration": "āntarik avasthāoṁ kā satah se saṃyog",
+        "gloss": "the conjunction of the internal states with the surface",
+        "citation": "COINED from components. āntarik CITED (McGregor p.76), avasthā CITED (McGregor), satah CITED (McGregor). The head saṃyog was NOT retrieved from McGregor and is PENDING-CITATION. The postpositional phrase is this file's construction and is built as a PHRASE for the same reason as the Latin.",
+        "status": "COINED",
+        "note": "Mixed provenance; head noun unverified in this register."
+      },
+      "spanish": {
+        "term": "el acoplamiento de los estados internos con la superficie",
+        "gloss": "the coupling of the internal states with the surface",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "This is the operator's fourth term and the load-bearing one, and the whole difficulty is grammatical rather than lexical: mind.body is a RELATION, not a thing. M12 leaves it implicit. Every register in this entry is therefore built as a PHRASE (genitive/postposition), never as a compound noun, because a compound noun in any of these languages would name a third substance - and naming a third substance is how you reopen dualism, which the partition does not contain.",
+        "That is why the Latin is a five-word phrase rather than an elegant single word. The elegance would be the defect. Any reviewer tempted to compress 'coniunctio statuum interiorum cum superficie' into something like 'menticorpus' or 'animocorporeum' has, in the act of compressing, asserted the thing this entry exists to deny.",
+        "saṃyoga was chosen because Nyāya-Vaiśeṣika treats it as a RELATION (a guṇa inhering in substances), not as a substance - which is precisely right. But the freight is heavy and cuts both ways: to treat saṃyoga as a guṇa is to accept an ontology in which qualities inhere in SUBSTANCES, i.e. it presupposes that μ and b are substances that can bear qualities. They are sets of states. The register buys the correct relation-type at the price of an incorrect substance-metaphysics. This is exactly the doctrinal-freight problem the charter names and it is NOT resolved here.",
+        "Monier-Williams's philosophical gloss of saṃyoga is 'direct MATERIAL contact'. The μ-to-b coupling is not material and involves no contact. This is a genuine mismatch, not a quibble.",
+        "saṃyoga also carries 'carnal contact, sexual union' and 'matrimonial connection'. A naive reader of antaravasthā-vyavadhāna-saṃyogaḥ is unlikely to reach for these, but a naive reader of saṃyoga alone might, and the term must not travel alone.",
+        "The 'one-way doors' image in the definition is doing real work and no register carries it: the asymmetry (s is the world's ONLY route in, a is the mind's ONLY route out) is what makes this an interface rather than a mixture. Only the definition says it."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "any",
+          "wrong": "any single compound noun of the form MIND-BODY (Sanskrit manas-śarīram, Latin mens-corpus / animocorporeum, Hindi man-śarīr, Spanish mente-cuerpo)",
+          "why_wrong": "The central forbidden move of this entry, and the most natural one, since the English label 'mind.body' LOOKS like a compound. A compound noun names a thing. mind.body is not a fifth thing; it is the interface itself. Rendering it as a compound noun asserts a third substance between mind and world, which is Cartesian dualism's exact failure mode - and it does so while appearing to be a faithful, even literal, translation. A translator will feel most correct at the moment of being most wrong."
+        },
+        {
+          "register": "spanish",
+          "wrong": "'mente-cuerpo' (as in 'el problema mente-cuerpo')",
+          "why_wrong": "Doubly wrong: it is a compound noun (see above), AND it is the settled Spanish name for the mind-body PROBLEM in philosophy of mind. Using it imports a two-millennium debate about how mental substance relates to physical substance into a concept that posits neither. PENDING-CITATION like the whole Spanish register."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "समवाय (samavāya)",
+          "why_wrong": "The Vaiśeṣika relation of INHERENCE - the intimate, inseparable relation of a quality to its substrate or a whole to its parts. Superficially attractive as a 'tighter' relation than saṃyoga, but wrong: inherence is precisely the relation of a thing to what it cannot exist apart from, and μ is not inherent in b. NOT retrieved from Monier-Williams by this file; the gloss is the author's and is NOT cited. Falsifier: retrieve samavāya before anyone uses or rejects it on this reasoning."
+        },
+        {
+          "register": "latin",
+          "wrong": "unio / commixtio",
+          "why_wrong": "Both name a merging. The interface is the opposite of a merging: it is what keeps μ and η apart while letting them depend on each other. NOT retrieved from Lewis & Short; listed as traps to check, not cited facts."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register expression and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression name a THING, or a RELATION between things? (3) how many items does this expression commit you to: two, three, or four?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'a relation', AND 3/3 answer (3) 'two' (the interior states, and the surface). Any answer of 'a thing' to (2), or 'three' to (3), is a FAIL for that register: the register has installed a tertium quid and reopened dualism. Question (1) is recorded for the audit trail but does not gate.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "low. The grammatical requirement (relation, not substance) is met in every register by construction, and that much is solid. But the Sanskrit head saṃyoga buys its correct relation-type with an incorrect substance-ontology and an explicit 'direct material contact' gloss, and the Latin head coniunctio is not yet cited at all. This entry is the least settled in the file and is the one most in need of an expert.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "WORLD",
+      "sanskrit": {
+        "devanagari": "बहिरवस्थाः",
+        "iast": "bahiravasthāḥ",
+        "headword_as_in_lexicon": "bahis (बहिस्), SLP1 key bahis; avasthā (अवस्था), SLP1 key avasTA. The compound is NOT in the lexicon.",
+        "grammar": "f. nom. pl.; the indeclinable bahis in composition (sandhi bahis > bahir before a vowel) + avasthā, f.",
+        "literal_gloss": "the states that are outside; the exterior states",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. bahis -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=bahis ; retrieved 2026-07-15. Entry reads: “out, forth, outwards, outside (a house, village, city, kingdom &c.; also with abl. or ifc. = out of, apart from, except, beside), Br. &c. &c.” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. ava-sthā -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=avasTA ; retrieved 2026-07-15. Entry reads: “state, condition, situation ... stage, degree”",
+        "status": "COINED",
+        "derivation": "bahis, ind., 'outside', whose final -s becomes -r before a vowel by regular sandhi > bahir- + avasthāḥ, f. nom. pl. Exactly parallel in construction to antaravasthāḥ (MIND), and deliberately so: μ and η are the same kind of object differing only in which side of b they fall on, and the registers should show that symmetry. Both components CITED; compound COINED.",
+        "component_provenance": {
+          "bahis": "CITED (Monier-Williams)",
+          "avasthā": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "status exteriores",
+        "grammar": "m. nom. pl.; status, -us, m. + exterior, -ius, comparative adj., agreeing",
+        "literal_gloss": "the outer states / the exterior conditions",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. stătus -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=status2 ; retrieved 2026-07-15. Entry reads: “stătus, ūs, m. ... II. Trop.: condition, state, position, situation, circumstances” || Lewis & Short, A Latin Dictionary (1879), s.v. exter (II. extĕrĭor) -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=exter ; retrieved 2026-07-15. Entry reads: “extĕrĭor, us: outward, outer, exterior; opp. interior (rare but class.)” Lewis & Short lists exterior under exter, II, and cites it to Cic. Univ. 7; Caes. B. G. 7.79.1 and 7.87.4; Hor. S. 2.5.17.",
+        "classical_or_post_classical": "CLASSICAL, but note Lewis & Short's own qualification of exterior: 'rare but class.' The lexicon itself flags this as an uncommon form. It is admitted here because its attested sense is exactly 'opp. interior', which is the symmetry this entry needs.",
+        "status": "COINED",
+        "component_provenance": {
+          "status": "CITED (Lewis & Short)",
+          "exterior": "CITED (Lewis & Short, s.v. exter II)"
+        }
+      },
+      "english": {
+        "term": "world (external states, η)",
+        "definition": "The external states eta outside the blanket, which a mind reaches exactly never and which enter only as a hypothesis that explains the blanket."
+      },
+      "hindi": {
+        "devanagari": "बाह्य अवस्थाएँ",
+        "transliteration": "bāhya avasthāẹṁ (bāhya avasthā̃)",
+        "gloss": "external states",
+        "citation": "R. S. McGregor, The Oxford Hindi-English Dictionary (1993), s.v. बाह्य bāhya, p. 729 -- Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=bahya&searchhws=yes ; retrieved 2026-07-15. Entry reads: “बाह्य bāhyă [S.], adj. 1. outer; external. 2. foreign. 3. outward, apparent (as the external world). 4. intended for show (conduct).” || R. S. McGregor, The Oxford Hindi-English Dictionary (1993), s.v. अवस्था avasthā, p. unrecorded by the retrieval agent -- Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=avastha&searchhws=yes ; retrieved 2026-07-15. Entry reads: “अवस्था (avasthā) state, condition; circumstances, situation. 2. stage (of life, progress); age.”",
+        "status": "COINED",
+        "component_provenance": {
+          "bāhya": "CITED (McGregor p.729)",
+          "avasthā": "CITED (McGregor)"
+        }
+      },
+      "spanish": {
+        "term": "estados externos",
+        "gloss": "external states",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "SOVEREIGN HOMONYM, flagged by the source concept itself: η is NOT 'world' as Earth or biosphere (the corpus's WORLD_CONTEXT entries - GAIA, LABORATORY, TOY_WORLD - are a different registered domain), and NOT 'World C', the corpus's count-based reader. Three different things wear the English word 'world' in this corpus. The registers here translate only the third-person-plural set of states outside a blanket.",
+        "This is why every register renders η as 'the exterior STATES' and never with a world-word: status exteriores and bahiravasthāḥ cannot be confused with the planet, and that immunity is the point.",
+        "The hardest content to carry is the epistemics, and no register carries it: a mind reaches η exactly NEVER. It touches only its own blanket. The generative model is not a model of η but of how η is expected to show up in b. Nothing in 'the exterior states' warns a reader that the exterior states are unreachable in principle; the definition must travel with the term.",
+        "McGregor's sense 3 for bāhya is 'outward, apparent (as the external world)' - the dictionary itself supplies 'the external world' as the idiomatic use. Convenient, and a hazard: it is the sense that pulls bāhya toward the cosmological reading this entry forbids.",
+        "McGregor's sense 4 for bāhya is 'intended for show (conduct)' - i.e. superficial, insincere, for appearances. η is not for show; it is the one thing that is never shown. A Hindi reader may hear exactly the wrong connotation.",
+        "DOCTRINAL FREIGHT NOT PREVIOUSLY RECORDED, added by the back-translation adversary 2026-07-15 and left UNRESOLVED. The freight this entry logged for the outside-words is COSMOLOGICAL (bāhya pulling toward 'the external world' as a place). There is a second and sharper risk it did not log, and it is an EPISTEMOLOGICAL one: in Indian philosophy the outside-word is the standing term of art in the dispute over BĀHYA-ARTHA, the 'external object' - whether objects outside cognition exist at all, contested between the realists and the Yogācāra idealists. That is a debate about whether there IS an η, which is precisely the question the FRISTON_BLANKET entry says this corpus declines to adjudicate. A Sanskritist or a Hindi reader trained in darśana may therefore hear bahir-/bāhya- as TAKING A SIDE - asserting external realism - in the same way āvaraṇa was rejected for asserting a concealed reality by vocabulary alone (see MARKOV_BLANKET forbidden_mistranslations). The two risks are different and the second is worse: the cosmological one makes η a place, the epistemological one makes η's EXISTENCE true by word choice.",
+        "STATUS OF THE NOTE ABOVE: UNCITED, and honestly so. The adversary retrieved Monier-Williams s.v. bāhya (SLP1 key bAhya, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=bAhya , 2026-07-15) expressly to warrant it, and MW DOES NOT WARRANT IT: the only bāhya+artha collocation MW records is Pāṇinian and linguistic ('external to, i.e. not resulting from, the sounds or letters forming a word'), not epistemological. MW's bāhya does carry 'not belonging to the family or country, strange, foreign' and 'excluded from caste or the community, an out-caste', neither of which is the freight named above. So the bāhya-artha risk is real in the philosophical literature and is NOT in this file's admission authority, and it is recorded here as an uncited adversary observation rather than dressed in a citation it does not have. NOTE ALSO: bāhya is NOT in this file's retrieval_log and is NOT cited anywhere in this file - the Sanskrit register for WORLD is built on bahis, and the Hindi bāhya is cited to McGregor, not to MW. Falsifier: put the bāhya-artha question to the same expert who runs this entry's back-translation test; if a competent reader hears bahiravasthāḥ as asserting that the exterior states exist, the rendering has taken the side this corpus declines and must be reworked.",
+        "Latin exterior carries no such shadow but is marked 'rare but class.' by Lewis & Short, so the phrase status exteriores will read as slightly unusual Latin. Unusual is acceptable; misleading is not."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "sanskrit",
+          "wrong": "लोक (loka)",
+          "why_wrong": "loka is world-as-realm - a place, a plane of existence, a population, and in the plural the cosmological loka-s. It answers 'which world?' η is not a place and has no inhabitants. Rendering η as loka asserts a cosmos where the concept posits only a set of states, and it collides head-on with the sovereign homonym the source concept warns about. NOT retrieved from Monier-Williams by this file; the gloss is the author's and is NOT cited. Falsifier: retrieve loka before relying on this."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "जगत् (jagat)",
+          "why_wrong": "jagat is literally 'the moving/living', the world as the totality of moving things - and in Vedāntic usage it is the term of art for the phenomenal world whose reality is at issue. Both are wrong: η need not move, and η's reality is not what this concept adjudicates. NOT retrieved from Monier-Williams by this file; the gloss is the author's and is NOT cited."
+        },
+        {
+          "register": "latin",
+          "wrong": "mundus",
+          "why_wrong": "The direct calque of the label 'world' and therefore the first reach. mundus is the cosmos, the universe, the ordered whole (and, separately, 'clean' and 'women's ornaments'). η is a set of states outside a particular blanket - it is relative to that blanket, and one system's η contains other systems. There is no single mundus. NOT retrieved from Lewis & Short; listed as a trap, not a cited fact."
+        },
+        {
+          "register": "hindi",
+          "wrong": "संसार (saṃsār) / जगत (jagat) / दुनिया (duniyā)",
+          "why_wrong": "All three are world-as-cosmos-or-society; saṃsār additionally imports the cycle of rebirth, which is about as much metaphysics as a single word can carry. NOT retrieved from McGregor by this file. Falsifier: query McGregor before relying on this."
+        },
+        {
+          "register": "spanish",
+          "wrong": "'el mundo' / 'el entorno' / 'el ambiente'",
+          "why_wrong": "'el mundo' repeats the mundus defect. 'entorno'/'ambiente' (environment, surroundings) are subtler and worse in one respect: they are the standard renderings in the active-inference literature, they sound technical, and they smuggle in the idea that η SURROUNDS the system spatially. η is defined by conditional independence, not by geometry. PENDING-CITATION like the whole Spanish register."
+        },
+        {
+          "register": "any",
+          "wrong": "'reality', 'the real world', 'the environment'",
+          "why_wrong": "'Reality' asserts what FRISTON_BLANKET asserts and what this corpus declines. 'The real world' is worse - it implies the mind's side is unreal. μ and η have the same ontological standing in the partition; only their position differs."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression refer to the planet Earth, the universe, or human society? (3) is what this expression names singular - is there exactly one of it?",
+        "pass_criterion": "PASS iff 3/3 render (1) as some form of 'external/exterior states' WITHOUT a world/cosmos/earth word; AND 3/3 answer (2) 'none of these'; AND 3/3 answer (3) 'no - it is relative to whatever is inside'. A 'yes' to (2) means the register has collided with the sovereign homonym and FAILS. A 'yes' to (3) means the register has smuggled in a unique cosmos and FAILS.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "medium. DOWNGRADED from 'medium-high, the highest in this file' by the back-translation adversary 2026-07-15. What survives the downgrade: both Sanskrit components and both Latin components are CITED and were independently re-retrieved and re-confirmed; the construction is exactly parallel to MIND (which is the symmetry the mathematics demands); and the deliberate avoidance of every world-word does give this rendering real immunity to the SOVEREIGN HOMONYM that the English label cannot achieve - that claim is unaffected. What forced the downgrade: a second, independent doctrinal-freight risk the entry had not recorded (the bāhya-artha / external-object realism dispute - see ambiguity_notes), which is not a homonym problem but an ontological one, and which is worse than the 'apparent/for show' sense that was previously logged as the only residual risk. Immunity to one hazard was being read as immunity generally.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "SENSORY_STATES",
+      "sanskrit": {
+        "devanagari": "प्रवेशावस्थाः",
+        "iast": "praveśāvasthāḥ",
+        "headword_as_in_lexicon": "praveśa (प्रवेश), SLP1 key praveSa; avasthā (अवस्था), SLP1 key avasTA. The compound is NOT in the lexicon.",
+        "grammar": "f. nom. pl.; tatpuruṣa: praveśa (m.) + avasthā (f.), sandhi a + a > ā",
+        "literal_gloss": "the entry states; the states that are the way in",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. praveśa -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=praveSa ; retrieved 2026-07-15. Entry reads: “entering, entrance, penetration or intrusion into (loc. gen. with or without antar, or comp.); ... a place of entrance, door” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. ava-sthā -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=avasTA ; retrieved 2026-07-15. Entry reads: “state, condition, situation ... stage, degree”",
+        "status": "COINED",
+        "derivation": "pra- (forth) + √viś (to enter) + -a (kṛt suffix, m. action noun) > praveśa, 'entering, entrance'; Monier-Williams also records the concrete 'a place of entrance, door'. + avasthā. Chosen to render the definition's ROUTE-IN content (s is the world's only route into the mind) rather than the English label's SENSING content. Both components CITED; compound COINED.",
+        "component_provenance": {
+          "praveśa": "CITED (Monier-Williams)",
+          "avasthā": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "status sensorii",
+        "grammar": "m. nom. pl.; status, -us, m. + sensorius, -a, -um, agreeing",
+        "literal_gloss": "the sensory states",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. stătus -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=status2 ; retrieved 2026-07-15. Entry reads: “stătus, ūs, m. ... II. Trop.: condition, state, position, situation, circumstances” The adjective sensorius was NOT retrieved from Lewis & Short by this file and is PENDING-CITATION; the author believes it to be post-classical/scholastic rather than classical, formed on sensorium, but has NOT verified this. Falsifier: retrieve sensorius from Perseus; if absent from Lewis & Short, the form is [POST-CLASSICAL] and must be marked as a coinage with its source named, or replaced.",
+        "classical_or_post_classical": "MIXED and PARTLY UNDETERMINED: status is CLASSICAL; sensorius is believed [POST-CLASSICAL] but is unverified.",
+        "status": "PENDING-CITATION",
+        "note": "An alternative built entirely from CITED components would be 'status aditus' or a phrase on the route-in model, parallel to the Sanskrit. It is NOT proposed here because aditus was not retrieved either. Recorded so the next author does not mistake the current choice for a considered win."
+      },
+      "english": {
+        "term": "sensory states",
+        "definition": "The blanket states s influenced by external but not internal states, forming the world's only route into the mind."
+      },
+      "hindi": {
+        "devanagari": "प्रवेश अवस्थाएँ",
+        "transliteration": "praveś avasthāẹṁ (praveś avasthā̃)",
+        "gloss": "entry states",
+        "citation": "COINED. avasthā CITED (McGregor). The component praveś was NOT retrieved from McGregor and is PENDING-CITATION. Falsifier: query McGregor for pravesh.",
+        "status": "COINED"
+      },
+      "spanish": {
+        "term": "estados sensoriales",
+        "gloss": "sensory states",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "The English label says 'sensory', which invites every register to reach for a sense-faculty word. The DEFINITION says something quite different and much thinner: s are the blanket states influenced by external but not internal states. That is a sparsity condition on a graph. It says nothing about sensing, and it would hold of a thermometer's mercury.",
+        "The Sanskrit therefore deliberately renders the ROUTE (praveśa, 'entrance, way in') rather than the FACULTY, and buys real safety by doing so - praveśāvasthāḥ cannot be heard as a sense-organ. The Latin does NOT yet do this: status sensorii keeps the faculty word, and its adjective is not even cited. The two registers are not equally safe and this file does not pretend they are.",
+        "SCOPE NOTE carried from the source concept, and it is a real one: the directional sparsity (external influences s; internal does not) is a requirement ADDED on top of Pearl's condition by the free-energy literature. It is NOT part of Pearl's original construct. A register that renders s as 'the senses' obscures the fact that this asymmetry is a stipulation with an author and a date, not a mathematical necessity.",
+        "praveśa's own freight is comic but real: Monier-Williams also gives it 'income, revenue, tax, or toll', 'employment, use, utilisation', 'manner, method', 'entrance on the stage', 'the entrance of the sun into a sign of the zodiac', and 'the syringe of an injection pipe'. None is likely to be reached for in a technical compound with avasthā, but praveśa ALONE is badly overloaded and must not travel alone.",
+        "praveśa also carries 'intrusion' and 'interfering with another's business, obtrusiveness'. s is not an intrusion; η's influence on s is the ordinary condition of there being a blanket at all."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "sanskrit",
+          "wrong": "इन्द्रिय (indriya)",
+          "why_wrong": "The obvious, idiomatic, and completely wrong choice. Monier-Williams gives indriya as 'faculty of sense, sense, organ of sense' - an ORGAN or POWER belonging to a cognizer, not a state. Its Vedāntic sense is worse: the entry records fourteen indriya-s comprising five sense organs, five motor organs, PLUS manas, buddhi, ahaṃkāra and citta, each governed by a presiding deity. Rendering s as indriya therefore (a) makes s an organ rather than a state, (b) installs the very cognizer that MIND forbids, and (c) imports a fourteen-fold psychology with deities attached. It also collapses SENSORY_STATES and ACTIVE_STATES into one category, since the indriya-s comprise both jn̄ānendriya (sense) and karmendriya (action) - destroying the exact distinction μ/η sparsity depends on."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "indriya, second reason",
+          "why_wrong": "Independently of the philosophy: Monier-Williams's PRIMARY senses for indriya are 'power, force, the quality which belongs especially to the mighty Indra', 'exhibition of power, powerful act', 'bodily power', 'virile power', and 'semen virile'. The word is built on the god Indra. A translator using it for 's' is not reaching for a neutral technical term; they are reaching for a word whose core sense is divine potency."
+        },
+        {
+          "register": "latin",
+          "wrong": "sensus (used alone, as the noun)",
+          "why_wrong": "Lewis & Short gives sensus, us, m. as 'the faculty or power of perceiving; perception, feeling, sensation, sense', and its whole section II is mental - 'feeling, sentiment, emotion, affection; sense, understanding, capacity; humor, inclination, disposition, frame of mind', plus 'opinion, thought, view' and sensus communis. It is a faculty-and-feeling word from end to end. s is neither a faculty nor a feeling. Using sensus alone for s would assert both a perceiver and something it is like to perceive."
+        },
+        {
+          "register": "any",
+          "wrong": "'perception', 'observation', 'input'",
+          "why_wrong": "'Perception' and 'observation' both name an ACT performed by a subject; s is a set of states, and the act-reading reinstalls the subject. 'Input' is the mirror error: it is engineering-neutral but implies an intended recipient and a designed channel, and it invites the reading that s is data delivered to μ. Nothing delivers anything. s is simply the part of b that η influences and μ does not."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering that makes s and a the same kind of thing under one word",
+          "why_wrong": "The single structural failure to avoid in this pair of entries. s and a are distinguished ONLY by the direction of influence. A register with one word covering both (indriya is exactly this) cannot express the sparsity condition and therefore cannot express the blanket."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression name an organ, a faculty, or an ability? (3) which direction does influence run - from outside in, from inside out, or both?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'none of these'; AND 3/3 answer (3) 'from outside in'. Any organ/faculty answer to (2) is a FAIL - the register has installed a cognizer. Any 'both' or 'inside out' answer to (3) is a FAIL - the register has lost the sparsity condition, which is the entire content of the concept. Question (1) is recorded but does not gate.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "medium for the Sanskrit (both components CITED, and the route-not-faculty strategy genuinely evades the indriya trap); LOW for the Latin, whose adjective sensorius is not cited at all and which keeps the faculty word the Sanskrit was careful to drop. The two registers should not be treated as equally warranted.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "ACTIVE_STATES",
+      "sanskrit": {
+        "devanagari": "निर्गमावस्थाः",
+        "iast": "nirgamāvasthāḥ",
+        "headword_as_in_lexicon": "nirgama (निर्गम), SLP1 key nirgama; avasthā (अवस्था), SLP1 key avasTA. The compound is NOT in the lexicon.",
+        "grammar": "f. nom. pl.; tatpuruṣa: nirgama (m.) + avasthā (f.), sandhi a + a > ā",
+        "literal_gloss": "the exit states; the states that are the way out",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. nir-gama -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=nirgama ; retrieved 2026-07-15. Entry reads: “going forth, setting out, departure (Var.; R. &c.); escaping from (abl., Vedāntas.); disappearing, vanishing, cessation, end (MBh.; Kāv.; Suśr. &c.); exit, issue, outlet (R.; Pañc.); a door (L.); export-place (of goods) (Mn. viii, 401)” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. ava-sthā -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=avasTA ; retrieved 2026-07-15. Entry reads: “state, condition, situation ... stage, degree”",
+        "status": "COINED",
+        "derivation": "nis-/nir- (out) + √gam (to go) + -a (kṛt suffix, m. action noun) > nirgama, 'going forth, exit'; Monier-Williams also records the concrete 'a door' and 'exit, issue, outlet'. + avasthā. Deliberately the exact mirror of praveśāvasthāḥ (SENSORY_STATES), because s and a are mirror-images differing only in the direction of influence, and the registers should show that. Both components CITED; compound COINED.",
+        "component_provenance": {
+          "nirgama": "CITED (Monier-Williams)",
+          "avasthā": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "status activi",
+        "grammar": "m. nom. pl.; status, -us, m. + activus, -a, -um, agreeing",
+        "literal_gloss": "the active states",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. stătus -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=status2 ; retrieved 2026-07-15. Entry reads: “stătus, ūs, m. ... II. Trop.: condition, state, position, situation, circumstances” || Lewis & Short, A Latin Dictionary (1879), s.v. actīvus -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=activus ; retrieved 2026-07-15. Entry reads: “active, practical (of philosophy, opposed to contemplative); in grammar, verba activa, transitive verbs which designate transitive action” Cited there to Sen. Ep. 95.10, Quintilian, Charisius and Diomedes.",
+        "classical_or_post_classical": "CLASSICAL, though thinly: Lewis & Short's earliest citation for activus is Seneca (Ep. 95.10), i.e. Silver-Age, and the grammatical usage is from the late grammarians Charisius and Diomedes. The PHRASE is this file's construction.",
+        "status": "COINED",
+        "component_provenance": {
+          "status": "CITED (Lewis & Short)",
+          "activus": "CITED (Lewis & Short)"
+        }
+      },
+      "english": {
+        "term": "active states",
+        "definition": "The blanket states a influenced by internal but not external states, forming the mind's only route out into the world."
+      },
+      "hindi": {
+        "devanagari": "निर्गम अवस्थाएँ",
+        "transliteration": "nirgam avasthāẹṁ (nirgam avasthā̃)",
+        "gloss": "exit states",
+        "citation": "COINED. avasthā CITED (McGregor). The component nirgam was NOT retrieved from McGregor and is PENDING-CITATION. Falsifier: query McGregor for nirgam.",
+        "status": "COINED"
+      },
+      "spanish": {
+        "term": "estados activos",
+        "gloss": "active states",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "The source concept's warning is blunt and every register violates it by default: 'Active' means ACTED-UPON-BY-THE-INTERIOR, not energetic or busy. a is defined by what influences it (μ does, η does not). The English word 'active' says the opposite - it says a is doing something. It is a passive participle's job dressed in an active adjective.",
+        "The Sanskrit sidesteps this entirely by rendering the ROUTE (nirgama, 'exit, way out') instead of the activity, exactly as praveśāvasthāḥ does for s. nirgamāvasthāḥ makes no claim that anything is busy. This is the strongest reason to prefer the Sanskrit construction over the Latin one here.",
+        "Latin activus is CITED but its attested sense is the WRONG one, and wrong in an especially expensive way: Lewis & Short gives it as 'active, practical', of philosophy, OPPOSED TO CONTEMPLATIVE. That opposition is precisely the action/thought dualism the blanket partition dissolves - a is not what the system does INSTEAD of thinking; a is the only channel μ has. A Latinist reading status activi against Seneca hears 'the practical states, as against the contemplative ones', which reintroduces the split this corpus is trying to describe away. The citation is real and the fit is bad; both facts are recorded.",
+        "Latin activus's other attested sense is grammatical - verba activa, transitive verbs. A reader may hear 'the transitive states'. Harmless but noisy.",
+        "nirgama's freight cuts one real way: Monier-Williams gives 'disappearing, vanishing, cessation, end' alongside 'exit, outlet'. a does not vanish and does not cease. A reader taking that sense would read nirgamāvasthāḥ as 'the states in which things stop', which is not merely different but nearly opposite - a is where μ reaches the world, not where anything ends.",
+        "nirgama also carries 'export-place (of goods)' (Manu viii, 401) and 'escaping from'. The export sense is an oddly apt accident - a is where the interior's influence leaves - but it is an accident and carries a commercial frame that is not meant."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "sanskrit",
+          "wrong": "कर्मन् (karman) / कर्मेन्द्रिय (karmendriya)",
+          "why_wrong": "karman is the single most doctrinally loaded word available in this register: act, deed, work, rite - and the moral residue of action that determines rebirth. a has no moral valence and no consequences beyond the next state. karmendriya ('organ of action') adds the indriya defect on top (an organ, not a state; a cognizer implied; see SENSORY_STATES). NEITHER headword was retrieved from Monier-Williams by this file; the glosses are the author's and are NOT cited. Falsifier: retrieve both before relying on this reasoning - but the doctrinal risk is severe enough that karman should be treated as forbidden pending that check, not after it."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "क्रिया (kriyā)",
+          "why_wrong": "'Action, doing, performance' - cleaner than karman but still names an ACT, and a is not an act. NOT retrieved from Monier-Williams by this file; the gloss is the author's and is NOT cited."
+        },
+        {
+          "register": "latin",
+          "wrong": "actio / actus",
+          "why_wrong": "Both name an act or a doing, and both are nouns for events; a is a set of states, not an event. Additionally actus imports the Aristotelian-scholastic actus/potentia pair, which is a whole metaphysics of act and potency. NOT retrieved from Lewis & Short; listed as traps, not cited facts."
+        },
+        {
+          "register": "any",
+          "wrong": "'output', 'effector', 'motor states'",
+          "why_wrong": "'Output' and 'effector' import a designed device with a purpose, and 'motor' imports muscles - the source concept's whole point is that a is defined by an influence asymmetry, which is equally true of a bacterium's flagellum, a thermostat's relay and nothing at all. 'Motor states' additionally re-anatomises b, which BODY forbids."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering implying energy, effort, busyness or agency",
+          "why_wrong": "Directly contradicts the source concept's own note. a can be perfectly still. A rock's surface has active states in this sense if anything inside it influences them."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression imply that something is exerting effort, doing work, or being energetic? (3) which direction does influence run - from outside in, from inside out, or both? (4) does this expression imply that a deed has moral or karmic consequence?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'no'; AND 3/3 answer (3) 'from inside out'; AND 3/3 answer (4) 'no'. A 'yes' to (2) is a FAIL and is the predicted failure for the LATIN specifically (activus is attested as 'practical, opposed to contemplative'). A 'yes' to (4) is a FAIL and would indicate a karman reading has leaked in. Any 'both' or 'outside in' answer to (3) is a FAIL - the sparsity condition is lost.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "medium for the Sanskrit (both components CITED; the exit-route strategy avoids both the karman trap and the busyness reading, and mirrors SENSORY_STATES as the mathematics requires). LOW for the Latin despite activus being CITED - the citation is real and the attested sense ('practical, opposed to contemplative') actively fights the concept. A CITED headword with the wrong sense is not a better rendering than an honest coinage, and this entry is the clearest case in the file of that distinction mattering.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "CONDITIONAL_INDEPENDENCE",
+      "sanskrit": {
+        "devanagari": "सापेक्षनिरपेक्षता",
+        "iast": "sāpekṣa-nirapekṣatā",
+        "headword_as_in_lexicon": "sāpekṣa (सापेक्ष), SLP1 key sApekza; nirapekṣa (निरपेक्ष), SLP1 key nirapekza. The abstract noun in -tā and the compound are NOT in the lexicon.",
+        "grammar": "f. sg.; tatpuruṣa: sāpekṣa (adj.) + nirapekṣa (adj.) + -tā (f. abstract suffix)",
+        "literal_gloss": "dependent-independence; independence that is itself relative to something",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. sāpekṣa -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=sApekza ; retrieved 2026-07-15. Entry reads: “sāpekṣa mfn. having regard or respect to (loc. or acc. with prati), MBh.; R.; requiring or presupposing anything, dependent on (comp.), Kathās.; Sāh.; Sarvad.” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. nir-apekṣa -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=nirapekza ; retrieved 2026-07-15. Entry reads: “regardless of, indifferent to, independent of (loc. or comp.); desireless, careless, indifferent, disinterested (Mn.; MBh.; Kāv.; -ka, BhP.); nirapekṣam ind. regardlessly, accidentally (MBh.; Daśar.)”",
+        "status": "COINED",
+        "derivation": "Both components are built on the same root - apa- + √īkṣ ('to look away, regard') > apekṣā, 'regard, reference, dependence'. sa- + apekṣa > sāpekṣa, 'having regard to, dependent on'; nis- + apekṣa > nirapekṣa, 'without regard to, independent of'. + -tā, the standard f. abstract-noun suffix. The coinage sets the two morphological opposites of ONE root against each other in a single compound, which is what the concept actually is: independence RELATIVE TO a condition. Both components CITED; compound COINED.",
+        "component_provenance": {
+          "sāpekṣa": "CITED (Monier-Williams)",
+          "nirapekṣa": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "independentia condicionalis",
+        "grammar": "f. sg.; independentia, -ae, f. + condicionalis, -e, agreeing",
+        "literal_gloss": "conditional independence",
+        "citation": "PENDING-CITATION. NEITHER headword was retrieved from Lewis & Short by this file. The author believes independentia to be [POST-CLASSICAL] (the classical idiom would be a phrase on sui iuris or on non pendere ex) and condicionalis to be attested in Lewis & Short (Quintilian, of conditional propositions), but has verified NEITHER. Falsifier: retrieve both from Perseus; independentia, if absent, must be marked [POST-CLASSICAL] with its source named or replaced by a phrase.",
+        "classical_or_post_classical": "UNDETERMINED pending retrieval. The author's unverified expectation is: independentia [POST-CLASSICAL], condicionalis CLASSICAL.",
+        "status": "PENDING-CITATION",
+        "note": "This register is the weakest in the entry and is recorded as such rather than dressed up. A phrase built from CITED parts would be more honest than an unverified two-word calque, and the next author should consider one."
+      },
+      "english": {
+        "term": "conditional independence",
+        "definition": "The relation mu perp eta given b, which is the whole content of a blanket: given the blanket, internal and external states carry no further information about each other."
+      },
+      "hindi": {
+        "devanagari": "सापेक्ष निरपेक्षता",
+        "transliteration": "sāpekṣ nirapekṣatā",
+        "gloss": "conditional independence",
+        "citation": "PENDING-CITATION. Neither sāpekṣ nor nirapekṣtā was retrieved from McGregor by this file, though both are ordinary Hindi tatsama borrowings of the CITED Sanskrit forms. Falsifier: query McGregor for sapeksh and nirapeksh.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "independencia condicional",
+        "gloss": "conditional independence",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "The source concept is emphatic and the emphasis is the content: NOT 'mostly' and NOT 'usually' - by definition, or the partition is not a blanket. Every register must carry an exact factorization claim, not a tendency. No natural-language word for 'independent' in any of these registers carries exactness; they all admit degrees. This is a defect of all five registers equally and the math is the only fence.",
+        "The deep trap, and the reason this entry is hard: 'independence' in ordinary language is a property of ONE thing (a person is independent). Here it is a three-place relation - μ is independent of η GIVEN b - and it is FALSE without the third place. Drop 'given b' and the claim becomes not merely weaker but wrong: μ and η are emphatically NOT independent unconditionally; that is exactly why there is a blanket. A register that renders this with a one-place word for independence has stated the opposite of the concept.",
+        "The Sanskrit coinage is designed against exactly that failure: by yoking sāpekṣa ('dependent, having regard to') to nirapekṣa ('independent, without regard to') - the two morphological opposites of a single root - it makes the conditionality structurally inseparable from the independence. You cannot drop the third place without dropping half the word. This is the one place in the file where a coinage does something no attested term does.",
+        "nirapekṣa's freight is severe and pulls the wrong way: Monier-Williams's other senses are 'desireless, careless, indifferent, disinterested', and the adverb nirapekṣam is 'regardlessly, ACCIDENTALLY'. That makes independence an ATTITUDE (not caring about something) rather than a probabilistic factorization, and the 'accidentally' sense is close to a direct contradiction: conditional independence is not an accident but a structural fact. A reader with the Mānava-dharmaśāstra or Kāvya usage in mind will hear an ascetic's detachment where a factorization is meant.",
+        "sāpekṣa's attested sense 'having regard or respect to' is also personal - it is about someone showing consideration. Neither component is a mathematical term and neither pretends to be."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "any",
+          "wrong": "any rendering of 'independence' WITHOUT the conditioning term ('svatantratā', 'independentia', 'svatantratā', 'independencia', 'स्वतंत्रता')",
+          "why_wrong": "The cardinal error of this entry and the most likely one. μ and η are NOT independent; they are independent GIVEN b. A bare independence word asserts unconditional independence, which is false and which, if true, would mean there was nothing to infer and no reason for a blanket to exist. This is not a shade of meaning - it is the negation of the concept."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "स्वातन्त्र्य (svātantrya) / स्वतन्त्र (svatantra)",
+          "why_wrong": "'Self-dependence, autonomy, freedom' - a one-place property of an agent, and in Śaiva and grammatical usage a term of art for AGENCY (the kāraka svatantraḥ kartā, 'the agent is the independent one'). It therefore commits both available errors at once: it drops the conditioning term, and it installs an agent. NOT retrieved from Monier-Williams by this file; the glosses are the author's and are NOT cited. Falsifier: retrieve svatantra before relying on this."
+        },
+        {
+          "register": "latin",
+          "wrong": "libertas / sui iuris",
+          "why_wrong": "Both are the classical idiom for independence and both are POLITICAL or LEGAL - freedom from another's power, being one's own master. Statistical factorization has nothing to do with either. Listed as traps; NOT retrieved from Lewis & Short."
+        },
+        {
+          "register": "any",
+          "wrong": "'uncorrelated', 'unrelated', 'orthogonal', 'no relationship'",
+          "why_wrong": "'Uncorrelated' is a strictly weaker condition than independence (zero correlation does not imply independence except in special cases) and substituting it silently weakens the claim to something the blanket does not require and which would not suffice. 'Orthogonal' is the same error dressed in geometry. 'Unrelated' is simply false: μ and η are richly related THROUGH b."
+        },
+        {
+          "register": "any",
+          "wrong": "'screened off' (the Reichenbach/philosophy-of-science idiom)",
+          "why_wrong": "Technically near-synonymous and therefore tempting, but it is a screening METAPHOR, and in a corpus where the blanket is already fighting a covering/concealment reading (see MARKOV_BLANKET, āvaraṇa), importing a second screen-word compounds the error. It also imports a specific literature on common causes that this concept does not invoke."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) how many items does this expression relate - one, two, or three? (3) if the third item were removed, would the claim still hold? (4) is what this expression names exact, or a matter of degree?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'three'; AND 3/3 answer (3) 'no'. Any answer of 'one' or 'two' to (2) is a FAIL - the register has dropped the conditioning term and thereby stated the negation of the concept. Question (4) is DIAGNOSTIC ONLY: the author's prediction is that readers will answer 'a matter of degree' in EVERY register, because no natural-language independence word is exact. If that prediction holds it is not a failure of any one register but a recorded limit of all five, and the math remains the only fence.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "medium for the Sanskrit coinage, which is the most defensible construction in this file on structural grounds (it makes conditionality morphologically inseparable from independence) while carrying nirapekṣa's 'indifferent/accidentally' freight, which is bad. LOW for Latin, Hindi and Spanish, none of which has a single retrieved headword in this entry. This entry has the weakest citation base in the file and should not be leaned on.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "CONDITIONAL_MUTUAL_INFORMATION",
+      "sanskrit": {
+        "devanagari": "सापेक्ष-परस्पर-सूचना",
+        "iast": "sāpekṣa-paraspara-sūcanā",
+        "headword_as_in_lexicon": "sāpekṣa (सापेक्ष), SLP1 key sApekza; paraspara (परस्पर), SLP1 key paraspara. The head sūcanā was NOT retrieved and is PENDING-CITATION. The compound is NOT in the lexicon.",
+        "grammar": "f. sg.; tatpuruṣa",
+        "literal_gloss": "conditional mutual indication",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. sāpekṣa -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=sApekza ; retrieved 2026-07-15. Entry reads: “having regard or respect to; requiring or presupposing anything, dependent on” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. paraspara -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=paraspara ; retrieved 2026-07-15. Entry reads: “paraspara mf(ā)n. mutual, each other's; (pl.) like one another; parasparam ind. one another, each other, with or from one another, one another's, mutually, reciprocally” || The head sūcanā ('indication, pointing out') was NOT retrieved from Monier-Williams by this file and is PENDING-CITATION. Falsifier: retrieve sUcanA from Cologne.",
+        "status": "COINED",
+        "derivation": "sāpekṣa (CITED, 'dependent on, presupposing') + paraspara (CITED, 'mutual, reciprocal') + sūcanā (PENDING-CITATION, believed < √sūc, 'to point out, indicate'; -ana/-anā, action noun). The head deliberately avoids jn̄āna ('knowledge') and vijn̄āna ('cognition'): see forbidden_mistranslations. This coinage is a PLACEHOLDER and its only defensible content is the mathematics it labels.",
+        "component_provenance": {
+          "sāpekṣa": "CITED (Monier-Williams)",
+          "paraspara": "CITED (Monier-Williams)",
+          "sūcanā": "PENDING-CITATION - not retrieved"
+        }
+      },
+      "latin": {
+        "form": "informatio mutua condicionalis",
+        "grammar": "f. sg.; informatio, -onis, f. + mutuus, -a, -um + condicionalis, -e, both agreeing",
+        "literal_gloss": "conditional mutual information -- but see ambiguity_notes: informatio does NOT mean information",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. informatio -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=informatio ; retrieved 2026-07-15. Entry reads: “in-formātĭŏ, ōnis, f. informo. I. A representation. Lit., an outline, sketch, first draft (Vitr. 4, 6). II. Trop., an idea, conception (Cic. N. D. 1, 36, 100; de Or. 2, 87, 358; Part. Or. 29, 102: an exhibition of the idea contained in a word, an explanation of its meaning)” || Lewis & Short, A Latin Dictionary (1879), s.v. mūtŭus -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=mutuus ; retrieved 2026-07-15. Entry reads: “mūtŭus: I. Lit., borrowed, lent (class.); substantive mūtŭum, a loan. II. Transf., in return, in exchange, reciprocal, mutual. Adverbs mūtŭō, mūtŭē, mūtŭĭter, mutually, in return” ADVERSARY CORRECTION 2026-07-15 (independent re-retrieval): this string previously read “II. Trop., reciprocal, mutual”. Lewis & Short marks that section Transf. (transferred), NOT Trop., and its gloss opens 'in return, in exchange' before 'reciprocal, mutual'. The headword and both senses re-confirm; only the section label and the gloss's opening were misquoted. Recorded because an ambiguity_note below was resting on the 'Trop.' label. || The third component condicionalis was NOT retrieved from Lewis & Short by this file and is PENDING-CITATION.",
+        "classical_or_post_classical": "MIXED and PARTLY UNDETERMINED: informatio is CLASSICAL (Cicero, Vitruvius) but in a sense that is NOT the one used here; mutuus is CLASSICAL (Plautus, Cicero, Vergil, Lucretius, Livy); condicionalis is unverified. The PHRASE is a modern calque and is [POST-CLASSICAL] as a technical term regardless of its components' dates.",
+        "status": "COINED",
+        "component_provenance": {
+          "informatio": "CITED (Lewis & Short) - but in the WRONG sense",
+          "mutuus": "CITED (Lewis & Short)",
+          "condicionalis": "PENDING-CITATION - not retrieved"
+        }
+      },
+      "english": {
+        "term": "conditional mutual information",
+        "definition": "The quantity I(mu;eta|b), in nats, which is the operable test of whether a candidate boundary is a real blanket, since I greater than zero beyond estimator noise means a route from world to mind bypasses the body and the partition is drawn in the wrong place."
+      },
+      "hindi": {
+        "devanagari": "सापेक्ष परस्पर सूचना",
+        "transliteration": "sāpekṣ paraspar sūcanā",
+        "gloss": "conditional mutual information",
+        "citation": "R. S. McGregor, The Oxford Hindi-English Dictionary (1993), s.v. परस्पर paraspar, p. unrecorded by the retrieval agent -- Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=paraspar&searchhws=yes ; retrieved 2026-07-15. Entry reads: “परस्पर paras-par [S.], adj. 1. mutual, reciprocal. 2. interchanging. 3. adv. mutually, &c.; between each other, among one another.” The components sāpekṣ and sūcanā were NOT retrieved from McGregor and are PENDING-CITATION. NOTE: sūcanā is the standard modern Hindi word for 'information' in the everyday sense (a notice, a communication), which is a hazard - see ambiguity_notes.",
+        "status": "COINED",
+        "component_provenance": {
+          "paraspar": "CITED (McGregor)",
+          "sāpekṣ": "PENDING-CITATION",
+          "sūcanā": "PENDING-CITATION"
+        }
+      },
+      "spanish": {
+        "term": "información mutua condicional",
+        "gloss": "conditional mutual information",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "THE HONEST OUTCOME THE CHARTER PREDICTS, arriving exactly where it was predicted: there is NO attested Sanskrit term and NO attested Latin term for information in Shannon's sense. None. The quantity was defined in 1948 and neither language has a word for it. Every register in this entry is therefore a coinage or a calque, and the ONLY thing in this entry with any warrant is the mathematics: I(μ;η|b), measured in NATS. The unit is the fence. No register may be read as supplying a meaning the math does not already carry.",
+        "Latin informatio is the trap of this entry, and it is a beautiful one because the word is CITED, classical, and Ciceronian - and means something else entirely. Lewis & Short: 'an outline, sketch, first draft' and, tropologically, 'an idea, conception'. Cicero uses it at N.D. 1.36.100 for a PRECONCEIVED NOTION in someone's mind. Cicero's informatio is a mental conception in a person; Shannon's information is a measure over a joint distribution and requires no mind at all. Using informatio therefore imports a cognizer into the one entry whose whole job is to be a mind-free measurement. The word looks like the right answer and is an anachronism of two thousand years.",
+        "mutuus's primary attested sense is 'borrowed, lent', with the substantive mutuum meaning 'a loan'; the 'reciprocal, mutual' sense is marked Transf. (transferred) by Lewis & Short, and its gloss there opens 'in return, in exchange'. informatio mutua could therefore be construed as 'a borrowed conception' - a loan of an idea. This is not a serious reading risk in context but it is what the lexicon actually says, and it is recorded rather than quietly dropped. ADVERSARY CORRECTION 2026-07-15: this note previously said the sense is 'marked Trop. by Lewis & Short'. It is marked Transf. The note's SUBSTANCE survives the correction unchanged - 'borrowed, lent' is still the literal sense and 'mutual' is still the transferred one - but the label was wrong and a note that names what a lexicon marks must name it correctly.",
+        "Hindi sūcanā is the everyday modern word for 'information' as in a notice, an announcement, something someone tells you. That is the folk sense, not the measure-theoretic one, and it is arguably the worst kind of false friend: it will feel entirely natural to a Hindi reader and will convey nothing of I(μ;η|b). Because sūcanā's Hindi sense is a communication BETWEEN PERSONS, it also reinstalls the cognizer.",
+        "THE SCOPE FACT THAT MATTERS MOST, carried from the source concept and softened by nobody: this criterion exists, is clean, and is overwhelmingly UNEXERCISED. I(μ;η|b) is NOT-MEASURED for essentially all real biological systems and for every UNI boundary. When any text says 'system X has a Markov blanket', the default assumption should be that I was never estimated. Naming this quantity elegantly in five registers does not measure it in one.",
+        "The nats are load-bearing and no register carries them. I > 0 beyond ESTIMATOR NOISE is the operable test; the noise floor is part of the claim; a term without a unit and an error bar is not a measurement."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "sanskrit",
+          "wrong": "ज्ञान (jn̄āna) / विज्ञान (vijn̄āna)",
+          "why_wrong": "The natural reach for 'information' and catastrophic. jn̄āna is KNOWLEDGE - something a knower has; vijn̄āna is discriminative cognition and, in Buddhist usage, one of the five skandhas and a term of art for consciousness itself. I(μ;η|b) is a number in nats computed from a joint distribution; it is not knowledge, nobody has it, and it applies to a rock. Rendering information as jn̄āna installs a knower in the one place a knower is most damaging, and vijn̄āna additionally imports the whole Yogācāra apparatus. NEITHER headword was retrieved from Monier-Williams by this file; the glosses are the author's and are NOT cited - but the doctrinal risk is severe enough that both should be treated as forbidden pending that check, not after it."
+        },
+        {
+          "register": "latin",
+          "wrong": "scientia / notitia / cognitio",
+          "why_wrong": "All three name knowledge or acquaintance held by a knower - same defect as jn̄āna, in Latin. NOT retrieved from Lewis & Short; listed as traps, not cited facts."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering that drops 'conditional'",
+          "why_wrong": "I(μ;η) and I(μ;η|b) are different quantities and the difference is the entire concept. Unconditional mutual information between mind and world is large and its being large is unremarkable. It is the CONDITIONAL quantity that tests the boundary. Dropping the condition does not weaken the claim; it tests nothing."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering that implies the quantity has been measured",
+          "why_wrong": "Not a lexical error but an evidential one, and it is the error this concept exists to prevent. A term of art that reads as established fact ('the conditional mutual information of the system') licenses the reader to assume an estimate exists. For essentially every system anyone has named, none does."
+        },
+        {
+          "register": "any",
+          "wrong": "'shared information', 'overlap', 'common information'",
+          "why_wrong": "'Shared' and 'common' imply a substance possessed jointly by two parties; mutual information is not a stuff that μ and η both hold. 'Overlap' is a geometric metaphor and suggests the two sets intersect, which they do not - they are disjoint by construction."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression name something a person knows, or a quantity that could be computed about a rock? (3) what units, if any, would what this names be measured in? (4) does this expression imply that someone has actually measured it?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'a quantity computable about a rock'; AND 3/3 answer (4) 'no'. Any 'something a person knows' answer to (2) is a FAIL - a knower has been installed, and this is the PREDICTED failure for the LATIN (informatio is attested as 'an idea, conception') and for the HINDI (sūcanā is a notice given by someone to someone). Question (3) is DIAGNOSTIC ONLY: the author predicts 0/3 will say 'nats' in any register, because no register carries the unit and no register can. If that prediction holds, it is a recorded limit of the whole entry, and confirms that the math and not the word is the fence.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "low, and low in a way no amount of further work in these registers would fix. Two components are CITED (paraspara, mutuus) and one CITED component is actively misleading (informatio). There is no attested term for Shannon information in Sanskrit or Latin because the concept postdates both by two millennia; the charter predicted exactly this outcome and this entry records it rather than pretending otherwise. The mathematics is the only warranted content here.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "PEARL_BLANKET",
+      "sanskrit": {
+        "devanagari": "पर्ल-व्यवधानम्",
+        "iast": "parla-vyavadhānam",
+        "headword_as_in_lexicon": "vyavadhāna (व्यवधान), SLP1 key vyavaDAna. The proper name and the compound are NOT in the lexicon.",
+        "grammar": "n. sg.; tatpuruṣa with a transliterated proper name",
+        "literal_gloss": "the Pearl intervening-screen",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. vy-avadhāna -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=vyavaDAna ; retrieved 2026-07-15. Entry reads: “intervening, intervention; obstruction, hiding from view; covering, a cover, screen; separation, division; interruption; interval, space”",
+        "status": "COINED",
+        "derivation": "See MARKOV_BLANKET for vyavadhāna. parla is a transliteration of the surname Pearl and has no lexicon warrant of any kind. Transliteration of a modern surname into Devanagari is a convention, not a translation, and no back-translation test can validate it.",
+        "component_provenance": {
+          "vyavadhāna": "CITED (Monier-Williams)",
+          "parla": "COINED - transliteration of a proper name"
+        }
+      },
+      "latin": {
+        "form": "velamen Pearlianum",
+        "grammar": "n. sg.; velamen, -inis, n. + coined adjective Pearlianum",
+        "literal_gloss": "the Pearlian covering",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. vēlāmen -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=velamen ; retrieved 2026-07-15. Entry reads: “a cover, covering, clothing, robe, garment, veil (poet. and in post-Aug. prose)”",
+        "classical_or_post_classical": "MIXED: velamen CLASSICAL; Pearlianum [POST-CLASSICAL], a coinage of this file on the -ianus model, with no source.",
+        "status": "COINED",
+        "component_provenance": {
+          "velamen": "CITED (Lewis & Short)",
+          "Pearlianum": "COINED [POST-CLASSICAL], no source"
+        }
+      },
+      "english": {
+        "term": "Pearl blanket",
+        "definition": "A blanket as Pearl coined it: a formal statistical construct over a graph you drew, doing conditional-independence bookkeeping relative to a model, and thereby cheap, well-defined and unobjectionable."
+      },
+      "hindi": {
+        "devanagari": "पर्ल व्यवधान",
+        "transliteration": "parl vyavadhān",
+        "gloss": "the Pearl intervening-screen",
+        "citation": "PENDING-CITATION, as for MARKOV_BLANKET: vyavadhān was not retrieved from McGregor. The proper name is a transliteration.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "manta de Pearl",
+        "gloss": "the Pearl blanket",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "The load-bearing word in this entry is not a noun but an adjective the registers cannot carry: CHEAP. A Pearl blanket is free BECAUSE IT CLAIMS NOTHING ABOUT THE WORLD. It is conditional-independence bookkeeping relative to a graph YOU ALREADY DREW. The graph is a modeling artefact; the blanket over it inherits exactly that status and no more.",
+        "No register conveys 'relative to a model'. Every register produces a noun that sounds like a thing that exists. This is the entry where the reader is most likely to be misled by good translation, because the term is unobjectionable and the reader will assume its referent is out there. The referent is in the model.",
+        "'Pearl' is a surname (Judea Pearl) and in every register it will look like the English common noun for the gem - and in Devanagari transliteration it is worse, since पर्ल carries no capitalisation cue at all that would mark it as a name. Recorded as a real, unfixed hazard of the transliteration.",
+        "This entry and FRISTON_BLANKET are deliberately given the SAME head noun in each register (vyavadhāna / velamen), differing only in the attached name. That is correct and it is also the danger: the two concepts differ in EVIDENTIAL COST, not in structure, and identical heads make the costly one look as free as the free one. The distinction lives entirely in the definitions. See BLANKET_SLIDE, which is the name for what happens when it does not."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "any",
+          "wrong": "any rendering implying the blanket was discovered rather than drawn",
+          "why_wrong": "The whole content of 'Pearl blanket' is that it is a formal construct over a graph the modeller drew. A rendering that suggests finding, revealing or locating a blanket has converted a free construct into an expensive claim - i.e. has performed the BLANKET_SLIDE."
+        },
+        {
+          "register": "any",
+          "wrong": "translating the surname 'Pearl' as the gem (Sanskrit muktā, Latin margarita, Hindi motī, Spanish perla)",
+          "why_wrong": "A real and stupid failure mode that machine translation reaches for immediately, and which the Devanagari transliteration cannot signal against. 'The pearl blanket' is not a thing. The name is a person."
+        },
+        {
+          "register": "any",
+          "wrong": "using the SAME unqualified term for this and for FRISTON_BLANKET",
+          "why_wrong": "The two are distinguished only by the name attached. Dropping the name, or rendering both as simply 'the blanket', collapses a free bookkeeping construct into a metaphysical claim about where an organism ends - which is precisely the field's characteristic error and has its own concept_id here."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) is the thing named here found in the world, or drawn by a modeller? (3) is 'Pearl' a person or a gemstone?",
+        "pass_criterion": "PASS iff 3/3 answer (3) 'a person'. Question (2) is DIAGNOSTIC ONLY and the author PREDICTS FAILURE: the prediction is that most readers answer 'found in the world', because no register carries 'relative to a model you drew' and the noun form makes the referent sound real. If that prediction holds, it is a recorded limit of all five registers and NOT a reason to prefer a different noun - it is a reason the definition must always travel with the term. If 3/3 answer 'drawn by a modeller', the prediction is refuted and this note must be corrected.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "low. The head nouns are CITED but the concept's entire content is an evidential status (free, model-relative, claiming nothing) that no noun in any register can carry. The registers name the object correctly and convey nothing that matters about it.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "FRISTON_BLANKET",
+      "sanskrit": {
+        "devanagari": "फ्रिस्टन-व्यवधानम्",
+        "iast": "phrisuṭana-vyavadhānam",
+        "headword_as_in_lexicon": "vyavadhāna (व्यवधान), SLP1 key vyavaDAna. The proper name and the compound are NOT in the lexicon.",
+        "grammar": "n. sg.; tatpuruṣa with a transliterated proper name",
+        "literal_gloss": "the Friston intervening-screen",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. vy-avadhāna -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=vyavaDAna ; retrieved 2026-07-15. Entry reads: “intervening, intervention; obstruction, hiding from view; covering, a cover, screen; separation, division; interruption; interval, space”",
+        "status": "COINED",
+        "derivation": "See MARKOV_BLANKET for vyavadhāna. The proper name Friston is transliterated; Devanagari has no /f/ of its own and the nukta form फ़ is often written plain फ, so even the transliteration is unstable. No lexicon warrant.",
+        "component_provenance": {
+          "vyavadhāna": "CITED (Monier-Williams)",
+          "phrisuṭana": "COINED - transliteration of a proper name, orthographically unstable"
+        }
+      },
+      "latin": {
+        "form": "velamen Fristonianum",
+        "grammar": "n. sg.; velamen, -inis, n. + coined adjective Fristonianum",
+        "literal_gloss": "the Fristonian covering",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. vēlāmen -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=velamen ; retrieved 2026-07-15. Entry reads: “a cover, covering, clothing, robe, garment, veil (poet. and in post-Aug. prose)”",
+        "classical_or_post_classical": "MIXED: velamen CLASSICAL; Fristonianum [POST-CLASSICAL], a coinage of this file, no source.",
+        "status": "COINED",
+        "component_provenance": {
+          "velamen": "CITED (Lewis & Short)",
+          "Fristonianum": "COINED [POST-CLASSICAL], no source"
+        }
+      },
+      "english": {
+        "term": "Friston blanket",
+        "definition": "A blanket read as the metaphysical boundary of a real thing -- the claim that some system out there genuinely has an inside, a surface and an outside -- which requires premises beyond the formalism's mathematical success."
+      },
+      "hindi": {
+        "devanagari": "फ्रिस्टन व्यवधान",
+        "transliteration": "phrisuṭan vyavadhān",
+        "gloss": "the Friston intervening-screen",
+        "citation": "PENDING-CITATION, as for MARKOV_BLANKET: vyavadhān was not retrieved from McGregor. The proper name is a transliteration.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "manta de Friston",
+        "gloss": "the Friston blanket",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "The load-bearing word here is EXPENSIVE, and as with PEARL_BLANKET no register carries it. A Friston blanket is an EMPIRICAL CLAIM: that some system out there genuinely has an inside, a surface and an outside. It requires I(μ;η|b) ≈ 0 in the actual system - a measurement which, per CONDITIONAL_MUTUAL_INFORMATION, has essentially never been made.",
+        "STATED PLAINLY BECAUSE IT MUST BE: this corpus does not assert that anything has a Friston blanket, and UNI is NOT claimed to have one. This entry names a position; it does not take it. A reader who finds these five renderings elegant should notice that elegance is not evidence and that no register here is a warrant for the claim it names.",
+        "The dispute is LIVE. The corpus takes no side beyond insisting the slide be named (see BLANKET_SLIDE). Nothing in this lexicon should be read as adjudicating whether Friston blankets exist; a lexicon cannot settle that and this one does not try.",
+        "The eponym is doubly awkward in the non-Latin registers. Devanagari has no native /f/: the nukta letter फ़ is the standard device and is routinely written as plain फ, so फ्रिस्टन may be read with an aspirated /ph/. The transliteration is unstable and this file does not pretend to have fixed it.",
+        "As with PEARL_BLANKET, the head noun is deliberately identical to its sibling's. The two concepts are structurally the same object and differ ONLY in evidential cost. Identical heads are therefore correct AND are the mechanism by which the cheap term and the expensive one get confused. The confusion has its own name and its own entry."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "any",
+          "wrong": "any rendering that asserts the boundary is real rather than naming the claim that it is",
+          "why_wrong": "This concept NAMES a metaphysical reading; it does not endorse it. A register that renders 'Friston blanket' as, in effect, 'the true boundary of the organism' has converted the naming of a contested position into the assertion of it - inside the entry whose whole purpose is to keep that assertion visible and attributable."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "आवरण (āvaraṇa) for THIS concept specifically",
+          "why_wrong": "Doubly forbidden, and interestingly so. āvaraṇa is forbidden for MARKOV_BLANKET because its concealment sense (Monier-Williams: 'covering, hiding, concealing'; Jain 'mental blindness') smuggles in a hidden reality. Here that smuggled content happens to BE the Friston claim - so āvaraṇa would look almost right. It remains forbidden, because a register must not make a contested empirical claim TRUE BY VOCABULARY. If āvaraṇa were admitted here, the Friston reading would become unfalsifiable in Sanskrit: the word would assert what the measurement is supposed to test."
+        },
+        {
+          "register": "any",
+          "wrong": "translating 'Friston' as a common noun, or dropping the name",
+          "why_wrong": "Same defect as PEARL_BLANKET. Dropping the eponym collapses the expensive claim into the free one - the BLANKET_SLIDE in a single editorial decision."
+        },
+        {
+          "register": "any",
+          "wrong": "'the organism's boundary', 'the true edge of the system', 'where the self ends'",
+          "why_wrong": "All three assert the conclusion. The third additionally installs a self, which MIND forbids for independent reasons."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this expression assert that some system really has an inside and an outside, or does it merely name that assertion? (3) would you expect a measurement to be required before using this expression of a particular animal?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'merely names the assertion'. Any 'asserts' answer is a FAIL: the register has taken a side in a live dispute that this corpus explicitly declines to take, and the term must be reworked. Question (3) is DIAGNOSTIC ONLY and the author predicts 0/3 will say 'yes', because no register carries the evidential cost - which is exactly why BLANKET_SLIDE exists as a separate concept and why the definitions, not the terms, do the work.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "low, for the same reason as PEARL_BLANKET: the head noun is CITED and the concept's content is an evidential cost that no noun carries. Additionally the Sanskrit and Hindi transliterations of the eponym are orthographically unstable (no native /f/), which this file has not resolved.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "BLANKET_SLIDE",
+      "sanskrit": {
+        "devanagari": "व्यवधानस्खलनम्",
+        "iast": "vyavadhāna-skhalanam",
+        "headword_as_in_lexicon": "vyavadhāna (व्यवधान), SLP1 key vyavaDAna; skhalana (स्खलन), SLP1 key sKalana. The compound is NOT in the lexicon.",
+        "grammar": "n. sg.; tatpuruṣa: vyavadhāna (n.) + skhalana (n.)",
+        "literal_gloss": "the blanket-stumble; the slip concerning the intervening screen",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. vy-avadhāna -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=vyavaDAna ; retrieved 2026-07-15. Entry reads: “intervening, intervention; obstruction, hiding from view; covering, a cover, screen; separation, division; interruption; interval, space” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. skhalana -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=sKalana ; retrieved 2026-07-15. Entry reads: “stumbling, tottering, tripping unsteady gait; faltering, stammering (in vāk-skh°); displacement (of a garment); rubbing, friction, touch, contact, collision; discharge, emission (of semen); falling into; being deprived of; mistake, blundering in (comp.)”",
+        "status": "COINED",
+        "derivation": "√skhal ('to stumble, trip') + -ana (kṛt suffix, n. action noun) > skhalana. Monier-Williams carries BOTH the physical sense ('stumbling, tottering') and the intellectual one ('mistake, blundering in'), which is the same double life the English 'slide' has in this concept - a slipping that is also an error. That coincidence is why this coinage works better than most in the file. Both components CITED; compound COINED.",
+        "component_provenance": {
+          "vyavadhāna": "CITED (Monier-Williams)",
+          "skhalana": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "lapsus velaminis",
+        "grammar": "m. sg. + objective genitive; lapsus, -us, m. + velamen, -inis, n. in gen. sg.",
+        "literal_gloss": "the slip of the covering; the blanket's slide",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. lapsus -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=lapsus2 ; retrieved 2026-07-15. Entry reads: “lapsus, ūs, m.: a falling, fall; a slipping, sliding, gliding, running, flowing, flying, flight. Trop.: a failing, error, fault” || Lewis & Short, A Latin Dictionary (1879), s.v. vēlāmen -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=velamen ; retrieved 2026-07-15. Entry reads: “a cover, covering, clothing, robe, garment, veil”",
+        "classical_or_post_classical": "CLASSICAL in both components. Lewis & Short cites lapsus in its literal sense to falling objects, landslides, stars in their courses and serpentine movement, and its Trop. sense to Plautus and Cicero. The PHRASE is this file's construction.",
+        "status": "COINED",
+        "component_provenance": {
+          "lapsus": "CITED (Lewis & Short)",
+          "velamen": "CITED (Lewis & Short)"
+        }
+      },
+      "english": {
+        "term": "the Pearl-to-Friston slide",
+        "definition": "The field's characteristic error of defining a Pearl blanket, which is free, and then quietly concluding one has discovered where the organism ends, which is expensive and requires a measurement nobody made."
+      },
+      "hindi": {
+        "devanagari": "व्यवधान-स्खलन",
+        "transliteration": "vyavadhān-skhalan",
+        "gloss": "the blanket-slip",
+        "citation": "PENDING-CITATION. Neither vyavadhān nor skhalan was retrieved from McGregor by this file, though both are ordinary tatsama borrowings of the CITED Sanskrit forms. Falsifier: query McGregor for vyavadhan and skhalan.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "el desliz de Pearl a Friston",
+        "gloss": "the slip from Pearl to Friston",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term. NOTE: Spanish 'desliz' carries the same slip/moral-lapse doubling as Latin lapsus, which would be an asset here if it could be cited.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "STORE = META. This is the only META-store concept in the file and the routing is load-bearing: BLANKET_SLIDE names a defect in COMMENTARY ABOUT signals, not a signal. It is not a fact about any system. Under SIGNUM SIGNUM MANET the signal and the commentary about it travel separately, and this entry is commentary - it must never be filed, cited or merged as though it were an observation about a blanket.",
+        "Both the Sanskrit and the Latin get a genuine gift here, and it is the only such gift in the file: skhalana and lapsus BOTH carry the physical sense (stumbling, sliding) AND the intellectual sense (mistake, error, fault) in their own attested entries. The English 'slide' does exactly the same double duty. Three registers independently make an error into a slip, so the metaphor survives translation intact rather than being reconstructed. This is a real, checkable convergence, not a poetic one.",
+        "What no register carries is the ASYMMETRY that makes the slide a slide: it runs one way, cheap-to-expensive, because you get the Pearl blanket for free and then find yourself holding a Friston blanket you never paid for. Nothing in skhalana, lapsus or 'slide' says which way the slope runs. Only the definition does.",
+        "skhalana's freight is real and awkward: Monier-Williams also gives 'discharge, emission (of semen)' and 'displacement (of a garment)'. In compound with vyavadhāna - itself a covering-word - vyavadhāna-skhalanam could be read, quite literally and by the lexicon's own senses, as 'the slipping of the garment'. Given that the concept is ABOUT a blanket, this is a live pun and not a remote one. Recorded, unresolved.",
+        "Correct mathematics does not license the metaphysical reading. That sentence is the concept and no register asserts it; the terms name the error without explaining why it is one.",
+        "The corpus takes NO SIDE in the underlying dispute beyond insisting the slide be named. A register that made the slide sound like a proven fallacy would overstate the corpus's position as badly as one that made it sound harmless."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "any",
+          "wrong": "any rendering implying the slide is a fallacy that has been demonstrated",
+          "why_wrong": "Overstates the corpus's position. The corpus insists the slide be NAMED; it does not adjudicate the dispute, which is live. 'Fallacy', 'error proven', 'refuted inference' all take a side this file has no warrant to take."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering implying the slide is merely a verbal or stylistic looseness",
+          "why_wrong": "Understates it in the opposite direction. The slide is the difference between a claim that costs nothing and a claim that requires a measurement nobody made. That is an evidential jump, not a wording preference."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "भ्रम (bhrama) / प्रमाद (pramāda)",
+          "why_wrong": "bhrama is error-as-delusion (and in Vedānta, error about what is real - which is a metaphysical thesis, not a methodological slip); pramāda is negligence or carelessness, which moralises the mistake and implies the field is being sloppy rather than making a specific, principled, expensive inference. NEITHER was retrieved from Monier-Williams by this file; the glosses are the author's and are NOT cited."
+        },
+        {
+          "register": "latin",
+          "wrong": "error / fallacia",
+          "why_wrong": "Both assert that the move IS wrong. lapsus is preferred precisely because it names a slipping without adjudicating - which matches the corpus's actual position. NOT retrieved from Lewis & Short; listed as traps, not cited facts."
+        },
+        {
+          "register": "any",
+          "wrong": "filing this term's referent as an observation about a system",
+          "why_wrong": "Not a lexical error but a store violation, and the cardinal sin: this is META. Merging it with TRUE-store material about actual blankets is exactly the crossing this corpus forbids."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this name a physical slipping, an intellectual mistake, or both? (3) does this expression tell you that the mistake has been proven to be a mistake?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'both'; AND 3/3 answer (3) 'no'. A 'physical only' answer to (2) means the register has lost the error sense and FAILS. A 'yes' to (3) means the register has adjudicated a live dispute and FAILS. This is the one entry in the file where the author predicts (2) will PASS in Sanskrit, Latin and English alike, because all three lexicons independently attest the double sense - and that prediction is falsifiable.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "medium-high for the Sanskrit and Latin - now the highest in the file outright, WORLD having been downgraded to medium by the back-translation adversary 2026-07-15 (this entry was NOT downgraded; the cross-reference is corrected here only so it does not go stale) - and for an unusual reason: both head nouns are CITED and both independently carry the SAME slip/error doubling the English metaphor depends on, so the translation preserves the figure rather than approximating it. The unresolved risk is skhalana's 'displacement of a garment' sense, which is a live pun in a compound with a covering-word.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "INTEROCEPTION",
+      "sanskrit": {
+        "devanagari": "अन्तःप्रवेशावस्थाः",
+        "iast": "antaḥpraveśāvasthāḥ",
+        "headword_as_in_lexicon": "antar (अन्तर्), SLP1 key antar; praveśa (प्रवेश), SLP1 key praveSa; avasthā (अवस्था), SLP1 key avasTA. The compound is NOT in the lexicon.",
+        "grammar": "f. nom. pl.; tatpuruṣa (antar > antaḥ by visarga sandhi before p-)",
+        "literal_gloss": "the inward entry-states; the states that are the way in from within",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. antar -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=antar ; retrieved 2026-07-15. Entry reads: “within, between, amongst, in the middle or interior ... is sometimes compounded with a following word like an adjective, meaning interior, internal, intermediate” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. praveśa -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=praveSa ; retrieved 2026-07-15. Entry reads: “entering, entrance, penetration or intrusion into (loc. gen. with or without antar, or comp.); ... a place of entrance, door” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. ava-sthā -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=avasTA ; retrieved 2026-07-15. Entry reads: “state, condition, situation”",
+        "status": "COINED",
+        "derivation": "antar (CITED, adjectival in compound by the lexicon's own note) + praveśāvasthāḥ (the SENSORY_STATES coinage). Monier-Williams's praveśa entry expressly records the collocation 'with or without antar', so antar + praveśa is a construction the lexicon itself contemplates - though not in this sense. The compound names sensory states whose route in comes from within the same organism. All three components CITED; compound COINED.",
+        "component_provenance": {
+          "antar": "CITED (Monier-Williams)",
+          "praveśa": "CITED (Monier-Williams)",
+          "avasthā": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "interoceptio",
+        "grammar": "f. sg.; interoceptio, -onis, f.",
+        "literal_gloss": "interoception",
+        "citation": "COINED [POST-CLASSICAL]. NOT in Lewis & Short and not retrieved from it, because it cannot be: the English term 'interoception' is a twentieth-century coinage (attributed to C. S. Sherrington, 1906), i.e. it postdates the dictionary and the language's classical period alike. This file therefore does NOT claim a Latin citation. Morphology: inter- (among, within) + capio (to take) + -tio (f. action-noun suffix), on the model of the attested receptio, formed to match the English back-formation rather than to translate anything Latin.",
+        "classical_or_post_classical": "[POST-CLASSICAL] and openly so - a modern scientific Latinism, not a Latin word. Its source is the English, not the corpus of Latin.",
+        "status": "COINED",
+        "note": "This is the cleanest COINED entry in the file precisely because nothing is being pretended: there was no Roman concept of interoception and no amount of searching Lewis & Short would produce one."
+      },
+      "english": {
+        "term": "interoception",
+        "definition": "Sensory channels whose external states are other parts of the same organism, forming a blanket nested inside a blanket, and rendered in M12's engineering clause as hardware signals."
+      },
+      "hindi": {
+        "devanagari": "अंतःप्रवेश अवस्थाएँ",
+        "transliteration": "antaḥpraveś avasthāẹṁ (antaḥpraveś avasthā̃)",
+        "gloss": "inward entry-states",
+        "citation": "R. S. McGregor, The Oxford Hindi-English Dictionary (1993), s.v. आंतरिक āntarik, p. 76 -- Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=antarik&searchhws=yes ; retrieved 2026-07-15. Entry reads: “आंतरिक āntărik [S.], adj. inner, internal.” || avasthā CITED (McGregor). The component praveś was NOT retrieved and is PENDING-CITATION.",
+        "status": "COINED",
+        "component_provenance": {
+          "āntarik": "CITED (McGregor p.76)",
+          "avasthā": "CITED (McGregor)",
+          "praveś": "PENDING-CITATION"
+        }
+      },
+      "spanish": {
+        "term": "interocepción",
+        "gloss": "interoception",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "The fact that makes this concept hard, and that every register fumbles: FROM THE BRAIN'S POSITION, THE VISCERA ARE η. Interoception is not the interior sensing itself; it is a blanket nested inside a blanket, whose external states happen to be other parts of the same organism. The 'inter-' in the English says 'within the body' and therefore points at the WRONG side of the partition - it names the anatomical location of the source, not the topological role, and the topological role is that the source is OUTSIDE the inner blanket. Every register inherits this misdirection from the English.",
+        "The Sanskrit coinage antaḥpraveśāvasthāḥ shares the defect knowingly: antar- says 'inner', which locates rather than types. A register that got this right would have to say something like 'the entry-states whose exterior is the same organism', which no compound in any of these languages will carry.",
+        "M12 renders interoception in its engineering clause as HARDWARE SIGNALS, and that gloss is deliberately deflationary. Nothing here licenses reading interoception as felt bodily experience, as affect, or as the substrate of emotion - a large literature does read it that way, and this corpus does not.",
+        "SCOPE VIOLATION ON RECORD, carried verbatim from the source concept because it is the most useful thing in it: '80% of the vagus is afferent' is a RAT ABDOMINAL measurement in near-universal circulation as a fact about the human vagus, where the cervical figure is ~73-74%. A number quoted outside its scope is a defect EVEN WHEN THE NUMBER IS RIGHT. This is a lexicon entry and cannot fix that, but any register rendering 'interoception' inherits a term whose most-cited quantitative fact is misattributed by scope.",
+        "praveśa's overload (income, tax, zodiac, injection-syringe, obtrusiveness) applies here as much as in SENSORY_STATES. The syringe sense is an especially unfortunate accident in an entry about viscera."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "any",
+          "wrong": "any rendering implying that the viscera are part of the perceiving interior",
+          "why_wrong": "The exact inversion of the concept. From the brain's position the viscera are EXTERNAL states. A rendering that makes interoception 'the inside sensing itself' has dissolved the nested blanket it is supposed to name, and with it the only structure the concept has."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "अन्तःकरण (antaḥkaraṇa)",
+          "why_wrong": "Disastrously attractive: it is literally 'the inner instrument', it is a standing term of art, and Monier-Williams's OWN manas entry defines manas as 'the internal organ or antaḥkaraṇa of perception and cognition'. So the lexicon itself ties antaḥkaraṇa to the mind-as-organ. Using it for interoception would install the whole Sāṃkhya/Vedānta inner-instrument apparatus (manas, buddhi, ahaṃkāra, citta) inside an entry that is supposed to name hardware signals from the gut. The evidence for this warning is the retrieved manas entry, which does carry that definition."
+        },
+        {
+          "register": "any",
+          "wrong": "'gut feeling', 'bodily awareness', 'felt sense', 'the feeling of what happens'",
+          "why_wrong": "All four import phenomenal experience. M12's engineering clause renders interoception as hardware signals; none of these is a hardware signal, and all of them install the experiencer that MIND forbids."
+        },
+        {
+          "register": "latin",
+          "wrong": "sensus internus",
+          "why_wrong": "Doubly wrong: sensus is a faculty-and-feeling word (Lewis & Short: 'the faculty or power of perceiving', and a whole mental section II) so it installs a perceiver; and 'internus' repeats the anatomical-location error, asserting that the sensed thing is inside, when its topological role is to be outside the inner blanket. sensus IS cited; internus was not retrieved."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering asserting the 80%-afferent figure of the human vagus",
+          "why_wrong": "Not a lexical error but the scope violation named above, recorded here because the term drags it along. The figure is rat abdominal; the human cervical figure is ~73-74%."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register term and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) relative to the thing that is doing the sensing, are the organs being sensed inside it or outside it? (3) does this expression imply that the sensing is felt?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'outside'; AND 3/3 answer (3) 'no'. An 'inside' answer to (2) is a FAIL and is the PREDICTED outcome for every register including English, because 'inter-'/'antar-' name the anatomical location and not the topological role. If the prediction holds, the recorded conclusion is that NO register carries this concept and the definition must always travel with the term - not that some better word exists. A 'yes' to (3) is a FAIL: phenomenal experience has been installed where M12 specifies hardware signals.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "low. The Latin is an honest, openly-labelled modern coinage (nothing is pretended). The Sanskrit is built from three CITED components but shares the English term's central defect - it names where the signal comes from rather than which side of the partition it sits on - and the author predicts every register fails the load-bearing question. This is an entry where the definition does all the work and the vocabulary actively misleads.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    },
+    {
+      "concept_id": "BLANKET_NESTING",
+      "sanskrit": {
+        "devanagari": "व्यवधानगर्भता",
+        "iast": "vyavadhāna-garbhatā",
+        "headword_as_in_lexicon": "vyavadhāna (व्यवधान), SLP1 key vyavaDAna; garbha (गर्भ), SLP1 key garBa. The abstract noun in -tā and the compound are NOT in the lexicon.",
+        "grammar": "f. sg.; tatpuruṣa + -tā (f. abstract suffix)",
+        "literal_gloss": "the containedness of screen within screen; screen-within-screen-ness",
+        "citation": "Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. vy-avadhāna -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=vyavaDAna ; retrieved 2026-07-15. Entry reads: “intervening, intervention; obstruction, hiding from view; covering, a cover, screen; separation, division; interruption; interval, space” || Monier-Williams, A Sanskrit-English Dictionary (1899), s.v. garbha -- Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php?key=garBa ; retrieved 2026-07-15. Entry reads: “garbha m. (√grabh = grah, 'to conceive'): the womb, RV.; AV. &c.; the inside, middle, interior of anything, calyx (as of a lotus), MBh.; VarBṛS. &c.; an inner apartment, sleeping-room, L.; any interior chamber, adytum or sanctuary of a temple &c., VarBṛS.; RTL. p. 445; a foetus or embryo, child, brood or offspring (of birds), RV.; AV. &c.; a woman's courses, Viṣṇ.”",
+        "status": "COINED",
+        "derivation": "vyavadhāna (CITED) + garbha (CITED) + -tā (f. abstract suffix). garbha is chosen for its attested sense 'the inside, middle, INTERIOR OF ANYTHING' and 'any interior chamber, adytum or sanctuary of a temple' - i.e. the architectural garbhagṛha, the chamber inside the chamber - rather than for its primary womb sense, which is forbidden here. See ambiguity_notes: this choice is contested by its own lexicon entry. Both components CITED; compound COINED.",
+        "component_provenance": {
+          "vyavadhāna": "CITED (Monier-Williams)",
+          "garbha": "CITED (Monier-Williams)"
+        }
+      },
+      "latin": {
+        "form": "velamina in velaminibus",
+        "grammar": "n. nom. pl. + in + abl. pl.; deliberately a PHRASE, not a compound",
+        "literal_gloss": "coverings within coverings",
+        "citation": "Lewis & Short, A Latin Dictionary (1879), s.v. vēlāmen -- Perseus Digital Library, https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=velamen ; retrieved 2026-07-15. Entry reads: “a cover, covering, clothing, robe, garment, veil (poet. and in post-Aug. prose)”",
+        "classical_or_post_classical": "CLASSICAL in its single lexical component (velamen); the phrase is this file's construction and the recursion is carried by syntax, not by vocabulary.",
+        "status": "COINED",
+        "note": "Rendered as a PHRASE mirroring the corpus's own English wording ('blankets of blankets') rather than with a nesting-noun, and this is a deliberate refusal: see forbidden_mistranslations on nidus. The recursion is structural and the syntax carries it honestly.",
+        "component_provenance": {
+          "velamen": "CITED (Lewis & Short)"
+        }
+      },
+      "english": {
+        "term": "blanket nesting",
+        "definition": "The recursion in which one level's blanket becomes part of the next level's internal states, running organelle to cell to tissue to organ to organism to colony to ecosystem."
+      },
+      "hindi": {
+        "devanagari": "व्यवधान के भीतर व्यवधान",
+        "transliteration": "vyavadhān ke bhītar vyavadhān",
+        "gloss": "screens within screens",
+        "citation": "PENDING-CITATION. Neither vyavadhān nor bhītar was retrieved from McGregor by this file. Falsifier: query McGregor for vyavadhan and bhitar.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "mantas dentro de mantas",
+        "gloss": "blankets within blankets",
+        "citation": "PENDING-CITATION. The admission authority for Spanish (Diccionario de la lengua espanola, Real Academia Espanola, dle.rae.es) returned HTTP 403 to the retrieval agent on 2026-07-15 and was therefore NOT read. The gloss below is the author's unverified candidate and carries no dictionary warrant. A search-engine paraphrase of a DRAE entry was available and was REFUSED as a citation under kitchen-rule M22 (never treat an upstream prior as fresh evidence). Falsifier: open dle.rae.es/<lemma>, read the numbered sense, and either promote this register to CITED or strike the term.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": [
+        "ATTESTATION HONESTY, carried from the source concept and applying to this file's own English: the corpus writes this as 'blankets of blankets' / 'Nesting'. The hyphenated term 'blanket-nesting' appears in 0 FILES of the corpus. The English headword being translated here is therefore itself a lexicon-internal coinage, and the four other registers are translations of a term the corpus does not actually use. Recorded because it would be easy to present this entry as though the English were settled.",
+        "THE DISTINCTION THIS ENTRY EXISTS TO PROTECT: that blankets CAN compose this way is a MATHEMATICAL FACT. That any particular biological hierarchy IS so composed is a SEPARATE EMPIRICAL CLAIM. And the number of nested levels in any named organism is NOT-MEASURED. The concept is a CONSTRUCTION, not an observation. The organelle-cell-tissue-organ-organism-colony-ecosystem ladder is an illustration of a possibility, not a report of a finding - and it reads exactly like a report of a finding, in all five registers.",
+        "garbha is the contested choice in this file and the argument runs both ways. FOR: Monier-Williams attests 'the inside, middle, interior of anything' and 'any interior chamber, adytum or sanctuary of a temple' - the garbhagṛha of a temple is literally a chamber nested inside a larger structure, which is the right image. AGAINST: the entry's FIRST sense is 'the womb', and it also carries 'a foetus or embryo, child, brood or offspring (of birds)' and 'a woman's courses'. The reproductive senses dominate the entry. A reader will hear gestation, and nesting is composition, not reproduction: the inner blanket is not the outer blanket's offspring and is not developing into anything.",
+        "The bird sense of garbha ('brood or offspring OF BIRDS') collides with the English metaphor in a way that looks helpful and is not: English 'nesting' is already a bird metaphor, and a reader may take the convergence as confirmation. It is a coincidence of two unrelated metaphors, and taking it as confirmation would be exactly the kind of false comfort this file is built to refuse.",
+        "The Latin refuses a nesting-noun entirely and uses recursive syntax instead. This is the file's only register that carries recursion by GRAMMAR rather than by LEXICON, and it is the more honest solution for a concept whose content is a structural relation.",
+        "What no register carries: the DIRECTION of the recursion (one level's BLANKET becomes the next level's INTERNAL STATES - a b becomes a μ, which is a type change, not merely a containment). 'Screens within screens' says containment and says nothing about the type change. The definition does."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "register": "latin",
+          "wrong": "nidus / nidificatio",
+          "why_wrong": "The direct calque of English 'nesting' and firmly refused. Lewis & Short gives nidus as 'a nest' (Cic. de Or. 2.6.23; Verg. G. 4.307), with transferred senses 'young birds in a nest', 'a litter of pigs', 'a receptacle or case for books', 'a dwelling, residence, home'. Every one is a CONTAINER OR A HOME - a physical thing that holds another physical thing, with a bird in it. Blanket nesting is a recursive type relation in which one level's blanket becomes the next level's internal states. nidus imports birds, dwellings and litters and conveys no recursion at all. That the English word 'nesting' is itself this metaphor is the defect being repaired here, not a licence to reproduce it in Latin."
+        },
+        {
+          "register": "sanskrit",
+          "wrong": "कुलाय (kulāya)",
+          "why_wrong": "The Sanskrit bird's-nest word - same defect as nidus. NOT retrieved from Monier-Williams by this file; the gloss is the author's and is NOT cited."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering implying the inner level is the outer level's offspring, or is developing/gestating",
+          "why_wrong": "The garbha risk made explicit, and the reason this entry's Sanskrit is only provisionally admitted. Nesting is COMPOSITION. The inner blanket is not born from the outer one, is not growing, and is not becoming anything."
+        },
+        {
+          "register": "any",
+          "wrong": "any rendering implying the biological ladder is an observed hierarchy",
+          "why_wrong": "Not lexical but evidential, and the most consequential error available here. That blankets CAN nest is mathematics; that a given organism's levels DO is an unmade measurement. The number of nested levels in any named organism is NOT-MEASURED."
+        },
+        {
+          "register": "any",
+          "wrong": "'hierarchy', 'levels of organisation', 'emergence'",
+          "why_wrong": "All three are theory-laden imports. 'Hierarchy' adds control and rank, which the relation does not contain; 'levels of organisation' imports a whole biological research programme; 'emergence' asserts a contested thesis the concept does not make. The relation is composition, full stop."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Present the target-register expression and its literal gloss, with NO English term and NO definition, to 3 independent readers competent in that register and naive to this corpus. Ask: (1) render into English; (2) does this describe something being contained in something of the same kind, or something being born from / growing inside something else? (3) does this expression assert that any real organism is built this way?",
+        "pass_criterion": "PASS iff 3/3 answer (2) 'contained in something of the same kind'; AND 3/3 answer (3) 'no'. A gestation/birth answer to (2) is a FAIL and is the PREDICTED failure for the SANSKRIT specifically, since garbha's dominant attested senses are womb, foetus and offspring - if it fails, garbha must be struck and replaced, and this file records in advance that it expects to lose that argument. A 'yes' to (3) is a FAIL in every register: the construction has been read as an observation, which is the evidential error this entry exists to prevent.",
+        "status": "NOT-RUN. No reviewer has been engaged. This test is specified, not passed."
+      },
+      "confidence": "low for the Sanskrit: garbha is CITED and its dominant sense is the womb, so the coinage is admitted provisionally and against its own lexicon entry's centre of gravity; the author's stated prediction is that it fails its own back-translation test. Medium for the Latin, which carries the recursion in syntax rather than vocabulary and refuses the bird metaphor the English is stuck with.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW"
+    }
+  ]
+}

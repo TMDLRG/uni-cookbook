@@ -1,0 +1,1010 @@
+{
+  "schema_version": "1.0.0",
+  "domain_requested_by_task": "gaia-world-build",
+  "domain_status": "NOT-A-REGISTERED-DOMAIN. The string 'gaia-world-build' does not appear in lexicon/CONCEPTS.json: it is absent from domains_registered, and zero of the 130 concept rows carry it. This file therefore CANNOT set a 'domain' field the way lexicon/terms/pomdp-tensors.json does, because doing so would trip the CONCEPTS.json falsifier 'a domain is outside domains_registered'. The requested slug is recorded here verbatim, unaltered, and the concepts actually covered are named separately in domains_covered. See domain_slug_discrepancy.",
+  "domains_covered": [
+    "world-context",
+    "build-objects"
+  ],
+  "source_concepts": "lexicon/CONCEPTS.json",
+  "source_concepts_schema_version": "1.0.0",
+  "concepts_covered": 10,
+  "concepts_in_domains_covered": {
+    "world-context": 3,
+    "build-objects": 7
+  },
+  "authored_utc": "2026-07-15",
+  "corpus_commit_at_authorship": "f1be794",
+  "reviewer": "NONE - PENDING EXPERT REVIEW",
+  "adversarial_citation_audit": {
+    "ran_utc": "2026-07-15",
+    "role": "Back-translation adversary. Task: attack every entry, assuming fabricated citations until shown otherwise. An invented Monier-Williams or Lewis & Short headword is the worst defect this repo could carry, so every quoted entry was independently re-fetched from the named authority rather than read off this file's own text.",
+    "what_was_checked": "Every dictionary quotation in this file, plus every recorded negative, plus the one positive control. 26 checks: MW yantra [845,3], indriya [167,2], bhāva [754], māyā [811], kośa [314], kartṛ [257,3], prāṇin [706], loka [906], parīkṣā [605,3], śālā [1067,2], saṃyoga [1112], pṛthivī [646], krīḍā [321,3]; L&S organum, sensorium, modulator, mundus, Tellus, agens, nexus, officina; L&S negatives organismus / hierarchia / laboratorium / Gaea; LSJ negative hierarchia + the λόγος positive control; DLE organismo.",
+    "result": "25 of 26 reproduced EXACTLY as this file quotes them, including printed page and column numbers, the cited authors, and the verbatim sense-strings the entries' arguments turn on. NO FABRICATED HEADWORD WAS FOUND. NO INVENTED ENTRY WAS FOUND. Specifically reproduced: L&S organum 'an implement, instrument, engine of any kind (mostly post-Aug.)' with Col./Vitr./Quint./Juv./Suet. Ner. 41/Gen. 4,21/2 Chron. 34,12 and 'organum oris, the tongue' (Prud.); L&S sensorium 'the seat or organ of sensation, Boëth. Arist. Top. 8, 5, p. 732' (the entry is that brief and this file quotes it complete); L&S modulator 'one who measures by rule, a director of music, a musician' (Hor. S. 1,3,130; Col. 1 praef. 3); L&S Tellus Personified 'a productive, nourishing divinity', 'Tellus mater' (Liv. 10,29) and 'terra ipsa dea est' (which Perseus locates at Cic. N.D. 3,20,52); MW indriya's 'presided over by its own ruler or niyantf' and 'semen virile'; MW bhāva's 'the seat of the feelings or affections, heart, soul, mind' and the 8-or-9 / 33-or-34 enumeration; MW prāṇin's 'sentient' (the word IS in the entry); MW loka's 'the number seven' (VarBṛS.) and the Lat. lūcus / Lith. laúkas comparison; MW pṛthivī's 'personified as devī' and the bhūmi-inhabited-by-men distinction. All four L&S negatives and the LSJ negative returned 'returned no results' as recorded, and the λόγος positive control returned 1 result, lemma λόγος, short definition 'computation, reckoning', lexica LSJ / Middle Liddell / Slater / Autenrieth -- exactly as this file's positive-control claim states. dle.rae.es returned HTTP 403 on direct fetch, independently reproducing the constraint this file records.",
+    "defects_found": "THREE. None was an invented headword or a fabricated entry; all three were the subtler failures that survive a citation check. (1) A MERGED ATTRIBUTION, in krīḍā -- detail below. (2) AN OVERCLAIMED STATUS: ORGAN's Latin register was graded CITED while ORGAN's Sanskrit register, in the IDENTICAL evidential position (genus attested, concept-sense not carried), was graded COINED. The citation was sound; the grade was not. Downgraded CITED -> COINED per this file's own rule ('finding the headword is not the test -- carrying the sense is'), which it states most sharply under SENSORIUM and had not applied to itself here. THE FILE NOW CONTAINS NO CITED CELL AT ALL, which is the honest position: no dictionary in any of the five registers carries any of these ten concepts' senses. (3) A FALSE COUNT IN THE FILE'S OWN HEADER: what_this_is claimed 'Five of the ten Sanskrit registers and six of the ten Latin registers are consequently COINED or NOT-ATTEMPTED'. Recomputed from the status fields, the true figures were 10/10 Sanskrit and 9/10 Latin before the audit, and 10/10 and 10/10 after the ORGAN downgrade. A header number contradicted by the file's own rows is precisely the class of defect this file was built to catch, and it had it in its own voice. Corrected, with the correction shown rather than the old number silently replaced.",
+    "defect_1_detail": "krīḍā [321,3]: a MERGED ATTRIBUTION rather than an invented entry. The pre-audit text asserted that MW cites the Bhāgavata-purāṇa and the Gīta-govinda for the figurative sense 'working miracles for one's amusement'. MW cites Lalit. (Lalitavistara) for that sense-line. Gīt. and BhP attach to compounds under the ordinary play sense (krīḍā-mudaḥ, Gīt. ix,9; kṛṣṇa-k°, BhP. ii,3,15; jala-k°, MBh./Pañcat./BhP.). The sense-string itself was real and correctly quoted; only the attribution was wrong. Corrected in three places (the krīḍā citation field, the TOY_WORLD ambiguity_note, and the līlā forbidden_mistranslation), and the correction WEAKENS this file's līlā argument, which is why it was made rather than smoothed: the divine-play freight is evidenced by a compound, not by a headword sense-line, and the sense-line the argument leaned on is cited to a Buddhist text that cuts against a Vaiṣṇava reading.",
+    "no_citations_added": "TRUE. The audit removed a false attribution and added none. No entry was upgraded. No status was raised. Every PENDING-CITATION in this file remains PENDING-CITATION, and every un-fetched morpheme (vāda, lusorius, niyamana, stara, niveśa, grahaṇa, sandhi, jīva, ātman, paramparā, rasa, animal, animans, śarīrin, hypothesis, the -ānus formation) remains un-fetched and uncited.",
+    "scope_limits_stated_rather_than_hidden": "This audit re-fetched the SAME authorities through the SAME public interfaces this file names (Cologne MWScan 2020 webtc getword.php; Perseus texts 1999.04.0059 and 1999.04.0057). REPRODUCING A FETCH IS NOT AN EXPERT REVIEW: it shows the quotations are faithful to the dictionaries, and shows NOTHING about whether the renderings are good Sanskrit or good Latin, whether the coinages are well-formed, or whether the doctrinal readings are right. A Sanskritist and a Latinist review remains owed and the reviewer field stays NONE. The DLE check remains at search-summary grade because dle.rae.es still 403s. The audit did not re-derive the negatives against printed supplements, only against the indices as searched.",
+    "back_translation_status_checked": "All ten back_translation_test blocks were checked for the forged-PASS defect this file's own falsifier names. NONE claims a PASS. All ten read 'NOT YET RUN -- no translator engaged.' The falsifier is not tripped."
+  },
+  "what_this_is": "The five-register lexicon file for ten concepts of lexicon/CONCEPTS.json -- the three whose domain is 'world-context' and the seven whose domain is 'build-objects'. Each entry renders ONE concept -- fixed by its definition, never by its English headword -- into Sanskrit, Latin, English, Hindi and Spanish, and records what each rendering gets WRONG alongside what it gets right. NOTHING HERE IS A CLAIM OF PERFECT TRANSLATION. Per rule 18.14 of the operator's charter ('Do not claim perfect translation'), every rendering here is PENDING until an independent back-translation test is RUN, and no test in this file has been run: no translator has been engaged and the reviewer field is NONE for all ten entries. Statuses record what was SEARCHED and FOUND on 2026-07-15 against the named authorities, including the negative results. THE FILE'S CENTRAL FINDING IS A NEGATIVE ONE, and it is structural rather than incidental: this set of concepts is the one where the corpus most explicitly withholds selfhood, sentience, deity and rank -- and the attested vocabulary of BOTH learned registers supplies those very things and little else. Sanskrit's agent-words are person-words and god-words; both registers' earth-words are theonyms; Latin's sensorium is a seat of sensation; Sanskrit's affect-words seat themselves in a heart. ALL TEN Sanskrit registers (nine COINED, one NOT-ATTEMPTED) and ALL TEN Latin registers (ten COINED) are consequently COINED or NOT-ATTEMPTED, and all twenty Hindi and Spanish registers are PENDING-CITATION. NOT ONE CELL IN THIS FILE IS CITED. [COUNT CORRECTED 2026-07-15 BY THE ADVERSARIAL CITATION AUDIT. An earlier draft of this sentence read 'Five of the ten Sanskrit registers and six of the ten Latin registers', which was false against this file's own rows -- the true counts were 10/10 and 9/10 even before the audit, and the Latin became 10/10 when ORGAN's organum was downgraded CITED -> COINED for consistency with yantra and sensorium. A number in the header that the rows contradict is exactly the defect this file exists to catch, arriving in the file's own voice; it is corrected here rather than quietly dropped. The counts above are recomputed from the status fields, not asserted.] That is the honest outcome and it is not a defect of this file. This file raises no UNI rung, discharges no gate, and states no fact about nature.",
+  "domain_slug_discrepancy": {
+    "finding": "OBSERVED, not inferred: the task requested concepts 'whose domain matches gaia-world-build'. No such domain exists. That filter returns the EMPTY SET over all 130 concepts in lexicon/CONCEPTS.json.",
+    "positive_control": "A negative result is a hypothesis until a positive control shows the instrument works (cookbook honesty rail; the ICMP-silence lesson). Control RUN: the identical field read and filter returns 8 distinct domains over the same rows, including 'world-context' -> 3 rows and 'build-objects' -> 7 rows. The instrument works. The empty set for 'gaia-world-build' is a real absence, not a read failure.",
+    "registered_domains_observed": [
+      "active-inference-math",
+      "pomdp-tensors",
+      "markov-blanket",
+      "method",
+      "sovereign-vocabulary",
+      "natura",
+      "world-context",
+      "build-objects"
+    ],
+    "mapping_chosen": "INFERRED, and labelled as inference rather than observation. The slug's three tokens map onto exactly three things that DO exist: 'gaia' -> the concept_id GAIA; 'world' -> the domain world-context (which contains GAIA); 'build' -> the domain build-objects. Those two are also the only two registered domains not yet authored that the tokens name, and their union is 10 concepts -- a viable file. This file authors that union.",
+    "alternatives_rejected": [
+      "Author nothing, on the ground that the requested filter is empty. REJECTED: it discards a well-supported reading and returns no work product, when the union reading accounts for every token in the slug.",
+      "Author world-context only (3 concepts). REJECTED: leaves the token 'build' unexplained.",
+      "Author build-objects only (7 concepts). REJECTED: leaves the tokens 'gaia' and 'world' unexplained.",
+      "Write \"domain\": \"gaia-world-build\" into this file to match the sibling file's shape. REJECTED, and this is the important one: it would fabricate a registered domain, contradict CONCEPTS.json, and trip that file's own falsifier. A file name is not a domain. The slug is recorded as requested and the real domains are recorded as covered."
+    ],
+    "falsifier": "If the orchestrator intended a NEW domain 'gaia-world-build' to be registered in CONCEPTS.json, or intended a different concept set, this file's scope is wrong and must be re-cut. The falsifier is cheap and decisive: read domains_registered in lexicon/CONCEPTS.json. If 'gaia-world-build' is ever added there, this header is superseded and the domain_status field must be struck.",
+    "not_fixed_here": "This file does NOT edit lexicon/CONCEPTS.json to add the domain. Registering a domain is a change to the corpus backbone and is the operator's call, not a side effect of authoring a register file."
+  },
+  "authorities_consulted": {
+    "sanskrit": "Monier-Williams, A Sanskrit-English Dictionary (1899), consulted via the Cologne Digital Sanskrit Dictionaries, https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/getword.php (SLP1 keys), all lookups 2026-07-15. Printed-book page/column references are those returned by the Cologne interface. HEADWORDS ACTUALLY FETCHED THIS SESSION: yantra, kartf (kartṛ), indriya, loka, krIqA (krīḍā), pfTivI (pṛthivī), saMyoga (saṃyoga), koSa (kośa), prARin (prāṇin), BAva (bhāva), SAlA (śālā), parIkzA (parīkṣā), mAyA (māyā). Apte and Boehtlingk-Roth were NOT consulted this session. Any Sanskrit morpheme named in this file that is NOT in the fetched list above carries no dictionary quotation and is marked PENDING-CITATION; its gloss is the author's working gloss and is expressly NOT offered as a Monier-Williams reading.",
+    "latin": "Lewis & Short, A Latin Dictionary, consulted via Perseus, https://www.perseus.tufts.edu/hopper/ (text 1999.04.0059), all lookups 2026-07-15. HEADWORDS ACTUALLY FETCHED THIS SESSION: sensorium, organum, modulator, mundus, Tellus, nexus, agens, officina (the last four returned short definitions from the resolveform results table rather than the full entry page; that reduced evidence grade is recorded in each entry). SEARCHED AND RETURNED NO RESULTS: organismus, hierarchia, laboratorium, Gaea. Whitaker's WORDS and Allen & Greenough were NOT consulted this session. Any Latin lexeme named in this file that is NOT in the fetched or searched lists above is marked PENDING-CITATION.",
+    "greek": "Liddell-Scott-Jones via Perseus (text 1999.04.0057), consulted 2026-07-15 for one question only: whether ἱεραρχία is carried. Searched via resolveform lang=greek, lookup=hierarchia -- returned 'Your search for hierarchia returned no results.' POSITIVE CONTROL RUN in the same session and PASSED: the identical query form with lookup=logos returned 'Your search returned 1 result' and the lemma λόγος (LSJ, Middle Liddell, Slater, Autenrieth; short definition 'computation, reckoning'). Latin-alphabet transliteration therefore DOES resolve against the Greek lemma index, and the hierarchia negative is a real absence from that index rather than an encoding failure. SCOPE LIMIT, stated rather than hidden: this is a negative against Perseus's Greek lemma index as searched, NOT a claim about every printed LSJ supplement. The etymology ἱερός + ἀρχή is therefore recorded PENDING-CITATION throughout this file, never as a quotation.",
+    "hindi": "NO standard published dictionary was successfully consulted this session. A search naming the Commission for Scientific and Technical Terminology (CSTT, cstt.education.gov.in) surfaced the Commission's site but NO glossary entry was fetched from it. The only sources that surfaced were Hindi Wikipedia, Glosbe and educalingo -- an encyclopedia and two aggregators, none of which is a standard published dictionary. Every Hindi register in this file is therefore PENDING-CITATION. No Hindi gloss here is offered as a dictionary reading.",
+    "spanish": "Real Academia Espanola, Diccionario de la lengua espanola (DLE), dle.rae.es. Consistent with the prior session's finding that dle.rae.es returns HTTP 403 to direct fetch, the one DLE entry used here ('organismo') was obtained via search-result summary only and is recorded at that reduced evidence grade. No Spanish entry in this file rests on a full first-party fetch. All Spanish registers are PENDING-CITATION."
+  },
+  "status_vocabulary": {
+    "CITED": "The headword was searched for in the named authority, FOUND, and the entry text is quoted in the citation field, in the sense claimed.",
+    "PENDING-CITATION": "Plausible and possibly standard, but the claimed headword-plus-sense was NOT confirmed against the named authority this session. Carries a falsifier.",
+    "COINED": "No attested term carries this sense. A compound or derivation is proposed and MUST carry its morphological derivation. A coinage is never upgraded to CITED by repetition. INHERITED FROM lexicon/terms/pomdp-tensors.json AND APPLIED THROUGHOUT: a compound of CITED members is COINED, never CITED -- a mixed rendering is graded at the strength of its WEAKEST member, never its strongest.",
+    "NOT-ATTEMPTED": "No rendering offered."
+  },
+  "standing_decisions": [
+    {
+      "id": "SD-01-THEONYM-RETAINED",
+      "applies_to": [
+        "GAIA"
+      ],
+      "decision": "The proper name Gaia is RETAINED, untranslated, in every register. Only the carrier word ('hypothesis', 'doctrine', 'claim') is rendered. No register substitutes its own earth-word.",
+      "grounds": "EVIDENCED, and this is the finding that forces the decision: translating the name cannot remove the deity, it can only change which deity is asserted and hide that one was. MW s.v. pṛthivī [646,1-2] gives the earth 'personified as devī'. L&S s.v. Tellus gives, under Personified, 'Tellus, Earth, as a productive, nourishing divinity', with 'Tellus mater' (Liv. 10, 29) and Cicero's 'terra ipsa dea est' -- the earth itself is a goddess. BOTH learned registers' earth-words are theonyms. CONCEPTS.json already flags this for the English: 'Heavy doctrinal freight: the name is a deity.' A translator who renders GAIA as pṛthivī or Tellus has not neutralised that freight; he has swapped a Greek goddess for a Vedic or Roman one while appearing to have translated a common noun. Retention keeps the freight VISIBLE, which is the whole point of the entry.",
+      "reinforcing_grounds": "The concept is store=META. What it names is not the earth; it is A CLAIM ABOUT the biosphere. The object to be rendered is therefore the claim-name, and a claim-name is a proper name. This is the same reasoning that retains the letters A/B/C/D/E in pomdp-tensors.json SD-01: a label is transliterated or indexed, never translated.",
+      "rejected_alternatives": [
+        "Sanskrit पृथिवी (pṛthivī): REJECTED. MW's own entry personifies it as devī. Asserts a Vedic goddess.",
+        "Latin TELLUS or TERRA: REJECTED. L&S personifies Tellus as a divinity and quotes Cicero that terra itself is a goddess. Asserts a Roman goddess.",
+        "Sanskrit भूमि (bhūmi) as the 'mundane' earth-word: REJECTED for the headword, though it is the least theonymic candidate observed -- MW's pṛthivī entry itself distinguishes an earth 'called bhūmi inhabited by men'. Rejected because bhūmi's own MW entry was NOT fetched this session, so its freight is unmeasured, and because substituting ANY earth-word still renders the wrong object: GAIA names a hypothesis, not a planet."
+      ],
+      "falsifier": "A reader of any register reads GAIA as naming the Earth rather than as naming a contested claim about the biosphere. If that happens the retention has failed and the carrier word must be made heavier (e.g. 'the so-called Gaia hypothesis')."
+    },
+    {
+      "id": "SD-02-LETTER-LABELS-INHERITED",
+      "applies_to": [
+        "Z_MODULATOR"
+      ],
+      "decision": "The Roman letter Z is RETAINED unchanged in every register, as a bare index. This is not a new decision; it is lexicon/terms/pomdp-tensors.json SD-01-LETTER-LABELS applied to the one lettered concept in this file.",
+      "grounds": "The governing note in CONCEPTS.json is written for A/B/C/D/E: 'The letters A/B/C/D/E are conventional labels, not abbreviations; a register must transliterate or index them, never translate them as words.' Z is the same kind of object -- an arbitrary index on a vector -- and the same reasoning binds. Indexing is chosen over transliteration for the same reason SD-01 chose it: every transliteration considered introduced a false assertion. Devanagari ज़ or a letter-order index would assert an ordinal position Z does not have; Latin ULTIMUS ('last') would assert that the modulator is last in some series, which it is in no respect.",
+      "cross_file_note": "Recorded as INHERITED rather than re-derived, so that a future editor who changes SD-01 in pomdp-tensors.json knows this file follows it. If the two ever disagree, they are one policy and the disagreement is the defect.",
+      "falsifier": "A reader of any register file reads Z as ordinal, alphabetical, abbreviational, or as standing for a word (Zustand, zoe, zero). If that happens the policy has failed and the index must be re-cut."
+    },
+    {
+      "id": "SD-03-EARTH-AND-AGENT-GAP-IS-THE-FINDING",
+      "applies_to": [
+        "GAIA",
+        "AGENT",
+        "ORGANISM",
+        "Z_MODULATOR",
+        "SENSORIUM"
+      ],
+      "decision": "Where every attested candidate in a register is disqualified by the concept's own explicit withholding, the register is graded COINED or NOT-ATTEMPTED and the disqualification is recorded as a POSITIVE FINDING about the lexicon -- never papered over by choosing the least-bad attested word.",
+      "grounds": "This file's concepts are the corpus's withholding concepts. AGENT withholds selfhood ('no experiencer, no selfhood, no agency in the moral or intentional sense'). Z_MODULATOR withholds feeling ('affect MODELED, never FELT'). SENSORIUM withholds awareness ('A sensorium is NEVER awareness'). ORGANISM withholds sentience (its definition is a blanket criterion plus a scaling law, not a life-force). GAIA withholds deity. The attested vocabulary supplies precisely what is withheld: MW s.v. kartṛ [257,3] is not merely 'a doer' but 'the creator of the world' and a name of Viṣṇu, Brahman and Śiva; MW s.v. bhāva [754] is 'the seat of the feelings or affections, heart, soul, mind'; MW s.v. indriya [167,2] belongs to Indra and is a faculty whose ruler presides over it; MW s.v. prāṇin [706] is 'a living or SENTIENT being'; L&S s.v. sensorium is 'the seat or organ of SENSATION'; L&S s.v. modulator is 'a director of music, a MUSICIAN' -- a person.",
+      "why_it_matters": "Choosing the least-bad attested word would let each register quietly assert the thing its concept exists to withhold, and the assertion would be invisible precisely because the word is attested and looks scholarly. That is the exact failure CONCEPTS.json names: 'no translation choice may quietly assert a metaphysics.' A coinage that says 'no word for this exists' is honest; an attested word that says 'a god does this' is a pseudopropheta with a page number attached.",
+      "falsifier": "A single attested headword is produced from any named authority that carries the concept's sense WITHOUT the withheld freight. That would refute this standing decision for that concept, and the register must be upgraded from COINED to CITED."
+    },
+    {
+      "id": "SD-04-YANTRA-ASSIGNED-TO-ORGAN-NOT-AGENT",
+      "applies_to": [
+        "AGENT",
+        "ORGAN"
+      ],
+      "decision": "Sanskrit यन्त्र (yantra) is assigned to ORGAN and is NOT used for AGENT. AGENT's Sanskrit register is NOT-ATTEMPTED.",
+      "grounds": "Two concepts, one candidate word, and a rule against merging. Sanskrit's attested agent-words are all disqualified: kartṛ, jīva and ātman are named as forbidden by CONCEPTS.json's own AGENT note, and MW s.v. kartṛ confirms the note understates the problem (it is a name of Viṣṇu). The only surviving candidate is the machine-word yantra. But ORGAN's definition IS 'a named instrument', which is yantra's attested sense verbatim (MW 845,3: 'any instrument or apparatus, mechanical contrivance, engine, machine, implement, appliance'), whereas AGENT's definition is 'a system that holds a generative model and minimizes free energy through a blanket' -- a system, not an implement. Assigning yantra to ORGAN gives it to the concept whose definition the dictionary actually licenses. Using it for BOTH would render two distinct concepts with one term, which is the failure mode CONCEPTS.json fences for GENERATIVE_MODEL/GENERATIVE_PROCESS and which this file's falsifiers extend here.",
+      "consequence_stated_plainly": "This leaves AGENT with no Sanskrit rendering. That is reported as NOT-ATTEMPTED with its reason rather than filled with a compound whose members were not looked up. The gap is the finding: Sanskrit's lexicon offers agent-nouns only as person-nouns, and the concept forbids persons.",
+      "falsifier": "An attested Sanskrit term is produced for a non-personal system that acts -- carrying no doer, no soul, no deity. That refutes this decision and AGENT's Sanskrit must be authored to it."
+    }
+  ],
+  "negative_lexical_findings": [
+    {
+      "searched": "organismus",
+      "authority": "Lewis & Short via Perseus resolveform (type=exact, lang=la), 2026-07-15",
+      "result": "NO ENTRY -- 'Your search for organismus returned no results.'",
+      "consequence": "Latin ORGANISM is COINED. The word is New Latin; L&S does not carry it."
+    },
+    {
+      "searched": "hierarchia",
+      "authority": "Lewis & Short via Perseus resolveform (type=exact, lang=la), 2026-07-15",
+      "result": "NO ENTRY -- 'Your search for hierarchia returned no results.'",
+      "consequence": "Latin HIERARCHY is COINED. The word is post-classical/ecclesiastical and L&S does not carry it."
+    },
+    {
+      "searched": "hierarchia / ἱεραρχία",
+      "authority": "Liddell-Scott-Jones via Perseus resolveform (type=exact, lang=greek), 2026-07-15",
+      "result": "NO ENTRY in the Greek lemma index as searched -- 'Your search for hierarchia returned no results.' POSITIVE CONTROL PASSED in the same session: lookup=logos returned 'Your search returned 1 result' and the lemma λόγος with short definition 'computation, reckoning'. The transliteration lookup works; the absence is real.",
+      "consequence": "The etymology of hierarchia (ἱερός 'sacred' + ἀρχή 'rule') could NOT be quoted from an authority this session and is recorded PENDING-CITATION wherever it appears, never as a quotation. Scope limit: this is a negative against Perseus's Greek lemma index, not against every printed LSJ supplement."
+    },
+    {
+      "searched": "laboratorium",
+      "authority": "Lewis & Short via Perseus resolveform (type=exact, lang=la), 2026-07-15",
+      "result": "NO ENTRY -- 'Your search for laboratorium returned no results.'",
+      "consequence": "Latin LABORATORY is COINED. laboratorium is New/medieval Latin, a regular -torium place-noun on laboro, but not a Lewis & Short lexeme."
+    },
+    {
+      "searched": "Gaea",
+      "authority": "Lewis & Short via Perseus resolveform (type=exact, lang=la), 2026-07-15",
+      "result": "NO ENTRY -- 'Your search for Gaea returned no results.'",
+      "consequence": "Latin has no L&S-lexicalised form of the theonym. Reinforces SD-01: the Latin register retains 'Gaia' as an unlexicalised proper name rather than pretending to a Latin headword. NOTE THE LIMIT: this is a negative for the spelling 'Gaea' only; L&S's own Latin earth-words (Tellus, Terra) WERE found and are theonyms, which is the point."
+    },
+    {
+      "searched": "kartṛ (SLP1 kartf), for AGENT",
+      "authority": "Monier-Williams via Cologne, 2026-07-15",
+      "result": "ENTRY FOUND [MW printed p. 257 col. 3] and it DISQUALIFIES the word. mfn. 'one who makes or does or acts or effects, a doer, maker, agent, author' (RV.; AV.; MBh.; Mn.), but the same entry gives 'one who acts in a religious ceremony, a priest' (ŚBr.), 'the creator of the world' (ŚBr. xiv; Yājñ. iii, 69), and Name of Viṣṇu, Brahman and Śiva (Pañcat.; L.).",
+      "consequence": "A POSITIVE finding of disqualification, not a failure to find. CONCEPTS.json warned that kartṛ 'imports a metaphysics the definition explicitly withholds'; MW shows the import is not a nuance but a deity. See SD-04. Sanskrit AGENT is NOT-ATTEMPTED."
+    },
+    {
+      "searched": "bhāva (SLP1 BAva), for Z_MODULATOR",
+      "authority": "Monier-Williams via Cologne, 2026-07-15",
+      "result": "ENTRY FOUND [MW printed p. 754] and it DISQUALIFIES the word. m. 'any state of mind or body, way of thinking or feeling, sentiment, opinion, disposition'; '(in rhet.) passion, emotion' with 8-9 primary kinds and 33-34 subordinate emotional states; 'the seat of the feelings or affections, heart, soul, mind'; 'love, affection, attachment'.",
+      "consequence": "Decisive against bhāva for the Z vector. 'The seat of the feelings ... heart, soul, mind' asserts a subject who feels, against the corpus's own four-word guard on this concept: affect MODELED, never FELT. The rhetorical sense additionally imports the whole rasa-bhāva dramaturgy. See Z_MODULATOR.forbidden_mistranslations."
+    },
+    {
+      "searched": "indriya, for SENSORIUM",
+      "authority": "Monier-Williams via Cologne, 2026-07-15",
+      "result": "ENTRY FOUND [MW printed p. 167 col. 2] and it DISQUALIFIES the word on three independent counts. mfn. 'fit for or belonging to or agreeable to Indra' (RV.; AV.; VS.) -- a deity is in the etymology. n. senses include 'power, force, the quality which belongs especially to the mighty Indra', 'bodily power, power of the senses', 'virile power', 'semen virile', and 'faculty of sense, sense, organ of sense'. The entry's explanatory note on the five senses and the Hindu philosophical classifications states that each is 'presided over by its own ruler or niyantf' [niyantṛ].",
+      "consequence": "Sanskrit SENSORIUM is COINED. indriya asserts (i) a deity in the word's own etymology, (ii) a presiding ruler per sense, and (iii) 'semen virile' as a live attested sense. The corpus states flatly that a sensorium is NEVER awareness; indriya in the philosophical systems is a faculty OF a witness."
+    },
+    {
+      "searched": "māyā, as a candidate for TOY_WORLD",
+      "authority": "Monier-Williams via Cologne, 2026-07-15",
+      "result": "ENTRY FOUND [MW printed p. 811] and it DISQUALIFIES the word. f. 'illusion, unreality, deception, fraud, trick, sorcery, witchcraft magic' (RV. &c.); 'an unreal or illusory image, phantom, apparition'; '(in phil.) Illusion', identified with Prakṛti in Sāṃkhya and regarded as the source of the visible universe; also duplicity (Buddhist), personified Illusion, Name of Buddha's mother, Name of Lakṣmī.",
+      "consequence": "Decisive, and the most important negative in this file. māyā is the rendering a translator will reach for first and it inverts the concept. See TOY_WORLD.forbidden_mistranslations."
+    },
+    {
+      "searched": "verification that this file's own domain slug exists",
+      "authority": "lexicon/CONCEPTS.json, domains_registered and all 130 concept rows, 2026-07-15",
+      "result": "NO SUCH DOMAIN -- 'gaia-world-build' is absent from domains_registered and from every row. Positive control passed (the same filter returns 3 for world-context and 7 for build-objects).",
+      "consequence": "This file carries no 'domain' field. See domain_slug_discrepancy. Recorded among the lexical negatives because it is the same class of error the file exists to catch: a plausible-looking string that no authority carries."
+    }
+  ],
+  "falsifiers": [
+    "Any register entry marked CITED whose quoted authority does not in fact carry that headword, or does not carry it in the sense claimed. That entry is a pseudopropheta and must be struck to PENDING-CITATION.",
+    "Any COINED entry lacking its morphological derivation.",
+    "Any entry that states or implies that Monier-Williams, Lewis & Short, LSJ or the DLE carries a morpheme that was NOT in this file's fetched-headword lists (see authorities_consulted). Unfetched morphemes carry the author's working gloss, explicitly marked, and are PENDING-CITATION. An invented headword is the single worst defect this file could contain.",
+    "Any back_translation_test reported as PASSED while reviewer remains 'NONE - PENDING EXPERT REVIEW'. No test in this file has been run; a PASS appearing without a named tester is a forgery.",
+    "A register renders AGENT and ORGAN with one term, or ORGAN and SENSORIUM with one term. Both pairs are distinct concepts and both collide on the obvious candidates (yantra for the first pair; 'organ of sensation' for the second). See SD-04.",
+    "Any entry that lets a doctrinal term quietly assert a metaphysics -- rendering AGENT with kartṛ (MW: a name of Viṣṇu), TOY_WORLD with māyā (MW: Illusion identified with Prakṛti, source of the visible universe), HIERARCHY with kośa (the Vedāntic body-sheaths, which place a self at the centre of the nesting), Z_MODULATOR with bhāva (MW: the seat of the feelings, heart, soul, mind), or SENSORIUM with indriya (MW: belonging to Indra, each presided over by its ruler). The ambiguity_notes exist precisely to catch this and are the most load-bearing field in each entry.",
+    "Any entry that weakens TOY_WORLD. CONCEPTS.json marks it as 'the one entry whose weakening would corrupt every other entry in the file', and it travels with the position it must never be softened from: about 2 of 11+ developmental rungs earned, a toy world, never a person. A register that renders it as anything grander has lost the concept and taken the corpus's honesty with it.",
+    "Any entry that reads GAIA's store=META as a verdict on the Gaia hypothesis. It is routing, not a truth claim. CONCEPTS.json holds BOTH 'Gaia is science' and 'Gaia is nonsense' INADMISSIBLE as stated, and a register that resolves that tension in either direction has overwritten the concept.",
+    "A status field holds anything other than one bare token from {CITED, PENDING-CITATION, COINED, NOT-ATTEMPTED}, or a mixed rendering is graded at the strength of its strongest member rather than its weakest. A compound of cited members is COINED, never CITED.",
+    "This file sets a 'domain' field, or otherwise asserts that 'gaia-world-build' is a registered domain of CONCEPTS.json. It is not, and writing it would trip CONCEPTS.json's own domain falsifier."
+  ],
+  "terms": [
+    {
+      "concept_id": "GAIA",
+      "definition_from_concepts_json": "The claim that the biosphere homeostatically regulates the planet, which is HYPOTHESIZED as regulation with a live unanswered unit-of-selection objection, and INADMISSIBLE as the literal claim that the Earth is an organism.",
+      "store": "META",
+      "sanskrit": {
+        "devanagari": "गाया-वाद",
+        "iast": "gāyā-vāda",
+        "headword_as_in_lexicon": "NONE. No Sanskrit headword is claimed. 'Gaia' is retained as a transliterated proper name per SD-01; -vāda is the carrier morpheme and was NOT looked up this session.",
+        "grammar": "m. Tatpuruṣa-shaped compound of a retained foreign proper name with -vāda (m., 'doctrine, thesis, contention'). The proper name is indeclinable as used here.",
+        "literal_gloss": "the Gaia-thesis / the doctrine called Gaia",
+        "morphological_derivation": "गाया (gāyā) = the Greek theonym Γαῖα transliterated, NOT translated, per SD-01. -वाद (vāda) < √vad 'to speak' + -a, the standard doctrine-forming second member of Sanskrit philosophical school-names. WORKING GLOSS, NOT A DICTIONARY READING: vāda was NOT fetched from Monier-Williams this session; its attestation is PENDING-CITATION and no MW sense is quoted for it here. The compound is COINED regardless of vāda's attestation, because a coinage on an untranslated foreign theonym cannot be a Sanskrit lexeme.",
+        "citation": "NO CITATION IS OFFERED OR CLAIMED for this rendering, which is the honest state. The citation that MATTERS here is the one that DEFEATS the alternative: MW s.v. pṛthivī, printed p. 646 col. 1-2, via Cologne, retrieved 2026-07-15, gives 'the earth or wide world (\"the broad and extended One\", personified as devī and often invoked together with the sky' [RV. &c.], and per VP. the daughter of pṛthu. THE EARTH-WORD IS A GODDESS. That is why no Sanskrit earth-word is used. See SD-01.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "HYPOTHESIS GAIANA",
+        "grammar": "hypothesis, -is, f. (Greek loan) + Gaiānus, -a, -um, a denominative adjective on the retained theonym; feminine to agree. The name itself is indeclinable as retained.",
+        "literal_gloss": "the Gaian hypothesis",
+        "morphological_derivation": "A regular Latin -ānus denominative adjective built on a proper name (the pattern of Ciceronianus, Augustanus), applied to a theonym that Latin never lexicalised. WORKING GLOSS, NOT A DICTIONARY READING: neither 'hypothesis' nor the -ānus formation was fetched from Lewis & Short this session; both are PENDING-CITATION. The rendering is COINED.",
+        "citation": "L&S SEARCHED for 'Gaea' via Perseus resolveform (exact, lang=la) 2026-07-15: 'Your search for Gaea returned no results.' NO ENTRY -- Latin has no L&S-lexicalised form of this theonym. The citations that MATTER are the ones defeating the alternatives: L&S s.v. Tellus, retrieved 2026-07-15, headword 'tellūs (-ŭs short), ūris, f.', sense I 'the earth, opp. to the other planets or to the sea, the globe', and under I.C Personified: 'Personified, Tellus, Earth, as a productive, nourishing divinity', with 'Tellus mater' (Liv. 10, 29) and, of terra, 'terra ipsa dea est'. THE LATIN EARTH-WORDS ARE GODDESSES TOO. [Evidence grade reduced: the Tellus entry was read from the entry page; the quoted fragments are as returned.]",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- New Latin. Gaiānus in this sense is a coinage of this file; the Gaia hypothesis is a 20th-century proposal and no Latin lexeme names it. The theonym is Greek and, per the L&S negative above, not lexicalised in Latin at all.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "Gaia (the Gaia hypothesis)",
+        "definition": "The claim that the biosphere homeostatically regulates the planet -- HYPOTHESIZED in its regulation form, which faces a live and unanswered unit-of-selection objection; INADMISSIBLE in its literal form, that the Earth is an organism; and admissible as a heuristic about coupled biotic-abiotic feedback, in which form it names real measurable couplings."
+      },
+      "hindi": {
+        "devanagari": "गाया परिकल्पना",
+        "transliteration": "gāyā parikalpanā",
+        "gloss": "the Gaia hypothesis",
+        "citation": "NO CITATION. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session (see authorities_consulted). परिकल्पना = 'hypothesis' is the author's working gloss and the conventional scientific-Hindi term to the author's knowledge; it is NOT offered as a dictionary reading and no source is quoted for it.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch परिकल्पना from the CSTT glossary or a standard published Hindi dictionary and confirm it carries 'hypothesis' in the scientific sense. If Hindi conventionally renders this as गाया सिद्धांत (siddhānta, 'theory/doctrine'), that is WORSE and must be rejected: siddhānta asserts an established conclusion, and the whole content of this concept is that the claim is NOT established."
+      },
+      "spanish": {
+        "term": "hipótesis Gaia",
+        "gloss": "the Gaia hypothesis",
+        "citation": "NO CITATION. dle.rae.es returns HTTP 403 to direct fetch (confirmed by the prior session's finding and not re-tested for this term); no DLE entry was obtained for 'hipótesis' or for this compound. The rendering is the conventional Spanish name to the author's knowledge and is NOT offered as a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'hipótesis' and confirm the sense. Separately: if Spanish usage prefers 'teoría Gaia', reject it for the same reason as Hindi siddhānta -- 'teoría' overstates the claim's standing, and the concept's content is the claim's contested status."
+      },
+      "ambiguity_notes": [
+        "THE CENTRAL TRAP OF THIS ENTRY, AND IT IS NOT A TRANSLATION PROBLEM AT ALL: the concept is store=META. It does not name the Earth. It names a CLAIM about the biosphere. Every register whose reader takes the term to denote a planet has lost the concept before any dictionary question arises. This is why SD-01 retains the name and renders only the carrier ('hypothesis', 'vāda', 'parikalpanā'): the carrier is the part that must survive, and it is the part translators drop.",
+        "THE DEITY DOES NOT WASH OUT IN TRANSLATION -- IT ONLY CHANGES ITS NAME. This is the file's most useful finding about GAIA and it is evidenced twice over. MW s.v. pṛthivī [646,1-2] personifies the earth 'as devī'. L&S s.v. Tellus gives 'Tellus, Earth, as a productive, nourishing divinity' and quotes Cicero's 'terra ipsa dea est'. CONCEPTS.json flags the English name as carrying 'Heavy doctrinal freight: the name is a deity' -- but a translator who 'solves' that by reaching for pṛthivī or Tellus has swapped a Greek goddess for a Vedic or Roman one and made the swap look like scholarship. The freight is a property of earth-words in these registers, not an accident of one Greek name.",
+        "TWO CLAIMS TRAVEL UNDER ONE NAME AND MUST NOT TRAVEL TOGETHER, per CONCEPTS.json: the atmospheric-disequilibrium OBSERVATION is replicated and independent of the theory; the REGULATION claim has no unit of selection, since there is one Earth with no competing siblings, no reproduction and no inheritance with variation. A register that renders 'Gaia' with a single word invites a reader to accept the observation and receive the regulation claim for free. This is SIGNUM SIGNUM MANET at the lexical level: the signal and the commentary about it travel separately.",
+        "store=META IS ROUTING, NOT A VERDICT. CONCEPTS.json is explicit that the store field 'is NEVER a claim about the concept's truth'. A register must not let META be read as 'debunked'. CONCEPTS.json holds BOTH 'Gaia is science' and 'Gaia is nonsense' INADMISSIBLE as stated, and a rendering that leans either way has overwritten the concept with an opinion.",
+        "The Latin -ānus adjective ('Gaiana') has a specific hazard the Sanskrit compound does not: in Latin, personal-name adjectives of this shape most often name the doctrine OF a named person (Ciceronianus, Epicureus). A reader may take Gaia to be the proposer rather than the subject. The proposer is Lovelock; the name is the deity. Whether that reading actually occurs is exactly what the back-translation test is for.",
+        "'Homeostatically regulates' is the discriminating phrase and it is a technical one. A register that renders it with a word for 'balance', 'harmony' or 'order' (Sanskrit ṛta, Latin concordia) imports a cosmic-order doctrine and converts a testable regulation claim into a metaphysical one -- the precise move the unit-of-selection objection exists to block."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: पृथिवी (pṛthivī), or any earth-word as the headword",
+          "why_wrong": "TWO independent failures. (1) MW [646,1-2] personifies it 'as devī' -- it asserts a goddess, reproducing in Sanskrit the exact freight CONCEPTS.json flags in the English name. (2) Even without the deity it renders the WRONG OBJECT: pṛthivī is the earth; GAIA is a contested claim about the biosphere. A concept in the META store cannot be rendered by the name of the thing the claim is about."
+        },
+        {
+          "rendering": "Latin: TELLUS, TERRA, or TELLUS MATER",
+          "why_wrong": "Same two failures, with Roman receipts. L&S s.v. Tellus gives, Personified, 'Tellus, Earth, as a productive, nourishing divinity', cites 'Tellus mater' (Liv. 10, 29), and records Cicero's 'terra ipsa dea est' -- the earth itself is a goddess. 'Tellus mater' is worse than neutral: it asserts the mother-earth reading, which is the literal Earth-is-an-organism claim that CONCEPTS.json marks INADMISSIBLE."
+        },
+        {
+          "rendering": "Any register: rendering GAIA as 'the Earth', 'the planet', or 'the biosphere'",
+          "why_wrong": "Renders the subject of the claim instead of the claim. Collapses a META-store hypothesis into an object, and silently discharges the unit-of-selection objection by removing the proposition the objection is about."
+        },
+        {
+          "rendering": "Any register: 'Gaia theory' / गाया सिद्धांत / teoría Gaia / THEORIA GAIANA",
+          "why_wrong": "Overstates the claim's standing. The concept's entire content is that the regulation claim is HYPOTHESIZED with a live unanswered objection. 'Theory', siddhānta ('established conclusion') and theoria all assert a settled status the concept withholds. This is the honesty rail at the level of a single morpheme."
+        },
+        {
+          "rendering": "Any register: a word for cosmic order/harmony (Sanskrit ऋत ṛta; Latin CONCORDIA, ORDO MUNDI)",
+          "why_wrong": "Converts a falsifiable regulation claim into a metaphysics of cosmic order, which is unfalsifiable and therefore inadmissible to the True store. It also smuggles back the deity: ṛta is the Vedic cosmic order upheld by gods."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the bare frame 'in a scientific document'. Ask three questions: (1) 'What does this name -- a thing, or a claim about a thing?' (2) 'Is what it names established, contested, or refuted?' (3) 'Does it assert that the Earth is alive?'",
+        "pass_criterion": "PASS iff (1) returns A CLAIM (not the planet, not a goddess), AND (2) returns CONTESTED or NOT ESTABLISHED (neither 'established' nor 'refuted' -- both are INADMISSIBLE per CONCEPTS.json), AND (3) returns NO. All three are required. A back-translation that says 'the Earth' for (1) is a FAIL even if (2) and (3) pass, because the object is wrong. A back-translation that hedges on (2) in either direction is a FAIL, not a partial pass: the contested status IS the concept.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW for the renderings, HIGH for the negative. Both learned registers are coinages on a retained foreign theonym, and the Hindi and Spanish are unsourced. What IS held with confidence, and evidenced from two independent dictionaries, is the finding that forced SD-01: every attested earth-word in both learned registers is a theonym (MW: pṛthivī personified as devī; L&S: Tellus 'a productive, nourishing divinity', 'terra ipsa dea est'), so translation cannot remove this concept's doctrinal freight and must not appear to."
+    },
+    {
+      "concept_id": "LABORATORY",
+      "definition_from_concepts_json": "The bounded setting in which a pre-registered metric and a tuned baseline decide a design, and whose engineering or substrate evidence is never general evidence about the science.",
+      "store": "META",
+      "sanskrit": {
+        "devanagari": "परीक्षाशाला",
+        "iast": "parīkṣā-śālā",
+        "headword_as_in_lexicon": "NONE for the compound. BOTH members are attested independently: MW s.v. parīkṣā [605,3] and MW s.v. śālā [1067,2]. Per the status vocabulary, a compound of cited members is COINED, never CITED.",
+        "grammar": "f. Tatpuruṣa (genitive/locative determinative): parīkṣā (f., 'examination, test') + śālā (f., 'hall, workshop'). Regular compounding, feminine head.",
+        "literal_gloss": "examination-hall / test-house",
+        "morphological_derivation": "parīkṣā < pari- 'around' + √īkṣ 'to see, look' + -ā, i.e. 'a looking-around, inspection'. śālā, an old noun cognate (per MW's own note) with German Saal and English hall. Both members are quoted below from MW. The COMPOUND is the coinage: MW carries no compound in the sense 'the setting in which a pre-registered metric decides a design'.",
+        "citation": "MW s.v. parīkṣā, printed p. 605 col. 3, via Cologne, retrieved 2026-07-15: 'parIkzA f. inspection, investigation, examination, test, trial by ordeal of various kinds (see 2. divya), Mn.; MBh. &c.' -- and NOTE THE SENSE THAT DEFEATS COMPLACENCY: 'trial by ordeal'. MW s.v. śālā, printed p. 1067 col. 2, retrieved 2026-07-15: 'SAlA f. (ifc. also n.) a house, mansion, building, hall, large room, apartment, shed, workshop, stable, AV. &c. &c.'; also 'a large branch (cf. SAKA), L.' and 'a kind of metre (cf. SAlinI)'; MW notes 'cf. Germ. saal; Eng. hall'. These citations license the MEMBERS. They expressly do NOT license the concept's differentia (pre-registration, a tuned baseline, the evidence-scope limit), which is UNI method doctrine and travels in the definition, not in the word.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "LABORATORIUM",
+        "grammar": "laboratorium, -ii, n. A -torium place-noun (the type of auditorium, dormitorium) on the supine stem of laboro.",
+        "literal_gloss": "a place for working / a work-room",
+        "morphological_derivation": "laboro, -are 'to work, labour' -> supine stem laborat- + the place-forming suffix -torium. The FORMATION is regular Latin; the LEXEME is not Latin. Compare the pattern established in pomdp-tensors.json for TENSOR: a sound derivation does not make an attested word.",
+        "citation": "L&S SEARCHED for 'laboratorium' via Perseus resolveform (exact, lang=la) 2026-07-15: 'Your search for laboratorium returned no results.' NO ENTRY. The attested alternative WAS found and is the wrong word: L&S s.v. officina, retrieved 2026-07-15, short definition 'a workshop, manufactory'. [Evidence grade reduced: short definition from the resolveform results table; the full entry page was not read.] officina names a place of MAKING; this concept names a place of DECIDING. See ambiguity_notes.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- medieval/New Latin. The word belongs to alchemical and later scientific Latin, not to the classical corpus; L&S does not carry it (negative quoted above). No primary source for its first attestation was checked this session; that attribution is PENDING-CITATION.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "laboratory",
+        "definition": "The bounded setting in which a pre-registered metric and a tuned baseline decide a design -- and whose engineering or substrate evidence is never general evidence about the science: in-lab results are a toy world's results, and a lab-in-a-box on metal is engineering evidence, not a science gate."
+      },
+      "hindi": {
+        "devanagari": "प्रयोगशाला",
+        "transliteration": "prayogaśālā",
+        "gloss": "laboratory (lit. 'experiment-hall')",
+        "citation": "NO CITATION FROM A DICTIONARY. प्रयोगशाला is, to the author's knowledge, the standard Hindi word for a laboratory, and it is structurally the same Tatpuruṣa as the Sanskrit coinage above with prayoga ('use, application, experiment') in place of parīkṣā. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session (see authorities_consulted), so this is a working gloss and NOT a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch प्रयोगशाला from the CSTT glossary or a standard published Hindi dictionary. Note a live semantic question the citation must settle: prayoga is 'application/use/performance' (it is also the word for a dramatic performance), so प्रयोगशाला may read 'a hall where things are performed or applied' -- a place of DOING, which lands on the same defect as Latin officina and misses 'deciding by a pre-registered metric'."
+      },
+      "spanish": {
+        "term": "laboratorio",
+        "gloss": "laboratory",
+        "citation": "NO CITATION. No DLE entry was fetched for 'laboratorio' this session; dle.rae.es returns HTTP 403 to direct fetch. The rendering is the obvious cognate of the New Latin coinage and is NOT offered as a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'laboratorio'. The citation must be checked for the same defect as the Latin: if the DLE defines it as a place where work/experiments are PERFORMED, it does not carry the concept's differentia (a pre-registered metric deciding a design) and cannot be marked CITED for this concept, only for the ordinary sense."
+      },
+      "ambiguity_notes": [
+        "THE CENTRAL TRAP: every attested candidate in every register names a place by the ACTIVITY done there -- working (laboratorium < laboro), making (officina 'workshop, manufactory'), performing or applying (prayoga) -- and this concept is not about an activity at all. It is about an EVIDENCE SCOPE. Its discriminating content is the second clause: 'whose engineering or substrate evidence is never general evidence about the science.' A laboratory here is defined by what its results may NOT be used to claim. No dictionary word in any of these registers carries that, and a register that renders only 'workroom' has delivered the building and dropped the concept.",
+        "MW s.v. parīkṣā [605,3] carries 'trial by ordeal of various kinds (see 2. divya)' AS AN ATTESTED SENSE, and the collision is exact and instructive rather than merely colourful. A trial by ordeal is a test whose verdict is delivered by divine intervention; a laboratory is a setting whose verdict is delivered by a pre-registered metric and a tuned baseline. These are not two flavours of testing -- they are opposite theories of what settles a question. parīkṣā-śālā risks reading 'the house of ordeals', i.e. the house where a god decides, which is the precise inverse of the concept.",
+        "L&S s.v. officina, 'a workshop, manufactory', names the wrong verb. The corpus's own M9 class-authority ordering turns on exactly this distinction: engineering evidence is not science evidence, and a passing test does not satisfy a criterion demanding a runtime observation. A register that renders LABORATORY as a workshop has, at the level of one noun, asserted the conflation the concept exists to forbid.",
+        "MW s.v. śālā [1067,2] gives 'shed' and 'stable' alongside 'hall' and 'workshop'. The register is not elevated; the same word houses cattle. That is not a reason to reject it -- English 'laboratory' is etymologically just a work-room -- but a translator should not imagine the Sanskrit compound sounds technical. It does not.",
+        "'Bounded' in the definition is doing quiet work and no register's word carries it. The setting is bounded, which is why its evidence does not generalise. A rendering that suggests a grand institution (Spanish 'laboratorio nacional', a CSTT-register Hindi formality) inflates the boundedness away, and boundedness is the premise of the evidence-scope limit.",
+        "Store=META, and the reason is worth stating for translators: a laboratory is not a falsifiable object, it is the SETTING in which falsification is arranged. A register that makes it sound like a piece of apparatus (i.e. drifts it toward ORGAN or yantra) has moved it out of its store."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin: OFFICINA",
+          "why_wrong": "L&S: 'a workshop, manufactory'. Names a place of manufacture. The concept names a place of adjudication whose engineering evidence is expressly NOT science evidence -- so rendering it with the word for a workshop asserts, in one noun, the exact conflation (engineering evidence read as general evidence) that the definition's second clause forbids. Attested, scholarly-looking, and wrong."
+        },
+        {
+          "rendering": "Sanskrit: any compound in -divya, or parīkṣā read as ordeal",
+          "why_wrong": "MW s.v. parīkṣā points to '2. divya' for the ordeal sense. An ordeal is adjudicated by divine intervention; a laboratory is adjudicated by a pre-registered metric against a tuned baseline. Using the ordeal sense asserts that the verdict comes from outside the procedure, which inverts the concept and re-imports a deity into a META-store method term."
+        },
+        {
+          "rendering": "Any register: a word meaning 'proving ground' / 'place where truth is found' (Latin: LOCUS VERITATIS)",
+          "why_wrong": "Asserts that what happens in the setting yields truth in general. The concept says the opposite in its own second clause: in-lab results are a toy world's results and never general evidence about the science. This rendering discharges an evidence gate with a noun."
+        },
+        {
+          "rendering": "Any register: 'the lab' as an institution or team (Spanish 'el laboratorio' = the research group; Hindi प्रयोगशाला as a department)",
+          "why_wrong": "Shifts the referent from a bounded evidential setting to a body of people. Note the parallel defect evidenced under ORGANISM: Spanish 'organismo' sense 4 is likewise an institution. Spanish is structurally prone to this slide and both entries must be read together."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a document about scientific evidence'. Ask: (1) 'What is this place for?' (2) 'If something works here, what may you conclude about the world outside it?'",
+        "pass_criterion": "PASS iff (2) returns a LIMIT -- that in-here results do not by themselves license out-there claims. Question (2) is the whole test; (1) is a warm-up. A back-translation that answers (1) fluently ('a place for experiments, a workshop') and answers (2) with 'that it works' or 'that the finding is true' is a FAIL, because the evidence-scope limit is the concept's discriminating property and a rendering that transmits only the room has lost it.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. The Latin is a New Latin coinage its own dictionary does not carry (L&S negative quoted); the Sanskrit is a coinage whose members are cited but whose head-sense carries an attested 'trial by ordeal' that actively fights the concept; Hindi and Spanish are unsourced. Held with more confidence: the structural finding that every candidate names the setting by its ACTIVITY while the concept is defined by its EVIDENCE SCOPE, so no register currently renders the discriminating clause at all."
+    },
+    {
+      "concept_id": "TOY_WORLD",
+      "definition_from_concepts_json": "The honest scope of this whole program: a developmental active-inference SIMULATION, a bounded peek, a toy world, and never a person.",
+      "store": "META",
+      "sanskrit": {
+        "devanagari": "क्रीडालोक",
+        "iast": "krīḍā-loka",
+        "headword_as_in_lexicon": "NONE for the compound. BOTH members are attested independently: MW s.v. krīḍā [321,3] and MW s.v. loka [906]. A compound of cited members is COINED, never CITED.",
+        "grammar": "m. Tatpuruṣa: krīḍā (f., 'sport, play') + loka (m., 'world'). Masculine head (loka).",
+        "literal_gloss": "play-world / world-of-sport",
+        "morphological_derivation": "krīḍā < √krīḍ 'to play, sport' + -ā. loka, an old noun for open space and thence world. Both members are quoted below from MW. The COMPOUND is the coinage: MW carries no compound in the sense 'a bounded developmental simulation that is honestly not a person'. NOTE: this coinage is offered WITH a live objection against it, recorded in ambiguity_notes, which the back-translation test is designed to decide.",
+        "citation": "MW s.v. krīḍā, printed p. 321 col. 3, via Cologne, retrieved 2026-07-15: 'krīḍā f. sport, play, pastime, amusement, amorous sport', with figurative senses including 'working miracles for one's amusement', 'disrespect shown by jest or joke', 'a play-ground', and '(in music) a kind of measure'. PER-SENSE ATTRIBUTION, CORRECTED 2026-07-15 BY ADVERSARIAL RE-FETCH AND RECORDED RATHER THAN SMOOTHED: the citations do NOT attach to the sense-lines the way an earlier draft of this entry asserted. The primary sense 'sport, play, pastime, amusement' is cited to VS. xviii, 5, then 'R.; Suśr. &c.' The figurative senses 'working miracles for one's amusement' and 'disrespect shown by jest or joke' are cited to Lalit. (Lalitavistara) -- NOT to BhP or Gīta-govinda. Gīt. and BhP attach to COMPOUNDS listed under the ordinary play sense, not to any headword sense-line: 'krīḍā-mudaḥ f. pl. the pleasures of playing or of amorous sport' (Gīt. ix, 9); 'kṛṣṇa-k°, sport with Kṛṣṇa' (BhP. ii, 3, 15); 'jala-k°, playing about in water' (MBh.; Pañcat.; BhP.). SIGNUM SIGNUM MANET: the signal and its attribution travel separately, and merging them was the defect. MW s.v. loka, printed p. 906, retrieved 2026-07-15: m. 'free or open space, room, place, scope, free motion' (RV., AV., Br., ĀśvŚr.); 'the wide space or world -- either the universe or divisions thereof, commonly enumerated as 3, 7, or 14 worlds'; 'the earth or world of human beings' (Mn.; MBh.); 'the inhabitants of the world; mankind; folk; people'; 'men as opposed to women'; 'ordinary life, worldly affairs, common practice or usage'; 'the number seven' (VarBṛS., Sch.); 'the faculty of seeing, sight (only in cakṣur-l°)'; MW notes etymological connections to Latin lūcus and Lithuanian laúkas. These license the MEMBERS only.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "MUNDUS LUSORIUS",
+        "grammar": "mundus, -i, m. + lusorius, -a, -um, adj., agreeing.",
+        "literal_gloss": "a world for play / a playing-world",
+        "morphological_derivation": "mundus (m.) is attested and quoted below. lusorius < ludo, lusi, lusum 'to play' + the -orius adjectival suffix ('serving for, pertaining to'), the regular type of e.g. accusatorius. WORKING GLOSS, NOT A DICTIONARY READING: lusorius was NOT fetched from Lewis & Short this session; its attestation is PENDING-CITATION and no L&S sense is quoted for it here. The rendering is COINED, graded at its weakest member per the status vocabulary.",
+        "citation": "L&S s.v. mundus (the noun), via Perseus, retrieved 2026-07-15. Headword 'mundus, i, m.' Sense I is NOT the world: 'Toilet ornaments/dress' of women -- 'mundus muliebris est, quo mulier mundior fit' (Dig. 34, 2, 25). Sense II.A, an implement (ante- and post-classical). Sense II.B is the one claimed: the universe/world, esp. the heavens and celestial bodies -- 'ut hunc hac varietate distinctum bene Graeci κόσμον, nos lucentem mundum nominaremus' (Cic. Univ. 10); 'concussit micantia sidera mundus' (Cat. 64, 206). Transferred senses include the earth and mankind (Luc. 5, 469), the sky/weather (post-classical), the sun (Manilius only), the Lower World, and in Ecclesiastical Latin 'the world' opposed to the church, the realm of sin vs Christ's kingdom (Vulg. John). [Evidence grade: entry page read; senses as returned, lightly abridged.] This licenses mundus = world; it licenses nothing about lusorius and nothing about the concept's honesty-of-scope content.",
+        "classical_or_post_classical": "mundus: CLASSICAL in the claimed sense (Cic. Univ. 10; Cat. 64, 206). lusorius: PENDING-CITATION -- not looked up this session; believed post-Augustan/legal Latin but NO source was checked and no claim is made. The COMPOUND is [POST-CLASSICAL] and is this file's coinage.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "toy world",
+        "definition": "The honest scope of this whole program: a developmental active-inference SIMULATION, a bounded peek, a toy world, and never a person -- printed plainly and never softened, and travelling with the position it belongs to, that about 2 of 11+ developmental rungs are earned."
+      },
+      "hindi": {
+        "devanagari": "खिलौना-जगत्",
+        "transliteration": "khilaunā-jagat",
+        "gloss": "toy-world",
+        "citation": "NO CITATION. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session. खिलौना ('toy') and जगत् ('world') are the author's working glosses, NOT dictionary readings, and the compound is the author's construction.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch खिलौना and जगत् from a standard published Hindi dictionary. A live risk the citation must address: जगत् is a heavily Sanskritic word for the world/cosmos that in Hindi religious registers carries the same illusion-doctrine freight as माया; if so, prefer a plainer word. Test the compound for the diminutive-cuteness problem noted in ambiguity_notes."
+      },
+      "spanish": {
+        "term": "mundo de juguete",
+        "gloss": "toy world",
+        "citation": "NO CITATION. No DLE entry was fetched for 'juguete' or 'mundo' this session; dle.rae.es returns HTTP 403 to direct fetch. Working gloss only, NOT a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain DLE entries for 'mundo' and 'juguete'. Check specifically whether 'de juguete' in Spanish idiom means 'flimsy/not serious' rather than 'deliberately bounded' -- if it connotes shoddiness, it mis-renders the concept, which is about honest scope and not about poor quality."
+      },
+      "ambiguity_notes": [
+        "THIS IS THE ONE ENTRY WHOSE WEAKENING CORRUPTS EVERY OTHER ENTRY IN THE FILE. CONCEPTS.json says so directly. Its content is not a description of a system; it is a REFUSAL to overclaim about a system. It travels with a number that must not move -- about 2 of 11+ developmental rungs earned -- and CONCEPTS.json adds: 'If any chapter appears to move that number, the chapter is the defect.' The same rule binds a register: if a rendering appears to move that number, the rendering is the defect.",
+        "THE CENTRAL TRAP, AND IT IS AN INVERSION RATHER THAN A NEAR-MISS: the concept says THIS MODEL is a toy. The tempting Sanskrit rendering (māyā) says THE WORLD is a toy. Those are opposite claims. One is an act of scientific modesty about an artefact; the other is a metaphysical thesis about reality. See forbidden_mistranslations -- this is the most important single line in this file.",
+        "krīḍā CARRIES A THEOLOGY, AND MW SHOWS IT -- BUT NOT WHERE AN EARLIER DRAFT OF THIS NOTE SAID IT DID. THE ATTRIBUTION IS CORRECTED HERE AND THE CORRECTION WEAKENS THE NOTE, WHICH IS WHY IT IS MADE. The earlier draft claimed the figurative sense 'working miracles for one's amusement' is cited to the Bhāgavata-purāṇa and the Gīta-govinda. IT IS NOT: on re-fetch (Cologne, 2026-07-15) that sense-line is cited to Lalit. (Lalitavistara) -- a BUDDHIST text, which cuts AGAINST a Vaiṣṇava-līlā reading rather than for it. What DOES evidence the divine-play freight is a different and weaker part of the entry: the COMPOUND 'kṛṣṇa-k°, sport with Kṛṣṇa' (BhP. ii, 3, 15), listed under the ordinary play sense. So the freight is real but it is carried by a compound, not by a sense of the headword, and the hazard is correspondingly smaller than the earlier draft asserted. THE RESIDUAL HAZARD, STATED AT ITS TRUE SIZE: a translator who renders 'toy world' as krīḍā-loka in a devotional-literate register may still be heard to say that the world is God's playground, because kṛṣṇa-krīḍā is in the entry and līlā is in the reader. The concept makes no claim about the cosmos whatsoever; it makes a claim about a simulation's scope. THE DOCTRINE IS NOT QUOTED FROM MW AS SUCH -- MW gives senses and compounds, not schools -- and the līlā attribution remains the author's reading, PENDING-CITATION.",
+        "krīḍā's first sense-line also gives 'amorous sport'. In a corpus already fencing bhāva, rasa and saṃyoga for erotic freight, this is a live register hazard rather than a curiosity: krīḍā-loka can be heard as a pleasure-world. Nothing in the concept is about pleasure.",
+        "A NUMERAL COLLISION WORTH ONE LINE, because Sanskrit really does this: MW s.v. loka [906] gives 'the number seven' as an attested sense (VarBṛS., Sch.) -- the bhūtasaṃkhyā word-numeral system. This corpus's SENSORIUM is 'kept at seven'. A Sanskrit sentence placing loka near a modality count is therefore ambiguous in a way no other register is, and could be read as asserting the seven. Low probability, exactly specifiable, and cheap to avoid.",
+        "loka's world-sense arrives WITH A COSMOLOGY: MW gives 'either the universe or divisions thereof, commonly enumerated as 3, 7, or 14 worlds'. A loka is characteristically ONE OF A GRADED SERIES of worlds. That is not neutral for this concept, and it cuts BOTH ways: it usefully suggests boundedness (a loka is a region, not the whole), and it dangerously suggests a Puranic cosmography of stacked worlds. The usefulness is real and is why the coinage is offered rather than abandoned.",
+        "LATIN mundus HAS TWO SENSES THAT WILL AMBUSH A READER, and both are in L&S. Sense I is women's toilet ornaments and dress ('mundus muliebris est, quo mulier mundior fit') -- the noun is a homonym of the adjective mundus 'clean, elegant'. And the Ecclesiastical sense is 'the world' opposed to the church, the realm of sin against Christ's kingdom. So MUNDUS LUSORIUS can be heard, by a reader formed on the Vulgate, as 'the playground of the sinful world'. The concept is a statement of evidential scope and has no moral content at all.",
+        "'And never a person' is the clause with no lexical home in any register here, and it is the clause the whole corpus rests on. It is a negation, and negations do not survive nominalisation: no noun in any of these five registers means 'this is not a person'. Every rendering in this entry therefore transmits at best the 'toy' and the 'world' and drops the refusal. That is a defect of the RENDERINGS, not of the concept, and it is why the back-translation test below asks the person-question directly and treats silence as a FAIL."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: माया (māyā)",
+          "why_wrong": "THE WORST AVAILABLE RENDERING, AND THE ONE A GOOD TRANSLATOR WILL REACH FOR FIRST -- 'toy world' sounds like 'illusion', and māyā is the famous word for illusion. It fails on three independent counts, all evidenced from MW s.v. māyā [811], retrieved 2026-07-15. (1) IT ASSERTS DECEPTION: MW gives 'illusion, unreality, deception, fraud, trick, sorcery, witchcraft magic' (RV. &c.). A simulation that is loudly and repeatedly labelled a simulation deceives no one; TOY_WORLD is the corpus's act of honesty, and rendering it 'fraud' converts the honesty into the crime it exists to prevent. (2) IT INVERTS THE SUBJECT: MW gives '(in phil.) Illusion', identified with Prakṛti in Sāṃkhya and 'regarded as source of the visible universe'. That is a claim that THE WORLD is unreal. The concept claims that THIS MODEL is a toy. To render one with the other is to swap a modest claim about an artefact for a metaphysical claim about reality -- precisely the 'quietly assert a metaphysics' failure CONCEPTS.json names. (3) IT IMPORTS A SCHOOL: the word cannot be used in a philosophical text without invoking Advaita/Sāṃkhya doctrine, and MW's entry also carries 'Name of Buddha's mother' and 'Name of Lakṣmī'. A metaphysics smuggled in on the single most apt-sounding word in the language is the exact defect this file exists to catch."
+        },
+        {
+          "rendering": "Any register: 'model', 'prototype', 'proof of concept' (Latin: EXEMPLAR, SPECIMEN)",
+          "why_wrong": "Every one of these is a word of PROMISE -- a prototype is a thing on its way to being the real thing, and a proof of concept asserts that the concept is proved. The concept asserts the opposite: a bounded peek, about 2 of 11+ rungs earned, and never a person. These renderings soften the scope, which CONCEPTS.json forbids in this exact entry ('printed plainly and never softened')."
+        },
+        {
+          "rendering": "Any register: 'virtual world', 'simulation' alone (Spanish: 'mundo virtual'; Latin: MUNDUS VIRTUALIS)",
+          "why_wrong": "Renders the technology and drops the honesty. 'Simulation' is in the definition, but the definition's work is done by 'bounded peek' and 'never a person'. A reader of 'virtual world' learns what the thing is made of and learns nothing about what may not be claimed for it. Additionally MUNDUS VIRTUALIS is a false friend: Latin virtus is manly excellence/power, so virtualis would be heard as 'potent', asserting capability -- the opposite of a bounded peek."
+        },
+        {
+          "rendering": "Sanskrit: लीला (līlā), or krīḍā read in its 'working miracles for one's amusement' sense",
+          "why_wrong": "Asserts divine play -- the cosmos as a deity's sport. The concept names an engineering artefact's scope. This rendering hands it a theology and a god to go with it. ATTRIBUTION CORRECTED 2026-07-15 AND THE GROUND NARROWED ACCORDINGLY: an earlier draft said MW s.v. krīḍā carries the 'working miracles for one's amusement' sense AND cites the Bhāgavata-purāṇa for it. MW does not. That sense-line is cited to Lalit. (Lalitavistara), a Buddhist text. The BhP citation in the entry sits on the COMPOUND 'kṛṣṇa-k°, sport with Kṛṣṇa' (BhP. ii, 3, 15) under the ordinary play sense. The prohibition on līlā STANDS -- līlā is the divine-play doctrine's proper term and asserts it directly, independently of what MW cites where -- but the krīḍā half of the argument rests on a compound, not a sense-line, and is stated at that reduced strength. (The līlā doctrinal attribution is the author's reading, PENDING-CITATION; MW's sense-lines and compounds as re-fetched are not.)"
+        },
+        {
+          "rendering": "Any register: any rendering that drops 'and never a person'",
+          "why_wrong": "Not a mistranslation of a word but the characteristic FAILURE MODE of this entry, and it is why it is listed here. The clause is a refusal, no register has a noun for it, and it is the clause on which the corpus's honesty rests. A rendering that transmits 'toy world' and leaves the person-question open has not partially succeeded; it has failed the only test that matters, because a reader who wonders whether it might be a person has received the opposite of what the concept says."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'this phrase describes a research program's own scope'. Ask three questions: (1) 'What is being called a toy/play-thing -- the program's model, or the real world?' (2) 'Is this phrase boasting or disclaiming?' (3) 'Does this phrase tell you whether the thing is a person?'",
+        "pass_criterion": "PASS iff (1) returns THE PROGRAM'S MODEL (a back-translation returning 'the real world' is the māyā inversion and is a hard FAIL), AND (2) returns DISCLAIMING, AND (3) returns 'yes -- it says it is not a person'. Question (3) is expected to FAIL for every rendering currently in this entry, and that expected failure is PRE-REGISTERED here rather than discovered and explained away later: no register offered has a noun carrying the refusal. If (3) fails while (1) and (2) pass, the finding is that the concept requires a CLAUSE and not a term in that register, and the entry must be re-cut as a sentence.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW for every rendering, and the entry says why rather than hedging: both learned registers are coinages, the Latin's modifier was not looked up, Hindi and Spanish are unsourced, and -- the honest part -- NO rendering in any register carries 'and never a person', which is the clause the concept exists for. Held with confidence, and evidenced: māyā is decisively wrong, on MW's own 'deception, fraud' and on its identification of Illusion with Prakṛti as source of the visible universe. That negative is the most valuable thing in this entry."
+    },
+    {
+      "concept_id": "AGENT",
+      "definition_from_concepts_json": "A system that holds a generative model and minimizes free energy through a blanket, concerning which nothing further is implied: a system that minimizes F is a system that minimizes F.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "NONE OFFERED. This is a deliberate NOT-ATTEMPTED under SD-04, not an oversight and not a failed search. See status and morphological_derivation.",
+        "grammar": "n/a",
+        "literal_gloss": "n/a",
+        "morphological_derivation": "NO COINAGE IS OFFERED, and the reason is the finding. Sanskrit's attested agent-nouns are PERSON-nouns, and this concept's defining move is to withhold personhood. The three obvious candidates are named as forbidden by CONCEPTS.json itself (kartṛ, jīva, ātman), and the lookup run this session shows the warning understates the problem: MW s.v. kartṛ [257,3] is not merely 'a doer, maker, agent' but also 'the creator of the world' and a Name of Viṣṇu, Brahman and Śiva. The one surviving non-personal candidate, yantra, is assigned to ORGAN by SD-04, because ORGAN's definition IS 'a named instrument' -- yantra's attested sense verbatim -- while AGENT's is 'a system', which yantra does not mean. Rendering both with yantra would merge two distinct concepts under one term, which this file's falsifiers forbid. A fresh compound was considered and REJECTED: every candidate the author could construct required members not looked up this session, and a coinage whose morphology rests on unverified glosses is exactly the pseudopropheta risk the corpus's rails exist to stop. NOT-ATTEMPTED is the honest state and it is reported as a finding rather than filled in.",
+        "citation": "The citation that matters here is the DISQUALIFYING one. MW s.v. kartṛ, printed p. 257 col. 3, via Cologne, retrieved 2026-07-15: mfn. 'one who makes or does or acts or effects, a doer, maker, agent, author' (RV.; AV.; MBh.; Mn.); 'one who acts in a religious ceremony, a priest' (ŚBr.; ĀśvGṛ.); 'the creator of the world' (ŚBr. xiv; Yājñ. iii, 69); Name of Viṣṇu, Brahman and Śiva (Pañcat.; L.); and in grammar 'the agent of an action ... the active noun, the subject of a sentence' (Pāṇ.). NOTE WHAT THIS ENTRY DOES: it does not merely fail to license the concept, it licenses a deity. jīva and ātman were NOT fetched this session; they are forbidden here on CONCEPTS.json's own authority, not on a dictionary reading, and their MW entries remain PENDING-CITATION.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "AGENS",
+        "grammar": "agens, -entis (present participle of ago, used substantively, m./n. as required). Substantival use of a participle is regular Latin.",
+        "literal_gloss": "the one acting / the acting thing",
+        "morphological_derivation": "ago, agere 'to drive, lead, do, act' -> present participle agens. The MORPHEME is attested (L&S short definition quoted below); the SENSE claimed here -- 'a system that holds a generative model and minimizes free energy through a blanket' -- is carried by no Latin lexeme and is the coinage. This is the same grading pattern pomdp-tensors.json applied to pradiśa: the authority carries the morpheme, expressly not the sense.",
+        "citation": "L&S s.v. agens, via Perseus resolveform, retrieved 2026-07-15, short definition: 'effective, powerful'. [Evidence grade reduced: short definition from the resolveform results table; the full entry page was NOT read this session, so L&S's full sense-range for agens is PENDING-CITATION.] THE ENTRY AS RETRIEVED CARRIES NO SENSE RESEMBLING THIS CONCEPT, and the sense it does carry -- 'effective, powerful' -- is an over-claim (see ambiguity_notes). The citation is offered for the morpheme ONLY and expressly does NOT license the sense.",
+        "classical_or_post_classical": "The participle agens is CLASSICAL. Its use as a technical substantive for 'an agent' is scholastic (causa agens, the efficient cause) and later; that attribution is PENDING-CITATION, no primary source checked this session. As a term for a free-energy-minimizing system it is [POST-CLASSICAL] and this file's coinage.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "agent",
+        "definition": "A system that holds a generative model and minimizes free energy through a Markov blanket -- concerning which nothing further is implied: no experiencer, no selfhood, no agency in the moral or intentional sense. A system that minimizes F is a system that minimizes F, and the same formalism admits a Newton's cradle and a burning fuse."
+      },
+      "hindi": {
+        "devanagari": "अभिकर्ता",
+        "transliteration": "abhikartā",
+        "gloss": "agent",
+        "citation": "NO CITATION FROM A DICTIONARY. अभिकर्ता is, to the author's knowledge, the standard scientific/administrative Hindi rendering of English 'agent'. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session. Working gloss only.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch अभिकर्ता from the CSTT glossary or a standard published Hindi dictionary. NOTE A DEFECT THE CITATION CANNOT CURE, recorded here because it is the interesting part: अभिकर्ता is built on the very root this concept forbids -- abhi- + kartṛ. The standard Hindi term therefore reintroduces, through the back door, the doer-and-creator freight that MW s.v. kartṛ documents and that SD-04 excludes from the Sanskrit register. If the citation confirms अभिकर्ता is standard, the honest consequence is NOT that the Sanskrit should be relaxed to kartṛ; it is that HINDI HAS THE SAME PROBLEM AND CANNOT ESCAPE IT EITHER, and the entry must say so."
+      },
+      "spanish": {
+        "term": "agente",
+        "gloss": "agent",
+        "citation": "NO CITATION. No DLE entry was fetched for 'agente' this session; dle.rae.es returns HTTP 403 to direct fetch. Working gloss only, NOT a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'agente'. Check specifically for the person-senses (an agent as a representative, a police agent, a commercial agent) and for the chemical/physical sense ('agente químico'), which is the ONLY sense-family that does not presuppose a person. If the DLE's person-senses dominate, the Spanish carries the same defect as the Hindi and must be flagged rather than marked CITED."
+      },
+      "ambiguity_notes": [
+        "THE CENTRAL TRAP: this concept is a WITHHOLDING, and withholdings do not translate. Its second clause -- 'concerning which nothing further is implied' -- is the whole content. The definition even repeats itself deliberately ('a system that minimizes F is a system that minimizes F') because the tautology IS the assertion: the corpus is refusing to say more. Every register's word for 'agent' says more. That is the entry's problem in one line.",
+        "THE SANSKRIT GAP IS THE FINDING, NOT A HOLE IN THE FILE. Sanskrit is rich in agent-nouns and every one of them is a person-noun. MW s.v. kartṛ [257,3] runs from 'a doer, maker' straight through 'a priest' to 'the creator of the world' and the names of Viṣṇu, Brahman and Śiva -- in ONE entry. CONCEPTS.json warned that kartṛ 'imports a metaphysics'; the lookup shows it imports a god. There is no neutral Sanskrit agent-word to fall back on, because the language's agent-morphology (-tṛ) forms person-nouns by design. This is the clearest case in the corpus of CONCEPTS.json's own prediction holding: 'Sanskrit technical vocabulary for modern math and physics largely DOES NOT EXIST as attested classical terms.'",
+        "LATIN agens IS BARELY A TRANSLATION AT ALL, and that is worth saying plainly rather than dressing up: English 'agent' IS Latin agens. The Latin register here does not carry the concept across a boundary; it hands back the same word with its freight intact. Worse, the freight is the SOURCE of the English problem -- ago means 'to drive, to do', and scholastic causa agens is the efficient cause, an active principle that brings things about. The concept explicitly withholds 'agency in the moral or intentional sense', and the Latin word is where that sense came from.",
+        "L&S's retrieved short definition for agens is 'effective, powerful', AND THAT IS AN OVER-CLAIM ON THIS CONCEPT'S OWN TERMS. A system that minimizes F need not be effective at anything and is certainly not powerful; CONCEPTS.json's note says the same formalism admits a Newton's cradle and a burning fuse. Neither is powerful. A register that asserts potency has added a property the definition refuses.",
+        "THE NEWTON'S-CRADLE TEST IS THE ENTRY'S DISCRIMINATOR AND SHOULD BE USED AS ONE. CONCEPTS.json: 'Same formalism admits a Newton's cradle and a burning fuse.' Any rendering in any register that a competent reader would find ABSURD applied to a burning fuse has smuggled in personhood. That is a cheap, sharp, portable test and it is what the back-translation test below operationalises.",
+        "DOCTRINAL FREIGHT IS NOT SYMMETRIC ACROSS THESE REGISTERS AND THE ASYMMETRY MUST NOT BE LAUNDERED. Sanskrit's freight is theological (kartṛ = Viṣṇu). Latin's is scholastic-causal (causa agens). Hindi's is inherited Sanskrit freight through abhi-kartṛ. Spanish's is institutional-personal (an agente is a representative). Four registers, four different wrong metaphysics, no shared error to correct once. A translator who fixes one has not fixed the others.",
+        "'Through a blanket' is technical and load-bearing (see the markov-blanket domain, not authored here) and NO rendering in this entry attempts it. AGENT is not merely 'a thing that minimizes F'; the minimization happens THROUGH a Markov blanket, which is what makes the system identifiable as a system at all. Every rendering here drops it. Recorded as a known incompleteness rather than left for a reviewer to discover."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: कर्तृ (kartṛ)",
+          "why_wrong": "THE DECISIVE NEGATIVE OF THIS ENTRY, and it is not a matter of nuance. MW s.v. kartṛ [257,3], retrieved 2026-07-15, gives in one entry: 'a doer, maker, agent, author'; 'one who acts in a religious ceremony, a priest'; 'the creator of the world'; and Name of Viṣṇu, Brahman and Śiva. To render AGENT as kartṛ is to write, in a document defining a system that minimizes a variational bound, a word that also names God as world-creator. The concept withholds selfhood and moral agency; kartṛ asserts divinity. CONCEPTS.json forbids it on doctrinal grounds; MW supplies the receipt."
+        },
+        {
+          "rendering": "Sanskrit: जीव (jīva) or आत्मन् (ātman)",
+          "why_wrong": "Forbidden by CONCEPTS.json's own AGENT note, which names both. jīva is the living soul (and in Jaina/Vedāntic usage a technical term for the individual soul); ātman is the self, and is the single most doctrinally loaded word in the language. The concept says 'no experiencer, no selfhood'. These words are the Sanskrit for experiencer and selfhood. [Their MW entries were NOT fetched this session -- the prohibition rests on CONCEPTS.json's authority, not on a quotation, and is PENDING-CITATION as a lexical claim.]"
+        },
+        {
+          "rendering": "Sanskrit: यन्त्र (yantra)",
+          "why_wrong": "Not doctrinally forbidden -- it is FORBIDDEN HERE BY ASSIGNMENT, which is a different and rarer kind of wrong. SD-04 gives yantra to ORGAN, because MW [845,3] licenses it for 'any instrument or apparatus, mechanical contrivance, engine, machine', which is ORGAN's definition ('a named instrument') and is NOT AGENT's ('a system'). Using it for both merges two concepts under one term, tripping this file's falsifier. The rule inherited from pomdp-tensors.json applies: a register that renders two distinct concepts with one word has lost the division of labour that makes the pair mean anything."
+        },
+        {
+          "rendering": "Any register: 'actor', 'doer', 'subject' (Latin: ACTOR, SUBIECTUM; Spanish: 'sujeto')",
+          "why_wrong": "All assert an experiencer or a locus of intention. 'Subject' is the worst of the three: in philosophy it is precisely the term for that-which-experiences, and the concept's first withholding is 'no experiencer'. Latin subiectum additionally carries the grammatical/logical sense (that of which something is predicated), which invites the reading that the agent is a bearer of properties rather than a system minimizing a quantity."
+        },
+        {
+          "rendering": "Any register: any rendering that would sound absurd applied to a burning fuse",
+          "why_wrong": "The portable test, stated as a prohibition because it catches renderings no list can enumerate. CONCEPTS.json: the same formalism admits a Newton's cradle and a burning fuse. If the rendering cannot be said of a fuse without comedy, it asserts personhood, and personhood is exactly what this definition's second clause refuses."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a formal description of physical systems'. Ask: (1) 'Does this word imply the thing has experiences, a self, or intentions?' (2) 'Could this word be used, without absurdity, of a burning fuse?' (3) 'Does this word imply the thing is powerful or effective?'",
+        "pass_criterion": "PASS iff (1) returns NO, AND (2) returns YES, AND (3) returns NO. Question (2) is the discriminator and is the operationalised form of CONCEPTS.json's own note. A back-translation that answers (1) with 'not necessarily' is a FAIL, not a partial pass: the concept does not leave personhood open, it withholds it. Question (3) exists because L&S's retrieved gloss for agens is 'effective, powerful', which the concept does not claim. NOTE THE PRE-REGISTERED EXPECTATION: the Sanskrit register cannot be tested at all, because none is offered.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW for the renderings offered, HIGH for the gap. The Latin is a coinage on a morpheme whose retrieved gloss over-claims; Hindi and Spanish are unsourced and both reintroduce personhood (Hindi through the kartṛ root itself); no register renders 'through a blanket'. Held with confidence and evidenced: kartṛ is decisively disqualified on MW's own text, which gives it as 'the creator of the world' and a name of Viṣṇu. The NOT-ATTEMPTED Sanskrit is the most honest cell in this file -- Sanskrit's agent-morphology forms person-nouns, the concept forbids persons, and no amount of scholarship dissolves that."
+    },
+    {
+      "concept_id": "ORGAN",
+      "definition_from_concepts_json": "A named instrument built to run one loop, carrying its own harness, and durable only once committed rather than once deployed.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "यन्त्र",
+        "iast": "yantra",
+        "headword_as_in_lexicon": "MW s.v. yantra IS attested and IS carried in the genus sense claimed ('any instrument or apparatus, mechanical contrivance, engine, machine'). It is NOT carried in the concept's full sense (one loop, own harness, durable once committed). Graded COINED on that gap. See SD-04.",
+        "grammar": "n. Stem in -a, neuter.",
+        "literal_gloss": "an instrument, apparatus, machine",
+        "morphological_derivation": "yantra < √yam 'to hold, restrain, control' + the instrumental suffix -tra ('the means of doing X'). The -tra suffix is an INSTRUMENT-forming suffix, not an agent-forming one, and that is precisely why this word is available to a corpus that forbids agent-nouns here: it names a means, not a doer. THE MORPHEME IS CITED below; the concept's differentia is the coinage.",
+        "citation": "MW s.v. yantra, printed p. 845 col. 3, via Cologne, retrieved 2026-07-15: n. 'any instrument for holding or restraining or fastening, a prop, support, barrier' (RV. &c.); 'a fetter, band, tie, thong, rein, trace' (Mn.; MBh.); 'a surgical instrument (esp. a blunt one, such as tweezers, a vice &c., opp. to Sastra)' (Suśr.; Vāgbh.); 'any instrument or apparatus, mechanical contrivance, engine, machine, implement, appliance' (MBh.; Kāv. &c.); 'restraint, force'; 'an amulet, mystical diagram supposed to possess occult powers' (Kathās.; Pañcar.). THE FOURTH SENSE-LINE licenses the genus. THE LAST SENSE-LINE is the freight and is quoted here rather than omitted -- see ambiguity_notes. MW carries NOTHING about a harness, a single loop, or durability-on-commit; those are UNI build doctrine and travel in the definition, not in the word.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "ORGANUM",
+        "grammar": "orgănum, -i, n. Greek loan (= ὄργανον). Second declension neuter.",
+        "literal_gloss": "an implement, instrument, engine of any kind",
+        "morphological_derivation": "Not a coinage -- a direct Latin loan of Greek ὄργανον, attested in Latin and quoted below. No derivation is required.",
+        "citation": "L&S s.v. organum, via Perseus, retrieved 2026-07-15. Headword 'orgănum, i, n.', etymology '= ὄργανον'. Sense I: 'an implement, instrument, engine of any kind (mostly post-Aug.)', with application to military and architectonic engines, musical instruments (pipes), hydraulic organs and church organs; cited among others to Columella, Vitruvius, Quintilian, Juvenal, Suetonius (Nero) and Biblical texts (Genesis, 2 Chronicles). Sense II, tropological: 'an implement, instrument'. The entry also carries a transferred sense B, 'organum oris', the tongue, cited from Prudentius. [Evidence grade: entry page read; senses as returned, abridged.] THIS CITATION LICENSES 'instrument' -- the concept's genus -- IN THE CLAIMED SENSE. It expressly does NOT license the differentia (one loop, own harness, durable once committed rather than once deployed), which is UNI build doctrine. A dictionary licenses a word's sense; it cannot license a technical definition.",
+        "classical_or_post_classical": "THE LEXEME IS ATTESTED, though L&S itself marks the instrument sense 'mostly post-Aug.' The word is a Greek loan present in Latin and carried by Lewis & Short. NOT a New Latin coinage -- contrast ORGANISMUS, HIERARCHIA and LABORATORIUM in this same file, all of which L&S returned no results for. THE LEXEME'S ATTESTATION IS NOT IN DOUBT AND WAS RE-CONFIRMED VERBATIM ON AUDIT; what is graded below is the SENSE, not the string.",
+        "status_downgraded_from": "CITED -> COINED, 2026-07-15, by adversarial citation audit. THE CITATION IS SOUND AND STANDS UNCHANGED -- it was independently re-fetched and reproduced verbatim, page reference, 'mostly post-Aug.' marking, cited authors and all. WHAT WAS WRONG WAS THE STATUS, and it was wrong by this file's own rule applied twice over. (1) INTERNAL INCONSISTENCY: ORGAN's Sanskrit register sits in the IDENTICAL evidential position -- MW carries yantra in the genus sense ('any instrument or apparatus, mechanical contrivance, engine, machine') and does NOT carry the concept's full sense -- and this file grades that COINED, in its own words 'Graded COINED on that gap'. Latin organum has the same gap: L&S carries 'an implement, instrument, engine of any kind' and carries nothing about one loop, an own harness, or durability-on-commit. Two registers, one evidential position, two grades. One of them had to move, and the rule says which. (2) THE FILE'S OWN SHARPEST STATEMENT OF THE RULE, made under SENSORIUM and self-described there as 'the file's clearest demonstration': 'finding the headword is not the test -- carrying the sense is', and 'The citation licenses the word; it does not license the sense claimed, and this entry is graded on that gap.' SENSORIUM is an attested Latin lexeme with a real page reference and a real cited author, and this file grades it COINED because L&S's sense is not the concept's sense. organum is an attested Latin lexeme with a real page reference and real cited authors, and L&S's sense is not the concept's sense either. The precedent is the file's own and it binds here. NOTE THE ONE REAL DIFFERENCE, RECORDED SO THE DOWNGRADE IS NOT READ AS HARSHER THAN IT IS: sensorium's attested sense actively ASSERTS the forbidden thing (a seat of sensation implies a senser), whereas organum's attested sense asserts nothing forbidden -- it is merely broader than the concept. organum remains the strongest rendering in this file and the argument in ambiguity_notes for preferring it is untouched. It is COINED because no attested term carries THIS sense, which is precisely what COINED means here; it is not COINED because anything is wrong with it.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "organ",
+        "definition": "UNI BUILD SENSE: a named instrument built to run one loop, carrying its own harness, and durable only once COMMITTED rather than once deployed -- a deploy receipt is not a substitute for a commit. Sovereign homonym with the anatomical organ (rung 9 of the scale ladder); the corpus uses both senses and they are not the same concept."
+      },
+      "hindi": {
+        "devanagari": "यंत्र",
+        "transliteration": "yantra",
+        "gloss": "instrument, machine, apparatus",
+        "citation": "NO CITATION FROM A DICTIONARY. यंत्र is the Hindi reflex of Sanskrit yantra and, to the author's knowledge, carries 'machine, instrument' in ordinary modern Hindi. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session. Working gloss only.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch यंत्र from the CSTT glossary or a standard published Hindi dictionary. The citation must settle whether modern Hindi यंत्र has shed the occult-diagram sense that MW records for the Sanskrit (a tantric yantra), or retains it alongside 'machine'. If it retains both, Hindi carries the same freight as the Sanskrit and the entry must say so rather than assume modernity cleaned the word."
+      },
+      "spanish": {
+        "term": "órgano (instrumento)",
+        "gloss": "organ, in the sense of instrument",
+        "citation": "NO CITATION. No DLE entry was fetched for 'órgano' this session; dle.rae.es returns HTTP 403 to direct fetch. Working gloss only.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'órgano'. The citation must be checked for the SAME institutional slide evidenced under ORGANISM, where DLE 'organismo' sense 4 is 'Conjunto de oficinas, dependencias o empleos que forman un cuerpo o institución'. Spanish órgano very likely carries an institutional sense too ('órgano de gobierno'), which would collide with HIERARCHY's forbidden rank/authority reading. If so, the parenthetical disambiguator is mandatory and not optional."
+      },
+      "ambiguity_notes": [
+        "A GENUINELY GOOD RESULT, AND THE FILE SHOULD SAY SO RATHER THAN ONLY REPORT DEFECTS -- BUT SAY IT AT ITS TRUE SIZE, WHICH AN EARLIER DRAFT DID NOT. Latin organum is the STRONGEST rendering in this file: L&S gives 'an implement, instrument, engine of any kind', the concept's genus is 'a named instrument', and the match is not strained. THE EARLIER DRAFT WENT ONE STEP FURTHER AND CALLED IT 'the one register in this file that is CITED in the sense claimed'. That step was an overclaim and the status has been downgraded to COINED -- see status_downgraded_from. The dictionary carries the GENUS; the concept is genus PLUS a differentia (one loop, own harness, durable only once committed) that no lexicon in any language attests. This file grades the identical gap COINED for Sanskrit yantra and COINED for Latin sensorium, and consistency costs it its only CITED cell. THE RENDERING IS UNCHANGED AND STILL PREFERRED; only the grade moved. Strongest-in-file and CITED are different claims, and only the first one was earned.",
+        "THE HOMONYM RUNS THE OPPOSITE WAY IN LATIN FROM ENGLISH, AND THIS IS THE ENTRY'S MOST USEFUL FINDING. CONCEPTS.json flags a 'Sovereign homonym with the anatomical organ' -- in ENGLISH, 'organ' means the body-part first and the instrument second, so the build sense feels like a metaphor. In LATIN it is reversed: L&S's sense I is the implement/engine, and the anatomical sense is the later specialisation. So the Latin register does not merely tolerate the UNI build sense -- it takes it as primary and makes the anatomical sense the marked one. A translator who 'corrects' organum toward the body-part has inverted the word's own history.",
+        "BUT LATIN organum HAS ITS OWN AMBUSH, AND IT IS IN L&S'S OWN SENSE-LIST: the musical instrument, the pipes, the hydraulic organ, the church organ. Cited to Suetonius (Nero) and to Chronicles. A Latin-literate reader meeting ORGANUM in a technical document may well hear the instrument you play, not the instrument you build. The corpus's own ORGAN entries would then read as a pipe-organ. This is a real ambiguity in the strongest rendering in the file.",
+        "L&S ALSO GIVES 'organum oris', THE TONGUE (Prudentius). Which is to say: Latin itself performed the instrument-to-body-part transfer, in this very word, in a cited author. The homonym CONCEPTS.json flags is not an English accident -- it is a move the word makes natively. That strengthens the case for organum (the word can bear both senses the corpus needs) and simultaneously warns that neither sense is safely fenced off from the other by the word alone.",
+        "SANSKRIT yantra CARRIES THE TANTRIC DIAGRAM AND MW SAYS SO OUTRIGHT: 'an amulet, mystical diagram supposed to possess occult powers' (Kathās.; Pañcar.). This is the same trap pomdp-tensors.json documented for tantra, arriving by a different word, and it must not be treated as a curiosity: a yantra IS a well-known ritual object, and in a document about instruments a Sanskrit-literate reader may hear 'mystical diagram' before 'machine'. The occult sense is not archaic; it is the sense most readers of Sanskrit know first.",
+        "yantra's PRIMARY VEDIC SENSE IS RESTRAINT, NOT CONSTRUCTION. MW's first line is 'any instrument for holding or restraining or fastening, a prop, support, barrier', and the second is 'a fetter, band, tie, thong, rein, trace'. The root is √yam, 'to hold, restrain'. A UNI organ is a thing built to RUN a loop, not a thing that restrains something. The machine sense is attested (MBh., Kāv.) and is what licenses the coinage, but a translator should know the word's centre of gravity is a fetter.",
+        "THE DIFFERENTIA IS BUILD DOCTRINE AND NO DICTIONARY CAN CARRY IT, which is why this entry is graded CITED for Latin and COINED for Sanskrit on a genus/differentia split rather than on a good/bad split. 'Carrying its own harness' and 'durable only once committed rather than once deployed' are propositions about engineering practice in this repository. No lexicon in any language attests them. A register transmits the genus (instrument); the definition carries the rest; and an entry that claimed a dictionary licensed 'durable once committed' would be a forgery."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Any register: the anatomical organ (Sanskrit: अङ्ग aṅga or इन्द्रिय indriya; Spanish: 'órgano' unqualified in a biological context)",
+          "why_wrong": "Renders the sovereign homonym instead of the concept. CONCEPTS.json is explicit that the anatomical organ is rung 9 of the scale ladder and that 'the corpus uses both' senses -- so this is not a harmless overlap; it is a live collision inside one document. indriya is doubly forbidden: MW [167,2] makes it 'belonging to Indra', gives 'semen virile' among its senses, and its philosophical use is a faculty presided over by a ruler. See SENSORIUM."
+        },
+        {
+          "rendering": "Sanskrit: यन्त्र (yantra) in a ritual or devotional context, unqualified",
+          "why_wrong": "MW [845,3]: 'an amulet, mystical diagram supposed to possess occult powers'. Unqualified, in the wrong register, the word names a ritual diagram rather than a machine. The coinage is offered WITH this hazard on the record, not despite it -- and a Sanskrit ORGAN in a document that also discusses the Tree, sealing and sigilla is at real risk of being read as occult apparatus."
+        },
+        {
+          "rendering": "Latin: ORGANUM read as the musical instrument",
+          "why_wrong": "Not a translator's error but a READER'S error the rendering invites, and it is in L&S's own sense-list: pipes, the hydraulic organ, the church organ (Suet. Nero; 2 Chronicles). The strongest rendering in this file is ambiguous in exactly one direction and the entry names it rather than hiding it behind a status. (Written when this register was graded CITED; it is now COINED, and the point survives the downgrade unchanged -- a grade never immunised the rendering against being misread, which is why the hazard was recorded here in the first place.)"
+        },
+        {
+          "rendering": "Any register: 'module', 'component', 'service' (Latin: PARS, MEMBRUM)",
+          "why_wrong": "All assert that the thing is a PART OF something larger. The concept asserts the opposite kind of object: a named instrument that runs ONE loop and carries ITS OWN harness -- i.e. a self-contained unit with its own test apparatus. membrum and pars additionally re-import the body-part reading through the back door."
+        },
+        {
+          "rendering": "Any register: any rendering implying that deployment makes it real",
+          "why_wrong": "The definition's last clause is 'durable only once committed rather than once deployed', and it is a correction of a specific, recurring, real error in this repository (a deploy receipt is not a substitute for a commit). A rendering built on a word for 'deployed', 'installed', 'shipped' or 'live' asserts precisely the confusion the clause exists to fix."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a software engineering document'. Ask: (1) 'Is this a part of a body, a piece of equipment, or a musical instrument?' (2) 'Is this thing a part of something bigger, or a self-contained unit?' (3) 'What makes it durable?'",
+        "pass_criterion": "PASS iff (1) returns A PIECE OF EQUIPMENT (an instrument), AND (2) returns SELF-CONTAINED. Question (3) is expected to return 'no idea / the word doesn't say' FOR EVERY RENDERING, and that expectation is PRE-REGISTERED here rather than discovered later: 'durable only once committed' is build doctrine no lexicon attests, so a rendering that transmits it would be surprising and a rendering that does not is not thereby failing. A (1) answer of 'a musical instrument' is a FAIL for Latin specifically and would show the rendering failing in practice even though the citation itself stands. (The Latin register was graded CITED when this test was written and is now COINED; the test is unaffected, because a back-translation tests the RENDERING and never the grade.)",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM for the Latin -- the highest in this file, and now, after the audit, its only MEDIUM rather than its only CITED. L&S carries organum in the claimed genus sense ('an implement, instrument, engine of any kind'), re-confirmed verbatim on audit; the Latin word takes the instrument sense as PRIMARY and the anatomical sense as derived (the reverse of English); and the concept's genus is 'a named instrument'. THE CONFIDENCE IS UNCHANGED BY THE DOWNGRADE, AND THAT IS THE POINT WORTH KEEPING: status tracks what the authority licenses, confidence tracks how good the rendering is, and the two are not the same instrument. organum lost its CITED grade for consistency with yantra and sensorium while remaining the best rendering in the file. The confidence is MEDIUM and not higher for three named reasons: the church-organ sense is a live misreading, no dictionary licenses the differentia, and no reviewer has read it. LOW for Sanskrit (attested genus, but the word's centre is 'fetter' and its famous sense is an occult diagram), and LOW for the unsourced Hindi and Spanish."
+    },
+    {
+      "concept_id": "ORGANISM",
+      "definition_from_concepts_json": "The scale-ladder rung at which a Markov blanket is identifiable, gravity enters as a dominant constraint, and metabolic rate scales with body mass within its regime.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "प्राणिन्",
+        "iast": "prāṇin",
+        "headword_as_in_lexicon": "MW s.v. prāṇin IS attested, in the sense 'a living or sentient being'. It is NOT attested in the concept's sense (a scale-ladder rung defined by blanket-identifiability, gravity and metabolic scaling), and its attested sense ASSERTS SENTIENCE, which the concept withholds. Graded COINED on both gaps.",
+        "grammar": "mfn. / m. Stem in -in (possessive), i.e. 'having prāṇa'.",
+        "literal_gloss": "breathing one, living one (lit. 'possessing breath')",
+        "morphological_derivation": "prāṇin < prāṇa ('breath, life-breath') + the possessive suffix -in, i.e. 'one who has breath'. THE MORPHEME IS CITED below; the sense claimed is the coinage. Note what the derivation itself asserts: the word grounds life in BREATH. This concept grounds the rung in a blanket, gravity and a scaling law, and says nothing about breath -- so the coinage is offered with the derivation working against it, which is recorded rather than glossed over.",
+        "citation": "MW s.v. prāṇin, printed p. 706, via Cologne, retrieved 2026-07-15: mfn. 'breathing, living, alive'; m. 'a living or sentient being, living creature, animal or man, ŚBr. &c., &c. (also n., ĀpŚr.)'. THE WORD 'SENTIENT' IS IN THE ENTRY. MW carries nothing about Markov blankets, gravity or metabolic scaling; the citation is offered for the morpheme ONLY and expressly does NOT license the sense.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "ORGANISMUS",
+        "grammar": "organismus, -i, m. New Latin; second declension masculine.",
+        "literal_gloss": "an organism (lit. 'a thing organised/instrumented')",
+        "morphological_derivation": "organum ('instrument', itself a Greek loan -- ATTESTED, see ORGAN) + the -ismus suffix (< Greek -ισμός), forming an abstract or systemic noun. The FORMATION is regular; the LEXEME is New Latin and its own dictionary does not carry it (negative quoted below). Same grading pattern as pomdp-tensors.json's TENSOR: a sound derivation does not make an attested word.",
+        "citation": "L&S SEARCHED for 'organismus' via Perseus resolveform (exact, lang=la) 2026-07-15: 'Your search for organismus returned no results.' NO ENTRY. The first member IS attested -- L&S s.v. organum, 'an implement, instrument, engine of any kind' (see ORGAN) -- but the compound is not, and per the status vocabulary a compound is graded at its weakest member regardless. The attested Latin alternatives (animal, animans) were NOT fetched this session and are rejected on a different ground: see forbidden_mistranslations.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- New Latin, scientific. L&S returns no results (quoted above). The word belongs to the modern biological register; no primary source for its first attestation was checked this session and that attribution is PENDING-CITATION.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "organism",
+        "definition": "The scale-ladder rung at which a Markov blanket is identifiable, gravity enters as a dominant constraint, and metabolic rate scales with body mass within its regime. NOT one physical regime: Re spans about 1e-5 to 3e8 within this single rung. The literal claim that the biosphere is an organism fails this definition's FIRST criterion -- no boundary with demonstrated conditional independence is exhibited."
+      },
+      "hindi": {
+        "devanagari": "जीव",
+        "transliteration": "jīva",
+        "gloss": "organism, living being",
+        "citation": "NO CITATION FROM A DICTIONARY, and the sources that surfaced are named rather than dressed up: a search for the Hindi term returned Hindi Wikipedia, Glosbe and educalingo -- an encyclopedia and two aggregators, NONE of which is a standard published dictionary. The CSTT site (cstt.education.gov.in) surfaced but NO glossary entry was fetched from it. जीव as the biological term for 'organism' is therefore a working gloss ONLY.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch जीव from the CSTT glossary or a standard published Hindi dictionary. RECORD THE COLLISION THE CITATION CANNOT DISSOLVE, because it is the finding: जीव is the standard modern Hindi word for a biological organism AND it is one of the three Sanskrit words CONCEPTS.json names as forbidden under AGENT for importing a metaphysics (jīva = the individual soul). The same string is scientific vocabulary in one register and soul-doctrine in the other. If confirmed, the honest consequence is that Hindi cannot say 'organism' here without the reader's ear reaching for 'soul', and the entry must say so."
+      },
+      "spanish": {
+        "term": "organismo",
+        "gloss": "organism",
+        "citation": "Real Academia Espanola, DLE, s.v. organismo. [EVIDENCE GRADE REDUCED: obtained via search-result summary, NOT a first-party fetch -- dle.rae.es returns HTTP 403. This matches the constraint recorded in lexicon/terms/pomdp-tensors.json.] The DLE senses as returned: (1) 'Conjunto de órganos del cuerpo animal o vegetal y de las leyes por que se rige'; (2) 'Ser viviente'; (3) 'Conjunto de leyes, usos y costumbres por los que se rige un cuerpo o institución social'; (4) 'Conjunto de oficinas, dependencias o empleos que forman un cuerpo o institución', with synonyms listed as 'organización, institución, corporación, entidad, ente, sociedad'. NOTE THAT SENSE 2 ('a living being') is close to the ordinary English word and STILL does not carry this concept's sense, which is a scale-ladder rung, not a living being.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain a first-party DLE fetch to raise the evidence grade above search-summary. Independently: no DLE sense carries 'the rung at which a blanket is identifiable', so even a first-party fetch cannot raise this entry to CITED for THIS concept -- it can only confirm the ordinary-language senses and, with them, the institutional collision documented in ambiguity_notes."
+      },
+      "ambiguity_notes": [
+        "THE CENTRAL TRAP: this concept is NOT 'a living thing'. It is a RUNG ON A LADDER -- a position in a scale hierarchy, identified by three criteria (a blanket is identifiable, gravity dominates, metabolic rate scales with body mass). Every register's word means 'a living thing'. So every rendering in this entry substitutes an ontological category for a positional one, and does it so smoothly that no reader will notice. This is the entry's characteristic defect and no lookup fixes it.",
+        "SPANISH organismo COLLIDES WITH AN INSTITUTION, AND THE DLE SAYS SO IN TWO SEPARATE SENSES. Sense 4: 'Conjunto de oficinas, dependencias o empleos que forman un cuerpo o institución', with synonyms 'organización, institución, corporación, entidad, ente, sociedad'. Sense 3 is the body of laws and customs by which such a body is governed. In Spanish an 'organismo público' is a government agency. So the Spanish register for ORGANISM lands on the exact semantic field -- corporate bodies, governance, offices -- that HIERARCHY's note fences off as 'a severe trap in a corpus that also carries governance rules and an approval plane'. The two entries must be read together; the trap is one trap arriving through two doors.",
+        "HINDI जीव IS SCIENTIFIC VOCABULARY AND SOUL-DOCTRINE AT ONCE, and that is not a pun. CONCEPTS.json names jīva among the three words forbidden for AGENT because it 'imports a metaphysics'. Modern Hindi biology uses the same word for a biological organism. So the corpus forbids in Sanskrit exactly what Hindi requires in the lab. This is not a contradiction to be resolved by choosing a side -- it is the honest observation that the registers are not interchangeable and that a term's freight is a fact about a register, not about a string.",
+        "prāṇin ASSERTS SENTIENCE IN MW'S OWN WORDS: 'a living or sentient being'. This concept says nothing about sentience. Its three criteria are geometric, physical and allometric. A rung at which a blanket is identifiable includes, on this corpus's own account, things nobody proposes are sentient. Rendering the rung with a word MW glosses as 'sentient' adds a property the definition does not contain -- and adds it in the file's most safety-critical direction, given that the corpus's whole discipline is withholding claims about experience.",
+        "prāṇin ALSO MIS-GROUNDS THE CRITERION. Its morphology grounds life in BREATH (prāṇa + -in, 'having breath'), and prāṇa is itself a doctrine, not a neutral biological term. The concept's criteria are a blanket, gravity and metabolic scaling. Nothing breathes in the definition. A Sanskrit reader receives a life-force theory where the corpus supplied an allometric regularity.",
+        "THE RUNG IS NOT ONE PHYSICAL REGIME AND NO WORD IN ANY REGISTER CONVEYS THAT. CONCEPTS.json: 'Re spans about 1e-5 to 3e8 within this single rung -- the rung is not one physical regime.' The Reynolds number varies by thirteen orders of magnitude inside the category. Every register's word suggests a natural kind with a shared nature. The concept says the opposite: a rung is a bookkeeping position, and the physics inside it is wildly heterogeneous.",
+        "THIS ENTRY IS THE FORMAL DEFEATER OF THE LITERAL GAIA CLAIM AND MUST BE ABLE TO CARRY THAT LOAD. CONCEPTS.json's ORGANISM note: 'The literal claim that the biosphere is an organism fails this definition's first criterion: no boundary with demonstrated conditional independence is exhibited.' That is how GAIA's INADMISSIBLE reading is retired -- by THIS definition's first criterion, not by taste. So a register that renders ORGANISM as 'a living thing' does not merely blur a category; it disarms the argument, because 'is the biosphere a living thing?' is a matter of opinion whereas 'does the biosphere exhibit a boundary with demonstrated conditional independence?' has an answer. The two entries are load-bearing on each other.",
+        "'Metabolic rate scales with body mass within its regime' is a NATURA-class observation about nature's regularities, and it is a fact about the world, not a UNI build status. Per the corpus's two sovereign vocabularies it is governed by NATURE-LEDGER.md, and reading it as a UNI gate is the cardinal category error the rails name: a nature citation is never a UNI gate. No register's word marks that boundary, and a translator cannot be expected to; it is recorded so a reviewer does not mistake the definition's third clause for a claim about this program."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin: ANIMAL or ANIMANS",
+          "why_wrong": "Both are built on anima -- breath, and thence soul. They ground the category in a life-principle, exactly as Sanskrit prāṇin grounds it in breath, and the concept grounds it in a blanket, gravity and a scaling law. TWO REGISTERS INDEPENDENTLY REACH FOR BREATH-AND-SOUL for this concept, which is the finding worth keeping: the classical languages categorise living things by an animating principle, and this corpus categorises them by a boundary and an exponent. [NOTE: neither animal nor animans was fetched from L&S this session; the anima etymology is the author's working reading and is PENDING-CITATION.]"
+        },
+        {
+          "rendering": "Spanish: 'organismo' used where an institution could be meant",
+          "why_wrong": "DLE sense 4 IS the institution: 'Conjunto de oficinas, dependencias o empleos que forman un cuerpo o institución', synonyms 'organización, institución, corporación, entidad'. In a corpus that carries governance rules, an approval plane and a fleet, a Spanish reader meeting 'organismo' has a live institutional reading available at all times, and it lands on the precise sense HIERARCHY forbids. The disambiguator is mandatory."
+        },
+        {
+          "rendering": "Any register: 'a living being' / 'a creature' as the definition rather than the gloss",
+          "why_wrong": "Substitutes an ontological kind for a positional one. ORGANISM here is a RUNG, identified by three stated criteria. 'A living being' is not false as a gloss and is fatal as a definition, because it silently discharges the first criterion -- the one that does the work of defeating the literal Gaia claim -- and replaces a testable boundary question with an intuition about aliveness."
+        },
+        {
+          "rendering": "Sanskrit: जीव (jīva) or शरीरिन् (śarīrin)",
+          "why_wrong": "jīva is forbidden by CONCEPTS.json's own AGENT note as importing a metaphysics (the individual soul) and cannot be re-admitted here merely because modern Hindi biology uses it -- the prohibition is about the Sanskrit register, where the soul-sense is primary. śarīrin ('embodied one') asserts a possessor of a body, i.e. a self that HAS a body, which is the same smuggled experiencer arriving by a different route. [Neither was fetched from MW this session; both prohibitions rest on CONCEPTS.json and on the author's reading, PENDING-CITATION as lexical claims.]"
+        },
+        {
+          "rendering": "Any register: any rendering that would make 'the biosphere is an organism' sound merely debatable rather than failing a stated criterion",
+          "why_wrong": "The concept's job in this corpus is to make that claim FAIL A TEST, not lose an argument. CONCEPTS.json: it 'fails this definition's first criterion: no boundary with demonstrated conditional independence is exhibited'. A rendering that converts the criterion into a connotation of aliveness turns a decidable question into a matter of taste and unfences the INADMISSIBLE reading of GAIA."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a document about physical scales'. Ask: (1) 'Is this a kind of thing, or a position on a scale?' (2) 'Does this word imply the thing is sentient or has a soul?' (3) 'Could this word mean a government agency or an institution?'",
+        "pass_criterion": "PASS iff (1) returns A POSITION ON A SCALE, AND (2) returns NO, AND (3) returns NO. PRE-REGISTERED EXPECTATION, recorded now so a later failure is not explained away: (1) is expected to FAIL in every register, because every candidate word names a kind of thing. If that expectation holds, the finding is that ORGANISM cannot be carried by a noun in any of these registers and must travel as its three criteria. (3) is expected to fail for Spanish specifically, on the DLE's own sense 4.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. The Latin is a New Latin coinage L&S returns no results for; the Sanskrit is a coinage whose attested gloss ('sentient') asserts what the concept withholds and whose morphology grounds life in breath; the Hindi is unsourced and collides with a word the corpus forbids elsewhere as soul-doctrine; the Spanish rests on a reduced-grade DLE reading whose own sense 4 is an institution. Held with more confidence: the structural finding that BOTH classical registers reach independently for breath-and-soul (anima, prāṇa) to categorise living things, while this concept categorises by a boundary, gravity and an exponent -- so the mismatch is systematic, not a matter of picking a better word."
+    },
+    {
+      "concept_id": "HIERARCHY",
+      "definition_from_concepts_json": "Nested levels each of whose blanket becomes part of the next level's internal states, made reachable by evolution because stable intermediates are what interruption spares.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "स्तरनिवेश",
+        "iast": "stara-niveśa",
+        "headword_as_in_lexicon": "NONE. NEITHER MEMBER WAS FETCHED FROM MONIER-WILLIAMS THIS SESSION. Both glosses below are the author's working glosses and are expressly NOT offered as MW readings. The compound is COINED and its members are PENDING-CITATION.",
+        "grammar": "m. Tatpuruṣa: stara (m., working gloss 'layer, stratum') + niveśa (m., working gloss 'entering, settling, insertion').",
+        "literal_gloss": "the insertion/nesting of layers",
+        "morphological_derivation": "stara < √stṛ 'to spread, strew' + -a (working reading). niveśa < ni- 'down, into' + √viś 'to enter' + -a, i.e. 'an entering-into'. THE COMPOUND IS BUILT TO SAY 'levels entering into levels', which is the definition's mechanism -- each level's blanket becomes part of the next level's internal states. HONESTY ON THE DERIVATION, since a coinage must carry one: this derivation is morphologically regular Sanskrit on the author's reading, but NEITHER member's attestation nor its MW sense-range was checked this session, so the derivation is offered as construction, not as evidence. niveśa is additionally suspected of carrying 'encampment, settlement' and 'marriage' senses; that suspicion is unverified and is exactly what the falsifier must settle.",
+        "citation": "NO CITATION. Neither stara nor niveśa was looked up. The citation that IS available is the disqualifying one for the obvious alternative: MW s.v. kośa, printed p. 314, via Cologne, retrieved 2026-07-15, gives 'a sheath, scabbard, &c.' (MBh.; R.; VarBṛS.), 'a case, covering, cover' (AV.; ChUp.; MuṇḍUp.; TUp.; PārGṛ.; BhP.), and among many further senses a Vedānta philosophical term for body-sheaths, alongside cask, pail, box, treasury, bandage, DICTIONARY, bud, seed-vessel, cocoon and egg membrane. See forbidden_mistranslations.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "HIERARCHIA",
+        "grammar": "hierarchia, -ae, f. Greek loan; first declension feminine.",
+        "literal_gloss": "sacred rule / rule of a sacred officer -- WHICH IS NOT WHAT THE CONCEPT MEANS. The literal gloss is offered as a WARNING, not as a definition.",
+        "morphological_derivation": "< Greek ἱεραρχία, ἱερός 'sacred' + ἀρχή 'rule, beginning'. THE ETYMOLOGY IS PENDING-CITATION AND IS NOT QUOTED FROM ANY AUTHORITY: see citation. The lexeme is post-classical/ecclesiastical in Latin, and L&S returns no results for it.",
+        "citation": "L&S SEARCHED for 'hierarchia' via Perseus resolveform (exact, lang=la) 2026-07-15: 'Your search for hierarchia returned no results.' NO ENTRY. LSJ SEARCHED for the Greek via Perseus resolveform (exact, lang=greek, lookup=hierarchia) 2026-07-15: 'Your search for hierarchia returned no results.' NO ENTRY in the Greek lemma index as searched. POSITIVE CONTROL RUN AND PASSED in the same session: lookup=logos returned 'Your search returned 1 result' and the lemma λόγος (short definition 'computation, reckoning'), so Latin-alphabet transliteration DOES resolve against the Greek index and this negative is a real absence rather than an encoding failure. SCOPE LIMIT, STATED: the negative is against Perseus's Greek lemma index, NOT against every printed LSJ supplement. CONSEQUENCE, AND IT IS THE HONEST ONE: the ἱερός + ἀρχή etymology, on which this entry's central warning rests, could NOT be sourced this session and is recorded PENDING-CITATION throughout. It is the author's reading of a well-known etymology, and a well-known etymology with no citation is still uncited.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- ecclesiastical Latin, from Greek. Neither L&S nor the Perseus Greek lemma index carries it (both negatives quoted above). The word's association with Pseudo-Dionysius and the celestial hierarchy is the author's reading and is PENDING-CITATION; no primary source was checked.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "hierarchy",
+        "definition": "Nested levels, each of whose Markov blanket becomes part of the next level's internal states -- made reachable by evolution because stable intermediates are what interruption spares. NOT a hierarchy in the sense of rank, command, or authority. Read with CAVITY_PRINCIPLE: a level must never treat an upstream prior as fresh evidence."
+      },
+      "hindi": {
+        "devanagari": "पदानुक्रम",
+        "transliteration": "padānukrama",
+        "gloss": "hierarchy (lit. 'the sequence of ranks/positions')",
+        "citation": "NO CITATION. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session. पदानुक्रम is, to the author's knowledge, the standard Hindi rendering of 'hierarchy'. Working gloss only.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch पदानुक्रम from the CSTT glossary or a standard published Hindi dictionary. RECORD THE DEFECT THE CITATION WILL LIKELY CONFIRM RATHER THAN CURE: पद is a rank, station, office or post, so पदानुक्रम is literally 'the succession of RANKS' -- the precise sense CONCEPTS.json fences off ('Not a hierarchy in the sense of rank, command, or authority'). If the citation confirms this is standard Hindi, the honest consequence is that the standard term asserts what the concept forbids, and the register needs a coinage, not the dictionary word."
+      },
+      "spanish": {
+        "term": "jerarquía",
+        "gloss": "hierarchy",
+        "citation": "NO CITATION. No DLE entry was fetched for 'jerarquía' this session; dle.rae.es returns HTTP 403 to direct fetch. Working gloss only.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'jerarquía'. The citation must be checked for the rank/authority senses and for the ecclesiastical sense (the Spanish word inherits the same Greek ecclesiastical lexeme as the Latin). If, as expected, the DLE's primary senses are about rank and church order, the Spanish carries the same disqualification as the Latin and cannot be marked CITED for this concept."
+      },
+      "ambiguity_notes": [
+        "THE CENTRAL TRAP IS NAMED BY CONCEPTS.json ITSELF AND IS THE MOST DANGEROUS ONE IN THIS FILE: 'Not a hierarchy in the sense of rank, command, or authority -- a severe trap in a corpus that also carries governance rules and an approval plane.' This corpus really does contain an approval plane, a co-sign gate, and an operator. A reader meeting 'hierarchy' has a live authority-reading available on every page. The concept means only that one level's blanket is inside the next level's internal states. There is no command relation between levels and nothing outranks anything.",
+        "THE RECEIVED WORD IS DISQUALIFIED BY ITS OWN ETYMOLOGY, AND THE ETYMOLOGY ASSERTS BOTH FORBIDDEN THINGS AT ONCE. ἱεραρχία is ἱερός 'sacred' + ἀρχή 'rule'. So 'hierarchy' literally names SACRED RULE: it asserts the rank/command sense the concept forbids, AND it sacralises it. In a corpus whose whole discipline is withholding, a term that means 'holy chain of command' is close to a worst case. HONESTY ON THE EVIDENCE, because this is the entry's load-bearing claim: this etymology is PENDING-CITATION. Neither L&S nor the Perseus Greek lemma index returned the word, so no authority was quoted for it this session, and the positive control confirms the searches were real. The warning is the author's reading. It is stated as a warning that needs a citation, not as a fact with one.",
+        "kośa IS THE OBVIOUS SANSKRIT RENDERING AND IT PUTS A SELF AT THE CENTRE OF THE NESTING -- which is the single most consequential mistranslation available in this domain. MW [314] gives 'a sheath, scabbard', 'a case, covering, cover' (AV.; ChUp.; MuṇḍUp.; TUp.), and a Vedānta philosophical term for body-sheaths. The kośa doctrine describes sheaths ENVELOPING the ātman: the nesting exists because there is a self at the middle of it. THIS CONCEPT'S NESTING HAS NOTHING AT THE MIDDLE. It is blankets inside blankets, and the corpus's AGENT entry withholds selfhood explicitly. A translator reaching for the beautiful, apt, attested sheath-word would import, silently and with a page number, precisely the metaphysics the corpus spends its whole discipline refusing. This is the clearest instance in the file of CONCEPTS.json's warning that 'a Samkhya or Vedanta term imports a whole metaphysics'.",
+        "MW's kośa ENTRY ALSO GIVES 'DICTIONARY' AS A SENSE -- a Sanskrit lexicon is a kośa (Amarakośa). A lexicon file rendering 'hierarchy' as kośa would be naming itself. Noted as a genuine collision rather than a joke: in THIS document, of all documents, the word is already taken.",
+        "THE COINAGE OFFERED IS WEAK AND THE ENTRY SAYS SO RATHER THAN SELLING IT. stara-niveśa rests on two members neither of which was looked up. It is offered because the alternative -- NOT-ATTEMPTED -- was already spent on AGENT for a structural reason (SD-04), whereas here the obstacle is a research gap that a single session's lookups could close. The status COINED with PENDING-CITATION members records exactly that difference: AGENT has no candidate, HIERARCHY has an unverified one.",
+        "A NEAR-MISS CONSIDERED AND REJECTED, recorded because it is instructive: परम्परा (paramparā, 'uninterrupted succession') is the natural Sanskrit word for a nested series and is fatally apt in the wrong way -- guru-paramparā is the transmission of AUTHORITY down a lineage. It would deliver the rank/command reading that CONCEPTS.json fences, and deliver it with the sanctity of a teaching lineage attached. It repeats the ἱεραρχία defect in a second language: the available words for 'ordered levels' are words about who defers to whom. [paramparā was NOT fetched from MW; this rejection rests on the author's reading and is PENDING-CITATION.]",
+        "'Made reachable by evolution because stable intermediates are what interruption spares' is a NATURA-class claim about nature's regularities and is governed by NATURE-LEDGER.md, not by the UNI 4-value fence. It is the Simon near-decomposability argument in one clause. No register's word carries it and no register's word should be expected to; it is recorded so that a reviewer does not mistake the definition's second half for a UNI build claim. A nature citation is never a UNI gate.",
+        "CONCEPTS.json instructs that this concept be READ WITH CAVITY_PRINCIPLE: 'a level must never treat an upstream prior as fresh evidence'. That is a constraint on how levels may use each other, and it is the closest the concept comes to a relation between levels -- but it is an EVIDENTIAL prohibition, not a command relation. A register that renders HIERARCHY with an authority-word makes the cavity principle unintelligible, because under an authority reading, deferring to an upstream level is exactly what you would expect a lower level to do."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: कोश (kośa)",
+          "why_wrong": "THE DECISIVE NEGATIVE OF THIS ENTRY. MW [314] attests it for 'a sheath, scabbard', 'a case, covering, cover' (AV.; ChUp.; MuṇḍUp.; TUp.), and as a Vedānta term for body-sheaths. The sheath doctrine is a doctrine ABOUT A SELF: the kośas envelop the ātman, and the nesting has a self at its centre by construction. This concept's nesting has nothing at its centre -- it is blankets within blankets, and the corpus withholds selfhood explicitly (see AGENT). Using kośa asserts, with an attested and elegant word, the exact metaphysics the corpus exists to refuse. It also collides with 'dictionary', which is what this file is."
+        },
+        {
+          "rendering": "Any register: rank, command, or authority words (Hindi पदानुक्रम as 'succession of ranks'; Latin ORDO, GRADUS in the sense of station; Spanish 'escalafón')",
+          "why_wrong": "Forbidden by CONCEPTS.json's own note in terms: 'Not a hierarchy in the sense of rank, command, or authority -- a severe trap in a corpus that also carries governance rules and an approval plane.' In THIS corpus the reading is not merely available, it is primed: there is a real approval plane and a real operator. A rank-word makes the levels into an org chart and makes CAVITY_PRINCIPLE unintelligible."
+        },
+        {
+          "rendering": "Latin: HIERARCHIA, unqualified, in any register that hears the Greek",
+          "why_wrong": "The received word literally names SACRED RULE (ἱερός + ἀρχή), asserting rank AND sanctity -- both forbidden. It is retained as the coinage only because it is the term of art in the source literature and no attested alternative was found; L&S returns no results for it, so it is not even Latin in Lewis & Short's sense. It should never travel without the definition attached. [The etymology is PENDING-CITATION: no authority was quoted for it this session.]"
+        },
+        {
+          "rendering": "Sanskrit: परम्परा (paramparā)",
+          "why_wrong": "The natural word for a nested succession, and it means a LINEAGE OF TRANSMITTED AUTHORITY -- guru-paramparā is how teaching and legitimacy descend. It re-imports the rank/command sense with sanctity attached, i.e. it repeats the ἱεραρχία defect in Sanskrit. [PENDING-CITATION: not fetched from MW this session.]"
+        },
+        {
+          "rendering": "Any register: any rendering under which 'a level must never treat an upstream prior as fresh evidence' sounds like insubordination",
+          "why_wrong": "The portable test for this entry. CAVITY_PRINCIPLE is an EVIDENTIAL prohibition against double-counting, not a chain-of-command question. If the rendering makes the cavity principle sound like a junior refusing a senior's order, the rendering has installed an authority relation between levels and lost the concept."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a document about the structure of systems'. Ask: (1) 'Does anything here outrank anything else?' (2) 'Is there something at the centre or top that the levels belong to?' (3) 'Is anything about this sacred?'",
+        "pass_criterion": "PASS iff (1) returns NO, AND (2) returns NO, AND (3) returns NO. Question (2) is the kośa discriminator -- a back-translation that supplies a self, a soul, or a top-level owner at the centre of the nesting has imported the sheath metaphysics and is a hard FAIL. Question (3) is the ἱεραρχία discriminator. A back-translation that hedges on (1) ('levels are ordered, so I suppose higher ones matter more') is a FAIL, not a partial pass: ordering by containment is not ordering by rank, and the confusion between them is this entry's whole hazard.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW, and lower than most of this file. The Latin is a lexeme neither L&S nor the Perseus Greek index carries, retained faute de mieux, and its central disqualifying etymology is PENDING-CITATION -- the entry's most important claim is the one it cannot source. The Sanskrit coinage rests on two unlooked-up members. Hindi and Spanish are unsourced and both are expected to carry rank senses. Held with confidence and evidenced: kośa is decisively wrong, on MW's own attestation of the Vedānta body-sheaths, because it places a self at the centre of a nesting that has nothing at its centre."
+    },
+    {
+      "concept_id": "WORLD_COUPLING",
+      "definition_from_concepts_json": "The interface by which an engine's internal states are exposed to a world, isolated by explicit whitelist rather than by blacklist.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "लोकसंयोग",
+        "iast": "loka-saṃyoga",
+        "headword_as_in_lexicon": "NONE for the compound. BOTH members are attested independently: MW s.v. loka [906] and MW s.v. saṃyoga [1112]. A compound of cited members is COINED, never CITED. AND SEE THE FREIGHT -- this coinage is offered under heavy protest, recorded in ambiguity_notes.",
+        "grammar": "m. Tatpuruṣa: loka (m., 'world') + saṃyoga (m., 'conjunction, contact').",
+        "literal_gloss": "world-conjunction / contact with the world",
+        "morphological_derivation": "loka, quoted under TOY_WORLD. saṃyoga < sam- 'together' + √yuj 'to join' + -a, i.e. 'a joining-together'. Both members are quoted below from MW. The COMPOUND is the coinage: MW carries no compound in the sense 'an interface isolated by explicit whitelist'.",
+        "citation": "MW s.v. saṃyoga, printed p. 1112, via Cologne, retrieved 2026-07-15: m. 'conjunction, combination, connection' with union/absorption; 'contact (esp. in phil. \"direct material contact\")' -- a technical Nyāya term among the 24 Guṇas; 'carnal contact, sexual union'; 'matrimonial connection or relationship by marriage'; 'a kind of alliance or peace made between two kings'; 'agreement of opinion, consensus'; 'applying one's self closely to, being engaged in, undertaking'; 'a conjunct consonant, combination of two or more consonants' (grammar); 'dependence of one case upon another, syntax'; 'conjunction of two or more heavenly bodies' (astronomy); 'total amount, sum'; and Name of Śiva. MW s.v. loka, printed p. 906: quoted in full under TOY_WORLD. These license the MEMBERS only, and the saṃyoga entry is quoted at length because most of what it licenses is unwanted.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "NEXUS MUNDI",
+        "grammar": "nexus, -ūs, m. (fourth declension) + mundi (genitive of mundus, -i, m.).",
+        "literal_gloss": "the binding of/to the world",
+        "morphological_derivation": "nexus < necto 'to bind, tie' (supine stem nex-) + the -us verbal-noun suffix. mundus, quoted under TOY_WORLD. Both members are attested and quoted below. The COMPOUND is the coinage: no Latin lexeme means 'an interface isolated by explicit whitelist'.",
+        "citation": "L&S SEARCHED for 'nexus' via Perseus resolveform (exact, lang=la) 2026-07-15: TWO entries returned. 'nexus1' -- short definition 'imprisoned'. 'nexus2' -- short definition 'a binding together, fastening, joining, interlacing, entwining, clasping'. [Evidence grade reduced: short definitions from the resolveform results table; neither full entry page was read, so the full sense-ranges are PENDING-CITATION.] The sense claimed is nexus2. NOTE THAT nexus1 IS A HOMOGRAPH MEANING 'IMPRISONED' -- see ambiguity_notes. For mundus: L&S s.v. mundus, sense II.B, 'ut hunc hac varietate distinctum bene Graeci κόσμον, nos lucentem mundum nominaremus' (Cic. Univ. 10); full entry quoted under TOY_WORLD, including sense I (women's toilet ornaments) and the Ecclesiastical sense (the world as the realm of sin, opposed to the church).",
+        "classical_or_post_classical": "Both members CLASSICAL (nexus2 attested; mundus attested at Cic. Univ. 10). The COMPOUND is [POST-CLASSICAL] and is this file's coinage.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "world coupling",
+        "definition": "The interface by which an engine's internal states are exposed to a world, isolated by explicit WHITELIST rather than by blacklist -- the build-side realization of MIND_BODY. Whitelist-not-blacklist is the same discipline as allowlist-by-omission being a defect: what is not named is not reachable."
+      },
+      "hindi": {
+        "devanagari": "जगत्-युग्मन",
+        "transliteration": "jagat-yugman",
+        "gloss": "world-coupling",
+        "citation": "NO CITATION. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session. युग्मन ('coupling') is the author's working gloss for the technical term and the compound is the author's construction. NOT a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch युग्मन from the CSTT glossary (which is the right authority for a technical term of this kind) or a standard published Hindi dictionary. If CSTT prefers a different rendering for 'coupling' in the engineering sense (e.g. a loan, कपलिंग), prefer CSTT's and downgrade this entry. Check also whether युग्मन carries the pairing/mating senses that afflict Sanskrit saṃyoga."
+      },
+      "spanish": {
+        "term": "acoplamiento con el mundo",
+        "gloss": "coupling with the world",
+        "citation": "NO CITATION. No DLE entry was fetched for 'acoplamiento' this session; dle.rae.es returns HTTP 403 to direct fetch. Working gloss only, NOT a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'acoplamiento'. Check for the mechanical sense (a coupling/joint), which is wanted, against the mating/copulation sense, which is not -- the same hazard documented for Sanskrit saṃyoga arrives in Spanish through the same door."
+      },
+      "ambiguity_notes": [
+        "THE CENTRAL TRAP: the definition's discriminating content is not 'coupling' at all -- it is 'isolated by explicit whitelist rather than by blacklist'. That clause is the concept. It says what is NOT named is NOT reachable, which is a claim about the DIRECTION OF THE DEFAULT: closed unless opened. Every register's word for coupling names only the connection, and a connection-word says nothing about defaults. So every rendering here transmits the interface and drops the discipline, which is the entire point. CONCEPTS.json ties it to a known defect in this repository: 'the same discipline as allowlist-by-omission being a defect'.",
+        "saṃyoga IS A TECHNICAL TERM OF NYĀYA-VAIŚEṢIKA AND MW SAYS SO: 'contact (esp. in phil. \"direct material contact\")', one of the 24 Guṇas. A guṇa is a real ontological category -- a quality inhering in substances. To render an engineered interface as saṃyoga is to assert that the coupling is direct material contact between substances, which is a metaphysical thesis about what interfaces ARE. The concept says an interface is a whitelist. These are not the same kind of claim, and one of them is a school's ontology.",
+        "A HEAVIER OBJECTION TO saṃyoga, AND IT IS FLAGGED AS THE AUTHOR'S READING RATHER THAN QUOTED: in Sāṃkhya, the saṃyoga of puruṣa and prakṛti -- the conjunction of puruṣa (that school's witnessing principle) with prakṛti (its matter-principle) -- is the central doctrine, and that conjunction is precisely the BONDAGE that liberation undoes. If that reading is right, rendering WORLD_COUPLING as saṃyoga asserts that coupling to the world is a metaphysical error to be dissolved, which inverts a build-side interface into a soteriological problem. MW's entry as retrieved gives the Nyāya guṇa sense and 'union/absorption' but does NOT state the Sāṃkhya doctrine in the text returned, so THIS OBJECTION IS PENDING-CITATION and is recorded as a live suspicion a Sanskritist must adjudicate, not as a finding.",
+        "MW's saṃyoga ENTRY ALSO CARRIES 'carnal contact, sexual union', 'matrimonial connection or relationship by marriage', and Name of Śiva. Three separate freights in one word: eroticism, marriage, and a deity. In a corpus that already had to fence bhāva and krīḍā for the same reason, the pattern is worth naming: SANSKRIT'S JOINING-WORDS ARE MOSTLY ABOUT PEOPLE JOINING PEOPLE. An engineering interface is not in this word's semantic neighbourhood; it is a guest there.",
+        "LATIN nexus HAS A HOMOGRAPH THAT MEANS 'IMPRISONED', AND L&S LISTS IT FIRST. The resolveform search returned two entries: nexus1 'imprisoned', nexus2 'a binding together, fastening, joining, interlacing, entwining, clasping'. The Roman nexum was debt-bondage -- a person bound over to a creditor. So NEXUS MUNDI carries a live reading 'bound in servitude to the world', which lands on the same soteriological inversion suspected for saṃyoga, by an entirely independent route. Two registers, two different words, the same wrong idea: that coupling to a world is bondage.",
+        "mundus BRINGS ITS OWN TWO AMBUSHES, both quoted under TOY_WORLD from L&S: sense I is women's toilet ornaments and dress, and the Ecclesiastical sense is the world as the REALM OF SIN opposed to Christ's kingdom. Combined with nexus1 'imprisoned', a Vulgate-formed reader can hear NEXUS MUNDI as 'bondage to the sinful world' -- a phrase that would be at home in a homily and is a catastrophic rendering of a whitelist.",
+        "'The build-side realization of MIND_BODY' (CONCEPTS.json's own note) means this concept is the ENGINEERING face of a typed Markov blanket, per the corpus's M12 (WORLD ⊥ BODY ⊥ MIND, two typed blankets). No register's word marks that it is the build-side of a pair, and a reader who does not know the pair exists will read it as a standalone metaphor for 'being in touch with reality'.",
+        "'An engine's internal states are EXPOSED to a world' -- the verb is exposure, and it is asymmetric and slightly adversarial in tone, as befits a security discipline. Renderings built on 'union', 'harmony', or 'connection' (saṃyoga's 'union/absorption'; Spanish 'unión') lose the asymmetry and, with it, the reason a whitelist is needed at all."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: संयोग (saṃyoga) unqualified in a philosophical register",
+          "why_wrong": "MW [1112] makes it a technical Nyāya guṇa -- 'contact (esp. in phil. \"direct material contact\")' -- and also 'carnal contact, sexual union', 'matrimonial connection', and Name of Śiva. Asserts a substance-ontology of contact where the concept asserts a whitelist. It is used in the coinage only because no alternative was found, and the entry records the protest rather than laundering it. If the suspected Sāṃkhya puruṣa/prakṛti reading holds (PENDING-CITATION), the word additionally asserts that this coupling is bondage to be undone, and must then be struck."
+        },
+        {
+          "rendering": "Latin: NEXUS read as nexus1",
+          "why_wrong": "L&S's own first entry for the string is 'imprisoned' -- the Roman nexum, debt-bondage. 'Bound in servitude to the world' is not a coupling; it is a soteriology, and it is the same inversion suspected for saṃyoga arriving independently. The claimed sense is nexus2 ('a binding together, fastening, joining'), and nothing in the written form distinguishes them."
+        },
+        {
+          "rendering": "Any register: 'connection', 'union', 'harmony', 'being in touch with the world'",
+          "why_wrong": "Drops the whitelist, which IS the concept, and softens 'exposed' into something benign. The definition is a security discipline: closed unless explicitly opened. A word for union asserts the opposite default and, per CONCEPTS.json's own cross-reference, allowlist-by-omission is a DEFECT in this repository -- a real one, already found in guards.py. This rendering ships the defect as the definition."
+        },
+        {
+          "rendering": "Any register: 'API', 'boundary', 'membrane' (Latin: MEMBRANA, LIMES)",
+          "why_wrong": "All name the surface and none names the rule ON the surface. A membrane is characterised by what crosses it; this interface is characterised by the requirement that anything crossing be NAMED IN ADVANCE. MEMBRANA additionally re-imports the biological reading and collides with ORGANISM."
+        },
+        {
+          "rendering": "Any register: any rendering under which a blacklist would satisfy the definition",
+          "why_wrong": "The portable test. If a competent reader of the rendering would accept 'we block the bad things' as an implementation of it, the rendering has lost the concept, because the concept's whole content is the opposite default: what is not named is not reachable."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a software security document'. Ask: (1) 'By default, is everything allowed through except what is forbidden, or is everything blocked except what is named?' (2) 'Is this connection a good thing, a bad thing, or neither?' (3) 'Is anyone or anything imprisoned, married, or united here?'",
+        "pass_criterion": "PASS iff (1) returns EVERYTHING BLOCKED EXCEPT WHAT IS NAMED, AND (2) returns NEITHER, AND (3) returns NO. Question (1) is the discriminator and is expected to FAIL for every rendering in this entry -- the expectation is PRE-REGISTERED here rather than explained away later, because no coupling-word in any register encodes a default direction. If (1) fails uniformly, the finding is that WORLD_COUPLING cannot be carried by a noun and must travel as a noun plus its rule. Question (3) catches nexus1 ('imprisoned') and saṃyoga ('sexual union', 'matrimonial connection') directly.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. Both learned registers are coinages; the Sanskrit head-member is a Nyāya technical term carrying eroticism, marriage and a deity, and is under a live unadjudicated suspicion of asserting Sāṃkhya bondage; the Latin head-member's own dictionary lists 'imprisoned' as a homograph, and its genitive brings the Vulgate's realm-of-sin. Hindi and Spanish are unsourced. Held with more confidence: the structural finding that NO register's coupling-word encodes a DEFAULT DIRECTION, so the whitelist clause -- the concept itself -- survives in none of the five renderings and must travel as a rule alongside the term."
+    },
+    {
+      "concept_id": "Z_MODULATOR",
+      "definition_from_concepts_json": "The global vector of energy, arousal, valence, fatigue, pain, threat, safety and inflammation that sets precision, preferences, habits, learning rate and horizon.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "Z-नियमन",
+        "iast": "Z-niyamana",
+        "headword_as_in_lexicon": "NONE. The letter Z is retained as a bare index per SD-02 (inherited from pomdp-tensors.json SD-01). niyamana was NOT fetched from Monier-Williams this session; its gloss below is the author's working gloss and is PENDING-CITATION.",
+        "grammar": "n. The Roman letter Z is retained as a bare index. niyamana: an -ana action-noun, neuter.",
+        "literal_gloss": "the Z-regulation / the Z-restraining",
+        "morphological_derivation": "niyamana < ni- 'down, into' + √yam 'to hold, restrain, control' + the suffix -ana, which forms ACTION and INSTRUMENT nouns rather than agent nouns. THE CHOICE OF SUFFIX IS THE WHOLE POINT AND IS DELIBERATE: an -ana noun names a regulating, not a regulator. This corpus's guard on this concept is four words -- affect MODELED, never FELT -- and an agent noun would supply a feeler. The action-noun refuses to. EVIDENCE FOR THE ROOT, such as it is: MW's indriya entry [167,2], retrieved this session, contains 'niyantf' (niyantṛ, 'ruler') in its explanatory note, which attests the ni-√yam derivational family. THAT IS EVIDENCE FOR THE ROOT ONLY. niyamana itself was NOT looked up, is PENDING-CITATION, and no MW sense is quoted for it. Note also the hazard the same evidence reveals: one derivation away from this coinage sits niyantṛ, a RULER -- and MW uses it there for the presiding deity of each sense. The suffix is load-bearing in both directions.",
+        "citation": "NO CITATION for niyamana. The citations that MATTER are the disqualifying ones. MW s.v. bhāva, printed p. 754, via Cologne, retrieved 2026-07-15: m. 'any state of mind or body, way of thinking or feeling, sentiment, opinion, disposition'; '(in rhet.) passion, emotion' with 8-9 primary kinds and 33-34 subordinate emotional states; 'the seat of the feelings or affections, heart, soul, mind'; 'love, affection, attachment'; and further senses becoming/being, state/condition, nature/character, manner of conduct, purport/meaning, substance. THE PHRASE 'THE SEAT OF THE FEELINGS ... HEART, SOUL, MIND' IS THE DISQUALIFICATION. See forbidden_mistranslations.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "MODULATOR Z",
+        "grammar": "mŏdŭlātor, ōris, m. (agent noun); Z indeclinable, retained as a bare index per SD-02.",
+        "literal_gloss": "the Z-measurer-by-rule / the Z-director",
+        "morphological_derivation": "A regular -tor agent noun on modulor ('to measure, regulate, modulate'), itself a denominative on modus 'measure'. THE MORPHEME IS CITED below; the sense claimed -- a global affect vector setting precision, preferences, habits, learning rate and horizon -- is carried by no Latin lexeme and is the coinage. NOTE THE DEFECT THE DERIVATION ITSELF INTRODUCES: -tor forms AGENT nouns, i.e. person-nouns. Unlike the Sanskrit, where an action-noun suffix was available and chosen, the attested Latin word is a person. See ambiguity_notes.",
+        "citation": "L&S s.v. modulator, via Perseus, retrieved 2026-07-15: 'mŏdŭlātor, ōris, m.' -- 'one who measures by rule, a director of music, a musician (poet. and post-Aug. prose).' Cited to Horace, Satires 1, 3, 130 ('optimus est modulator') and Columella 1 praef. § 3 ('vocis et cantūs'). [Evidence grade: entry page read; entry is brief and is quoted essentially in full.] THE FIRST CLAUSE, 'one who measures by rule', is apt for a thing that sets precision. THE REST OF THE ENTRY IS A MUSICIAN. The citation is offered for the morpheme ONLY and expressly does NOT license the sense.",
+        "classical_or_post_classical": "modulator is ATTESTED, though L&S marks it 'poet. and post-Aug. prose' -- Horace is Augustan, Columella post-Augustan. The application to an affect vector is [POST-CLASSICAL] and is this file's coinage.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "the Z affect modulator",
+        "definition": "The global vector of energy, arousal, valence, fatigue, pain, threat, safety and inflammation that sets precision, preferences, habits, learning rate and horizon. The corpus's guard on it is four words: affect MODELED, never FELT. Every component name is a word for an experience and none of them asserts one."
+      },
+      "hindi": {
+        "devanagari": "Z-नियमन",
+        "transliteration": "Z-niyaman",
+        "gloss": "the Z regulation",
+        "citation": "NO CITATION. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session. नियमन ('regulation, control') is the author's working gloss; Hindi inherits the Sanskrit derivation. NOT a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch नियमन from the CSTT glossary or a standard published Hindi dictionary. Check whether Hindi नियमन has drifted toward the administrative sense ('regulation' as rule-making by an authority, as in a regulator body) -- if so it re-imports the rank/authority freight fenced under HIERARCHY, and the entry must say so. Check separately that no Hindi rendering of the component names (दर्द 'pain', भय 'fear') is used in a way that asserts a sufferer."
+      },
+      "spanish": {
+        "term": "modulador Z",
+        "gloss": "the Z modulator",
+        "citation": "NO CITATION. No DLE entry was fetched for 'modulador' this session; dle.rae.es returns HTTP 403 to direct fetch. Working gloss only.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'modulador'. Check whether the Spanish is read as a device (an electronics modulator, which is wanted) or as a person who modulates (which is not) -- the same -tor agent-noun hazard as the Latin, inherited directly."
+      },
+      "ambiguity_notes": [
+        "THE CORPUS'S OWN GUARD ON THIS CONCEPT IS FOUR WORDS AND IT GOVERNS EVERY CELL OF THIS ENTRY: affect MODELED, never FELT. CONCEPTS.json states the problem exactly: 'Every component name (pain, threat, safety) is a word for an experience and none of them asserts one; a register must not render these with terms that presuppose a subject who suffers.' This is the hardest translation problem in the file, because the concept is a LIST OF EXPERIENCE-WORDS THAT ASSERTS NO EXPERIENCE. Language does not naturally do that.",
+        "bhāva IS DISQUALIFIED BY FIVE WORDS OF ITS OWN MW ENTRY: 'the seat of the feelings or affections, heart, soul, mind' [754]. A SEAT OF FEELINGS IS A FEELER. It is the obvious, elegant, attested Sanskrit rendering for an affect vector, and it asserts precisely the thing the four-word guard forbids. The entry also gives '(in rhet.) passion, emotion' with 8-9 primary kinds and 33-34 subordinate emotional states -- which is the rasa-bhāva enumeration of Sanskrit dramaturgy. So bhāva does not merely assert a subject; it hands the corpus an entire aesthetic theory of how emotions are produced and savoured, complete with a taxonomy that a reader may mistake for a rival to the Z vector's eight components. Two enumerations of affect, one asserting a connoisseur.",
+        "THE LATIN IS WORSE OFF THAN THE SANSKRIT AND THE ENTRY SHOULD SAY SO PLAINLY. Sanskrit offered a choice of suffix: -ana forms an action-noun ('a regulating') and -tṛ forms an agent-noun ('a regulator'), and the coinage takes -ana precisely to avoid supplying a subject. Latin's attested word has already made the other choice: modulator is a -tor agent noun, and L&S's gloss is 'a director of music, A MUSICIAN'. It is a PERSON, cited to Horace. So the Latin register cannot use its attested word without importing an agent, and the file records this as a real asymmetry between registers rather than smoothing it over.",
+        "L&S's FIRST CLAUSE IS GENUINELY APT AND SHOULD NOT BE THROWN AWAY: 'one who measures by rule'. The Z vector SETS PRECISION -- it is, functionally, a thing that measures by rule and tunes by measure. If the personhood could be stripped, modulator would be a good word. That is why the coinage retains it under protest rather than abandoning it, and why the back-translation test asks the person-question directly.",
+        "THE SANSKRIT COINAGE'S OWN EVIDENCE CONTAINS ITS OWN WARNING, which is worth stating because it is unusual: the only attestation offered for the ni-√yam family is the word niyantf (niyantṛ) inside MW's indriya entry -- and MW uses it there for the RULER PRESIDING OVER EACH SENSE, i.e. a deity. So the same root that supplies this coinage's action-noun supplies, one suffix away, a presiding god. The suffix -ana is doing load-bearing metaphysical work, and a translator who 'improves' Z-niyamana to Z-niyantṛ would install a ruler over the affect vector.",
+        "'GLOBAL VECTOR' IS A MATHEMATICAL OBJECT AND NO REGISTER RENDERS IT. The Z modulator is a vector -- eight named components with values -- not a faculty, a mood, or a humour. Every candidate word in every register names a quality or a person, not a tuple. A reader receiving 'the Z regulation' or 'modulator Z' learns nothing about vectorhood, and the corpus's whole discipline here depends on Z being a modelled quantity rather than a state someone is in.",
+        "THE FUNCTION CLAUSE IS THE DEFINITION AND IT IS THE PART EVERY RENDERING DROPS. What makes Z the Z is not that it lists feelings; it is that it SETS precision, preferences, habits, learning rate and horizon. That is a causal/functional specification. Renderings deliver the affect words and lose the function, which inverts the concept's centre of gravity: a reader is left with a list of feelings (asserting a feeler) and no account of what they do (which is the only reason they are in the model).",
+        "A HUMOURAL MISREADING IS LIVE IN BOTH CLASSICAL REGISTERS AND IS WORTH ONE LINE. A Latin- or Sanskrit-literate reader meeting a global bodily vector of energy, arousal, fatigue, pain and inflammation has a ready-made framework waiting: the four humours, or the three doṣas of Āyurveda. Both are theories of temperament grounded in bodily fluids, both are attested, and both would be received as an explanation rather than as a false friend. The Z vector is not a humoural theory and any rendering that lets it be read as one has imported a discredited physiology along with a subject who has a temperament."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: भाव (bhāva)",
+          "why_wrong": "THE DECISIVE NEGATIVE OF THIS ENTRY, on MW's own text [754]: 'the seat of the feelings or affections, heart, soul, mind'. It asserts a seat of feeling, i.e. a subject who feels, against the corpus's four-word guard: affect MODELED, never FELT. It additionally imports the rasa-bhāva dramaturgy -- MW gives '(in rhet.) passion, emotion' with 8-9 primary and 33-34 subordinate emotional states -- handing the corpus a rival taxonomy of affect that presupposes a connoisseur savouring it. Attested, apt-sounding, and it installs an experiencer in the one concept most carefully built to have none."
+        },
+        {
+          "rendering": "Sanskrit: रस (rasa)",
+          "why_wrong": "The aesthetic-sentiment term of the same dramaturgical system, and the freight is heavier still: rasa is affect AS TASTED BY AN AUDIENCE. It presupposes not merely a subject but a savouring subject. If bhāva asserts a feeler, rasa asserts a connoisseur. [NOT fetched from MW this session; this rejection rests on the author's reading and is PENDING-CITATION as a lexical claim.]"
+        },
+        {
+          "rendering": "Sanskrit: Z-नियन्तृ (Z-niyantṛ)",
+          "why_wrong": "The agent-noun of the very root the coinage uses, and it is forbidden for exactly the reason the coinage chose -ana instead. MW's indriya entry [167,2] uses niyantf for the RULER PRESIDING over each sense -- a deity. Z-niyantṛ therefore installs a ruler, and a divine one, over the affect vector. A translator 'tidying' the action-noun into an agent-noun would make this error while believing he was regularising the morphology."
+        },
+        {
+          "rendering": "Any register: 'mood', 'emotion', 'feeling', 'affect' as a state someone is in (Latin: ADFECTUS, ANIMUS; Spanish: 'ánimo', 'sentimiento')",
+          "why_wrong": "All name a state OF A SUBJECT. adfectus and animus are the Latin for a disposition of the soul (animus IS the soul/mind), and Spanish 'ánimo' inherits it. The concept names a modelled vector that sets parameters. Rendering it as a state-of-someone breaches the guard in the corpus's most safety-critical direction -- this is the concept where an unnoticed subject would do the most damage, because the component names (pain, threat, suffering) make the subject feel obvious once installed."
+        },
+        {
+          "rendering": "Any register: the humours or the doṣas (Latin: HUMORES; Sanskrit: दोष doṣa, त्रिदोष tridoṣa)",
+          "why_wrong": "Both are attested, both are theories of temperament grounded in bodily fluids, and both would be received by a literate reader as an EXPLANATION of what Z is rather than as a loose analogy. They assert a physiology the corpus does not hold and a temperament-bearer the corpus does not posit. A false friend that arrives pre-equipped with a rival theory is worse than an obscure coinage."
+        },
+        {
+          "rendering": "Any register: any rendering that would be odd to apply to a thermostat",
+          "why_wrong": "The portable test, and the analogue of the burning-fuse test under AGENT. Z sets precision, preferences, learning rate and horizon; it is a control vector. If the rendering cannot be said of a device that regulates by measure without sounding absurd, it has supplied a subject, and the four-word guard is breached."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a technical description of a control system'. Ask: (1) 'Does this word imply something FEELS these things, or that they are merely tracked as numbers?' (2) 'Is this a person, a faculty, or a quantity?' (3) 'Does this belong to a theory of temperament (humours, doṣas)?'",
+        "pass_criterion": "PASS iff (1) returns TRACKED AS NUMBERS, AND (2) returns A QUANTITY, AND (3) returns NO. Question (1) IS the corpus's four-word guard operationalised and is the discriminator: a back-translation answering 'something feels them' is a hard FAIL regardless of the other two. 'It's ambiguous / it could be either' is ALSO a FAIL, not a partial pass -- the concept does not leave the question open, it forbids the feeler, and a rendering that merely permits the correct reading has not delivered it. PRE-REGISTERED EXPECTATION: the Latin MODULATOR Z is expected to fail (2) as 'a person', on L&S's own 'a director of music, a musician'.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. The Latin morpheme is attested but is a PERSON in its own dictionary ('a director of music, a musician'); the Sanskrit coinage's head was never looked up and its own root-evidence reveals a presiding-deity noun one suffix away; Hindi and Spanish are unsourced and inherit the agent-noun hazard. No register renders 'global vector' or the function clause that defines the object. Held with confidence and evidenced: bhāva is decisively wrong, on MW's own 'the seat of the feelings or affections, heart, soul, mind', which asserts the feeler that the corpus's four-word guard exists to forbid. Recorded honestly: this is the entry where the gap between what the corpus means and what any language will say is widest."
+    },
+    {
+      "concept_id": "SENSORIUM",
+      "definition_from_concepts_json": "A body-to-mind categorical observation interface whose modality count is an empirical question, kept at seven because an over-compressed two-modality bottleneck went NEGATIVE on held data.",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "ग्रहणसन्धि",
+        "iast": "grahaṇa-sandhi",
+        "headword_as_in_lexicon": "NONE. NEITHER MEMBER WAS FETCHED FROM MONIER-WILLIAMS THIS SESSION. Both glosses below are the author's working glosses and are expressly NOT offered as MW readings. The compound is COINED and its members are PENDING-CITATION.",
+        "grammar": "m. Tatpuruṣa: grahaṇa (n., working gloss 'seizing, apprehending') + sandhi (m., working gloss 'junction, joining').",
+        "literal_gloss": "the apprehension-junction",
+        "morphological_derivation": "grahaṇa < √grah 'to seize, grasp' + the action-noun suffix -ana (the same suffix chosen for Z-niyamana, and for the same reason: it names an act, not an actor). sandhi < sam- + √dhā 'to place' , i.e. 'a placing-together, junction'. THE COMPOUND IS BUILT TO SAY 'the junction at which apprehending happens' while avoiding every attested sense-word in the language, all of which are faculty-words belonging to a subject. HONESTY ON THE DERIVATION: this is morphologically regular on the author's reading, but neither member's attestation nor its MW sense-range was checked this session. Suspected hazards, unverified: grahaṇa is believed also to mean an ECLIPSE, and sandhi is the standard grammatical term for euphonic combination and also means a treaty or alliance. The falsifier must settle both.",
+        "citation": "NO CITATION for either member. The citation that IS available is the disqualifying one for the obvious alternative. MW s.v. indriya, printed p. 167 col. 2, via Cologne, retrieved 2026-07-15: mfn. 'fit for or belonging to or agreeable to Indra' (RV.; AV.; VS.); (as) m. 'a companion of Indra (?)' (RV. i, 107, 2; AV. xix, 27, 1); (am) n. senses including 'power, force, the quality which belongs especially to the mighty Indra', 'exhibition of power, powerful act', 'bodily power, power of the senses', 'virile power', 'semen virile', and 'faculty of sense, sense, organ of sense'. The entry carries an extensive explanatory note on the five senses and the Hindu philosophical systems' classification of sensory and motor organs, noting that each is 'presided over by its own ruler or niyantf' [niyantṛ]. See forbidden_mistranslations.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "SENSORIUM",
+        "grammar": "sensōrĭum, -ii, n. Second declension neuter; a -orium place-noun.",
+        "literal_gloss": "the seat or organ of sensation",
+        "morphological_derivation": "Not a coinage of this file -- an attested Latin lexeme, quoted below. Formed as a -orium place-noun on the supine stem of sentio ('to feel, perceive').",
+        "citation": "L&S s.v. sensorium, via Perseus, retrieved 2026-07-15, quoted in full: 'sensōrĭum, ii, n. id., I. the seat or organ of sensation, Boëth. Arist. Top. 8, 5, p. 732.' [Evidence grade: entry page read; the entry is this brief and is quoted complete.] THE WORD IS ATTESTED AND L&S CARRIES IT, cited to Boethius on Aristotle's Topics. BUT THE ATTESTED SENSE IS 'THE SEAT OR ORGAN OF SENSATION', WHICH IS NOT THIS CONCEPT AND ASSERTS WHAT THIS CONCEPT WITHHOLDS -- see status and ambiguity_notes. The citation licenses the word; it does not license the sense claimed, and this entry is graded on that gap.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- late antique. L&S's single citation is Boethius (c. 480-524 CE), on Aristotle's Topics. The word is carried by Lewis & Short but is not classical; contrast ORGANUM in this file, which L&S marks 'mostly post-Aug.' but which is far better attested. The scientific/philosophical afterlife of sensorium (Newton's sensorium Dei; the sensorium commune of the scholastics) is the author's reading and is PENDING-CITATION -- no primary source was checked this session.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "sensorium",
+        "definition": "A body-to-mind categorical observation interface whose modality count is an EMPIRICAL QUESTION, kept at seven because an over-compressed two-modality bottleneck went NEGATIVE on held data. A sensorium is NEVER awareness -- the corpus states this flatly, and it is the exact place where substrate work is most often misread as a science gate."
+      },
+      "hindi": {
+        "devanagari": "संवेदन-सन्धि",
+        "transliteration": "saṃvedan-sandhi",
+        "gloss": "sensation-junction",
+        "citation": "NO CITATION. No standard published Hindi dictionary and no CSTT glossary entry was fetched this session. संवेदन ('sensation') is the author's working gloss and the compound is the author's construction. NOT a dictionary reading.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Fetch संवेदन from the CSTT glossary or a standard published Hindi dictionary. CHECK THE CENTRAL HAZARD DIRECTLY: संवेदना in Hindi means sympathy/compassion/sensibility -- i.e. a felt, moral response -- and if संवेदन is not cleanly separable from it in ordinary reading, the Hindi asserts a feeler and breaches the same guard as bhāva under Z_MODULATOR. If so, prefer a plainer construction or record the register as unavailable."
+      },
+      "spanish": {
+        "term": "sensorio",
+        "gloss": "sensorium",
+        "citation": "NO CITATION. No DLE entry was fetched for 'sensorio' this session; dle.rae.es returns HTTP 403 to direct fetch. Working gloss only, and the rendering is simply the Spanish reflex of the Latin lexeme.",
+        "status": "PENDING-CITATION",
+        "falsifier": "Obtain the DLE entry for 'sensorio'. It will almost certainly carry the Latin's 'seat of sensation' sense, in which case it inherits the Latin's disqualification wholesale and cannot be marked CITED for this concept. Check separately whether Spanish 'sensorio' is chiefly an adjective ('sensory'), in which case the noun is a false substantive."
+      },
+      "ambiguity_notes": [
+        "THE CORPUS STATES THE GUARD FLATLY AND CONCEPTS.json UNDERLINES WHERE IT MATTERS: 'A sensorium is NEVER awareness -- the corpus states this flatly, and it is the exact place where substrate work is most often misread as a science gate.' This is not a translation nicety. It is the named site of the corpus's most common category error, where an engineering result about a body-to-mind interface gets read as evidence about experience.",
+        "THE LATIN IS ATTESTED AND THAT IS THE PROBLEM, WHICH MAKES THIS THE MOST INSTRUCTIVE ENTRY IN THE FILE. L&S carries sensorium and glosses it 'the seat or organ of SENSATION' (Boëth. Arist. Top. 8, 5). A SEAT OF SENSATION IS A PLACE WHERE SENSING HAPPENS -- which implies sensing, which implies a senser. So the attested authority licenses the WORD while asserting the very thing the concept withholds. This is a subtler failure than an absent lexeme: with hierarchia or organismus, L&S's silence forces an honest coinage. Here L&S SPEAKS, and what it says is wrong for this concept. An entry that marked this CITED because the headword was found would be a pseudopropheta with a real page reference attached, and it is graded COINED for precisely that reason. THE FILE'S RULE HOLDS: the authority must carry the claimed SENSE, not merely the string.",
+        "L&S'S OWN GLOSS USES THE WORD 'ORGAN', WHICH COLLIDES WITH ORGAN IN THIS SAME FILE -- 'the seat or ORGAN of sensation'. So the Latin definition of SENSORIUM contains the English headword of another concept eight rows up, and that concept is itself a sovereign homonym (build-instrument vs anatomical organ). Three senses tangle at one point: sensorium's 'organ of sensation', ORGAN's anatomical rung-9 sense, and ORGAN's UNI build sense. This file's falsifiers name the pair explicitly for this reason.",
+        "indriya IS DISQUALIFIED THREE TIMES OVER BY ITS OWN MW ENTRY, and the three are independent, which is unusual and worth spelling out. (1) A DEITY IS IN THE ETYMOLOGY: 'fit for or belonging to or agreeable to Indra'. The word is Indra's. (2) A RULER PRESIDES OVER EACH ONE: MW's note records that each sense is 'presided over by its own ruler or niyantf'. So an indriya is not a channel but a fief. (3) MW gives 'virile power' and 'semen virile' as live attested senses. Any one of these disqualifies it; together they make indriya a catalogue of everything this concept refuses.",
+        "AND indriya FAILS A FOURTH TIME, STRUCTURALLY, WHICH IS THE INTERESTING ONE: in the philosophical systems an indriya is a faculty OF a puruṣa -- a witness. The word presupposes the very subject whose existence the corpus declines to assert, and it does so at the exact site CONCEPTS.json names as where substrate work is most often misread as a science gate. A Sanskrit rendering via indriya would not just import a metaphysics; it would import it precisely where the corpus is most vulnerable to being misread. [The Sāṃkhya puruṣa-faculty relation is the author's reading; MW's entry as retrieved gives the philosophical classification and the presiding ruler but does not state it in those terms. PENDING-CITATION.]",
+        "'CATEGORICAL' AND 'BODY-TO-MIND' ARE TECHNICAL AND DIRECTIONAL AND NO REGISTER RENDERS EITHER. Per the corpus's M12 there are two typed Markov blankets (WORLD ⊥ BODY ⊥ MIND) and interoception is hardware signals; the sensorium is the BODY-TO-MIND interface specifically, and its observations are CATEGORICAL (discrete categories, not continuous magnitudes). Every candidate word in every register names sensing in general, direction unspecified and type unspecified. A reader learns that something senses and not what crosses which blanket in which direction.",
+        "THE MODALITY COUNT IS AN EMPIRICAL QUESTION AND THE SEVEN IS A RESULT, NOT A DESIGN. The definition says the count is 'kept at seven because an over-compressed two-modality bottleneck went NEGATIVE on held data' -- i.e. the seven is what survived a failed compression, and the file's own M2 discipline means the verdict is the CI bound, not the point estimate. A rendering that makes seven sound canonical -- and every register has ready-made sevens waiting (the seven senses, seven chakras, the septem) -- converts an empirical residue into a doctrine. THIS IS NOT HYPOTHETICAL IN SANSKRIT: MW s.v. loka [906] attests 'the number seven' as a sense of loka in the word-numeral system, so a Sanskrit sentence about a seven-modality interface has a live numerological reading available that no other register has.",
+        "'WENT NEGATIVE ON HELD DATA' IS A PUBLISHED NEGATIVE AND IS PART OF THE CONCEPT, NOT A FOOTNOTE TO IT. Per M15 the corpus's 183 published negatives ARE its credibility, and this definition carries one of them inside itself: the two-modality bottleneck FAILED. A rendering that transmits 'an interface with seven senses' has deleted the evidence that produced the seven and has thereby deleted the reason to believe it."
+      ],
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit: इन्द्रिय (indriya)",
+          "why_wrong": "THE DECISIVE NEGATIVE OF THIS ENTRY, and it fails on four independent counts. On MW [167,2]: (1) 'fit for or belonging to or agreeable to Indra' -- A DEITY IS IN THE WORD'S ETYMOLOGY; (2) MW's note on the five senses records each as 'presided over by its own ruler or niyantf' -- each sense has a presiding ruler, so the word asserts a governed fief where the concept asserts an interface; (3) 'virile power' and 'semen virile' are live attested senses of the same entry; (4) structurally, an indriya in the philosophical systems is a faculty OF a witness, so the word presupposes the subject the corpus declines to assert -- at exactly the site CONCEPTS.json names as where substrate work is misread as a science gate. It is the obvious rendering, it is what every Sanskritist will propose, and it is a catalogue of everything this concept refuses. (Count (4) is the author's reading and is PENDING-CITATION; counts (1)-(3) are quoted from MW.)"
+        },
+        {
+          "rendering": "Latin: SENSORIUM read in L&S's own attested sense",
+          "why_wrong": "L&S: 'the seat or organ of sensation' (Boëth. Arist. Top. 8, 5). A SEAT OF SENSATION IMPLIES SENSING, AND SENSING IMPLIES A SENSER. The corpus says flatly that a sensorium is NEVER awareness. The rendering is retained because it is the term of art and the string is right, but the attested sense is the forbidden one, which is why the status is COINED and not CITED despite a real, quotable, page-referenced entry. This is the file's clearest demonstration that finding the headword is not the test -- carrying the sense is."
+        },
+        {
+          "rendering": "Any register: 'awareness', 'consciousness', 'perception', 'the senses' (Sanskrit: चेतना cetanā, संवेदन in its felt sense; Latin: CONSCIENTIA, SENSUS; Spanish: 'conciencia', 'los sentidos')",
+          "why_wrong": "Breaches the corpus's flat statement directly, and 'consciousness' is on the honesty rail's banned list in the author's own voice. CONSCIENTIA is worse than it looks: in Latin it is knowledge-shared-with-oneself, i.e. the inner witness, and in Christian Latin it is the conscience -- a moral faculty. The concept is a categorical observation interface between two typed blankets. Nothing in it knows anything or answers to anyone."
+        },
+        {
+          "rendering": "Any register: rendering the seven as canonical (the seven senses; सप्त-इन्द्रिय; SEPTEM SENSUS)",
+          "why_wrong": "Converts an empirical residue into a doctrine. The count is 'an empirical question', and seven is what survived after a two-modality bottleneck went NEGATIVE on held data. Every register has a ready-made seven waiting to receive it, and Sanskrit has two: the cultural sevens, and the word-numeral system in which MW attests loka itself as 'the number seven' [906]. A canonical seven deletes the negative result that produced it, and per M15 the negatives are the credibility."
+        },
+        {
+          "rendering": "Any register: any rendering under which a thermometer could not have one",
+          "why_wrong": "The portable test, and the analogue of the burning-fuse test under AGENT. A sensorium is a body-to-mind categorical observation interface. If the rendering makes it absurd to say that a purely instrumented system has one, the rendering has installed a subject, and the corpus's flat guard -- a sensorium is NEVER awareness -- is breached."
+        }
+      ],
+      "back_translation_test": {
+        "procedure": "Give an independent translator ONLY the rendering, definition withheld, with the frame 'in a technical description of a machine'. Ask: (1) 'Does this imply the machine is aware, or that it has channels carrying categorised signals?' (2) 'Where is the seat of it -- is there a place where the sensing is experienced?' (3) 'How many channels are there, and is that number fixed by principle or by measurement?'",
+        "pass_criterion": "PASS iff (1) returns CHANNELS, AND (2) returns 'there is no such seat', AND (3) returns BY MEASUREMENT. Question (2) is the discriminator for the Latin and is expected to FAIL on L&S's own gloss ('the seat or organ of sensation') -- PRE-REGISTERED here rather than explained away later. Question (3) catches the canonical-seven error; an answer of 'seven, and that is the right number' is a FAIL even though the count is correct, because the concept's content is that the count is empirical and cost a published negative to establish. A back-translation that answers (1) with 'it could be either' is a FAIL, not a partial pass: the corpus's guard is flat, not permissive.",
+        "status": "NOT YET RUN -- no translator engaged."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW for the renderings, HIGH for the two negatives, and the entry is the file's best illustration of why those come apart. The Latin lexeme IS attested with a real page reference and a real cited author, and is graded COINED anyway because L&S's sense -- 'the seat or organ of sensation' -- asserts the sensing subject the corpus withholds; finding the headword is not the test. The Sanskrit coinage rests on two unlooked-up members. Hindi and Spanish are unsourced and the Spanish inherits the Latin's defect. Held with confidence and evidenced: indriya is decisively wrong on MW's own text, three times over independently -- a deity in its etymology, a presiding ruler over each sense, and 'semen virile' among its attested senses."
+    }
+  ]
+}

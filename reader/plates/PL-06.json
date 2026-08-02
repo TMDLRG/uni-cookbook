@@ -1,0 +1,516 @@
+{
+  "id": "PL-06",
+  "title": "The sperm — physics dictates form at Re ≪ 1",
+  "caption": "An engraved plate in six panels. THE REGIME (I) is computed on the plate rather than asserted: Re = ρuL/µ with ρ = 1.0×10³ kg/m³ (water), u = 6.2×10⁻⁵ m/s (CN06-01), L = 5.5×10⁻⁵ m (CN06-06, itself NOT-MEASURED) and µ = 7.0×10⁻⁴ Pa·s (CN06-08) gives 4.9×10⁻³ (CN06-10, MODELED); every input and product was re-evaluated for this plate and reproduces. The Stokes coast is 0.45 Å (CN06-12, MODELED), drawn to scale against the 1.54 Å carbon–carbon bond: inertia is not small here, it is absent. What is load-bearing is the EXPONENT, not the digits — Re ~ 10⁻³ and d_coast ~ 10⁻¹¹ m survive any plausible revision of the inputs. THE AXONEME (II) is drawn with NO DIMENSION AT ALL, because CN-06 carries none: the 9+2 arrangement is sourced, the metric is NOT-SOURCED (a gap in our homework, not in the literature), and the cross-section is not to scale. Two of the nine doublets are shaded as the HYPOTHESIZED active fraction (67,500 × 2/9 = 15,000 — CN06-14), an arithmetic consequence of the two-groups-of-doublets hypothesis and not an observation of which doublets are active. The Summers & Gibbons (1971) trypsin ablation is recorded with its extension factor NOT-SOURCED (CN06-16) and with an attribution correction: S&G did NOT identify what trypsin removed — that the targets are the radial-spoke heads and nexin links is later work (Witman et al.), and the ablation licenses the conclusion without licensing the mechanism being read back into the 1971 paper. THE SCALLOP THEOREM (III) is drawn as the REFUTED alternative: a reciprocal paddle whose net displacement is EXACTLY ZERO — not inefficient, zero — with the reason drawn in configuration space (one hinge = one degree of freedom = a cycle that must retrace its own path and enclose no area; Purcell's own escape adds a second hinge and the cycle encloses area). That distinction is asserted QUALITATIVELY, as CN-06 states it; no proportionality between enclosed area and displacement is printed, because the corpus carries none. The drag anisotropy all flagellar thrust is bought from (CN06-13) is printed verbatim from the ledger, with a plate note recording that the row's own formula and its own printed sub-range do not reproduce one another. The panel carries its fence: cervical mucus is VISCOELASTIC, so the theorem's Newtonian premise is violated in vivo and viscoelasticity is a named escape in Lauga (2011) — inside the theory, not a refutation of it. THE TRAVELLING WAVE (IV) is drawn to scale in λ and L only, at 13.5 px per µm, on the only MEASURED flagellar length (41 µm, CN06-07); amplitude and envelope are NOT-SOURCED and schematic. The frequency halves from 23 to 11 Hz and the wavespeed drops 4.4-fold while the swimming speed does not change — the same cells, the same 37 °C, only the fluid differs. THE HELIX (V) is drawn to scale from CN06-32 as the sampling instrument that converts a static spatial gradient into a periodic temporal signal, and the detour is priced at 33 % of path length (MODELED, computed on the plate). Its four parameters are the UNSTIMULATED BASELINE — no gradient present — and the gradient drawn behind the helix is the argument, not the condition the geometry was measured under. Species is a fence, not a detail: I and IV are HUMAN, II and V are SEA URCHIN, and CN-06 records the crossing as a first-class conflation trap. Every number carries units, a ledger row and an evidence class. THE PLATE CONTAINS ZERO UNI CLAIMS: a nature citation is never a UNI gate, and the honest program position is unchanged by it — ~2 of 11+ developmental rungs earned.",
+  "source_chapters": [
+    "cookbook/recipes-natura/CN-06-sperm.md",
+    "encyclopedia/NATURE-LEDGER.md (rows CN06-01…CN06-39 — the authority for every value; where it and the chapter disagree, the ledger wins)",
+    "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md (evidence vocabulary; amended 2026-07-15-A)"
+  ],
+  "corpus_tip": "f1be794",
+  "claims": [
+    {
+      "row": "CN06-01",
+      "panel": "I, IV",
+      "symbol": "u",
+      "value": "62 (low visc) / 65 (high visc)",
+      "units": "µm/s",
+      "scope": "migrating human sperm, 37 °C, n = 16 / 19",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Smith et al. 2009, Cell Motil Cytoskeleton 66(4):220–236, DOI 10.1002/cm.20345",
+      "falsifier": "Repeat high-frame-rate imaging of the migrating cohort; a mean outside 40–90 µm/s refutes."
+    },
+    {
+      "row": "CN06-02",
+      "panel": "IV",
+      "symbol": "f_beat",
+      "value": "23 (low visc) / 11 (high visc)",
+      "units": "Hz",
+      "scope": "same cells, 37 °C; low-visc buffer vs ~0.14 Pa·s analogue",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Smith et al. 2009",
+      "falsifier": "A frequency independent of viscosity under the same conditions."
+    },
+    {
+      "row": "CN06-04",
+      "panel": "IV",
+      "symbol": "λ",
+      "value": "39 (low visc) / 18 (high visc)",
+      "units": "µm",
+      "scope": "human sperm flagellar wavelength, 37 °C",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Smith et al. 2009",
+      "falsifier": "Outside range at stated viscosity."
+    },
+    {
+      "row": "CN06-05",
+      "panel": "IV",
+      "symbol": "c_wave",
+      "value": "890 (low visc) / 200 (high visc)",
+      "units": "µm/s",
+      "scope": "wavespeed = f × λ",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Smith et al. 2009",
+      "falsifier": "Recompute; c ≠ fλ under stated conditions."
+    },
+    {
+      "row": "CN06-06",
+      "panel": "I, IV",
+      "symbol": "L_cell",
+      "value": "~50–60 (head 4–5, midpiece ~7–8, tail ≥45)",
+      "units": "µm",
+      "scope": "derived from WHO 2021 normative morphometry criteria — what counts as a normal-form spermatozoon — not a measured distribution over a population; used as an input to Re regardless",
+      "evidence_class": "NOT-MEASURED (in this pass; the criteria are normative, not a morphometric result)",
+      "source": "WHO 2021, WHO laboratory manual…human semen, 6th ed.",
+      "falsifier": "Fetch a primary morphometry study and print mean ± s.d. total length."
+    },
+    {
+      "row": "CN06-07",
+      "panel": "IV",
+      "symbol": "L_flag",
+      "value": "~41",
+      "units": "µm",
+      "scope": "human flagellum, tethered-cell imaging",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Saggiorato et al. 2017",
+      "falsifier": "Independent measurement >1.5× off."
+    },
+    {
+      "row": "CN06-08",
+      "panel": "I",
+      "symbol": "µ_buffer",
+      "value": "0.7 (0.73 ± 0.01 for HTF)",
+      "units": "mPa·s",
+      "scope": "aqueous buffer, 37 °C",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Saggiorato et al. 2017",
+      "falsifier": "Rheometry outside range at 37 °C."
+    },
+    {
+      "row": "CN06-09",
+      "panel": "III",
+      "symbol": "µ_mucus",
+      "value": "~0.14 (analogue) / ~0.2 (midcycle, Day 0) / ~0.68 (Day 5)",
+      "units": "Pa·s",
+      "scope": "Maxwell fit to measured G′/G″ at ~5 Hz, 37 °C",
+      "evidence_class": "MODELED",
+      "source": "Smith et al. 2009 (rheometry + fit); mucus moduli from Wolf et al. 1977, Fertil Steril 28:47–52",
+      "falsifier": "A direct steady-shear viscosity of periovulatory mucus outside 0.1–1 Pa·s."
+    },
+    {
+      "row": "CN06-10",
+      "panel": "I",
+      "symbol": "Re",
+      "value": "4.9 × 10⁻³ (bracket 2–6 × 10⁻³)",
+      "units": "dimensionless",
+      "scope": "human sperm, ρuL/µ; ρ=10³, u=6.2e−5, L=5.5e−5, µ=7.0e−4 (SI)",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter from Smith 2009 + Saggiorato 2017 + WHO 6th ed; regime per Purcell 1977, Am J Phys 45:3–11",
+      "falsifier": "Arithmetic error, or any input refuted under its stated condition."
+    },
+    {
+      "row": "CN06-11",
+      "panel": "I",
+      "symbol": "Re_mucus",
+      "value": "~2.6 × 10⁻⁵",
+      "units": "dimensionless",
+      "scope": "ρuL/µ; ρ=10³, u = 6.5e−5 (65 µm/s — the high-viscosity migrant velocity; NOT the 6.2e−5 used for Re), L=5.5e−5, µ = 0.14 Pa·s (SI)",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Recompute. At u = 6.2e−5 the value is 2.4 × 10⁻⁵; the exponent is unmoved either way."
+    },
+    {
+      "row": "CN06-12",
+      "panel": "I, IV",
+      "symbol": "d_coast",
+      "value": "~0.45 Å (4.5 × 10⁻¹¹ m), τ ≈ 0.7 µs",
+      "units": "m",
+      "scope": "Stokes coasting, τ=m/(6πµa); V≈17 µm³, ρ_cell≈1.1×10³, a≈2 µm",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter (inputs order-of-magnitude)",
+      "falsifier": "Recompute; a measured coasting distance >1 nm refutes."
+    },
+    {
+      "row": "CN06-13",
+      "panel": "III",
+      "symbol": "ζ⊥/ζ∥",
+      "value": "≈2 asymptotic only; ~1.5–1.8 at realistic aspect ratios. ζ⊥/ζ∥ = 2(ln(2λ/a) − 0.5)/(ln(2λ/a) + 0.5) — strictly < 2 for any real filament",
+      "units": "dimensionless",
+      "scope": "resistive-force-theory coefficient, slender filament, far from a boundary — a derived coefficient, not a measurement",
+      "evidence_class": "MODELED (slenderness is the fence)",
+      "source": "Gray & Hancock 1955, J Exp Biol 32:802–814",
+      "falsifier": "A slender-body or numerical computation giving a ratio outside 1.4–2.0 at flagellar aspect ratios."
+    },
+    {
+      "row": "CN06-14",
+      "panel": "II",
+      "symbol": "n_dynein",
+      "value": "~67,500 total; ~15,000 active/beat",
+      "units": "motors",
+      "scope": "sea-urchin sperm flagellum; active count is a hypothesis (67,500 × 2/9)",
+      "evidence_class": "OBSERVED-REPLICATED (total, cryo-ET) / HYPOTHESIZED (active fraction)",
+      "source": "Chen et al. 2015, Biophys J 109:2562–2573",
+      "falsifier": "Count in situ; an active fraction ≠ ~2/9."
+    },
+    {
+      "row": "CN06-15",
+      "panel": "II",
+      "symbol": "d_dynein",
+      "value": "~8",
+      "units": "nm/power stroke",
+      "scope": "axonemal dynein, single-molecule",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Chen et al. 2015 and refs therein",
+      "falsifier": "Different step periodicity."
+    },
+    {
+      "row": "CN06-16",
+      "panel": "II",
+      "symbol": "axoneme extension on trypsin + ATP",
+      "value": "— (the 'five or more times original length' previously printed here is withdrawn as unsourced; secondary accounts conflict: several-fold / ~7× / nine-fold)",
+      "units": "fold of original length",
+      "scope": "demembranated sea-urchin axoneme, brief trypsin digestion, + ATP",
+      "evidence_class": "NOT-SOURCED",
+      "source": "Summers & Gibbons 1971, PNAS 68(12):3092–3096 — extension figure not read in this pass; Lindemann & Mitchell, Mol Biol Cell 2018 recounts the experiment and gives no figure",
+      "falsifier": "Read S&G 1971 pp. 3092–3096 and print the extension factor."
+    },
+    {
+      "row": "CN06-17",
+      "panel": "IV",
+      "symbol": "n_ATP/beat",
+      "value": "(2.3 ± 0.2) × 10⁵ (low visc) → (3.2 ± 0.5) × 10⁵ (0.5 % MC)",
+      "units": "ATP/beat",
+      "scope": "demembranated sea-urchin sperm axoneme, single-cell, [ATP] = 20 µM, viscosity as stated — this quantity is not viscosity-independent",
+      "evidence_class": "OBSERVED-SINGLE (single study)",
+      "source": "Chen et al. 2015",
+      "falsifier": "Bulk S. purpuratus gives ~1 × 10⁵/beat — already a 2.3× discrepancy; carry it."
+    },
+    {
+      "row": "CN06-18",
+      "panel": "II",
+      "symbol": "r_ATP",
+      "value": "(2.4 ± 0.3) × 10⁶ active; (9.2 ± 0.2) × 10⁵ inactive",
+      "units": "ATP/s",
+      "scope": "demembranated Lytechinus sperm axoneme",
+      "evidence_class": "OBSERVED-SINGLE (single study)",
+      "source": "Chen et al. 2015",
+      "falsifier": "Independent single-cell measurement >2× off."
+    },
+    {
+      "row": "CN06-19",
+      "panel": "IV",
+      "symbol": "ε_hydro",
+      "value": "0.004 (low visc) → 0.013 (high visc)",
+      "units": "dimensionless",
+      "scope": "demembranated sea-urchin axoneme, 20 µM ATP, buffer vs 0.5 % MC",
+      "evidence_class": "OBSERVED-SINGLE (single study — not replicated)",
+      "source": "Chen et al. 2015, Table S1",
+      "falsifier": "Independent replication >3× off; not transferable to intact human sperm."
+    },
+    {
+      "row": "CN06-20",
+      "panel": "IV",
+      "symbol": "ε_chemo",
+      "value": "0.34 → 0.6",
+      "units": "dimensionless",
+      "scope": "as above",
+      "evidence_class": "OBSERVED-SINGLE (single study — not replicated)",
+      "source": "Chen et al. 2015",
+      "falsifier": "As above."
+    },
+    {
+      "row": "CN06-21",
+      "panel": "IV",
+      "symbol": "ε_swim",
+      "value": "0.001 → 0.008",
+      "units": "dimensionless",
+      "scope": "as above; ε_swim = ε_chemo · ε_hydro",
+      "evidence_class": "OBSERVED-SINGLE (single study — not replicated)",
+      "source": "Chen et al. 2015",
+      "falsifier": "As above."
+    },
+    {
+      "row": "CN06-22",
+      "panel": "IV, VI",
+      "symbol": "ε_hydro,human",
+      "value": "—",
+      "units": "dimensionless",
+      "scope": "intact human spermatozoon",
+      "evidence_class": "NOT-MEASURED",
+      "source": "not sourced in this pass",
+      "falsifier": "Measure ATP turnover + kinematics on one intact human cell."
+    },
+    {
+      "row": "CN06-28",
+      "panel": "V",
+      "symbol": "resact sensitivity",
+      "value": "1 bound molecule evokes a Ca²⁺ response; 50–100 saturate",
+      "units": "molecules",
+      "scope": "Arbacia punctulata sperm",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Kaupp et al. 2003, Nat Cell Biol 5:109–117",
+      "falsifier": "Single-molecule response fails to replicate."
+    },
+    {
+      "row": "CN06-29",
+      "panel": "V",
+      "symbol": "min. gradient",
+      "value": "0.8",
+      "units": "fM/µm",
+      "scope": "A. punctulata, resact",
+      "evidence_class": "OBSERVED-SINGLE (single group — not independently replicated)",
+      "source": "Kashikar et al. 2012, J Cell Biol 198(6):1075–1091",
+      "falsifier": "Independent measurement >10× off."
+    },
+    {
+      "row": "CN06-30",
+      "panel": "V",
+      "symbol": "T_sample",
+      "value": "0.2–0.6",
+      "units": "s",
+      "scope": "A. punctulata, measured Ca²⁺-response latency, which the authors read as a sampling window. Equating it with Berg & Purcell's integration time T is a MODELED identification, not an observation",
+      "evidence_class": "OBSERVED-SINGLE (single group) — the latency; MODELED — its identification with T",
+      "source": "Kashikar et al. 2012",
+      "falsifier": "Independent measurement >10× off. For the T identification: show the latency scales with chemoattractant concentration as a counting-limited T predicts."
+    },
+    {
+      "row": "CN06-32",
+      "panel": "V",
+      "symbol": "helix",
+      "value": "r = 8.4 ± 3.1 µm; period 0.38 ± 0.07 s; pitch 47.6 ± 9.1 µm; u = 200 ± 57 µm/s",
+      "units": "—",
+      "scope": "A. punctulata, free 3-D swimming far from boundaries with NO gradient present (the unstimulated baseline), holographic tracking, n = 20, 1 s tracks",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Jikeli et al. 2015, Nat Commun 6:7985, DOI 10.1038/ncomms8985",
+      "falsifier": "Independent 3-D tracking outside stated s.d."
+    },
+    {
+      "row": "CN06-33",
+      "panel": "VI",
+      "symbol": "human chemotaxis",
+      "value": "progesterone → CatSper → Ca²⁺ influx replicated; progesterone as the chemoattractant disputed",
+      "units": "—",
+      "scope": "human sperm",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "Strünker et al. 2011, Nature 471:382–386; Lishko et al. 2011, Nature 471:387–391; contested per charcoal-stripping studies",
+      "falsifier": "A pre-registered in-vivo-relevant assay settling it."
+    },
+    {
+      "row": "CN06-39",
+      "panel": "V",
+      "symbol": "δc/c scaling",
+      "value": "∝ (D·a·c·T)^(−1/2)",
+      "units": "dimensionless",
+      "scope": "diffusion-limited chemoreception — see NA-08 for the contested prefactor",
+      "evidence_class": "OBSERVED-REPLICATED (as a scaling)",
+      "source": "Berg & Purcell 1977, Biophys J 20:193–219",
+      "falsifier": "A sensor beating the −1/2 exponent."
+    },
+    {
+      "row": "PLATE-COMPUTED (from CN06-32)",
+      "panel": "V",
+      "symbol": "detour cost",
+      "value": "33 % of path length (path per turn = √(pitch² + (2πr)²) = 71.1 µm buys 47.6 µm of axial progress; 47.6/71.1 = 67.0 %)",
+      "units": "% of path length",
+      "scope": "Arbacia punctulata helical swim, computed on this plate from CN06-32’s four measured parameters",
+      "evidence_class": "MODELED — assumes a circular helix at constant pitch; that assumption is the fence",
+      "source": "computed on this plate from CN06-32 (Jikeli et al. 2015)",
+      "falsifier": "Recompute from r and pitch; a 3-D track whose path/pitch ratio falls outside the s.d. band of CN06-32 refutes"
+    },
+    {
+      "row": "PLATE-COMPUTED (from CN06-32)",
+      "panel": "V",
+      "symbol": "path speed cross-check",
+      "value": "71.1 µm / 0.38 s = 187 µm/s, against a measured u = 200 ± 57 µm/s — inside the band",
+      "units": "µm/s",
+      "scope": "internal consistency of CN06-32: geometry (r, pitch) and kinematics (period, u) were measured separately and close",
+      "evidence_class": "MODELED — a consistency check, not an independent measurement",
+      "source": "computed on this plate from CN06-32",
+      "falsifier": "Recompute; a path speed outside 200 ± 57 µm/s would put the row’s four parameters in conflict"
+    },
+    {
+      "row": "PLATE-NOTE on CN06-13",
+      "panel": "III",
+      "symbol": "ζ⊥/ζ∥ — formula vs printed range",
+      "value": "The row prints “~1.5–1.8 at realistic aspect ratios” AND the formula ζ⊥/ζ∥ = 2(ln(2λ/a) − 0.5)/(ln(2λ/a) + 0.5) at the row’s own stated ln(2λ/a) ≈ 3–5. Evaluating that formula over that range gives ≈1.43–1.64, not 1.5–1.8; reaching 1.8 needs ln(2λ/a) ≈ 9.5.",
+      "units": "dimensionless",
+      "scope": "SURFACED, NOT PATCHED. Both readings sit inside the row’s OWN falsifier bracket (1.4–2.0), so the row is NOT refuted here; but the printed sub-range and the printed formula do not reproduce one another. The plate prints the ledger value verbatim and carries this note beside it.",
+      "evidence_class": "MODELED (the row) + an open discrepancy recorded against it",
+      "source": "evaluated on this plate from the formula printed in CN06-13 / CN-06 §Purcell’s scallop theorem",
+      "falsifier": "Print the aspect ratio (ln(2λ/a)) at which the 1.5–1.8 range was evaluated. If it is ~9.5 the range is right and the stated “realistic ln(2λ/a) ≈ 3–5” is the error; if it is 3–5 the range is the error. Either way one of the two printed statements moves."
+    },
+    {
+      "row": "NOT-SOURCED (plate-local)",
+      "panel": "II",
+      "symbol": "axoneme cross-section geometry",
+      "value": "— no value carried",
+      "units": "nm (would be)",
+      "scope": "CN-06 states the 9+2 ARRANGEMENT (nine doublet microtubules around a central pair) and carries NO diameter, NO doublet spacing and NO doublet size. The plate therefore draws the arrangement and asserts no metric; the cross-section is NOT TO SCALE, and doublet numbering/orientation are drawn for reference only.",
+      "evidence_class": "NOT-SOURCED — a gap in OUR homework, not in the literature (the dimensions exist in the cryo-ET literature; this corpus does not carry them)",
+      "source": "arrangement: CN-06 §The motor: sliding is not bending",
+      "falsifier": "Fetch a primary cryo-ET axoneme study, print the outer diameter and doublet spacing with their method, add them to the ledger, and redraw the panel to scale"
+    },
+    {
+      "row": "NOT-SOURCED (plate-local)",
+      "panel": "IV",
+      "symbol": "flagellar beat amplitude / envelope",
+      "value": "— no value carried",
+      "units": "µm (would be)",
+      "scope": "CN-06 carries no beat amplitude. The wave at IV is drawn to scale in WAVELENGTH and LENGTH only; the amplitude and the envelope shape are schematic and assert nothing.",
+      "evidence_class": "NOT-SOURCED — a gap in OUR homework, not in the literature",
+      "source": "absent from CN-06 and from rows CN06-01…CN06-39",
+      "falsifier": "Fetch a primary waveform study (e.g. Smith et al. 2009’s tracked waveforms), print mean amplitude ± s.d. at a stated viscosity, and redraw the envelope to scale"
+    }
+  ],
+  "not_claimed": [
+    "Not claimed: ANY axoneme dimension. CN-06 carries none. The 9+2 arrangement is drawn; the metric is NOT-SOURCED and the cross-section is not to scale. Nothing on panel II may be measured with a ruler. Doublet numbering and orientation are drawn for reference only — CN-06 carries no numbering convention.",
+    "Not claimed: that the scallop theorem governs the female reproductive tract. Cervical mucus is viscoelastic, the theorem's Newtonian premise is violated there, and viscoelasticity is a NAMED ESCAPE in Lauga (2011) — inside the theory, not a refutation of it. The theorem explains why the flagellum is a travelling wave; it forbids nothing in vivo, and the plate draws it as a constraint on DESIGN, not as a law of the oviduct.",
+    "Not claimed: any proportionality between the area a configuration-space cycle encloses and the net displacement it produces. The plate draws the zero-area/enclosed-area distinction qualitatively, exactly as CN-06 states it. The quantitative relation is not in the corpus and is not printed.",
+    "Not claimed: that Summers & Gibbons (1971) identified what trypsin removed. They did not. That the targets are the radial-spoke heads and nexin links, with dynein arms intact, is LATER work (Witman et al.). The ablation licenses the conclusion — sliding is not bending; constraint is the transmission — and does not license reading the mechanism back into the 1971 paper. SIGNUM SIGNUM MANET: the signal and the commentary about it travel separately. The extension factor is NOT-SOURCED (CN06-16) and is drawn without one.",
+    "Not claimed: that the ~15,000 active dyneins per beat is an observation. It is 67,500 × 2/9 — an arithmetic consequence of the two-groups-of-doublets HYPOTHESIS (CN06-14). The 67,500 total is OBSERVED-REPLICATED by cryo-ET; the active fraction is not. The two shaded doublets on panel II mark the hypothesis, not a measurement of which doublets are active.",
+    "Not claimed: that a sperm decides, wants, seeks, knows, or navigates in any sense involving experience. \"EPISTEMIC ACTION\" HERE IS A STATISTICAL DESCRIPTION — a policy whose selection weight includes an uncertainty-resolving term. The helix is a sampling geometry. Nothing on this plate bears on whether anything is like anything.",
+    "Not claimed: that human sperm perform chemotaxis. The progesterone → CatSper → Ca²⁺ physiology is replicated; whether progesterone is THE chemoattractant is disputed (CN06-33, OBSERVED-CONTESTED) and is carried as contested. Panel V is SEA URCHIN and its numbers do not transfer.",
+    "Not claimed: that sperm sample temporally BECAUSE they are too small to read a gradient across the body. That is the folk version — HYPOTHESIZED — and the measurements point elsewhere: Kashikar et al. report electrotonic blurring (CNGK distributed along the flagellum; hyperpolarisation spreads in milliseconds), and Tan & Chiam (2018) conclude the choice turns on speed-to-size, not size — sperm are relatively BIG and sample temporally because they are FAST. Three claims, three evidence classes, never merged.",
+    "Not claimed: that the 0.2–0.6 s figure is Berg & Purcell’s integration time T. It is a MEASURED Ca²⁺-response LATENCY which the authors read as a sampling window; equating it with T is a MODELED identification that assumes the latency is set by counting statistics rather than transduction kinetics (CN06-30, a compound row). The epistemic-action reading survives either way.",
+    "Not claimed: that the sea-urchin efficiency and ATP numbers transfer to humans. They are demembranated sea-urchin axonemes at [ATP] = 20 µM. Quoting them bare drops the species, the membrane, the [ATP] AND the load. ε_hydro for an intact human spermatozoon is NOT-MEASURED (CN06-22).",
+    "Not claimed: that dynein’s ~8 nm power stroke (CN06-15) is set by the tubulin-dimer repeat. NA06-13 records the 8 nm KINESIN step as the tubulin-dimer repeat (Svoboda et al. 1993). Those are two separate rows and the corpus does not join them. A reader will notice the coincidence; the coincidence is not an argument, and this plate does not make it one.",
+    "Not claimed: that this vehicle is OPTIMAL, or that \"nature does it this way\" is an argument. Per Gould & Lewontin (1979), drift, phylogenetic inertia, developmental constraint, pleiotropy and frozen accidents produce features that solve nothing. Nature’s authority here is precise and limited: it already ran a very long parallel search under real physical constraints in which the failures were deleted. That makes convergence evidence of a CONSTRAINT-optimum and makes every number on this plate a HYPOTHESIS GENERATOR, never a proof. ε_hydro ≈ 0.4–1.3 % sits in CN-06 as a standing counterexample to reading this cell as an optimised propeller, and it rises in high-viscosity media sea-urchin sperm never encounter — which the authors themselves call counterintuitive. Per repo rule M7, a biomimetic design taken from this plate must beat a TUNED CONVENTIONAL BASELINE on a PRE-REGISTERED metric, with a discriminator that collapses the gain, or it is recorded NEGATIVE.",
+    "Not claimed: that the printed Re is the last word on the regime. Its L input is NOT-MEASURED (normative WHO criteria, not a morphometric distribution), and CN-06 carries a standing three-way disagreement on flagellar length (41 µm measured / ≥45 µm normative / 50 µm in the coasting volume). If the measured 41 µm is right, the printed Re is ~20 % high. The exponent survives either way, and the exponent is the load-bearing part.",
+    "Not claimed: that anything here raises any UNI rung. A NATURE CITATION IS NEVER A UNI GATE. Reading Purcell 1977 does not make any UNI claim proven, designed, or built. The NATURA classes and the UNI ledger’s four values (proven / designed / hypothesized / not-yet-built) describe different kinds of claim and never merge. This plate contains ZERO UNI claims, and the honest program position is unchanged by it: ~2 of 11+ developmental rungs earned; a developmental active-inference SIMULATION; a toy world, never a person. \"Full human\" and \"beyond human\" appear nowhere as targets — they are permanent open questions."
+  ],
+  "evidence_classes": {
+    "_vocabulary": "NATURA classes per encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md, AMENDED 2026-07-15-A: twelve classes in three groups (measured / derived / fenced). Sovereign from the UNI fence (proven · designed · hypothesized · not-yet-built) — the two never merge, and there is no operation that takes a NATURA row and a UNI row and produces a stronger row of either kind. A nature citation is never a UNI gate.",
+    "_used_on_this_plate": {
+      "OBSERVED-REPLICATED": {
+        "group": "A — measured",
+        "means": "measured, and independently replicated across labs, datasets or taxa",
+        "plate_mark": "— (unmarked)",
+        "rows": [
+          "CN06-01",
+          "CN06-02",
+          "CN06-04",
+          "CN06-05",
+          "CN06-07",
+          "CN06-08",
+          "CN06-15",
+          "CN06-28",
+          "CN06-32",
+          "CN06-39",
+          "CN06-14 (leading class; compound)"
+        ]
+      },
+      "OBSERVED-SINGLE": {
+        "group": "A — measured",
+        "means": "measured, by a method another party could repeat, but NO independent replication is on record. Registered 2026-07-15-A; this chapter’s own falsifier is what forced the class into existence",
+        "plate_mark": "† (one dagger, one study)",
+        "rows": [
+          "CN06-17",
+          "CN06-18",
+          "CN06-19",
+          "CN06-20",
+          "CN06-21",
+          "CN06-29",
+          "CN06-30 (leading class; compound)"
+        ]
+      },
+      "OBSERVED-CONTESTED": {
+        "group": "A — measured",
+        "means": "measured, but the community genuinely disputes it; both positions carried and the dispute named",
+        "plate_mark": "‡ (plus a dashed rule / ghosted fill)",
+        "rows": [
+          "CN06-33 (named in \"what this plate does not claim\"; the human-guidance claim is carried as contested)"
+        ]
+      },
+      "MODELED": {
+        "group": "B — derived",
+        "means": "derived from a model that fits data; THE ASSUMPTIONS ARE THE FENCE",
+        "plate_mark": "△",
+        "rows": [
+          "CN06-09",
+          "CN06-10",
+          "CN06-11",
+          "CN06-12",
+          "CN06-13",
+          "CN06-30 (second part — the identification with Berg & Purcell’s T)",
+          "PLATE-COMPUTED: the 33 % detour and the 187 µm/s path-speed cross-check (both from CN06-32)"
+        ]
+      },
+      "HYPOTHESIZED": {
+        "group": "B — derived",
+        "means": "a stated mechanism or fraction with no measurement behind it yet; never asserted as fact",
+        "plate_mark": "○",
+        "rows": [
+          "CN06-14 (second part — the ~15,000 active/beat fraction, = 67,500 × 2/9)",
+          "the folk \"too small to sense a gradient across its body\" explanation, drawn as a recorded trap on panel V"
+        ]
+      },
+      "NOT-SOURCED": {
+        "group": "C — fenced",
+        "means": "a value this corpus could not trace to a source. An absence in OUR homework, NOT in the literature. Never merged with NOT-MEASURED",
+        "plate_mark": "◇ (plus a dotted rule / void hatch)",
+        "rows": [
+          "CN06-16 (the axoneme extension factor)",
+          "plate-local: the axoneme cross-section geometry (panel II)",
+          "plate-local: the flagellar beat amplitude and envelope (panel IV)",
+          "plate note on CN06-13 (formula vs printed sub-range)"
+        ]
+      },
+      "NOT-MEASURED": {
+        "group": "C — fenced",
+        "means": "the honest empty face — nobody has measured it. An absence in THE LITERATURE. Never merged with NOT-SOURCED: collapsing them would let a research failure masquerade as a discovery about the frontier of science",
+        "plate_mark": "∅",
+        "rows": [
+          "CN06-06 (L_cell — normative WHO criteria, not a morphometric distribution; and it is an input to the headline Re)",
+          "CN06-22 (ε_hydro for an intact human spermatozoon)"
+        ]
+      }
+    },
+    "_compound_rows": {
+      "_rule": "NATURE-LEDGER.md §1: 'Compound rows (2 of 919). CN05-31 and CN06-30 carry two classes because two parts of the row differ in standing. Each part's class is named to its part; the row is counted at its leading class. The class cell, not the count, is authoritative.' This plate counts CN06-14 and CN06-30 at their LEADING class in the buckets above, and draws EACH PART at its own class — the count must never be read as the row's whole standing.",
+      "CN06-30": {
+        "class_cell_verbatim": "OBSERVED-SINGLE (single group) — the latency; MODELED — its identification with T",
+        "observed_part": "the 0.2–0.6 s Ca²⁺-response latency — measured, single group (Kashikar et al. 2012)",
+        "modelled_part": "its identification with Berg & Purcell's integration time T — assumes the latency is set by counting statistics rather than by transduction-cascade kinetics",
+        "counted_at": "OBSERVED-SINGLE (leading class), per the ledger’s rule",
+        "drawn_on_plate": "panel V prints the latency with † and the identification with △ in a separate fenced box — the two parts never merge"
+      },
+      "CN06-14": {
+        "class_cell_verbatim": "OBSERVED-REPLICATED (total, cryo-ET) / HYPOTHESIZED (active fraction)",
+        "observed_part": "~67,500 dyneins total in a sea-urchin sperm flagellum — cryo-ET, OBSERVED-REPLICATED",
+        "hypothesized_part": "~15,000 active per beat = 67,500 × 2/9, on the two-groups-of-doublets hypothesis",
+        "counted_at": "OBSERVED-REPLICATED (leading class), per the ledger’s rule",
+        "drawn_on_plate": "panel II prints the total unmarked and shades exactly 2 of 9 doublets marked ○ HYPOTHESIZED"
+      },
+      "_DISCREPANCY_SURFACED_NOT_PATCHED": {
+        "finding": "The ledger's count 'Compound rows (2 of 919)' does not survive contact with the ledger's own rows. CN06-14 ('OBSERVED-REPLICATED (total, cryo-ET) / HYPOTHESIZED (active fraction)') and CN06-34 ('OBSERVED-CONTESTED (the ~2 °C anatomical difference) / NOT-SOURCED (the assay gradient length and the accumulation fraction)') each carry two classes for two parts of the row — the ledger's own definition of a compound row — yet neither is named in the count. CN-06 alone therefore holds THREE compound rows where the ledger names one.",
+        "measured": "A scan of all 919 class cells at corpus tip f1be794 finds 20 cells naming 2+ distinct NATURA classes. Not all 20 are compound: several merely cross-reference a class (CN03-55), negate one (CN07-11: \"Not OBSERVED-REPLICATED\"), or record a downgrade history (CN08-05, CN08-24: \"downgraded from OBSERVED-REPLICATED\"). On a strict reading — two parts of the row, each part given its own class — at least 14 rows qualify: NA02-09, NA08-42, CN02-30, CN02-32, CN04-37, CN05-31, CN06-14, CN06-30, CN06-34, CN09-57, CN10-02, CN10-04, CN11-30, CN11-53.",
+        "status": "SURFACED, NOT PATCHED. A plate is the wrong place to amend a wing rule — the same reason CN-06 gave for not minting a class in a chapter, which is the argument NA-00 amendment 2026-07-15-A went on to vindicate. This is the same SHAPE of defect that amendment already fixed once: a stated count refuted by the file’s own rows.",
+        "falsifier": "Re-scan every class cell in NATURE-LEDGER.md, count the cells that name two classes for two parts of the row, and print the number. If it is 2, this note is wrong and must be withdrawn. If it is not 2, the ledger’s §1 count is wrong and the amendment procedure applies.",
+        "not_claimed": "This note does NOT claim any row is misclassed. Every class CELL read on this plate is taken as authoritative, exactly as the ledger instructs (\"The class cell, not the count, is authoritative\"). Only the COUNT is in question."
+      }
+    },
+    "_not_used_but_defined": [
+      "MODELED-CONTESTED",
+      "INADMISSIBLE",
+      "SUPERSEDED",
+      "NOT-CONFIRMED",
+      "NOT-LOCATED"
+    ],
+    "_negatives_drawn_on_the_plate": [
+      "The reciprocal paddle — the obvious one-hinge solution, drawn as REFUTED. At Re ≪ 1 it produces exactly zero net displacement. Not inefficient. Zero. (Purcell 1977; panel III.)",
+      "A beat frequency quoted without its viscosity and temperature — conflation trap. 23 Hz and 11 Hz are the SAME CELLS at the SAME 37 °C (Smith et al. 2009; panel IV).",
+      "ε_hydro ≈ 0.4–1.3 % or 2.3 × 10⁵ ATP/beat quoted as properties of HUMAN sperm — conflation trap. They are demembranated sea-urchin axonemes at 20 µM ATP, and the ATP figure is the LOW-VISCOSITY value (panels II, IV).",
+      "\"Sperm race to the egg and the fastest wins\" — INADMISSIBLE as stated in CN-06: it names no falsifier, \"fastest\" is unmeasured in vivo, and the tract is not a racecourse. Smith et al. observed a 34 µm/s spread among high-viscosity migrants their kinematic parameters did not explain (panel III).",
+      "\"Sperm sample temporally because they are too small to read a gradient across the body\" — the folk explanation, HYPOTHESIZED and commonly stated as fact. The measurements point elsewhere: electrotonic blurring (Kashikar et al. 2012) and speed-to-size, not size (Tan & Chiam 2018) (panel V).",
+      "Reading the radial-spoke/nexin mechanism back into Summers & Gibbons 1971 — an attribution error. That identification is later work (Witman et al.); S&G did not make it (panel II)."
+    ]
+  },
+  "design_fence": {
+    "static": "No script elements, no on-event handlers, no external references (no xlink to a URL, no @import, no webfont, no <image>, no <foreignObject>). Pure static SVG; every url() resolves to an internal fragment id. Audited by regex over the emitted file: 0 hits on every prohibited construct.",
+    "responsive": "viewBox-based (0 0 1440 3865), width=100%, no fixed height. Renders standalone AND inline — both were loaded in a browser and measured.",
+    "theme": "CSS custom properties with literal fallbacks in every var(); flips on prefers-color-scheme and on :root[data-theme] in both directions. MEASURED, not assumed: standalone under prefers-color-scheme:dark resolves ink rgb(233,229,219) on bg rgb(20,22,26); inlined in an HTML document with a dark OS preference, data-theme=\"light\" forces the light palette back (bg rgb(246,242,233)) and data-theme=\"dark\" holds dark — the override wins in both directions. Note that in a STANDALONE svg document :root IS the <svg> element, so the data-theme rules cannot match there by construction; prefers-color-scheme carries that case.",
+    "greyscale": "Every distinction colour carries is also carried by a glyph mark (— † ‡ △ ○ ◇ ∅ ✗), dash pattern, hatch density and line weight. Species is carried by a word (HUMAN / SEA URCHIN) in every panel header, never by colour.",
+    "verification": "Geometry computed from the sourced constants, not eyeballed: the wave at 13.5 px/µm from λ = 39/18 µm and L = 41 µm; the helix at 6.5 px/µm from r = 8.4 µm and pitch = 47.6 µm; the coast bar at 0.45 Å against a 1.54 Å C–C bond. Layout MEASURED by browser bbox readback with transforms applied: 0 canvas overflows, 0 panel overflows, 0 text–text collisions across 362 text nodes. THE COLLISION DETECTOR WAS POSITIVE-CONTROLLED by injecting a known overlap and confirming it fired, then confirming it returned to 0 on removal — the negative result is therefore an observation, not a silent instrument. An earlier run of the same detector found 16 real collisions, which were fixed; the clean result is the second reading, not the first. Every numeric token rendered on the plate (146 distinct) was diffed against CN-06 + its ledger rows: 11 did not appear verbatim and each was accounted for — 2 superscript-normalisation artifacts (47.6², 52.8²), 8 values computed ON the plate and marked MODELED with their assumptions named (67.0, 71.1, 187, 5.9, 897, 1.43, 1.64, 9.5), and 1 git commit hash (f1be794). ZERO unsourced numbers.",
+    "arithmetic_reproduced": "Every headline computation in CN-06 was independently re-evaluated for this plate and reproduces: Re = 4.87×10⁻³ ≈ 4.9×10⁻³; Re_mucus = 2.55×10⁻⁵ ≈ 2.6×10⁻⁵ at u = 65 µm/s and 2.44×10⁻⁵ ≈ 2.4×10⁻⁵ at u = 62 µm/s; 6πµa = 2.64×10⁻⁸ kg/s; τ = 7.2×10⁻⁷ s; d_coast = 4.46×10⁻¹¹ m ≈ 0.45 Å (29 % of a 1.54 Å C–C bond); head ellipsoid 7.07 µm³ + flagellar cylinder 9.82 µm³ ≈ 17 µm³; c = fλ at 897 ≈ 890 and 198 ≈ 200; ε_swim = ε_chemo·ε_hydro at 0.00136 ≈ 0.001 and 0.0078 ≈ 0.008; 67,500 × 2/9 = 15,000 exactly; Re at L = 46 µm is 4.07×10⁻³, i.e. the printed Re is ~20 % high if Saggiorato's measured length is right — as CN-06 itself states. TWO DISCREPANCIES FOUND AND CARRIED, NOT SMOOTHED: (1) CN06-13's printed formula does not reproduce its printed sub-range (see the plate note); (2) progression per beat 5.8 µm vs u/f = 65/11 = 5.9 µm — rounding in the source's inputs, printed as CN-06's table gives it and explicitly NOT manufactured into a dispute."
+  }
+}

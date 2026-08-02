@@ -1,0 +1,379 @@
+/*
+ * scrivener/style.css -- styles for the HONEST-store note-taker.
+ *
+ * Pure ASCII. No @import, no url(...) to a remote host, no webfont.
+ * All colors use CSS variables that fall back to reasonable defaults so the
+ * scrivener works whether or not the reader theme is present.
+ */
+
+:root {
+  --sc-bg: var(--bg, #ffffff);
+  --sc-fg: var(--fg, #111111);
+  --sc-muted: var(--muted, #666666);
+  --sc-border: var(--border, #d0d0d0);
+  --sc-accent: var(--accent, #365d8a);
+  --sc-accent-fg: #ffffff;
+  --sc-chip-bg: #f2f2f4;
+  --sc-chip-on-bg: var(--sc-accent);
+  --sc-chip-on-fg: var(--sc-accent-fg);
+  --sc-danger: #a02c2c;
+  --sc-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* ----- floating action button ----- */
+.scrivener-fab {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  border: 1px solid var(--sc-border);
+  background: var(--sc-accent);
+  color: var(--sc-accent-fg);
+  font: 600 1.15rem/1 system-ui, sans-serif;
+  cursor: pointer;
+  box-shadow: var(--sc-shadow);
+  z-index: 9998;
+}
+.scrivener-fab:focus { outline: 2px solid var(--sc-accent); outline-offset: 2px; }
+
+/* ----- modal ----- */
+html.scrivener-modal-open { overflow: hidden; }
+
+[data-role="scrivener-modal"]:empty { display: none; }
+
+.scrivener-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9999;
+}
+
+.scrivener-panel {
+  position: fixed;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(640px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  background: var(--sc-bg);
+  color: var(--sc-fg);
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  box-shadow: var(--sc-shadow);
+  font: 14px/1.4 system-ui, sans-serif;
+}
+
+.scrivener-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--sc-border);
+}
+.scrivener-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.scrivener-close {
+  background: transparent;
+  border: 0;
+  color: var(--sc-muted);
+  font: 600 1rem/1 system-ui, sans-serif;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.scrivener-doctrine {
+  margin: 0.75rem 1rem 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--sc-chip-bg);
+  border-left: 3px solid var(--sc-accent);
+  border-radius: 4px;
+  color: var(--sc-fg);
+  font-size: 0.85rem;
+}
+
+.scrivener-body { padding: 0.5rem 1rem 1rem; }
+
+.scrivener-label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--sc-fg);
+}
+.scrivener-hint {
+  color: var(--sc-muted);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.scrivener-input,
+.scrivener-textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.55rem;
+  font: inherit;
+  color: var(--sc-fg);
+  background: var(--sc-bg);
+  border: 1px solid var(--sc-border);
+  border-radius: 4px;
+}
+.scrivener-textarea {
+  min-height: 8rem;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+.scrivener-input:focus,
+.scrivener-textarea:focus {
+  outline: 2px solid var(--sc-accent);
+  outline-offset: 1px;
+}
+
+.scrivener-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.scrivener-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+.scrivener-chip {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--sc-border);
+  background: var(--sc-chip-bg);
+  color: var(--sc-fg);
+  font: inherit;
+  cursor: pointer;
+}
+.scrivener-chip-on {
+  background: var(--sc-chip-on-bg);
+  color: var(--sc-chip-on-fg);
+  border-color: var(--sc-chip-on-bg);
+}
+
+.scrivener-falsifier {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(160, 44, 44, 0.06);
+  border-left: 3px solid var(--sc-danger);
+  border-radius: 4px;
+}
+.scrivener-falsifier .scrivener-hint {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.scrivener-supersede {
+  margin: 0.75rem 0 0;
+  padding: 0.4rem 0.6rem;
+  background: var(--sc-chip-bg);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--sc-muted);
+}
+.scrivener-supersede code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.scrivener-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--sc-border);
+  background: var(--sc-bg);
+}
+.scrivener-btn {
+  padding: 0.4rem 0.85rem;
+  border-radius: 4px;
+  border: 1px solid var(--sc-border);
+  background: var(--sc-chip-bg);
+  color: var(--sc-fg);
+  font: inherit;
+  cursor: pointer;
+}
+.scrivener-btn:hover:not([disabled]) {
+  border-color: var(--sc-accent);
+}
+.scrivener-save {
+  background: var(--sc-accent);
+  color: var(--sc-accent-fg);
+  border-color: var(--sc-accent);
+}
+.scrivener-save[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.scrivener-file-btn { display: inline-flex; align-items: center; }
+
+/* ----- toast ----- */
+.scrivener-toast {
+  position: fixed;
+  bottom: 5rem;
+  right: 1.25rem;
+  padding: 0.55rem 0.9rem;
+  background: var(--sc-fg);
+  color: var(--sc-bg);
+  border-radius: 4px;
+  box-shadow: var(--sc-shadow);
+  font: 500 0.9rem/1 system-ui, sans-serif;
+  z-index: 10001;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+.scrivener-toast-fade { opacity: 0; }
+
+/* ----- list view ----- */
+.scrivener-list-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--sc-border);
+  margin-bottom: 0.75rem;
+}
+.scrivener-list-tools,
+.scrivener-list-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.scrivener-list-doctrine {
+  margin: 0.5rem 0 0;
+}
+.scrivener-empty {
+  padding: 1rem;
+  color: var(--sc-muted);
+  border: 1px dashed var(--sc-border);
+  border-radius: 4px;
+}
+.scrivener-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.scrivener-row {
+  border: 1px solid var(--sc-border);
+  border-radius: 4px;
+  background: var(--sc-bg);
+}
+.scrivener-summary {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+.scrivener-summary::-webkit-details-marker { display: none; }
+.scrivener-row-title { font-weight: 600; flex: 1 1 auto; }
+.scrivener-row-date {
+  color: var(--sc-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+}
+.scrivener-type {
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--sc-chip-bg);
+  color: var(--sc-fg);
+}
+.scrivener-type-observation { background: #e3efe3; color: #244d24; }
+.scrivener-type-prediction  { background: #efe3e3; color: #7a2d2d; }
+.scrivener-type-hypothesis  { background: #efe6d5; color: #6a4e18; }
+.scrivener-type-theory      { background: #dde6f2; color: #2b4a72; }
+.scrivener-type-question    { background: #eee2f0; color: #5a2d69; }
+.scrivener-type-note        { background: #e8e8ea; color: #333; }
+
+.scrivener-badge {
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: var(--sc-chip-bg);
+  color: var(--sc-muted);
+  font-size: 0.7rem;
+  border: 1px solid var(--sc-border);
+}
+.scrivener-badge-super {
+  background: #f4edd6;
+  color: #6a4e18;
+  border-color: #d6c68b;
+}
+
+.scrivener-row-body {
+  padding: 0.5rem 0.75rem 0.75rem;
+  border-top: 1px solid var(--sc-border);
+  background: var(--sc-bg);
+}
+.scrivener-body-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  background: var(--sc-chip-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0 0 0.5rem;
+}
+.scrivener-meta-line {
+  color: var(--sc-muted);
+  font-size: 0.8rem;
+  margin: 0.15rem 0;
+}
+.scrivener-row-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* ----- dark mode: respect prefers-color-scheme AND explicit toggle ----- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sc-bg: #14181e;
+    --sc-fg: #e6e8eb;
+    --sc-muted: #9aa3ad;
+    --sc-border: #2c333d;
+    --sc-chip-bg: #1e242c;
+  }
+  .scrivener-type-observation { background: #223522; color: #b8dab8; }
+  .scrivener-type-prediction  { background: #3a2323; color: #e0b3b3; }
+  .scrivener-type-hypothesis  { background: #38311c; color: #dcc487; }
+  .scrivener-type-theory      { background: #1f2b3d; color: #a9c1e0; }
+  .scrivener-type-question    { background: #2f2338; color: #d0b3de; }
+  .scrivener-type-note        { background: #24272b; color: #d4d6d9; }
+  .scrivener-badge-super      { background: #38311c; color: #dcc487;
+                                border-color: #4a4028; }
+  .scrivener-falsifier        { background: rgba(224, 105, 105, 0.08); }
+}
+
+/* ----- print: hide the capture UI; list view stays readable ----- */
+@media print {
+  .scrivener-fab,
+  .scrivener-panel,
+  .scrivener-backdrop,
+  .scrivener-toast,
+  .scrivener-list-actions,
+  .scrivener-list-tools { display: none !important; }
+  .scrivener-row { break-inside: avoid; }
+}

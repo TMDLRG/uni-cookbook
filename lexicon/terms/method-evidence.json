@@ -1,0 +1,1470 @@
+{
+  "schema_version": "1.0.0",
+  "file": "lexicon/terms/method-evidence.json",
+  "authored_utc": "2026-07-15",
+  "source_of_concepts": "lexicon/CONCEPTS.json (schema_version 1.0.0, authored 2026-07-15, corpus_commit_at_authorship 2e9acaf)",
+
+  "what_this_is": "The five-register renderings (Sanskrit / Latin / English / Hindi / Spanish) for the concepts CONCEPTS.json routes to the method domain. Each entry translates the concept's DEFINITION, never its English headword; the English headword is a label. NOTHING HERE IS CLAIMED PERFECT. Per rule 18.14 of the operator's charter ('Do not claim perfect translation'), no rendering is admitted as correct by being written here: it is admitted only against a cited dictionary headword plus a PASSING back-translation test, and no back-translation test in this file has been run. Every entry therefore carries reviewer = 'NONE - PENDING EXPERT REVIEW'. This file raises no UNI rung, discharges no gate, and states no fact about nature.",
+
+  "domain_selection_note": {
+    "requested_domain": "method-evidence",
+    "finding": "NO SUCH DOMAIN EXISTS in lexicon/CONCEPTS.json. Its domains_registered list is exactly: active-inference-math, pomdp-tensors, markov-blanket, method, sovereign-vocabulary, natura, world-context, build-objects. An exact match on 'method-evidence' selects 0 concepts; a substring match on 'evidence' selects 0.",
+    "action_taken": "Selected domain == 'method' (21 of 130 concepts), which is the domain whose members ARE the method/evidence concepts (FALSIFIER, RECEIPT, EVIDENCE_CLASS, SEVERITY, ABLATION, ...) and which matches the requested output filename 'method-evidence.json'.",
+    "why_recorded_not_silently_resolved": "Writing an empty file on a literal read, or silently substituting a domain, are both model-corrupting. The discrepancy is recorded so the caller can correct the selector rather than discover a wrong count later.",
+    "falsifier": "If 'method-evidence' was intended to name a UNION (e.g. method + sovereign-vocabulary) or a domain not yet added to CONCEPTS.json, this file's membership is wrong and must be rebuilt. Re-run: select concepts where domain == 'method'; expect exactly 21 concept_ids, all store == TRUE."
+  },
+
+  "status_rule": {
+    "why_this_rule_is_stated": "Without a stated rule the four statuses are unfalsifiable. This is the rule this file was authored under; a reviewer may reject the rule itself.",
+    "CITED": "The named authority carries this headword AND carries it in the sense given in literal_gloss (which is quoted or closely paraphrased from the entry). CITED describes the WORD's attested meaning. It does NOT assert that the word means the UNI concept - that mapping is a translation choice, and it is exactly what ambiguity_notes records and what back_translation_test would decide.",
+    "COINED": "No attested term carries the needed sense; a form is proposed and MUST carry its morphological derivation. Includes (a) new compounds and (b) attested words deliberately sense-extended - in both cases the attested base is cited.",
+    "PENDING-CITATION": "Plausible but unverified against the authority in this pass. Not admissible. Carries its own falsifier.",
+    "NOT-ATTEMPTED": "No rendering proposed."
+  },
+
+  "admission_authorities_and_verification_route": {
+    "honesty_note": "PROVENANCE is one of the 21 concepts in this very file. Recording the instrument, the route and its failures is therefore not decoration; it is the file obeying its own contents.",
+    "latin": {
+      "authority": "Lewis & Short, A Latin Dictionary, via Perseus (text 1999.04.0059).",
+      "route": "HTTP GET https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=<headword>, entry body read from div.text_container > div.text. Read 2026-07-15.",
+      "instrument_status": "WORKING. Every Latin headword marked CITED below was fetched and its entry text read on 2026-07-15.",
+      "known_gap": "'hypothesis' returned no entry body on this route; treated as NOT CONFIRMED in L&S rather than as absent from Latin."
+    },
+    "sanskrit": {
+      "authority": "Monier-Williams, A Sanskrit-English Dictionary (1899).",
+      "route_used": "Entry text read via Ambuda's MW 1899 reproduction, https://ambuda.org/tools/dictionaries/mw/<Harvard-Kyoto headword>, 2026-07-15.",
+      "cologne_route_attempted_and_its_failure": "The named authority is the Cologne Digital Sanskrit Dictionaries (sanskrit-lexicon.uni-koeln.de). Its web search is a JS form that could not be driven. Its C-SALT API (GET https://api.c-salt.uni-koeln.de/dicts/mw/restful/entries?field=headword_slp1&query=<SLP1>&query_type=term) WAS reached and answers correctly for main lemmas (deva, pramA, pratijYA, lopa all returned TEI entries), but returns a valid EMPTY result for nested sub-entries such as headword_slp1=pramARa, and its mw dataset self-reports 31,821 entries against MW 1899's ~180,000. It is therefore a MAIN-LEMMA SUBSET, and absence from it is NOT absence from MW.",
+      "instrument_status": "WORKING via Ambuda; NOT independently re-confirmed against the Cologne scan.",
+      "falsifier": "For each Sanskrit entry marked CITED, open the Cologne MW scan at the headword and confirm the quoted gloss. Any entry whose gloss Cologne does not carry is a pseudopropheta and must be struck to PENDING-CITATION.",
+      "positive_control_run": "Before reading any absence as real, 'deva' was queried and returned a full TEI entry. This is the file's own POSITIVE_CONTROL rule applied to itself: an earlier run of blank responses had been produced by rate-limiting, not by missing headwords, and would have been misread as 'not in MW'."
+    },
+    "hindi": {
+      "authority": "R. S. McGregor, The Oxford Hindi-English Dictionary.",
+      "route": "https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py?qs=<devanagari>&searchhws=yes&matchtype=exact (Digital Dictionaries of South Asia, Chicago). Read 2026-07-15. Page numbers below are McGregor's, as returned by DSAL.",
+      "instrument_status": "WORKING.",
+      "known_limit": "McGregor is a general-language dictionary; 20th-century methodological vocabulary (pre-registration, held set, positive control) is genuinely absent. Confirmed absence example: पुनरावृत्ति returned 'No results'."
+    },
+    "spanish": {
+      "authority": "Real Academia Espanola, Diccionario de la lengua espanola (electronic version 23.8.1).",
+      "route": "https://dle.rae.es/<lemma>; definition text read from the page meta description. Read 2026-07-15.",
+      "instrument_status": "WORKING.",
+      "known_limit": "Where the meta description truncates a long article, later senses were NOT read; any sense not quoted below was not confirmed. Confirmed non-headword example: 'falsador' returns the generic landing page, i.e. it is not an RAE lemma."
+    }
+  },
+
+  "adversarial_citation_review_2026_07_15": {
+    "what_was_done": "An adversarial back-translation reviewer re-opened the cited authority for a SAMPLE of this file's citations, instructed to strike to PENDING-CITATION any headword it could not confirm carried the claimed sense. Recorded here because PROVENANCE is one of this file's own 21 concepts.",
+    "outcome": "NO citation in the sample was struck. Zero downgrades. Latin re-read on Perseus L&S: apocha, repulsa, ablatio, anomalia, severitas, tabula (incl. the 'novae tabulae' collocation), plus members correctio, falsificus, refutatio, observatio, replicatio, aemulus - all carried the quoted glosses and the quoted loci. Sanskrit re-read on Ambuda MW: bādhaka, lekhya, lopa, pratijñā, parīkṣā, pramāṇa (incl. the 6/4/3 school enumeration), avadhi, vyāvṛtti, āvṛtti, vyabhicāra, mūla, anumāna, apakarṣa, anupalabdhi, nigrahasthāna - all carried the quoted glosses. Hindi re-read on DSAL McGregor: रसीद p.857, बही p.716, सीमा p.1021, अनुमान p.37, विसंगति p.931, खंडन p.224 - every headword, gloss AND PAGE NUMBER matched. Spanish: recibo, anomalía, procedencia, ablación matched.",
+    "why_this_is_NOT_a_replication": "For Sanskrit, Latin and Hindi this pass used THE SAME ROUTE the file used (Ambuda, Perseus, DSAL). By this file's own REPLICATION concept that is a repeated run by another party on the same instrument, NOT independent replication. It does not discharge the sanskrit falsifier above, which demands the COLOGNE SCAN specifically; that falsifier remains OPEN. Spanish was re-read on a different route (dle.rae.es returned HTTP 403 to the reviewer, so RAE text was matched via search-result snippets) - a WEAKER instrument, not a stronger one.",
+    "what_this_raises": "NOTHING. No status was moved up, no rung was earned, no gate discharged. reviewer stays 'NONE - PENDING EXPERT REVIEW' on every entry and expert_reviews_completed stays 0: the reviewer checked whether the DICTIONARIES SAY WHAT THE FILE SAYS THEY SAY, which is a provenance check, not a philological judgement on whether any rendering fits its concept. back_translation_tests_run stays 0.",
+    "instrument_failures_encountered_and_not_misread": "Three, each of the class this file warns about. (1) C-SALT query headword_slp1=bADaka returned EMPTY while Ambuda returned a full bādhaka entry - independently CORROBORATING this file's finding that the C-SALT mw dataset is a main-lemma subset and that absence from it is not absence from MW. (2) A first Ambuda lookup returned 'No results' for 'bAdaka' - the reviewer's own Harvard-Kyoto misspelling of bAdhaka, not an absence; re-queried before any conclusion was drawn. (3) dle.rae.es returned HTTP 403 - an access failure, NOT evidence against the RAE citations. Per POSITIVE_CONTROL, none of the three was read as a negative finding.",
+    "corrections_applied": "Two, both places where the file tripped its OWN falsifier 'Any register marked COINED lacking a morphological derivation': MULTIPLE_WORKING_HYPOTHESES.latin and EVIDENCE_CLASS.spanish now carry derivations. No new citation was introduced by either.",
+    "falsifier": "Re-open any headword named above at the cited authority. If it does not carry the quoted gloss, this record is wrong and that entry is a pseudopropheta to be struck to PENDING-CITATION. This record's own weakness is stated above: it is same-instrument for three registers of four."
+  },
+
+  "counts": {
+    "concepts_in_file": 21,
+    "all_store_TRUE": true,
+    "back_translation_tests_run": 0,
+    "expert_reviews_completed": 0,
+    "status_tally_note": "Tally is deliberately not asserted here as a summary number; each register carries its own status and a reviewer must count them rather than trust a headline."
+  },
+
+  "falsifiers": [
+    "A concept_id here is absent from CONCEPTS.json, or its definition is not verbatim, or a concept whose domain == 'method' is missing. Expected membership: exactly the 21 ids listed in this file.",
+    "Any register marked CITED whose authority does not carry that headword, or does not carry it in the quoted sense. That entry is a pseudopropheta and must be struck to PENDING-CITATION.",
+    "Any register marked COINED lacking a morphological derivation.",
+    "A back_translation_test is recorded as PASSING anywhere in this file. None has been run; any such record is a defect.",
+    "An ambiguity_note or forbidden_mistranslation asserts a metaphysics as settled rather than recording that the register's word imports one.",
+    "A rendering merges the TRUE and HONEST stores - e.g. any register for CALIBRATION that would license calibrating testimony."
+  ],
+
+  "terms": [
+    {
+      "concept_id": "FALSIFIER",
+      "english_term": "falsifier",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "A stated observation that would refute a claim, written before the run, without which surprise cannot be computed and the claim is inadmissible.",
+      "sanskrit": {
+        "devanagari": "बाधक",
+        "iast": "bādhaka",
+        "headword_as_in_lexicon": "बाधक bādhaka",
+        "grammar": "mf(इका)n. / m.; verbal adjective from √बाध् (bādh), 'to oppose, annul'",
+        "literal_gloss": "setting aside, suspending, annulling; opposing, hindering",
+        "citation": "Monier-Williams 1899, s.v. बाधक: 'setting aside, suspending, annulling, Śaṃk.; Sarvad.'; also 'opposing, hindering, injuring, prejudicing, MBh.; Pur.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "observātiō refūtāns",
+        "grammar": "noun (f., 3rd decl.) + present active participle of refūtō, agreeing in case/number",
+        "literal_gloss": "the refuting observation - the observation that (as it happens) refutes",
+        "citation": "COINED phrase. Members cited: L&S s.v. observātĭo, 'a watching, observing' (class.), 'siderum,' Cic. Div. 1, 1, 2; L&S s.v. rĕfūtātĭo, 'in rhet., a refutation,' Cic. Top. 25, 93. Derivation: observātiō (< observō, 'to watch') + present participle of refūtō ('to drive back, repel, refute'). The present participle was chosen over a future participle (refūtātūra, 'that is going to refute') deliberately, and this choice is unresolved: the concept is counterfactual ('would refute'), which Latin would more exactly carry with a subjunctive relative clause, e.g. observātiō quae refūtāret. The phrase as given may therefore be WRONG for the concept.",
+        "classical_or_post_classical": "COINED [both members classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "falsifier",
+        "definition": "A stated observation that would refute a claim, written before the run, without which surprise cannot be computed and the claim is inadmissible."
+      },
+      "hindi": {
+        "devanagari": "खंडक प्रेक्षण",
+        "transliteration": "khaṇḍak prekṣaṇ",
+        "gloss": "refuting observation",
+        "citation": "COINED phrase. Member cited: McGregor, Oxford Hindi-English Dictionary, p. 224, s.v. खंडन khaṇḍan [S.], m. '2. refuting, contradicting; belying; revoking'. The agent-adjective खंडक and the noun प्रेक्षण were NOT looked up in McGregor in this pass and are unverified.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "observación falsadora",
+        "gloss": "falsifying observation (the observation that would refute)",
+        "citation": "PENDING. 'falsador' is NOT an RAE lemma - https://dle.rae.es/falsador returns the generic landing page (checked 2026-07-15) - although it is the standard term in Spanish translations of Popper. RAE s.v. refutar: '1. tr. Contradecir o impugnar con argumentos o razones lo que otros dicen.' is cited but does not name the observation.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "bādhaka carries a Nyāya/Vedānta technical freight: a bādhaka is a SUBLATING cognition, and in Advaita the sublation of the world by brahman-knowledge is the paradigm case - so the word can quietly import the doctrine that what is annulled was never real. UNI's falsifier asserts nothing of the kind: it refutes a CLAIM, not the reality of the thing claimed about. bādhaka's ordinary sense ('oppressing, harassing, paining') is unrelated and dominant outside philosophical texts. Latin refūtātiō is attested ONLY as a rhetorical operation - refuting an opponent's argument in a speech - so the Latin frames refutation as something a speaker does to an interlocutor, not something an observation does to a claim; the concept's whole force is that nobody is arguing. The counterfactual mood ('would refute') is the discriminating property and is the part every register here handles worst.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin falsificātor / falsificus",
+          "why_wrong": "L&S s.v. falsĭfĭcus: 'that acts falsely,' Plaut. Mil. 2, 2, 36. The word means acting deceitfully - a FORGER or a liar. A falsificator would name a person who fakes data: the precise opposite of the instrument that catches them."
+        },
+        {
+          "rendering": "Sanskrit खण्डन khaṇḍana ('refutation') for the falsifier itself",
+          "why_wrong": "khaṇḍana is the ACT of refuting (and the title of Śrīharṣa's Advaita polemic), not the pre-registered observation that would do the refuting. It names the debater's move, losing 'written before the run'."
+        },
+        {
+          "rendering": "any rendering as 'counterexample' / 'objection' (Sk. दोष doṣa, Sp. objeción)",
+          "why_wrong": "An objection is raised AFTER seeing the result. The falsifier is written BEFORE it. Drop the temporal order and the concept collapses into the narration failure its own definition warns against."
+        },
+        {
+          "rendering": "Spanish falsificador",
+          "why_wrong": "Means 'forger, counterfeiter' in ordinary Spanish. Same defect as Latin falsificator, and more strongly marked."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering with NO English source and ask them to state (a) when the sentence is written relative to the run, and (b) who or what does the refuting.",
+        "pass_criterion": "PASS only if the answer is (a) BEFORE the run and (b) an observation, not a person. Any answer naming a speaker, a forger, or a post-hoc objection FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW for Latin/Hindi/Spanish (all unattested constructions; the counterfactual is unhandled). MEDIUM for Sanskrit bādhaka, whose attested 'annulling' sense is close but whose doctrinal freight is heavy."
+    },
+    {
+      "concept_id": "RECEIPT",
+      "english_term": "receipt",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "The captured observation that closes a turn of the loop -- an audit id and UTC for live state, file:line for code, a run log for tests -- against which the prior prediction is compared.",
+      "sanskrit": {
+        "devanagari": "लेख्य",
+        "iast": "lekhya",
+        "headword_as_in_lexicon": "लेख्य lekhya",
+        "grammar": "n. (also mfn.); gerundive of √लिख् (likh), 'to write' - lit. 'that which is to be written'",
+        "literal_gloss": "a writing, document; (in law) any written document",
+        "citation": "Monier-Williams 1899, s.v. लेख्य: 'n. the act or the art of writing, Mbh.; R.'; 'a writing, letter, manuscript, Kām.; Kathās.; Sāh.'; '(in law) any written document (esp. a written accusation or defence), Viṣṇ.; Yājñ. (cf. IW. 293)'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "apocha",
+        "grammar": "ae, f.; from Greek ἀποχή",
+        "literal_gloss": "the receipt of a creditor acknowledging the payment of a debt",
+        "citation": "L&S s.v. ăpŏchă: 'ae, f., = ἀποχή, the receipt of a creditor acknowledging the payment of a debt: \"apocha non alias contingit quam si pecunia soluta sit,\" there is no receipt till the money is paid, Dig. 46, 4, 19; 47, 2, 27; 12, 6, 67, § 3.'",
+        "classical_or_post_classical": "POST-CLASSICAL [juristic; attested in L&S only from the Digest]",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "receipt",
+        "definition": "The captured observation that closes a turn of the loop -- an audit id and UTC for live state, file:line for code, a run log for tests -- against which the prior prediction is compared."
+      },
+      "hindi": {
+        "devanagari": "रसीद",
+        "transliteration": "rasīd",
+        "gloss": "receipt; acknowledgement of receipt",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 857, s.v. रसीद rasīd [P. rasīd], f. '1. receipt (of sthg.). 2. acknowledgement of receipt; a receipt.'",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "recibo",
+        "gloss": "written, signed acknowledgement that something was received",
+        "citation": "RAE, DLE 23.8.1, s.v. recibo: '2. m. Escrito o resguardo firmado en que se declara haber recibido dinero u otra cosa.'",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "EVERY register here is a FINANCIAL word. apocha, rasīd and recibo all attest specifically to money changing hands; the Latin is quoted in L&S with the rule that there is no receipt until the money is paid. UNI's receipt is an OBSERVATION that discharges a prediction, and nothing is owed or paid. The transferred property being borrowed is discharge-of-an-obligation-by-evidence, and every register imports a creditor who is not present in the concept. lekhya avoids the money but imports Dharmaśāstra litigation: MW glosses it as a written accusation or defence, i.e. a document produced in a lawsuit, which frames the receipt as adversarial. Greek ἀποχή, the etymon of apocha, independently means 'abstinence, refraining' - the Sceptical epoche - and a reader who knows Greek before Latin may read apocha as suspension of judgement, which is very nearly the opposite of closing a turn.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin apocha read through Greek ἀποχή as 'epoche' / suspension of judgement",
+          "why_wrong": "The Sceptics' ἐποχή/ἀποχή is the withholding of assent. UNI's receipt is where assent is finally EARNED against a prediction. Same letters, opposite epistemic act."
+        },
+        {
+          "rendering": "Hindi रसीद करना",
+          "why_wrong": "McGregor p. 857 marks '~ करना' as colloq. 'to strike, to land (a blow: on को)'. The verb phrase means to hit someone."
+        },
+        {
+          "rendering": "Sanskrit प्रमाण-पत्र pramāṇa-patra / Hindi प्रमाण-पत्र",
+          "why_wrong": "McGregor p. 662 gives प्रमाण-पत्र as 'certificate; diploma; credentials'. A certificate ASSERTS a status on someone's authority. A receipt RECORDS an observation. 'certified' is also banned in author voice."
+        },
+        {
+          "rendering": "Spanish factura",
+          "why_wrong": "An invoice - a demand for payment, i.e. an obligation opened, not discharged. Exactly inverts the concept."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: what is being acknowledged, and what obligation is discharged?",
+        "pass_criterion": "PASS only if the answer is that an OBSERVATION is acknowledged and a PREDICTION is what gets discharged. Any answer naming money, a debt, a creditor, or a certifying authority FAILS and sends the entry to COINED with an explicit sense-extension note."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM on the attestations (all four are solid quotations). LOW on fitness: all four are financial or forensic words and none carries the loop-closing sense. This entry is a strong candidate for rejection in favour of a coinage."
+    },
+    {
+      "concept_id": "EVIDENCE_CLASS",
+      "english_term": "evidence class",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "The A-to-U label recording HOW a claim is known, above which no claim may ever be raised.",
+      "sanskrit": {
+        "devanagari": "प्रमाण",
+        "iast": "pramāṇa",
+        "headword_as_in_lexicon": "प्रमाण pramāṇa",
+        "grammar": "n. (ifc. f. आ); from प्र + √मा (pra-mā), 'to measure out'",
+        "literal_gloss": "a means of acquiring pramā (certain knowledge); any proof or testimony or evidence; right measure, standard, authority",
+        "citation": "Monier-Williams 1899, s.v. प्रमाण: 'a means of acquiring Pramā or certain knowledge (6 in the Vedânta, viz. प्रत्यक्ष, perception by the senses; अनुमान, inference; उपमान, analogy or comparison; शब्द or आप्त-वचन, verbal authority, revelation; अन्-उपलब्धि or अभाव-प्रत्यक्ष, non-perception or negative proof; अर्थापत्ति, inference from circumstances; the Nyāya admits only 4, excluding the last two; the Sāṃkhya only 3 ...)'; also 'any proof or testimony or evidence, Yājñ.; MBh.; Kāv. &c.'; 'right measure, standard, authority, GṛŚrS.; Mn.; MBh. &c.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "classis probātiōnis",
+        "grammar": "classis (is, f.) + probātiō (ōnis, f.) in the genitive",
+        "literal_gloss": "the class/rank of proof",
+        "citation": "COINED phrase. Members cited: L&S s.v. classis, 'prop. the people as assembled or called together,' hence the Servian census class, with 'qui (philosophi) mihi cum illo collati, quintae classis videntur,' i.e. of the lowest rank, Cic. Ac. 2, 23, 73; L&S s.v. prŏbātĭo, 'A trying, proving; a trial, inspection, examination (class.): \"athletarum probatio,\" Cic. Off. 1, 40, 144,' and 'Proof, demonstration (post-Aug.), Quint. 5, 10, 8'. Derivation: classis in its attested RANK sense + probatio in its attested PROOF sense.",
+        "classical_or_post_classical": "COINED [classis classical; probatio classical in the 'trial' sense, post-Augustan in the 'proof' sense]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "evidence class",
+        "definition": "The A-to-U label recording HOW a claim is known, above which no claim may ever be raised."
+      },
+      "hindi": {
+        "devanagari": "प्रमाण-कोटि",
+        "transliteration": "pramāṇ-koṭi",
+        "gloss": "class/category of evidence",
+        "citation": "COINED compound. Member cited: McGregor, Oxford Hindi-English Dictionary, p. 662, s.v. प्रमाण pramāṇ [S.], m. '1. measure, standard; authority (as for a view); precedent. 2. philos. means of knowledge. *3. proof, evidence; verification; warrant. 4. evidence (as to a matter).' The second member कोटि was NOT looked up in McGregor in this pass.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "clase de prueba",
+        "gloss": "class of proof/evidence",
+        "citation": "RAE, DLE 23.8.1, s.v. prueba: '1. f. Acción y efecto de probar. 2. f. Razón, argumento, instrumento u otro medio con que se pretende mostrar y hacer patente la verdad o falsedad de algo.' The compound 'clase de prueba' is COINED from that lemma. Derivation: clase ('class, rank' - NOT looked up in RAE in this pass and unverified) + de + prueba (the cited lemma), the rank-word governing the cited evidence-word in a prepositional compound, on the model of the Latin classis probātiōnis above. DERIVATION ADDED 2026-07-15 by adversarial back-translation review: the entry previously named no morphological derivation and therefore tripped this file's own falsifier. NO new citation was introduced; 'clase' remains unverified against RAE, so this compound rests on one cited member only.",
+        "status": "COINED"
+      },
+      "ambiguity_notes": "pramāṇa is the single most doctrinally loaded word in this file, and MW's own entry proves it: the entry cannot gloss the word without listing WHICH pramāṇas each school admits (Vedānta 6, Nyāya 4, Sāṃkhya 3). To choose pramāṇa is therefore to walk into a live school dispute about how many means of knowledge exist and what they are. UNI's A-to-U classes are NOT a pramāṇa list: they do not claim to be an exhaustive typology of valid knowing, they are not in competition with perception or inference, and they carry a ceiling ('above which no claim may ever be raised') that no pramāṇa theory has. pramāṇa also means 'authority' and 'standard' - so the rendering can be heard as saying the class MAKES the claim authoritative, when the class exists to CAP it. Latin classis imports the Servian census, where classes rank citizens by WEALTH; the rank-ordering is apt (compare CLASS_AUTHORITY_ORDERING) but the criterion - property - is not. This is a sovereign homonym with EVIDENCE (the marginal likelihood) and must never be rendered alike; it is likewise sovereign from NATURA_CLASS, which labels how a fact about NATURE is known.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Spanish clase de evidencia",
+          "why_wrong": "The worst error available in this file. RAE s.v. evidencia: '1. f. Certeza clara y manifiesta de la que no se puede dudar.' Spanish evidencia primarily means CERTAINTY BEYOND DOUBT. A label whose entire job is to record how weakly something is known would be rendered as a label asserting indubitable certainty - the exact inversion. Use prueba."
+        },
+        {
+          "rendering": "Latin classis alone",
+          "why_wrong": "L&S s.v. classis: in military language 'the fleet'. Unqualified, classis reads as a navy."
+        },
+        {
+          "rendering": "Sanskrit प्रमाण pramāṇa used bare, without a fence",
+          "why_wrong": "Bare pramāṇa asserts 'this is a valid means of knowledge / this is authoritative'. UNI's class asserts the opposite direction: it is a ceiling, not a warrant. It also silently commits UNI to one school's enumeration."
+        },
+        {
+          "rendering": "any rendering of 'class' as 'grade', 'score' or 'quality' (Sp. calidad, Hi. श्रेणी as ranking-by-goodness)",
+          "why_wrong": "The class records HOW a claim is known (the kind of access), not how GOOD it is. A Class-A runtime observation is not 'better quality' than a Class-E test pass; it is a different kind of access, and that is why the authority ordering exists."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: does this label make the claim stronger or weaker, and does it describe the KIND of access or the QUALITY of the result?",
+        "pass_criterion": "PASS only if the answer is that it CAPS the claim (never raises it) and that it names the KIND of access. Any answer containing 'certainty', 'authoritative', 'proven', or a quality grade FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. pramāṇa is attested and close, but the doctrinal freight is severe and the ceiling property is carried by no register. The Spanish false friend is confirmed and disqualifying for the obvious rendering."
+    },
+    {
+      "concept_id": "CLASS_AUTHORITY_ORDERING",
+      "english_term": "class authority ordering",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "M9's rule that Class-B tool state overrides Class-G own narrative and Class-A runtime observation overrides Class-E test pass, so that a passing test does NOT satisfy a criterion demanding a runtime observation.",
+      "sanskrit": {
+        "devanagari": "प्रमाण-बल-क्रम",
+        "iast": "pramāṇa-bala-krama",
+        "headword_as_in_lexicon": "COINED compound of प्रमाण + बल + क्रम",
+        "grammar": "m., tatpuruṣa compound: 'the sequence of strength of the means of knowledge'",
+        "literal_gloss": "the order of force among evidence classes",
+        "citation": "COINED. Member cited: Monier-Williams 1899, s.v. प्रमाण, 'any proof or testimony or evidence'. Members बल (bala, 'strength, force') and क्रम (krama, 'step, sequence, order') were NOT looked up in this pass and are unverified. Derivation: pramāṇa + bala + krama, on the model of Mīmāṃsā discussions of the relative force of conflicting pramāṇas.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "ōrdō auctōritātis classium",
+        "grammar": "ōrdō (inis, m.) + auctōritās (ātis, f.) gen. + classis (is, f.) gen. pl.",
+        "literal_gloss": "the order of authority of the classes",
+        "citation": "COINED phrase. Member cited: L&S s.v. classis (see EVIDENCE_CLASS above). ōrdō and auctōritās were NOT fetched from L&S in this pass and are unverified here, though both are common classical nouns.",
+        "classical_or_post_classical": "COINED",
+        "status": "PENDING-CITATION"
+      },
+      "english": {
+        "term": "class authority ordering",
+        "definition": "M9's rule that Class-B tool state overrides Class-G own narrative and Class-A runtime observation overrides Class-E test pass, so that a passing test does NOT satisfy a criterion demanding a runtime observation."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. McGregor is a general-language dictionary and carries no vocabulary for an evidence-class precedence rule; a rendering would be a bare coinage with nothing cited to anchor it.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "orden de prelación de las clases de prueba",
+        "gloss": "order of precedence among evidence classes",
+        "citation": "PENDING. 'prelación' (order of precedence, a live term in Spanish legal usage) was NOT looked up in RAE in this pass. 'prueba' is cited at EVIDENCE_CLASS.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "This concept is a RULE, not a thing, and rules translate worse than things: every register above nominalises it into an object ('an ordering'), which loses the deontic force - M9 does not observe that classes happen to rank, it FORBIDS an inference. The Sanskrit coinage leans on the Mīmāṃsā apparatus for adjudicating conflicting pramāṇas, which is a genuine structural parallel, but that apparatus resolves conflicts between scripture and perception and so imports the premise that a verbal/scriptural pramāṇa can outrank an observation - the reverse of M9's direction of travel, where runtime observation outranks narrative. Latin auctōritās is a political and juristic word (the auctoritas of the senate, of a jurist, of a seller warranting title): it locates authority in a PERSON or body who vouches, whereas M9 locates it in the KIND OF ACCESS and specifically demotes 'own narrative'. A rendering that lets auctōritās keep its personal sense makes M9 say the opposite of what it says.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering where the ordering is 'of importance' or 'of priority' (Sp. orden de prioridad, Hi. महत्व-क्रम)",
+          "why_wrong": "Priority is about what to do FIRST. M9 is about what OVERRIDES what when they conflict. A test run first and a runtime observation run second does not change which wins."
+        },
+        {
+          "rendering": "Latin ōrdō auctōritātis with auctōritās read personally",
+          "why_wrong": "Makes the rule say 'whoever has more standing wins', reintroducing exactly the Class-G own-narrative authority that M9 exists to demote."
+        },
+        {
+          "rendering": "Sanskrit rendering that leaves शब्द/आप्त-वचन (verbal testimony) implicitly outranking प्रत्यक्ष (perception)",
+          "why_wrong": "Several schools rank scriptural testimony at or above perception. M9 ranks runtime observation ABOVE narrative. A rendering inside that apparatus can silently invert the rule."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering plus the sentence 'the test suite passes' and ask whether that satisfies a criterion demanding a runtime observation.",
+        "pass_criterion": "PASS only if the answer is NO. Any answer of 'yes' or 'it depends on who says so' FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW across all registers. Nothing here is attested; the Latin and Hindi are honestly incomplete. This is the weakest entry in the file and should be treated as a placeholder."
+    },
+    {
+      "concept_id": "LEDGER",
+      "english_term": "ledger",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "The append-only single source of truth whose four states are PASS, FAIL, NEGATIVE and PENDING, and which wins wherever prose disagrees with it.",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "",
+        "grammar": "",
+        "literal_gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. Candidate bases (निबन्ध nibandha, लेखा lekhā, पञ्जिका pañjikā) were NOT looked up in Monier-Williams, and proposing one without reading the entry is precisely the pseudopropheta this corpus forbids. NOTE: लेख्य lekhya is already used at RECEIPT; reusing it here would merge two distinct concepts in one register, which the file must not do.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "tabulae",
+        "grammar": "ārum, f. pl. (the plural is the attested sense; sg. tabula = a board, a writing-tablet)",
+        "literal_gloss": "a book of account, account-books",
+        "citation": "L&S s.v. tăbŭla, II. B.: 'Plur., a book of account: \"multum differt, in arcāne positum sit argentum, an in tabulis debeatur,\" Cic. Top. 3, 16; \"litterae lituraeque omnes assimulatae, expressae, de tabulis in libros transferuntur,\" Cic. Verr. 2, 2, 77, § 189; \"aliquid in tabulas referre,\" id. Fl. 9, 20; \"tabulas conficere,\" id. de Or. 2, 23, 97.'",
+        "classical_or_post_classical": "CLASSICAL",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "ledger",
+        "definition": "The append-only single source of truth whose four states are PASS, FAIL, NEGATIVE and PENDING, and which wins wherever prose disagrees with it."
+      },
+      "hindi": {
+        "devanagari": "बही",
+        "transliteration": "bahī",
+        "gloss": "account-book, ledger",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 716, s.v. बही bahī [vahikā-], f. 'account-book, ledger. — पर, or में चढ़ना, to enter in an account-book. – बही-खाता, f. = बही.'",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "libro mayor",
+        "gloss": "ledger (the principal account-book)",
+        "citation": "PENDING. The compound 'libro mayor' was NOT looked up in RAE in this pass. RAE s.v. registro was read - '1. m. Acción de registrar. 2. m. Lugar desde donde se puede registrar o ver algo.' - and does NOT carry the account-book sense, so 'registro' is rejected as the rendering on the strength of that reading.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The Latin is exact on the object and catastrophic on the property. L&S s.v. tabula records 'novae [tabulae], new account-books (by substituting which for the old ones debts were cancelled)' - tabulae novae was a Roman political slogan meaning DEBT ABOLITION BY REPLACING THE BOOKS. The one word Latin offers for a ledger is the word whose most famous collocation names the destruction of the record. UNI's ledger is APPEND-ONLY: substitution is the defining prohibition. A Latin reader primed on tabulae novae will hear the opposite of the concept. bahī is likewise a merchant's account-book and imports the same commercial frame; McGregor's own example (में चढ़ना, 'to enter in an account-book') is however append-shaped and mildly supports the sense. Note the corpus already uses tabulārium for the CONCLAVE append-only log; tabulae (the books) and tabulārium (the archive building) are different objects and should not be collapsed. Two sovereign ledgers exist - CLAIM-LEDGER.md and NATURE-LEDGER.md - and any register that lets one word cover both invites the merge that the file's own falsifiers forbid.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin tabulae novae",
+          "why_wrong": "L&S: new account-books substituted for the old ones so that debts were cancelled. Names the abolition of the record. For an append-only ledger this is the single most damaging phrase in Latin."
+        },
+        {
+          "rendering": "Spanish registro",
+          "why_wrong": "RAE s.v. registro gives 'Acción de registrar' and 'Lugar desde donde se puede registrar o ver algo' - the act of registering or a place to inspect from; it also strongly carries 'search' (a police registro is a search). It does not carry account-book."
+        },
+        {
+          "rendering": "any rendering as 'log' or 'diary' (Sp. bitácora, Hi. डायरी)",
+          "why_wrong": "A log is a narrative record of events. The ledger holds ADJUDICATED STATES (PASS/FAIL/NEGATIVE/PENDING) and outranks prose. Rendering it as a diary makes it Class-G own narrative - exactly what M9 demotes."
+        },
+        {
+          "rendering": "Latin tabula (singular)",
+          "why_wrong": "L&S: a board or plank; a writing-tablet. Only the PLURAL carries the account-book sense. The singular names the physical object."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: (a) can an entry be replaced or erased, and (b) if the surrounding prose disagrees with it, which wins?",
+        "pass_criterion": "PASS only if (a) NO, entries are only appended, and (b) the ledger wins. Any answer permitting substitution FAILS - and the Latin tabulae novae collocation makes this the likely failure."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM on attestation for Latin and Hindi (both solidly quoted). LOW on fitness for Latin, whose famous collocation inverts the append-only property. Sanskrit honestly not attempted."
+    },
+    {
+      "concept_id": "CALIBRATION",
+      "english_term": "calibration",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Moving wording DOWN to the measured value -- never up -- and keeping the prior wording on record, so that the fence gets louder under pressure rather than wider.",
+      "sanskrit": {
+        "devanagari": "अपकर्ष-शोधन",
+        "iast": "apakarṣa-śodhana",
+        "headword_as_in_lexicon": "COINED compound of अपकर्ष + शोधन",
+        "grammar": "n., tatpuruṣa: 'correction by lowering'",
+        "literal_gloss": "downward correction",
+        "citation": "COINED compound; both members CITED. Monier-Williams 1899, s.v. अपकर्ष: 'm. drawing or dragging off or down, detraction, diminution, decay; lowering, depression; decline, inferiority, infamy'. MW s.v. शोधन: 'n. the act of cleaning, purifying, correcting, improving, Nir.; KātyŚr.; MBh. &c.'; 'clearing up, sifting, investigation, examination, correction'; '(in arithm.) subtraction, Bījag.'. Derivation: apakarṣa ('lowering') + śodhana ('correcting'), chosen because śodhana ALREADY carries an arithmetical subtraction sense, which supports the down-only direction rather than merely asserting it.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "correctiō deorsum",
+        "grammar": "correctiō (ōnis, f.) + the adverb deorsum",
+        "literal_gloss": "correction downwards",
+        "citation": "COINED phrase; both members CITED. L&S s.v. correctĭo: 'an amendment, improvement, correction' and, decisively, 'Esp., as a rhet. figure, the recalling of a word in order to use a stronger or more significant one in its place, Gr. ἐπανόρθωσις, Cic. de Or. 3, 53, 204: \"correctio est, quae tollit id, quod dictum est, et pro eo, id, quod magis idoneum videtur, reponit,\" Auct. Her. 4, 26, 36'. L&S s.v. dĕorsum: 'adv. contr. from devorsum, turned down, downwards, κάτω, opp. to sursum (class.)'. Derivation: the rhetorical correctio (taking back a word and putting a fitter one in its place) fenced by deorsum to force the direction.",
+        "classical_or_post_classical": "COINED [both members classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "calibration",
+        "definition": "Moving wording DOWN to the measured value -- never up -- and keeping the prior wording on record, so that the fence gets louder under pressure rather than wider."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. The obvious candidate अंशांकन (aṃśāṅkan, the standard modern technical term for instrument calibration) was NOT looked up in McGregor, and it would in any case denote instrument calibration - the wrong sense (see ambiguity_notes). A correct Hindi rendering must name downward correction of WORDING and is not available without a dictionary read.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "corrección a la baja",
+        "gloss": "downward correction (of a stated figure or wording)",
+        "citation": "PENDING. RAE s.v. calibración was read and gives only '1. f. Acción y efecto de calibrar' - a bare deverbal that resolves to instrument calibration and is therefore REJECTED as the rendering. 'corrección a la baja' is a live Spanish collocation but was NOT confirmed as an RAE lemma or sub-entry in this pass.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The English headword is the trap, and every register inherits it. 'Calibration' normally means ADJUSTING AN INSTRUMENT against a standard, in whichever direction the standard demands, and it is symmetric by definition. UNI's CALIBRATION is neither: it adjusts WORDING, not an instrument, and it is DOWN-ONLY. The Latin discovery here is precise and cuts against the rendering: L&S records correctio as the rhetorical figure of recalling a word to substitute 'a stronger or more significant one' - the attested Latin figure runs UPWARD, i.e. Latin's best word for this operation carries the exact license UNI forbids, which is why deorsum is not decoration but the entire fence. THE CARDINAL SIN LIVES IN THIS ENTRY: HONEST signals are NEVER calibrated. Any register that lets this word take a person's testimony as its object crosses the TRUE/HONEST sovereignty and is the worst error in the corpus. Note also that the concept requires the PRIOR wording to stay on record - a correction that quietly overwrites is not this concept, and no register above carries that requirement.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin correctiō used alone",
+          "why_wrong": "L&S s.v. correctio: the rhetorical figure substitutes 'a stronger or more significant' word. Unfenced, the Latin licenses correcting UPWARD, which is precisely what UNI's calibration prohibits."
+        },
+        {
+          "rendering": "Sanskrit शोधन śodhana used alone",
+          "why_wrong": "MW s.v. शोधन also gives 'excrement, ordure' and 'expiation', 'retaliation, punishment'. Bare śodhana can read as purgation, penance or punishment. It also means 'purifying', which imports the idea that the earlier wording was DIRTY rather than merely uncalibrated - and the prior wording must stay on record with dignity, not be cleansed away."
+        },
+        {
+          "rendering": "Spanish calibración / any instrument-calibration term (Hi. अंशांकन)",
+          "why_wrong": "Names adjusting an instrument against a standard, symmetric in direction. UNI's calibration adjusts WORDING and only ever downward. The instrument reading also invites the catastrophic idea that a person's lived report could be 'calibrated'."
+        },
+        {
+          "rendering": "ANY rendering applied to testimony or lived experience",
+          "why_wrong": "HONEST signals are never calibrated. This crosses the TRUE/HONEST sovereign split - the cardinal sin. Not a nuance: a rendering that permits this object is disqualified outright."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask (a) in which direction the wording may move, (b) what happens to the earlier wording, and (c) whether it can be applied to a person's account of their own experience.",
+        "pass_criterion": "PASS only if (a) DOWN ONLY, (b) the earlier wording stays on record, and (c) NO, never to testimony. Any answer permitting upward movement, silent overwriting, or application to lived experience FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM for Latin and Sanskrit as coinages: both members are cited and the fence word does real work, and śodhana's attested subtraction sense is a genuine support. LOW for Hindi/Spanish, honestly incomplete. The 'prior wording stays on record' clause is carried by NO register and is a known gap."
+    },
+    {
+      "concept_id": "NEGATIVE",
+      "english_term": "negative",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "A held UNI run that missed its pre-registered bar: a result UNI earned, published front-and-center as the credibility, and never retried until it wins.",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "",
+        "grammar": "",
+        "literal_gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. निग्रहस्थान (nigrahasthāna) was looked up and REJECTED on the evidence: MW glosses it '(in phil.) the position of being unfit to carry on an argument from impossibility of agreeing about first principles' - a debate-forfeit for failure to agree on premises, which is not a run that missed a pre-registered bar. Recording the rejection rather than forcing the word.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "repulsa",
+        "grammar": "ae, f.; from repellō, 'to drive back'",
+        "literal_gloss": "a refusal, denial, repulse in soliciting for an office; a defeat in a candidacy",
+        "citation": "L&S s.v. repulsa: 'a refusal, denial, repulse in soliciting for an office: \"Catonem veteres inimicitiae Caesaris incitant et dolor repulsae,\" Caes. B. C. 1, 4; \"omnes magistratus sine repulsā assequi,\" Cic. Pis. 1, 2 ... repulsam ferre, to be rejected, to lose one's election, id. de Or. 2, 69, 280 ... \"turpis repulsa,\" Hor. Ep. 1, 1, 43; \"virtus, repulsae nescia sordidae,\" id. C. 3, 2, 17.'",
+        "classical_or_post_classical": "CLASSICAL",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "negative",
+        "definition": "A held UNI run that missed its pre-registered bar: a result UNI earned, published front-and-center as the credibility, and never retried until it wins."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. No candidate was looked up. A rendering must carry 'earned, published, not retried', which no single general-language Hindi lemma is likely to hold; forcing one would be a coinage with nothing anchoring it.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'resultado negativo' is available but reads as a negative FINDING (or a negative medical test), not as a published, earned, never-retried miss of a pre-registered bar; it was not confirmed against RAE and is not proposed.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "repulsa is the strongest single find in this file and also a trap. It is exactly right in structure: a repulsa is a defeat you can only suffer by STANDING FOR SOMETHING in public - you cannot be repulsed at an election you did not contest - which mirrors 'a result UNI earned' and 'missed its PRE-REGISTERED bar' with unusual precision. Horace's 'virtus, repulsae nescia sordidae' (Odes 3, 2, 17) even carries the note that the repulse is not shameful. But repulsa is a defeat inflicted BY AN ELECTORATE - someone refuses you - whereas a UNI negative is inflicted by NATURE via a bar you set yourself; and Horace's 'turpis repulsa' (Ep. 1, 1, 43) shows the word can be shameful, whereas the UNI concept is published as the credibility. THE SOVEREIGN TOKEN RULE BINDS HERE: NEGATIVE belongs to the UNI ledger and may NOT serve the NATURA vocabulary, which names a retracted published value SUPERSEDED precisely so that one token does not serve both sovereign vocabularies. Any register that lets this word cover a withdrawn nature-claim breaks that fence.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering as 'failure' (Lat. dēfectus, Sp. fracaso, Hi. असफलता)",
+          "why_wrong": "A failure is something that went wrong. A NEGATIVE is a run that went RIGHT and returned an unwelcome answer. The definition calls it a result UNI earned and publishes it as the credibility."
+        },
+        {
+          "rendering": "any rendering as 'negative result' in the medical/test sense (Sp. resultado negativo, dio negativo)",
+          "why_wrong": "Reads as 'the test found nothing / you don't have it'. Loses the pre-registered bar entirely, and a negative test finding is not a missed bar."
+        },
+        {
+          "rendering": "using this token for a retracted or withdrawn value about NATURE",
+          "why_wrong": "Breaks the two-sovereign-vocabularies fence. Nature's class for that is SUPERSEDED. One token may not serve both, and NATURE-LEDGER.md governs the other."
+        },
+        {
+          "rendering": "Sanskrit निग्रहस्थान nigrahasthāna",
+          "why_wrong": "MW: the position of being unfit to carry on an argument from impossibility of agreeing about first principles. It is a debate forfeit over premises, not a measured miss of a stated bar. Rejected on the evidence, not on taste."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: (a) did the thing that suffered this do anything right, (b) who or what decided the outcome, and (c) may it be retried until it succeeds?",
+        "pass_criterion": "PASS only if (a) YES - it stood for a pre-registered bar, (b) the bar/nature decided, not an audience, and (c) NO. repulsa is expected to FAIL on (b), since an electorate refuses you."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM-HIGH on the Latin attestation and structurally the best match in the file; MEDIUM on its fitness given the electorate problem. Three registers honestly not attempted rather than padded."
+    },
+    {
+      "concept_id": "BASELINE",
+      "english_term": "tuned baseline",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "A strong comparison tuned with the same effort spent on the method itself, since an untuned baseline measures the author's enthusiasm rather than the mechanism.",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "",
+        "grammar": "",
+        "literal_gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. प्रतियोगिन् (pratiyogin, 'counterpart, opponent') is a candidate but is a Nyāya term of art for the counter-correlate of an absence, which would import an entire theory of negation; it was NOT looked up and is not proposed.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "norma aemula",
+        "grammar": "norma (ae, f.) + aemulus, a, um in feminine agreement",
+        "literal_gloss": "the rival standard - a standard that strives to equal",
+        "citation": "COINED phrase; both members CITED. L&S s.v. norma: 'a square, employed by carpenters, masons, etc.'; 'Trop., a rule, pattern, precept ... \"natura norma legis est,\" Cic. Leg. 2, 24, 61; \"norma et regula oratoris,\" Plin. Ep. 9, 26, 8'. L&S s.v. aemŭlus: 'striving after another earnestly, emulating, rivalling, emulous ... in a good and bad sense'; 'III. Subst., a rival = rivalis'. Derivation: norma (the standard against which a thing is measured) + aemulus (a rival striving to EQUAL), the second word carrying the 'tuned with the same effort' property.",
+        "classical_or_post_classical": "COINED [both members classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "tuned baseline",
+        "definition": "A strong comparison tuned with the same effort spent on the method itself, since an untuned baseline measures the author's enthusiasm rather than the mechanism."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'línea base' is the common calque but names a STARTING LEVEL (as in a baseline measurement before treatment), which is the wrong concept entirely - see forbidden_mistranslations - and no better candidate was confirmed against RAE.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "The English 'baseline' is a bad word for the concept and the coinage deliberately abandons it. A baseline in ordinary scientific usage is a STARTING LEVEL measured before an intervention - a horizontal line you improve away from. M7's tuned baseline is not a starting level at all: it is a RIVAL METHOD, tuned as hard as your own, whose job is to beat you. aemulus is chosen precisely because L&S attests it as one 'striving after another earnestly ... to equal', which is the effort-symmetry the definition demands. The trap in aemulus is its bad sense: L&S records it 'in a good and bad sense' - of one who 'with a hostile feeling, strives after the possessions of another' - and 'By meton. (eccl.), an enemy'. A tuned baseline is a rival, NOT an enemy: it is built in good faith BY YOU, and the whole point is that you want it to be strong. If the rendering reads as an adversary to be defeated, the reader will do what M7 exists to stop, i.e. build a weak opponent. Note also M7's biomimetic gate rides on this concept: 'nature does it this way' earns nothing until the nature-derived design beats a tuned baseline on a pre-registered metric - so a weak rendering here weakens that gate too, and it is a NATURA-facing consequence of a UNI-side word.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Spanish línea base / any 'starting level' rendering",
+          "why_wrong": "Names the pre-intervention measurement you improve away from. M7's baseline is a competing METHOD tuned to beat you, not a starting level. Different object."
+        },
+        {
+          "rendering": "Latin aemulus read in its bad sense, or as 'enemy'",
+          "why_wrong": "L&S records the hostile sense and the ecclesiastical metonymy 'an enemy'. A baseline built as an enemy gets built weak - the exact failure M7 names, where the comparison measures the author's enthusiasm."
+        },
+        {
+          "rendering": "any rendering as 'control' (Sp. grupo de control)",
+          "why_wrong": "A control holds the intervention out. A tuned baseline is a fully-tuned ALTERNATIVE METHOD competing on the same metric. Conflating them also collides with POSITIVE_CONTROL, a separate concept in this file."
+        },
+        {
+          "rendering": "any rendering as 'reference' or 'benchmark' that drops 'tuned'",
+          "why_wrong": "'Tuned with the same effort' IS the concept. An untuned reference is exactly the defective object the definition warns against."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: how much effort was spent on this thing compared with the method being tested, and is it a starting level or a competitor?",
+        "pass_criterion": "PASS only if the answer is THE SAME EFFORT and A COMPETITOR. Any answer of 'less effort', 'a starting point', or 'an enemy to defeat' FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM for the Latin coinage - aemulus carries the effort-symmetry unusually well and both members are cited - with the bad-sense trap noted. Three registers honestly not attempted."
+    },
+    {
+      "concept_id": "DISCRIMINATOR",
+      "english_term": "load-bearing discriminator",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "A manipulation -- shuffling labels, swapping markers, ablating the mechanism to zero -- that must COLLAPSE the claimed gain, since a gain surviving the destruction of its own mechanism was never the mechanism's.",
+      "sanskrit": {
+        "devanagari": "व्यावृत्ति",
+        "iast": "vyāvṛtti",
+        "headword_as_in_lexicon": "व्य्-आवृत्ति vyāvṛtti",
+        "grammar": "f.; from वि + आ + √वृत् (vi-ā-vṛt), 'to turn away'",
+        "literal_gloss": "exclusion, rejection, removal; discrimination, distinction",
+        "citation": "Monier-Williams 1899, s.v. व्य्-आवृत्ति: 'exclusion, rejection, removal, Kum.; Kāvyâd.; Sāh.'; 'discrimination, distinction, TS.; ŚBr.'; 'difference, AitBr.; Nyāyas. Sch.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "experīmentum discernēns",
+        "grammar": "experīmentum (i, n.) + present active participle of discernō",
+        "literal_gloss": "the distinguishing test - the trial that separates",
+        "citation": "COINED phrase; both members CITED. L&S s.v. expĕrīmentum: 'a proof, test, trial, experiment (mostly post-Aug.) ... \"in omnibus fere minus valent praecepta quam experimenta,\" Quint. 2, 5, 15'. L&S s.v. discrīmen: 'contr. from discerimen à discerno ... that which separates or divides two things from each other'; 'Trop., a distinction, difference'. Derivation: experimentum + the participle of discernō (the verb underlying discrīmen), chosen over bare discrīmen because the concept is a MANIPULATION YOU PERFORM, not a difference that obtains.",
+        "classical_or_post_classical": "COINED [experimentum mostly post-Augustan; discernō classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "load-bearing discriminator",
+        "definition": "A manipulation -- shuffling labels, swapping markers, ablating the mechanism to zero -- that must COLLAPSE the claimed gain, since a gain surviving the destruction of its own mechanism was never the mechanism's."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'discriminador' was not confirmed against RAE, and Spanish 'discriminar' carries a dominant social sense (to discriminate against) that would need to be fenced before the term could be proposed.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "Every register wants to make this a DISTINCTION, and it is an ACTION. vyāvṛtti's attested 'discrimination, distinction' senses name a difference that holds; the concept names something you DO to your own experiment to try to destroy your own result. vyāvṛtti additionally carries Buddhist apoha freight - in Dignāga's theory, vyāvṛtti/apoha is exclusion-of-the-other as the mechanism by which words refer, i.e. an entire nominalist semantics - so the word can quietly assert that meaning is constituted by exclusion. A near neighbour, viveka, is worse and must be named here: MW s.v. विवेक gives '(in Vedânta) the power of separating the invisible Spirit from the visible world (or spirit from matter, truth from untruth, reality from mere semblance or illusion)' - viveka-khyāti is the liberating discernment itself. Using viveka for a label-shuffle would dress a sanity check as soteriology. The 'load-bearing' half of the English is carried by no register: the discriminator is load-bearing because the claim RESTS on it collapsing, and a rendering that loses this leaves an ordinary robustness check.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit विवेक viveka",
+          "why_wrong": "MW: in Vedānta, the power of separating Spirit from world, truth from untruth, reality from illusion. Imports Advaita soteriology wholesale and makes a label-shuffling control read as liberating insight."
+        },
+        {
+          "rendering": "Latin discrīmen used alone",
+          "why_wrong": "L&S: 'that which separates or divides two things' - a difference that obtains, and also 'a decisive point, critical moment' and even 'the dividing membrane, the midriff'. Names a state, not a manipulation you perform."
+        },
+        {
+          "rendering": "Spanish discriminador / discriminar without fencing",
+          "why_wrong": "The dominant modern sense of discriminar in Spanish is to discriminate AGAINST (unjust treatment). Unfenced, the term reads as a social-justice word."
+        },
+        {
+          "rendering": "any rendering as 'robustness check' or 'sensitivity analysis'",
+          "why_wrong": "Those ask whether the result SURVIVES perturbation, and survival is the good outcome. The discriminator demands the gain COLLAPSE, and survival is the bad outcome - it proves leakage. The rendering inverts the pass condition."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: after this operation, should the claimed gain still be there - and what does it mean if it is?",
+        "pass_criterion": "PASS only if the answer is that the gain must be GONE, and that a surviving gain means leakage / it was never the mechanism's. Any answer treating survival as success FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW-MEDIUM. vyāvṛtti is attested and reasonably close but nominalises the action and carries apoha freight; the Latin coinage is defensible; 'load-bearing' is unhandled everywhere."
+    },
+    {
+      "concept_id": "ABLATION",
+      "english_term": "ablation",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Removal of a mechanism in order to measure its contribution, whose number must be a computed residual and never a literal typed in by hand.",
+      "sanskrit": {
+        "devanagari": "लोप",
+        "iast": "lopa",
+        "headword_as_in_lexicon": "लोप lopa",
+        "grammar": "m.; from √लुप् (lup), 'to break, destroy'",
+        "literal_gloss": "(in grammar) dropping, elision; want, deficiency, absence, disappearance",
+        "citation": "Monier-Williams 1899, s.v. लोप: '(in gram.) dropping, elision (generally as distinguished from the terms लुप्, श्लु, लुक्, which are only applicable to affixes; when लोप of an affix takes place, a blank is substituted, which exerts the same influence on the base as the affix itself ...)'; also 'want, deficiency, absence, disappearance, ŚrS.; Ragh.'; 'breaking, hurting, injury, destruction, interruption, MBh.; Kāv. &c.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "ablātiō",
+        "grammar": "ōnis, f.; from auferō ('to carry off')",
+        "literal_gloss": "a taking away",
+        "citation": "L&S s.v. ablātĭo: 'ōnis, f. aufero, a taking away (eccl. Lat.), Tert. adv. Marc. 4, 19; Hier. in Jovin. 2, 11.'",
+        "classical_or_post_classical": "POST-CLASSICAL [ecclesiastical; L&S attests it only from Tertullian and Jerome]",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "ablation",
+        "definition": "Removal of a mechanism in order to measure its contribution, whose number must be a computed residual and never a literal typed in by hand."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED. The obvious calque 'ablación' was looked up and is REJECTED on the evidence - see forbidden_mistranslations. No replacement was confirmed against RAE in this pass; a Spanish rendering must avoid 'ablación' and is owed.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "lopa is the most technically apt word in this file and the finding is worth stating plainly: Pāṇinian lopa is not a vague 'removal' but a formal DELETION OPERATION in a generative grammar, and MW's own gloss records that when lopa of an affix takes place 'a blank is substituted, which exerts the same influence on the base as the affix itself'. That is a startlingly exact parallel to an ablation done wrong - the Pāṇinian blank STILL ACTS, i.e. deleting the element does not remove its effect - and any UNI ablation in which the removed mechanism's influence persists through a substituted blank is precisely the leakage the concept exists to detect. This should be read as a caution the grammarians already recorded, NOT as a nature citation and NOT as raising any UNI rung. lopa's ordinary senses ('breaking, hurting, injury, destruction'; 'neglect, violation, transgression of a vow') are unrelated and dominant outside grammar. The Latin ablatio is attested but only ecclesiastically and only in the bare sense 'a taking away': it does not carry 'in order to measure its contribution', which is the whole purpose clause. NO REGISTER carries the computed-residual requirement, which is the concept's actual fence: an ablation number typed by hand is a claim about a run that did not happen.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Spanish ablación",
+          "why_wrong": "RAE s.v. ablación: '1. f. Med. Extirpación de cualquier parte del cuerpo. 2. f. por antonom. En algunas culturas, extirpación ritual del clítoris. 3. f. Der. Sacrificio o menoscabo de un derecho.' By antonomasia, ablación in Spanish means female genital mutilation. Using it unqualified for an ablation study is a severe register error, not a stylistic one."
+        },
+        {
+          "rendering": "Latin ablātīvus / any rendering via the ablative case",
+          "why_wrong": "The grammatical ablative is a case name from the same root. A Latin reader may hear a declension, not an experiment."
+        },
+        {
+          "rendering": "any rendering as surgical excision (Sk. छेदन chedana, Sp. extirpación)",
+          "why_wrong": "Surgical excision removes tissue to CURE. Ablation removes a mechanism to MEASURE it. The purpose clause is the concept; a curative reading deletes it."
+        },
+        {
+          "rendering": "Sanskrit लोप lopa read in its ordinary sense",
+          "why_wrong": "Outside grammar lopa means 'injury, destruction' and 'violation, transgression (of a vow or duty)'. The technical Pāṇinian sense is the only one that fits, and it must be explicitly fenced."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: (a) why was the thing removed, and (b) where does the resulting number come from?",
+        "pass_criterion": "PASS only if (a) TO MEASURE ITS CONTRIBUTION (not to cure, punish or improve) and (b) it is COMPUTED from a run that actually happened. Every register above is expected to FAIL (b), which is a known gap, not a surprise."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM-HIGH on attestation (lopa and ablatio are both solidly quoted). LOW on completeness: the purpose clause and the computed-residual fence are carried by no register, and Spanish is blocked by a confirmed and serious false friend."
+    },
+    {
+      "concept_id": "PRE_REGISTRATION",
+      "english_term": "pre-registration",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Writing the bar, the margin, the threshold, the named ablation and the stopping rule BEFORE the build, because reasonable data-contingent analytic choices inflate false positives with no deliberate p-hacking at all.",
+      "sanskrit": {
+        "devanagari": "प्रतिज्ञा",
+        "iast": "pratijñā",
+        "headword_as_in_lexicon": "प्रतिज्ञा pratijñā",
+        "grammar": "f.; from प्रति + √ज्ञा (prati-jñā), 'to acknowledge, promise'",
+        "literal_gloss": "(in logic) the proposition to be proved, the first member of the five-membered Nyāya syllogism; a declaration, promise, vow",
+        "citation": "Monier-Williams 1899, s.v. प्रतिज्ञा: '(in logic) a proposition, the assertion or proposition to be proved, the first member or अवयव of the five-membered Nyāya syllogism, IW. 61'; also 'admission, acknowledgment, assent, agreement, promise, vow, MBh.; Kāv. &c.'; 'a statement, assertion, declaration, affirmation'.",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "professiō praevia",
+        "grammar": "professiō (ōnis, f.) + praevius, a, um in feminine agreement",
+        "literal_gloss": "a prior public declaration entered on a register",
+        "citation": "COINED phrase; both members CITED. L&S s.v. prŏfessĭo: 'a public acknowledgment, declaration, expression, profession, promise'; 'II. In partic., a public declaration or specification of one's person, name, property, business, etc. (class.) ... \"tu vero confice professionem, si potes,\" Cic. Fam. 16, 23, 1'; and 'B. 1. A public register of persons or property thus given in (class.): \"in Leontino jugerum subscriptio ac professio non est plus triginta millium,\" Cic. Verr. 2, 3, 47, § 113'. L&S s.v. praevĭus: 'going before, leading the way (poet.): ... nunc praevius anteit, Ov. M. 11, 65'. Derivation: professio in its attested CENSUS-REGISTRATION sense + praevius to fix the time order.",
+        "classical_or_post_classical": "COINED [professio classical in the registration sense; praevius poetic]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "pre-registration",
+        "definition": "Writing the bar, the margin, the threshold, the named ablation and the stopping rule BEFORE the build, because reasonable data-contingent analytic choices inflate false positives with no deliberate p-hacking at all."
+      },
+      "hindi": {
+        "devanagari": "प्रतिज्ञा",
+        "transliteration": "pratijñā",
+        "gloss": "assertion, declaration; assurance; vow; promise",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 655, s.v. प्रतिज्ञा prati-jñā [S.], f. '1. assertion, declaration; assurance; vow. *2. promise. 3. acknowledgement (of a fact, &c.); assent.'",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'preregistro' / 'registro previo' are the live terms in Spanish research usage but neither was confirmed as an RAE lemma, and RAE s.v. registro was read and does not carry the research sense.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "Two independent finds converge here and both should be recorded. (1) MW s.v. नियम (niyama) gives '(in Mīmāṃsā phil.) a rule or precept (laying down or specifying something otherwise optional)' - which is a startlingly exact description of pre-registration's mechanism: it BINDS IN ADVANCE what would otherwise be a free, data-contingent choice, and freedom of analytic choice is precisely what the definition names as the inflation source. niyama is not used as the headword only because MW also anchors it to the Yoga limbs and to 'penance, piety', which would import an ascetic frame. (2) pratijñā is chosen because in Nyāya it is the FIRST member of the syllogism, stated before the reason and the example, and it BINDS the debater: abandoning one's pratijñā (pratijñā-hāni) is itself a recognised point of defeat. Classical Indian dialectics thus already penalised the failure mode the definition describes. This is a note about a shared structure, NOT a nature citation and NOT a UNI gate. The freight to watch: pratijñā's dominant ordinary sense is a solemn VOW, which moralises the act - pre-registration is not a promise to be virtuous, and the definition is explicit that the problem arises 'with no deliberate p-hacking at all', i.e. it is not about honesty. Latin professio has the same defect from the other side: it is also 'a business or profession which one publicly avows', so it can read as a vocation.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering as a vow or oath (Sk. व्रत vrata, Sp. juramento, Hi. शपथ)",
+          "why_wrong": "Moralises the concept. Pre-registration is not a pledge of good behaviour; the definition explicitly locates the harm in REASONABLE choices made with no deliberate p-hacking. A vow implies the danger is bad faith, which is the wrong diagnosis and licenses 'I am honest, so I need not pre-register'."
+        },
+        {
+          "rendering": "Latin professio alone",
+          "why_wrong": "L&S also gives 'A business or profession which one publicly avows' - 'professio bene dicendi,' Cic. de Or. 1, 6, 21. Unfenced it reads as one's occupation, and it loses the time order that praevius supplies."
+        },
+        {
+          "rendering": "any rendering as 'hypothesis' or 'the claim to be proved' alone",
+          "why_wrong": "pratijñā's logical sense is the proposition to be proved. Pre-registration fixes the BAR, the MARGIN, the THRESHOLD, the named ABLATION and the STOPPING RULE - the decision procedure, not the claim. A rendering that names only the thesis loses the stopping rule, which is where the inflation actually enters."
+        },
+        {
+          "rendering": "Spanish registro / inscripción",
+          "why_wrong": "RAE s.v. registro: 'Acción de registrar'; it also strongly carries 'search'. Reads as administrative enrolment, and drops 'before the build' entirely."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: (a) what exactly is written down, (b) when, and (c) what is the danger it guards against?",
+        "pass_criterion": "PASS only if (a) includes the STOPPING RULE and the named ablation (not merely the hypothesis), (b) BEFORE the build, and (c) the danger is reasonable data-contingent choices, NOT dishonesty. Any answer naming bad faith as the danger FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM-HIGH for Sanskrit and Hindi pratijñā (well attested, structurally apt, with a known moralising drift) and MEDIUM for the Latin coinage, whose census-registration sense is genuinely close. Spanish owed."
+    },
+    {
+      "concept_id": "HELD_SET",
+      "english_term": "held set",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Data touched exactly ONCE behind a seal-before-scoring step and a once-only sentinel, since a held set scored twice is a training set with a good reputation.",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "",
+        "grammar": "",
+        "literal_gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "pars obsignāta",
+        "grammar": "pars (partis, f.) + perfect passive participle of obsignō in agreement",
+        "literal_gloss": "the sealed portion",
+        "citation": "COINED phrase. Member cited: L&S s.v. ob-signo: 'to seal, seal up a will, a letter, etc. (class.) ... Esp.: tabulas, testamenta, to sign and seal, as a witness ... Prov.: agere cum aliquo tabellis obsignatis, to deal with one with sealed writings, i. e. in the strictest form, Cic. Tusc. 5, 11, 33 ... tabulas obsignare velle, would seal up the documents, i. e. would have no discussion, Cic. Pis. 28, 69'. 'pars' was NOT fetched from L&S in this pass. Derivation: pars + obsignāta, the participle carrying the seal-before-scoring step.",
+        "classical_or_post_classical": "COINED [obsignō classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "held set",
+        "definition": "Data touched exactly ONCE behind a seal-before-scoring step and a once-only sentinel, since a held set scored twice is a training set with a good reputation."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "The Latin idiom is unusually well-suited and the reason is worth recording: L&S s.v. obsigno preserves Cicero's 'tabulas obsignare velle', glossed 'would seal up the documents, i.e. WOULD HAVE NO DISCUSSION' (Pis. 28, 69), and 'agere cum aliquo tabellis obsignatis ... in the strictest form' (Tusc. 5, 11, 33). Roman sealing was therefore already a device meaning THIS IS CLOSED TO FURTHER ARGUMENT, which is exactly the force of seal-before-scoring - the seal is not about secrecy, it is about foreclosing renegotiation. The gap: obsignāta carries the seal but NOT the once-only sentinel, and 'touched exactly ONCE' is the discriminating property. A Roman seal could be broken and the tablets re-sealed; the concept forbids the second touch outright. Also note that the Latin's native object is tabulae (documents), which collides with LEDGER's rendering - a reviewer must ensure the two do not converge on the same phrase. The word 'held' in English is a trap in its own right: the corpus bans 'held-PASS' in author voice, and the set is not 'held' in the sense of being possessed but in the sense of being WITHHELD.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering as 'secret' or 'hidden' (Lat. arcānus, Sp. datos secretos)",
+          "why_wrong": "The seal is not about concealment - the data may be perfectly well known. It is about foreclosing a second scoring. Secrecy is the wrong mechanism and would license 'nobody looked, so it is fine'."
+        },
+        {
+          "rendering": "any rendering as 'reserved' or 'set aside' that drops the once-only sentinel (Sp. conjunto reservado)",
+          "why_wrong": "Reserving data says nothing about how many times it may be scored. The definition's whole force is 'touched exactly ONCE' - a set scored twice is a training set with a good reputation."
+        },
+        {
+          "rendering": "any rendering importing 'held-PASS'",
+          "why_wrong": "'held-PASS' is banned in author voice by the honesty rail. The set being held says nothing about the outcome."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: how many times may this data be scored, and what happens if it is scored a second time?",
+        "pass_criterion": "PASS only if the answer is EXACTLY ONCE and that a second scoring converts it into a training set. Any answer about secrecy, or permitting a re-score after re-sealing, FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. Only Latin attempted, as a coinage with one member uncited; the once-only sentinel - the actual discriminating property - is carried by nothing. Three registers honestly not attempted rather than invented."
+    },
+    {
+      "concept_id": "BOUND_NOT_POINT",
+      "english_term": "the bound, not the point estimate",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "M2's verdict rule: the verdict is the confidence-interval bound that EXCLUDES the threshold, never the point estimate.",
+      "sanskrit": {
+        "devanagari": "अवधि",
+        "iast": "avadhi",
+        "headword_as_in_lexicon": "अवधि avadhi",
+        "grammar": "m.; from अव + √धा (ava-dhā)",
+        "literal_gloss": "a term, limit; conclusion, termination",
+        "citation": "Monier-Williams 1899, s.v. अव-धि/: 'a term, limit, ŚBr. &c.'; 'conclusion, termination, Kum. iv, 43; Kathās. &c.'; also 'attention, L.'; and as ind. 'until, up to (in comp.), Kathās.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "terminus excludēns",
+        "grammar": "terminus (i, m.) + present active participle of excludō",
+        "literal_gloss": "the excluding boundary",
+        "citation": "COINED phrase. Member cited: L&S s.v. termĭnus: 'a boundary-line, boundary, bound, limit (syn.: finis, limes, meta) ... \"contentio de terminis,\" Cic. Ac. 2, 43, 132'; 'II. Transf., in gen., a bound, limit, end, term'. 'excludō' was NOT fetched from L&S in this pass. Derivation: terminus + the participle of excludō ('to shut out'), the participle carrying the exclusion of the threshold.",
+        "classical_or_post_classical": "COINED [terminus classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "the bound, not the point estimate",
+        "definition": "M2's verdict rule: the verdict is the confidence-interval bound that EXCLUDES the threshold, never the point estimate."
+      },
+      "hindi": {
+        "devanagari": "सीमा",
+        "transliteration": "sīmā",
+        "gloss": "limit, boundary; frontier",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 1021, s.v. सीमा sīmā [S.], f. '1. limit, boundary; frontier. 2. bounds, limit (of morality or convention).' NOTE: this cites the general-language word for a boundary ONLY; it does NOT attest a confidence-interval bound, and the statistical sense is unsupported here.",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED. 'cota' (the standard Spanish mathematical term for a bound) was looked up: the RAE article's readable portion gives only '1. f. Arma defensiva del cuerpo usada antiguamente ...' - the chain-mail sense - and the meta description truncates before any mathematical sense. The mathematical sense is therefore NOT CONFIRMED and 'cota' is not proposed on this evidence.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "This is a RULE about which number to quote, and no register above renders the rule - each renders only the word 'bound', which is the easy half. The load-bearing content is the CONTRAST ('never the point estimate') and the RELATION ('the bound that excludes the threshold' - a specific one of the two bounds, selected by which side the threshold falls on). A one-word rendering therefore cannot carry the concept and must not be treated as if it does. The 1919 eclipse is the worked case recorded in the concept's own notes: the result severely EXCLUDED the Newtonian value and was consistent with but did not pin the GR value; the excluding bound is the verdict and the point estimate is decoration. Latin terminus imports a god - L&S records Terminus as 'the deity presiding over boundaries' - and Roman boundary stones were sacred and IMMOVABLE, which is a poor frame for a bound that shifts with the data. avadhi and sīmā are both ordinary spatial/temporal boundary words with no statistical content whatever; sīmā's second McGregor sense is 'bounds, limit (of morality or convention)', i.e. propriety.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering that names the interval rather than the bound (Sp. intervalo de confianza, Hi. विश्वास अंतराल)",
+          "why_wrong": "The verdict is ONE bound - the one excluding the threshold - not the interval and not both ends. Naming the interval restores the ambiguity M2 exists to remove."
+        },
+        {
+          "rendering": "any rendering as 'estimate', 'value' or 'result' (Sk. मान māna, Sp. estimación)",
+          "why_wrong": "The point estimate is exactly what the rule forbids quoting as the verdict. Rendering the concept with an estimate word inverts it."
+        },
+        {
+          "rendering": "Latin terminus read through the god / the sacred boundary stone",
+          "why_wrong": "A Roman terminus was sacred and immovable. A confidence bound is neither, and moves with the evidence."
+        },
+        {
+          "rendering": "Hindi सीमा sīmā in its moral sense",
+          "why_wrong": "McGregor's sense 2 is 'bounds, limit (of morality or convention)'. Reads as propriety, not as a statistical bound."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering plus a result (point estimate 1.7, CI [1.2, 2.2], threshold 0.9) and ask what the verdict is.",
+        "pass_criterion": "PASS only if the answer names 1.2 - the bound excluding the threshold - and explicitly declines to report 1.7 as the verdict. Any answer quoting the point estimate or the whole interval FAILS. Every register above is expected to FAIL this, since none renders the rule."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. The attestations are genuine but they attest ordinary boundary words; the concept is a verdict RULE and is not rendered by any of them. Recorded as a known structural gap, not as a near miss."
+    },
+    {
+      "concept_id": "SEVERITY",
+      "english_term": "severity",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Mayo's requirement that a passing test counts as evidence only if it could have failed, made operable as the single question: if the claim were false, what is the probability this exact procedure would still have passed it?",
+      "sanskrit": {
+        "devanagari": "परीक्षा",
+        "iast": "parīkṣā",
+        "headword_as_in_lexicon": "परीक्षा parīkṣā",
+        "grammar": "f.; from परि + √ईक्ष् (pari-īkṣ), 'to look around, examine'",
+        "literal_gloss": "inspection, investigation, examination, test, trial by ordeal",
+        "citation": "Monier-Williams 1899, s.v. परीक्षा: 'f. inspection, investigation, examination, test, trial by ordeal of various kinds (See दिव्य), Mn.; MBh. &c.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "sevēritās",
+        "grammar": "ātis, f.; from sevērus",
+        "literal_gloss": "seriousness, gravity, sternness, strictness",
+        "citation": "L&S s.v. sĕvērĭtas: 'ātis, f. 1. severus, seriousness, gravity, sternness, strictness, severity, in a good and bad sense (class. and very freq.; syn. gravitas): \"tristis severitas inest in vultu,\" Ter. And. 5, 2, 16; \"severitatem in senectute probo: acerbitatem nullo modo,\" Cic. Sen. 18, 65; \"censorum,\" id. Rep. 4, 6, 15 ... \"nimia emendationis severitas,\" Quint. 2, 4, 10.'",
+        "classical_or_post_classical": "CLASSICAL",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "severity",
+        "definition": "Mayo's requirement that a passing test counts as evidence only if it could have failed, made operable as the single question: if the claim were false, what is the probability this exact procedure would still have passed it?"
+      },
+      "hindi": {
+        "devanagari": "परीक्षा",
+        "transliteration": "parīkṣā",
+        "gloss": "inspection, investigation, examination; experiment; test, trial; trial by ordeal",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 610, s.v. परीक्षा parîkṣā [S.], f. '1. inspection, investigation, examination. 2. experiment; test, trial. *3. examination (of a student). 4. trial by ordeal.'",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED. 'severidad' was looked up and is REJECTED on the evidence: RAE s.v. severidad gives '1. f. Cualidad de severo', and RAE s.v. severo gives '1. adj. Riguroso, áspero, duro en el trato o el castigo. 2. adj. Exacto y rígido en la observancia de una ley, un precepto o una regla.' - harshness in treatment or punishment. See forbidden_mistranslations. No replacement confirmed in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "THE CENTRAL ERROR THIS ENTRY EXISTS TO PREVENT: severity is a property OF A TEST PROCEDURE, and every register renders it as a property OF A PERSON'S CHARACTER. L&S s.v. severitas is a moral word throughout - the sternness of censors, 'tristis severitas inest in vultu', severity opposed to lepos, to comitas, to mansuetudo - and RAE s.v. severo confirms the same in Spanish ('duro en el trato o el castigo'). Mayo's severity has nothing to do with sternness: a severe test is one that WOULD PROBABLY HAVE FAILED had the claim been false, and a stern examiner running a test that cannot fail achieves severity ZERO. The two notions are not merely different, they are uncorrelated, and the natural-language word actively teaches the wrong one. parīkṣā and Hindi parīkṣā name the test itself, not the property of it, and both carry 'trial by ordeal' - MW cross-references दिव्य - which is a test whose outcome is determined by divine intervention rather than by the claim's truth: the limiting case of a test with no severity at all. As the concept's own note records, a weak pass and a severe pass are different species of result and must never share a column.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin saevitia",
+          "why_wrong": "L&S s.v. saevĭtĭa: 'a raging, rage, fierceness, ferocity ... harshness, savageness, cruelty, barbarity, severity'. It glosses AS 'severity' in English while meaning savagery, and it is a near-homophone of severitas. The single most available wrong word here."
+        },
+        {
+          "rendering": "Spanish severidad",
+          "why_wrong": "RAE: 'Cualidad de severo'; severo = 'Riguroso, áspero, duro en el trato o el castigo'. Says harshness of treatment or punishment. A severe test in Mayo's sense is not harsh and need not be strict; it merely could have failed."
+        },
+        {
+          "rendering": "any rendering as strictness or rigour of the examiner (Sk. कठोरता kaṭhoratā, Hi. कठोरता)",
+          "why_wrong": "Relocates the property from the procedure to the person. A stern examiner administering a test that cannot fail has severity zero; a mild one administering a test that would have caught the error has high severity."
+        },
+        {
+          "rendering": "any rendering via 'trial by ordeal' (Sk. दिव्य divya)",
+          "why_wrong": "An ordeal's outcome is decided by divine intervention, not by whether the claim is false. It is the exact zero-severity case: the probability of passing is independent of the truth of the claim."
+        },
+        {
+          "rendering": "any rendering as 'difficulty' (Sp. dificultad, Hi. कठिनता)",
+          "why_wrong": "A difficult test can still be one the claim would pass whether or not it were true. Severity is about the counterfactual failure probability, not about how hard the test is."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: (a) is this a property of the test or of the person running it, and (b) if the claim were false, what would this quantity tell you?",
+        "pass_criterion": "PASS only if (a) OF THE TEST and (b) the probability the procedure would still have passed it. Any answer naming a person's disposition, harshness, or difficulty FAILS. severitas and severidad are expected to FAIL."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "HIGH on the attestations and HIGH on the diagnosis that all of them are wrong for the concept. This entry's value is its forbidden list, not its renderings: Latin and Spanish are confirmed traps and parīkṣā names the test rather than the property. A coinage is likely required."
+    },
+    {
+      "concept_id": "STRONG_INFERENCE",
+      "english_term": "strong inference",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Platt's procedure of devising alternative hypotheses, devising a crucial experiment each of whose possible outcomes EXCLUDES one or more of them, carrying it out to a clean result, and recycling.",
+      "sanskrit": {
+        "devanagari": "अनुमान",
+        "iast": "anumāna",
+        "headword_as_in_lexicon": "अनु-मान anumāna",
+        "grammar": "n.; from अनु + √मा (anu-mā), 'to measure after, infer'",
+        "literal_gloss": "the act of inferring or drawing a conclusion from given premises; inference",
+        "citation": "Monier-Williams 1899, s.v. अनु-मान: 'n. the act of inferring or drawing a conclusion from given premises; inference, consideration, reflection; guess, conjecture; one of the means of obtaining true knowledge (See प्रमाण).'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "illātiō excludēns",
+        "grammar": "illātiō (ōnis, f.) + present active participle of excludō",
+        "literal_gloss": "the excluding inference",
+        "citation": "COINED phrase. Member cited: L&S s.v. illātĭo (inl-): 'ōnis, f. infero, a carrying or bringing in (post-class.) ... II. Trop. ... B. In partic., a logical inference, conclusion: \"vel illativum rogamentum. quod ex acceptionibus colligitur et infertur,\" App. Dogm. Plat. 3, pp. 34, 15.' 'excludō' was NOT fetched from L&S in this pass. Derivation: illātiō in its attested logical sense + the participle of excludō, carrying Platt's exclusion requirement. NOTE: 'strong' is deliberately NOT rendered - see ambiguity_notes.",
+        "classical_or_post_classical": "COINED [illātiō post-classical, attested in Apuleius]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "strong inference",
+        "definition": "Platt's procedure of devising alternative hypotheses, devising a crucial experiment each of whose possible outcomes EXCLUDES one or more of them, carrying it out to a clean result, and recycling."
+      },
+      "hindi": {
+        "devanagari": "अनुमान",
+        "transliteration": "anumān",
+        "gloss": "inference; notion, opinion; conjecture, estimate, guess",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 37, s.v. अनुमान anu-mān [S.], m. '1. inference. 2. notion; opinion. 3. conjecture; estimate; guess.'",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'inferencia fuerte' is the standard calque of Platt but 'fuerte' reproduces the English adjective's defect (see ambiguity_notes) and was not confirmed as carrying the required sense.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "'Strong' is the trap and it is a trap in English first. Platt's inference is not strong in the sense of forceful, confident or well-supported; it is strong because each experiment's every outcome KILLS at least one hypothesis. The strength is a property of the experimental DESIGN's exclusion structure, not of the conclusion's confidence. Any register that renders 'strong' with a vigour word (Lat. fortis, validus; Sp. fuerte; Hi. मज़बूत) says 'a confident inference', which is close to the opposite - a confident inference with no exclusion structure is exactly the storytelling Platt attacks. This is why the Latin coinage renders the MECHANISM (excludēns) and drops the adjective. anumān/anumāna are the standard words for inference in both Sanskrit and Hindi, but they carry Nyāya freight: anumāna is one of the pramāṇas, operating via vyāpti (invariable concomitance) and a hetu - a positive machinery for establishing a conclusion, whereas Platt's procedure is eliminative and its output is a hypothesis DESTROYED. As the concept's own note records: an experiment whose every outcome leaves all hypotheses alive is not an experiment, it is an expense; and if the outcome-to-exclusion mapping was not written before the run, you did storytelling with a dataset - which ties this concept to PRE_REGISTRATION and should not be rendered as if it were free-standing.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering of 'strong' as forceful or robust (Lat. fortis / validus, Sp. fuerte, Hi. मज़बूत)",
+          "why_wrong": "Says the inference is confident or well-supported. Platt's strength is the exclusion structure of the design. A confident inference with no exclusions is the very thing the procedure is aimed against."
+        },
+        {
+          "rendering": "Latin illātiō alone",
+          "why_wrong": "L&S: 'a carrying or bringing in (post-class.)'; its literal senses include 'mortui', i.e. burial, and 'an impost, duty'. Unfenced it reads as interment or a tax; and it names inference in general, losing the exclusion requirement entirely."
+        },
+        {
+          "rendering": "Sanskrit अनुमान anumāna used bare",
+          "why_wrong": "Names inference as such - a pramāṇa that ESTABLISHES conclusions via vyāpti. Platt's procedure ELIMINATES alternatives. Bare anumāna loses both the plurality of hypotheses and the exclusion."
+        },
+        {
+          "rendering": "any rendering as 'deduction' or 'logical reasoning' in general",
+          "why_wrong": "The concept is a PROCEDURE with four named steps including recycling. Rendering it as a species of reasoning drops the crucial experiment, the exclusion mapping, and the iteration."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: what must be true of the POSSIBLE OUTCOMES of the experiment before it is run, and what happens after a clean result?",
+        "pass_criterion": "PASS only if the answer is that EVERY possible outcome excludes at least one hypothesis, and that the procedure then RECYCLES. Any answer describing a confident or well-supported conclusion FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM on the attestations for anumāna/anumān (solid, but they name inference in general). LOW on fitness: no register carries the exclusion-structure that IS the concept, and the deliberate dropping of 'strong' in the Latin is an unreviewed authorial choice."
+    },
+    {
+      "concept_id": "MULTIPLE_WORKING_HYPOTHESES",
+      "english_term": "multiple working hypotheses",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Chamberlin's remedy of plurality rather than neutrality: keep at least two hypotheses always and at least three for anything you intend to claim, each structurally distinct in mechanism rather than in parameter.",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "",
+        "grammar": "",
+        "literal_gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. पक्ष (pakṣa) was looked up - MW: 'a side, party, faction'; 'a wing, pinion' - and is REJECTED as the headword: in Nyāya, pakṣa is the SUBJECT of the inference (the locus where the property is to be proved), not a candidate explanation, so using it here would collide with a live technical sense. No sourced alternative was found in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "conjectūrae plūrēs operantēs",
+        "grammar": "conjectūra (ae, f.) pl. + plūrēs + present active participle of operor, in agreement",
+        "literal_gloss": "several working conjectures",
+        "citation": "COINED phrase. Member cited: L&S s.v. conjectūra: 'ae, f. conicio, a putting together of facts or indications; hence an opinion founded on a comparison of facts, a conjecture, guess, conjectural inference ... \"attendite num aberret a conjecturā suspitio periculi mei,\" i.e. reasonable inference, Cic. Phil. 12, 9, 23'. 'plūrēs' and 'operor' were NOT fetched in this pass and are unverified. Derivation: conjectūra (the cited base) in the plural + plūrēs ('several', supplying Chamberlin's COUNT) + the present active participle of operor ('to work'), the participle chosen to carry 'working' in its active sense - one actually worked - rather than 'provisional'. NOTE: 'hypothesis' returned NO ENTRY BODY on the Perseus L&S route, so no Latin word for 'hypothesis' is attested here and conjectūra is a substitute, not an equivalent. DERIVATION ADDED 2026-07-15 by adversarial back-translation review: the entry previously carried no morphological derivation in this field and therefore tripped this file's own falsifier ('Any register marked COINED lacking a morphological derivation'). The derivation is reconstructed from the entry's existing grammar field; NO new citation was introduced, and plūrēs/operor remain unverified.",
+        "classical_or_post_classical": "COINED [conjectūra classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "multiple working hypotheses",
+        "definition": "Chamberlin's remedy of plurality rather than neutrality: keep at least two hypotheses always and at least three for anything you intend to claim, each structurally distinct in mechanism rather than in parameter."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'hipótesis múltiples de trabajo' is the standard rendering of Chamberlin but was not confirmed against RAE, and 'de trabajo' risks the 'provisional/draft' reading noted below.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "Chamberlin's remedy is PLURALITY, NOT NEUTRALITY, and the distinction is what every rendering is likely to lose. The method does not ask you to suspend judgement or hold no view; it asks you to hold SEVERAL LIVE VIEWS AT ONCE, each of which you actually work. Any register that drifts toward 'open-mindedness', 'impartiality' or 'suspension of judgement' has rendered neutrality and missed the concept - and Latin makes this drift easy, since the obvious neighbouring vocabulary (dubitātiō, suspēnsiō) is Sceptical. Two further properties are load-bearing and unrendered: 'at least two always, at least three to claim' (a COUNT), and 'structurally distinct in mechanism rather than in parameter' (a DISTINCTNESS CRITERION - two settings of one model are ONE hypothesis, not two). The named failure mode is parental affection for one's own explanation; the payoff is that disputes become conflicts between ideas rather than between people. Note also the concept's own warning: one hypothesis plus a null is NOT this, since the null is usually a strawman you already know how to beat - so a rendering that permits 'my idea vs. nothing' satisfies the words and defeats the concept. 'Working' in English means actively worked, not provisional; conjectūra is chosen with reservation because L&S's own gloss ('a guess') undersells a hypothesis one is committed to testing.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering as neutrality, impartiality or open-mindedness (Lat. dubitātiō, Sp. imparcialidad, Sk. संशय saṃśaya)",
+          "why_wrong": "Chamberlin's remedy is plurality, NOT neutrality. MW s.v. संशय gives 'uncertainty, irresolution, hesitation, doubt' and '(in Nyāya) doubt about the point to be discussed'. Doubt is not a working hypothesis; holding none is not holding several."
+        },
+        {
+          "rendering": "any rendering as 'alternative hypothesis' in the statistical sense (Sp. hipótesis alternativa)",
+          "why_wrong": "In statistics the alternative hypothesis is the ONE thing opposed to the null. That is precisely the 'one hypothesis plus a null' structure the concept rejects as a strawman."
+        },
+        {
+          "rendering": "Sanskrit पक्ष pakṣa",
+          "why_wrong": "In Nyāya, pakṣa is the subject/locus of the inference, and its ordinary MW senses are 'a wing' and 'a side, party, faction'. The faction sense is actively harmful here: it makes rival hypotheses into rival PARTIES, restoring the person-vs-person conflict the method exists to convert into idea-vs-idea."
+        },
+        {
+          "rendering": "any rendering of 'working' as provisional, tentative or draft",
+          "why_wrong": "A working hypothesis is one you actively WORK, not one you hold loosely. Tentativeness is neutrality wearing a different coat."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: (a) how many of these must be held to make a claim, (b) may two of them differ only in a parameter setting, and (c) does holding them mean withholding judgement?",
+        "pass_criterion": "PASS only if (a) AT LEAST THREE, (b) NO - they must differ in mechanism, and (c) NO - plurality is not neutrality. Any answer permitting 'my hypothesis and the null' FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW. Latin has no attested word for 'hypothesis' on the route used, three registers are honestly not attempted, and neither the count nor the mechanism-distinctness criterion is rendered anywhere."
+    },
+    {
+      "concept_id": "REPLICATION",
+      "english_term": "replication",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "Independent repetition of a measurement by another party, whose presence or absence is exactly what separates OBSERVED-REPLICATED from OBSERVED-SINGLE.",
+      "sanskrit": {
+        "devanagari": "आवृत्ति",
+        "iast": "āvṛtti",
+        "headword_as_in_lexicon": "आ/-वृत्ति āvṛtti",
+        "grammar": "f.; from आ + √वृत् (ā-vṛt), 'to turn towards, return'",
+        "literal_gloss": "repetition; recurrence to the same point",
+        "citation": "Monier-Williams 1899, s.v. आ/-वृत्ति: 'repetition, KātyŚr.'; 'recurrence to the same point, TS.; ŚBr.; Bhag.; Kathās. &c.'; also 'turning towards, entering, turning back or from, reversion, retreat, flight'.",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "repetītiō aliēna",
+        "grammar": "repetītiō (ōnis, f.) + aliēnus, a, um in feminine agreement",
+        "literal_gloss": "a repetition belonging to another - a repetition done by someone else",
+        "citation": "COINED phrase; both members CITED. L&S s.v. rĕpĕtītĭo: 'II. A repetition, in speaking or writing: \"repetitio frequentior ejusdem nominis,\" Quint. 9, 1, 24'; note also 'I. A demanding back, reclamation, Dig. 50, 17, 41'. L&S s.v. ălĭēnus: 'that belongs to another person, place, object, etc., not one's own, another's, of another, foreign, alien (opp. suus)'. Derivation: repetītiō + aliēnus, the adjective carrying 'by another party', which is the discriminating property.",
+        "classical_or_post_classical": "COINED [both members classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "replication",
+        "definition": "Independent repetition of a measurement by another party, whose presence or absence is exactly what separates OBSERVED-REPLICATED from OBSERVED-SINGLE."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED. The obvious candidate पुनरावृत्ति (punarāvṛtti, 'repetition') was looked up in McGregor and returned 'No results' - it is NOT a McGregor headword. Recording the confirmed absence rather than proposing the word anyway.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED. 'replicación' was looked up and is REJECTED on the evidence: RAE s.v. replicación gives '1. f. Biol. Proceso de duplicación del ADN para transmitir a la siguiente generación una copia íntegra de la información genética. 2. f. desus. Acción de replicar.' - the general sense is marked DESUS. (obsolete). See forbidden_mistranslations.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "The discriminating property is BY ANOTHER PARTY, and it is the property every register drops. āvṛtti, repetītiō and every 'repetition' word describe doing the same thing again - which the ORIGINAL author can do, and which is not replication at all but merely a repeated run. The concept's entire function is to separate OBSERVED-REPLICATED from OBSERVED-SINGLE, and that boundary is drawn by WHO did it, not by how many times it was done. Hence aliēnus is not a modifier but the load-bearing word; its own trap is that aliēnus also means 'estranged, hostile, unfavourable, averse', so 'repetitio aliena' can read as a hostile repetition, when the replicator's disposition is irrelevant. āvṛtti carries a heavy doctrinal sense MW records directly: 'worldly existence, the revolution of births, Kap.' - āvṛtti is the turning of saṃsāra, so the word can import rebirth. The concept's note is load-bearing and unrendered anywhere: 'Nobody has tried' is a fact about the literature and is printed as one; a single unreplicated measurement can never move a UNI rung - least of all via OBSERVED-SINGLE, the class that exists precisely to stop one study being read as settled.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Spanish replicación",
+          "why_wrong": "RAE gives the primary sense as DNA replication (Biol.) and marks the general 'acción de replicar' as desus. - obsolete. The word says molecular biology to a Spanish reader; it does not carry independent scientific replication in current RAE usage."
+        },
+        {
+          "rendering": "Latin replicātiō",
+          "why_wrong": "L&S: 'A folding or rolling back again (of a book)'; 'In jurid. Lat., a reply, replication'; 'Numeri (opp. multiplicatio), a reduction of a number'. Its 'repetition' sense is attested ONLY in late Latin (Sid. Ep. 1, 5). Dominantly it names a plaintiff's rejoinder in a lawsuit - a reply, not an independent re-measurement - and it never carries 'by another party'."
+        },
+        {
+          "rendering": "any bare 'repetition' word (Sk. आवृत्ति / अभ्यास, Lat. repetītiō alone, Hi. दोहराव)",
+          "why_wrong": "Permits the original author repeating their own measurement. That is a repeated run, not a replication, and it does not move OBSERVED-SINGLE to OBSERVED-REPLICATED."
+        },
+        {
+          "rendering": "Sanskrit अभ्यास abhyāsa",
+          "why_wrong": "MW gives 'repeated or permanent exercise, discipline, use, habit, custom' and, in Yoga, 'the effort of the mind to remain in its unmodified condition of purity (sattva)'. It means PRACTICE - repetition for the sake of the practitioner's skill, the opposite of independent verification."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: who performs it, and does the original author doing the measurement a second time count?",
+        "pass_criterion": "PASS only if the answer is ANOTHER PARTY and NO. Every bare repetition word above is expected to FAIL, which is the reason aliēnus is carrying the entry."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW-MEDIUM. The Latin coinage is the only rendering that carries the discriminating property; Spanish and Hindi are blocked by a confirmed false friend and a confirmed dictionary absence respectively, and are honestly left empty."
+    },
+    {
+      "concept_id": "ANOMALY",
+      "english_term": "anomaly",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "A residual that survives the hunt for instrument error -- stable, isotropic-or-not, and quantitatively characterized -- which is the most valuable object in science and the seed of the trajectory nuisance to residual to characterized anomaly to discriminating test to precision measurement.",
+      "sanskrit": {
+        "devanagari": "व्यभिचार",
+        "iast": "vyabhicāra",
+        "headword_as_in_lexicon": "व्य्-अभिचार vyabhicāra",
+        "grammar": "m.; from वि + अभि + √चर् (vi-abhi-car), 'to go astray'",
+        "literal_gloss": "(in grammar) deviation from or exception to a rule, irregularity, anomaly; going apart or astray, deviating",
+        "citation": "Monier-Williams 1899, s.v. व्य्-अभिचार: '(in gram.) deviation from or exception to a rule, irregularity, anomaly, ib.'; '(in phil.) wandering from an argument, erroneous or fallacious reasoning, the presence of the हेतु (q.v.) without the साध्य (q.v.), MW.'; 'going apart or astray, deviating, not falling or fitting together, being separated or isolated, Kap.; Bhāṣāp. &c.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "anōmalia",
+        "grammar": "ae, f.; from Greek ἀνωμαλία",
+        "literal_gloss": "(in grammar) irregularity, anomaly",
+        "citation": "L&S s.v. ănōmălĭa: 'ae, f., = ἀνωμαλία, in gram., irregularity, anomaly, Varr. L. L. 9, § 3 sq. Müll.'",
+        "classical_or_post_classical": "CLASSICAL [but attested in L&S ONLY as a grammarians' technical term, from Varro]",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "anomaly",
+        "definition": "A residual that survives the hunt for instrument error -- stable, isotropic-or-not, and quantitatively characterized -- which is the most valuable object in science and the seed of the trajectory nuisance to residual to characterized anomaly to discriminating test to precision measurement."
+      },
+      "hindi": {
+        "devanagari": "विसंगति",
+        "transliteration": "visaṅgati",
+        "gloss": "incoherence; disruption",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 931, s.v. विसंगति vi-saṅ-gati [S.], f. 'incoherence; disruption.' NOTE: McGregor's gloss is 'incoherence; disruption' and does NOT say 'anomaly'. The word is offered as the nearest sourced Hindi lemma found, and the gap between 'incoherence' and 'a surviving quantified residual' is NOT closed by this citation.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "anomalía",
+        "gloss": "deviation or discrepancy from a rule or a usage; defect of form or functioning",
+        "citation": "RAE, DLE 23.8.1, s.v. anomalía: '1. f. Desviación o discrepancia de una regla o de un uso. 2. f. Defecto de forma o de funcionamiento. 3. f. Astron. Ángulo que fija la posición de un astro en su órbita elíptica, contado a partir de su eje mayor y en sentido de su movimiento.'",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "The concept's fence is the SURVIVAL CLAUSE - 'survives the hunt for instrument error' - and not one register carries it. Every word above names an irregularity as such; UNI's anomaly is an irregularity that has ALREADY been hunted and has not died, which is a completely different epistemic object, and calling an unexamined residual an anomaly is the characteristic abuse. The instrument's own error is the FIRST term to hunt, not the last to add: OPERA's 60.7 ns was a loose fibre connector, and publishing the anomaly with its error budget and then its own refutation was the method working, not failing. Also unrendered: 'quantitatively characterized' - as the concept's note records, an anomaly you cannot describe quantitatively is a rumour. The register-specific freight is heavy. Latin anomalia is attested ONLY inside the ancient grammarians' analogia/anomalia controversy, i.e. the dispute over whether language is regular by rule or by usage - so the Latin word is a partisan term in a linguistic quarrel, not a word for an empirical residual. RAE's third sense makes anomalía an ANGLE in orbital mechanics (a purely technical, non-pejorative coordinate), so a Spanish reader in a physics register may hear a parameter. vyabhicāra's dominant non-technical sense is devastating: MW gives 'trespass, transgression, crime, vice, sin (esp. infidelity of a wife)'.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Sanskrit व्यभिचार vyabhicāra used without an explicit grammatical/logical fence",
+          "why_wrong": "MW: 'trespass, transgression, crime, vice, sin (esp. infidelity of a wife), Mn.; MBh.' In ordinary usage the word means adultery. Only the (in gram.) and (in phil.) senses are wanted, and they are minority senses."
+        },
+        {
+          "rendering": "Spanish anomalía read in its astronomical sense",
+          "why_wrong": "RAE sense 3 makes it an angle fixing a body's position in its elliptical orbit - a routine orbital coordinate carrying no suggestion of irregularity at all. In an astrophysical context the word may be read as a parameter."
+        },
+        {
+          "rendering": "Latin anōmalia read through the analogia/anomalia controversy",
+          "why_wrong": "L&S attests it only 'in gram.' from Varro, where it is one side of the ancient dispute about whether language follows rule or usage. The Latin word takes a position in a linguistic quarrel; it does not name an empirical residual."
+        },
+        {
+          "rendering": "any rendering as 'error', 'defect' or 'fault' (Sp. anomalía sense 2 'Defecto de forma o de funcionamiento', Sk. दोष doṣa)",
+          "why_wrong": "Exactly inverts the concept. An anomaly is what remains AFTER error and defect have been hunted and excluded. Calling it a defect assigns it to the instrument - the hypothesis the survival clause has already had to defeat."
+        },
+        {
+          "rendering": "any rendering that permits an uncharacterized residual",
+          "why_wrong": "An anomaly you cannot describe quantitatively is a rumour. 'Stable, isotropic-or-not, quantitatively characterized' are admission conditions, not decorations."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: (a) has anyone already checked whether the instrument caused this, and (b) is it described with numbers?",
+        "pass_criterion": "PASS only if (a) YES - the hunt for instrument error has been run and the residual survived it - and (b) YES. Any answer permitting a fresh, unexamined or merely qualitative oddity FAILS. All five registers are expected to FAIL (a)."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM-HIGH on attestation for Latin, Sanskrit and Spanish; LOW on fitness, since the survival clause that defines the concept is carried by none of them and the Hindi gloss does not even reach 'anomaly'."
+    },
+    {
+      "concept_id": "POSITIVE_CONTROL",
+      "english_term": "positive control",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "A run proving the instrument can detect the effect it is looking for, without which a negative result is a hypothesis rather than a finding.",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "",
+        "grammar": "",
+        "literal_gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. No classical Sanskrit term for an experimental control is expected to exist, and none was found. See ambiguity_notes for अनुपलब्धि (anupalabdhi), which is relevant here as the DOCTRINE THIS CONCEPT OPPOSES, not as a rendering.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "probātiō īnstrūmentī",
+        "grammar": "probātiō (ōnis, f.) + īnstrūmentum (i, n.) in the genitive",
+        "literal_gloss": "the trial/testing of the instrument",
+        "citation": "COINED phrase. Member cited: L&S s.v. prŏbātĭo: 'A trying, proving; a trial, inspection, examination (class.): \"athletarum probatio,\" Cic. Off. 1, 40, 144 ... \"equitum,\" a review, Val. Max. 2, 2, 9'. 'īnstrūmentum' was NOT fetched from L&S in this pass. Derivation: probatio in its attested 'trial, inspection' sense (the trial of athletes, the review of cavalry - a check that the thing is fit BEFORE it is relied on) + instrumentum in the genitive.",
+        "classical_or_post_classical": "COINED [probātiō classical in the 'trial' sense]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "positive control",
+        "definition": "A run proving the instrument can detect the effect it is looking for, without which a negative result is a hypothesis rather than a finding."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'control positivo' is the standard term in Spanish scientific usage but was not confirmed against RAE, and 'control' carries the governance senses noted below.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "'Control' is the problem: no register has an attested word for the experimental sense, and every available word means GOVERNANCE, RESTRAINT or SUPERVISION. A positive control does not control anything - it is a run whose answer is already known, used to check that the instrument can speak. The Latin coinage therefore drops 'control' entirely and renders the FUNCTION. The most valuable note here is doctrinal and runs the opposite way from the usual freight: MW s.v. अन्-उपलब्धि (anupalabdhi) gives 'non-perception, non-recognition', and anupalabdhi is admitted in Mīmāṃsā and Advaita as a PRAMĀṆA - a valid means of knowing ABSENCE, i.e. the doctrine that not perceiving X can establish that X is not there. That is precisely the inference the positive control exists to BLOCK. The two must never be rendered with one word or read as allies: where anupalabdhi licenses inferring absence from non-perception, the positive-control rule says non-perception establishes NOTHING until the instrument has been shown able to perceive. Recording this as a structural opposition between the concept and a classical doctrine; it is NOT a nature citation and raises no UNI rung. NA-03 names it 'the positive control nobody runs'. This program learned it the hard way: ICMP silence was read as a dead fleet; the fleet was fine and the firewall drops ICMP. The same error class was live during the authoring of this very file - blank API responses were nearly read as 'not in Monier-Williams' until a query for deva confirmed the instrument worked.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any rendering of 'control' as governance, restraint or supervision (Lat. moderātiō / custōdia, Sk. नियम niyama, Sp. control in its 'mando' sense, Hi. नियंत्रण)",
+          "why_wrong": "Says the instrument is being governed or restrained. A positive control governs nothing; it demonstrates detection capability. MW s.v. नियम gives 'restraining, checking, holding back, preventing, controlling' - exactly the wrong sense, and niyama is in any case needed near PRE_REGISTRATION."
+        },
+        {
+          "rendering": "Sanskrit अनुपलब्धि anupalabdhi",
+          "why_wrong": "MW: 'non-perception, non-recognition'. It names the doctrine that absence can be KNOWN by non-perception - the inference the positive control exists to forbid. Rendering the guard with the name of the error it guards against is the worst available inversion in this entry."
+        },
+        {
+          "rendering": "any rendering as 'control group' (Sp. grupo de control)",
+          "why_wrong": "A control group is a comparison arm within an experiment. A positive control is a run with a KNOWN answer used to validate the instrument itself. It also collides with BASELINE, a separate concept in this file."
+        },
+        {
+          "rendering": "any rendering that makes the negative result a finding",
+          "why_wrong": "Without the positive control a negative result is a HYPOTHESIS, not a finding. That downgrade is the concept's entire output and must survive translation."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: we ran the experiment and detected nothing - what may we now conclude?",
+        "pass_criterion": "PASS only if the answer is NOTHING YET - not until a run with a known answer shows the instrument can detect the effect; and that the null result is at best a hypothesis. Any answer treating the non-detection as a finding FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW on renderings - only Latin attempted, as a coinage with one uncited member - and HIGH on the anupalabdhi opposition, which is the entry's real content and is drawn from a quoted MW gloss."
+    },
+    {
+      "concept_id": "PROVENANCE",
+      "english_term": "provenance",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "The record of what was measured, on what instrument, by whom, when, and through which cable, kept well enough that the loose connector can be found.",
+      "sanskrit": {
+        "devanagari": "मूल",
+        "iast": "mūla",
+        "headword_as_in_lexicon": "मू/ल mūla",
+        "grammar": "n. (or m.)",
+        "literal_gloss": "root; basis, foundation, cause, origin; an original text (as opposed to the commentary or gloss)",
+        "citation": "Monier-Williams 1899, s.v. मू/ल: \"'firmly fixed', a root (of any plant or tree; but also fig. the foot or lowest part or bottom of anything), RV. &c.\"; 'basis, foundation, cause, origin, commencement, beginning ... Mn.; MBh. &c.'; 'an original text (as opp. to the commentary or gloss), R.; Kathās.; Suśr.'",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "index orīginis",
+        "grammar": "index (dĭcis, com.) + orīgo (inis, f.) in the genitive",
+        "literal_gloss": "the register/pointer of the origin",
+        "citation": "COINED phrase; both members CITED. L&S s.v. index: 'he who (that which) points out, a pointer, indicator (class.)'; 'In gen., an index, sign, mark, indication, proof'; 'II. Transf. A. Of books. 1. A title, superscription'. L&S s.v. ŏrīgo: 'ĭnis, f. orior, earliest beginning, commencement, source, descent, lineage, birth, origin (class.; syn. ortus) ... \"fontium qui celat origines Nilus,\" source, Hor. C. 4, 14, 45'. Derivation: index (the pointer/list) + origo (the source) in the genitive.",
+        "classical_or_post_classical": "COINED [both members classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "provenance",
+        "definition": "The record of what was measured, on what instrument, by whom, when, and through which cable, kept well enough that the loose connector can be found."
+      },
+      "hindi": {
+        "devanagari": "मूल",
+        "transliteration": "mūl",
+        "gloss": "root; source, origin; cause; basis, foundation; original (text, or language)",
+        "citation": "McGregor, Oxford Hindi-English Dictionary, p. 830, s.v. मूल mūl [mūla-], m. & adj. '1. m. root. 2. source, origin; cause. 3. basis, foundation. ... 5. original (text, or language). ... – मूल-ग्रंथ, m. original text (of a work).'",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "procedencia",
+        "gloss": "origin, the beginning from which something arises or derives",
+        "citation": "RAE, DLE 23.8.1, s.v. procedencia: '1. f. Origen, principio de donde nace o se deriva algo. 2. f. Punto de partida de un barco, un tren, un avión, una persona, etc., cuando llega al término de su viaje.'",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "Every register names the ORIGIN; the concept is the RECORD OF the origin, kept to an operational standard. The difference is the whole concept: an origin is a fact about the past, while provenance is a maintained artefact whose adequacy has a test - 'kept well enough that the loose connector can be found'. mūla, origo and procedencia all name where a thing came from and none names the keeping of it, which is why the Latin leads with index (the register) rather than with origo. A genuine convergence is worth recording: MW glosses मूल as 'an original text (as opp. to the commentary or gloss)', and McGregor gives मूल-ग्रंथ 'original text (of a work)' - the mūla/commentary distinction is exactly the separation SIGNUM SIGNUM MANET requires, where the signal and the commentary about it travel separately and an attribution is never merged. This is a structural parallel in the lexicon, NOT a UNI gate and NOT a nature claim. The reason OPERA could kill its own claim was provenance of this kind. Distinct from the provenance FENCE classes (NOT-SOURCED / NOT-CONFIRMED / NOT-LOCATED), which record gaps in this corpus's own homework and must not be rendered with the same word. index carries a serious trap of its own: L&S records it 'Esp., in a bad sense, an informer, betrayer, spy'.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "Latin index read in its bad sense",
+          "why_wrong": "L&S: 'Esp., in a bad sense, an informer, betrayer, spy: \"Catilinam vallatum indicibus atque sicariis,\" Cic. Mur. 24, 49.' A provenance record is not a denunciation, and index alone can name a person who informs on someone."
+        },
+        {
+          "rendering": "any bare origin word (Sk. मूल, Sp. procedencia, Lat. origo alone)",
+          "why_wrong": "Names where the thing came from, not the maintained RECORD of it. Drops the operational standard, which is the only part with a test: could the loose connector be found?"
+        },
+        {
+          "rendering": "Spanish procedencia in its sense 2",
+          "why_wrong": "RAE sense 2 is the point of departure of a ship, train or plane. In a logistics register it reads as a departure point on a timetable."
+        },
+        {
+          "rendering": "any rendering that also covers the provenance FENCE classes (NOT-SOURCED / NOT-CONFIRMED / NOT-LOCATED)",
+          "why_wrong": "Those classes record gaps in this corpus's own homework about its citations. This concept records the measurement chain of an observation. One word covering both would merge a claim about the corpus with a claim about an instrument."
+        },
+        {
+          "rendering": "Sanskrit मूल mūla in its astrological or financial senses",
+          "why_wrong": "MW and McGregor both record मूल as a lunar asterism (McGregor: 'a lunar asterism (considered unlucky): the stars in the tail of Scorpio') and as 'capital, principal' as opposed to interest. Unfenced it may read as an inauspicious constellation or as a sum of money."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: is this the origin itself, or a record about the origin - and what test decides whether it is good enough?",
+        "pass_criterion": "PASS only if the answer is A RECORD, and the test named is that a specific fault (the loose connector) could be located from it. Any answer naming only the origin FAILS."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "MEDIUM on attestations (mūla, mūl, procedencia, index and origo are all solidly quoted); LOW-MEDIUM on fitness, since every register names the origin rather than the maintained record."
+    },
+    {
+      "concept_id": "CAVITY_PRINCIPLE",
+      "english_term": "the cavity principle",
+      "domain": "method",
+      "store": "TRUE",
+      "definition": "M22's rule that a hierarchy level must never treat an upstream prior as fresh evidence, but must divide it out.",
+      "sanskrit": {
+        "devanagari": "",
+        "iast": "",
+        "headword_as_in_lexicon": "",
+        "grammar": "",
+        "literal_gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. The term of art is borrowed from the cavity method in statistical physics and has no classical Sanskrit antecedent; a coinage on a 'hollow' word would import the physical sense and mislead (see ambiguity_notes).",
+        "status": "NOT-ATTEMPTED"
+      },
+      "latin": {
+        "form": "rēgula cavī",
+        "grammar": "rēgula (ae, f.) + cavum (i, n.) in the genitive",
+        "literal_gloss": "the rule of the hollow/cavity",
+        "citation": "COINED phrase; both members CITED. L&S s.v. rēgŭla: 'ae, f. rego, a straight piece of wood, ruler, rule (class.; cf.: norma, libella)'; 'II. Trop., a rule, pattern, model, example'. L&S s.v. căvus: 'a, um, adj., hollow, excavated, concave (opp. plenus, full ...)'; 'B. Subst.: căvum, i, n. ... a hollow, cavity, hole, Cato, R. R. 128; Plaut. Men. 1, 2, 49; Lucr. 5, 1382; Liv. 24, 34, 9'. Derivation: regula + cavum in the genitive. NOTE: this is a CALQUE OF A CALQUE - 'cavity' is already a metaphor imported from the physics cavity method, and rendering the metaphor's vehicle into Latin transmits the picture while transmitting none of the mathematics.",
+        "classical_or_post_classical": "COINED [both members classical]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "the cavity principle",
+        "definition": "M22's rule that a hierarchy level must never treat an upstream prior as fresh evidence, but must divide it out."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "",
+        "gloss": "",
+        "citation": "NOT-ATTEMPTED in this pass. 'principio de cavidad' would be a calque of a calque and 'cavidad' carries the anatomical/dental sense; not proposed without a confirmed technical usage.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "ambiguity_notes": "The concept's own note is explicit and binding: 'Cavity' is a term of art borrowed from cavity methods, NOT an anatomical or dental sense. This makes the concept nearly untranslatable by word, because the English name is a metaphor whose vehicle ('a hollow') carries none of the content: the content is that a level must DIVIDE OUT the upstream prior rather than count it again, and 'cavity' names the leave-one-out hole in the physics method from which the technique takes its name. Any register that translates the vehicle produces a word about holes and communicates nothing - the Latin above does exactly this and is offered with that defect stated, not concealed. A translator who does not know the cavity method will produce an anatomical word in every language. The honest options are (a) leave the term untranslated and gloss the rule, or (b) name the RULE rather than the metaphor - something on the order of 'the rule against counting one's own prior twice' - which no register above attempts. Double-counting your own prior is how a hierarchy manufactures confidence from nothing, and that sentence, not the word 'cavity', is what must survive.",
+      "forbidden_mistranslations": [
+        {
+          "rendering": "any anatomical or dental rendering (Sp. cavidad, Hi. गुहा/कोटर, Lat. caverna)",
+          "why_wrong": "The concept's own note forbids it explicitly: cavity here is a term of art from cavity methods, not an anatomical or dental sense. A dental caries word is pure noise."
+        },
+        {
+          "rendering": "any rendering as 'emptiness' or 'void' (Sk. शून्य śūnya, Lat. inane)",
+          "why_wrong": "śūnya imports Madhyamaka emptiness - an entire Buddhist metaphysics - onto a bookkeeping rule about not double-counting a prior. The most extravagant possible category error in this file."
+        },
+        {
+          "rendering": "any rendering that keeps the metaphor's vehicle without the rule",
+          "why_wrong": "'Cavity' communicates nothing on its own. The translatable object is 'divide out the upstream prior; never treat it as fresh evidence'. A faithful rendering of the hole is an unfaithful rendering of the concept."
+        }
+      ],
+      "back_translation_test": {
+        "test": "Give a translator the rendering and ask: what must a level of the hierarchy do with information it received from upstream, and what goes wrong if it does not?",
+        "pass_criterion": "PASS only if the answer is DIVIDE IT OUT / do not count it as fresh evidence, and that otherwise the hierarchy manufactures confidence from nothing. Any answer mentioning holes, teeth or emptiness FAILS. rēgula cavī is expected to FAIL and is retained only as a placeholder with its defect recorded."
+      },
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "LOW, and deliberately so. This is the least translatable concept in the file: its English name is a metaphor borrowed from statistical physics, and every register that renders the metaphor renders nothing. The recommendation on the evidence is to leave it untranslated and gloss the rule."
+    }
+  ]
+}

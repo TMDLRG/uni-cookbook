@@ -1,0 +1,212 @@
+{
+  "id": "PL-02",
+  "title": "The one loop — VFE to understand, EFE to choose",
+  "artifact": {
+    "svg": "reader/plates/PL-02.svg",
+    "sha256": "f09017d6c475ac987d2445c71a1854ca8f242077cd3fa954a602eeecf935dca6",
+    "bytes": 28379,
+    "viewBox": "0 0 1120 1620",
+    "encoding": "US-ASCII (all non-ASCII authored as XML character entities; decodes clean as UTF-8)",
+    "design_only": {
+      "script_elements": 0,
+      "event_handlers": 0,
+      "external_references": 0,
+      "webfonts": 0,
+      "note": "Pure static SVG. The only http URI in the file is the SVG namespace declaration, which is an identifier, not a fetch. All url(#…) references resolve internally (pl02-hatch, pl02-stipple, pl02-arw). Renders standalone and inline; responsive via viewBox with no fixed height."
+    },
+    "theme": "Light and dark, both observed. Dark fires on prefers-color-scheme:dark AND on :root[data-theme=\"dark\"]; light restored by :root[data-theme=\"light\"]. Every var() carries a hex fallback matching the light palette.",
+    "greyscale": "Survives greyscale printing: meaning is never carried by hue. The hatched ring, the numbered tag disc, line weight and position carry every distinction; the accent is used only for the plate number and the stamp border, both of which are also identified by shape and position."
+  },
+
+  "caption": "PLATE PL-02 — THE ONE LOOP. (1) The loop of NA-02, drawn once: 1 PERCEIVE, 2 PREDICT, 3 CHOOSE, 4 ACT, 5 OBSERVE & UPDATE, and back to 1. The ring is a sequence, not a clock — the arrows carry no time-scale, and no step is drawn larger or nearer because it matters more. (2) Two steps carry a scalar, and only two: 1 and 3, marked by the hatched ring. F scores beliefs about what IS. G scores policies — whose observations have not happened, which is exactly why F cannot score an action. Both are in nats. Per NA-02, conflating the two is the most common error in applying this framework. (3) Step 2 carries no formula and is not optional: the falsifier goes in before the action, because surprise cannot be computed against a prediction that was never made. Skip it, and step 5 has nothing to update. (4) Why one number must hold both terms. Goal-only (drop the epistemic term) charges toward C through states it cannot identify. Explore-only (drop the pragmatic term) resolves uncertainty forever and arrives nowhere. Scored apart, the trade-off weight must be hand-tuned — which is the judgement the construction exists to make principled. It is an argument about bookkeeping discipline, not a claim that any organism computes G. (5) Sources: Buckley et al. (2017) J. Math. Psych. 81:55–79 · Da Costa et al. (2020) J. Math. Psych. 99:102447 · Friston et al. (2017) Neural Computation 29(1):1–49, DOI 10.1162/NECO_a_00912 · Parr, Pezzulo & Friston (2022) Active Inference, MIT Press, DOI 10.7551/mitpress/12441.001.0001. Douady & Couder's unrelated G is NOT this G — see NA-02.",
+
+  "source_chapters": [
+    {
+      "id": "NA-02",
+      "path": "encyclopedia/wing-NATURA/NA-02-the-one-loop.md",
+      "role": "primary — every formula, unit, gloss, and honest bound on this plate is drawn from this chapter"
+    },
+    {
+      "id": "NA-00",
+      "path": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "role": "evidence-class vocabulary: twelve classes in three groups, per amendment 2026-07-15-A; and the cardinal rule that keeps the NATURA and UNI vocabularies sovereign"
+    },
+    {
+      "id": "NATURE-LEDGER",
+      "path": "encyclopedia/NATURE-LEDGER.md",
+      "role": "ledger of record for the rows cited on the plate: NA02-01 … NA02-06 and NA02-10"
+    }
+  ],
+
+  "claims": [
+    {
+      "id": "PL02-C1",
+      "placed_at": "1 PERCEIVE",
+      "text": "F = D_KL[ q(s) || p(s) ] − E_q(s)[ ln p(o|s) ]  —  complexity minus accuracy. Minimizing F selects the simplest sufficient explanation; it is not maximizing fit.",
+      "vocabulary": "NATURA",
+      "class": "MODELED",
+      "units": "nats (natural log)",
+      "scope": "a chosen generative model p(o,s) with ln p(o,s) = ln p(o|s) + ln p(s)",
+      "ledger_row": null,
+      "source": "NA-02 § Step 1 — PERCEIVE, decomposition (a). Buckley et al. (2017) J. Math. Psych. 81:55–79; Da Costa et al. (2020) J. Math. Psych. 99:102447.",
+      "falsifier": "Show the decomposition does not follow from ln p(o,s) = ln p(o|s) + ln p(s) under the stated model.",
+      "note": "Carried in the chapter prose; it is not itself a NATURE-LEDGER row. The ledger carries the surprisal-bound decomposition instead (PL02-C2)."
+    },
+    {
+      "id": "PL02-C2",
+      "placed_at": "1 PERCEIVE",
+      "text": "F >= −ln p(o). F upper-bounds surprisal; the bound gap is D_KL[ q(s) || p(s|o) ], and is zero iff q(s) = p(s|o).",
+      "vocabulary": "NATURA",
+      "class": "MODELED",
+      "units": "nats",
+      "scope": "any q, p with q absolutely continuous w.r.t. p on the support",
+      "ledger_row": ["NA02-01", "NA02-02"],
+      "source": "NA-02 § Step 1, decomposition (b); § The numbers. Buckley et al. (2017); Da Costa et al. (2020).",
+      "falsifier": "Exhibit q, p, o meeting the stated support condition with F < −ln p(o); this requires D_KL < 0, contradicting Gibbs' inequality."
+    },
+    {
+      "id": "PL02-C3",
+      "placed_at": "1 PERCEIVE (units line)",
+      "text": "1 nat = log2(e) = 1.442695… bits.",
+      "vocabulary": "NATURA",
+      "class": "MODELED",
+      "units": "bits per nat",
+      "scope": "any log-base change",
+      "ledger_row": ["NA02-03"],
+      "source": "NA-02 § The numbers; Shannon information convention.",
+      "falsifier": "Arithmetic.",
+      "note": "The only literal decimal on the plate. NA-02: an F reported without its log base is not a number — which is why the plate states the base wherever F appears."
+    },
+    {
+      "id": "PL02-C4",
+      "placed_at": "3 CHOOSE",
+      "text": "G(pi) = D_KL[ q(o|pi) || p(o|C) ] + E_q(s|pi)[ H[ p(o|s) ] ] = risk + ambiguity; the same scalar rearranges to −E_q(o|pi)[ D_KL[ q(s|o,pi) || q(s|pi) ] ] − E_q(o|pi)[ ln p(o|C) ] = −epistemic − pragmatic, so minimizing G maximizes both.",
+      "vocabulary": "NATURA",
+      "class": "MODELED",
+      "units": "nats",
+      "scope": "discrete POMDP, convention q(o,s|pi) = p(o|s) q(s|pi). The epistemic form further treats q(s|o,pi) as standing in for p(s|o) — where q is a poor posterior, the information-gain reading is itself approximate.",
+      "ledger_row": ["NA02-04"],
+      "source": "NA-02 § Step 3 — CHOOSE. Da Costa et al. (2020); Parr, Pezzulo & Friston (2022) Active Inference, MIT Press, DOI 10.7551/mitpress/12441.001.0001.",
+      "falsifier": "Derive a case where the two decompositions diverge under the stated convention, or show the convention is not the one the cited sources use."
+    },
+    {
+      "id": "PL02-C5",
+      "placed_at": "the selection gate, on the arc between 3 and 4",
+      "text": "P(pi) = sigma( −gamma · G(pi) ). gamma -> 0 gives a uniform (indifferent) distribution over pi; gamma -> infinity gives a deterministic argmin G.",
+      "vocabulary": "NATURA",
+      "class": "MODELED",
+      "units": "P(pi) is dimensionless; the softmax argument −gamma·G is dimensionless",
+      "scope": "softmax over policies",
+      "ledger_row": ["NA02-06"],
+      "source": "NA-02 § Step 3, Policy selection. Friston et al. (2017) Neural Computation 29(1):1–49, DOI 10.1162/NECO_a_00912.",
+      "falsifier": "Evaluate the softmax at the limits.",
+      "note": "The plate also carries the chapter's caveat: the fuller process-theory form of Friston et al. (2017) additionally carries a past-evidence term (the free energy of policies) alongside gamma·G, and gamma is itself inferred rather than fixed."
+    },
+    {
+      "id": "PL02-C6",
+      "placed_at": "the selection gate",
+      "text": "gamma is a free parameter with NO universal value, fit per model or subject; it is not a natural constant. Because the softmax argument must be dimensionless and G is in nats, gamma carries units of inverse nats — a detail routinely dropped.",
+      "vocabulary": "NATURA",
+      "class": "NOT-MEASURED",
+      "units": "nats^-1",
+      "scope": "gamma > 0",
+      "ledger_row": ["NA02-05"],
+      "source": "NA-02 § The numbers. No source carries a universal value; the units follow from dimensional analysis of the softmax argument.",
+      "falsifier": "Exhibit a replicated cross-species measurement of a single gamma."
+    },
+    {
+      "id": "PL02-C7",
+      "placed_at": "2 PREDICT",
+      "text": "Step 2 carries no formula and is not optional. The falsifier goes in before the action, because surprise cannot be computed against a prediction that was never made. Skip 2 and step 5 has nothing to update: the loop degenerates into narration — a model that only ever confirms itself.",
+      "vocabulary": "none — chapter prose; the step carries no quantity, so it carries no class and no units",
+      "class": null,
+      "units": null,
+      "ledger_row": null,
+      "source": "NA-02 § Step 2 — PREDICT: the falsifier goes in before the action.",
+      "falsifier": "Show that a surprise can be computed against a prediction that was never recorded."
+    },
+    {
+      "id": "PL02-C8",
+      "placed_at": "4 ACT, and stamped on the 3 CHOOSE cartouche",
+      "text": "In the UNI program, G(pi) is FRAMING VOCABULARY, NOT A SCHEDULER. Nothing in UNI computes G and schedules from it; work is ordered by PENDING-burndown, inadmissible-event catch, migration gating, and read-agency. Prose implying UNI runs EFE is drift, and is a defect.",
+      "vocabulary": "UNI-LEDGER — NOT a NATURA evidence class",
+      "class": null,
+      "uni_disposition": "NEGATIVE / drift",
+      "units": null,
+      "ledger_row": null,
+      "source": "NA-02 § Honest bounds 5, and § Recorded INADMISSIBLE / NEGATIVE. Corroborated on the UNI side by encyclopedia/CLAIM-LEDGER.md row C10 (PARKED, Class U — UNI.OS has 'no exact info-gain EFE') and row TA-P5 (Class U — \"'active inference' is the framing lens, never 'active inference demonstrated'\").",
+      "falsifier": "Exhibit a UNI component that computes a per-policy G in nats and orders work by it.",
+      "note": "This is the one claim on the plate that is not NATURA. It is deliberately excluded from evidence_classes: NA-00 (§ SUPERSEDED, 'On the name') registers NEGATIVE as a UNI ledger state (PASS/FAIL/NEGATIVE/PENDING) and expressly DECLINES to register it as a NATURA class, because that would put one token in both sovereign vocabularies at once. UNI's ledger — not this plate and not NA-02 — is the authority on UNI build status."
+    },
+    {
+      "id": "PL02-C9",
+      "placed_at": "centre medallion",
+      "text": "Two quantities, two jobs. F scores beliefs — what IS. G scores policies — what has not happened yet, which is exactly why F cannot score an action. Both in nats. Conflating them is the most common error in applying this framework.",
+      "vocabulary": "none — chapter prose about the construction, not a measurement",
+      "class": null,
+      "units": "both F and G in nats",
+      "ledger_row": null,
+      "source": "NA-02 § The loop, in five steps (steps 1 and 3 are two different quantities with two different jobs); § Step 3 opening.",
+      "falsifier": "Show F can score a policy whose observation has not occurred, without taking an expectation over predicted outcomes."
+    },
+    {
+      "id": "PL02-C10",
+      "placed_at": "caption item 4",
+      "text": "Why one number must hold both terms. Goal-only (drop the epistemic term) charges toward C through states it cannot identify. Explore-only (drop the pragmatic term) resolves uncertainty forever and arrives nowhere. Scored apart, the trade-off weight must be hand-tuned — the judgement the construction exists to make principled.",
+      "vocabulary": "none — an argument about bookkeeping discipline, not a measurement",
+      "class": null,
+      "units": null,
+      "ledger_row": null,
+      "source": "NA-02 § Why ONE number must hold both terms.",
+      "falsifier": "Exhibit a principled, non-hand-tuned exchange rate between a separately-scored goal term and a separately-scored information term."
+    }
+  ],
+
+  "not_claimed": [
+    "That the loop is a result. It is a method: reading this plate raises no rung and settles no question.",
+    "That it is evidence that anything is intelligent, aware, self-aware, or conscious. A system that minimizes F is a system that minimizes F. (NA-02 § Not claimed.)",
+    "That any biological system computes F or G explicitly — NOT-MEASURED [NA02-10]. Falsifier: a pre-registered neural recording decoding a per-policy G in nats.",
+    "That a low F is a correctness certificate. F upper-bounds surprisal UNDER THE MODEL ALREADY HELD; the bound gap is unobservable without the posterior that was intractable to begin with, and minimizing F never tests whether the generative model was the right one. (NA-02 records 'A low F means the model is correct' as INADMISSIBLE.)",
+    "That the FEP is established, general, or settled. Its status is genuinely contested and the plate names the critics rather than summarizing them away: Bruineberg, Dolega, Dewhurst & Baltieri (2022) Behavioral and Brain Sciences 45:e183, DOI 10.1017/S0140525X21002351 (Pearl blankets vs Friston blankets); Aguilera, Millidge, Tschantz & Buckley (2022) Physics of Life Reviews 40:24–50 (the assumptions hold in a narrow parameter region for linear stochastic systems — carried as OBSERVED-CONTESTED, not as a refutation); Colombo & Wright (2021) Synthese 198:3463–3488, DOI 10.1007/s11229-018-01932-w; Andrews (2021) Biology & Philosophy 36:30, DOI 10.1007/s10539-021-09807-0 (the FEP designates a model structure — a model structure is not an empirical finding).",
+    "That gamma, or any other parameter on this plate, has a universal natural value — NOT-MEASURED [NA02-05].",
+    "That UNI computes G or schedules from it. G(pi) is framing vocabulary; UNI-side disposition NEGATIVE / drift; UNI's ledger, not this plate, is the authority on UNI build status.",
+    "That this plate is a UNI gate. A nature citation is NEVER a UNI gate: reading Friston or Da Costa raises no rung and makes no UNI claim \"proven\" — that word belongs to UNI's ledger and to nothing in this wing.",
+    "Any magnitude whatsoever. Nothing on this plate is drawn to scale: no bar, wedge, angle, arc length, or spacing encodes a measured quantity. Hatching denotes a CATEGORY (this step carries a scalar), never a size. Ring geometry is compositional only. In particular the plate does NOT depict the relative sizes of risk and ambiguity, or of the epistemic and pragmatic terms, and it does not assert a term-by-term correspondence between the two decompositions of G — they are two rearrangements of one scalar.",
+    "Anything about \"full human\" or \"beyond human\". Both remain permanent open questions (QUAESTIO-APERTA) — never a target, never a milestone, never a deliverable."
+  ],
+
+  "evidence_classes": ["MODELED", "NOT-MEASURED"],
+
+  "evidence_class_vocabulary": {
+    "name": "NATURA",
+    "authority": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md — twelve classes in three groups (Group A measured, Group B derived, Group C fenced), per amendment 2026-07-15-A",
+    "ledger": "encyclopedia/NATURE-LEDGER.md",
+    "on_this_plate": {
+      "MODELED": "every identity on the plate (PL02-C1 … PL02-C5). The model's assumptions ARE the fence, and the plate names them: a chosen generative model p(o,s); an approximate posterior q(s) that is generally not the true posterior; the convention q(o,s|pi) = p(o|s) q(s|pi); and, for the epistemic reading of G, treating q(s|o,pi) as the posterior. None is an observation about any organism.",
+      "NOT-MEASURED": "gamma (PL02-C6), and the count of biological systems observed to explicitly compute G (NA02-10)."
+    },
+    "sovereignty_fence": "NATURA classes are sovereign from, and are never merged with, the UNI 4-value fence (proven / designed / hypothesized / not-yet-built) and the UNI ledger states (PASS / FAIL / NEGATIVE / PENDING). Claim PL02-C8 carries a UNI-side disposition of NEGATIVE / drift and is deliberately ABSENT from evidence_classes above: NA-00 registers NEGATIVE as a UNI ledger state and expressly declines to register it as a NATURA class, since that would place one token in both sovereign vocabularies at once. THE CARDINAL RULE: a nature citation is never a UNI gate.",
+    "not_applicable": "No HONEST-store signal appears on this plate. Honest signals are never calibrated and are sovereign from every TRUE-side class above; none of the twelve classes may be applied to one."
+  },
+
+  "falsifier": [
+    "A formula on the plate that does not match NA-02. Diff each of F, G, and P(pi) against encyclopedia/wing-NATURA/NA-02-the-one-loop.md.",
+    "A number on the plate that is not in the corpus. The plate carries exactly one literal decimal — 1.442695… bits per nat [NA02-03]; every other quantity is a symbol, a unit, a limit, or an explicit NOT-MEASURED. Find a second unsourced literal and the plate is defective.",
+    "A magnitude read off the plate. If any bar, wedge, angle, or spacing can be shown to encode a measured quantity, the plate has broken its own conventions block.",
+    "A missing unit. Show a quantity on the plate stated without its units and scope: F (nats), G (nats), surprisal (nats), D_KL (nats), H (nats), gamma (nats^-1), P(pi) (dimensionless).",
+    "A merged vocabulary. Show a NATURA class and a UNI ledger state carried in the same field, or a nature citation used to raise a UNI rung.",
+    "A misrepresented critic. Show that Bruineberg et al., Aguilera et al., Colombo & Wright, or Andrews argue something other than what the caption attributes to them. A critique rendered as a strawman is a defect in this plate, not in the critique.",
+    "A design-fence breach: any script element, any on* handler, any external reference, or any webfont in PL-02.svg."
+  ],
+
+  "render_receipts": {
+    "note": "Class-B observations of this artifact, taken by rendering it — not a claim about NA-02's contents.",
+    "renderer": "Chrome headless, window 1120x1640, file:// harness in scratchpad (the harness carries the measuring script; the plate itself stays script-free)",
+    "text_runs_measured": 176,
+    "overflow": "0 text runs overflow their cartouche or the frame; rightmost text edge 1072.0 against a frame inner edge of 1091",
+    "themes_observed": "light (paper #f4efe4) and dark (ground #14130f) both rendered; dark confirmed via BOTH prefers-color-scheme:dark and :root[data-theme=\"dark\"]; light restored via :root[data-theme=\"light\"]",
+    "contrast_light": "ink 13.83:1, ink-2 7.30:1, ink-3 4.71:1 against the cartouche fill",
+    "contrast_dark": "ink 13.72:1, ink-2 7.99:1, ink-3 4.59:1 against the dark cartouche fill",
+    "pending": "Not yet observed on physical paper, nor in a non-Chromium engine (Firefox/WebKit/librsvg/Inkscape). Falsifier: render in one of those and diff against the Chromium raster."
+  }
+}

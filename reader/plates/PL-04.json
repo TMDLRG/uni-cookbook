@@ -1,0 +1,733 @@
+{
+  "id": "PL-04",
+  "title": "The Cell - an engineered system with a budget",
+  "caption": "A labelled anatomical plate of the cell treated as an engineered artifact: what sets its size, what it spends, what its machines deliver under stated conditions, and where its sensing hits a physical floor. Fig. 1 is a schematic composite cell carrying nine numbered call-outs; Figs. 2-5 enlarge the membrane in section, the F1 rotary motor, kinesin on a microtubule, and the ribosome. A budget table sets E. coli against a mammalian cell WITHOUT averaging them, and a ceiling block derives why a cell is the size it is. Every printed number carries its value, units, scope and evidence class, and resolves to a row of encyclopedia/NATURE-LEDGER.md - or says, in place, that it does not: three printed numbers (mammalian power, E. coli size, the ion-pumping share) trace to NA-08 on disk but carry no ledger row, and are held here with ledger_row null as a repair queue against the ledger, not as a licence. Where the corpus carries no sourced number - the nucleus's diameter, the mitochondrion's length, the ribosome's diameter - the label reads NOT-SOURCED rather than inventing one; where nature has not been asked, it reads NOT-MEASURED. Those two fences are never merged. The drawing is schematic and not to scale: only the numbers are claims.",
+  "source_chapters": [
+    {
+      "id": "NA-08",
+      "path": "encyclopedia/wing-NATURA/NA-08-cell-level-design.md",
+      "role": "primary",
+      "chapter_fence": "MODELED - the chapter as an artifact is a budget model; its assumptions (the 3D convention <r^2>=6Dt, spherical S/V, order-of-magnitude Re and Pe inputs) are the fence."
+    },
+    {
+      "id": "NA-10",
+      "path": "encyclopedia/wing-NATURA/NA-10-the-scale-ladder-and-gradients.md",
+      "role": "secondary",
+      "used_for": "the mitochondrion's rung-6 blanket (double membrane, own genome, own fission); its NOT-MEASURED characteristic time; and that chapter's own NOT-SOURCED record against its rung-6 length, which this plate honours by NOT printing that length."
+    },
+    {
+      "id": "CN-05",
+      "path": "cookbook/recipes-natura/CN-05-dna.md",
+      "role": "secondary",
+      "used_for": "nuclear volume and packing (all MODELED), human mtDNA length, and the OBSERVED-CONTESTED status of the 30-nm fibre in vivo, which governs how chromatin is drawn."
+    },
+    {
+      "id": "CN-11",
+      "path": "cookbook/recipes-natura/CN-11-humans.md",
+      "role": "secondary",
+      "used_for": "specific power p_cell (CN11-16)."
+    },
+    {
+      "id": "NA-00",
+      "path": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "role": "class authority",
+      "used_for": "the twelve-class NATURA vocabulary as amended 2026-07-15, and the rule that NOT-MEASURED and NOT-SOURCED are never merged."
+    }
+  ],
+  "claims": [
+    {
+      "symbol": "d_bilayer",
+      "value": "4-5",
+      "units": "nm",
+      "scope": "lipid bilayer thickness",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "standard membrane biophysics; Milo & Phillips 2015",
+      "ledger_row": "NA08-31",
+      "falsifier": "Structural measurement outside range.",
+      "shown_at": "call-out 1; Fig. 2"
+    },
+    {
+      "symbol": "V_m",
+      "value": "~-70",
+      "units": "mV",
+      "scope": "resting neuron",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "standard electrophysiology",
+      "ledger_row": "NA08-32",
+      "falsifier": "NA-08 records no falsifier for this row; printed as the chapter prints it.",
+      "shown_at": "call-out 1; Fig. 2"
+    },
+    {
+      "symbol": "E_m",
+      "value": "1.4-1.8 x 10^7",
+      "units": "V/m",
+      "scope": "V/d, 70 mV over 4-5 nm",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter from V_m and d_bilayer",
+      "ledger_row": "NA08-33",
+      "falsifier": "Arithmetic error, or d/V refuted.",
+      "shown_at": "call-out 1; Fig. 2"
+    },
+    {
+      "symbol": "C_m",
+      "value": "~1 (0.01)",
+      "units": "microfarad/cm^2 (F/m^2)",
+      "scope": "specific membrane capacitance, near-invariant across cell types",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "standard membrane biophysics (Cole; Hodgkin & Huxley 1952)",
+      "ledger_row": "NA08-35",
+      "falsifier": "A cell type deviating >2x with intact bilayer.",
+      "shown_at": "call-out 1; Fig. 2"
+    },
+    {
+      "symbol": "E_air",
+      "value": "~3 x 10^6",
+      "units": "V/m",
+      "scope": "dry air, 1 atm - dielectric strength; COMPARISON ONLY",
+      "evidence_class": "OBSERVED-REPLICATED (not primary-sourced in this pass)",
+      "source": "standard physical reference",
+      "ledger_row": "NA08-34",
+      "falsifier": "Fetch a primary reference.",
+      "shown_at": "call-out 1; Fig. 2"
+    },
+    {
+      "symbol": "nucleus diameter",
+      "value": "-",
+      "units": "micrometre",
+      "scope": "no sourced measurement in this corpus; CN-05 ASSUMES d = 6 um as a model input",
+      "evidence_class": "NOT-SOURCED",
+      "source": "not sourced in this pass. The 6 um is a modelling assumption, not a measurement, and is labelled as such.",
+      "ledger_row": null,
+      "falsifier": "Produce a primary measurement of nuclear diameter with its cell type, or strike the assumption.",
+      "shown_at": "call-out 2 (label prints NOT-SOURCED)"
+    },
+    {
+      "symbol": "V_nucleus",
+      "value": "~113",
+      "units": "micrometre^3",
+      "scope": "sphere, d = 6 um",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter (geometry)",
+      "ledger_row": "CN05-38",
+      "falsifier": "Geometric error; nuclei are not spheres.",
+      "shown_at": "call-out 2"
+    },
+    {
+      "symbol": "L_DNA",
+      "value": "1.04 (2.08)",
+      "units": "m, haploid (diploid)",
+      "scope": "3.055e9 bp x 0.34 nm/bp",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter from G_human (CN05-17)",
+      "ledger_row": "CN05-37",
+      "falsifier": "Arithmetic error; rise per bp refuted.",
+      "shown_at": "call-out 2"
+    },
+    {
+      "symbol": "f_DNA,vol",
+      "value": "~5.8",
+      "units": "% of nuclear volume",
+      "scope": "DNA as a 1 nm-radius cylinder in a 113 um^3 sphere",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter (geometry)",
+      "ledger_row": "CN05-39",
+      "falsifier": "Geometric error. The point: the nucleus is ~94% not-DNA - packing is a topology and access problem, not a space problem.",
+      "shown_at": "call-out 2"
+    },
+    {
+      "symbol": "packing ratio",
+      "value": "~3.5 x 10^5",
+      "units": "dimensionless (linear)",
+      "scope": "2.08 m / 6 um",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter",
+      "ledger_row": "CN05-40",
+      "falsifier": "Arithmetic error.",
+      "shown_at": "call-out 2"
+    },
+    {
+      "symbol": "epsilon_final",
+      "value": "10^-8 - 10^-10",
+      "units": "per nt",
+      "scope": "genome fidelity AFTER three layers; pro- and eukaryotes",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Kunkel & Bebenek 2000, Annu Rev Biochem; Kunkel 2004, JBC",
+      "ledger_row": "NA08-30",
+      "falsifier": "Whole-genome mutation accumulation outside range.",
+      "shown_at": "call-out 2"
+    },
+    {
+      "symbol": "epsilon_pol",
+      "value": "~10^-4 - 10^-5",
+      "units": "per nt",
+      "scope": "polymerase base selectivity ALONE - not the final figure",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Kunkel & Bebenek 2000; Kunkel 2004",
+      "ledger_row": "NA08-28",
+      "falsifier": "Exonuclease-deficient rate outside range. RECORDED CONFLATION TRAP: quoting 10^-10 as the polymerase's own error rate is wrong.",
+      "shown_at": "call-out 2"
+    },
+    {
+      "symbol": "epsilon_proof",
+      "value": "~10^-6 - 10^-7 (x10^2-10^3 gain)",
+      "units": "per nt",
+      "scope": "+ exonucleolytic proofreading",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Kunkel & Bebenek 2000; Kunkel 2004",
+      "ledger_row": "NA08-29",
+      "falsifier": "MMR-deficient rate outside range.",
+      "shown_at": "call-out 2"
+    },
+    {
+      "symbol": "30 nm fibre in vivo",
+      "value": "contested - not observed in cryo-EM of vitrified cells nor in ChromEMT",
+      "units": "nm",
+      "scope": "in vivo chromatin structural level",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "Maeshima, Hihara & Eltsov 2010, Curr Opin Cell Biol; Ou et al. 2017, Science 357(6349):eaag0025",
+      "ledger_row": "CN05-42",
+      "falsifier": "A near-native method resolving 30-nm fibres in vivo. DRAWING CONSEQUENCE: chromatin is drawn on this plate as a disordered curvilinear chain (Ou et al. 2017); the 30-nm fibre is deliberately NOT drawn.",
+      "shown_at": "Fig. 1, nucleus interior"
+    },
+    {
+      "symbol": "mitochondrion length",
+      "value": "-",
+      "units": "m",
+      "scope": "NA-10's scale ladder (rung 6) prints 5 x 10^-7 - 10^-6 m; NA-10's OWN gate struck it as carrying no source",
+      "evidence_class": "NOT-SOURCED",
+      "source": "NA-10 Recorded section: 'standard-and-probably-true is not the same as sourced'. This plate does not re-import the value.",
+      "ledger_row": null,
+      "falsifier": "Fetch a primary and give it a ledger row with a falsifier; the value is then re-classed on its merits.",
+      "shown_at": "call-out 3 (label prints NOT-SOURCED)"
+    },
+    {
+      "symbol": "mitochondrion characteristic time",
+      "value": "-",
+      "units": "s",
+      "scope": "organelle-level dynamics",
+      "evidence_class": "NOT-MEASURED",
+      "source": "NA-10 ladder, rung 6: 'NOT-MEASURED as a single quantity'",
+      "ledger_row": null,
+      "falsifier": "Publish a single characteristic organelle time with its scope and CI. NOTE: this absence is NATURE'S; the length above is OURS. NA-00 forbids merging the two.",
+      "shown_at": "call-out 3 (label prints NOT-MEASURED)"
+    },
+    {
+      "symbol": "mtDNA",
+      "value": "16,569",
+      "units": "bp",
+      "scope": "human mitochondrial genome, T2T-CHM13",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Nurk et al. 2022, Science 376:44-53, doi:10.1126/science.abj6987",
+      "ledger_row": "CN05-17",
+      "falsifier": "Independent T2T assembly differing >0.1%.",
+      "shown_at": "call-out 3"
+    },
+    {
+      "symbol": "tau_F1",
+      "value": "~40",
+      "units": "pN.nm",
+      "scope": "F1-ATPase torque, constant across load and speed",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Yasuda et al. 1998, Cell 93:1117-1124",
+      "ledger_row": "NA08-14",
+      "falsifier": "Load-dependent torque under same assay.",
+      "shown_at": "call-out 4; Fig. 3"
+    },
+    {
+      "symbol": "W_F1",
+      "value": "~80 (vs ~90 available)",
+      "units": "pN.nm per 120 deg step",
+      "scope": "F1, single-molecule, in vitro",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Yasuda et al. 1998; Noji et al. 1997, Nature 386:299-302",
+      "ledger_row": "NA08-15",
+      "falsifier": "Work/step measured well below 80.",
+      "shown_at": "call-out 4; Fig. 3"
+    },
+    {
+      "symbol": "omega_F1",
+      "value": "~130",
+      "units": "rev/s",
+      "scope": "F1, saturating ATP; 120 deg = ~90 deg + ~30 deg substeps",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Yasuda et al. 2001, Nature 410:898-904",
+      "ledger_row": "NA08-16",
+      "falsifier": "Substep structure fails to replicate.",
+      "shown_at": "call-out 4; Fig. 3"
+    },
+    {
+      "symbol": "dG_ATP",
+      "value": "-47 to -50 (~20 kBT ~ 80-90 pN.nm)",
+      "units": "kJ/mol",
+      "scope": "IN VIVO; E. coli on glucose -47",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BioNumbers, 'How much energy is released in ATP hydrolysis?'",
+      "ledger_row": "NA08-12",
+      "falsifier": "Measured phosphorylation potential outside -40 to -65.",
+      "shown_at": "call-out 4; Fig. 3"
+    },
+    {
+      "symbol": "dG0'_ATP",
+      "value": "-28 to -34 (~12 kBT)",
+      "units": "kJ/mol",
+      "scope": "STANDARD conditions (1 M) - NOT the cell",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BioNumbers, as above",
+      "ledger_row": "NA08-13",
+      "falsifier": "RECORDED CONFLATION TRAP: swapping the standard-condition value for the in vivo one breaks the energy budget. They are measured at different conditions.",
+      "shown_at": "call-out 4; Fig. 3"
+    },
+    {
+      "symbol": "ribosome diameter",
+      "value": "-",
+      "units": "nm",
+      "scope": "no sourced row in this corpus",
+      "evidence_class": "NOT-SOURCED",
+      "source": "not sourced in this pass. NA-10's rung-5 band (2 x 10^-8 - 10^-7 m) covers ribosome+capsid+nucleosome TOGETHER and is a scale band, not a ribosome measurement.",
+      "ledger_row": null,
+      "falsifier": "Fetch a primary structural measurement and give it a ledger row.",
+      "shown_at": "call-out 5 (label prints NOT-SOURCED)"
+    },
+    {
+      "symbol": "r_rib,ec",
+      "value": "~20 (range 4-22)",
+      "units": "aa/s",
+      "scope": "E. coli, growth-rate dependent",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 100059, 105067, 108490",
+      "ledger_row": "NA08-23",
+      "falsifier": "Outside 4-22 at stated growth rate.",
+      "shown_at": "call-out 5; Fig. 5"
+    },
+    {
+      "symbol": "r_rib,euk",
+      "value": "3-10 (yeast, 30 C); ~6 (mouse ES)",
+      "units": "aa/s",
+      "scope": "eukaryote",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 107871, 107952",
+      "ledger_row": "NA08-24",
+      "falsifier": "Outside range under stated conditions.",
+      "shown_at": "call-out 5; Fig. 5"
+    },
+    {
+      "symbol": "epsilon_rib",
+      "value": "10^-4 - 10^-3",
+      "units": "per codon",
+      "scope": "missense/misreading",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Kramer & Farabaugh 2007, RNA 13:87-96",
+      "ledger_row": "NA08-25",
+      "falsifier": "Measured rate outside range. Against epsilon_final = 10^-8 - 10^-10 per nt (NA08-30) that is 10^4 - 10^7x sloppier - the full span the two rows allow, and it sets per-codon against per-nt. A narrower band (e.g. 10^5-10^6) is a midpoint invented by averaging away the spread, which Fig. 4 forbids in terms. Sloppier is a design choice, not a defect: proteins are disposable, the genome is not.",
+      "shown_at": "call-out 5; Fig. 5"
+    },
+    {
+      "symbol": "c_pep",
+      "value": "4",
+      "units": "ATP per peptide bond",
+      "scope": "2 (PPi, aa-tRNA charging) + 1 GTP for each of two elongation factors",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Milo & Phillips 2015, Cell Biology by the Numbers",
+      "ledger_row": "NA08-10",
+      "falsifier": "Show a bond formed for <4.",
+      "shown_at": "call-out 5; Fig. 5; budget"
+    },
+    {
+      "symbol": "d_kin",
+      "value": "8",
+      "units": "nm/step",
+      "scope": "kinesin-1 on microtubule, optical trap",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Svoboda et al. 1993, Nature 365:721-727",
+      "ledger_row": "NA08-17",
+      "falsifier": "A different step periodicity.",
+      "shown_at": "call-out 6; Fig. 4"
+    },
+    {
+      "symbol": "n_ATP,kin",
+      "value": "1",
+      "units": "ATP per 8-nm step",
+      "scope": "kinesin-1",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Schnitzer & Block 1997, Nature 388:386-390",
+      "ledger_row": "NA08-18",
+      "falsifier": "Measured coupling != 1:1.",
+      "shown_at": "call-out 6; Fig. 4"
+    },
+    {
+      "symbol": "v_kin",
+      "value": "~0.5-1 (commonly ~0.8)",
+      "units": "micrometre/s",
+      "scope": "saturating ATP, near-zero load, in vitro",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Svoboda & Block 1994, Cell 77:773-784 (force-velocity)",
+      "ledger_row": "NA08-20",
+      "falsifier": "Outside range under stated conditions.",
+      "shown_at": "call-out 6; Fig. 4"
+    },
+    {
+      "symbol": "F_stall,kin",
+      "value": "5-6 OR 7-8",
+      "units": "pN",
+      "scope": "5-6: Svoboda & Block 1994 (optical trap). 7-8: Visscher et al. 1999 (molecular force clamp)",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "Svoboda & Block 1994, Cell 77:773-784; Visscher, Schnitzer & Block 1999, Nature 400:184-189",
+      "ledger_row": "NA08-19",
+      "falsifier": "Resolve by assay; DO NOT AVERAGE. A study reconciling both under one method. The spread is the measurement's; averaging it away invents a number.",
+      "shown_at": "call-out 6; Fig. 4"
+    },
+    {
+      "symbol": "kappa_MT",
+      "value": "2.2 x 10^-23 (+/-6.4%); 2.1 x 10^-23 (+/-4.7%, rhodamine)",
+      "units": "N.m^2",
+      "scope": "taxol-stabilised microtubule, flexural rigidity",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Gittes et al. 1993, J Cell Biol 120(4):923-934",
+      "ledger_row": "NA08-36",
+      "falsifier": "Independent measurement >2x off.",
+      "shown_at": "call-out 6"
+    },
+    {
+      "symbol": "lp_MT",
+      "value": "~5,200 (5.2 mm)",
+      "units": "micrometre",
+      "scope": "microtubule persistence length, lp = kappa/kBT",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Gittes et al. 1993",
+      "ledger_row": "NA08-37",
+      "falsifier": "See the contested length-dependence row.",
+      "shown_at": "call-out 6"
+    },
+    {
+      "symbol": "lp_MT length-dependence",
+      "value": "persistence length varies with filament length",
+      "units": "-",
+      "scope": "grafted MTs",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "Pampaloni et al. 2006, PNAS - contradicts a single MT constant",
+      "ledger_row": "NA08-38",
+      "falsifier": "A method showing length-independence. Both positions travel; neither is resolved here.",
+      "shown_at": "call-out 6"
+    },
+    {
+      "symbol": "lp_actin",
+      "value": "~17.7",
+      "units": "micrometre",
+      "scope": "actin filament, rhodamine-phalloidin",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Gittes et al. 1993",
+      "ledger_row": "NA08-39",
+      "falsifier": "Independent measurement >2x off.",
+      "shown_at": "call-out 7"
+    },
+    {
+      "symbol": "lp_MT/lp_actin",
+      "value": "~294 (~300x)",
+      "units": "dimensionless",
+      "scope": "Gittes values",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter",
+      "ledger_row": "NA08-40",
+      "falsifier": "Ratio recomputation. One stiff beam and one flexible cable, in the same cytoplasm, from one paper.",
+      "shown_at": "call-out 7"
+    },
+    {
+      "symbol": "Re",
+      "value": "~6 x 10^-5",
+      "units": "dimensionless",
+      "scope": "E. coli: v ~ 3 x 10^-5 m/s, L = 2 um, rho = 10^3 kg/m^3, mu = 10^-3 Pa.s; inputs order-of-magnitude",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter; regime per Purcell 1977, Am J Phys 45:3-11",
+      "ledger_row": "NA08-43",
+      "falsifier": "Inputs refuted (swim speed is order-of-magnitude). Inertia does not exist; stop coasting.",
+      "shown_at": "call-out 8"
+    },
+    {
+      "symbol": "Pe",
+      "value": "~0.06-0.1",
+      "units": "dimensionless",
+      "scope": "same, D ~ 10^-9 m^2/s (small molecule)",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter",
+      "ledger_row": "NA08-44",
+      "falsifier": "Demonstrate an advective mixing gain at this scale. Stirring is useless here: you cannot mix your way out, you can only wait or pump.",
+      "shown_at": "call-out 8"
+    },
+    {
+      "symbol": "D_GFP,euk",
+      "value": "27",
+      "units": "micrometre^2/s",
+      "scope": "GFP-S65T, CHO cytoplasm",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 101997; Swaminathan et al. 1997, Biophys J 72(4):1900-7",
+      "ledger_row": "NA08-02",
+      "falsifier": "Independent FRAP in eukaryotic cytoplasm disagreeing >2x.",
+      "shown_at": "call-out 8; ceiling"
+    },
+    {
+      "symbol": "D_GFP,ec",
+      "value": "7.7 +/- 2.5",
+      "units": "micrometre^2/s",
+      "scope": "GFP (27 kDa), E. coli cytoplasm, FRAP/photoactivation",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 100193; Elowitz et al. 1999, J Bacteriol 181(1):197-203",
+      "ledger_row": "NA08-01",
+      "falsifier": "Repeat FRAP; a value outside 3-14 um^2/s under stated conditions refutes.",
+      "shown_at": "call-out 8"
+    },
+    {
+      "symbol": "dc/c scaling",
+      "value": "proportional to (D.a.c.T)^(-1/2)",
+      "units": "dimensionless",
+      "scope": "diffusion-limited chemoreception",
+      "evidence_class": "OBSERVED-REPLICATED (as a scaling)",
+      "source": "Berg & Purcell 1977, Biophys J 20:193-219",
+      "ledger_row": "NA08-41",
+      "falsifier": "A sensor beating the -1/2 exponent. To halve the error you must quadruple the integration time.",
+      "shown_at": "call-out 9"
+    },
+    {
+      "symbol": "dc/c prefactor",
+      "value": "disputed - no closed form printed",
+      "units": "-",
+      "scope": "B-P vs Bialek-Setayeshgar vs Kaizu: the B-S diffusive term is missing 1/(2(1-nbar))",
+      "evidence_class": "OBSERVED-CONTESTED / MODELED",
+      "source": "Bialek & Setayeshgar 2005, PNAS 102(29):10040-5; Kaizu et al. 2014, Biophys J 106(4):976-85",
+      "ledger_row": "NA08-42",
+      "falsifier": "A treatment retaining receptor-ligand correlations that settles the constant. The scaling is settled; the constant is not.",
+      "shown_at": "call-out 9"
+    },
+    {
+      "symbol": "ATP_ec",
+      "value": "~10^7",
+      "units": "ATP/s/cell",
+      "scope": "E. coli, growing",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 111461, 110656, 110628",
+      "ledger_row": "NA08-07",
+      "falsifier": "Independent measurement >10x off.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "ATP_mam",
+      "value": "~10^9",
+      "units": "ATP/s/cell",
+      "scope": "human fibroblast, ~3,000 um^3",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 111476",
+      "ledger_row": "NA08-08",
+      "falsifier": "Independent measurement >10x off.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "P_ec",
+      "value": "~10^-12 (1,000 W/kg)",
+      "units": "W/cell",
+      "scope": "E. coli, glucose minimal media",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 109687",
+      "ledger_row": "NA08-09",
+      "falsifier": "Independent measurement >10x off.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "P_mam",
+      "value": "~3 x 10^-10",
+      "units": "W/cell",
+      "scope": "mammalian cell",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "NA-08 energy-budget table; BNID 111474/111475. PROVENANCE GAP FOUND BY THIS PLATE: sourced in-chapter but carries NO row in NA-08's own numbers table.",
+      "ledger_row": null,
+      "falsifier": "Give it a ledger row with scope and falsifier, or strike it from the chapter's table.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "p_cell",
+      "value": "~100 (mammalian) / ~1,000 (E. coli)",
+      "units": "W/kg",
+      "scope": "specific power; cross-ref NA-08",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "BNID 111474/111475; 109687",
+      "ledger_row": "CN11-16",
+      "falsifier": "Independent measurement >10x off. A bacterium runs ~3 orders of magnitude above a human's whole-body specific power.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "f_prot",
+      "value": "61",
+      "units": "% of total cell ATP",
+      "scope": "E. coli, rich medium; 19.1 of 31.4 mmol ATP/g cells",
+      "evidence_class": "MODELED",
+      "source": "Milo & Phillips 2015 (budget model)",
+      "ledger_row": "NA08-11",
+      "falsifier": "Recompute the budget; a different dominant sink. Building the polymer IS the budget.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "n_Na/ATP",
+      "value": "3 Na+ per 1 ATP",
+      "units": "ions/ATP",
+      "scope": "Na+/K+-ATPase stoichiometry",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Attwell & Laughlin 2001 and standard references",
+      "ledger_row": "NA08-49",
+      "falsifier": "Measured stoichiometry != 3:2:1.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "f_ionpump",
+      "value": "~50",
+      "units": "% of the budget",
+      "scope": "grey matter; the dominant sink, via the Na+/K+-ATPase",
+      "evidence_class": "MODELED",
+      "source": "NA-08 states it in prose, attributed to Attwell & Laughlin 2001, J Cereb Blood Flow Metab 21(10):1133-1145 - cite only with the Howarth, Gleeson & Attwell 2012 revision named. PROVENANCE GAP FOUND BY THIS PASS: printed on the plate but carried no row here and no row in NA-08's numbers table; NA08-49 is the 3:1 stoichiometry only, NOT this share.",
+      "ledger_row": null,
+      "falsifier": "Produce a ledger row carrying this share with its own scope and falsifier, or strike the value from the plate. A per-process measurement (rather than a modelled apportionment) that puts ion pumping outside ~50% of grey-matter ATP also falsifies it.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "E_neuron split",
+      "value": "action potentials 47 / postsynaptic glutamate 34 / resting potential 13 / glutamate recycling 3",
+      "units": "% of signalling ATP",
+      "scope": "rodent grey matter - a MODELLED APPORTIONMENT, not per-process measurement",
+      "evidence_class": "MODELED",
+      "source": "Attwell & Laughlin 2001, JCBFM 21(10):1133-45; revised by Howarth, Gleeson & Attwell 2012, JCBFM",
+      "ledger_row": "NA08-48",
+      "falsifier": "Recompute the budget. FENCE: cite the 2001 split ONLY with the 2012 revision named; 2012 supersedes on any point of conflict.",
+      "shown_at": "budget"
+    },
+    {
+      "symbol": "ATP pool turnover",
+      "value": "~1",
+      "units": "s",
+      "scope": "E. coli - the 'no reservoir' claim",
+      "evidence_class": "NOT-SOURCED",
+      "source": "NA-08 states it in prose; this pass located no primary and it carries no ledger row.",
+      "ledger_row": null,
+      "falsifier": "Produce the primary source, or strike the value. The lesson it carries (no buffer, so the power supply cannot be interrupted) is the chapter's and is printed with this fence.",
+      "shown_at": "budget note (label prints NOT-SOURCED)"
+    },
+    {
+      "symbol": "S/V",
+      "value": "6 vs 0.3",
+      "units": "per micrometre",
+      "scope": "sphere 3/R; R = 0.5 um (E. coli) vs R = 10 um (mammalian)",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter (geometry)",
+      "ledger_row": "NA08-04",
+      "falsifier": "Geometric error. Volume grows as R^3, uptake area as R^2: growth is self-strangling.",
+      "shown_at": "ceiling"
+    },
+    {
+      "symbol": "t(1 m)",
+      "value": "~6.2 x 10^9 (~195 yr)",
+      "units": "s",
+      "scope": "3D diffusion, D = 27 um^2/s, t = L^2/6D",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter from BNID 101997 + <r^2>=6Dt",
+      "ledger_row": "NA08-03",
+      "falsifier": "Arithmetic error, or a demonstration of 1 m protein transport by diffusion alone.",
+      "shown_at": "ceiling"
+    },
+    {
+      "symbol": "t_kinesin(1 m)",
+      "value": "~1.25 x 10^6 (~14 d)",
+      "units": "s",
+      "scope": "1 m at v_kin ~ 0.8 um/s",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter from v_kin (NA08-20); carries no ledger row of its own.",
+      "ledger_row": null,
+      "falsifier": "Arithmetic error. A motor beats diffusion by ~4 orders of magnitude over 1 m.",
+      "shown_at": "ceiling"
+    },
+    {
+      "symbol": "L_Thio",
+      "value": "100-300 (max 750)",
+      "units": "micrometre",
+      "scope": "Thiomargarita namibiensis, cell width",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Schulz et al. 1999, Science 284:493-495",
+      "ledger_row": "NA08-05",
+      "falsifier": "A larger true-cytoplasm cell found.",
+      "shown_at": "ceiling"
+    },
+    {
+      "symbol": "f_vac",
+      "value": "80-98",
+      "units": "% of cell volume",
+      "scope": "Thiomargarita nitrate vacuole; living cytoplasm is a shell ~1-2 um thick",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Schulz et al. 1999",
+      "ledger_row": "NA08-06",
+      "falsifier": "Show cytoplasm fills the cell. The apparent exception OBEYS the constraint: the flux-carrying length is still ~1-2 um.",
+      "shown_at": "ceiling"
+    },
+    {
+      "symbol": "V_ecoli",
+      "value": "~1 um x ~2 um, ~1 um^3 = 1 fL",
+      "units": "micrometre / micrometre^3 / fL",
+      "scope": "E. coli cell size",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "NA-08; BNID 100004; Milo & Phillips 2015. PROVENANCE GAP FOUND BY THIS PLATE: sourced in-chapter but carries no row in NA-08's numbers table.",
+      "ledger_row": null,
+      "falsifier": "Give it a ledger row, or strike it.",
+      "shown_at": "ceiling"
+    }
+  ],
+  "not_claimed": [
+    "NOT TO SCALE. No drawn dimension, proportion, position or count on this plate is a measurement. The drawing is schematic throughout; only the printed numbers are claims. A 4-5 nm bilayer and a 6 um nucleus cannot share one drawing at one scale, and this one does not try.",
+    "NOT ONE CELL. Fig. 1 is a composite. E. coli-scoped and mammalian-scoped numbers are labelled by scope and are never averaged. No organism has this budget.",
+    "NOT AN OPTIMUM. Per Gould & Lewontin (1979), nothing here establishes any cellular feature as optimal. Phylogenetic inertia, drift, developmental constraint, pleiotropy and historical contingency produce features that solve nothing. Nature's authority here is precisely and only this: it has already run a very long parallel search under real physical constraints in which the failures were deleted. That makes every number here a hypothesis generator, not a proof. Per kitchen rule M7, a biomimetic design taken from this plate must still beat a tuned conventional baseline on a pre-registered metric with a load-bearing discriminator, or it is recorded NEGATIVE.",
+    "NOT A UNI GATE. Every class on this plate is NATURA - nature's observed regularities. A nature citation NEVER raises a UNI rung. The NATURA vocabulary and the UNI ledger vocabulary (proven / designed / hypothesized / not-yet-built) describe different kinds of claim and never merge. This plate contains ZERO UNI claims.",
+    "NOT COGNITION. 'Bounded inference' at call-out 9 is a statistical description of a physical process. Nothing here claims that a cell is aware, sentient, cognitive, or that it knows anything. Berg & Purcell bound an estimate; a bound is not an experience.",
+    "NOT A CONSTRUCTION PLAN. Nothing here is a roadmap to building a cell, and nothing here bears on 'full human' or 'beyond human' - permanent open questions, never targets, never deliverables.",
+    "NOT EXHAUSTIVE. Cytoplasmic streaming, syncytia and multinucleation are named size-ceiling workarounds and are not analysed here.",
+    "NO SINGLE BERG-PURCELL PREFACTOR. The scaling is settled; the constant is disputed, and the dispute is printed instead of a number.",
+    "THE 30-nm CHROMATIN FIBRE IS NOT DRAWN. It is OBSERVED-CONTESTED in vivo (CN05-42); chromatin is drawn as a disordered curvilinear chain per Ou et al. 2017.",
+    "NO MAGNIFICATION IS STATED for Figs. 2-5. They are details, not calibrated micrographs."
+  ],
+  "evidence_classes": {
+    "authority": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md, as amended 2026-07-15 (twelve classes in three groups). Canonical strings live there and in encyclopedia/NATURE-LEDGER.md.",
+    "abbreviations_used_on_the_plate": {
+      "OBS-REP": "OBSERVED-REPLICATED",
+      "OBS-CON": "OBSERVED-CONTESTED",
+      "MODEL": "MODELED",
+      "NOT-SRC": "NOT-SOURCED",
+      "NOT-MEAS": "NOT-MEASURED"
+    },
+    "used": [
+      {
+        "class": "OBSERVED-REPLICATED",
+        "group": "A - measured",
+        "meaning": "Measured, and independently replicated across labs, datasets or taxa.",
+        "count_on_plate": 35
+      },
+      {
+        "class": "OBSERVED-CONTESTED",
+        "group": "A - measured",
+        "meaning": "Measured, but the community genuinely disputes the value, the exponent or the mechanism. Both positions must be carried and the dispute named. This is a feature, not an embarrassment.",
+        "count_on_plate": 4
+      },
+      {
+        "class": "MODELED",
+        "group": "B - derived",
+        "meaning": "Derived from a model that fits data. The model's assumptions are the fence.",
+        "count_on_plate": 13
+      },
+      {
+        "class": "NOT-SOURCED",
+        "group": "C - fenced",
+        "meaning": "The value exists in the literature; this corpus cannot say who measured it. An absence in OUR homework, not in the world's knowledge.",
+        "count_on_plate": 4
+      },
+      {
+        "class": "NOT-MEASURED",
+        "group": "C - fenced",
+        "meaning": "Nobody has measured it. An absence in the literature, printed as an absence.",
+        "count_on_plate": 1
+      }
+    ],
+    "the_provenance_fence": "NOT-MEASURED = nature has not been asked. NOT-SOURCED = we cannot say who asked. NOT-CONFIRMED = we know who asked and did not read them. NOT-LOCATED = we checked, and the source named is not there. Four different failures; four different repairs. One of them is nature's; three of them are ours. This plate uses two of the four and NEVER merges them - collapsing them would let a research failure masquerade as a discovery about the frontier of science.",
+    "colour_carries_no_meaning": "Every evidence class is carried in letters, never in hue. The plate reads identically in greyscale; the sanguine accent is decoration only."
+  }
+}

@@ -1,0 +1,59 @@
+# S-L7 - Language: Phase J specialist PASS and the central wall
+
+> **Naming fence.** The L0-L12 ladder is the HUMAN-HGM-001 developmental design (conception to a speaking three-year-old: eleven levels plus the global **Z** affect modulator). It is a *no-backprop, nested-Markov-blanket developmental SIMULATION*, never a person, never a mind. One engine, shown across scales. Honest program position, printed and never softened: **~2 of 11+ developmental rungs earned.**
+
+## The honest position
+
+This chapter covers the language rung. In active-inference framing (a lens only, not a demonstrated loop), reading is treated as posterior inference over what a text most likely means, and speaking or writing is treated as action that changes future observations. That framing is the textbook-level organizing idea; it is not a claim that the program understands language.
+
+The honest result at L7 is narrow and it is two-sided. The program earned exactly one held-out PASS here, a *specialist* one: a morphology and out-of-vocabulary reader that beats a strong count baseline by a measured margin. That same PASS travels with a recorded NEGATIVE in the very same ledger, because the specialist gain is bought at a cost to overall fluency. Surrounding the single PASS is a wall of bounds: comprehension above retrieval, the hardest thing a reader could be asked to do here, is a published, thrice-NEGATIVE result, not a hidden failure. Two further bounds (role-persistence and the bounded-peek full-read match) failed under measurement, one of them after a "cheap" cap had been asserted and then disproven by running the experiment. And the broad char-perplexity frontier is parked, Class U, not claimed.
+
+No general language capability is claimed anywhere in this chapter. The most that is earned is a single sealed specialist margin, fenced as such, carried always with its paired negative.
+
+## The Phase J specialist PASS (L7.1), inseparable from its caveat (L7.2)
+
+The one citable PASS at L7 is **Phase J**, an out-of-vocabulary and morphology specialist reader (`arm_morph_oov`). On sealed held-out text it beats the best tuned count baseline by **+0.105 nats/char**, replicated across a 21-split M-seal with a confidence interval of **[0.0975, 0.1128]** and a structure margin of **+0.109**. The contains-KN-OOV control resolves to true λ=0, and the result holds in **both** the web domain and the dictionary domain (notable because the simpler multi-level cache from L6, Wc-2, collapsed on the dictionary domain). The recorded evidence class is **C** (a pre-registered, sealed, held-once dev-gate eval). Per the Evidence Constitution, the verdict is the CI lower bound that clears the threshold, 0.0975, not the point estimate.
+
+That PASS is never published alone. The same ledger records **`J.attribution_caveat` as a NEGATIVE (L7.2), and it must always be cited alongside the Phase J PASS.** The caveat is exact and load-bearing: **overall NLL worsens.** Phase J is a specialist gain that helps specifically on the out-of-vocabulary and morphology slice; across the whole distribution of next-character predictions, the model is worse, not better. Citing +0.105 without the worsening-overall-NLL caveat is, by the standing pairing rules of this work, an overclaim and fails review. The honest sentence is: *Phase J is a specialist morphology/OOV win, never a general language win.* The class of L7.2 is also **C**; its falsifier is structural (removing the caveat is itself the violation).
+
+The load-bearing fence for this chapter, stated plainly: **+0.105 is a SPECIALIST gain, always carried with `J.attribution_caveat`.** It is never a headline that the reader got better at language.
+
+## The central wall: comprehension above retrieval (L7.3)
+
+The hardest thing asked of the reader at this rung is comprehension that goes beyond retrieval, that is, answering adversarial comprehension that cannot be solved by recency or frequency lookups. This is the **central wall**, and it is a genuine, published **NEGATIVE bound (L7.3, class C)**: **K≥3 structurally-distinct no-backprop designs all fail to beat retrieval-style baselines on adversarial comprehension.** It is thrice-negative, and it is content, not an embarrassment to bury. A wall measured and published is a measurement that the current design is incomplete, exactly what the No-Exit Discipline asks for.
+
+The fence here is strict, and it is a program-wide red line. The honest framing of this result is a **ledger-scoped exhausted search envelope**: a ledger-scoped, implementation-scoped, data-split-scoped negative over the tested envelope only. It is **not** a universal impossibility result, and it is **not** an achieved rung. The forbidden phrasing **"K≥3 exhausted"** is replaced by the only licensed form: *the registered tested K conditions did not reverse the result.* Likewise **"Sec-0.6(B) achieved"** is forbidden; the honest statement is *Sec-0.6(B) remains unearned / parked.* The wall's operable falsifier is concrete: a pre-registered, held-once, no-backprop comprehension design that beats the tuned retrieval/recency baseline with a confidence interval excluding 0 would overturn it.
+
+## The supporting bounds (L7.4, L7.5)
+
+Two further NEGATIVE bounds reinforce the wall, each a first-class result.
+
+**Phase K role-persistence (L7.4, class C, NEGATIVE bound.)** Three structurally-distinct no-backprop designs (min-role, chain, and track) were registered to test whether a reader could track who-is-who across a discourse and beat a tuned recency/frequency discourse prior on adversarial anonymized referent cloze. **All three tuned their role and persistence terms OFF.** Only about **0.02 nats** of count-support survived, and that residual's confidence interval **spans 0** (so it does not clear the threshold and is not a win). The bound: no-backprop role-persistence does not beat a tuned discourse prior on that task family. Its falsifier: a role-persistence design that beats the tuned discourse prior with a CI excluding 0.
+
+**T2.D3 bounded-peek (L7.5, class C, NEGATIVE bound; fabrication corrected.)** A held one-shot, s64-signed, tested whether a bounded peek at a text could match a full read. The **primary full-read match was NEGATIVE** (the k_b=2 backoff wall), and information-gain was **not load-bearing.** This row also carries an honesty correction worth printing: a variable-k_b "cheap milder cap" was *asserted, then disproven by measurement* when the real dev screen showed a roughly linear curve with no cheap cap. The fabrication was caught by running the experiment, not by argument, which is exactly the discipline the constitution is built to enforce. Its falsifier: a held one-shot where the bounded-peek full-read match shows a positive, load-bearing info-gain with a CI excluding 0.
+
+## The parked frontier (L7.6)
+
+The broad **char-perplexity / T2 word-grain frontier is PARKED, Class U (L7.6).** Perplexity is the rejected LLM metric; the program's stated purpose is to measure developmental capability, never to chase perplexity, and the frontier was parked at the embodiment pivot. By the SIGNED UNI-GPT consult of 2026-06-27 (Q1), this park is described as a **ledger-scoped exhausted search envelope, not a universal impossibility result and not an achieved capability rung.** Under the recorded corpus, splits, metrics, implementation, compute budget, ablation set, and comparison baselines in the ledger, no tested within-segment no-backprop structure improved char-perplexity beyond the tuned MKN-7 count baseline, a negative over the tested envelope only. It does **not** establish that all K≥3 structures are exhausted, that no future within-segment model can improve, or that any broader language frontier is closed. Char-perplexity is a **chosen design trade, not a failed claim of general language superiority.**
+
+The park is owed a discharge that has not yet landed: the formal UNI sign-to-park is drafted (`UNI_CONSULT_5`, owner-relayed) but **not yet captured.** By the No-Exit Discipline, a park is not discharged until its sign-to-park lands, so L7.6 remains open and Class U.
+
+### What is NOT claimed in S-L7
+
+- **Ceiling.** That the program "reads," "comprehends," "understands," or "talks & learns like a human" is **NOT shown** and is forbidden phrasing. The most we claim is the exact, in-class statement: *one sealed specialist PASS, Phase J, beats a tuned count baseline on the OOV/morphology slice by +0.105 nats/char (M-seal CI [0.0975, 0.1128]), while overall NLL worsens; comprehension above retrieval is a published K≥3 NEGATIVE bound; the broad char-perplexity frontier is parked, Class U, not claimed.*
+- **Fences engaged.** Red line 1 (never AGI / human-level / "understands"); red line 5 (never "beats LLMs": the program is ~10-15% behind backprop LLMs on char-perplexity by a chosen design trade); red line 7 (never raise a claim above its source class: Phase J is C, the parked frontier is U); red line 9 (never "K≥3 exhausted" / "Sec-0.6(B) achieved": replaced by the licensed park wording); the vocabulary-leak guard (this is a Science-wing chapter, so "active inference" appears at textbook level only, citing Parr/Pezzulo/Friston, *Active Inference*, MIT Press 2022; no patent-level math).
+- **Negatives that travel with this claim (cite alongside, never strip).** `J.attribution_caveat` (L7.2: overall NLL worsens) is bound to the Phase J PASS (L7.1) and may never be printed without it. The central wall L7.3 (comprehension above retrieval, thrice-NEGATIVE, K≥3). The supporting bounds L7.4 (Phase K role-persistence tunes OFF, ~0.02 nats, CI spans 0) and L7.5 (T2.D3 bounded-peek full-read match NEGATIVE; the "cheap milder cap" asserted then disproven by measurement).
+- **Parked / owed.** L7.6 is PARKED, Class U; the sign-to-park (`UNI_CONSULT_5`) is **drafted and owner-relayed but not yet captured**, so the park is not discharged. The frontier is a ledger-scoped exhausted search envelope, never a published exhausted bound and never an achieved rung.
+- **One-line honest summary a skeptic could not dispute.** At the language rung the program earned one sealed specialist margin (+0.105 nats/char on OOV/morphology, with overall fluency worsening) and otherwise hit a wall: comprehension above retrieval is a published thrice-NEGATIVE, role-persistence and bounded-peek failed under measurement, and the broad perplexity frontier is parked and not claimed.
+
+## Falsify this
+
+The lead falsifier, stated operably: take a **fresh OOV/morphology held-out split** and re-run Phase J. If the M-seal margin's CI lower bound includes or falls below 0, or if the structure-margin discriminator does not collapse the gain under marker-swap, or if the result fails to replicate in the dictionary domain, the L7.1 PASS is overturned. For the central wall, the falsifier is symmetric and just as concrete: a pre-registered, held-once, no-backprop comprehension design that beats the tuned retrieval/recency baseline with a confidence interval excluding 0 would break L7.3, the comprehension-above-retrieval wall.
+
+## Sources
+
+- Authoring spec: `encyclopedia/MASTER-PLAN.md`, section **S-L7** (and PART I front matter FM-1 through FM-4).
+- Single source of truth: `encyclopedia/CLAIM-LEDGER.md`, rows **L7.1-L7.6** under "### L7".
+- SIGNED consult (L7/T2 park wording, Q1; forbidden phrasings, Q7): `cookbook/UNI-GPT-CONSULT-2026-06-27.md`.
+- Narrative grounding (PII-redacted digests): `curated/uni-mind-digest.md` (Phase J +0.105 with the carried `J.attribution_caveat`; the "central wall" thrice-NEGATIVE; reading = inference, speaking = action), `curated/uni-gpt-digest.md` (Phase J 21-split M-seal; Phase K role-persistence bound; T2.D3 bounded-peek correction; the parked char-perplexity / T2 word-grain frontier and its drafted-but-uncaptured `UNI_CONSULT_5` sign-to-park).
+- Archive pointers (no PII): `…-uni-mind`, `…-UNI-GPT`.

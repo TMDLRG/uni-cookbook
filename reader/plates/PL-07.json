@@ -1,0 +1,356 @@
+{
+  "id": "PL-07",
+  "title": "The bat — active inference you can measure",
+  "caption": "Six numbered readings of bat echolocation as a measurable free-energy loop, drawn from CN-10. PANEL I draws the sonar loop as one turn of a cycle — emit, echo returned at 2R = ct, belief update, call adaptation — and marks the echo-to-belief-update arrow with the double arrow as THE EPISTEMIC ARROW, with the type distinction printed on the plate: that arrow carries the REALIZED update D_KL[q(s|o,pi) || q(s|pi)] in nats after the echo has arrived, whereas the epistemic term of G(pi) is that update's EXPECTATION under q(o|pi), taken at the emit node BEFORE emitting. The arrow reports an outcome; the term scores a policy. The call costs joules and dB and returns an echo that does not feed, warm or move the bat: emission cost paid for information return, both sides on a meter. PANEL II draws range as delay, 5.83 ms per metre, on a log ruler. PANEL III draws the ~30x collapse of call duration across one attack and the overlap-free floor R >= c*tau/2 collapsing with it. PANEL IV draws the terminal-buzz rate rise beyond 160 calls/s and records the refuted overlap explanation (1.07 m) first-class: laryngeal motor performance binds first. PANEL V draws Doppler-shift compensation to scale — an 83.0 kHz emission returns at 85.4 kHz when closing at 5 m/s, roughly 1 kHz clear of the fovea's 84.5 kHz upper edge, and the bat lowers its emission ~2.4 kHz to 80.6 kHz to land the echo back on F_ref — and types it as an AMBIGUITY-minimising action, NOT the epistemic term and NOT policy precision gamma. PANEL VI draws the price of the epistemic term as a knee at ~130 dB SPL @ 0.1 m, with NO y axis, because the corpus carries no cost value. PANEL VII carries the key, this caption, and what the plate does not claim. Every number carries units, a ledger row and an evidence class. Zero UNI claims.",
+  "source_chapters": [
+    "cookbook/recipes-natura/CN-10-bats.md",
+    "encyclopedia/wing-NATURA/NA-02-the-one-loop.md",
+    "encyclopedia/NATURE-LEDGER.md"
+  ],
+  "corpus_tip": "f1be794",
+  "claims": [
+    {
+      "row": "CN10-01",
+      "panel": "I, II, III",
+      "symbol": "c",
+      "value": "~343",
+      "units": "m/s",
+      "scope": "air, 20 C, 1 atm",
+      "class": "OBSERVED-REPLICATED (standard reference; not primary-sourced in this pass)",
+      "source": "standard acoustics",
+      "falsifier": "Fetch a primary reference; a measured c outside 330-350 at stated conditions."
+    },
+    {
+      "row": "CN10-14",
+      "panel": "I, II",
+      "symbol": "t(R)",
+      "value": "5.83",
+      "units": "ms per metre of range",
+      "scope": "t = 2R/c, two-way",
+      "class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Arithmetic error, or c refuted."
+    },
+    {
+      "row": "CN10-15",
+      "panel": "III",
+      "symbol": "tau_search",
+      "value": "15-20",
+      "units": "ms",
+      "scope": "search-phase call duration",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Moss & Surlykke 2010, Front Behav Neurosci 4:33",
+      "falsifier": "Measured durations outside range for a search-phase FM bat."
+    },
+    {
+      "row": "CN10-16",
+      "panel": "III",
+      "symbol": "tau_approach",
+      "value": "2-5",
+      "units": "ms",
+      "scope": "approach phase",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Moss & Surlykke 2010",
+      "falsifier": "As above."
+    },
+    {
+      "row": "CN10-17",
+      "panel": "III",
+      "symbol": "tau_buzz",
+      "value": "0.5-1",
+      "units": "ms",
+      "scope": "terminal buzz",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Moss & Surlykke 2010",
+      "falsifier": "As above."
+    },
+    {
+      "row": "CN10-18",
+      "panel": "III",
+      "symbol": "R_min",
+      "value": "2.6-3.4 / 0.34-0.86 / 0.086-0.17",
+      "units": "m (search / approach / buzz)",
+      "scope": "overlap-free floor R >= c*tau/2",
+      "class": "MODELED",
+      "source": "Computed in-chapter from tau + c",
+      "falsifier": "Arithmetic error; or a bat ranging cleanly inside c*tau/2."
+    },
+    {
+      "row": "CN10-19",
+      "panel": "I, IV",
+      "symbol": "rate_buzz",
+      "value": ">160 (up to ~170)",
+      "units": "calls/s",
+      "scope": "terminal buzz repetition rate",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Elemans et al. 2011, Science 333(6051):1885-8; Moss & Surlykke 2010",
+      "falsifier": "Recording of a terminal buzz capped well below 160/s."
+    },
+    {
+      "row": "CN10-20",
+      "panel": "IV",
+      "symbol": "f_muscle",
+      "value": "up to 160; 200 in one case",
+      "units": "Hz",
+      "scope": "anterior cricothyroid, Myotis daubentonii, positive work in cyclic contraction",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Elemans et al. 2011",
+      "falsifier": "Repeat the work-loop assay; a ceiling well below 160 Hz."
+    },
+    {
+      "row": "CN10-21",
+      "panel": "IV",
+      "symbol": "buzz ceiling cause",
+      "value": "laryngeal motor performance, NOT pulse-echo overlap",
+      "units": "-",
+      "scope": "M. daubentonii",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Elemans et al. 2011",
+      "falsifier": "A bat exceeding its measured muscle cycling limit; or overlap shown to bind first."
+    },
+    {
+      "row": "CN10-22",
+      "panel": "III, IV",
+      "symbol": "R_unamb@160/s",
+      "value": "1.07",
+      "units": "m",
+      "scope": "c*PI/2, PI = 6.25 ms",
+      "class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Arithmetic error. Drawn on this plate BECAUSE it is the refuted explanation, not despite it."
+    },
+    {
+      "row": "CN10-23",
+      "panel": "V",
+      "symbol": "f_fovea",
+      "value": "83.0-84.5",
+      "units": "kHz",
+      "scope": "R. ferrumequinum inferior colliculus, overrepresented best frequencies",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Schuller & Pollak 1979, J Comp Physiol 132:47-54",
+      "falsifier": "Map IC best frequencies and find no overrepresentation."
+    },
+    {
+      "row": "CN10-24",
+      "panel": "V",
+      "symbol": "SD_echo",
+      "value": "110 (= 0.17% of F_ref)",
+      "units": "Hz",
+      "scope": "Hipposideros armiger (a hipposiderid, NOT a rhinolophid), in-flight DSC precision. An emission-control statistic, NOT a measured resolution requirement of the receiver",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Schoeppler, Schnitzler & Denzinger 2018, Sci Rep 8:4598",
+      "falsifier": "Onboard-mic replication with SD >5x larger. NOT drawn on this plate's 83 kHz axis: see not_claimed / the Panel V splice fence."
+    },
+    {
+      "row": "CN10-26",
+      "panel": "V",
+      "symbol": "band_DSC",
+      "value": "0.1-0.2% of F_ref (~83-166 Hz at F_ref = 83 kHz)",
+      "units": "% of F_ref",
+      "scope": "rhinolophids and P. parnellii - the BAND: precision within which F_echo is held around F_ref",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Schoeppler et al. 2018",
+      "falsifier": "Re-measure; a band >2x wider under the same paradigm."
+    },
+    {
+      "row": "CN10-27",
+      "panel": "V",
+      "symbol": "offset_DSC",
+      "value": "~150-200",
+      "units": "Hz (F_ref above F_rest)",
+      "scope": "R. ferrumequinum, R. euryale, P. parnellii, in flight - the OFFSET, not the band",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Schoeppler et al. 2018",
+      "falsifier": "Re-measure; an offset outside 100-250 Hz under the same paradigm."
+    },
+    {
+      "row": "CN10-28",
+      "panel": "I, V",
+      "symbol": "df_emit",
+      "value": "~2.4",
+      "units": "kHz (lowering)",
+      "scope": "bat at v = 5 m/s, f_r = f_e(c+v)/(c-v), F_ref = 83 kHz",
+      "class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Arithmetic error; or a DSC bat that does not lower emission when closing."
+    },
+    {
+      "row": "CN10-30",
+      "panel": "V",
+      "symbol": "fovea width vs DSC precision, same animal",
+      "value": "-",
+      "units": "-",
+      "scope": "within-species pairing",
+      "class": "NOT-MEASURED",
+      "source": "two species spliced in-chapter (R. ferrumequinum fovea, H. armiger DSC)",
+      "falsifier": "Measure fovea width and DSC precision in one species."
+    },
+    {
+      "row": "CN10-32",
+      "panel": "II",
+      "symbol": "bat range-discrimination threshold",
+      "value": "-",
+      "units": "-",
+      "scope": "measured psychophysics (the 'jitter' literature)",
+      "class": "NOT-SOURCED in this pass",
+      "source": "-",
+      "falsifier": "Read the jitter experiments and their replication attempts before quoting any threshold."
+    },
+    {
+      "row": "CN10-33",
+      "panel": "I, VI",
+      "symbol": "SL_open",
+      "value": "~130, up to and beyond 140",
+      "units": "dB SPL re 20 uPa @ 0.1 m",
+      "scope": "open-space aerial-hawking bats",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Surlykke & Kalko 2008, PLoS ONE 3:e2036; Jakobsen et al. 2013",
+      "falsifier": "Calibrated on-axis recording well below 130 dB for an open-space hawker."
+    },
+    {
+      "row": "CN10-34",
+      "panel": "VI",
+      "symbol": "SL_whisper",
+      "value": "up to 110 (not ~70)",
+      "units": "dB SPL re 20 uPa @ 0.1 m",
+      "scope": "'whispering' bats",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Jakobsen et al. 2013",
+      "falsifier": "Calibrated recording capping at ~70 dB."
+    },
+    {
+      "row": "CN10-35",
+      "panel": "I, VI",
+      "symbol": "p@140dB",
+      "value": "200",
+      "units": "Pa (~0.2% of 1 atm)",
+      "scope": "p = 20e-6 x 10^(SL/20) at 0.1 m",
+      "class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Arithmetic error."
+    },
+    {
+      "row": "CN10-40",
+      "panel": "I",
+      "symbol": "AGC",
+      "value": "~6",
+      "units": "dB sensitivity drop per halving of target distance",
+      "scope": "approach phase, attributed to middle-ear muscles",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Jakobsen et al. 2013, citing Suga & Jen 1975",
+      "falsifier": "Measure receiver gain vs range and find no schedule."
+    },
+    {
+      "row": "CN10-41",
+      "panel": "VI",
+      "symbol": "cost of echolocation in flight",
+      "value": "negligible at low intensity; exorbitant above ~130 dB SPL @ 0.1 m for small bats",
+      "units": "-",
+      "scope": "Rhogeessa io (5 g); Pipistrellus nathusii",
+      "class": "OBSERVED-CONTESTED -> resolved along intensity",
+      "source": "Speakman & Racey 1991, Nature 350:421-3; Voigt & Lewanzik 2012, J Comp Physiol B 182:831-40; Currie et al. 2020, Nat Ecol Evol 4(9):1174-7",
+      "falsifier": "Measure flight metabolic rate vs call intensity in a third species; a knee absent, or at a very different SPL."
+    },
+    {
+      "row": "CN10-42",
+      "panel": "IV, VI",
+      "symbol": "rate_pulse,flight",
+      "value": "19.7 +/- 2.7 (range 15.3-25.8)",
+      "units": "pulses/s",
+      "scope": "Rhogeessa io, in flight (non-buzz)",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Voigt & Lewanzik 2012",
+      "falsifier": "Replication outside range."
+    },
+    {
+      "row": "NA-02",
+      "panel": "I",
+      "symbol": "G(pi)",
+      "value": "= risk + ambiguity = -epistemic - pragmatic",
+      "units": "nats",
+      "scope": "discrete POMDP, convention q(o,s|pi) = p(o|s) q(s|pi); the epistemic form further assumes q(s|o,pi) ~= p(s|o)",
+      "class": "MODELED",
+      "source": "Da Costa et al. (2020); Parr, Pezzulo & Friston (2022) Active Inference, MIT Press",
+      "falsifier": "Derive a case where the two decompositions diverge under the stated convention."
+    },
+    {
+      "row": "NA-02",
+      "panel": "I",
+      "symbol": "biological systems observed to explicitly compute G(pi)",
+      "value": "-",
+      "units": "count",
+      "scope": "any taxon",
+      "class": "NOT-MEASURED",
+      "source": "-",
+      "falsifier": "Exhibit a pre-registered neural recording decoding a per-policy G in nats."
+    },
+    {
+      "row": "computed-on-plate",
+      "panel": "II",
+      "symbol": "log shift, delay ruler vs range ruler",
+      "value": "0.766",
+      "units": "decade",
+      "scope": "t = 5.83*R => log t = log R + log 5.83; on a log ruler the delay scale IS the range scale, rigidly shifted",
+      "class": "MODELED",
+      "source": "Computed on this plate",
+      "falsifier": "Arithmetic error, or CN10-14 refuted."
+    },
+    {
+      "row": "computed-on-plate",
+      "panel": "III",
+      "symbol": "R_min = c*tau/2 as a log shift",
+      "value": "log10 2 (~0.30)",
+      "units": "decade",
+      "scope": "on a log ruler the overlap-free floor is the c*tau bar shifted left by a constant, the same for every phase",
+      "class": "MODELED",
+      "source": "Computed on this plate",
+      "falsifier": "Arithmetic error."
+    },
+    {
+      "row": "computed-on-plate",
+      "panel": "V",
+      "symbol": "110 Hz as a fraction of 83 kHz",
+      "value": "0.13",
+      "units": "% of 83 kHz",
+      "scope": "CN10-24 states 110 Hz = 0.17% of H. armiger's F_ref. 0.17% != 0.13%, therefore H. armiger's F_ref is NOT the 83 kHz drawn on this plate's axis, and the two must not be multiplied together. This is the arithmetic that exposes the CN10-30 splice",
+      "class": "MODELED",
+      "source": "Computed on this plate",
+      "falsifier": "Arithmetic error; or source F_ref for H. armiger and show it is 83 kHz."
+    }
+  ],
+  "not_claimed": [
+    "That a bat computes expected free energy. Nothing on this plate shows a bat evaluating G(pi) over a policy space, or anything isomorphic to it. G(pi) in nats has never been decoded from any taxon (NOT-MEASURED, NA-02). 'Minimising the ambiguity term' is OUR description of its behaviour, in our vocabulary, for our purposes. The bat is not doing our arithmetic. (CN-10, Not claimed.)",
+    "That Doppler-shift compensation is gamma (policy precision). gamma is the softmax inverse temperature over policies, units nats^-1. The fovea is SENSORY precision - the sharpness of p(o|s). Different objects, different units. DSC lowers the AMBIGUITY term of G(pi). Conflating them is a category error and CN-10 refuses it.",
+    "That the epistemic term and the ambiguity term are the same term. G = risk + ambiguity and G = -epistemic - pragmatic are two decompositions of one number, and the terms do not map one-to-one: ambiguity != -epistemic, risk != -pragmatic.",
+    "That the active-inference reading is required to explain any measurement here. Classical sensorimotor control, signal-detection theory and plain optimal-foraging accounts predict much of it. No discriminating experiment is offered, and none is known to the corpus in this pass.",
+    "A within-animal pairing of fovea width and DSC precision. NOT-MEASURED (CN10-30): R. ferrumequinum's fovea against H. armiger's DSC is a splice across two species and two families. The chapter's '~14x finer than the fovea is wide' is illustrative, not a measurement. Panel V prints the arithmetic that exposes the splice and does not draw SD_echo on the 83 kHz axis.",
+    "Any per-phase call-rate ladder. The corpus carries exactly two rates: 19.7 +/- 2.7 pulses/s non-buzz (R. io, Voigt & Lewanzik 2012) and >160 calls/s buzz (Elemans et al. 2011; Moss & Surlykke 2010). Different species, different studies. Panel IV draws two levels and refuses to draw a curve.",
+    "Any cost of echolocation in J, W or ml O2. Panel VI has no y axis because the corpus has no value to put on one. The knee's LOCATION (~130 dB SPL @ 0.1 m) is sourced; the curve's SHAPE and HEIGHT are not.",
+    "Any bat range-discrimination threshold. The 'jitter' psychophysics is contested and NOT-SOURCED (CN10-32). No threshold is implied by any tick spacing on Panel II.",
+    "That the terminal-buzz ceiling is set by pulse-echo overlap. Refuted (CN10-21). The 1.07 m is drawn precisely because it is wrong: a derivation that predicts the right number for the wrong reason.",
+    "That a bat is conscious, aware, or has experience. Nagel's question is not answered, addressed, or bounded by any measurement on this plate. A permanent OPEN QUESTION, in a different ledger. 'Full human' and 'beyond human' appear here as no target, milestone or deliverable.",
+    "That any citation on this plate raises any UNI rung. A NATURE CITATION IS NEVER A UNI GATE. The NATURA classes and the UNI 4-value fence (proven / designed / hypothesized / not-yet-built) describe different kinds of claim and never merge. ZERO UNI CLAIMS ON THIS PLATE. Program position, unsoftened: ~2 of 11+ rungs earned; a developmental active-inference SIMULATION; a toy world, never a person.",
+    "That any bat trait drawn here is an optimum. Per Gould & Lewontin (1979), phylogenetic inertia, drift, developmental constraint and frozen accidents produce traits that solve nothing. Nature's authority here is precise and limited: it already ran the search under real physical constraints and deleted the failures."
+  ],
+  "evidence_classes": {
+    "vocabulary": "NATURA (NA-00, amended 2026-07-15: twelve classes in three groups - measured / derived / fenced). Sovereign from, and never merged with, the UNI 4-value fence of encyclopedia/CLAIM-LEDGER.md.",
+    "used_on_plate": {
+      "OBSERVED-REPLICATED": "measured, and independently replicated across labs, datasets or taxa. Mark: long dash.",
+      "OBSERVED-CONTESTED": "measured, but genuinely disputed - or a splice. Both positions carried. Mark: double dagger.",
+      "MODELED": "derived from a model that fits data. The assumptions are the fence. Mark: triangle.",
+      "NOT-MEASURED": "nobody has measured it. An absence in the literature. Mark: circle.",
+      "NOT-SOURCED": "a value this corpus could not trace to a source. An absence in our homework, not in nature. Mark: diamond.",
+      "NOT-CONFIRMED": "the primary is named, at one remove, and was not read in this pass. Mark: slashed circle."
+    },
+    "not_a_natura_class": {
+      "recorded NEGATIVE / trap": "Mark: ballot X. Carried from CN-10's OWN inline defect log ('Recorded INADMISSIBLE / NEGATIVE'), NOT from the NATURA evidence vocabulary. NEGATIVE is a UNI LEDGER STATE and is never borrowed into the NATURA classes (NATURE-LEDGER.md sec. 1). Used on this plate for: the refuted pulse-echo-overlap buzz ceiling, and the 'echolocation is free for flying bats' scope error."
+    },
+    "chapter_fence": "CN-10 as an artifact is fenced MODELED: it composes measured constants through stated assumptions (c = 343 m/s at 20 C; a stationary reflector in the Doppler algebra; free-field spreading; matched-filter bounds assuming a receiver the bat may or may not implement). Change c by 5% and every metre on this plate moves by 5%. The active-inference reading is HYPOTHESIZED throughout and is a lens, not a finding."
+  },
+  "design_only": {
+    "fence": "No script elements, no on-event handlers, no external network references, no xlink, no @import, no webfont, no data: URI. Pure static SVG; internal <style> only.",
+    "responsive": "viewBox-based (0 0 1440 3320), width=100%, preserveAspectRatio=xMidYMid meet. Renders standalone and inline.",
+    "theme": "CSS variables with literal fallbacks on every consumer; prefers-color-scheme dark plus root[data-theme=dark|light] overrides.",
+    "greyscale": "Classes are carried by MARKS and line weight, never by colour alone. The epistemic arrow is distinguished by stroke weight + the double-arrow mark, not by hue."
+  }
+}

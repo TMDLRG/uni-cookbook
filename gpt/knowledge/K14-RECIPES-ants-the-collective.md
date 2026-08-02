@@ -1,0 +1,264 @@
+# Build the collective — ants, stigmergy, and the colony blanket
+
+> **Knowledge file `K14-RECIPES-ants-the-collective.md`** of the UNI Encyclopedia & Cookbook GPT pack.
+> This file is a BUILD ARTIFACT: it merges **1** source file(s) from the
+> repository `TMDLRG/UNI-Encyclopedia-Cookbook`, byte-for-byte, in the order listed below.
+> The repository is the single source of truth; if this file and the repository ever
+> disagree, the repository wins and this file is stale.
+>
+> SOVEREIGNTY RULE (binding, do not merge the two ledgers): this corpus carries TWO sovereign evidence vocabularies. The UNI 4-value fence (proven / designed / hypothesized / not-yet-built) describes ONLY UNI's own build status and is governed by encyclopedia/CLAIM-LEDGER.md. The NATURA 12-value class, in three groups, describes ONLY nature's observed regularities and is governed by encyclopedia/NATURE-LEDGER.md: group A / measured = OBSERVED-REPLICATED, OBSERVED-SINGLE, OBSERVED-CONTESTED; group B / derived = MODELED, MODELED-CONTESTED, HYPOTHESIZED; group C / fenced = INADMISSIBLE, SUPERSEDED, NOT-MEASURED, NOT-SOURCED, NOT-CONFIRMED, NOT-LOCATED. Six of the twelve were registered by NA-00 amendment 2026-07-15-A after the corpus refuted the original 'six classes and only six' at 72 of 919 ledger rows; twelve is a MEASURED property of the corpus, not a design target. NEVER read NOT-SOURCED as NOT-MEASURED: the first says we could not trace the source (a fact about us), the second says nobody has measured it (a claim about the frontier of science). A nature citation is NEVER a UNI gate. Cross-reference between them by explicit link only, never by merge.
+
+
+**Source files merged into this knowledge file, in order:**
+
+- `cookbook/recipes-natura/CN-07-ants.md`
+
+---
+
+
+
+<!-- ===== BEGIN cookbook/recipes-natura/CN-07-ants.md ===== -->
+
+# CN-07 — Ants: the colony as a Markov blanket
+
+> **What you are building.** A distributed system whose coordination lives in the shared environment rather than in any component's model of the whole. The ant colony is the wing's favourite example, so this chapter applies the wing's discipline to it hardest: every number carries its species, the famous experiment is reported as it was actually run, and the engineering transfer is scored against a tuned baseline or recorded NEGATIVE. Nothing here raises any UNI rung.
+
+---
+
+## The thesis, and what would break it
+
+A colony of *Pogonomyrmex barbatus* is founded by one queen and **lives about 25 years** (quoted in Gordon, Guetz, Greene & Holmes 2011, *Behav Ecol* 22(2):429–435, citing Gordon 1991). Its exterior workers do not. Gordon & Hölldobler (1987), *Psyche* 94:341–346, marked **3,521 individuals across 38 mature colonies** near Rodeo, New Mexico, and checked the nests daily: exterior workers were observed **up to 33 days after marking** (a nest-maintenance worker, *P. barbatus*). In *P. owyheei*, the average life expectancy of **foragers and defenders** (not foragers alone — the distinction is the authors') is **14 days** (Porter & Jorgensen 1981, *Behav Ecol Sociobiol* 9:247–256, titled — honestly — "a disposable caste?"). In *Cataglyphis bicolor*, marked foragers are lost at a constant **16.4% per day**: expected half-life **4.2 days**, life expectancy **6.1 days** (Schmid-Hempel & Schmid-Hempel 1984, *Ins Soc* 31:345–360, DOI 10.1007/BF02223652, Southern Tunisia — **primary read directly in this pass**; the two figures are self-consistent, 4.2 / ln 2 = 6.06 ≈ 6.1). Do not print the 6.1 d **mean** under a half-life label, as the secondary literature does — see the M22 exhibit below.
+
+Two orders of magnitude separate the persistence of the colony from the field-observed persistence of the ants doing its outside work. The colony has a developmental trajectory measured in decades. No component is present for more than a few percent of it. **Whatever carries that trajectory is not in an ant.**
+
+That is the claim. Its falsifier is at the end, and it is a hard one.
+
+Maynard Smith & Szathmáry (1995), *The Major Transitions in Evolution* (Oxford University Press), list eight transitions; the seventh is from solitary individuals to colonies with non-reproductive castes. This chapter asks whether that transition produced a *real new blanket* in the sense of NA-04 — and answers: the mechanism is measured, the level-above evidence is partly measured and partly contested, and the blanket formalism itself is **not measured at all**. All three, kept separate.
+
+## Stigmergy: coordination with no plan and no planner
+
+Grassé, P.-P. (1959), "La reconstruction du nid et les coordinations interindividuelles chez *Bellicositermes natalensis* et *Cubitermes* sp. La théorie de la stigmergie", *Insectes Sociaux* 6:41–80, DOI 10.1007/BF02223791, named the mechanism. Grassé's termites do not coordinate by signalling each other. They coordinate by **modifying the shared environment**: a worker's deposit changes the stimulus configuration, and the changed configuration is what recruits the next worker's act. The nest is not represented anywhere. It is the fixed point of a stimulus–response loop running through the world.
+
+This is the lesson, and it is a load-bearing one for distributed design: **the coordination state was moved out of the agents and into the medium.** There is no central plan, no blueprint-holder, and no ant that would know the answer if you could ask it.
+
+The neural budget makes the point concrete rather than rhetorical. Godfrey, Swartzlander & Gronenberg (2021), *Proc R Soc B* 288(1947):20210199, DOI 10.1098/rspb.2021.0199, used the **isotropic fractionator (IF)** to count brain nuclei across **32 Hymenoptera species in seven superfamilies**. For the desert ant ***Novomessor* spp.** the IF returns **7.02 × 10⁴ ± 2.4 × 10⁴ (s)** brain nuclei. Their **sectioned-brain** estimate for the same animal, **≈ 9 × 10⁴**, is the method-validation cross-check on the IF adaptation — not an IF count — and the two agree within ~1 SD, which is the paper's actual point and a better receipt than either number alone.
+
+Two separate results, each named with its test, its groups and its quantity. On brain **mass**: ants (Formicoidea) have smaller brains than predicted for their body mass **when compared with bees and related wasps** — p < 0.001, **post hoc comparison of Apoidea versus Formicoidea**, *not* a test of ants against the fitted Hymenoptera allometry. Separately, on **nuclei**: brain-mass-controlled nuclei number in ants (log-transformed, x̄ = 11.8, s = 0.162) is lower than Apoidea (x̄ = 13.0, s = 0.11, **p < 0.001**), Pompiloidea (**p = 0.0142**) and Vespoidea (**p = 0.0016**). Small brains even by insect standards, on both measures. *(These counts are for* Novomessor*, not* Pogonomyrmex*; the equivalent count for* P. barbatus *is* **NOT-MEASURED** *in this pass and is not transferred across genera here.)* The order of magnitude is the point, and it survives untouched at either value: a 25-year, 10,000-worker developmental trajectory is not held in ~10⁵ cells — because it is not held anywhere.
+
+## The double bridge, reported as it was run
+
+This is the wing's showpiece, and it is routinely mis-told. Here is the primary.
+
+Goss, S., Aron, S., Deneubourg, J.-L. & Pasteels, J.-M. (1989), "Self-organized shortcuts in the Argentine ant", *Naturwissenschaften* 76:579–581, DOI 10.1007/BF00462870. Species: ***Iridomyrmex humilis*** (the valid name is now *Linepithema humile*). **11 laboratory colonies.** A bridge of two identical modules connects nest to food; each module offers a short and a long branch, each set at **30°** to the bridge axis so posture gives no bias, with one module's short branch mirrored to catch external bias. Short branch traverse ≈ **20 s**; long branch ≈ **20r s**, where `r` = long/short length ratio. Traffic was counted **30–40 min after bridge placement**; totals ranged **317–1,043** crossings, and at the smallest total (ΣΦ = 317) a branch share outside **44–56%** is nonrandom at p < 0.05.
+
+Results, by trials:
+
+| Condition | Outcome | p |
+|---|---|---|
+| `r = 1.0`, n = 26 | 12/26 — **no preference** | > 0.05 |
+| `r = 1.4`, n = 18 | 15/18 chose short | < 0.05 |
+| `r = 2.0`, n = 14 | **14/14** chose short | < 0.05 |
+| `r = 2.0`, short branch added *after* the long trail was established, n = 18 | **2/18** — the colony **cannot switch** | < 0.05 |
+
+Controls: under red light (ants insensitive; effectively dark) results were "not different" from lit trials, and Goss et al. report that in **11 of 14 experiments at r = 2 (7 colonies) more than 80% of total traffic used the short branch**. A Y-bridge test for left/right memory found marked ants split **16 vs 12** between the branch that had led to food and the other — no memory effect.
+
+**The model.** Each ant at choice point `j` picks the short branch with
+
+```
+P_s,j = (20 + S_j)² / [ (20 + S_j)² + (20 + L_j)² ]
+```
+
+where `S_j`, `L_j` are pheromone quantities on the two branches (`P_s,j + P_l,j = 1`). The exponent **n = 2** supplies the nonlinearity that turns a small lead into a rout; the constant **k = 20** is the intercept that keeps an unmarked branch from having probability zero, so exploration never dies. The choice function is taken from Deneubourg, Aron, Goss & Pasteels (1990), *J Insect Behav* 3:159–168, DOI 10.1007/BF01417909. Monte Carlo runs used **Φ = 0.5 ant/s**, counting the 501st–1000th crossing.
+
+**Now the correction the received account gets wrong.** The mechanism in Goss et al. is *not* deposition-plus-evaporation. It is a **delay**. Their equations are
+
+```
+dS_j/dt = Φ·p_s,j'(t − 20) + Φ·p_s,j(t)
+dL_j/dt = Φ·p_l,j'(t − 20r) + Φ·p_l,j(t)
+```
+
+and they state plainly that because the experiment's timescale is of the order of the pheromone's mean lifetime (**~30 min**, cited to Van Vorhis Key & Baker 1982, *J Chem Ecol* 8(1):3–14), they **ignore evaporation**. Ants returning along the short branch re-mark it after 20 s, ants on the long branch only after 20r s; between those two moments the short branch is marked *at both ends* while the long branch is marked at one. That asymmetry — Dorigo's "differential path length effect" — is amplified by the `n = 2` autocatalysis. **Evaporation is absent from the model that made the discovery.**
+
+## Real decay constants, with the CI discipline applied
+
+Trail pheromone does decay, and the numbers are species- and substrate-specific. Van Vorhis Key & Baker (1982) measured a **(Z)-9-hexadecenal release rate of 0.25 ± 0.10 pg·cm⁻¹·s⁻¹** from filter-paper trails, with trails at biologically relevant concentrations losing activity **within 2 h**. Note the tension with the "~30 min mean lifetime" Goss et al. attribute to the same reference: **carry both, average neither.**
+
+The cleanest decay measurement is Robinson, Green, Jenner, Holcombe & Ratnieks (2008), *Insectes Sociaux* 55:246–251, DOI 10.1007/s00040-008-0994-5, in ***Monomorium pharaonis*** (10 colonies, ~1,500 workers each, on inert ECF paper). The short-lived **attractive** pheromone's behavioural effect decays to no-effect at **33 min**; the **repellent** "no entry" pheromone at **78 min** — and the initial effect sizes are **25%** vs **48%** above control. Trail substrate itself changes decay rate (Jeanson, Ratnieks & Deneubourg 2003, *Physiol Entomol* 28:192–198; the numeric decay constants from that paper are **NOT-READ in this pass**).
+
+Read Robinson et al.'s method, because it is this repo's rule **M2** practised in the wild: they did not report where the *fitted curve* crossed the no-effect ratio. They reported where the **95% confidence interval** of the fitted curve reached it. **The verdict is the CI bound, not the point estimate.** A field that already does this deserves to be quoted, not lectured.
+
+## Ant Colony Optimization — with its baseline, per M7
+
+The engineering transfer is real: Dorigo's Ant System replaced the bridge with a graph and the pheromone with a number. Now the fence, in the originators' own voice.
+
+Dorigo & Stützle (2018), "Ant Colony Optimization: Overview and Recent Advances", in *Handbook of Metaheuristics* (Springer, Int. Series in OR & Management Science 272), DOI 10.1007/978-3-319-91086-4_10, write that Ant System **"did not prove to be competitive with state-of-the-art algorithms specifically designed for the TSP."** Not a critic's line — the author's. And on how ACO became competitive: successor algorithms are, in their words, **"less and less biologically inspired and more and more motivated by the need of making ACO algorithms better or at least competitive with other state-of-the-art algorithms."**
+
+Where ACO *does* hold world-class results, they name it: the **sequential ordering problem** (Gambardella & Dorigo 2000, *INFORMS J Comput* 12(3):237–255 — ACS hybridised with a problem-specific SOP-3-exchange local search), plus scheduling, assembly-line balancing, DNA sequencing, and packet-switched routing. Note what carries the SOP win: **a hybrid with a hand-built local search.** For the TSP, the tuned specialists (Lin–Kernighan and its Helsgaun variant) are the bar, and pure ACO does not clear it.
+
+And the tell: **evaporation** in ACO is justified by engineering, not biology. Dorigo & Stützle: *"From a practical point of view, pheromone evaporation is needed to avoid a too rapid convergence of the algorithm towards a sub-optimal region. It implements a useful form of forgetting."* The `ρ` in `τ_ij ← (1 − ρ)τ_ij + Σ g(s)` is there because the algorithm stagnates without it — precisely the failure the real colony exhibits at **2/18**. The engineers added forgetting because they had seen the trap. That is the correct relationship between nature and design: hypothesis generator, then tuned baseline, then verdict.
+
+## Colony metabolic scaling: the superorganism reading, scored honestly
+
+Cross-ref **NA-05** (scaling). If colonies are a level-above, they should scale like organisms.
+
+Hou, Kaspari, Vander Zanden & Gillooly (2010), "Energetic basis of colonial living in social insects", *PNAS* 107(8):3634–3638, DOI 10.1073/pnas.0908071107, compiled **168 social-insect species** (ants 141, termites 5, bees 10, wasps 12), colony mass ~**0.0017 g** (a *Solenopsis* morphospecies) to **3,850 g** (*Macrotermes bellicosus*); colony mass = worker number × worker wet mass. Headline: B₀-corrected metabolic rate of **whole active colonies scales as M^0.81**.
+
+Apply M2 and the headline moves. Their own sentence: the slope **"is statistically indistinguishable from the predicted value of 0.75, but it is also statistically indistinguishable from unity"** — **95% CI 0.55–1.08**, r² = 0.82, and **n = 12 colonies** in that figure. **The CI includes 1.0. The metabolic result does not establish sublinearity.** Within-species exponents ranged **0.44–0.94** (n = 5 species) — a range that "brackets" 0.75 and equally brackets much else.
+
+The result that *does* survive the CI test is **production**: colony biomass production scales as **M^0.83, 95% CI 0.68–0.98** (r² = 0.91, n = 16 colonies). That interval **excludes 1.0**. Colonies produce sublinearly with mass. Lifespan: **0.36 (95% CI 0.27–0.45)** combined, but whole colonies alone **0.24 (95% CI 0.14–0.34)** and unitary insects **0.24 (95% CI 0.01–0.47)** — the steeper combined slope comes from a 4–5× intercept offset, not a different exponent.
+
+Two more results, both load-bearing. Waters, Holbrook, Fewell & Harrison (2010), *Am Nat* 176(4):501–510, DOI 10.1086/656266, measured whole colonies of ***Pogonomyrmex californicus*** intraspecifically: colony metabolic rate scaled as **M^0.75** — while **isolated worker groups scaled isometrically**. The sublinearity is *produced by the social environment*, not by the ants. That is a mechanism, and it favours the level-above reading.
+
+And the refutation of universality: Pequeno & Glazier (2025), *J Anim Ecol* 94(6):1285–1293, DOI 10.1111/1365-2656.70055, across **51 ant species**, found the exponent **diverges with trophic level and caste polymorphism** — herbivorous **b = 0.69 (95% CI 0.58–0.79)** vs predaceous **0.81 (0.74–0.89)**; monomorphic **0.75 (0.68–0.82)** vs polymorphic **0.89 (0.79–1.00)**. Their conclusion: these findings **refute suggestions of a single colony-level metabolic scaling exponent in eusocial insects.**
+
+**Verdict:** production scaling supports the superorganism reading; metabolic scaling does not settle it and there is no single exponent to appeal to.
+
+## Task allocation, and the cleanest level-above evidence in the wing
+
+**Response thresholds.** Bonabeau, Theraulaz & Deneubourg (1996), *Proc R Soc B* 263(1376):1565–1569, DOI 10.1098/rspb.1996.0229: individuals carry thresholds; when a task-related stimulus exceeds an individual's threshold it engages with high probability; successful performance reduces the stimulus. Division of labour falls out of threshold variance plus a shared stimulus field. No allocator.
+
+**Interaction rate.** In *P. barbatus*, an inactive forager is stimulated to leave by the **rate of brief antennal contacts** with foragers returning with food. Prabhakar, Dektar & Gordon (2012), *PLoS Comput Biol* 8(8):e1002670, DOI 10.1371/journal.pcbi.1002670, built a stochastic model of this and found it matched a TCP-like feedback rule — *the model fits; ants are not running TCP*.
+
+**The colony-age result — the sharpest datum in this chapter.** Gordon (1991), *Am Nat* 138(2):379–411, DOI 10.1086/285223: colony behaviour is **more stable, and more likely to avoid intraspecific conflict, in older colonies (> 5 yr) than in younger ones (2 yr)**. Gordon et al. (2011): a colony reaches reproductive age at **5 years**, at **10,000–12,000 ants**; younger colonies span **2,000–10,000**; **"foraging numbers change by a factor of 2 from ages 2 to 5 years"**; and once mature, **"its size does not change much and it maintains its characteristic foraging behavior for the rest of its life."** Gordon (2013), *Nature* 498:91–93, DOI 10.1038/nature12137, from a **27-year** study (that duration is **second-hand** — it is corroborated by secondary sources, but the abstract states only the colony's "20–30-year lifespan", and the paper's Methods were **not read in this pass**): colonies that forage *less* in dry conditions have greater reproductive success, and sensitivity to the conditions in which to reduce foraging **"may be transmissible from parent to offspring colony"** — Gordon's own hedge, carried verbatim. **Not "heritable":** no h² is reported, and *transmissible* permits non-genetic routes (founding-queen provisioning, nest-site inheritance, shared microhabitat). A subsequent **Addendum** — Gordon (2017), *Nature* 542(7640):260, DOI 10.1038/nature21057 — amends this record; it is **NOT-READ in this pass** (no published abstract, paywalled full text), so nothing is claimed about whether it corrects, qualifies or merely extends the result.
+
+Assemble it. The colony has an ontogeny (2 → 5 yr), a mature phenotype it keeps for decades, and a collective trait under selection whose sensitivity **may be transmissible** from parent to offspring colony (Gordon 2013's own hedge, carried). The workers executing it were observed for **≤ 33 days**. **No ant is present across the trajectory, and no ant could represent it.** This is the empirical core of the level-above reading, and it does not depend on any scaling exponent — nor on the transmission route, which is why carrying the hedge costs the thesis nothing.
+
+## The blanket analysis, done honestly (NA-04)
+
+Type the colony as a Markov blanket and be exact about what is measured.
+
+| Blanket role | Candidate for a *P. barbatus* colony | Status |
+|---|---|---|
+| **External** `η` | seed distribution, humidity, neighbouring colonies | observed |
+| **Sensory** `s` | rate of returning-forager antennal contacts; pheromone concentration; nest-entrance humidity | **observed** (Prabhakar et al. 2012) |
+| **Active** `a` | forager departures, trail laying, nest excavation, alate release | observed |
+| **Internal** `μ` | brood, queen, seed stores, worker task distribution | observed |
+
+The typing is not the claim. The claim would be **conditional independence**: `p(μ, η | s, a) = p(μ | s, a) · p(η | s, a)`. **That has never been measured for an ant colony. NOT-MEASURED.** Every number above is a rate or a count; none of them is a conditional independence.
+
+Worse, stigmergy attacks the partition itself. The pheromone field is outside every ant's cuticle yet is the colony's memory. Is it blanket or internal? Kirchhoff, Parr, Palacios, Friston & Kiverstein (2018), *J R Soc Interface* 15:20170792, DOI 10.1098/rsif.2017.0792, argue a collective of blanketed things can self-assemble into a system with its own blanket, and that such boundaries **need not be co-extensive with biophysical boundaries** — which permits the pheromone field to be internal, but does not measure it. Kaufmann, Gupta & Taylor (2021), *Entropy* 23(7):830, DOI 10.3390/e23070830, give an agent-based active-inference model of collective intelligence. These are **HYPOTHESIZED**. They are simulations and formalisms, not colony measurements.
+
+And carry the standing objection: Bruineberg, Dołęga, Dewhurst & Baltieri (2022), *Behavioral and Brain Sciences* 45:e183, DOI 10.1017/S0140525X21002351, separate the **Pearl blanket** — a conditional-independence structure in a given probabilistic model, substantiated in the technical literature — from the **Friston blanket** — a realist agent/environment boundary. On their reading, the first is earned and does limited philosophical work; the second is the one doing the arguing. **A colony's blanket, as invoked in this chapter, is a Friston blanket.** Saying so out loud is the price of using the word.
+
+## Eusociality's origin: a live controversy, carried and not resolved
+
+Hamilton (1964), *J Theor Biol* 7:1–16, gave inclusive fitness. Under **haplodiploidy** — fertilised eggs female, unfertilised male, the Hymenopteran system — full sisters share **R = 3/4**, more than mother–daughter at **R = 1/2**. Hence the haplodiploid hypothesis, and hence textbooks.
+
+Nowak, Tarnita & Wilson (2010), "The evolution of eusociality", *Nature* 466:1057–1062, DOI 10.1038/nature09205, attacked it. Their words: inclusive fitness theory **"is an unnecessary detour, which does not provide additional insight or information"**; the causative agent of eusociality **"is the advantage of a defensible nest"**; and **"relatedness is a consequence of eusociality, but not a cause."** Read one precision that the popular account drops: NTW explicitly deny their model is group selection — *"Our model does not use standard multilevel selection. There is only one level of selection, the hymenopteran colony, which is treated as an extension of the queen, whose genes are the units of selection."* They also note the haplodiploid hypothesis began failing in the 1990s: termites never fitted it, and diplodiploid eusocial species were found.
+
+The reply: **Abbot et al. (2011), *Nature* 471:E1–E4, DOI 10.1038/nature09831 — 137 authors across 103 affiliations** (counted directly from the article). Their opening: Nowak et al.'s arguments **"are based upon a misunderstanding of evolutionary theory and a misrepresentation of the empirical literature."** Their concrete counter-evidence: inclusive fitness theory has explained up to **96%** of sex-ratio variance in across-species studies and **66%** within species, against a **5.4%** average for evolutionary and ecological studies generally; and it explains why eusociality has evolved only in **monogamous** lineages (Boomsma 2009, *Phil Trans R Soc B* 364:3191–3207).
+
+**This chapter does not resolve it, and no reader should take the author count as the argument.** Both sides accept the data; they dispute what accounting method the data licenses. Record it, hold it open, and notice what it means for CN-07's thesis: *the colony is a real level of organisation* is **not** what is contested. **How it got there is.**
+
+## The numbers
+
+| Symbol | Value | Units | Scope | Class | Source | Falsifier |
+|---|---|---|---|---|---|---|
+| `T_colony` | ~25 | years | *Pogonomyrmex barbatus*, single-queen founding | OBSERVED-REPLICATED | Gordon et al. 2011, *Behav Ecol* 22(2):429–435, quoting Gordon 1991 | Long-term census showing mean colony persistence outside ~15–30 yr |
+| `T_worker,ext` | **≤ 33** (the paper's summary sentence, covering both spp.: "about 30") | days after marking | ***P. barbatus*** exterior workers, field, **3,521 marked** (307 midden / 1,169 foragers / 895 patrollers / 1,150 nest maintenance) across **38 mature colonies**, Rodeo NM, **Jul–Aug 1987**, checked once daily; **max 33 d = a nest-maintenance worker** | OBSERVED-REPLICATED | Gordon & Hölldobler 1987, *Psyche* 94:341–346 | Authors name two biases (paint wear-off; marked ants alive inside) that would **underestimate** — a mark–recapture design controlling both, finding >>33 d, moves this row |
+| `T_worker,ext` (*P. rugosus*) | ≥ **27** — marked foragers still observed on the last day checked | days after marking | ***P. rugosus*** foragers — a **separate and far smaller** study, not the sample above: **173 foragers, 1 colony**, Rodeo NM, **Jul–Aug 1986**, checked twice daily on 27 subsequent days | **OBSERVED-SINGLE** (**one colony, one season — not replicated**; never merge with the *P. barbatus* row above) | Gordon & Hölldobler 1987 | Right-censored at day 27 by the study design, not by the ants — extend the checking window and this number moves |
+| `T_forager` | 14 | days (mean life expectancy) | *P. owyheei* **foragers and defenders**, field — not foragers alone; **single study, not independently replicated** | **OBSERVED-CONTESTED** — **as cited in** Gordon & Hölldobler 1987; primary **NOT-READ in this pass** (M22: an upstream prior is not fresh evidence). The citing paper contests its **generality** verbatim: the *P. owyheei* result "cannot necessarily be generalized to other species in the genus", and their own data show exterior workers "can clearly live longer than 14 days after marking". Both positions carried | Porter & Jorgensen 1981, *Behav Ecol Sociobiol* 9:247–256 | Read the primary; an independent field estimate >2× off moves the row |
+| `t½_forager` | **4.2** | days (**half-life**, marked foragers) | *Cataglyphis bicolor*, Southern Tunisia; **constant 16.4%/day loss**; single study, **not independently replicated** | **OBSERVED-SINGLE** — **primary read directly in this pass**. The widely-cited secondary is **wrong**: Gordon & Hölldobler 1987 print "the half-life of *Cataglyphis* foragers, after they were marked, was only 6 days", which is the **mean life expectancy wearing a half-life label**. Both carried; the primary is preferred and is self-consistent (4.2 / ln 2 = 6.06 ≈ 6.1) | Schmid-Hempel & Schmid-Hempel 1984, *Ins Soc* 31:345–360, DOI 10.1007/BF02223652 | An independent marked-forager census in *C. bicolor* returning a half-life >2× off |
+| `E[life]_forager` | **6.1** | days (**mean life expectancy**) | *C. bicolor*, Southern Tunisia, same study and same 16.4%/day loss; single study, **not independently replicated** | **OBSERVED-SINGLE** — primary read directly. **This is the number the secondary literature misprints as a 6-day "half-life"** | Schmid-Hempel & Schmid-Hempel 1984, DOI 10.1007/BF02223652 | As above |
+| `T_worker,total` | "about a year" | — | *P. barbatus* whole worker lifespan | **NOT-SOURCED in this pass** | appears in Gordon's review literature; **not read here** | Read Gordon 2024, *Phil Trans R Soc B* 379:20230332, DOI 10.1098/rstb.2023.0332, and source it. **Do not conflate with `T_worker,ext`** |
+| `N_colony` | 10,000–12,000 (young: 2,000–10,000) | workers | *P. barbatus* at reproductive age (5 yr) | OBSERVED-REPLICATED | Gordon et al. 2011 | Census outside range for mature colonies |
+| `Δforage(2→5 yr)` | ×2 | dimensionless | *P. barbatus* foraging numbers, colony ages 2→5 yr | OBSERVED-REPLICATED | Gordon et al. 2011 | Age-controlled census finding no change |
+| colony-age stability | older (>5 yr) more stable than young (2 yr) | — | *P. barbatus*, behavioural flexibility + intraspecific conflict | OBSERVED-REPLICATED | Gordon 1991, *Am Nat* 138(2):379–411 | Age-controlled replication finding no age effect |
+| parent→offspring **transmissibility** of foraging restraint | Gordon's own hedge, carried: sensitivity to the conditions in which to reduce foraging **"may be transmissible"** from parent to offspring colony. **No h² is reported.** The underlying association (dry-year restraint ↔ greater lifetime reproductive success) *is* measured | — | *P. barbatus*, a single **27-yr** study (duration **second-hand** — not in the abstract, Methods not read here), **one population, one observer, one site** (Rodeo, NM) — **not independently replicated** | **HYPOTHESIZED** (the transmissibility — the author's own unsettled mechanism) over an **OBSERVED** single-study association. *Not* OBSERVED-REPLICATED: long duration is not replication | Gordon 2013, *Nature* 498:91–93 — **plus Addendum**: Gordon 2017, *Nature* 542(7640):260, DOI 10.1038/nature21057, **NOT-READ in this pass** | A quantitative **h²** estimate, or a cross-fostering / founding design separating genetic from environmental transmission; an independent long-term population failing to replicate the association; **and read the 2017 Addendum** |
+| `N_brain` (**IF**) | **7.02 × 10⁴ ± 2.4 × 10⁴** (s) | brain nuclei | ***Novomessor* spp.** (desert ant), **isotropic fractionator** — the method of the 32 spp. / 7 superfamilies survey. The SD is ~⅓ of the mean and travels with the value | OBSERVED-REPLICATED | Godfrey, Swartzlander & Gronenberg 2021, *Proc R Soc B* 288:20210199 | Independent count >2× off under the same method. **Not a *Pogonomyrmex* number — do not transfer across genera** |
+| `N_brain` (**sectioned**) | **≈ 9 × 10⁴** | brain nuclei | ***Novomessor* spp.**, **sectioned brains** — the paper's **method-validation cross-check** on the IF adaptation, **not an IF count**; agrees with the IF value within ~1 SD | OBSERVED-REPLICATED | Godfrey et al. 2021 | As above. **Never print this figure under the IF label** — that conflation is what this row exists to prevent |
+| ants vs bees — brain **mass** | ants (Formicoidea) smaller-brained than predicted for body mass **vs bees and related wasps**, **p < 0.001** | — | **post hoc comparison of Apoidea versus Formicoidea** — *not* a test of ants against the fitted Hymenoptera allometry, and a **brain-mass** result, not a nuclei result | OBSERVED-REPLICATED | Godfrey et al. 2021 | An independent sample recovering no Apoidea/Formicoidea difference |
+| ants vs bees — brain-mass-controlled **nuclei** | ants x̄ = 11.8 (s = 0.162) **<** Apoidea x̄ = 13.0 (s = 0.11), **p < 0.001**; also < Pompiloidea (**p = 0.0142**) and Vespoidea (**p = 0.0016**) | log-transformed nuclei number | a **separate contrast** from the brain-mass row above — different quantity, different test | OBSERVED-REPLICATED | Godfrey et al. 2021 | As above |
+| `N_brain` (*P. barbatus*) | — | brain nuclei | the genus this chapter's colony rows are about | **NOT-MEASURED** | not located in this pass | Count it, or cite one |
+| `r` (double bridge) | 1.0 → 12/26 (ns); 1.4 → 15/18; **2.0 → 14/14** | trials selecting short branch | *Iridomyrmex humilis* (= *Linepithema humile*), 11 colonies, 30° branches, counted 30–40 min | OBSERVED-REPLICATED | Goss et al. 1989, *Naturwissenschaften* 76:579–581 | Replication at r = 2 with no significant short-branch selection |
+| **`r = 2`, short added late** | **2/18** — colony cannot switch | trials | same, short branch added after long trail established | OBSERVED-REPLICATED | Goss et al. 1989 | A replication showing switching; would refute the trap |
+| dark control | 11/14 experiments >80% traffic on short | — | r = 2, 7 colonies, red light | OBSERVED-REPLICATED | Goss et al. 1989 | *Printed adjacent to the lit r=2 (n=14) set; which set the 11/14 summarises is ambiguous in the text — recorded as printed* |
+| `P_s,j` | `(20+S)² / [(20+S)² + (20+L)²]` | probability | branch-choice function; **n = 2**, **k = 20** | MODELED | Deneubourg et al. 1990, *J Insect Behav* 3:159–168; used in Goss et al. 1989 | Re-fit to fresh choice data yielding n ≠ 2 |
+| `τ_delay` | 20 (short) vs 20r (long) | s | traverse time; drives the differential-path-length effect | MODELED | Goss et al. 1989, Eqs. 1–2 | Show short-branch selection with the delay removed |
+| evaporation in the 1989 model | **absent** | — | Goss et al. explicitly ignore it (experiment timescale ≈ pheromone mean lifetime) | OBSERVED-SINGLE (textual) | Goss et al. 1989 | Read the paper |
+| `τ_pheromone` | ~30 | min (mean lifetime) | *I. humilis*, **as cited by** Goss et al. | OBSERVED-CONTESTED | Goss et al. 1989 citing Van Vorhis Key & Baker 1982, *J Chem Ecol* 8(1):3–14 | The primary reports activity loss **within 2 h** — reconcile; do not average |
+| release rate | 0.25 ± 0.10 | pg·cm⁻¹·s⁻¹ | (Z)-9-hexadecenal from filter-paper trails, *I. humilis* | OBSERVED-REPLICATED | Van Vorhis Key & Baker 1982 | Independent measurement >2× off |
+| `t_decay,attract` | **33** | min (95% CI of fitted curve reaching no-effect) | *Monomorium pharaonis*, ECF paper, 10 colonies (~1,500 workers) | OBSERVED-REPLICATED | Robinson et al. 2008, *Insectes Sociaux* 55:246–251 | Replication on the same substrate outside CI |
+| `t_decay,repel` | **78** | min (same criterion) | *M. pharaonis*, repellent "no entry" pheromone, 11 qualifying trials | OBSERVED-REPLICATED | Robinson et al. 2008 | As above |
+| initial effect | 25 (attractive) vs 48 (repellent) | % above control | *M. pharaonis* | OBSERVED-REPLICATED | Robinson et al. 2008 | As above |
+| substrate dependence | decay rate differs by substrate (polycarbonate vs newspaper) | — | *M. pharaonis* | OBSERVED-REPLICATED (**values NOT-READ here**) | Jeanson, Ratnieks & Deneubourg 2003, *Physiol Entomol* 28:192–198 | Read the paper and print the constants |
+| `b_metabolic` | **0.81** | exponent, colony mass | 168 spp. compiled; **n = 12 colonies in the fit**; B₀-corrected, active colonies | **OBSERVED-CONTESTED** | Hou et al. 2010, *PNAS* 107(8):3634–3638 — **95% CI 0.55–1.08**, r²=0.82 | **The CI includes 1.0 — this row does not establish sublinearity.** A larger-n fit whose CI excludes either 0.75 or 1.0 settles it |
+| `b_production` | **0.83** | exponent, colony mass | B₀-corrected biomass production, n = 16 colonies | OBSERVED-REPLICATED | Hou et al. 2010 — **95% CI 0.68–0.98**, r²=0.91 | CI **excludes 1.0**; a replication whose CI includes 1.0 moves it |
+| `b_lifespan` | 0.36 (0.27–0.45) combined; **0.24 (0.14–0.34)** colonies alone | exponent | queen lifespan as colony lifespan proxy; 38 colonies | OBSERVED-REPLICATED | Hou et al. 2010 | The combined slope is an intercept artefact (4–5× offset) — do not quote 0.36 as the colony exponent |
+| `b_metabolic,intra` | **0.75** (isolated worker groups: **isometric**) | exponent, colony mass | ***Pogonomyrmex californicus***, whole colonies, intraspecific | OBSERVED-REPLICATED | Waters, Holbrook, Fewell & Harrison 2010, *Am Nat* 176(4):501–510 (**CI not given in abstract — NOT-READ here**) | Replication finding isometry in intact colonies |
+| `b` divergence | herbivorous 0.69 (0.58–0.79); predaceous 0.81 (0.74–0.89); monomorphic 0.75 (0.68–0.82); polymorphic 0.89 (0.79–1.00) | exponent | **51 ant species** | OBSERVED-REPLICATED | Pequeno & Glazier 2025, *J Anim Ecol* 94(6):1285–1293 | A phylogenetically-controlled reanalysis recovering one exponent |
+| colony mass range | 0.0017 → 3,850 | g | *Solenopsis* morphospecies → *Macrotermes bellicosus* | OBSERVED-REPLICATED | Hou et al. 2010 | — |
+| `R` (haplodiploid) | 3/4 (full sisters) vs 1/2 (mother–daughter) | relatedness | Hymenoptera | MODELED (a genetic identity, not a measurement) | Hamilton 1964, *J Theor Biol* 7:1–16; recited in Nowak et al. 2010 | Arithmetic |
+| eusociality origin | **disputed** | — | inclusive fitness vs NTW's queen-extension model | **OBSERVED-CONTESTED** | Nowak, Tarnita & Wilson 2010, *Nature* 466:1057–1062 **vs** Abbot et al. 2011, *Nature* 471:E1–E4 (**137 authors, 103 affiliations — counted**) | A measurement both camps pre-agree discriminates them. **None is on offer.** |
+| sex-ratio variance explained | up to 96 (across-spp.) / 66 (within-spp.) vs 5.4 (field average) | % | Abbot et al.'s quantitative defence of inclusive fitness | OBSERVED-CONTESTED | Abbot et al. 2011 | Reanalysis of the cited sex-allocation corpus |
+| colony conditional independence | — | — | `p(μ,η \| s,a) = p(μ\|s,a)·p(η\|s,a)` for any ant colony | **NOT-MEASURED** | not measured by anyone, in this pass or elsewhere located | Measure it. Until then the colony blanket is a **Friston** blanket (Bruineberg et al. 2022, *BBS* 45:e183) |
+
+## Falsifier (operable)
+
+The chapter's central structural claim — **that the colony carries a developmental trajectory no component is present for or could represent** — is refuted by exhibiting **any one** of:
+
+1. **A representing ant.** An individual whose neural or physiological state encodes colony age, colony size, or the mature foraging phenotype, such that reading that ant predicts the colony-level variable better than reading the colony's stimulus field does. (Prediction: fails — the state is in the pheromone field and the interaction rate, not in ~10⁵ brain cells.)
+2. **A trajectory that dies with its workers.** An age-controlled census in which the 2→5-yr foraging shift and the mature phenotype vanish when worker turnover is held constant — i.e. the colony-level change is fully explained by the current worker cohort.
+3. **A mark–recapture design** controlling both biases Gordon & Hölldobler name (paint wear-off; marked ants alive inside the nest) that finds exterior workers persisting on the order of the colony's lifetime. That collapses the two-order-of-magnitude gap the thesis rests on.
+
+Row-local falsifiers are in the table; each moves its own row only. A refuted `b_metabolic` does **not** refute the chapter — the thesis is carried by the colony-age and production rows, and is stated that way on purpose.
+
+## Recorded INADMISSIBLE / NEGATIVE (first-class, inline)
+
+- **NEGATIVE / the trap inside the favourite example.** At `r = 2` with the short branch added *after* the long trail was established, **2/18** — the colony **cannot switch**. Goss et al. predicted this from the model's irreversibility and confirmed it. The same `n = 2` autocatalysis that finds the shortcut **locks in the first answer**. Any distributed design lifted from this experiment inherits the lock-in. Published because it is the most useful sentence in the paper and the one least often repeated.
+- **NEGATIVE / conflation trap: "ants solve the travelling salesman problem."** They do not. Goss et al. tested a **two-branch binary choice** at `r ∈ {1, 1.4, 2}`. That is one decision with two options. The TSP is a different object, and the ACO that addresses it needed a graph, a memory, quality-proportional deposition, and evaporation — **none of which the ants have or the 1989 model contains.**
+- **NEGATIVE / conflation trap: "deposition + evaporation → shortest path."** The model that made the discovery **explicitly ignores evaporation** (experiment timescale ≈ pheromone mean lifetime). The mechanism is a **20 s vs 20r s delay** — the differential path length effect — plus the `n = 2` choice function. Evaporation was added by **Dorigo** for a stated engineering reason: *"to avoid a too rapid convergence... a useful form of forgetting."* Recorded because the wrong version is in a great many talks.
+- **NEGATIVE / M7 applied to the wing's own showpiece.** Bio-inspiration did **not** beat the tuned baseline where it was first pointed. Dorigo & Stützle: Ant System **"did not prove to be competitive with state-of-the-art algorithms specifically designed for the TSP"**, and the fix was to make successors **"less and less biologically inspired."** Where ACO holds world-class results (sequential ordering, Gambardella & Dorigo 2000) the win rides on a **hybrid with a hand-built local search**. Recorded **NEGATIVE for TSP**, **POSITIVE for SOP-with-hybrid**, and never as "nature-inspired, therefore better."
+- **NEGATIVE / the CI test on the superorganism headline.** "Colony metabolism scales sublinearly (0.81)" is **not** what Hou et al. 2010 established. Their own text: indistinguishable from 0.75 **and** from unity; **95% CI 0.55–1.08**; **n = 12 colonies**. Quoting 0.81 as evidence for the superorganism reading, without the CI, is the exact defect M2 exists to prevent. **Production (0.83, CI 0.68–0.98) is the row that carries the argument.** And Pequeno & Glazier 2025 (51 spp.) **refute a single exponent** outright.
+- **INADMISSIBLE: "the ant colony is conscious" / "the colony is a mind."** No observation is specified that would refute it. Not evaluated here — neither asserted nor denied. The *measured* facts (stigmergic coordination, a multi-decade collective phenotype under selection, threshold-based allocation) are strong and need no help from the annotation. Recorded, not mocked: the question is not stupid, it is **unfalsifiable as posed**, and the fence is on the claim's form, not on the asker.
+- **INADMISSIBLE as stated: "swarm intelligence shows emergence beats design."** Names no metric, no baseline, no refuting observation. Its admissible neighbour is the SOP result — a pre-registered benchmark, a competitor, and a published margin.
+- **NOT-MEASURED:** the colony's conditional independence (§blanket) — the load-bearing quantity for the chapter's own title. Also: brain-cell count for *P. barbatus* (the *Novomessor* figures — **7.02 × 10⁴ ± 2.4 × 10⁴** by isotropic fractionator, **≈ 9 × 10⁴** from sectioned brains — are a different genus, and are not transferred).
+- **NOT-READ in this pass (M22 — an upstream prior is not fresh evidence):** Porter & Jorgensen 1981 is quoted **as cited in Gordon & Hölldobler 1987**, not from the primary. **Gordon 2017, *Nature* 542(7640):260, DOI 10.1038/nature21057 — the Addendum to this chapter's keystone citation** (Gordon 2013): confirmed to **exist** and to index to that exact paper, but it publishes **no abstract** and its full text is paywalled, so **no claim is made about whether it corrects, qualifies or merely extends the 2013 result**. The unread state is recorded rather than guessed at — and a chapter that flags four other sources NOT-READ owes its keystone the same standard. Also: Jeanson et al. 2003 decay constants; Waters et al. 2010 CI; the Gordon 2013 **Methods** (which is why the **27-yr** study duration is flagged second-hand — the abstract states only a "20–30-year lifespan"); Gordon 2024 *Phil Trans R Soc B* 379:20230332 (HTTP 403 on fetch — which is why `T_worker,total` = "about a year" is recorded **NOT-SOURCED** rather than printed as a number). **Schmid-Hempel & Schmid-Hempel 1984 has now been read directly** and has left this list — with consequences; see the M22 exhibit below. The thesis was written so it does **not** depend on any of them: it rests on `T_colony` ≈ 25 yr against `T_worker,ext` ≤ 33 d, both read from primaries here.
+- **M22 EXHIBIT — a named risk is not a discharged one.** This chapter previously printed `t½_forager` = **6 days** under the symbol for a half-life and the words "half-life after marking", while flagging **in the same cell** that the primary was NOT-READ. The primary was then read, and the printed quantity was wrong. Schmid-Hempel & Schmid-Hempel 1984 report, for marked *C. bicolor* foragers in Southern Tunisia, a **constant 16.4%/day loss**, an expected **half-life of 4.2 days**, and a **life expectancy of 6.1 days**. The 6 d figure was the **mean wearing a half-life label** — a **43% error on the labelled quantity** — inherited verbatim from the secondary the chapter admitted it had read instead: Gordon & Hölldobler 1987, *"the half-life of Cataglyphis foragers, after they were marked, was only 6 days"*, itself a conflation. The arithmetic shows the primary is self-consistent and the chapter was not: for constant 16.4%/day loss, mean = half-life / ln 2 = 4.2 / 0.693 = 6.06 ≈ 6.1. Recorded first-class because this is **precisely** the failure M22 exists to catch: the risk was named in the class cell and the wrong-quantity number was printed in the numbers table anyway. Naming a risk is not discharging it. **The thesis is unaffected** — it rests on `T_colony` ≈ 25 yr vs `T_worker,ext` ≤ 33 d, both read from primaries — and the discrepancy is now a live M22 exhibit that **strengthens** the chapter rather than weakening it.
+- **RECORDED DEFECT (at the ledger, not this chapter) — the six-value class has no home for a sound but unreplicated result.** NA-00 fixes **six classes and only six**. A result that is soundly measured, genuinely uncontested, and simply **never independently replicated** — Gordon 2013's single 27-yr population; the *P. rugosus* single colony; the single-study *C. bicolor* census — fits none of them: **OBSERVED-REPLICATED asserts a replication that did not happen**, and **OBSERVED-CONTESTED asserts a dispute that does not exist**. Both are false, in opposite directions. The rows above therefore use the weakest honest class and carry the unreplicated state in the **scope** cell — a workaround, and named as one. This chapter previously wrote "**OBSERVED-REPLICATED (single long study)**", which is self-contradictory on its face; parenthesising a contradiction is not resolving it, and it matters here because the chapter's whole authority rests on the class column meaning what it says. **The real fix belongs at the ledger:** register an explicit `OBSERVED-SINGLE` / `OBSERVED-UNREPLICATED` value in NA-00 and reclass these rows. **NOT-FIXED in this pass, with reasons:** NA-00 is the wing's constitution and out of scope for a CN chapter, and `encyclopedia/NATURE-LEDGER.md` — the file named in the review that raised this — **does not exist** in this repo. Falsifier: add the seventh class to NA-00; these rows then move to it.
+
+  > **FIXED 2026-07-15 — this chapter's falsifier fired, and was honoured.** The text above is the
+  > record as written and is **left unedited**; this note is appended, not substituted. Two of its
+  > statements are now out of date and are corrected here rather than quietly overwritten:
+  > `encyclopedia/NATURE-LEDGER.md` **now exists**, and the fix is **no longer NOT-FIXED**.
+  >
+  > This chapter's diagnosis was **exactly right and was adopted verbatim**. NA-00
+  > [Amendment 2026-07-15-A](../../encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md#amendment-record-2026-07-15)
+  > registered **`OBSERVED-SINGLE`** — one of the two names this chapter proposed — defined as
+  > *measured, by a method another party could repeat, but no independent replication on record*. The
+  > sentence *"OBSERVED-REPLICATED asserts a replication that did not happen, and OBSERVED-CONTESTED
+  > asserts a dispute that does not exist. Both are false, in opposite directions"* is quoted in
+  > NA-00 as the argument for the class, because it is the argument.
+  >
+  > **Scale of the finding:** not the 3 rows this chapter could see — **42 rows across 7 chapters**
+  > carried the bare-`OBSERVED` workaround, and 72 rows in total fell outside the six. This chapter's
+  > rows are re-classed to `OBSERVED-SINGLE`; the unreplicated state now lives in the **class** cell
+  > where it belongs, and the scope-cell workaround this chapter named as a workaround is retired.
+  > **No value, source, or falsifier in this chapter changed.**
+  >
+  > **The judgement that made this work:** this chapter refused to mint a class in a CN chapter, and
+  > named the gap instead of papering it. Had it written `OBSERVED-REPLICATED (single long study)` —
+  > which it explicitly called out as self-contradictory — the defect would have been invisible and
+  > the corpus would have carried a lie in the class column. **The workaround was named as a
+  > workaround, and that is why it was findable.**
+
+## HONEST FENCE — OBSERVED-CONTESTED
+
+The chapter is fenced **OBSERVED-CONTESTED**, and the fence is not decoration. Its mechanism rows are OBSERVED-REPLICATED (stigmergy; the double bridge and its 2/18 trap; pheromone decay; colony age; *P. barbatus* worker persistence). The parent→offspring **transmissibility** row is **not** among them — it is HYPOTHESIZED, on Gordon's own hedge, and the single-study rows are marked as such. But its *thesis* — the colony as a real rung — rests on evidence that is genuinely disputed at two joints: the metabolic exponent whose **CI does not exclude isometry** and which a 2025 study **refutes as a single number**, and the **origin** dispute (Nowak/Tarnita/Wilson vs 137 authors) which no measurement on offer discriminates. The title's own formalism is **NOT-MEASURED** and, per Bruineberg et al. 2022, is a **Friston blanket** — a realist boundary claim, not a Pearl blanket earned from a specified probabilistic model.
+
+Per **Gould & Lewontin (1979)**, "The Spandrels of San Marco and the Panglossian Paradigm": nothing above establishes that any colony trait is an optimum. Stigmergy may be the cheapest reachable solution rather than the best one; the `n = 2` exponent that produces the 2/18 lock-in is a fine candidate for a **constraint or a frozen accident**, not a design. Nature's authority here is precisely and only this: it already ran the experiment under real constraints with the failures deleted, so convergence is evidence of a constraint-optimum. That makes every row above a **hypothesis generator**. Per **M7**, a colony-inspired design must beat a **tuned** baseline on a **pre-registered** metric with a discriminator that collapses the gain — and this chapter contains a receipt showing that when the test was actually run on the TSP, **bio-inspiration lost**.
+
+## Not claimed
+
+- **Not claimed:** that an ant colony is conscious, cognitive, sentient, or that it "knows" anything. Stigmergy is a claim about where coordination state is *stored* — in the medium — not about experience. The thesis is the reverse of a mind claim: **no ant knows it, and nothing is asserted to know it in the ant's place.**
+- **Not claimed:** that colony metabolism is sublinear. The CI includes 1.0. **Production** is sublinear; that is the narrower claim, and it is the one made.
+- **Not claimed:** that a single colony-level metabolic exponent exists. Pequeno & Glazier 2025 is in the table specifically to prevent that.
+- **Not claimed:** any resolution of the eusociality-origins dispute. Both papers are cited; neither is endorsed. **The 137 authors are a count, not an argument** — appealing to that number would be the same defect in the opposite direction.
+- **Not claimed:** that the colony's Markov blanket has been demonstrated. The typing is a proposal; the conditional independence is unmeasured; the word "blanket" in this chapter's title is doing work it has not yet earned, and this sentence is the receipt for saying so.
+- **Not claimed:** that ants solve the TSP, run TCP, or perform optimisation. Ants made a binary choice at r = 2; Prabhakar et al.'s TCP correspondence is a **model fit**; ACO is an engineering artefact that had to leave the biology behind to compete.
+- **Not claimed:** that any citation above raises any UNI rung. **A nature citation is never a UNI gate.** The NATURA twelve-value class (§NA-00; six of the twelve registered by amendment 2026-07-15-A) and the UNI four-value fence describe different kinds of claim and never merge. This chapter contains **zero** UNI claims.
+- **QUAESTIO-APERTA:** "full human" and "beyond human" appear nowhere here as target, milestone, or deliverable. They are permanent open questions. A colony is a rung on nature's ladder; it says nothing about ours.
+
+
+<!-- ===== END cookbook/recipes-natura/CN-07-ants.md ===== -->
+

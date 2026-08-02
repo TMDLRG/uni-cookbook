@@ -1,0 +1,14 @@
+{
+  "name": "UNI Encyclopedia and Cookbook",
+  "short_name": "UNI Cookbook",
+  "start_url": "./",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "lang": "en",
+  "dir": "ltr",
+  "background_color": "#f5efe0",
+  "theme_color": "#2a2a2a",
+  "description": "Offline-first field reader for the UNI Encyclopedia and Cookbook. Icons PENDING (an unicated icon would be a fabrication). Scope is './', relative to the manifest URL, so the same file works whether served under /glass/cookbook/ (fleet limbs) or at / (local http.server)."
+}

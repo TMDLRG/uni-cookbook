@@ -1,0 +1,1096 @@
+{
+  "schema_version": "1.0.0",
+  "what_this_is": "The canonical concept list: the backbone of the five-register lexicon (Sanskrit / Latin / English / Hindi / Spanish). Each entry fixes ONE concept by its DEFINITION, not by its word. The definition is the translatable object and the test object: a candidate rendering in any register is admissible only if it back-translates to a sentence that preserves this definition's discriminating property, and a translator is tested on the definition, never on the headword. NOTHING HERE IS TRANSLATED YET. This file carries no Sanskrit, Latin, Hindi, or Spanish, and asserts no equivalence in any register; per rule 18.14 of the operator's own charter ('Do not claim perfect translation'), every future rendering enters PENDING / SUB EXAMINE and is admitted only against a cited dictionary headword plus a passing back-translation test. Sanskrit technical vocabulary for modern math and physics largely DOES NOT EXIST as attested classical terms; the honest expectation is many coined entries, recorded as coinages, and no attested word may be pretended to mean 'expected free energy'. Sanskrit philosophical vocabulary carries DOCTRINAL FREIGHT (a Samkhya or Vedanta term imports a metaphysics); the ambiguity_notes of the future register files, not this file, are where that is recorded, and no translation choice may quietly assert a metaphysics. The 'store' field routes each concept to its sovereign store and is NEVER a claim about the concept's truth: TRUE = the concept names something falsifiable/reproducible/recalibratable; HONEST = it names lived experience, which is never calibrated; META = it names commentary about signals, which travels separately and is never True. Two counts are load-bearing and are reported here rather than discovered later: GENERATIVE_PROCESS appears in 0 files of this corpus (grep, 2026-07-15) and is introduced here because the model/process conflation is the field's most-confused pair; META appears in 0 files of this corpus and is carried from the wider UNI Tree doctrine (arca META), not from anything the encyclopedia says. This file is a lexicon backbone. It raises no UNI rung, discharges no gate, and states no fact about nature. A nature citation is never a UNI gate.",
+  "counts_at_authorship": {
+    "concepts": 130,
+    "domains": 8,
+    "authored_utc": "2026-07-15",
+    "corpus_commit_at_authorship": "2e9acaf",
+    "sources_read": [
+      "cookbook/01-kitchen-rules.md",
+      "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "encyclopedia/wing-NATURA/NA-02-the-one-loop.md",
+      "encyclopedia/wing-NATURA/NA-04-mind-body-world.md",
+      "encyclopedia/wing-NATURA/NA-03-how-to-make-new-science.md (sections 2-7, targeted)",
+      "encyclopedia/wing-NATURA/NA-10-the-scale-ladder-and-gradients.md (sections: ladder, emergence, regime-change, gradients, transitions; targeted)"
+    ],
+    "cut_as_redundant": [
+      "DEVELOPMENTAL_LADDER",
+      "EXISTENCE_PROOF",
+      "NEAR_DECOMPOSABILITY",
+      "NO_BACKPROP",
+      "ONE_ENGINE",
+      "PREDICTION_ERROR",
+      "REACTION_DIFFUSION"
+    ],
+    "count_correction_note": "Authored at a hand-count of 128; the validator measured 137. The hand-count was wrong and is recorded here rather than quietly overwritten. Seven concepts whose content is carried verbatim by a named neighbour were then cut to 130. Calibration is down-only and the prior figure stays on record."
+  },
+  "field_contract": {
+    "concept_id": "UPPER_SNAKE, unique, stable. The join key for every register file. Never renamed once cited.",
+    "english_term": "The English headword. It is a LABEL, not the thing being translated.",
+    "definition": "Exactly one sentence, written to be precise enough to translate against and to test a translator on. Where it names math, the math is the fence.",
+    "domain": "One of the eight registered domains.",
+    "store": "TRUE | HONEST | META. Routing, not a truth claim.",
+    "notes": "Translation traps, homonyms, doctrinal freight, corpus-attestation honesty. Empty string where none."
+  },
+  "domains_registered": [
+    "active-inference-math",
+    "pomdp-tensors",
+    "markov-blanket",
+    "method",
+    "sovereign-vocabulary",
+    "natura",
+    "world-context",
+    "build-objects"
+  ],
+  "falsifiers": [
+    "A concept_id is duplicated, or a store value is outside {TRUE, HONEST, META}, or a domain is outside domains_registered.",
+    "A definition is not exactly one sentence, or is vague enough that two mutually incompatible renderings both satisfy it -- which makes meaning-preservation untestable and is this file's characteristic defect.",
+    "A definition contradicts encyclopedia/CLAIM-LEDGER.md, encyclopedia/NATURE-LEDGER.md, or the chapter it was drawn from. The ledger wins and this file is wrong.",
+    "A concept merges the TRUE and HONEST stores, merges the UNI 4-value fence with the NATURA class vocabulary, or lets a nature citation imply a UNI gate.",
+    "GENERATIVE_MODEL and GENERATIVE_PROCESS are shown to be the same object, or a register renders them with one term.",
+    "A future register file admits a Sanskrit or Latin headword that its cited authority does not carry, or does not carry in the claimed sense. That entry is a pseudopropheta and must be struck to PENDING-CITATION."
+  ],
+  "concepts": [
+    {
+      "concept_id": "ACTIVE_INFERENCE",
+      "english_term": "active inference",
+      "definition": "A scheme in which perception minimizes variational free energy over beliefs and action minimizes expected free energy over policies, so that perceiving and acting are one operation applied through the two halves of a blanket.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "In the UNI program this is the framing LENS: no AIF loop exists in the Rust crate, and G is not computed as a scheduler. A rendering that implies UNI runs active inference is drift."
+    },
+    {
+      "concept_id": "VARIATIONAL_FREE_ENERGY",
+      "english_term": "variational free energy",
+      "definition": "A scalar functional F[q,o] = E_q(s)[ln q(s) - ln p(o,s)], in nats, that scores a belief q(s) against observations o and upper-bounds surprisal, so minimizing it over q both drives q toward the true posterior and tightens the bound.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "'Free energy' is a physics loan and NOT thermodynamic free energy; a register that renders it via a heat/energy root imports a false physical claim. Scores beliefs, never actions -- conflating F with G is the commonest error in applying the framework."
+    },
+    {
+      "concept_id": "EXPECTED_FREE_ENERGY",
+      "english_term": "expected free energy",
+      "definition": "A scalar G(pi), in nats, that scores a candidate policy rather than a belief, equal to risk plus ambiguity and equivalently to the negative sum of epistemic and pragmatic value, so that the lowest-G policy is the chosen one.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Scores POLICIES; F scores BELIEFS. Name collision on record: Douady & Couder's phyllotaxis control parameter G_DC = v0*T/r0 is unrelated. Almost certainly a coinage in Sanskrit -- no attested term means this."
+    },
+    {
+      "concept_id": "SURPRISAL",
+      "english_term": "surprisal",
+      "definition": "The self-information -ln p(o) of an observation under a model, measuring how unexpected that observation was, in nats, and being the quantity that variational free energy upper-bounds.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "NOT the felt emotion of surprise; a register rendering it with an affect root asserts an experiencer and is a lane-crossing. Distinct from entropy, which is EXPECTED surprisal."
+    },
+    {
+      "concept_id": "GENERATIVE_MODEL",
+      "english_term": "generative model",
+      "definition": "The joint distribution p(o,s) that an agent HOLDS over observations and hidden states, specifying how states are believed to cause observations and how states are believed to evolve, and which is a choice the agent makes rather than a measurement of the world.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Half of the field's most-confused pair; read with GENERATIVE_PROCESS. The model is NOT a model of the external states themselves but of how external states are expected to show up in the blanket (NA-04). Minimizing F never tests whether this model was the right one (NA-02, honest bound 1)."
+    },
+    {
+      "concept_id": "GENERATIVE_PROCESS",
+      "english_term": "generative process",
+      "definition": "The actual dynamics of the world that really produce observations, which exist independently of any agent's beliefs and need not share the generative model's form, variables, or factorization.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "ATTESTATION HONESTY: the string 'generative process' appears in 0 files of this corpus (grep, 2026-07-15); it is introduced by this lexicon, not quoted from a chapter. Its CONTENT is already carried by NA-02 ('the whole construction is conditional on p(o,s) -- a choice, not a measurement'). Keeping model and process distinct is what makes 'a low F is not a correctness certificate' sayable: F is computed against the MODEL, while the PROCESS is what actually generated o, and no register may render both with one term."
+    },
+    {
+      "concept_id": "RECOGNITION_DENSITY",
+      "english_term": "recognition density (approximate posterior q)",
+      "definition": "The distribution q(s) that is an agent's honest and improvable belief over hidden states, being the object optimized during perception and generally NOT equal to the true posterior.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "The q-vs-p distinction is load-bearing: q is what you hold and optimize, p(s|o) is what you cannot compute. A register that renders both as one word destroys the bound-gap concept."
+    },
+    {
+      "concept_id": "TRUE_POSTERIOR",
+      "english_term": "true posterior",
+      "definition": "The exact conditional p(s|o) implied by the generative model, generally intractable because it requires the marginal p(o) = SUM_s p(o,s), and which q approximates without necessarily ever equalling.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "'True' here is a technical term of Bayesian inference and does NOT mean the TRUE store or a UNI ledger status; this homonym must not be rendered with the store's term."
+    },
+    {
+      "concept_id": "BOUND_GAP",
+      "english_term": "bound gap",
+      "definition": "The non-negative slack D_KL[q(s)||p(s|o)] between variational free energy and surprisal, which is zero exactly when q equals the true posterior and is unobservable without the very posterior that was intractable to begin with.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Why a confidently wrong model can sit at low F. This concept is the receipt for the INADMISSIBLE claim 'a low F means the model is correct'."
+    },
+    {
+      "concept_id": "ACCURACY",
+      "english_term": "accuracy",
+      "definition": "The term E_q(s)[ln p(o|s)] in F's complexity-minus-accuracy decomposition, measuring how well a belief explains the observations actually received.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Technical sense, not the ordinary 'correctness' sense: a confabulated observation raises apparent accuracy while corrupting the model, which is exactly what the complexity term prices."
+    },
+    {
+      "concept_id": "COMPLEXITY",
+      "english_term": "complexity",
+      "definition": "The term D_KL[q(s)||p(s)] in F, measuring how far a belief has moved off its prior and penalizing that movement so that minimizing F selects the simplest sufficient explanation rather than the best fit.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Sovereign homonym: NOT the scale-ladder sense of 'complexity', which NA-10 records as NOT-MEASURED (no scalar orders rungs by it). A register must not render both with one term."
+    },
+    {
+      "concept_id": "KL_DIVERGENCE",
+      "english_term": "Kullback-Leibler divergence",
+      "definition": "A non-negative measure of the difference between two distributions, zero if and only if they are equal (Gibbs' inequality), whose non-negativity is precisely what makes F upper-bound surprisal.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Asymmetric: D_KL[q||p] does not equal D_KL[p||q]. A register rendering it with a symmetric 'distance' root asserts a false mathematical property."
+    },
+    {
+      "concept_id": "ENTROPY",
+      "english_term": "entropy",
+      "definition": "The expected surprisal H of a distribution, measuring the average uncertainty of outcomes drawn from it, in nats.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Shannon entropy, NOT thermodynamic entropy; the shared English word is a loan and a register that reaches for a heat/disorder root imports a false physical claim."
+    },
+    {
+      "concept_id": "EVIDENCE",
+      "english_term": "evidence (marginal likelihood)",
+      "definition": "The marginal p(o) = SUM_s p(o,s) of observations under a model, whose negative logarithm is surprisal and whose logarithm F lower-bounds in negated form.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Sovereign homonym and a serious one: this is NOT 'evidence' in the method sense (EVIDENCE_CLASS, receipts). One is a normalizing constant of a model; the other is what a claim is known by. Rendering them alike would let a model's marginal read as a UNI gate."
+    },
+    {
+      "concept_id": "NAT",
+      "english_term": "nat",
+      "definition": "The unit of information under natural logarithms, equal to log2(e) or about 1.442695 bits, in which F, G, entropy and surprisal are all measured.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Load-bearing under the honesty rail: an F or G reported without its log base is not a number (NA-02). Every value carries value + units + scope."
+    },
+    {
+      "concept_id": "RISK",
+      "english_term": "risk",
+      "definition": "The divergence D_KL[q(o|pi)||p(o|C)] between a policy's predicted outcomes and its preferred outcomes, forming one of the two terms of expected free energy.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Technical sense only: NOT danger, hazard, or the ordinary sense of risk, and NOT operational risk in an ops or SLO context. A register reaching for a peril root asserts a threat that the math does not contain."
+    },
+    {
+      "concept_id": "AMBIGUITY",
+      "english_term": "ambiguity",
+      "definition": "The expected entropy of the likelihood, E_q(s|pi)[H[p(o|s)]], measuring how uninformative observations will be even if the policy reaches the states it intends.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "NOT linguistic or semantic ambiguity -- a live trap for this very lexicon, whose own ambiguity_notes use the ordinary sense. High ambiguity means you act and still do not know where you are."
+    },
+    {
+      "concept_id": "EPISTEMIC_VALUE",
+      "english_term": "epistemic value",
+      "definition": "The expected information gain of a policy, being the expected divergence between the belief that would be held after observing and the belief held now, which minimizing G maximizes.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Its reading as information gain is itself approximate: it additionally treats q(s|o,pi) as standing in for p(s|o), so where q is a poor posterior the reading degrades (NA-02). Dropping this term yields the confident wrong actor."
+    },
+    {
+      "concept_id": "PRAGMATIC_VALUE",
+      "english_term": "pragmatic value",
+      "definition": "The expected log-preference E_q(o|pi)[ln p(o|C)] of a policy, measuring how far its predicted outcomes move the agent toward its preferred observations.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Dropping this term yields the explorer who resolves uncertainty forever and arrives nowhere. Not 'pragmatic' in the ordinary or philosophical-school sense."
+    },
+    {
+      "concept_id": "POLICY",
+      "english_term": "policy",
+      "definition": "A candidate action sequence pi over which expected free energy is scored and among which one is selected.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "NOT policy in the governance, institutional, or document sense -- a severe trap in a corpus that also carries governance rules. A sequence of actions, nothing more."
+    },
+    {
+      "concept_id": "POLICY_PRECISION",
+      "english_term": "policy precision (gamma)",
+      "definition": "The inverse-temperature parameter gamma > 0, carrying units of inverse nats, that sharpens the softmax over policies, with gamma approaching 0 giving indifference and gamma approaching infinity giving deterministic argmin G.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Units routinely dropped in the literature: the softmax argument must be dimensionless and G is in nats, so gamma is in nats^-1. NOT-MEASURED as a natural constant -- it is fit per model or subject, and no replicated cross-species value exists (NA-02)."
+    },
+    {
+      "concept_id": "PRECISION",
+      "english_term": "precision",
+      "definition": "The confidence weighting on a distribution or signal, formally the inverse variance or the inverse-covariance (precision) matrix, which sets how strongly a term is allowed to drive inference.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Registered separately from POLICY_PRECISION on purpose: the corpus uses 'precision' in BOTH senses (inverse variance in NA-04's H_mu-eta blocks; inverse temperature over policies in NA-02). A register collapsing them merges two different quantities. Neither sense is 'precision' in the ordinary sense of exactness or of measurement precision -- a third trap."
+    },
+    {
+      "concept_id": "PRIOR",
+      "english_term": "prior",
+      "definition": "The distribution p(s) held over hidden states before the current observation is taken into account.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Read with CAVITY_PRINCIPLE: a hierarchy level must never treat an upstream prior as fresh evidence. Temporal sense ('earlier') is a homonym to avoid."
+    },
+    {
+      "concept_id": "PREFERENCE",
+      "english_term": "preference (C)",
+      "definition": "A prior p(o|C) over PREFERRED observations that encodes a goal as a distribution rather than as a reward signal, and which breaks the tie between revising beliefs and acting on the world.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "The thermoregulation case fixes why it is needed: a cold mammal can revise its prediction of its own temperature, or it can shiver, and only one is survivable (NA-04). NOT a liking, taste, or felt desire -- an affect rendering asserts an experiencer."
+    },
+    {
+      "concept_id": "LIKELIHOOD",
+      "english_term": "likelihood",
+      "definition": "The mapping p(o|s) from hidden states to observations, realized as the A tensor in a discrete POMDP.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "NOT probability in the ordinary sense of 'how likely something is to happen'; it is the state-to-observation mapping. Its expected entropy is AMBIGUITY."
+    },
+    {
+      "concept_id": "TRANSITION",
+      "english_term": "transition",
+      "definition": "The mapping p(s'|s,u) from a current hidden state and an action to the next hidden state, realized as the B tensor in a discrete POMDP.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Sovereign homonym: NOT a MAJOR_TRANSITION in the evolutionary sense (Maynard Smith & Szathmary), and NOT a DD-TDD state transition. Three different senses live in this corpus."
+    },
+    {
+      "concept_id": "ELBO",
+      "english_term": "evidence lower bound (ELBO)",
+      "definition": "The negative of variational free energy, being a lower bound on the log evidence ln p(o), such that maximizing it is identical to minimizing F.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Same quantity as F with the sign flipped; the machine-learning literature maximizes the ELBO where the active-inference literature minimizes F. A register must not present them as two mechanisms."
+    },
+    {
+      "concept_id": "FREE_ENERGY_PRINCIPLE",
+      "english_term": "free energy principle",
+      "definition": "The proposal that self-organizing systems at non-equilibrium steady state minimize a variational free-energy bound on surprisal, which designates a MODEL STRUCTURE rather than an empirical finding.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Its status is genuinely contested and both directions must travel: demanding the FEP itself be falsifiable is a category error (Andrews 2021), AND a model structure is not an empirical finding -- specific process-theory models built on it are falsifiable, the structure is not, and neither may borrow the other's credit."
+    },
+    {
+      "concept_id": "ACTION_AS_INFERENCE",
+      "english_term": "action as inference",
+      "definition": "The consequence of the blanket partition that a prediction error can be resolved either by changing internal states to fit the world or by changing active states until the world fits the model, both minimizing the same quantity.",
+      "domain": "active-inference-math",
+      "store": "TRUE",
+      "notes": "Action is not a faculty bolted onto inference; it is inference run through the other half of the blanket. The preference C is what breaks the tie between the two routes."
+    },
+    {
+      "concept_id": "POMDP",
+      "english_term": "partially observable Markov decision process",
+      "definition": "A discrete formalism of hidden states, observations and actions in which states are not directly visible, over which this corpus's engine runs the loop perceive, EFE-plan, act, learn.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "'Partially observable' is the load-bearing qualifier and the reason a recognition density is needed at all."
+    },
+    {
+      "concept_id": "A_TENSOR",
+      "english_term": "A tensor (likelihood)",
+      "definition": "The tensor encoding p(o|s), mapping hidden states to observations, and one of the four tensors this corpus's engine learns by conjugate-Dirichlet counts.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "The letters A/B/C/D/E are conventional labels, not abbreviations; a register must transliterate or index them, never translate them as words."
+    },
+    {
+      "concept_id": "B_TENSOR",
+      "english_term": "B tensor (transition)",
+      "definition": "The tensor encoding p(s'|s,u), mapping a hidden state and an action to the next hidden state, and one of the four tensors learned by conjugate-Dirichlet counts.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "Carries the model's dynamics; ambiguity lives in A, controllability lives in B."
+    },
+    {
+      "concept_id": "C_TENSOR",
+      "english_term": "C tensor (preferences)",
+      "definition": "The tensor encoding the prior p(o|C) over preferred observations, which -- alone among A, B, C, D and E -- is SET rather than learned by Dirichlet counts, being fixed in this corpus by the Z affect modulator.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "OBSERVED asymmetry, stated because it is easy to miss: the corpus says learning covers 'A/B/D/E', never C (01-kitchen-rules M13; 02-the-pantry). A goal that were learned from its own counts would have no purchase; C is where the goal enters from outside."
+    },
+    {
+      "concept_id": "D_TENSOR",
+      "english_term": "D tensor (initial state prior)",
+      "definition": "The tensor encoding the prior over hidden states at the start of a trial or episode, and one of the four tensors learned by conjugate-Dirichlet counts.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "Distinct from PRIOR in general: D is specifically the prior at t=0, not the running prior."
+    },
+    {
+      "concept_id": "E_TENSOR",
+      "english_term": "E tensor (habits / policy prior)",
+      "definition": "The tensor encoding the prior over policies, biasing policy selection before any expected-free-energy score is computed, and one of the four tensors learned by conjugate-Dirichlet counts.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "'Habit' is the corpus's word (the Z modulator sets habits); it names a prior over policies and asserts nothing about a felt disposition."
+    },
+    {
+      "concept_id": "DIRICHLET_LEARNING",
+      "english_term": "conjugate Dirichlet learning",
+      "definition": "The exact update of the A, B, D and E tensors by counts + lr * sufficient_stat, which is conjugate and therefore requires no gradient, no autodiff, and no backpropagation.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "M13; enforced by an AST guard that rejects autodiff/optax/torch/grad/backward in the loop. Learning here is counting, not descending."
+    },
+    {
+      "concept_id": "HIDDEN_STATE",
+      "english_term": "hidden state",
+      "definition": "The quantity s that an agent cannot observe directly and must infer, and about which the recognition density is a belief.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "'Hidden' means not directly observable, NOT concealed, secret, or withheld by anyone."
+    },
+    {
+      "concept_id": "OBSERVATION",
+      "english_term": "observation",
+      "definition": "The quantity o that actually arrived at the sensor, which is what a belief is scored against and what a receipt records.",
+      "domain": "pomdp-tensors",
+      "store": "TRUE",
+      "notes": "The bridge between the math and the method: o in an equation and a receipt in a ledger are the same kind of object, which is why a confabulated observation corrupts the model rather than merely embarrassing the author."
+    },
+    {
+      "concept_id": "MARKOV_BLANKET",
+      "english_term": "Markov blanket",
+      "definition": "The set b = {s,a} of sensory and active states whose conditioning renders internal and external states independent, so that p(mu,eta|b) = p(mu|b)p(eta|b), equivalently I(mu;eta|b) = 0.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "A MODELING CHOICE you justify per system, not a fact you may assume (NA-04). Read PEARL_BLANKET, FRISTON_BLANKET and BLANKET_SLIDE before rendering. 'Blanket' is a metaphor in English; a register reaching for a covering/cloth root should record that it is rendering a metaphor, not a mechanism."
+    },
+    {
+      "concept_id": "MIND",
+      "english_term": "mind (internal states, mu)",
+      "definition": "The internal states mu inside a blanket, which have no term in external states and whose only evidence about the world is the sensory states.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "DOCTRINAL FREIGHT WARNING, the most dangerous entry in this file: nothing in the partition names an experiencer, and rendering mu with a Sanskrit term for mind/consciousness/self (manas, citta, atman) imports a whole metaphysics and asserts what the corpus explicitly DISCLAIMS. The formalism admits partitions for a Newton's cradle and a burning fuse. Prefer a coined or structural rendering; record the freight."
+    },
+    {
+      "concept_id": "BODY",
+      "english_term": "body (the blanket, b)",
+      "definition": "The blanket b = {s,a} itself: the surface that carries every dependency between mind and world, and that thereby determines what is inferable at all.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "Embodiment is not decoration: change the surface and you change the set of possible minds behind it, because you have changed the only evidence there will ever be. NOT the anatomical body except by modeling choice."
+    },
+    {
+      "concept_id": "MIND_BODY",
+      "english_term": "mind.body (the interface)",
+      "definition": "The coupling mu to b -- a pair of one-way doors, sensory states the world's only route in and active states the mind's only route out -- which is not a fifth thing but the interface itself.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "The operator's fourth term and the load-bearing one; M12 leaves it implicit. A register must render it as a RELATION, not as a compound noun naming a third substance -- rendering it as a mind-body composite reopens dualism, which the partition does not contain."
+    },
+    {
+      "concept_id": "WORLD",
+      "english_term": "world (external states, eta)",
+      "definition": "The external states eta outside the blanket, which a mind reaches exactly never and which enter only as a hypothesis that explains the blanket.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "A mind can never touch the world; it can only ever touch its own blanket. The generative model is not a model of eta but of how eta is expected to show up in b. Sovereign homonym: not 'world' as Earth/biosphere (see WORLD_CONTEXT entries) and not 'World C', the corpus's count-based reader."
+    },
+    {
+      "concept_id": "SENSORY_STATES",
+      "english_term": "sensory states",
+      "definition": "The blanket states s influenced by external but not internal states, forming the world's only route into the mind.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "The directional sparsity (external influences s; internal does not) is a requirement ADDED on top of Pearl's condition by the free-energy literature, not part of the original construct."
+    },
+    {
+      "concept_id": "ACTIVE_STATES",
+      "english_term": "active states",
+      "definition": "The blanket states a influenced by internal but not external states, forming the mind's only route out into the world.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "'Active' means acted-upon-by-the-interior, not energetic or busy."
+    },
+    {
+      "concept_id": "CONDITIONAL_INDEPENDENCE",
+      "english_term": "conditional independence",
+      "definition": "The relation mu perp eta given b, which is the whole content of a blanket: given the blanket, internal and external states carry no further information about each other.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "Not 'mostly' and not 'usually' -- by definition, or the partition is not a blanket. This is a factorization claim about dynamics and it is checkable."
+    },
+    {
+      "concept_id": "CONDITIONAL_MUTUAL_INFORMATION",
+      "english_term": "conditional mutual information",
+      "definition": "The quantity I(mu;eta|b), in nats, which is the operable test of whether a candidate boundary is a real blanket, since I greater than zero beyond estimator noise means a route from world to mind bypasses the body and the partition is drawn in the wrong place.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "The criterion exists, is clean, and is overwhelmingly UNEXERCISED: NOT-MEASURED for essentially all real biological systems, and for every UNI boundary. When any text says 'system X has a Markov blanket', the default assumption should be that I was never estimated."
+    },
+    {
+      "concept_id": "PEARL_BLANKET",
+      "english_term": "Pearl blanket",
+      "definition": "A blanket as Pearl coined it: a formal statistical construct over a graph you drew, doing conditional-independence bookkeeping relative to a model, and thereby cheap, well-defined and unobjectionable.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "A tool for efficient inference over a graph you ALREADY DREW. Free, because it claims nothing about the world."
+    },
+    {
+      "concept_id": "FRISTON_BLANKET",
+      "english_term": "Friston blanket",
+      "definition": "A blanket read as the metaphysical boundary of a real thing -- the claim that some system out there genuinely has an inside, a surface and an outside -- which requires premises beyond the formalism's mathematical success.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "Expensive, because it is an empirical claim requiring I(mu;eta|b) approximately 0 in the actual system. Not asserted by this corpus: UNI is NOT claimed to have a blanket in this sense."
+    },
+    {
+      "concept_id": "BLANKET_SLIDE",
+      "english_term": "the Pearl-to-Friston slide",
+      "definition": "The field's characteristic error of defining a Pearl blanket, which is free, and then quietly concluding one has discovered where the organism ends, which is expensive and requires a measurement nobody made.",
+      "domain": "markov-blanket",
+      "store": "META",
+      "notes": "META store: this names a defect in commentary about signals, not a signal. Correct mathematics does not license the metaphysical reading; the dispute is live and this corpus takes no side beyond insisting the slide be named."
+    },
+    {
+      "concept_id": "INTEROCEPTION",
+      "english_term": "interoception",
+      "definition": "Sensory channels whose external states are other parts of the same organism, forming a blanket nested inside a blanket, and rendered in M12's engineering clause as hardware signals.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "From the brain's position, the viscera are eta. Scope violation on record: '80% of the vagus is afferent' is a RAT ABDOMINAL measurement in near-universal circulation as a fact about the human vagus, where the cervical figure is ~73-74%. A number quoted outside its scope is a defect even when the number is right."
+    },
+    {
+      "concept_id": "BLANKET_NESTING",
+      "english_term": "blanket nesting",
+      "definition": "The recursion in which one level's blanket becomes part of the next level's internal states, running organelle to cell to tissue to organ to organism to colony to ecosystem.",
+      "domain": "markov-blanket",
+      "store": "TRUE",
+      "notes": "ATTESTATION HONESTY: the corpus writes this as 'blankets of blankets' / 'Nesting'; the hyphenated term 'blanket-nesting' appears in 0 files. A CONSTRUCTION, not an observation: that blankets CAN compose this way is a mathematical fact; that any particular biological hierarchy IS so composed is a separate empirical claim, and the number of nested levels in any named organism is NOT-MEASURED."
+    },
+    {
+      "concept_id": "FALSIFIER",
+      "english_term": "falsifier",
+      "definition": "A stated observation that would refute a claim, written before the run, without which surprise cannot be computed and the claim is inadmissible.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "Structural, not optional: skip the prediction and the update step has nothing to compare against, so the loop degenerates into narration -- a model that only ever confirms itself because it only ever wrote down what already happened."
+    },
+    {
+      "concept_id": "RECEIPT",
+      "english_term": "receipt",
+      "definition": "The captured observation that closes a turn of the loop -- an audit id and UTC for live state, file:line for code, a run log for tests -- against which the prior prediction is compared.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "Every claim carries one or an explicit PENDING plus its falsifier. A pre-registered gate is not an earned result."
+    },
+    {
+      "concept_id": "EVIDENCE_CLASS",
+      "english_term": "evidence class",
+      "definition": "The A-to-U label recording HOW a claim is known, above which no claim may ever be raised.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "Sovereign homonym with EVIDENCE (the marginal likelihood) -- do not render alike. Also sovereign from NATURA_CLASS: this labels how a UNI claim is known; that labels how a fact about nature is known."
+    },
+    {
+      "concept_id": "CLASS_AUTHORITY_ORDERING",
+      "english_term": "class authority ordering",
+      "definition": "M9's rule that Class-B tool state overrides Class-G own narrative and Class-A runtime observation overrides Class-E test pass, so that a passing test does NOT satisfy a criterion demanding a runtime observation.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "The rule that stops a green test suite from being read as a live system."
+    },
+    {
+      "concept_id": "LEDGER",
+      "english_term": "ledger",
+      "definition": "The append-only single source of truth whose four states are PASS, FAIL, NEGATIVE and PENDING, and which wins wherever prose disagrees with it.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "Two sovereign ledgers exist and are cross-referenced by explicit audited link only, NEVER by merge: CLAIM-LEDGER.md for UNI's build status, NATURE-LEDGER.md for nature's regularities. No operation takes a row from each and produces a stronger row of either kind."
+    },
+    {
+      "concept_id": "CALIBRATION",
+      "english_term": "calibration",
+      "definition": "Moving wording DOWN to the measured value -- never up -- and keeping the prior wording on record, so that the fence gets louder under pressure rather than wider.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "Down-only and always with the strike carried in the open: a reader told only the corrected number has been handed a conclusion; a reader shown the strike has been handed the evidence. HONEST signals are NEVER calibrated -- applying this to testimony is the cardinal sin."
+    },
+    {
+      "concept_id": "NEGATIVE",
+      "english_term": "negative",
+      "definition": "A held UNI run that missed its pre-registered bar: a result UNI earned, published front-and-center as the credibility, and never retried until it wins.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "The token NEGATIVE belongs to the UNI ledger and may not serve the NATURA vocabulary -- which is exactly why the NATURA class for a retracted published value is named SUPERSEDED and not NEGATIVE. One token may not serve both sovereign vocabularies."
+    },
+    {
+      "concept_id": "BASELINE",
+      "english_term": "tuned baseline",
+      "definition": "A strong comparison tuned with the same effort spent on the method itself, since an untuned baseline measures the author's enthusiasm rather than the mechanism.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "M7. This is also the biomimetic design's specific gate: 'nature does it this way' earns nothing until the nature-derived design beats it on a pre-registered metric."
+    },
+    {
+      "concept_id": "DISCRIMINATOR",
+      "english_term": "load-bearing discriminator",
+      "definition": "A manipulation -- shuffling labels, swapping markers, ablating the mechanism to zero -- that must COLLAPSE the claimed gain, since a gain surviving the destruction of its own mechanism was never the mechanism's.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "M7. If the gain survives, it was leakage and you have just measured your pipeline."
+    },
+    {
+      "concept_id": "ABLATION",
+      "english_term": "ablation",
+      "definition": "Removal of a mechanism in order to measure its contribution, whose number must be a computed residual and never a literal typed in by hand.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "M7. An ablation number typed by hand is a claim about a run that did not happen."
+    },
+    {
+      "concept_id": "PRE_REGISTRATION",
+      "english_term": "pre-registration",
+      "definition": "Writing the bar, the margin, the threshold, the named ablation and the stopping rule BEFORE the build, because reasonable data-contingent analytic choices inflate false positives with no deliberate p-hacking at all.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "M2. Pre-registration, not virtue, is the fix. A break located only by scanning residuals is a fitted artefact until pre-registered."
+    },
+    {
+      "concept_id": "HELD_SET",
+      "english_term": "held set",
+      "definition": "Data touched exactly ONCE behind a seal-before-scoring step and a once-only sentinel, since a held set scored twice is a training set with a good reputation.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "M2, 'held-once'. Note the banned phrase 'held-PASS' in author voice."
+    },
+    {
+      "concept_id": "BOUND_NOT_POINT",
+      "english_term": "the bound, not the point estimate",
+      "definition": "M2's verdict rule: the verdict is the confidence-interval bound that EXCLUDES the threshold, never the point estimate.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "The 1919 eclipse is the worked case: it severely EXCLUDED the Newtonian value and was consistent with but did not pin the GR value, which is a real result and is not the result 'Einstein confirmed'. The excluding bound is the verdict; the point estimate is decoration."
+    },
+    {
+      "concept_id": "SEVERITY",
+      "english_term": "severity",
+      "definition": "Mayo's requirement that a passing test counts as evidence only if it could have failed, made operable as the single question: if the claim were false, what is the probability this exact procedure would still have passed it?",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "If the answer is 'high' or 'I don't know', the pass is worth nothing whatever p-value is attached. A weak pass and a severe pass are different species of result and must never share a column."
+    },
+    {
+      "concept_id": "STRONG_INFERENCE",
+      "english_term": "strong inference",
+      "definition": "Platt's procedure of devising alternative hypotheses, devising a crucial experiment each of whose possible outcomes EXCLUDES one or more of them, carrying it out to a clean result, and recycling.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "An experiment whose every outcome leaves all hypotheses alive is not an experiment, it is an expense. If the outcome-to-exclusion mapping was not written before the run, you did storytelling with a dataset. Platt's touchstone: 'what experiment could disprove your hypothesis?'"
+    },
+    {
+      "concept_id": "MULTIPLE_WORKING_HYPOTHESES",
+      "english_term": "multiple working hypotheses",
+      "definition": "Chamberlin's remedy of plurality rather than neutrality: keep at least two hypotheses always and at least three for anything you intend to claim, each structurally distinct in mechanism rather than in parameter.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "One hypothesis plus a null is NOT this -- the null is usually a strawman you already know how to beat. The named failure mode is parental affection for one's own explanation; the payoff is that disputes become conflicts between ideas rather than between people."
+    },
+    {
+      "concept_id": "REPLICATION",
+      "english_term": "replication",
+      "definition": "Independent repetition of a measurement by another party, whose presence or absence is exactly what separates OBSERVED-REPLICATED from OBSERVED-SINGLE.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "'Nobody has tried' is a fact about the literature and is printed as one. A single unreplicated measurement can never move a UNI rung -- least of all via OBSERVED-SINGLE, the class that exists precisely to stop one study being read as settled."
+    },
+    {
+      "concept_id": "ANOMALY",
+      "english_term": "anomaly",
+      "definition": "A residual that survives the hunt for instrument error -- stable, isotropic-or-not, and quantitatively characterized -- which is the most valuable object in science and the seed of the trajectory nuisance to residual to characterized anomaly to discriminating test to precision measurement.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "An anomaly you cannot describe quantitatively is a rumour. The instrument's own error is the FIRST term to hunt, not the last to add: OPERA's 60.7 ns was a loose fibre connector, and publishing the anomaly with its error budget and then its own refutation was the method working, not failing."
+    },
+    {
+      "concept_id": "POSITIVE_CONTROL",
+      "english_term": "positive control",
+      "definition": "A run proving the instrument can detect the effect it is looking for, without which a negative result is a hypothesis rather than a finding.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "NA-03 names it 'the positive control nobody runs'. Learned the hard way in this program: ICMP silence was read as a dead fleet; the fleet was fine and the firewall drops ICMP."
+    },
+    {
+      "concept_id": "PROVENANCE",
+      "english_term": "provenance",
+      "definition": "The record of what was measured, on what instrument, by whom, when, and through which cable, kept well enough that the loose connector can be found.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "The reason OPERA could kill its own claim. Distinct from the provenance FENCE classes (NOT-SOURCED / NOT-CONFIRMED / NOT-LOCATED), which record gaps in this corpus's own homework."
+    },
+    {
+      "concept_id": "CAVITY_PRINCIPLE",
+      "english_term": "the cavity principle",
+      "definition": "M22's rule that a hierarchy level must never treat an upstream prior as fresh evidence, but must divide it out.",
+      "domain": "method",
+      "store": "TRUE",
+      "notes": "Double-counting your own prior is how a hierarchy manufactures confidence from nothing. 'Cavity' is a term of art borrowed from cavity methods, not an anatomical or dental sense."
+    },
+    {
+      "concept_id": "TRUE_SIGNAL",
+      "english_term": "TRUE signal",
+      "definition": "A signal that is falsifiable, reproducible and recalibratable, with every calibration present and prior recorded, such that if it cannot be falsified or reproduced it is not True.",
+      "domain": "sovereign-vocabulary",
+      "store": "TRUE",
+      "notes": "Sovereign homonym warning: 'True' here names a STORE and its admission properties, not truth in the ordinary sense, and not TRUE_POSTERIOR's technical 'true'. A register that renders the store with a word for veracity will make 'a True signal can be wrong' unsayable -- and it must stay sayable."
+    },
+    {
+      "concept_id": "HONEST_SIGNAL",
+      "english_term": "HONEST signal",
+      "definition": "Lived experience, respected exactly as lived and NEVER calibrated, which is not a failed measurement but a different kind of signal, and whose lack of a falsifier is the point rather than a gap.",
+      "domain": "sovereign-vocabulary",
+      "store": "HONEST",
+      "notes": "Forcing testimony into the TRUE-side vocabulary -- even into an honest-looking fence like NOT-MEASURED -- would assert that first-person report is a failed measurement, and would be wrong in the direction that flatters the corpus, which is the direction to distrust most. The corpus's only HONEST row (CN11-59) is deliberately given NO NATURA class."
+    },
+    {
+      "concept_id": "META_SIGNAL",
+      "english_term": "META signal",
+      "definition": "Commentary about a signal, which travels separately from the signal itself and is never True.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "ATTESTATION HONESTY: 'META' as a store appears in 0 files of this corpus (grep, 2026-07-15, excluding metabolism/metazoan/method); it is carried from the wider UNI Tree doctrine (arca VERI / HONESTI / META, three sovereign stores with separate ledgers and Merkle roots) and from the rail 'Meta is never True'. This corpus lives the rule under the name SIGNUM SIGNUM MANET without naming the store."
+    },
+    {
+      "concept_id": "SOVEREIGN_ISOLATION",
+      "english_term": "sovereign isolation",
+      "definition": "The rule that TRUE and HONEST signals keep separate stores, separate ledgers and separate Merkle roots, and that crossing them is the cardinal sin.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "META store: a rule about how signals are handled is not itself a signal. A chakra-frequency table is INADMISSIBLE as physics and may be recorded as an HONEST/cultural signal -- never as a TRUE/measured one, and never converted from one to the other."
+    },
+    {
+      "concept_id": "SIGNUM_SIGNUM_MANET",
+      "english_term": "the signal remains the signal",
+      "definition": "The doctrine that the signal and the commentary about it travel separately, so that an attribution is never merged into the value it describes.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "The measured value goes in the table; the interpretation goes in the prose. Worked case: White & Seymour's TITLE is commentary, their CI is the signal -- read the CI. Worked case: Hoyle's PREDICTION of the carbon resonance and the MEASUREMENT of it travel as separate ledger rows. This entry's English gloss is a working translation of the corpus's own Latin tag and is itself PENDING under the fence."
+    },
+    {
+      "concept_id": "RES_IPSAE_NON_SIMULACRA",
+      "english_term": "the things themselves, not simulacra",
+      "definition": "The doctrine that no value, citation, URL, DOI or dictionary entry is ever fabricated: source it, or write NOT-MEASURED, and there is no third state.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "A plausible-sounding number with no source is the worst defect available. For THIS file specifically the sharpest form is: an invented Monier-Williams or Lewis & Short headword is a pseudopropheta and the single worst thing that could be put in this repo. If you half-remember a value, search for it; if you cannot source it, write the fence."
+    },
+    {
+      "concept_id": "CARDINAL_RULE",
+      "english_term": "the cardinal rule",
+      "definition": "A nature citation is never a UNI gate: reading Kleiber's law raises no UNI rung, and no operation takes a NATURA row and a UNI row and produces a stronger row of either kind.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "The same fence already applied to the embodiment substrate ('UNI.OS substrate evidence is never general-AIF evidence'), given a second front. A chapter that lets a literature citation imply a UNI capability is defective regardless of how good the citation is."
+    },
+    {
+      "concept_id": "UNI_FENCE",
+      "english_term": "the UNI four-value fence",
+      "definition": "The vocabulary proven / designed / hypothesized / not-yet-built that governs UNI's own build status and is never used of nature.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Governed by CLAIM-LEDGER.md. Every recipe earns exactly one fence and no recipe is carded above its ledger class."
+    },
+    {
+      "concept_id": "PROVEN",
+      "english_term": "proven",
+      "definition": "A held, sealed, UNI-signed PASS (Class A or C) with its falsifier still live -- a status of UNI's own artifact passing UNI's own gate, and reserved for the UNI ledger.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "The ONE banned-in-author-voice word that has a legitimate reserved use, and only this one: it describes UNI build status and NEVER nature's science. A replicated natural regularity can never make a UNI claim proven, and a UNI proven row can never count as evidence about nature."
+    },
+    {
+      "concept_id": "DESIGNED",
+      "english_term": "designed",
+      "definition": "A typed spec or signed-in-principle design exists while the build is partial or unverified, which raises nothing and leaves the rung's status unchanged.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "A signed design is a gate to BUILD, never a result. A model of nature that fits can never discharge a UNI design gate, and a signed UNI design can never be evidence about how nature works."
+    },
+    {
+      "concept_id": "HYPOTHESIZED_UNI",
+      "english_term": "hypothesized (UNI fence value)",
+      "definition": "A stated UNI mechanism with no sealed gate yet (Class U), not claimed.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "SOVEREIGN HOMONYM, registered deliberately: the SAME WORD is also a NATURA class (HYPOTHESIZED_NATURA). Same word, different SUBJECT -- one is UNI's open mechanism, one is nature's. Nature's open mechanism can never move a UNI rung; UNI's can never settle a scientific dispute. A register may legitimately render both with one term ONLY if the subject is always recoverable; otherwise it must split them."
+    },
+    {
+      "concept_id": "NOT_YET_BUILT",
+      "english_term": "not-yet-built",
+      "definition": "No engine, no run, no gate: an absence in UNI's build, hard-fenced as north-star framing.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "UNI not having built it can never be evidence that nature lacks the value; nature lacking a measurement can never be a reason UNI cannot build, nor an excuse to invent the number. Its NATURA look-alike is NOT-MEASURED, and the resemblance is the trap."
+    },
+    {
+      "concept_id": "NATURA_CLASS",
+      "english_term": "NATURA evidence class",
+      "definition": "The twelve-class, three-group vocabulary (measured / derived / fenced) that governs nature's observed regularities and is never merged with the UNI four.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Twelve is a MEASURED property of the corpus (what 919 rows required), not a design target; the chapter declared six and was refuted by its own rows, and a thirteenth would be a finding, not a failure. Governed by NATURE-LEDGER.md."
+    },
+    {
+      "concept_id": "OBSERVED_REPLICATED",
+      "english_term": "OBSERVED-REPLICATED",
+      "definition": "Measured and independently replicated across labs, datasets or taxa, carrying a real citation, a falsifier and the known range.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "It licenses the VALUE, not any claim attached to the value. Its UNI look-alike is 'proven' and they are not the same: one is about nature measured by third parties, the other about UNI's artifact passing UNI's gate."
+    },
+    {
+      "concept_id": "OBSERVED_SINGLE",
+      "english_term": "OBSERVED-SINGLE",
+      "definition": "Measured by a method another party could repeat, but with NO independent replication on record, asserting the measurement and asserting nothing whatever about corroboration.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Registered 2026-07-15 for 42 rows that had no honest home: OBSERVED-REPLICATED asserts a replication that did not happen and OBSERVED-CONTESTED asserts a dispute that does not exist -- both false, in opposite directions. Promotion and demotion are both live falsifiers."
+    },
+    {
+      "concept_id": "OBSERVED_CONTESTED",
+      "english_term": "OBSERVED-CONTESTED",
+      "definition": "Measured, but with the community genuinely disputing the value, the exponent or the mechanism, so that both positions must be carried and the dispute named.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "A feature, not an embarrassment: a chapter that picks one number and drops the other has lied. The UNI ledger has no contested state, so a contested exponent can never be cited as settled to move a UNI row."
+    },
+    {
+      "concept_id": "MODELED",
+      "english_term": "MODELED",
+      "definition": "Derived from a model that fits data, where the model's ASSUMPTIONS are the fence and must be cited with it.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Cite it as MODELED with its assumptions, or do not cite it: West-Brown-Enquist derive b = 3/4 exactly from three assumptions, and dropping any one means 3/4 does not follow."
+    },
+    {
+      "concept_id": "MODELED_CONTESTED",
+      "english_term": "MODELED-CONTESTED",
+      "definition": "Derived from a model AND genuinely disputed by the community, so the row must survive both tests rather than one.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Registered 2026-07-15 (1 row) because the original six were treated as disjoint and are not: MODELED and OBSERVED-CONTESTED overlap in reality, and a row in the overlap was forced to drop one of its two true properties."
+    },
+    {
+      "concept_id": "HYPOTHESIZED_NATURA",
+      "english_term": "HYPOTHESIZED (NATURA class)",
+      "definition": "A mechanism about nature that is proposed but not settled, and is not claimed.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "SOVEREIGN HOMONYM with HYPOTHESIZED_UNI -- see that entry. Worked case: birds navigate; HOW is not settled, with the radical-pair mechanism live alongside a competing magnetite hypothesis."
+    },
+    {
+      "concept_id": "INADMISSIBLE",
+      "english_term": "INADMISSIBLE",
+      "definition": "A claim that failed observation, or that is unfalsifiable as stated, carried WITH the receipt of why it failed -- never asserted, never mocked.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "The person asking is not stupid; the claim is just not shaped like a claim yet, and the same question asked with a scope and a falsifier is what produced Douady & Couder. Contempt is a defect exactly as much as credulity is: the fence goes on the claim, not the claimant. Distinct from SUPERSEDED: an INADMISSIBLE claim was never shaped like a claim, a SUPERSEDED value was a good claim that lost."
+    },
+    {
+      "concept_id": "SUPERSEDED",
+      "english_term": "SUPERSEDED",
+      "definition": "A value that was carried in the literature and has since been retracted, withdrawn by its own authors, or contradicted by a calibrated re-analysis, kept as the receipt for why it must not be cited.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Never deleted, because deleting it is how a superseded number gets re-imported by the next reader who finds it in an old textbook. Its rows have ALREADY had their falsifier fire -- that is what put them here. Named SUPERSEDED and not NEGATIVE on purpose: NEGATIVE is a UNI ledger state and one token may not serve both vocabularies."
+    },
+    {
+      "concept_id": "NOT_MEASURED",
+      "english_term": "NOT-MEASURED",
+      "definition": "The honest empty face: nobody has measured it -- an absence in the literature, written instead of inventing a number.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "An absence is not a refutation, and it gets written down as an absence. NOT-MEASURED rows are invitations: producing the pre-registered replicated measurement reclassifies the row, which is the system working, not failing."
+    },
+    {
+      "concept_id": "NOT_SOURCED",
+      "english_term": "NOT-SOURCED",
+      "definition": "The chapter states a value it could not trace to a source: somebody measured it, and this corpus could not find who.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "NEVER merge with NOT-MEASURED, and this is the whole point of registering it: NOT-MEASURED is an absence in the LITERATURE, a reportable fact about the world's knowledge, while NOT-SOURCED is an absence in THIS CORPUS'S OWN HOMEWORK, a fact about us. Collapsing them lets a research failure masquerade as a discovery about the frontier of science."
+    },
+    {
+      "concept_id": "NOT_CONFIRMED",
+      "english_term": "NOT-CONFIRMED",
+      "definition": "The primary source is named at one remove -- a secondary or tertiary work cites it -- but the primary was not read in this pass, so the provenance chain is known and unwalked.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Distinct from NOT-SOURCED, where no chain was found at all. Falsifier: read the primary and confirm or strike."
+    },
+    {
+      "concept_id": "NOT_LOCATED",
+      "english_term": "NOT-LOCATED",
+      "definition": "A named source was searched for and does not appear to exist -- the strongest of the three provenance fences.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Not 'we didn't look' (NOT-SOURCED) and not 'we didn't walk it' (NOT-CONFIRMED), but 'we looked, and it wasn't there'. The exemplar row reports the miss against the corpus's OWN commissioning brief rather than quietly satisfying it."
+    },
+    {
+      "concept_id": "QUAESTIO_APERTA",
+      "english_term": "open question",
+      "definition": "A permanent open question -- 'full human' and 'the next evolution beyond human' -- which is never a target, never a milestone, and never a deliverable.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "Permanent, not pending: PENDING implies a scheduled resolution and this has none. The chapter about the question (CN-12) is a chapter about a question, not a roadmap to an outcome. This entry's English gloss of the corpus's Latin tag is itself PENDING under the fence."
+    },
+    {
+      "concept_id": "NONDUM_FALSIFICABILIS",
+      "english_term": "not yet falsifiable",
+      "definition": "A REGISTER STATUS and not an evidence class: the mark of an item held in the open-questions register, outside the Tree, which is read and not acted upon.",
+      "domain": "sovereign-vocabulary",
+      "store": "META",
+      "notes": "The distinction is load-bearing: an evidence class says how well a claim about nature is supported, a register status says the item is not in the ledger at all. A ledger row without a falsifier would be a defect; a register entry without one is the register working. Giving it an evidence class would import it into the Tree by relabelling."
+    },
+    {
+      "concept_id": "NATURE_AS_AUTHORITY",
+      "english_term": "nature as the authority",
+      "definition": "The doctrine, defensible in exactly one form, that nature is authoritative because it is the only system that has already run the experiment -- a very long parallel search under real physical constraints in which the failures were deleted.",
+      "domain": "natura",
+      "store": "META",
+      "notes": "Honest only with its counterweight, which travels with it EVERYWHERE (see ADAPTATIONIST_COUNTERWEIGHT). Never rendered mystically: it licenses hypothesis generation, and it is not a claim that nature is optimal."
+    },
+    {
+      "concept_id": "ADAPTATIONIST_COUNTERWEIGHT",
+      "english_term": "the adaptationist counterweight",
+      "definition": "Gould & Lewontin's mandatory companion to nature-as-authority: not every trait is an adaptation, because phylogenetic inertia, drift, developmental constraint, pleiotropy and historical contingency all produce features that are not optimal solutions to anything.",
+      "domain": "natura",
+      "store": "META",
+      "notes": "Nature is full of frozen accidents: the vertebrate retina is wired backwards, the recurrent laryngeal nerve takes its detour. Therefore 'nature does it this way' is a HYPOTHESIS GENERATOR, never a proof -- a biomimetic design must still beat a tuned baseline on a pre-registered metric or be recorded NEGATIVE. That gate is the entire difference between this wing and cargo-cult biomimicry."
+    },
+    {
+      "concept_id": "CONVERGENT_EVOLUTION",
+      "english_term": "convergent evolution",
+      "definition": "Independent lineages arriving at the same solution, which is EVIDENCE of a constraint-optimum and never proof of one.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The evidence; CONSTRAINT_OPTIMUM is what it is evidence OF. Do not render as one term."
+    },
+    {
+      "concept_id": "CONSTRAINT_OPTIMUM",
+      "english_term": "constraint-optimum",
+      "definition": "A solution repeatedly rediscovered by independent lineages under real physical constraints, which is what convergent evolution is evidence of.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "'Optimum' is bounded by the counterweight: it is optimal WITHIN the constraints that obtained, not optimal simpliciter, and the inference from convergence to optimality is defeasible."
+    },
+    {
+      "concept_id": "RATIO",
+      "english_term": "ratio",
+      "definition": "A quotient of two measured quantities, which usually does NOT survive a change of scale and which must carry its scope, units and class to be admissible.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "Read AFTER dimensionless numbers, deliberately: dimensionless groups survive a change of scale and most ratios do not, and reading ratios first is how designers end up with golden ratios in places nature never put one. A ratio dividing numbers from different unpaired cohorts is MODELED, not measured."
+    },
+    {
+      "concept_id": "DIMENSIONLESS_NUMBER",
+      "english_term": "dimensionless number",
+      "definition": "A quotient whose units cancel, which travels across scale precisely because it does, and which is therefore the group to read before any ratio.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "Not defined everywhere: Reynolds number is meaningless for an atom or a galaxy, and a dimensionless group carried outside its domain is a scope violation."
+    },
+    {
+      "concept_id": "REYNOLDS_NUMBER",
+      "english_term": "Reynolds number",
+      "definition": "Re = rho*v*L/mu = v*L/nu, the ratio of inertial to viscous forces, which spans about thirteen orders of magnitude from bacterium to whale and across which the physics of swimming changes IDENTITY rather than degree.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The wing's best regime-change case: at Re about 1e-5 a bacterium cannot coast at all (computed coast distance about 1/16 of a hydrogen atom's diameter), so a reciprocal stroke nets zero displacement in an incompressible Newtonian fluid -- and withdrawing the premise 'Newtonian' withdraws the theorem, since a micro-scallop does propel in non-Newtonian fluid. A law fitted inside a regime is a law about that regime's premises."
+    },
+    {
+      "concept_id": "SCALING_LAW",
+      "english_term": "scaling law",
+      "definition": "A power law fitted within a regime, whose exponent stops being a fact about the world at a regime boundary and which does not extrapolate through one.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "Not 'less accurately' past a boundary -- it does not carry. Curvature is a power law's own confession: a relation needing a quadratic term in log-mass is not a pure power law at all, and fitting straight lines to different arcs of one curve is how two groups each reported their arc's slope as a universal constant."
+    },
+    {
+      "concept_id": "ALLOMETRY",
+      "english_term": "allometry",
+      "definition": "The scaling of a biological quantity with body mass, canonically BMR proportional to M^b, whose exponent moves with analysis choices and changes at the major evolutionary transitions.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The exponent MOVES with which taxa are excluded, whether body temperature is normalised, and whether the regression unit is species or order -- that mobility IS the dispute, and it is OBSERVED-CONTESTED. It changes sign of curvature relative to linear (superlinear in prokaryotes, linear in protists, sublinear in metazoans), which is a rung boundary showing up in the residuals."
+    },
+    {
+      "concept_id": "REGIME_BOUNDARY",
+      "english_term": "regime boundary",
+      "definition": "The point at which the dominant dimensionless group moves by orders of magnitude or the dominant force changes identity, past which a fitted exponent does not carry.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "A change of DOMINANT TERM, not of coefficient. An independently-motivated break is worth far more than one found by searching residuals, and a break located only by scanning is a fitted artefact until pre-registered."
+    },
+    {
+      "concept_id": "SCALE_LADDER",
+      "english_term": "the scale ladder",
+      "definition": "The sixteen-rung sequence from quark to galaxy ordered by characteristic length, on which Markov blankets appear at the organelle, cell and organism rungs and vanish above and below.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "Read the blanket column downward: it is NOT monotone. A galaxy is enormous and has no blanket; a mitochondrion is a micron across and has one. Size is not what makes a boundary. Writing the ladder as an ascent toward mind is a rhetorical move dressed as a measurement."
+    },
+    {
+      "concept_id": "RUNG",
+      "english_term": "rung",
+      "definition": "A level that exists only when all three of these hold: a boundary with real conditional independence forms, a characteristic timescale separates from the level below, and the level has its own dynamics that do not require tracking the level below.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "State all three or you have not identified a level, you have merely named a size. Sovereign homonym: NOT a rung of the L0-L12 developmental ladder, where '~2 of 11+ rungs earned' is a UNI build position -- two ladders, two senses, never merged."
+    },
+    {
+      "concept_id": "EMERGENCE",
+      "english_term": "emergence",
+      "definition": "A statement about spectral gaps in a dynamical system: timescale separation makes a level's own dynamics writable without tracking the level below, so that broken symmetry at each level generates concepts not present in the level below.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "Not magic and not mysticism, and it does not need to be. Honest ordering: timescale separation CAUSES the autonomy -- if the timescales did not separate there would be no autonomous slow dynamics to write down. The ability to reduce everything to simple laws does not imply the ability to start from those laws and reconstruct the universe."
+    },
+    {
+      "concept_id": "FREQUENCY",
+      "english_term": "frequency",
+      "definition": "A rate of repetition in hertz, admissible only with its measurand and scope, since values landing in the same numeric neighbourhood may be entirely different physics.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The worked trap: about 7.83 Hz (electromagnetic, planetary cavity), 8-13 Hz (electrical, cortical) and 4-8 Hz (mechanical, whole-body vibration) are three real separately measured quantities in one numeric neighbourhood, with different measurands. Each value is earned; the bridge between them is not."
+    },
+    {
+      "concept_id": "RESONANCE",
+      "english_term": "resonance",
+      "definition": "The selective amplification of a driven system near a characteristic frequency of a real cavity or oscillator, which licenses the frequency and nothing attached to the frequency.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "A real Earth-ionosphere cavity resonance is a real thing with a real mechanism; the effect size of that field on human physiology at ambient picotesla strengths is NOT-MEASURED. 'Resonance' in a metaphorical or affective sense is a different word and must not be rendered alike -- this is where mystical-adjacent claims enter."
+    },
+    {
+      "concept_id": "DIFFUSION",
+      "english_term": "diffusion",
+      "definition": "Transport by random thermal motion, whose characteristic time scales as the square of distance and which therefore fails as a delivery mechanism above a characteristic length.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The square law is why the cell has the size it has, and why tissue needs convection: the constraint is geometric, not biological."
+    },
+    {
+      "concept_id": "GRADIENT",
+      "english_term": "gradient",
+      "definition": "A spatial variation of a quantity, which is a measured object at one rung and a rhetorical one across rungs unless the measurand, its units, and two rungs measured with it are all stated.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The honest split, which is the ladder's own fence: length and specific power are MEASURED across rungs; time is PART-RHETORICAL (a light-crossing time, a vibrational period, a doubling time and a fuel-exhaustion time are not one measurand, so the column is a placement aid and must never be regressed); and 'information density', 'degree of internal model' and 'complexity' are NOT-MEASURED -- the ladder most invites the second and it has the least behind it."
+    },
+    {
+      "concept_id": "MORPHOGENESIS",
+      "english_term": "morphogenesis",
+      "definition": "The generation of form from local rules during growth, in which pattern arises without a blueprint.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "Growth is the generator of form. The earned exemplar is phyllotaxis: nothing golden was put in -- repulsion, advection and periodic deposition were put in, and the golden angle came out."
+    },
+    {
+      "concept_id": "CELL",
+      "english_term": "cell",
+      "definition": "The design unit of biology and the canonical Markov blanket, plasma-membrane bounded and dominated by viscosity and diffusion at Re of order 1e-5.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The mandate's 'down to the cell level' target. 'The canonical case' for a blanket -- which still does not mean I(mu;eta|b) was estimated for it; it was not."
+    },
+    {
+      "concept_id": "MEMBRANE",
+      "english_term": "membrane",
+      "definition": "A selectively permeable lipid boundary, which is a surface for reasons of lipid physics and history, and whose satisfying I(mu;eta|b) = 0 is a DIFFERENT question whose answer is NOT-MEASURED.",
+      "domain": "natura",
+      "store": "TRUE",
+      "notes": "The single sharpest instance of the whole wing's discipline: the observation that organisms have surfaces is not evidence that the surface is a Markov blanket. Do not let a membrane and a blanket be rendered with one term."
+    },
+    {
+      "concept_id": "GAIA",
+      "english_term": "Gaia",
+      "definition": "The claim that the biosphere homeostatically regulates the planet, which is HYPOTHESIZED as regulation with a live unanswered unit-of-selection objection, and INADMISSIBLE as the literal claim that the Earth is an organism.",
+      "domain": "world-context",
+      "store": "META",
+      "notes": "Two different claims that must not travel together: the disequilibrium OBSERVATION is replicated and independent of the theory; the REGULATION claim has no unit of selection, since there is one Earth with no competing siblings, no reproduction and no inheritance with variation. As a heuristic about coupled biotic-abiotic feedback it names real measurable couplings and is admissible in that form. Both 'Gaia is science' and 'Gaia is nonsense' are INADMISSIBLE as stated. Heavy doctrinal freight: the name is a deity."
+    },
+    {
+      "concept_id": "LABORATORY",
+      "english_term": "laboratory",
+      "definition": "The bounded setting in which a pre-registered metric and a tuned baseline decide a design, and whose engineering or substrate evidence is never general evidence about the science.",
+      "domain": "world-context",
+      "store": "META",
+      "notes": "Never let substrate work imply a science gate is met. In-lab results are a toy world's results; a lab-in-a-box on metal is engineering evidence."
+    },
+    {
+      "concept_id": "TOY_WORLD",
+      "english_term": "toy world",
+      "definition": "The honest scope of this whole program: a developmental active-inference SIMULATION, a bounded peek, a toy world, and never a person.",
+      "domain": "world-context",
+      "store": "META",
+      "notes": "Printed plainly and never softened, together with the position it travels with: about 2 of 11+ developmental rungs earned. If any chapter appears to move that number, the chapter is the defect. This is the one entry whose weakening would corrupt every other entry in the file."
+    },
+    {
+      "concept_id": "AGENT",
+      "english_term": "agent",
+      "definition": "A system that holds a generative model and minimizes free energy through a blanket, concerning which nothing further is implied: a system that minimizes F is a system that minimizes F.",
+      "domain": "build-objects",
+      "store": "TRUE",
+      "notes": "DOCTRINAL FREIGHT: no experiencer, no selfhood, no agency in the moral or intentional sense. A Sanskrit rendering via a term for actor/self (kartr, jiva, atman) imports a metaphysics the definition explicitly withholds. Same formalism admits a Newton's cradle and a burning fuse."
+    },
+    {
+      "concept_id": "ORGAN",
+      "english_term": "organ",
+      "definition": "A named instrument built to run one loop, carrying its own harness, and durable only once committed rather than once deployed.",
+      "domain": "build-objects",
+      "store": "TRUE",
+      "notes": "UNI build sense. Sovereign homonym with the anatomical organ, which is rung 9 of the scale ladder -- two senses, and the corpus uses both."
+    },
+    {
+      "concept_id": "ORGANISM",
+      "english_term": "organism",
+      "definition": "The scale-ladder rung at which a Markov blanket is identifiable, gravity enters as a dominant constraint, and metabolic rate scales with body mass within its regime.",
+      "domain": "build-objects",
+      "store": "TRUE",
+      "notes": "Re spans about 1e-5 to 3e8 within this single rung -- the rung is not one physical regime. The literal claim that the biosphere is an organism fails this definition's first criterion: no boundary with demonstrated conditional independence is exhibited."
+    },
+    {
+      "concept_id": "HIERARCHY",
+      "english_term": "hierarchy",
+      "definition": "Nested levels each of whose blanket becomes part of the next level's internal states, made reachable by evolution because stable intermediates are what interruption spares.",
+      "domain": "build-objects",
+      "store": "TRUE",
+      "notes": "Not a hierarchy in the sense of rank, command, or authority -- a severe trap in a corpus that also carries governance rules and an approval plane. Read with CAVITY_PRINCIPLE: a level must never treat an upstream prior as fresh evidence."
+    },
+    {
+      "concept_id": "WORLD_COUPLING",
+      "english_term": "world coupling",
+      "definition": "The interface by which an engine's internal states are exposed to a world, isolated by explicit whitelist rather than by blacklist.",
+      "domain": "build-objects",
+      "store": "TRUE",
+      "notes": "The build-side realization of MIND_BODY. Whitelist-not-blacklist is the same discipline as allowlist-by-omission being a defect: what is not named is not reachable."
+    },
+    {
+      "concept_id": "Z_MODULATOR",
+      "english_term": "the Z affect modulator",
+      "definition": "The global vector of energy, arousal, valence, fatigue, pain, threat, safety and inflammation that sets precision, preferences, habits, learning rate and horizon.",
+      "domain": "build-objects",
+      "store": "TRUE",
+      "notes": "DOCTRINAL FREIGHT, and the corpus's own guard on it is four words: affect MODELED, never FELT. Every component name (pain, threat, safety) is a word for an experience and none of them asserts one; a register must not render these with terms that presuppose a subject who suffers."
+    },
+    {
+      "concept_id": "SENSORIUM",
+      "english_term": "sensorium",
+      "definition": "A body-to-mind categorical observation interface whose modality count is an empirical question, kept at seven because an over-compressed two-modality bottleneck went NEGATIVE on held data.",
+      "domain": "build-objects",
+      "store": "TRUE",
+      "notes": "A sensorium is NEVER awareness -- the corpus states this flatly, and it is the exact place where substrate work is most often misread as a science gate."
+    }
+  ]
+}

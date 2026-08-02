@@ -1,0 +1,236 @@
+{
+  "id": "PL-10",
+  "title": "Gaia — the laboratory boundary",
+  "caption": "The world/agent coupling, drawn so that the model/process distinction cannot be missed. Panel I places the laboratory named Gaia — the generative PROCESS, world.process — on the left under hatch, and the agent holding the generative MODEL, model.p_os = p(o,s), on the right. Between them is the Markov blanket b = {s,a}: s is the world's only route in, a is the mind's only route out, and the agent's inference touches nothing else. Inside the agent's internal states hangs a framed miniature, and it is the plate's load-bearing detail: it depicts the BLANKET SURFACE, not the world, because NA-04 says the generative model 'is not a model of eta; it is a model of how eta is expected to show up in b'. A forbidden double-headed path is cut with a cross exactly where it tries to cross the blanket wall — the oracle cut — because any crossing that is not s or a is forbidden. Panel II states the partition formally. Panel III draws the human visual blanket as a funnel to scale in width at exactly 83:1 (498 px mouth / 6 px throat) from measured counts, and marks the ratio MODELED because it divides unpaired cohorts across a non-uniform surface. Panel IV records that one token, 'Gaia', names two different subjects in two different ledgers. Panel V draws the Pearl-to-Friston slide and carries Aguilera's narrow-corner result as a first-class NEGATIVE. Panel VI sets the two emptinesses side by side — NOT-MEASURED in nature against not-yet-built in UNI — separated by a sovereignty mark, because the resemblance is the trap. The Gaia side of this plate carries no number at all: that is a finding, not an omission.",
+  "source_chapters": [
+    {
+      "id": "NA-04",
+      "role": "primary",
+      "path": "encyclopedia/wing-NATURA/NA-04-mind-body-world.md",
+      "supplies": "the four-way partition and its conditional independence; the sparsity conditions; 'a mind can never touch the world'; what the generative model is a model OF; the blanket quantified (retinal funnel); the operable criterion I(mu;eta|b)=0 and its non-exercise; Pearl vs Friston and the slide; Aguilera's narrow corner; the 'not claimed' list"
+    },
+    {
+      "id": "NA-02",
+      "role": "supporting",
+      "path": "encyclopedia/wing-NATURA/NA-02-the-one-loop.md",
+      "supplies": "honest bound 1 — a low F is not a correctness certificate; the construction is conditional on p(o,s), a choice, not a measurement; minimizing F never tests whether the generative model was the right one"
+    },
+    {
+      "id": "NA-00",
+      "role": "supporting",
+      "path": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "supplies": "the twelve NATURA classes in three groups (amended 2026-07-15); the crosswalk between the UNI 4-value fence and the NATURA class, including the not-yet-built / NOT-MEASURED look-alike row that Panel VI draws"
+    },
+    {
+      "id": "CN-03",
+      "role": "supporting",
+      "path": "cookbook/recipes-natura/CN-03-air.md",
+      "supplies": "the Gaia hypothesis section — Lovelock & Margulis 1974, the unit-of-selection objection (Doolittle 1981; Dawkins 1982), Daisyworld (Watson & Lovelock 1983) as an existence proof of a possible mechanism only"
+    },
+    {
+      "id": "lexicon/CONCEPTS.json",
+      "role": "supporting",
+      "path": "lexicon/CONCEPTS.json",
+      "supplies": "GAIA (the hypothesis; store META; 'Heavy doctrinal freight: the name is a deity'), LABORATORY, GENERATIVE_MODEL, GENERATIVE_PROCESS, PEARL_BLANKET, FRISTON_BLANKET, BLANKET_SLIDE"
+    },
+    {
+      "id": "prompts/_drafts/draft-A-formal.md",
+      "role": "supporting (DRAFT — not a chapter, not a ledger)",
+      "path": "prompts/_drafts/draft-A-formal.md",
+      "supplies": "Sec 4 — Gaia as the named simulation/world/laboratory context, 'a naming convention, not a metaphysical claim'; Sec 11.1 — the model/process distinction, the namespaces world.process vs model.p_os, the oracle line, q(eta|r) != p(eta|y,m); Sec 11.4 — blanket_holds as a derived field with estimator, CI, n, and positive/negative controls"
+    }
+  ],
+  "claims": [
+    {
+      "row": "NA04-01",
+      "symbol": "mu perp eta | b",
+      "value": "p(mu,eta|b) = p(mu|b)p(eta|b)",
+      "units": "— (definition)",
+      "scope": "any system admitting the 4-way partition",
+      "class": "MODELED",
+      "class_note": "definitional; the assumption is that the partition is GIVEN, not discovered",
+      "source": "Pearl (1988), Probabilistic Reasoning in Intelligent Systems",
+      "falsifier": "Not falsifiable as a definition. The application to system X is falsified by I(mu;eta|b) > 0 in X.",
+      "on_plate": "Panels I and II"
+    },
+    {
+      "row": "NA04-02",
+      "symbol": "I(mu;eta|b)",
+      "value": "0 (required)",
+      "units": "nats",
+      "scope": "the operable blanket test, any system",
+      "class": "NOT-MEASURED",
+      "class_note": "NOT-MEASURED for essentially all real biological systems",
+      "source": "criterion: Pearl (1988); attempts: Friston et al. (2021) Netw Neurosci 5(1):211-251; Beck & Ramstead (2025) arXiv:2502.21217",
+      "falsifier": "Estimate it for a named organism's real boundary. Any I > 0 beyond estimator noise refutes that blanket.",
+      "on_plate": "Panels II, V and VI"
+    },
+    {
+      "row": "NA04-03",
+      "symbol": "H_mu-eta, H_eta-mu",
+      "value": "0 (required)",
+      "units": "precision units",
+      "scope": "linear Gaussian / Ornstein-Uhlenbeck systems",
+      "class": "MODELED",
+      "class_note": "holds only in a 'very narrow space of parameters'; assumptions: linearity, weak coupling C^2 small, homogeneous noise Gamma = sigma^2 I. Carried on the plate as a first-class NEGATIVE.",
+      "source": "Aguilera, Millidge, Tschantz & Buckley (2022), Physics of Life Reviews 40:24-50 (arXiv:2105.11203)",
+      "falsifier": "Exhibit a broad, non-symmetric parameter region of a non-equilibrium system where the blocks vanish.",
+      "on_plate": "Panels I, II and V"
+    },
+    {
+      "row": "NA04-04",
+      "symbol": "N_rod",
+      "value": "92e6 (range 77.9-107.3e6)",
+      "units": "cells",
+      "scope": "human retina; 8 wholemounts, 7 donors, ages 27-44",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Curcio, Sloan, Kalina & Hendrickson (1990), J Comp Neurol 292:497-523, DOI 10.1002/cne.902920402",
+      "falsifier": "Recount in a comparable cohort; a mean outside the stated range refutes.",
+      "on_plate": "Panel III (funnel mouth)"
+    },
+    {
+      "row": "NA04-05",
+      "symbol": "N_cone",
+      "value": "4.6e6 (range 4.08-5.29e6)",
+      "units": "cells",
+      "scope": "human retina; same cohort as NA04-04",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Curcio et al. (1990)",
+      "falsifier": "Recount in a comparable cohort; a mean outside the stated range refutes.",
+      "on_plate": "Panel III (funnel mouth)"
+    },
+    {
+      "row": "NA04-06",
+      "symbol": "D_cone,fovea",
+      "value": "199000 (range 100000-324000)",
+      "units": "cones/mm^2",
+      "scope": "human foveal peak; same cohort",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Curcio et al. (1990)",
+      "falsifier": "Recount in a comparable cohort; a mean outside the stated range refutes.",
+      "on_plate": "Panel III (the non-uniformity fence)"
+    },
+    {
+      "row": "NA04-07",
+      "symbol": "N_optic",
+      "value": "1159000 +/- 196000 (range 816000-1502000)",
+      "units": "axons",
+      "scope": "human optic nerve; 22 nerves, 19 subjects, ages 20-75",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Jonas, Muller-Bergh, Schlotzer-Schrehardt & Naumann (1990), Invest Ophthalmol Vis Sci 31(4):736-744",
+      "falsifier": "Recount; a mean outside the stated range refutes.",
+      "on_plate": "Panel III (funnel throat)"
+    },
+    {
+      "row": "NA04-08",
+      "symbol": "r_retina",
+      "value": "~83 : 1",
+      "units": "dimensionless",
+      "scope": "human visual blanket, order-of-magnitude only",
+      "class": "MODELED",
+      "class_note": "assumptions: (N_rod + N_cone)/N_optic across DIFFERENT, UNPAIRED cohorts, no per-eye matching, ignores non-uniform convergence (foveal ~1:1 vs peripheral >>100:1). The funnel is drawn to scale in WIDTH at exactly 498 px / 6 px = 83.0; the printed arithmetic (92+4.6)e6 / 1.159e6 = 83.3.",
+      "source": "arithmetic on Curcio et al. (1990) + Jonas et al. (1990)",
+      "falsifier": "Measure both counts in the SAME eyes. A paired ratio outside ~50-150:1 refutes this estimate.",
+      "on_plate": "Panel III"
+    },
+    {
+      "row": "NA04-13",
+      "symbol": "n_levels",
+      "value": "— (no value carried)",
+      "units": "nested blankets",
+      "scope": "any named organism, established by measurement",
+      "class": "NOT-MEASURED",
+      "source": "none found",
+      "falsifier": "Estimate I(mu;eta|b) at each candidate level of one real organism and count the levels that pass.",
+      "on_plate": "Panel VI"
+    },
+    {
+      "row": "CN03-76",
+      "symbol": "Gaia (regulation)",
+      "value": "— (no value carried)",
+      "units": "—",
+      "scope": "the biosphere homeostatically regulates the planet",
+      "class": "HYPOTHESIZED",
+      "class_note": "This is GAIA-the-hypothesis, a NATURA subject. It is NOT the laboratory named Gaia in this plate's title. One token, two subjects, two ledgers — recorded on the plate as a first-class trap.",
+      "source": "Lovelock & Margulis 1974, Tellus 26(1-2):2-10",
+      "falsifier": "Specify a unit of selection, or a mechanism needing none, that survives Doolittle/Dawkins.",
+      "on_plate": "Panel IV"
+    },
+    {
+      "row": "(no row — UNI fence, CLAIM-LEDGER)",
+      "symbol": "Gaia (the laboratory)",
+      "value": "not-yet-built",
+      "units": "UNI 4-value fence",
+      "scope": "UNI's own build status",
+      "class": "not-yet-built",
+      "class_note": "SOVEREIGN FROM the NATURA class and never merged with it. Gaia has ZERO rows in encyclopedia/CLAIM-LEDGER.md (grep, corpus tip f1be794); the ORCHESTRATE prompt naming it sits in prompts/_drafts/. No I(mu;eta|b) has been estimated for any UNI boundary.",
+      "source": "encyclopedia/CLAIM-LEDGER.md (absence of rows); prompts/_drafts/draft-A-formal.md Sec 4",
+      "falsifier": "Exhibit a running Gaia artifact with a held, sealed UNI gate — or a CLAIM-LEDGER row for it.",
+      "on_plate": "Panels I, IV and VI"
+    }
+  ],
+  "not_claimed": [
+    "That Gaia exists as a running artifact. Gaia has zero rows in CLAIM-LEDGER; UNI fence: not-yet-built. This plate draws a DESIGN, and a design discharges no gate.",
+    "That any agent drawn here has a Markov blanket in the Friston sense. No I(mu;eta|b) has been estimated for any UNI boundary, and NA04-02 cards it NOT-MEASURED for essentially all real biological systems. The blanket on this plate is a partition drawn by a builder — the Pearl kind, the free kind.",
+    "That a Markov blanket implies a self, an experiencer, awareness, sentience, consciousness, or a point of view. Explicitly disclaimed in NA-04, and no falsifier is offered because none exists. The same formalism admits partitions for a Newton's cradle, a burning fuse and the Lorenz attractor (Beck & Ramstead 2025). If a blanket implied a self, it would imply one for the burning fuse.",
+    "That the free-energy principle is true, or that blanket conditions are general. In the one setting where the question was solved exactly they held only in a 'very narrow space of parameters' (Aguilera et al. 2022) — carried as a first-class NEGATIVE, not softened.",
+    "That naming a laboratory 'Gaia' asserts anything about Earth, the biosphere, or a living planet. And not claimed that the Gaia hypothesis is settled — CN03-76 carries regulation as HYPOTHESIZED with the unit-of-selection objection live and unanswered.",
+    "That 83 : 1 is a measured ratio, or that the sensory surface is uniform. It is MODELED across unpaired cohorts (NA04-08); foveal ~1:1 against peripheral >>100:1 is the fence, and the drawing is the thing being fenced.",
+    "That a low F certifies the model. NA-02, honest bound 1: 'A confidently wrong model can sit at low F ... the whole construction is conditional on p(o,s) — a choice, not a measurement. Minimizing F never tests whether the generative model was the right one.'",
+    "That anything here raises any UNI rung. A NATURE CITATION IS NEVER A UNI GATE. The honest program position is unchanged by this plate: ~2 of 11+ developmental rungs earned, a developmental active-inference SIMULATION, a toy world, never a person.",
+    "'Full human' and 'beyond human' are not targets, milestones or deliverables anywhere on this plate — they are permanent open questions (QUAESTIO-APERTA)."
+  ],
+  "evidence_classes": {
+    "vocabulary_note": "TWO SOVEREIGN VOCABULARIES, NEVER MERGED. The NATURA class governs nature's observed regularities (encyclopedia/NATURE-LEDGER.md, NA-00's twelve classes in three groups as amended 2026-07-15). The UNI 4-value fence governs UNI's own build status (encyclopedia/CLAIM-LEDGER.md). This plate carries both because the boundary between them IS its subject — and Panel VI draws the look-alike pair that must never merge.",
+    "natura_classes_used": [
+      {
+        "class": "OBSERVED-REPLICATED",
+        "mark": "—",
+        "meaning": "measured, and independently replicated across labs, datasets or taxa",
+        "rows": ["NA04-04", "NA04-05", "NA04-06", "NA04-07"]
+      },
+      {
+        "class": "MODELED",
+        "mark": "△",
+        "meaning": "derived from a model that fits data; the assumptions are the fence",
+        "rows": ["NA04-01", "NA04-03", "NA04-08"]
+      },
+      {
+        "class": "NOT-MEASURED",
+        "mark": "◇",
+        "meaning": "the honest empty face — nobody has measured it; an absence IN THE LITERATURE",
+        "rows": ["NA04-02", "NA04-13"]
+      },
+      {
+        "class": "HYPOTHESIZED",
+        "mark": "△",
+        "meaning": "nature's open mechanism, no settled account",
+        "rows": ["CN03-76"]
+      }
+    ],
+    "uni_fence_used": [
+      {
+        "fence": "not-yet-built",
+        "meaning": "an absence in UNI's BUILD — no engine, no run, no gate",
+        "subject": "Gaia, the laboratory",
+        "receipt": "zero rows in encyclopedia/CLAIM-LEDGER.md at corpus tip f1be794"
+      }
+    ],
+    "marks_survive_greyscale": true,
+    "greyscale_note": "The figure key distinguishes classes by MARK (— △ ◇ ✖ ⊥), line weight, hatch density and dash pattern. Colour is redundant everywhere; verified by rasterising the plate and desaturating.",
+    "crosswalk_rule": "NA-00: 'UNI not having built it CAN NEVER be evidence nature lacks the value. Nature lacking a measurement CAN NEVER be a reason UNI cannot build — nor an excuse to invent the number.'"
+  },
+  "notation_note": "NA-04 writes the sparsity conditions with a derivative dot over the variable. This plate prints them expanded — d(dmu/dt)/d(eta) = 0 — because at plate type size the combining dot above (U+0307) renders on the solidus, and a reader would then see the different and false statement d(mu)/d(eta) = 0 (states, not flows). Identical theorem, in a form the page cannot corrupt. Recorded as caption item 5.",
+  "attribution_note": "SIGNUM SIGNUM MANET. The partition, the sparsity conditions and the sentence about what the model is a model OF are NA-04's. The word-pair 'generative model / generative process' and the namespaces world.process / model.p_os are draft-A Sec 11.1's — NA-04 does not use the phrase 'generative process'. draft-A is a DRAFT PROMPT, not a chapter and not a ledger, and is cited as such.",
+  "design_only": {
+    "static": true,
+    "script_elements": 0,
+    "event_handlers": 0,
+    "external_references": 0,
+    "note": "Pure static SVG. No script, no on-event handlers, no xlink/href, no @import, no webfont, no remote image. The only absolute URI is xmlns=\"http://www.w3.org/2000/svg\", which is a namespace identifier and is never fetched. Fonts are system stacks only (Georgia/Palatino/Times serif; Courier New mono).",
+    "theme": "Light and dark via CSS custom properties, with @media (prefers-color-scheme:dark) and :root[data-theme=dark|light] overrides; the media-dark and attribute-dark declaration sets are identical (verified).",
+    "responsive": "viewBox 0 0 1440 3280, width=100%, preserveAspectRatio=xMidYMid meet. Renders standalone and inline."
+  },
+  "corpus_tip": "f1be794",
+  "authored": "2026-07-15"
+}

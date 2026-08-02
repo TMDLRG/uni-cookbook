@@ -1,0 +1,525 @@
+{
+  "id": "PL-09",
+  "title": "The two sovereign ledgers",
+  "caption": "An engraved plate in five panels drawing the ARCHITECTURE of two ledgers that are never merged. Panel I draws them as two trees with SEPARATE ROOTS in SEPARATE BEDS OF SOIL that do not touch: the UNI CLAIM-LEDGER, rooted in UNI's own gates run on UNI's own artifacts, carrying the 4-value fence, the four ledger states at the ledger's own last recorded snapshot (882 rows), and the A-U evidence classes; and the NATURA NATURE-LEDGER, rooted in third parties publishing in the literature, carrying twelve classes in three groups (measured 578, derived 257, fenced 80 ledger rows) plus four rows drawn DETACHED from every bough because they deliberately carry no class -- reconciling 578 + 257 + 80 + 4 = 919 rows across 23 chapters, 0 out of vocabulary. A double-ruled SOVEREIGN BOUNDARY runs unbroken between them, and the two crowns are joined by a dashed swag marked as an AUDITED CROSS-LINK: a citation, and only a citation, springing crown-to-crown and never root to root. Reference may cross that line; inference may not. Panel II prints the cardinal rule. Panel III is the crosswalk of nine look-alike pairs, where the resemblance is the trap and the load-bearing column is what each can never imply about the other. Panel IV draws TRUE, HONEST and META as three sovereign lanes of EQUAL width -- equal because sovereignty is not proportional to population -- with META marked as carried from outside this corpus. WHAT THE PLATE DOES NOT CLAIM: it does not claim twelve is the final number of NATURA classes (NA-00 declared six and was refuted by 72 of its own 919 rows); it does not claim the 22 un-traced rows are repaired, only correctly labelled; it does not claim the UNI snapshot is current or was recounted here; it prints no per-value count for the 4-value fence, because this corpus publishes none; it does not claim META is an encyclopedia concept; and it raises no UNI rung whatever -- a nature citation is never a UNI gate, the honest program position is unchanged at ~2 of 11+ developmental rungs earned, and where this plate and a ledger disagree, the ledger wins and the plate is wrong.",
+  "source_chapters": [
+    "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md  (PRIMARY: the twelve classes, the cardinal rule, the crosswalk, the amendment record 2026-07-15-A, the honesty rail)",
+    "encyclopedia/NATURE-LEDGER.md  (§0 sovereignty · §1 the twelve classes · §5.1 counts by class · §5.2 out-of-vocabulary · §6 standing fences)",
+    "encyclopedia/CLAIM-LEDGER.md  (§0 constitution & standing fences: the 4-value fence, the four states, the A-U evidence classes, the 882-row snapshot, ~2 of 11+ rungs)",
+    "lexicon/CONCEPTS.json  (v1.0.0: the TRUE / HONEST / META store routing, the field contract, the META provenance disclosure)",
+    "tools/verify_class_vocabulary.py  (the operable form of NA-00 falsifier #2; re-run for this plate)"
+  ],
+  "corpus_tip": "f1be794",
+  "authored_utc": "2026-07-15",
+  "claims": [
+    {
+      "row": "OBSERVED-REPLICATED",
+      "panel": "I",
+      "symbol": "OBSERVED-REPLICATED",
+      "value": 438,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 47.7% §1); 47.7% of 919; group A - measured",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "47.7%",
+      "group": "A - measured"
+    },
+    {
+      "row": "OBSERVED-SINGLE",
+      "panel": "I",
+      "symbol": "OBSERVED-SINGLE",
+      "value": 42,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 4.6% §1); 4.6% of 919; group A - measured",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "4.6%",
+      "group": "A - measured"
+    },
+    {
+      "row": "OBSERVED-CONTESTED",
+      "panel": "I",
+      "symbol": "OBSERVED-CONTESTED",
+      "value": 98,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 10.7% §1); 10.7% of 919; group A - measured",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "10.7%",
+      "group": "A - measured"
+    },
+    {
+      "row": "MODELED",
+      "panel": "I",
+      "symbol": "MODELED",
+      "value": 251,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 27.3% §1); 27.3% of 919; group B - derived",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "27.3%",
+      "group": "B - derived"
+    },
+    {
+      "row": "MODELED-CONTESTED",
+      "panel": "I",
+      "symbol": "MODELED-CONTESTED",
+      "value": 1,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 0.1% §1); 0.1% of 919; group B - derived",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "0.1%",
+      "group": "B - derived"
+    },
+    {
+      "row": "HYPOTHESIZED",
+      "panel": "I",
+      "symbol": "HYPOTHESIZED",
+      "value": 5,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 0.5% §1); 0.5% of 919; group B - derived",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "0.5%",
+      "group": "B - derived"
+    },
+    {
+      "row": "INADMISSIBLE",
+      "panel": "I",
+      "symbol": "INADMISSIBLE",
+      "value": 16,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 1.7% §1); 1.7% of 919; group C - fenced",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "1.7%",
+      "group": "C - fenced"
+    },
+    {
+      "row": "SUPERSEDED",
+      "panel": "I",
+      "symbol": "SUPERSEDED",
+      "value": 3,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 0.3% §1); 0.3% of 919; group C - fenced",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "0.3%",
+      "group": "C - fenced"
+    },
+    {
+      "row": "NOT-MEASURED",
+      "panel": "I",
+      "symbol": "NOT-MEASURED",
+      "value": 39,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 4.2% §1); 4.2% of 919; group C - fenced",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "4.2%",
+      "group": "C - fenced"
+    },
+    {
+      "row": "NOT-SOURCED",
+      "panel": "I",
+      "symbol": "NOT-SOURCED",
+      "value": 20,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 2.2% §1); 2.2% of 919; group C - fenced",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "2.2%",
+      "group": "C - fenced"
+    },
+    {
+      "row": "NOT-CONFIRMED",
+      "panel": "I",
+      "symbol": "NOT-CONFIRMED",
+      "value": 1,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 0.1% §1); 0.1% of 919; group C - fenced",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "0.1%",
+      "group": "C - fenced"
+    },
+    {
+      "row": "NOT-LOCATED",
+      "panel": "I",
+      "symbol": "NOT-LOCATED",
+      "value": 1,
+      "units": "ledger rows",
+      "scope": "NATURE-LEDGER rows carrying this class at their LEADING class token (compound-row convention, 0.1% §1); 0.1% of 919; group C - fenced",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins.",
+      "percent_of_ledger": "0.1%",
+      "group": "C - fenced"
+    },
+    {
+      "row": "group A subtotal - measured",
+      "panel": "I",
+      "symbol": "group A subtotal - measured",
+      "value": 578,
+      "units": "ledger rows",
+      "scope": "62.9% of the 919-row ledger",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins."
+    },
+    {
+      "row": "group B subtotal - derived",
+      "panel": "I",
+      "symbol": "group B subtotal - derived",
+      "value": 257,
+      "units": "ledger rows",
+      "scope": "28.0% of the 919-row ledger",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins."
+    },
+    {
+      "row": "group C subtotal - fenced",
+      "panel": "I",
+      "symbol": "group C subtotal - fenced",
+      "value": 80,
+      "units": "ledger rows",
+      "scope": "8.7% of the 919-row ledger",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.1 (counts by class, machine-counted 2026-07-15); class defined at encyclopedia/NATURE-LEDGER.md §1 and encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins."
+    },
+    {
+      "row": "carried, not classed",
+      "panel": "I",
+      "symbol": "n_unclassed",
+      "value": 4,
+      "units": "ledger rows",
+      "scope": "0.4% of the ledger. A CLOSED LIST of four named rows, not an open category: NA03-16 (SI defining constants - definitional), CN04-22 (Hoyle's 1953 prediction - a prediction is not a measurement), CN11-59 (first-person testimony - an HONEST signal), CN12-41 (anima in silicio? - a register status, extra Arborem)",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §1 and §5.1 ('Carried, not classed'); registered individually at encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "falsifier": "A fifth row is added to the closed list, or any of the four is given a NATURA class. Also: Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins."
+    },
+    {
+      "row": "reconciliation",
+      "panel": "I",
+      "symbol": "n_ledger_total",
+      "value": 919,
+      "units": "ledger rows",
+      "scope": "578 + 257 + 80 + 4 = 919, across 23 chapters (NA-00...NA-10, CN-01...CN-12)",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5, §5.1 ('Reconciliation - 578 + 257 + 80 + 4 = 919')",
+      "falsifier": "Re-run tools/verify_class_vocabulary.py. If it does not reproduce this number exactly, this plate is wrong and the ledger wins."
+    },
+    {
+      "row": "out-of-vocabulary",
+      "panel": "I",
+      "symbol": "n_out_of_vocab",
+      "value": 0,
+      "units": "ledger rows (of 919)",
+      "scope": "rows carrying a class string outside the registered twelve",
+      "evidence_class": "A",
+      "source": "encyclopedia/NATURE-LEDGER.md §5.2; Machine-counted. Receipt: tools/verify_class_vocabulary.py re-run for this plate 2026-07-15 -- '[NATURE-LEDGER.md] rows parsed: 919 ... OUT-OF-VOCABULARY ROWS (ledger): 0 ... RESULT: PASS - zero rows outside the registered vocabulary'.",
+      "falsifier": "Exhibit a real nature claim in the NA/CN chapters that cannot be placed in one of the registered classes. This is NA-00 falsifier #2, which HAS FIRED ONCE (2026-07-15, on 72 rows) and is left standing unweakened."
+    },
+    {
+      "row": "the amendment",
+      "panel": "I",
+      "symbol": "n_outside_the_six",
+      "value": 72,
+      "units": "ledger rows (7.8% of 919)",
+      "scope": "rows carrying a class string outside the ORIGINAL six-class design, which refuted the declaration 'six classes and only six' and forced six -> twelve on 2026-07-15",
+      "evidence_class": "F",
+      "source": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § Amendment record 2026-07-15-A. NOT recounted for this plate: the pre-amendment state no longer exists in the tree, so this is the chapter's own recorded figure, carried as such. (The verifier reports the post-amendment state: 0 of 919 out of vocabulary.)",
+      "falsifier": "Check out the pre-amendment corpus revision and re-run the verifier; if the count is not 72, NA-00's amendment record is wrong."
+    },
+    {
+      "row": "the 4-value fence",
+      "panel": "I",
+      "symbol": "UNI fence",
+      "value": "proven | designed | hypothesized | not-yet-built",
+      "units": "n/a (a vocabulary, not a measurement)",
+      "scope": "UNI's own build status, over UNI's own artifacts. NO PER-VALUE COUNT is published by this corpus, and this plate prints none.",
+      "evidence_class": "method",
+      "source": "encyclopedia/CLAIM-LEDGER.md §0 (Constitution & Standing Fences); crosswalked at encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § The crosswalk",
+      "falsifier": "Produce a published per-value count for the fence in this corpus; the plate's 'NO PER-VALUE COUNT EXISTS' block is then wrong and must carry the count."
+    },
+    {
+      "row": "the 4 ledger states",
+      "panel": "I",
+      "symbol": "UNI states",
+      "value": "PASS 350 | FAIL 0 | NEGATIVE 183 | PENDING 349",
+      "units": "ledger rows (882 total)",
+      "scope": "THE LEDGER'S OWN LAST RECORDED SNAPSHOT. NOT recounted for this plate. An upstream prior is never fresh evidence (M22, the cavity principle).",
+      "evidence_class": "F",
+      "source": "encyclopedia/CLAIM-LEDGER.md §0, verbatim: 'The corpus carries 183 published negatives (last recorded ledger snapshot: 882 rows = 350 PASS / 0 FAIL / 183 NEGATIVE / 349 PENDING)'.",
+      "falsifier": "Recount the rows of CLAIM-LEDGER.md. If the four states do not sum to 882 at the quoted split, the snapshot is stale and the plate must be re-drawn from the recount."
+    },
+    {
+      "row": "published negatives",
+      "panel": "I",
+      "symbol": "n_negatives",
+      "value": 183,
+      "units": "ledger rows",
+      "scope": "UNI's own recorded negatives -- 'the negatives are the credibility' (M15). A UNI NEGATIVE is a held UNI run that missed its own pre-registered bar; it is NEVER a statement about nature.",
+      "evidence_class": "F",
+      "source": "encyclopedia/CLAIM-LEDGER.md §0 and M15; same snapshot as above, not recounted here.",
+      "falsifier": "Recount CLAIM-LEDGER.md rows in state NEGATIVE."
+    },
+    {
+      "row": "evidence classes A-U",
+      "panel": "I",
+      "symbol": "UNI evidence classes",
+      "value": "A machine-exact anchor | B mechanism + operator observation | C dev-gate / held-out eval | E test-covered | F doc / prior-claim (re-verify) | U claimed-but-unproven | method",
+      "units": "n/a (a taxonomy, not a measurement)",
+      "scope": "UNI's own claims about UNI's own artifacts. 'Class U - not claimed' is itself a standing fence.",
+      "evidence_class": "method",
+      "source": "encyclopedia/CLAIM-LEDGER.md §0 (Evidence classes A-U taxonomy)",
+      "falsifier": "n/a - definitional. Falsify by showing the taxonomy as printed contradicts CLAIM-LEDGER §0."
+    },
+    {
+      "row": "program position",
+      "panel": "header, II, V",
+      "symbol": "rungs_earned",
+      "value": "~2 of 11+",
+      "units": "developmental rungs",
+      "scope": "The honest program position, carried unchanged. This plate does not move it and cannot: it holds no gate.",
+      "evidence_class": "F",
+      "source": "encyclopedia/CLAIM-LEDGER.md §0 ('Honest program position: ~2 of 11+ developmental rungs earned'); restated at encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § The cardinal rule and encyclopedia/NATURE-LEDGER.md §0.",
+      "falsifier": "A held, sealed UNI gate at a further rung. No drawing can supply one."
+    },
+    {
+      "row": "TRUE lane",
+      "panel": "IV",
+      "symbol": "n_store_TRUE",
+      "value": 98,
+      "units": "lexicon concepts (of 130)",
+      "scope": "concepts routed to the TRUE store: the concept names something falsifiable, reproducible and recalibratable. Routing, NOT a truth claim.",
+      "evidence_class": "A",
+      "source": "lexicon/CONCEPTS.json v1.0.0, field 'store'; counted from the file for this plate 2026-07-15 (collections.Counter over concepts[].store -> TRUE 98, META 31, HONEST 1; total 130, matching counts_at_authorship.concepts = 130).",
+      "falsifier": "Re-count concepts[].store in lexicon/CONCEPTS.json. A store value outside {TRUE, HONEST, META} is also a declared falsifier of the lexicon itself."
+    },
+    {
+      "row": "HONEST lane",
+      "panel": "IV",
+      "symbol": "n_store_HONEST",
+      "value": 1,
+      "units": "lexicon concepts (of 130)",
+      "scope": "HONEST_SIGNAL. Lived experience, respected exactly as lived and NEVER calibrated. Its lack of a falsifier IS THE POINT, NOT A GAP. The corpus's only HONEST row is CN11-59 (first-person testimony, CN-11), deliberately given no NATURA class.",
+      "evidence_class": "A",
+      "source": "lexicon/CONCEPTS.json v1.0.0 (concept HONEST_SIGNAL); encyclopedia/NATURE-LEDGER.md §1 'Carried, not classed' row CN11-59; encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § CN11-59.",
+      "falsifier": "None for the signal itself -- testimony is never calibrated, which is the point. The COUNT is falsifiable: re-count concepts[].store == 'HONEST' in lexicon/CONCEPTS.json."
+    },
+    {
+      "row": "META lane",
+      "panel": "IV",
+      "symbol": "n_store_META",
+      "value": 31,
+      "units": "lexicon concepts (of 130)",
+      "scope": "commentary about signals; travels separately and is never True (SIGNUM SIGNUM MANET). CARRIED FROM OUTSIDE THIS CORPUS -- see provenance fence below.",
+      "evidence_class": "A",
+      "source": "lexicon/CONCEPTS.json v1.0.0, counted for this plate 2026-07-15.",
+      "falsifier": "Re-count concepts[].store == 'META' in lexicon/CONCEPTS.json."
+    },
+    {
+      "row": "META provenance fence",
+      "panel": "IV",
+      "symbol": "META_in_corpus",
+      "value": 0,
+      "units": "files of this corpus (outside the lexicon that declares it)",
+      "scope": "THE LOAD-BEARING HONESTY OF PANEL IV. The lexicon discloses its own gap and this plate carries the disclosure rather than quietly inheriting it. META is real routing vocabulary; it is NOT an encyclopedia concept.",
+      "evidence_class": "B",
+      "source": "lexicon/CONCEPTS.json, its own disclosure, verbatim: 'META appears in 0 files of this corpus and is carried from the wider UNI Tree doctrine (arca META), not from anything the encyclopedia says.' INDEPENDENTLY REPRODUCED for this plate by grep 2026-07-15: as a store name, META appears in no encyclopedia/ or cookbook/ chapter -- only in the lexicon that declares it. (A case-insensitive search returns only 'meta-analysis' / 'meta-note', which are unrelated words, and a positive control on the same grep confirms the instrument matches 'HONEST' across 12 chapter files.)",
+      "falsifier": "grep -rn 'META' encyclopedia/ cookbook/ and produce a chapter that uses META as a sovereign-store name. The fence is then wrong and must be struck."
+    },
+    {
+      "row": "store field contract",
+      "panel": "IV",
+      "symbol": "store",
+      "value": "TRUE | HONEST | META. Routing, not a truth claim.",
+      "units": "n/a (a field contract)",
+      "scope": "The 'store' field routes each concept to its sovereign store and is NEVER a claim about the concept's truth.",
+      "evidence_class": "method",
+      "source": "lexicon/CONCEPTS.json field_contract.store, verbatim.",
+      "falsifier": "A concept merges the TRUE and HONEST stores -- a declared falsifier of the lexicon."
+    },
+    {
+      "row": "the cardinal rule",
+      "panel": "II",
+      "symbol": "cardinal rule",
+      "value": "A NATURE CITATION IS NEVER A UNI GATE.",
+      "units": "n/a (a rule)",
+      "scope": "Reading Kleiber's law raises no UNI rung. Citing Douady & Couder does not make any UNI claim 'proven'. A chapter that lets a literature citation imply a UNI capability has committed a lane-crossing and is defective -- full stop.",
+      "evidence_class": "method",
+      "source": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § The cardinal rule; restated at encyclopedia/NATURE-LEDGER.md §0.",
+      "falsifier": "NA-00 falsifier #1: exhibit ONE sound inference in which a NATURA-class row raises, lowers or discharges a row in CLAIM-LEDGER.md (or the reverse) without a separate UNI gate. If such an inference exists, the cardinal rule is wrong and the wing is mis-architected."
+    },
+    {
+      "row": "the cross-link",
+      "panel": "I",
+      "symbol": "audited cross-link",
+      "value": "citation only; never a merge",
+      "units": "n/a (a relation)",
+      "scope": "The two ledgers are cross-referenced BY EXPLICIT AUDITED LINK ONLY, NEVER BY MERGE. There is no operation that takes a NATURA row and a UNI row and produces a stronger row of either kind. Drawn crown-to-crown (published text to published text), never root to root.",
+      "evidence_class": "method",
+      "source": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § The cardinal rule; encyclopedia/NATURE-LEDGER.md §0, both verbatim on the no-operation clause.",
+      "falsifier": "Same as NA-00 falsifier #1 above."
+    },
+    {
+      "row": "the crosswalk",
+      "panel": "III",
+      "symbol": "look-alike pairs",
+      "value": 9,
+      "units": "crosswalk rows",
+      "scope": "Each row pairs a UNI fence value or ledger state with the NATURA class it SUPERFICIALLY RESEMBLES, because the resemblance is the trap. The load-bearing column is the last one: what each can NEVER imply about the other.",
+      "evidence_class": "method",
+      "source": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § The crosswalk (the two ledgers, side by side) -- 9 rows as published.",
+      "falsifier": "NA-00 falsifier #3: exhibit a case where one of the crosswalk's 'can never' non-implications blocks a VALID inference."
+    },
+    {
+      "row": "SUPERSEDED is not NEGATIVE",
+      "panel": "III",
+      "symbol": "token sovereignty",
+      "value": "one token may not serve both vocabularies",
+      "units": "n/a (a naming rule)",
+      "scope": "The sharpest look-alike. NEGATIVE is a UNI LEDGER STATE; SUPERSEDED is a NATURA class. Both describe something that lost, which is exactly why they are confusable. Registering 'NEGATIVE' as a NATURA class would have closed a vocabulary defect by committing the exact lane-crossing the cardinal rule forbids.",
+      "evidence_class": "method",
+      "source": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § SUPERSEDED ('On the name - read this before \"fixing\" it') and § The crosswalk, row 7; encyclopedia/NATURE-LEDGER.md §1.",
+      "falsifier": "Show that one token can serve both vocabularies without ambiguity."
+    },
+    {
+      "row": "supremacy",
+      "panel": "V",
+      "symbol": "ledger supremacy",
+      "value": "where the plate and a ledger disagree, THE LEDGER WINS AND THE PLATE IS WRONG",
+      "units": "n/a (a rule)",
+      "scope": "The same supremacy rule both ledgers already run: where a chapter and the ledger disagree, the ledger wins and the chapter is wrong.",
+      "evidence_class": "method",
+      "source": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md § Why this wing exists; encyclopedia/NATURE-LEDGER.md §0 (Supremacy).",
+      "falsifier": "n/a - definitional."
+    }
+  ],
+  "not_claimed": [
+    "Not claimed: that twelve is the correct, exhaustive or final number of NATURA classes. NA-00 declared SIX and was refuted by its own corpus on 72 of its own 919 rows -- which is the strongest available reason not to claim the new number is final. Twelve is what 919 rows MEASURED, not a design target; a thirteenth is a finding, not a failure.",
+    "Not claimed: that the 22 un-traced rows (NOT-SOURCED 20 + NOT-CONFIRMED 1 + NOT-LOCATED 1) are repaired. They are now correctly LABELLED, which is a description of a defect, not its repair. Naming a defect precisely is not fixing it, and closing them is real work that has not been done.",
+    "Not claimed: that the UNI snapshot (882 rows = 350 PASS / 0 FAIL / 183 NEGATIVE / 349 PENDING) is current, or was recounted for this plate. It is carried as exactly what it is -- the ledger's own last recorded snapshot -- and an upstream prior is never fresh evidence.",
+    "Not claimed: any per-value count for the 4-value fence (proven / designed / hypothesized / not-yet-built). This corpus publishes none, and this plate invents none. A plausible-sounding number with no source is the worst defect available here; NOT-MEASURED is written instead. There is no third state.",
+    "Not claimed: that META is an encyclopedia concept. It appears in 0 files of this corpus and is carried from the wider UNI Tree doctrine (arca META). Its lane rests on the lexicon's authority alone, and the lexicon discloses this itself -- the plate carries the disclosure rather than inheriting it quietly.",
+    "Not claimed: that the three lanes' equal width means equal population, or that any lane outranks another. TRUE 98 / META 31 / HONEST 1 of 130 concepts. The lanes are drawn equal because SOVEREIGNTY IS NOT PROPORTIONAL TO POPULATION: a lane with one row is exactly as sovereign as a lane with 98.",
+    "Not claimed: that HONEST is a weaker or unfinished kind of TRUE. Testimony is not a failed measurement; it is a different kind of signal, and forcing it into the TRUE-side vocabulary -- even into an honest-looking fence like NOT-MEASURED -- would be wrong in the direction that flatters the corpus.",
+    "Not claimed: that this plate's own count-claims are claims about NATURE. They are claims about the corpus's own files, carded in the CLAIM-LEDGER's A-U taxonomy (Class A where a script counts them, Class F where the ledger's own snapshot is carried forward). NO NATURA CLASS is used for anything this plate itself asserts -- the plate makes no claim about nature at all.",
+    "Not claimed: that anything on this plate raises, lowers or discharges any UNI row. The plate draws the ARCHITECTURE of two ledgers. It holds no gate and earns no rung, and the honest program position is unchanged by it: ~2 of 11+ developmental rungs earned; a developmental active-inference SIMULATION; a toy world, never a person.",
+    "Not claimed: anything whatever about 'full human' or 'the next evolution beyond human'. Both are QUAESTIO APERTA -- permanent open questions, never targets, never milestones, never deliverables.",
+    "Not claimed: that the drawing is evidence of the architecture's correctness. A diagram of a fence is not a fence.",
+    "Not claimed: that this plate may stand in for either ledger. It is a drawing. WHERE THE PLATE AND A LEDGER DISAGREE, THE LEDGER WINS AND THE PLATE IS WRONG."
+  ],
+  "evidence_classes": {
+    "_two_sovereign_vocabularies": "This plate DRAWS both vocabularies and MERGES NEITHER. They are never combined, and there is no operation that takes a row of one and a row of the other and produces a stronger row of either kind.",
+    "_natura_vocabulary": "NATURA classes per encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md, AMENDED 2026-07-15-A: TWELVE classes in three groups (measured / derived / fenced), plus four rows registered as deliberately unclassed. Ledger of record: encyclopedia/NATURE-LEDGER.md. Governs NATURE's observed regularities, measured by third parties in published literature. This plate draws all twelve; it asserts none of them ABOUT nature.",
+    "_uni_vocabulary": "The UNI 4-value fence (proven / designed / hypothesized / not-yet-built) and the four ledger states (PASS / FAIL / NEGATIVE / PENDING), governed by encyclopedia/CLAIM-LEDGER.md. Governs UNI's own build status over UNI's own artifacts.",
+    "_this_plates_own_claims": "READ THIS BEFORE READING claims[]. The claims this plate makes are about THE CORPUS'S OWN FILES (how many rows a ledger carries, what a chapter says), not about nature. A NATURA class is therefore NOT used for any of them -- doing so would be the exact lane-crossing the plate exists to forbid. They are carded in the CLAIM-LEDGER's own A-U taxonomy, which governs claims about UNI's own artifacts (and the ledger files are UNI's own artifacts): 'A' = machine-exact anchor -- a script counts it exactly and the receipt is named; 'B' = mechanism + operator observation -- e.g. a grep reproduced for this plate, with a positive control on the instrument; 'F' = doc / prior-claim, inheritable but MUST BE RE-VERIFIED -- used where the corpus's own recorded figure is carried forward without a recount, and marked as such on the plate's face; 'method' = a definitional / governance pattern, not an empirical claim. NO CLASS HERE RAISES ANY RUNG. Counting rows is not a capability, and a Class-A count of a file says nothing whatever about what UNI can do.",
+    "_counting_asymmetry": "The two sides of the plate are counted TO DIFFERENT STANDARDS, and the plate draws the asymmetry rather than smoothing it. NATURA side: machine-counted, and the verifier was re-run for this plate (Class A). UNI side: the ledger's own last recorded snapshot, NOT recounted (Class F). For the 4-value fence there is NO published per-value count, so the plate prints none.",
+    "_used_on_this_plate": {
+      "A": {
+        "means": "machine-exact anchor - counted by a named script whose output is quoted",
+        "receipt": "Machine-counted. Receipt: tools/verify_class_vocabulary.py re-run for this plate 2026-07-15 -- '[NATURE-LEDGER.md] rows parsed: 919 ... OUT-OF-VOCABULARY ROWS (ledger): 0 ... RESULT: PASS - zero rows outside the registered vocabulary'.",
+        "applies_to": [
+          "all twelve NATURA class counts",
+          "group subtotals 578 / 257 / 80",
+          "carried-not-classed 4",
+          "total 919",
+          "out-of-vocabulary 0",
+          "lexicon store counts TRUE 98 / HONEST 1 / META 31 of 130"
+        ]
+      },
+      "B": {
+        "means": "mechanism + operator observation - reproduced for this plate, with a positive control",
+        "receipt": "grep over encyclopedia/ and cookbook/ 2026-07-15; positive control: the same grep matches 'HONEST' in 12 chapter files, so a null result is a finding and not a dead instrument.",
+        "applies_to": [
+          "META appears in 0 files of this corpus"
+        ]
+      },
+      "F": {
+        "means": "doc / prior-claim - inheritable, MUST be re-verified; carried forward without a recount",
+        "receipt": "quoted verbatim from the source file and marked on the plate as a snapshot",
+        "applies_to": [
+          "882 rows = 350 PASS / 0 FAIL / 183 NEGATIVE / 349 PENDING",
+          "183 published negatives",
+          "72 of 919 rows outside the original six",
+          "~2 of 11+ developmental rungs earned"
+        ]
+      },
+      "method": {
+        "means": "a definitional / governance pattern, not an empirical claim",
+        "receipt": "n/a - definitional; falsify by showing it contradicts its source chapter",
+        "applies_to": [
+          "the cardinal rule",
+          "the audited cross-link",
+          "the crosswalk's nine pairs",
+          "the 4-value fence as a vocabulary",
+          "the A-U taxonomy",
+          "the store field contract",
+          "ledger supremacy"
+        ]
+      }
+    },
+    "_natura_classes_drawn_but_not_asserted": {
+      "group A - measured": [
+        "OBSERVED-REPLICATED",
+        "OBSERVED-SINGLE",
+        "OBSERVED-CONTESTED"
+      ],
+      "group B - derived": [
+        "MODELED",
+        "MODELED-CONTESTED",
+        "HYPOTHESIZED"
+      ],
+      "group C - fenced": [
+        "INADMISSIBLE",
+        "SUPERSEDED",
+        "NOT-MEASURED",
+        "NOT-SOURCED",
+        "NOT-CONFIRMED",
+        "NOT-LOCATED"
+      ],
+      "carried, not classed": [
+        "NA03-16",
+        "CN04-22",
+        "CN11-59",
+        "CN12-41"
+      ],
+      "_note": "Drawn as the right-hand tree's boughs. The plate reports HOW MANY rows carry each class; it makes no claim about nature under any of them."
+    },
+    "_plate_marks": {
+      "=": "SOVEREIGN BOUNDARY - separates two vocabularies. Reference may cross it; INFERENCE MAY NOT. Drawn unbroken: a gap would read as the boundary opening.",
+      "--": "AUDITED CROSS-LINK - a citation, and only a citation. Drawn crown-to-crown, never root to root.",
+      "X": "MERGE - forbidden, the cardinal sin. Never drawn as a legal operation anywhere on this plate.",
+      "-": "GROUP A / MEASURED",
+      "triangle": "GROUP B / DERIVED - the assumptions are the fence",
+      "lozenge": "GROUP C / FENCED - the row carries no usable value, and the class says why not",
+      "circled-dot": "REGISTERED 2026-07-15 - one of the six classes added when the six-class design was refuted",
+      "square": "CARRIED, NOT CLASSED - a closed list of four, not an open category",
+      "_greyscale": "Line weight, dash pattern and hatch carry every distinction colour carries; the plate is designed to survive greyscale printing."
+    }
+  },
+  "falsifiers_of_this_plate": [
+    "Any count on the plate that tools/verify_class_vocabulary.py does not reproduce exactly.",
+    "Any quoted sentence that is not in its cited source, at that wording.",
+    "A merge drawn as legal: any line on this plate that lets a NATURA row raise, lower or discharge a UNI row, or the reverse.",
+    "A number on the plate with no source, no units or no scope.",
+    "The plate disagreeing with either ledger -- in which case THE LEDGER WINS AND THE PLATE IS WRONG."
+  ],
+  "design_fence": "DESIGN-ONLY: no script elements, no event handlers, no external references (no xlink to a URL, no @import, no webfont, no remote image). Pure static SVG, viewBox-based and responsive, renders standalone and inline, and is legible in both light and dark via CSS variables with fallbacks. No secrets, tokens, keys or private endpoints."
+}

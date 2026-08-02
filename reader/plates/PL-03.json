@@ -1,0 +1,241 @@
+{
+  "id": "PL-03",
+  "title": "The Scale Ladder: Quark to Galaxy",
+
+  "caption": "Sixteen rungs from NA-10's ladder table, ordered by characteristic length L on a logarithmic axis spanning 10^-16 to 10^21 m — ~10^36 from the proton rms charge radius 8.4075(64) x 10^-16 m (NA10-01) to the Milky Way D25 isophotal diameter ~8.3 x 10^20 m (NA10-37). Each rung carries its characteristic length, time and energy, its dominant force or constraint, its governing dimensionless group(s), and whether a Markov blanket is identifiable. The axis carries L and NOTHING ELSE: rungs overlap in L (rungs 8 and 10 both occupy 10^-3 m), so the dominant force is a property of the RUNG, not of the length, and the plate therefore draws no force band. The L column is not one measurand — rungs 1/2/13/14 are radii, rung 16 is a photometric isophotal diameter (a brightness convention), and rungs 5-12 are ranges that are the chapter's CARVING, a choice fenced MODELED rather than a measurement. The t column is a placement aid built from four different physical measurands and MUST NEVER BE REGRESSED. Regime boundaries are marked only where NA-10 names them; the viscous-to-inertial crossing (Re ~ 1) has no single L, because Re = vL/nu depends on v, and is drawn as a bracket over the rungs 7-10 domain rather than as a line. The metabolic-exponent breaks (DeLong et al. 2010) were fitted against body MASS, not length, and are shown in a separate panel on purpose rather than placed at a length nobody measured. The dagger marks values NA-10 records as NOT-SOURCED in its own pass — a fact about the corpus's homework, never merged with NOT-MEASURED, which is a fact about the world's knowledge. The plate marks the dagger only where NA-10 marks itself; an unmarked cell is not thereby sourced. Fenced MODELED. It contains ZERO UNI claims: a nature citation is never a UNI gate.",
+
+  "source_chapters": [
+    "encyclopedia/wing-NATURA/NA-10-the-scale-ladder-and-gradients.md",
+    "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+    "encyclopedia/wing-NATURA/NA-08-cell-level-design.md",
+    "encyclopedia/wing-NATURA/NA-04-mind-body-world.md",
+    "cookbook/recipes-natura/CN-04-stars.md",
+    "encyclopedia/NATURE-LEDGER.md",
+    "cookbook/01-kitchen-rules.md"
+  ],
+
+  "claims": [
+    {
+      "id": "PL03-01",
+      "kind": "structural",
+      "statement": "The plate is a rendering of NA-10's ladder table: sixteen rungs ordered by characteristic length L.",
+      "value": "16 rungs",
+      "units": "dimensionless (count)",
+      "scope": "NA-10's carving of the span from nucleon to galaxy",
+      "class": "MODELED",
+      "source": "NA-10, ladder table (chapter fence: MODELED)",
+      "falsifier": "NA-10's table is re-carved with a different rung count or different boundaries; the plate is then wrong about its source. NA-10 states the carving is a CHOICE, not a discovery — adding virus, biofilm or galaxy cluster is equally defensible."
+    },
+    {
+      "id": "PL03-02",
+      "kind": "value",
+      "statement": "Bottom of the ladder: the proton rms charge radius.",
+      "value": "8.4075(64) x 10^-16",
+      "units": "m",
+      "scope": "proton rms charge radius",
+      "class": "OBSERVED-REPLICATED",
+      "source": "NA10-01; CODATA 2022 (NIST)",
+      "falsifier": "Next CODATA adjustment moves it beyond the stated u."
+    },
+    {
+      "id": "PL03-03",
+      "kind": "value",
+      "statement": "Top of the ladder: the Milky Way isophotal diameter. Rendered with an OPEN marker because it is a different KIND of measurand from the radii below it — the isophote where B-band surface brightness falls to 25 mag/arcsec^2, a brightness convention, not a geometric extent.",
+      "value": "26.8 +/- 1.1 kpc (~8.3 x 10^20 m)",
+      "units": "kpc (m)",
+      "scope": "Milky Way D25 isophotal diameter",
+      "class": "OBSERVED-CONTESTED",
+      "source": "NA10-37; attributed to Goodwin et al. 1997/98, The Observatory 118:201-208 — secondary summary, primary NOT read in NA-10's pass",
+      "falsifier": "Read the primary; an independent estimate outside 25.7-27.9 kpc."
+    },
+    {
+      "id": "PL03-04",
+      "kind": "value",
+      "statement": "The span the plate draws.",
+      "value": "~10^36",
+      "units": "dimensionless (ratio of lengths)",
+      "scope": "r_p -> D25_MW",
+      "class": "MODELED",
+      "source": "NA10-40; computed in-chapter",
+      "falsifier": "Arithmetic error."
+    },
+    {
+      "id": "PL03-05",
+      "kind": "structural",
+      "statement": "The axis carries L and nothing else. Rungs OVERLAP in L — rungs 8 (tissue, 10^-4-10^-2 m) and 10 (organism, 10^-3-3 x 10^1 m) both occupy 10^-3 m — so 'the dominant force at length X' is ill-defined. Force is a property of the rung, not of the length; the plate therefore carries NO force band on the axis.",
+      "value": "NOT-APPLICABLE (no force band drawn)",
+      "units": "n/a",
+      "scope": "the plate's axis design",
+      "class": "MODELED",
+      "source": "NA-10 ladder table, L column (rungs 8 and 10 read directly)",
+      "falsifier": "Exhibit two rungs of NA-10's table that do NOT overlap in L anywhere; the overlap argument then fails and an axis force band would be admissible."
+    },
+    {
+      "id": "PL03-06",
+      "kind": "structural",
+      "statement": "The L column is not one measurand: rungs 1/2/13/14 are radii, rung 16 is a D25 isophotal diameter, rungs 5-12 are ranges. Marker kind on the plate encodes this. Per NA-10: the span is real; the uniformity is approximate.",
+      "value": "3 marker kinds (point / open point / extent bar)",
+      "units": "dimensionless (count)",
+      "scope": "the plate's marker vocabulary",
+      "class": "MODELED",
+      "source": "NA-10, section 'The gradients: which are measured, which are rhetorical' (L bullet)",
+      "falsifier": "Show that a radius, an isophotal diameter and a category range are one measurand."
+    },
+    {
+      "id": "PL03-07",
+      "kind": "structural",
+      "statement": "Extent bars (rungs 5-12) are the chapter's CARVING, not measurements. No protein, ribosome, capsid or nucleosome size value exists anywhere in the corpus; these brackets are the choice of where to cut the ladder, which NA-10 fences explicitly.",
+      "value": "NOT-APPLICABLE (carving, not a measurand)",
+      "units": "n/a",
+      "scope": "rungs 5-12 L ranges",
+      "class": "MODELED",
+      "source": "NA-10 HONEST FENCE: 'The rung count and the rung boundaries are a choice, not a discovery'",
+      "falsifier": "Produce a primary source for a rung-4/5 characteristic length and give it a ledger row; the value then becomes a measurement and must be re-marked as a point, not a carving bracket."
+    },
+    {
+      "id": "PL03-08",
+      "kind": "value",
+      "statement": "Rung 1's characteristic time, printed at the LEDGER's precision. NA-10's ladder cell rounds it to ~3 x 10^-24 s; per NA-00 the ledger wins where a chapter and the ledger disagree. It is a computed light-crossing time and explicitly NOT a measured interaction time.",
+      "value": "~2.8 x 10^-24",
+      "units": "s",
+      "scope": "r_p/c — light-crossing time of a nucleon",
+      "class": "MODELED",
+      "source": "NA10-02; computed in-chapter from r_p (CODATA 2022) and c",
+      "falsifier": "Arithmetic error; or a claim this is a measured interaction time (it is not)."
+    },
+    {
+      "id": "PL03-09",
+      "kind": "value",
+      "statement": "Rung 1's characteristic energy is sourced ACROSS chapters: NA-10's ladder cell reads '~8.8 MeV per nucleon (binding, peak at Fe/Ni)' and carries no row in NA-10's own numbers table, but CN-04 carries it. CN-04 also corrects the folklore: the peak is 62-Ni, not 56-Fe; 56-Fe has the lowest MASS per nucleon, a different quantity.",
+      "value": "8.7945 (62-Ni; 56-Fe = 8.7903)",
+      "units": "MeV/nucleon",
+      "scope": "highest known binding energy per nucleon",
+      "class": "OBSERVED-REPLICATED",
+      "source": "CN04-25 (and CN04-27); standard nuclear mass tables",
+      "falsifier": "A nuclide measured with higher BE/A; or a demonstration that mass/nucleon and BE/A are the same quantity."
+    },
+    {
+      "id": "PL03-10",
+      "kind": "structural",
+      "statement": "The t column is a PLACEMENT AID and must never be regressed: a light-crossing time, a vibrational period, a doubling time and a fuel-exhaustion time are four different physical measurands sharing one column.",
+      "value": "NOT-APPLICABLE (not a scaling relation)",
+      "units": "n/a",
+      "scope": "the t column, rungs 1-16",
+      "class": "MODELED",
+      "source": "NA-10, 'PART-MEASURED, PART-RHETORICAL' (Time bullet); recorded there as a NEGATIVE / conflation trap",
+      "falsifier": "Exhibit a single physical measurand of which every rung's t is an instance."
+    },
+    {
+      "id": "PL03-11",
+      "kind": "value",
+      "statement": "The Reynolds span across the self-propelled-body domain, and the plate's Re bracket. Re is defined ONLY within rungs 7-10 — not for an atom or a galaxy. NA-10 records the widely-circulated ~10^10 figure as NEGATIVE and corrects it.",
+      "value": "~10^13 (~13 orders), NOT ~10^10",
+      "units": "dimensionless",
+      "scope": "bacterium -> whale, self-propelled bodies",
+      "class": "MODELED",
+      "source": "NA10-15 (from NA10-13, NA10-14; Vogel's table, endpoints independently recomputed in-chapter)",
+      "falsifier": "Show a sourced span of ~10^10."
+    },
+    {
+      "id": "PL03-12",
+      "kind": "structural",
+      "statement": "The viscous-to-inertial crossing (Re ~ 1) — the death of the scallop theorem — is drawn as a BRACKET over the rungs 7-10 domain, never as a line, because it has no single L: Re = vL/nu depends on v.",
+      "value": "NOT-APPLICABLE (no single L exists)",
+      "units": "n/a",
+      "scope": "the viscous/inertial regime boundary",
+      "class": "MODELED",
+      "source": "NA-10 (Re definition; Purcell 1977 scallop theorem at NA10-18; premise break at NA10-19)",
+      "falsifier": "Produce a sourced single length at which Re = 1 independent of velocity."
+    },
+    {
+      "id": "PL03-13",
+      "kind": "value",
+      "statement": "The boundary receipt: the metabolic exponent changes AT the major evolutionary transitions. Shown in a separate panel, NOT on the L axis, because DeLong et al. fitted against body MASS across ~16 orders of magnitude, not against length.",
+      "value": "b = 1.7 prokaryote (n=44) / 1.0 protist (n=51) / 0.76 metazoan (n=71), active state",
+      "units": "dimensionless (exponent)",
+      "scope": "metabolic rate vs body mass, by taxonomic group",
+      "class": "OBSERVED-REPLICATED",
+      "source": "NA10-21, NA10-22, NA10-23, NA10-24; DeLong, Okie, Moses, Sibly & Brown 2010, PNAS 107(29):12941-5, DOI 10.1073/pnas.1007783107",
+      "falsifier": "Refit with independent data; a CI covering 0.75 for the prokaryote exponent. For NA10-24: a dataset in which one exponent fits all three groups."
+    },
+    {
+      "id": "PL03-14",
+      "kind": "structural",
+      "statement": "The blanket column is NOT monotone in L: identifiable at rungs 6, 7 and 10; absent above and below. A galaxy is enormous and has no blanket; a mitochondrion is a micron across and has one. Size is not what makes a boundary.",
+      "value": "blankets at rungs 6, 7, 10 of 16",
+      "units": "dimensionless (count)",
+      "scope": "the Blanket? column, rungs 1-16",
+      "class": "MODELED",
+      "source": "NA-10 ladder table, Blanket? column; typing per NA-04",
+      "falsifier": "Demonstrate conditional independence across a boundary at rungs 12-16, or refute it at rung 6 or 7. NA-10's criterion is a factorization claim about the dynamics, and it is checkable."
+    },
+    {
+      "id": "PL03-15",
+      "kind": "fence",
+      "statement": "The dagger on the plate marks values NA-10 records as NOT-SOURCED in its own pass: rung 3 L (C-C bond length), rung 6 L (mitochondrion), rung 7 t (E. coli division time), rung 15 heliopause, rung 16 t (galactic year), and the groups at rungs 8, 9 and 12. NA-10 caught these on its own re-read and named them rather than leave them standing.",
+      "value": "9 daggered cells",
+      "units": "dimensionless (count)",
+      "scope": "the plate's dagger marks",
+      "class": "NOT-SOURCED",
+      "source": "NA-10, 'Recorded INADMISSIBLE / NEGATIVE' (the ladder-table self-catch) + NA10-43, NA10-44, NA10-45",
+      "falsifier": "Produce the primary for any daggered value; that cell is then re-classed on its merits and the dagger is struck. NOTE: the plate marks the dagger ONLY where NA-10 marks itself. An unmarked cell is NOT thereby sourced — this plate does not re-audit NA-10's remaining cells."
+    },
+    {
+      "id": "PL03-16",
+      "kind": "fence",
+      "statement": "NOT-SOURCED and NOT-MEASURED are never merged on this plate. NOT-MEASURED = nature has not been asked (a fact about the world's knowledge). NOT-SOURCED = we cannot say who asked (a fact about this corpus's own homework). Collapsing the two would let a research failure masquerade as a discovery about the frontier of science.",
+      "value": "NOT-APPLICABLE (a vocabulary rule)",
+      "units": "n/a",
+      "scope": "the plate's provenance fence",
+      "class": "NOT-SOURCED",
+      "source": "NA-00, 'The provenance fence, in one line' (as amended 2026-07-15-A)",
+      "falsifier": "Show the two classes have the same repair. They do not: one is nature's, one is ours."
+    },
+    {
+      "id": "PL03-17",
+      "kind": "value",
+      "statement": "Genuinely NOT-MEASURED cells carried on the plate as such, not softened and not filled in: rung 6's t (no single quantity), rung 11's governing group (no agreed group), rung 16's characteristic energy.",
+      "value": "no value carried",
+      "units": "n/a",
+      "scope": "rung 6 t; rung 11 group; rung 16 energy",
+      "class": "NOT-MEASURED",
+      "source": "NA-10 ladder table (cells read directly)",
+      "falsifier": "State the measurand and its units, and measure it."
+    },
+    {
+      "id": "PL03-18",
+      "kind": "fence",
+      "statement": "The plate as an artifact is a PLACEMENT MODEL rendering NA-10, itself fenced MODELED. It composes measured constants and published fits through stated assumptions: that 'characteristic length' is well-defined per rung; that one force dominates per regime; that adopted IAU nominal constants (rungs 13-15) stand in for measured values — they are exact BY ADOPTION, explicitly not current best estimates, and must never be quoted as measurements with uncertainties. THE ASSUMPTIONS ARE THE FENCE.",
+      "value": "NOT-APPLICABLE (a fence)",
+      "units": "n/a",
+      "scope": "the plate as a whole",
+      "class": "MODELED",
+      "source": "NA-10 HONEST FENCE; IAU 2015 Res. B3 via NA10-30..NA10-35; M22 (the cavity principle), cookbook/01-kitchen-rules.md",
+      "falsifier": "Per M22, NA-10's placements are an upstream prior and this plate must never be re-served as fresh evidence downstream. Per M7, any design taken from this plate must beat a TUNED baseline on a PRE-REGISTERED metric with a discriminator that collapses the gain and a true computed-residual ablation, or it is recorded NEGATIVE."
+    }
+  ],
+
+  "not_claimed": [
+    "NOT a progression, a hierarchy of value, an arrow, or a direction. It is an ordering BY LENGTH. The blanket column does not ascend with it, and specific power runs AGAINST it: a bacterium outputs ~5 x 10^6 times more power per kilogram than the Sun does (NA10-29, MODELED / MODELED — both endpoints are conversions, neither is a W/kg observation).",
+    "NOT that 'information density' increases along the ladder. NOT-MEASURED — no measurand exists spanning quark to galaxy (NA10-41). Falsifier: state the measurand, state the units, measure two non-adjacent rungs with it.",
+    "NOT that 'degree of internal model' increases along the ladder. NOT-MEASURED — no measurand, no units, no instrument (NA10-42). This is the gradient the ladder most invites and the one with the least behind it, and that asymmetry is stated on purpose. Writing the ladder as an ascent toward mind is a rhetorical move dressed as a measurement.",
+    "NOT a ladder of consciousness, awareness, or mind. NA-10 records that reading INADMISSIBLE: no measurand, no units, no instrument, no falsifier — and the one structurally checkable property (the blanket) does not ascend with scale. Recorded, not mocked: the intuition that the ladder points somewhere is honest and common. It is simply not a measurement, and dressing it as one is the defect.",
+    "NOT that 'complexity' orders the rungs. Simon (1962) gives a structural criterion (near-decomposability) that is checkable per system; it does not yield a scalar that monotonically increases with size.",
+    "NOT that the sixteen rungs are the right sixteen. The carving is a choice; the boundaries' physics is not.",
+    "NOT that Kleiber's 3/4 is a law of life. It is a metazoan-regime fit; prokaryotes are superlinear at ~1.7 (NA10-21, NA10-24). NA-10 records the 3/4 exponent as the single most over-extrapolated number in its wing.",
+    "NOT that the metabolic curvature claim is settled, NOR that it is settled against. NA10-25/NA10-26 are OBSERVED-CONTESTED and the exchange is live on both sides: Kolokotrones et al. 2010 (Nature 464:753-6), contested by MacKay 2011 (J Theor Biol 280(1):194-196), replied to by Deeds, Savage & Fontana 2011 (J Theor Biol 280(1):197-198). Both turns are carried; neither is the verdict. The regime-change rule does not rest on it — DeLong et al. 2010 carries the boundary claim independently.",
+    "NOT that any rung's arrangement is an optimum. Per Gould & Lewontin (1979), drift, phylogenetic inertia, developmental constraint and frozen accidents produce structure that solves nothing. Every value on this plate is a hypothesis generator, never a proof.",
+    "NOT that the boundaries drawn are the only boundaries, nor that they sit at a length. Boundaries are marked ONLY where NA-10 names them. The metabolic-exponent breaks have no position on the L axis at all and are shown apart on purpose.",
+    "NOT a re-audit of NA-10. The plate marks NOT-SOURCED only where NA-10 marks itself; an unmarked cell is not thereby sourced.",
+    "NOT a UNI claim of any kind. A NATURE CITATION IS NEVER A UNI GATE: reading Kleiber's law raises no UNI rung. This plate contains ZERO UNI claims, and no value on it raises, lowers, or discharges any row in CLAIM-LEDGER.md. The honest program position is untouched by every value on it: ~2 of 11+ developmental rungs earned; a developmental active-inference SIMULATION; a toy world, never a person.",
+    "QUAESTIO APERTA: 'full human' and 'beyond human' appear nowhere on this plate as a target, a milestone, or a deliverable. They are permanent open questions. The scale ladder has no top, no destination, and no rung labelled with either — and the temptation to read one in at rung 10 or 11 is exactly what the NOT-MEASURED fence on 'degree of internal model' exists to refuse."
+  ],
+
+  "evidence_classes": [
+    "OBSERVED-REPLICATED",
+    "OBSERVED-CONTESTED",
+    "MODELED",
+    "NOT-MEASURED",
+    "NOT-SOURCED"
+  ]
+}

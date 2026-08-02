@@ -1,0 +1,491 @@
+{
+  "id": "PL-05",
+  "title": "DNA — geometry and the layered error budget",
+  "caption": "An engraved plate in seven panels. The B-form duplex (I) is drawn to scale at 7 px per ångström from two sourced constants only — the rise, 3.4 Å (0.34 nm) per bp (CN05-01), and the 20 Å (2 nm) envelope diameter (CN05-07). Base pairs per turn (II) is drawn at 10.5 because a drawing must choose a number; 10.5 is NOT a measurement this corpus can trace (NOT-SOURCED, CN05-06), and the two solution primaries it sits between — 10.4 ± 0.1 (Wang 1979, topoisomer ladder) and 10.6 ± 0.1 (Rhodes & Klug 1980, DNase I periodicity) — are two assays of the same quantity under the same nominal condition and are UNRECONCILED (CN05-05). Groove widths are marked NOT-SOURCED, not NOT-MEASURED: both circulating pairs (~12/~6 Å and 22/12 Å) and the ~5.8 Å convention offset are untraceable in this corpus, and CN-05 records a fabricated citation for the 12/6 pair as its own most instructive failure. The groove brackets in panel I mark 0.4 / 0.6 turn axial spans that follow from the drawn 0.4-turn backbone offset — a construction, not a measurement. Panel III carries the A/B/Z families; panel IV the persistence length (~50 nm ≈ 150 bp) and its temperature and sub-100 bp fences. The layered error budget (V) is drawn as three successive filters — polymerase base selection, 3′→5′ proofreading, mismatch repair — with the error rate after each layer (≈10⁻⁵ → ≈10⁻⁷ → ≈10⁻¹⁰) and the errors per diploid copy (≈61,000 → ≈610 → ≈0.6). Every rung is MODELED: the decades are a review's round estimate (Fijalkowska, Schaaper & Jonczyk 2012) that composes exactly because it was chosen to, and does NOT reproduce from Schaaper 1993's measured fold-discriminations, which on a 10⁻⁵ rung span ~10⁻⁷·⁹ to ~10⁻⁹·⁹ (CN05-32); the first rung is contested three ways. The packing hierarchy (VI) derives 2.08 m of diploid DNA into a 113 µm³ nucleus at ~5.8 % of nuclear volume — the nucleus is 94 % not-DNA, so packing is a topology and access problem, not a space problem — and marks the 30 nm fibre CONTESTED in vivo, drawn as a ghost, with the disordered 5–24 nm curvilinear chain (Ou et al. 2017) drawn solid as what was actually observed. Loops/TADs/chromosome are drawn as an empty box: NOT-SOURCED in this pass. The plate's evidence marks are NATURA classes and carry no UNI claim of any kind.",
+  "source_chapters": [
+    "cookbook/recipes-natura/CN-05-dna.md",
+    "encyclopedia/NATURE-LEDGER.md (rows CN05-01…CN05-44 — the authority for every value)",
+    "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md (evidence vocabulary; amended 2026-07-15)"
+  ],
+  "corpus_tip": "f1be794",
+  "claims": [
+    {
+      "row": "CN05-01",
+      "panel": "I, III, VI",
+      "symbol": "rise",
+      "value": "~3.4 (0.34)",
+      "units": "Å (nm) /bp",
+      "scope": "B-DNA",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Potaman & Sinden, NCBI Bookshelf NBK6545; Watson & Crick 1953, Nature 171:737–738",
+      "falsifier": "Structural measurement outside 3.3–3.5 Å under B-form conditions"
+    },
+    {
+      "row": "CN05-02",
+      "panel": "II, III",
+      "symbol": "bp/turn (fibre)",
+      "value": "10.0",
+      "units": "bp",
+      "scope": "B-form fibre diffraction",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Watson & Crick 1953; as compared in Wang 1979",
+      "falsifier": "Re-analysis of fibre data giving ≠10"
+    },
+    {
+      "row": "CN05-03",
+      "panel": "II",
+      "symbol": "bp/turn (solution)",
+      "value": "10.4 ± 0.1",
+      "units": "bp",
+      "scope": "B-DNA free in solution, physiological; topoisomer gel",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Wang 1979, PNAS 76(1):200–203, doi:10.1073/pnas.76.1.200",
+      "falsifier": "Repeat topoisomer ladder; value outside 10.3–10.5"
+    },
+    {
+      "row": "CN05-04",
+      "panel": "II",
+      "symbol": "bp/turn (Rhodes & Klug)",
+      "value": "10.6 ± 0.1",
+      "units": "bases",
+      "scope": "DNase I cutting periodicity on DNA immobilised on three surfaces; the authors identify the value with the repeat in solution",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Rhodes & Klug 1980, Nature 286(5773):573–578, PMID 7402337",
+      "falsifier": "Repeat digestion periodicity outside 10.5–10.7"
+    },
+    {
+      "row": "CN05-05",
+      "panel": "II",
+      "symbol": "bp/turn 10.4 vs 10.6",
+      "value": "unreconciled — two primaries, same nominal condition (solution), two assays",
+      "units": "bp",
+      "scope": "topoisomer ladder (Wang) vs DNase I periodicity (Rhodes & Klug)",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "Wang 1979; Rhodes & Klug 1980",
+      "falsifier": "An assay reconciling the two, or a re-measurement collapsing the gap"
+    },
+    {
+      "row": "CN05-06",
+      "panel": "I, II, III",
+      "symbol": "bp/turn '10.5'",
+      "value": "10.5",
+      "units": "bp",
+      "scope": "quoted everywhere; printed by Potaman & Sinden Table 1 as B-DNA residues/turn; sits between two unreconciled primaries",
+      "evidence_class": "NOT-SOURCED in this pass (value printed in source; provenance not traced)",
+      "source": "Potaman & Sinden, NBK6545 Table 1",
+      "falsifier": "Establish whether 10.5 is an independent determination, a rounding, or a midpoint of 10.4 and 10.6"
+    },
+    {
+      "row": "CN05-07",
+      "panel": "I, III, VI",
+      "symbol": "diameter",
+      "value": "23 (A) / ~20 (B) / 18 (Z)",
+      "units": "Å",
+      "scope": "A-, B-, Z-DNA",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Potaman & Sinden, NBK6545 Table 1",
+      "falsifier": "Structural measurement outside range"
+    },
+    {
+      "row": "CN05-08",
+      "panel": "I, VII",
+      "symbol": "groove widths (12/6)",
+      "value": "major ~12, minor ~6",
+      "units": "Å",
+      "scope": "B-DNA, convention not sourced here",
+      "evidence_class": "NOT-SOURCED in this pass",
+      "source": "not confirmed here — NBK6545 Table 1 has no groove-width row; the prior attribution to it was fabricated (recorded in-chapter)",
+      "falsifier": "Fetch a primary printing these values and naming the measurement convention"
+    },
+    {
+      "row": "CN05-09",
+      "panel": "VII",
+      "symbol": "groove widths (22/12)",
+      "value": "22 / 12",
+      "units": "Å",
+      "scope": "widely repeated textbook pair — different convention",
+      "evidence_class": "NOT-SOURCED in this pass",
+      "source": "not confirmed here",
+      "falsifier": "Fetch a primary source and name the measurement convention"
+    },
+    {
+      "row": "CN05-10",
+      "panel": "VII",
+      "symbol": "groove convention offset",
+      "value": "~5.8",
+      "units": "Å",
+      "scope": "claimed offset between P–P and vdW-corrected conventions",
+      "evidence_class": "NOT-SOURCED in this pass",
+      "source": "not confirmed here",
+      "falsifier": "Fetch a primary defining groove width as smallest P–P separation minus the phosphate diameter. It accounts for 12 → 6.2 ≈ 6 but fails on 22 → 16.2 ≠ 12 (a 10 Å gap), so it does not reconcile the two pairs"
+    },
+    {
+      "row": "CN05-11",
+      "panel": "III",
+      "symbol": "A-DNA",
+      "value": "11 bp/turn; rise 2.55 Å; C3′-endo; 9 Å axial hole; tilt ~20°",
+      "units": "—",
+      "scope": "A-form",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Potaman & Sinden, NBK6545",
+      "falsifier": "Structural measurement outside range"
+    },
+    {
+      "row": "CN05-12",
+      "panel": "III",
+      "symbol": "Z-DNA",
+      "value": "left-handed; 12 bp/turn; rise 3.7 Å; 18 Å; 30°/bp",
+      "units": "—",
+      "scope": "Z-form, atomic-resolution crystal",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Wang et al. 1979, Nature 282:680; Potaman & Sinden",
+      "falsifier": "Re-refinement contradicting handedness or repeat"
+    },
+    {
+      "row": "CN05-13",
+      "panel": "IV, VI",
+      "symbol": "ℓ_p",
+      "value": "~50 (~150)",
+      "units": "nm (bp)",
+      "scope": "dsDNA, ~0.1 M NaCl, ~20–25 °C; tweezers + AFM consensus",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Peters & Maher 2010, Q Rev Biophys 43(1):23–63, PMID 20478077",
+      "falsifier": "Independent single-molecule measurement outside 45–55 nm at the stated temperature and ionic strength"
+    },
+    {
+      "row": "CN05-14",
+      "panel": "IV",
+      "symbol": "ℓ_p vs temperature",
+      "value": "53.2 nm (5 °C) → 42.5 nm (42 °C)",
+      "units": "nm",
+      "scope": "TBE + 10 mM MgCl₂ — a different ionic condition from the row above; j-factor + linking-number methods. A condition on the 50 nm consensus, not support for it: at ≥37 °C it sits at or below that row's own falsifier band",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Geggier, Kotlyar & Vologodskii 2011, NAR 39(4):1419–1426, PMID 20952402",
+      "falsifier": "A measurement showing ℓ_p temperature-independent across 5–42 °C"
+    },
+    {
+      "row": "CN05-15",
+      "panel": "IV",
+      "symbol": "ℓ_p sub-100 bp",
+      "value": "short DNA more bendable than WLC predicts",
+      "units": "—",
+      "scope": "<100 bp cyclisation",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "Vafabakhsh & Ha, Science, PMC3565842",
+      "falsifier": "A cyclisation method restoring WLC agreement below 100 bp"
+    },
+    {
+      "row": "CN05-17",
+      "panel": "VI",
+      "symbol": "G_human",
+      "value": "3,054,815,472 (+16,569 mtDNA)",
+      "units": "bp",
+      "scope": "T2T-CHM13, gapless, chr1–22 + X",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Nurk et al. 2022, Science 376:44–53, doi:10.1126/science.abj6987",
+      "falsifier": "Independent T2T assembly differing >0.1%"
+    },
+    {
+      "row": "CN05-27",
+      "panel": "V",
+      "symbol": "ε_selection",
+      "value": "~10⁻⁴–10⁻⁵ (in vitro); ~10⁻⁵ (in vivo E. coli, a review's round estimate)",
+      "units": "per bp",
+      "scope": "polymerase base selection alone",
+      "evidence_class": "OBSERVED-CONTESTED (assay-dependent)",
+      "source": "Kunkel 2004, JBC 279(17):16895–8 (in vitro); Fijalkowska, Schaaper & Jonczyk 2012, FEMS Microbiol Rev 36(6):1105–1121, PMID 22404288 (the 10⁻⁵ estimate). Schaaper 1993 measures a 200,000–2,000,000-fold discrimination, not a rate",
+      "falsifier": "See in-vivo row below; an assay reconciling both"
+    },
+    {
+      "row": "CN05-28",
+      "panel": "V",
+      "symbol": "Schaaper's measured factors",
+      "value": "base selection 200,000–2,000,000×; proofreading 40–200×; MMR 20–400×",
+      "units": "fold discrimination",
+      "scope": "E. coli, 866 sequenced lacI mutations in correction-deficient strains",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Schaaper 1993, JBC 268(32):23762–23765, PMID 8226906",
+      "falsifier": "A re-dissection outside these fold ranges"
+    },
+    {
+      "row": "CN05-29",
+      "panel": "V",
+      "symbol": "ε_selection in vivo vs in vitro",
+      "value": "in vivo base selectivity >100× higher than in vitro",
+      "units": "—",
+      "scope": "yeast Pol ε / Pol δ, proofreading- and MMR-deficient background",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "St Charles et al. 2015, DNA Repair 31:41–51, doi:10.1016/j.dnarep.2015.04.006",
+      "falsifier": "An in-vitro assay reproducing the in-vivo selectivity"
+    },
+    {
+      "row": "CN05-30",
+      "panel": "V",
+      "symbol": "ε_proof",
+      "value": "~10⁻⁷ as a ladder rung (= 10⁻⁵ × the review's ~10⁻² factor)",
+      "units": "per bp",
+      "scope": "+ 3′→5′ exonucleolytic proofreading",
+      "evidence_class": "MODELED — a review's round decade; not reproduced by the measured factor",
+      "source": "rung from Fijalkowska et al. 2012; measured factor = 40–200× (10⁻¹·⁶–10⁻²·³), Schaaper 1993",
+      "falsifier": "An in vivo proofreading gain measured outside 40–200×"
+    },
+    {
+      "row": "CN05-31",
+      "panel": "V",
+      "symbol": "ε_MMR",
+      "value": "~10⁻¹⁰ overall as the ladder rung (× the review's ~10⁻³ factor); measured overall band 10⁻⁹–10⁻¹¹",
+      "units": "per bp",
+      "scope": "+ mismatch repair; overall",
+      "evidence_class": "MODELED (the ladder rung); OBSERVED-REPLICATED (the overall band)",
+      "source": "Fijalkowska et al. 2012 (abstract: 'as low as 10⁻⁹ to 10⁻¹¹ errors per base pair'); measured MMR factor = 20–400×, Schaaper 1993",
+      "falsifier": "Mutation-accumulation whole-genome rate outside 10⁻⁹–10⁻¹¹"
+    },
+    {
+      "row": "CN05-32",
+      "panel": "V, VII",
+      "symbol": "ladder vs measured factors",
+      "value": "Schaaper's measured factors on a 10⁻⁵ rung span ~10⁻⁷·⁹ to ~10⁻⁹·⁹ — reaching 10⁻¹⁰ only at the most generous edge",
+      "units": "per bp",
+      "scope": "the decades do not reproduce from the measurement",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter from Schaaper 1993 + Fijalkowska et al. 2012",
+      "falsifier": "Arithmetic error; or a dissection whose measured factors compose to 10⁻¹⁰"
+    },
+    {
+      "row": "CN05-33",
+      "panel": "V",
+      "symbol": "proofreading asymmetry",
+      "value": "strand-asymmetric (Pol ε leading vs Pol δ lagging); proofreading > MMR on average, but varies per mismatch",
+      "units": "—",
+      "scope": "yeast, in vivo",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "St Charles et al. 2015",
+      "falsifier": "A dissection showing strand symmetry"
+    },
+    {
+      "row": "CN05-34",
+      "panel": "V",
+      "symbol": "errors/replication",
+      "value": "~6.1e4 → ~610 → ~0.6",
+      "units": "errors per diploid genome copy",
+      "scope": "6.11 Gbp at 10⁻⁵ / 10⁻⁷ / 10⁻¹⁰ (in-vivo ladder); ~6.1e5 at the in-vitro 10⁻⁴ rung",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Arithmetic error, or a refuted ε row"
+    },
+    {
+      "row": "CN05-35",
+      "panel": "VII",
+      "symbol": "μ_germline",
+      "value": "1.20e-8",
+      "units": "per nt per generation (mean paternal age 29.7; +~2 mutations/yr; paternal doubling ~16.5 yr)",
+      "scope": "human trios — different denominator from ε",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Kong et al. 2012, Nature 488(7412):471–475, doi:10.1038/nature11396",
+      "falsifier": "Independent trio study outside range at matched paternal age"
+    },
+    {
+      "row": "CN05-37",
+      "panel": "VI",
+      "symbol": "L_DNA",
+      "value": "1.04 (2.08)",
+      "units": "m, haploid (diploid)",
+      "scope": "3.055e9 bp × 0.34 nm",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter from rise + G_human",
+      "falsifier": "Arithmetic error, or rise refuted"
+    },
+    {
+      "row": "CN05-38",
+      "panel": "VI",
+      "symbol": "V_nucleus",
+      "value": "~113",
+      "units": "µm³",
+      "scope": "sphere, d = 6 µm",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter (geometry)",
+      "falsifier": "Geometric error; nuclei are not spheres"
+    },
+    {
+      "row": "CN05-39",
+      "panel": "VI",
+      "symbol": "f_DNA,vol",
+      "value": "~5.8",
+      "units": "% of nuclear volume",
+      "scope": "DNA as r = 1 nm cylinder, 2.08 m, in 113 µm³",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Arithmetic error, or a refuted radius"
+    },
+    {
+      "row": "CN05-40",
+      "panel": "VI",
+      "symbol": "packing ratio",
+      "value": "~3.5e5",
+      "units": "dimensionless (linear)",
+      "scope": "2.08 m / 6 µm",
+      "evidence_class": "MODELED",
+      "source": "Computed in-chapter",
+      "falsifier": "Arithmetic error"
+    },
+    {
+      "row": "CN05-41",
+      "panel": "IV, VI",
+      "symbol": "nucleosome",
+      "value": "146 bp @ 2.8 Å; 147 bp @ 1.9 Å; 1.65 superhelical turns; histone octamer",
+      "units": "bp",
+      "scope": "crystal structures — different crystals, both real",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Luger et al. 1997, Nature 389:251–260, doi:10.1038/38444; Richmond & Davey 2003, Nature 423:145, doi:10.1038/nature01595",
+      "falsifier": "A re-refinement changing the wrap length"
+    },
+    {
+      "row": "CN05-42",
+      "panel": "VI",
+      "symbol": "30 nm fibre in vivo",
+      "value": "contested — not observed in cryo-EM of vitrified cells nor in ChromEMT",
+      "units": "nm",
+      "scope": "in vivo interphase/mitotic chromatin",
+      "evidence_class": "OBSERVED-CONTESTED",
+      "source": "Maeshima et al. 2010, Curr Opin Cell Biol, PMID 20346642; Ou et al. 2017, Science 357:eaag0025, doi:10.1126/science.aag0025",
+      "falsifier": "A near-native in-vivo imaging method resolving regular 30-nm fibres"
+    },
+    {
+      "row": "CN05-43",
+      "panel": "VI",
+      "symbol": "chromatin chain in vivo",
+      "value": "disordered 5- to 24-nanometer-diameter curvilinear chain",
+      "units": "nm",
+      "scope": "ChromEMT, interphase + mitosis",
+      "evidence_class": "OBSERVED-REPLICATED",
+      "source": "Ou et al. 2017",
+      "falsifier": "Independent tomography contradicting the diameter distribution"
+    },
+    {
+      "row": "CN05-44",
+      "panel": "VI",
+      "symbol": "loops / TADs / chromosome",
+      "value": "—",
+      "units": "—",
+      "scope": "levels above the chain",
+      "evidence_class": "NOT-SOURCED in this pass",
+      "source": "—",
+      "falsifier": "Fetch Hi-C / loop-extrusion primaries"
+    }
+  ],
+  "not_claimed": [
+    "Not claimed: any groove width. Both circulating pairs (~12/~6 Å and 22/12 Å) and the ~5.8 Å convention offset that supposedly reconciles them are NOT-SOURCED in this corpus. The offset accounts for the minor pair (12 − 5.8 = 6.2 ≈ 6) but fails on the major (22 − 5.8 = 16.2, not 12 — a 10 Å gap), so 'different convention' is not a sufficient explanation. A groove width quoted without its convention is underspecified.",
+    "Not claimed: that the 0.4 / 0.6 turn groove spans bracketed in panel I are a measurement. They follow from the drawn 0.4-turn backbone offset, which is a construction choice. The plate asserts the grooves' alternation and the 20 Å envelope, nothing more.",
+    "Not claimed: that 10.5 bp/turn is a measurement, that it is a midpoint, or that it reconciles 10.4 and 10.6. It is the number the drawing had to choose in order to exist. Its provenance — independent determination, rounding, or midpoint — is NOT-SOURCED.",
+    "Not claimed: that the fidelity ladder's rungs are settled. They are assay-dependent, assembled from different systems against different denominators, and the first rung is contested three ways (~10⁻⁴ in vitro; ~10⁻⁵ a review's in vivo estimate; >100× better than in vitro measured in vivo in yeast, which would push it below 10⁻⁶). The stacking principle survives the discrepancy; the specific rungs do not travel without their assay.",
+    "Not claimed: that 10⁻¹⁰ is the polymerase's error rate. It is the rate after three layers. This is the single most common error in the material and is drawn on the plate as a recorded trap.",
+    "Not claimed: that the per-generation germline rate (1.20×10⁻⁸, Kong et al. 2012) belongs beside the per-replication rates. Different denominators; a generation contains many germline divisions. It is deliberately absent from panel V.",
+    "Not claimed: that the 30 nm fibre does not exist. It exists in vitro. Only its status as an in vivo structural level is contested, and it is carried as contested.",
+    "Not claimed: that the stipple density in panel V is proportional. It is schematic — 61,000 : 610 : 0.6 cannot be drawn to scale on one plate.",
+    "Not claimed: that the packing arithmetic is a measurement of a real nucleus. It is MODELED on a spherical nucleus of d = 6 µm and DNA as a 1 nm-radius cylinder. The assumptions are the fence; nuclei are not spheres.",
+    "Not claimed: that this plate's geometry is DNA's only geometry. A-, B- and Z-forms are all real; which is occupied depends on sequence and environment.",
+    "Not claimed: that DNA is a program, source code, blueprint, or specification. CN-05 records that reading as INADMISSIBLE as stated — a metaphor doing argumentative work with no falsifier attached. This plate draws a physical polymer with measured dimensions.",
+    "Not claimed: that anything on this plate raises any UNI rung. A NATURE CITATION IS NEVER A UNI GATE. The plate contains ZERO UNI claims. The honest program position is unchanged by it: ~2 of 11+ developmental rungs earned, a developmental active-inference simulation, a toy world, never a person. 'Full human' and 'beyond human' appear nowhere as targets — they are permanent open questions."
+  ],
+  "evidence_classes": {
+    "_vocabulary": "NATURA classes per encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md, AMENDED 2026-07-15-A: twelve classes in three groups (measured / derived / fenced). Sovereign from the UNI fence (proven · designed · hypothesized · not-yet-built) — the two never merge, and there is no operation that takes a NATURA row and a UNI row and produces a stronger row of either kind.",
+    "_used_on_this_plate": {
+      "OBSERVED-REPLICATED": {
+        "group": "A — measured",
+        "means": "measured, and independently replicated across labs, datasets or taxa",
+        "plate_mark": "— (unmarked)",
+        "rows": [
+          "CN05-01",
+          "CN05-02",
+          "CN05-03",
+          "CN05-04",
+          "CN05-07",
+          "CN05-11",
+          "CN05-12",
+          "CN05-13",
+          "CN05-14",
+          "CN05-17",
+          "CN05-28",
+          "CN05-33",
+          "CN05-35",
+          "CN05-41",
+          "CN05-43"
+        ]
+      },
+      "OBSERVED-CONTESTED": {
+        "group": "A — measured",
+        "means": "measured, but the community genuinely disputes the value, exponent or mechanism; both positions carried and the dispute named",
+        "plate_mark": "‡ (plus a dashed rule / ghosted fill)",
+        "rows": [
+          "CN05-05",
+          "CN05-15",
+          "CN05-27",
+          "CN05-29",
+          "CN05-42"
+        ]
+      },
+      "MODELED": {
+        "group": "B — derived",
+        "means": "derived from a model that fits data; THE ASSUMPTIONS ARE THE FENCE",
+        "plate_mark": "△",
+        "rows": [
+          "CN05-30",
+          "CN05-31",
+          "CN05-32",
+          "CN05-34",
+          "CN05-37",
+          "CN05-38",
+          "CN05-39",
+          "CN05-40"
+        ]
+      },
+      "NOT-SOURCED": {
+        "group": "C — fenced",
+        "means": "the chapter states a value it could not trace to a source. Somebody measured it; this corpus could not find who. NOT the same as NOT-MEASURED — NOT-MEASURED is an absence in the literature (a fact about the world's knowledge), NOT-SOURCED is an absence in this corpus's own homework (a fact about us). Collapsing the two would let a research failure masquerade as a discovery about the frontier of science. Never merge them.",
+        "plate_mark": "◇ (plus a dotted rule / void hatch)",
+        "rows": [
+          "CN05-06",
+          "CN05-08",
+          "CN05-09",
+          "CN05-10",
+          "CN05-44"
+        ]
+      }
+    },
+    "_compound_rows": {
+      "_rule": "NATURE-LEDGER.md: 'Compound rows (2 of 919). CN05-31 and CN06-30 carry two classes because two parts of the row differ in standing. Each part's class is named to its part; the row is counted at its leading class. The class cell, not the count, is authoritative.' The buckets above therefore count CN05-31 at its LEADING class (MODELED). That count must not be read as the row's whole standing — the class cell is. Both parts are drawn on the plate: panel V marks screen 3 'CN05-31 △' for the modelled rung and separately prints the measured overall band beneath it.",
+      "CN05-31": {
+        "class_cell_verbatim": "MODELED (the ladder rung); OBSERVED-REPLICATED (the overall band)",
+        "modelled_part": "the ~10⁻¹⁰ ladder rung — the review's round decade (× ~10⁻³)",
+        "replicated_part": "the measured overall band, 10⁻⁹–10⁻¹¹ errors per bp (Fijalkowska et al. 2012, abstract)",
+        "counted_at": "MODELED (leading class), per the ledger's rule"
+      }
+    },
+    "_not_used_but_defined": [
+      "OBSERVED-SINGLE",
+      "MODELED-CONTESTED",
+      "HYPOTHESIZED",
+      "INADMISSIBLE",
+      "SUPERSEDED",
+      "NOT-MEASURED",
+      "NOT-CONFIRMED",
+      "NOT-LOCATED"
+    ],
+    "_negatives_drawn_on_the_plate": [
+      "10⁻¹⁰ quoted as DNA polymerase's error rate — conflation trap; it is the rate after three layers.",
+      "1.2×10⁻⁸ per generation set beside 10⁻¹⁰ per replication — conflation trap; different denominators.",
+      "The power-of-ten decomposition attributed to Schaaper 1993 — CN-05's own misattribution; it belongs to Fijalkowska, Schaaper & Jonczyk 2012.",
+      "The ladder rung 10⁻⁴ → 10⁻⁷ under a stated gain of 10¹–10² — arithmetically impossible (needs 10³); corrected in CN-05.",
+      "The 12/6 Å groove widths attributed to Potaman & Sinden (NBK6545) — a fabricated citation, recorded by CN-05 as its own most instructive failure: committed in the very passage that lectures 'name the convention or do not print the number.'",
+      "'~10.5 bp/turn' explained as a midpoint of a solution value and a surface value — CN-05's own error; Rhodes & Klug explicitly identify their 10.6 with the repeat in solution.",
+      "The 30 nm chromatin fibre drawn as an established in vivo level — two independent near-native methods fail to find it."
+    ]
+  },
+  "design_fence": {
+    "static": "No script elements, no on-event handlers, no external references (no xlink to a URL, no @import, no webfont, no <image>). Pure static SVG; every url() resolves to an internal fragment id.",
+    "responsive": "viewBox-based (0 0 1440 3070), width=100%, no fixed height. Renders standalone and inline.",
+    "theme": "CSS custom properties with literal fallbacks in every var(); flips on prefers-color-scheme and on :root[data-theme] in both directions.",
+    "greyscale": "Every distinction colour carries is also carried by a glyph mark (‡ ◇ △ ✗), dash pattern, hatch density and line weight.",
+    "verification": "Geometry computed at 7 px/Å, not eyeballed. Layout proven by browser bbox measurement: 0 canvas overflows, 0 panel overflows, 0 text-text collisions across 266 text nodes; the collision detector was positive-controlled by injecting a known overlap and confirming it fired. Every numeric token on the plate was diffed against CN-05 + NATURE-LEDGER; every MODELED figure was independently re-derived."
+  }
+}

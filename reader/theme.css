@@ -1,0 +1,1541 @@
+/* reader/theme.css - the print-encyclopedia stylesheet.
+ * ============================================================================
+ * A classic reference volume: warm paper, a system serif at a 66ch measure,
+ * running heads, drop caps, hairline rules, marginal receipts, numbered plates,
+ * an A-Z index, a colophon. Light and dark. Prints cleanly.
+ *
+ * NO WEBFONT. NO CDN. NO @import. NO url() TO A NETWORK. System fonts only.
+ * This file is the reader's only stylesheet and its only asset.
+ *
+ * THE PALETTE AND THE FONT STACK ARE NOT INVENTED HERE. They are taken from the
+ * plate SVGs already in reader/plates/ (PL-01 ink #1c1a16 / paper #f6f2e8 /
+ * accent #8a3324; dark #ece6d9 / #15181d / #e0906d), so that a plate and the page
+ * it sits on read as one printed volume rather than two designs.
+ *
+ * THE THEMING CONTRACT IS FIXED BY THE PLATES -- IT IS NOT A FREE CHOICE.
+ * All ten plate SVGs implement, each for itself:
+ *      @media (prefers-color-scheme: dark) { .plNN { ... } }
+ *      [data-theme="dark"]  .plNN { ... }
+ *      [data-theme="light"] .plNN { ... }
+ * So this file uses exactly that pair: prefers-color-scheme as the default
+ * signal, data-theme on <html> as the explicit override that wins in both
+ * directions. Any other mechanism (a .dark class, say) would leave a plate light
+ * on a dark page. PL-01 additionally reads --plate-* hooks, which we set below.
+ * ============================================================================ */
+
+/* --------------------------------------------------------------------------
+ * 1. Palette
+ * ------------------------------------------------------------------------ */
+
+:root {
+  /* paper and ink */
+  --paper:      #f6f2e8;
+  --paper-deep: #efe9db;   /* sunk panels, table stripes */
+  --paper-edge: #e6e0d1;   /* wash */
+  --ink:        #1c1a16;
+  --ink-2:      #4d4a44;   /* secondary prose, captions */
+  --ink-3:      #8a8375;   /* faint: folios, leaders, rules */
+  --rule:       #bdb8ab;
+  --rule-firm:  #3d3830;
+  --accent:     #8a3324;   /* oxblood: drop caps, plate numbers, links */
+  --accent-2:   #5a4a2f;   /* olive-brown: secondary marks */
+
+  /* badge inks. Distinct HUES for the two vocabularies is the LAST of three
+   * signals, never the only one -- shape and sigil carry it in print and for a
+   * colourblind reader. See BADGE SOVEREIGNTY in templates.py. */
+  --uni-ink:    #2f4858;   /* slate: UNI's own build status */
+  --uni-bg:     #e4eaee;
+  --nat-ink:    #3f5d3a;   /* verdigris: nature's regularities */
+  --nat-bg:     #e6ede4;
+  --warn-ink:   #7a3b12;
+  --warn-bg:    #f1e4d8;
+  --honest-ink: #5b3a63;   /* a third axis entirely */
+  --honest-bg:  #ece2ef;
+
+  /* the plate hooks PL-01 reads: var(--plate-ink, <its own default>) */
+  --plate-ink:    #1c1a16;
+  --plate-paper:  #f6f2e8;
+  --plate-rule:   #3d3830;
+  --plate-faint:  #8a8375;
+  --plate-accent: #8a3324;
+  --plate-wash:   #e6e0d1;
+
+  /* type */
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+           Cambria, Georgia, "DejaVu Serif", "Times New Roman", Times, serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "DejaVu Sans", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "DejaVu Sans Mono", "Liberation Mono", monospace;
+
+  --measure: 66ch;
+  --margin-col: 21ch;
+  --gutter: 2.6rem;
+  --hair: 1px;
+}
+
+/* Dark: the default signal. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #15181d;
+    --paper-deep: #1b1f25;
+    --paper-edge: #232830;
+    --ink:        #ece6d9;
+    --ink-2:      #b5ad9d;
+    --ink-3:      #8f8879;
+    --rule:       #3b4048;
+    --rule-firm:  #b5ad9d;
+    --accent:     #e0906d;
+    --accent-2:   #c3b183;
+
+    --uni-ink:    #a8cbe0;
+    --uni-bg:     #1d2932;
+    --nat-ink:    #a6c99b;
+    --nat-bg:     #1e2a1f;
+    --warn-ink:   #e5a870;
+    --warn-bg:    #2e2318;
+    --honest-ink: #c9a8d4;
+    --honest-bg:  #271d2b;
+
+    --plate-ink:    #ece6d9;
+    --plate-paper:  #15181d;
+    --plate-rule:   #b5ad9d;
+    --plate-faint:  #8f8879;
+    --plate-accent: #e0906d;
+    --plate-wash:   #232830;
+  }
+}
+
+/* Explicit choice wins, in BOTH directions -- this is what keeps the page and
+ * the plates in step when the reader toggles. */
+:root[data-theme="dark"] {
+  --paper:      #15181d;
+  --paper-deep: #1b1f25;
+  --paper-edge: #232830;
+  --ink:        #ece6d9;
+  --ink-2:      #b5ad9d;
+  --ink-3:      #8f8879;
+  --rule:       #3b4048;
+  --rule-firm:  #b5ad9d;
+  --accent:     #e0906d;
+  --accent-2:   #c3b183;
+  --uni-ink:    #a8cbe0;
+  --uni-bg:     #1d2932;
+  --nat-ink:    #a6c99b;
+  --nat-bg:     #1e2a1f;
+  --warn-ink:   #e5a870;
+  --warn-bg:    #2e2318;
+  --honest-ink: #c9a8d4;
+  --honest-bg:  #271d2b;
+  --plate-ink:    #ece6d9;
+  --plate-paper:  #15181d;
+  --plate-rule:   #b5ad9d;
+  --plate-faint:  #8f8879;
+  --plate-accent: #e0906d;
+  --plate-wash:   #232830;
+}
+
+:root[data-theme="light"] {
+  --paper:      #f6f2e8;
+  --paper-deep: #efe9db;
+  --paper-edge: #e6e0d1;
+  --ink:        #1c1a16;
+  --ink-2:      #4d4a44;
+  --ink-3:      #8a8375;
+  --rule:       #bdb8ab;
+  --rule-firm:  #3d3830;
+  --accent:     #8a3324;
+  --accent-2:   #5a4a2f;
+  --uni-ink:    #2f4858;
+  --uni-bg:     #e4eaee;
+  --nat-ink:    #3f5d3a;
+  --nat-bg:     #e6ede4;
+  --warn-ink:   #7a3b12;
+  --warn-bg:    #f1e4d8;
+  --honest-ink: #5b3a63;
+  --honest-bg:  #ece2ef;
+  --plate-ink:    #1c1a16;
+  --plate-paper:  #f6f2e8;
+  --plate-rule:   #3d3830;
+  --plate-faint:  #8a8375;
+  --plate-accent: #8a3324;
+  --plate-wash:   #e6e0d1;
+}
+
+/* --------------------------------------------------------------------------
+ * 2. Reset and page
+ * ------------------------------------------------------------------------ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.58;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+@media (min-width: 60rem) { html { font-size: 18px; } }
+
+body {
+  margin: 0;
+  padding: 0 var(--gutter) 5rem;
+  background:
+    linear-gradient(var(--paper), var(--paper));
+  hyphens: auto;
+}
+
+img, svg { max-width: 100%; }
+
+a { color: var(--accent); text-underline-offset: 0.14em; text-decoration-thickness: 0.06em; }
+a:hover { text-decoration-thickness: 0.12em; }
+
+code, kbd, samp, pre { font-family: var(--mono); font-size: 0.86em; }
+code { background: var(--paper-deep); padding: 0.08em 0.3em; border-radius: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--paper); color: var(--ink);
+  padding: 0.6rem 1rem; border: var(--hair) solid var(--rule-firm);
+}
+.skip:focus { left: 1rem; top: 1rem; z-index: 50; }
+
+/* --------------------------------------------------------------------------
+ * 3. Running head, folio, navigation - the page furniture
+ * ------------------------------------------------------------------------ */
+
+.rh {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  max-width: calc(var(--measure) + var(--margin-col) + var(--gutter));
+  margin: 0 auto;
+  padding: 1.6rem 0 0.4rem;
+  border-bottom: var(--hair) solid var(--rule);
+  font-variant-caps: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+  color: var(--ink-3);
+}
+.rh__recto { font-style: italic; font-variant-caps: normal; letter-spacing: 0.02em; }
+
+.vnav {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem; flex-wrap: wrap;
+  max-width: calc(var(--measure) + var(--margin-col) + var(--gutter));
+  margin: 0 auto; padding: 0.5rem 0 0.9rem;
+}
+.vnav__list { display: flex; gap: 1.2rem; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.vnav__list a {
+  color: var(--ink-2); text-decoration: none;
+  font-variant-caps: small-caps; letter-spacing: 0.06em; font-size: 0.82rem;
+  border-bottom: var(--hair) solid transparent; padding-bottom: 1px;
+}
+.vnav__list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.vnav__list a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--rule-firm); }
+
+.vnav__theme {
+  font: inherit; font-size: 0.72rem;
+  font-variant-caps: small-caps; letter-spacing: 0.08em;
+  background: transparent; color: var(--ink-3);
+  border: var(--hair) solid var(--rule);
+  border-radius: 999px; padding: 0.14rem 0.7rem; cursor: pointer;
+}
+.vnav__theme:hover { color: var(--accent); border-color: var(--accent); }
+
+.folio {
+  text-align: center; color: var(--ink-3);
+  font-variant-caps: small-caps; letter-spacing: 0.2em; font-size: 0.72rem;
+  margin: 3rem auto 0; padding-top: 0.8rem;
+  max-width: var(--measure);
+  border-top: var(--hair) solid var(--rule);
+}
+
+/* Register switcher */
+.reg {
+  display: flex; align-items: baseline; gap: 0.9rem; flex-wrap: wrap;
+  max-width: calc(var(--measure) + var(--margin-col) + var(--gutter));
+  margin: 0 auto 1.6rem;
+  padding: 0.5rem 0;
+  border-top: var(--hair) solid var(--rule);
+  border-bottom: var(--hair) solid var(--rule);
+}
+.reg__legend {
+  font-variant-caps: small-caps; letter-spacing: 0.12em;
+  font-size: 0.72rem; color: var(--ink-3);
+}
+.reg__list { display: flex; gap: 0.4rem; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.reg__item a, .reg__item span[aria-current] {
+  display: inline-flex; align-items: baseline; gap: 0.35rem;
+  padding: 0.16rem 0.6rem; text-decoration: none;
+  border: var(--hair) solid var(--rule);
+  color: var(--ink-2); font-size: 0.82rem;
+}
+.reg__item a:hover { border-color: var(--accent); color: var(--accent); }
+.reg__item--current span[aria-current] {
+  border-color: var(--rule-firm); color: var(--ink);
+  background: var(--paper-deep); font-weight: 600;
+}
+.reg__pending {
+  font-size: 0.6rem; letter-spacing: 0.1em;
+  color: var(--warn-ink); background: var(--warn-bg);
+  border: var(--hair) solid var(--warn-ink);
+  padding: 0 0.28em; border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+ * 4. The volume: text column + margin column
+ * ------------------------------------------------------------------------ */
+
+.volume {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure));
+  justify-content: center;
+  column-gap: var(--gutter);
+  margin: 0 auto;
+  max-width: calc(var(--measure) + var(--margin-col) + var(--gutter));
+}
+.volume--wide { max-width: 92ch; grid-template-columns: minmax(0, 1fr); }
+
+@media (min-width: 68rem) {
+  .volume {
+    grid-template-columns: minmax(0, var(--measure)) minmax(0, var(--margin-col));
+    justify-content: center;
+  }
+  .volume--wide { grid-template-columns: minmax(0, 1fr); max-width: 96ch; }
+  /* Columns are pinned; ROWS are left to auto-placement ON PURPOSE. Pinning
+   * .ch to `grid-row: 2` assumed a fencebox always fills row 1 -- on an English
+   * page there is none, so row 1 stood empty and the auto-placed numbers table
+   * fell into it, landing ABOVE the chapter title. Auto-flow places these
+   * correctly whether or not a fencebox is present. */
+  .volume > .fencebox { grid-column: 1 / -1; }
+  .volume > .ch { grid-column: 1; }
+  .volume > .margin { grid-column: 2; }
+  .volume > .pn { grid-column: 1; }
+  /* Wide artifacts take the full measure rather than scrolling inside the text
+   * column. The prose keeps its 66ch; the evidence gets the width it needs. */
+  .volume > .numbers,
+  .volume > .pclaims,
+  .volume > .plate { grid-column: 1 / -1; }
+}
+
+/* --------------------------------------------------------------------------
+ * 5. Rules - hairline and engraved double
+ * ------------------------------------------------------------------------ */
+
+.rule { border: 0; height: 0; margin: 1.4rem 0 1.8rem; }
+.rule--double {
+  border-top: var(--hair) solid var(--rule-firm);
+  border-bottom: var(--hair) solid var(--rule-firm);
+  height: 3px;
+  position: relative;
+}
+.rule--double::after {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px;
+  transform: rotate(45deg);
+  background: var(--paper); border: var(--hair) solid var(--rule-firm);
+}
+
+/* --------------------------------------------------------------------------
+ * 6. Chapter openers and prose
+ * ------------------------------------------------------------------------ */
+
+.ch__head { padding-top: 1.4rem; }
+.ch__id, .pg__title + .ch__id {
+  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.18em;
+  color: var(--accent); margin: 0 0 0.5rem; text-transform: uppercase;
+}
+.ch__title, .pg__title {
+  font-size: clamp(1.7rem, 1.1rem + 2.2vw, 2.5rem);
+  line-height: 1.16; font-weight: 600; margin: 0 0 0.4rem;
+  letter-spacing: -0.01em; text-wrap: balance;
+}
+.ch__wing {
+  margin: 0; color: var(--ink-3); font-style: italic; font-size: 0.9rem;
+}
+
+.abstract {
+  margin: 1.6rem 0 2rem; padding: 1rem 1.2rem;
+  background: var(--paper-deep);
+  border-left: 3px solid var(--accent);
+  font-size: 0.97rem; color: var(--ink-2);
+}
+.abstract > :first-child { margin-top: 0; }
+.abstract > :last-child { margin-bottom: 0; }
+.abstract strong { color: var(--ink); }
+
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 1.05em; }
+.prose p + p { text-indent: 1.4em; margin-top: -0.25em; }
+.prose h2, .prose h3, .prose h4 {
+  font-weight: 600; line-height: 1.24; margin: 2.2em 0 0.6em;
+  text-wrap: balance;
+}
+.prose h2 {
+  font-size: 1.32rem;
+  padding-bottom: 0.3rem;
+  border-bottom: var(--hair) solid var(--rule);
+}
+.prose h3 { font-size: 1.1rem; font-style: italic; }
+.prose h4 { font-size: 0.98rem; font-variant-caps: small-caps; letter-spacing: 0.06em; }
+.prose h2 + p, .prose h3 + p, .prose h4 + p { text-indent: 0; }
+
+/* Drop cap - the chapter opener. */
+.prose--dropcap > p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.5em;
+  line-height: 0.82;
+  padding: 0.06em 0.08em 0 0;
+  margin-right: 0.04em;
+  color: var(--accent);
+  font-weight: 600;
+}
+.prose--dropcap > p:first-of-type { text-indent: 0; }
+.prose--dropcap > p:first-of-type::first-line {
+  font-variant-caps: small-caps; letter-spacing: 0.03em;
+}
+
+.prose blockquote {
+  margin: 1.4em 0; padding: 0.2em 0 0.2em 1.1em;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-2); font-style: italic;
+}
+.prose blockquote strong { font-style: normal; color: var(--ink); }
+.prose ul, .prose ol { margin: 0 0 1.05em; padding-left: 1.5em; }
+.prose li { margin: 0.3em 0; }
+.prose hr {
+  border: 0; height: 1px; background: var(--rule);
+  margin: 2.2em auto; width: 40%;
+}
+.prose pre {
+  background: var(--paper-deep);
+  border: var(--hair) solid var(--rule);
+  border-left: 3px solid var(--ink-3);
+  padding: 0.9rem 1rem; overflow-x: auto; line-height: 1.45;
+  margin: 1.3em 0;
+}
+.prose pre code { background: none; padding: 0; }
+.prose img { display: block; margin: 1.4em auto; }
+
+/* Math degrades honestly: no renderer is vendored, so TeX source is SHOWN as
+ * source, in a labelled block. It is never silently rendered wrong, and nothing
+ * is ever fetched to render it. */
+.math, .tex {
+  display: block; margin: 1.3em 0; padding: 0.9rem 1rem 0.9rem 1.1rem;
+  background: var(--paper-deep);
+  border: var(--hair) solid var(--rule);
+  border-left: 3px solid var(--accent-2);
+  font-family: var(--mono); font-size: 0.85em; overflow-x: auto;
+}
+.math::before, .tex::before {
+  content: "TeX source, unrendered";
+  display: block; margin-bottom: 0.5rem;
+  font-family: var(--sans); font-size: 0.62rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);
+}
+
+.empty {
+  color: var(--warn-ink); background: var(--warn-bg);
+  border: var(--hair) dashed var(--warn-ink);
+  padding: 0.8rem 1rem; font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+ * 7. Tables
+ * ------------------------------------------------------------------------ */
+
+.tablewrap { overflow-x: auto; margin: 1.4em 0; }
+table { border-collapse: collapse; width: 100%; font-size: 0.84rem; }
+.prose table { margin: 1.5em 0; }
+th, td {
+  text-align: left; vertical-align: top;
+  padding: 0.5rem 0.7rem;
+  border-bottom: var(--hair) solid var(--rule);
+}
+thead th {
+  border-top: var(--hair) solid var(--rule-firm);
+  border-bottom: var(--hair) solid var(--rule-firm);
+  font-variant-caps: small-caps; letter-spacing: 0.07em;
+  font-weight: 600; color: var(--ink-2); white-space: nowrap;
+}
+tbody tr:nth-child(even) { background: var(--paper-deep); }
+tbody tr:last-child td { border-bottom: var(--hair) solid var(--rule-firm); }
+
+.numbers { margin: 2.6rem 0; }
+.numbers__h, .pclaims__h, .cen__h, .seealso__h, .prov__h {
+  font-size: 1.05rem; font-variant-caps: small-caps; letter-spacing: 0.1em;
+  margin: 0 0 0.4rem; padding-bottom: 0.3rem;
+  border-bottom: var(--hair) solid var(--rule-firm);
+}
+.numbers__note { font-size: 0.78rem; color: var(--ink-2); margin: 0.5rem 0 0; }
+.num__sym code { white-space: nowrap; }
+.num__val { font-weight: 600; }
+.num__source, .num__fals, .pc__source, .pc__fals { font-size: 0.94em; color: var(--ink-2); }
+.num__fals, .pc__fals { font-style: italic; }
+
+/* --------------------------------------------------------------------------
+ * 8. BADGES - THE TWO SOVEREIGN VOCABULARIES
+ * --------------------------------------------------------------------------
+ * There is deliberately NO shared base class here. `.fence` (UNI's own build
+ * status) and `.natura` (nature's observed regularities) share no class name, no
+ * ancestor and no mixin. Distinctness rests on THREE redundant signals -- CSS
+ * class tree, SHAPE, and a text SIGIL -- so it survives print, monochrome, and a
+ * colourblind reader. It has to: the token `hypothesized` exists in BOTH
+ * vocabularies, so the word alone can never tell them apart.
+ *   Do not add a common base class. Do not make them agree.
+ * ------------------------------------------------------------------------ */
+
+/* --- UNI 4-value fence: SQUARE, double-ruled, sigil "UNI" ---------------- */
+.fence {
+  display: inline-flex; align-items: stretch;
+  border: var(--hair) solid var(--uni-ink);
+  box-shadow: 0 0 0 var(--hair) var(--paper), 0 0 0 2px var(--uni-ink);
+  border-radius: 0;                       /* SQUARE. The natura tag is round. */
+  font-family: var(--sans);
+  font-size: 0.62rem; line-height: 1.7;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  white-space: nowrap; margin: 0 0.35em 2px 0;
+  vertical-align: baseline;
+}
+.fence__sigil {
+  background: var(--uni-ink); color: var(--paper);
+  padding: 0 0.4em; font-weight: 700;
+}
+.fence__value {
+  background: var(--uni-bg); color: var(--uni-ink);
+  padding: 0 0.5em; font-weight: 600;
+}
+/* All four registered values are explicitly addressable, and they are ordered:
+ * proven (earned and sealed) > designed (specified, unbuilt) > hypothesized
+ * (proposed) > not-yet-built (nothing exists yet). The type carries the order, so
+ * the ladder is legible without reading the word. */
+.fence--proven .fence__value { font-weight: 700; }
+.fence--designed .fence__value { font-weight: 500; }
+.fence--hypothesized .fence__value { font-style: italic; opacity: 0.94; }
+.fence--not-yet-built .fence__value {
+  font-style: italic; opacity: 0.9;
+  background: repeating-linear-gradient(
+    -45deg, var(--uni-bg), var(--uni-bg) 3px,
+    transparent 3px, transparent 6px);
+}
+.fence--unregistered {
+  border-style: dashed;
+  box-shadow: none;
+}
+.fence--unregistered .fence__sigil { background: var(--warn-ink); }
+.fence--unregistered .fence__value { background: var(--warn-bg); color: var(--warn-ink); }
+
+/* --- NATURA class: ROUNDED, hairline, sigil "NATURA" --------------------- */
+.natura {
+  display: inline-flex; align-items: stretch;
+  border: var(--hair) solid var(--nat-ink);
+  border-radius: 999px;                   /* ROUND. The uni fence is square. */
+  overflow: hidden;
+  font-family: var(--sans);
+  font-size: 0.62rem; line-height: 1.7;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  white-space: nowrap; margin: 0 0.35em 2px 0;
+  vertical-align: baseline;
+}
+.natura__sigil {
+  background: var(--nat-ink); color: var(--paper);
+  padding: 0 0.5em 0 0.6em; font-weight: 600; font-style: italic;
+}
+.natura__value {
+  background: var(--nat-bg); color: var(--nat-ink);
+  padding: 0 0.7em 0 0.5em;
+}
+/* Group A - measured: solid. Somebody put an instrument on it. */
+.natura--group-measured .natura__value { font-weight: 600; }
+/* Group B - derived: the model's assumptions are the fence. */
+.natura--group-derived .natura__value { font-style: italic; }
+/* Group C - fenced: the row carries no usable value; the class says why. */
+.natura--group-fenced {
+  border-style: dashed; border-color: var(--warn-ink);
+}
+.natura--group-fenced .natura__sigil { background: var(--warn-ink); }
+.natura--group-fenced .natura__value {
+  background: var(--warn-bg); color: var(--warn-ink);
+}
+/* A contested value carries its dispute in the badge, not in a footnote. */
+.natura--observed-contested .natura__value,
+.natura--modeled-contested .natura__value {
+  background: repeating-linear-gradient(
+    -45deg, var(--nat-bg), var(--nat-bg) 4px,
+    transparent 4px, transparent 8px);
+}
+/* INADMISSIBLE is first-class content here, never hidden. */
+.natura--inadmissible { border-width: 2px; }
+.natura--inadmissible .natura__value { text-decoration: line-through; }
+.natura--unregistered { border-style: dotted; }
+
+/* The qualifier the corpus actually writes -- "(secondary)", "as stated",
+ * "not primary-sourced in this pass". It is load-bearing honesty, so it is shown;
+ * it is NOT part of the class token, so it is set outside the tag. */
+.natura__qual {
+  display: inline; font-family: var(--serif); font-size: 0.78rem;
+  font-style: italic; color: var(--ink-2); text-transform: none;
+  letter-spacing: 0; margin-left: 0.1em;
+}
+
+/* A compound row carries more than one class. Both are shown; neither collapses. */
+.natura-compound { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0.1em; }
+.natura-compound__amp {
+  font-family: var(--sans); font-size: 0.6rem; color: var(--ink-3);
+  margin: 0 0.25em 2px 0;
+}
+
+/* A cell that names no class at all ("as above"). Never badged as if it were one. */
+.natura-ref {
+  font-style: italic; color: var(--ink-2); font-size: 0.86em;
+}
+
+/* --- Lexicon admission status: a third axis (.lex) ----------------------- */
+.lex {
+  display: inline-block; font-family: var(--sans);
+  font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.06em 0.5em; margin: 0 0.3em 2px 0;
+  border-radius: 2px; white-space: nowrap;
+}
+.lex--cited { background: var(--nat-bg); color: var(--nat-ink); border: var(--hair) solid var(--nat-ink); }
+.lex--coined { background: var(--paper-deep); color: var(--ink-2); border: var(--hair) dashed var(--ink-3); }
+.lex--pending-citation { background: var(--warn-bg); color: var(--warn-ink); border: var(--hair) solid var(--warn-ink); }
+.lex--not-attempted { background: transparent; color: var(--ink-3); border: var(--hair) dotted var(--ink-3); }
+.lex--unregistered { border-style: dotted; }
+
+/* --- Sovereign store: TRUE / HONEST / META ------------------------------ */
+.store {
+  display: inline-block; font-family: var(--sans);
+  font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 0.06em 0.55em; border-radius: 0;
+  border-left: 3px solid var(--ink-3); background: var(--paper-deep);
+  color: var(--ink-2);
+}
+.store--true { border-left-color: var(--uni-ink); color: var(--uni-ink); }
+/* HONEST is never calibrated. It is not a class with a different colour; it is
+ * off the axis entirely, and it is set to look it. */
+.store--honest {
+  border-left-color: var(--honest-ink); color: var(--honest-ink);
+  background: var(--honest-bg); font-style: italic;
+}
+.store--meta { border-left-style: dashed; }
+
+/* --------------------------------------------------------------------------
+ * 9. Marginal notes - receipts and falsifiers, set in the margin
+ * ------------------------------------------------------------------------ */
+
+.margin { display: flex; flex-direction: column; gap: 1.4rem; padding-top: 1.4rem; }
+.mn {
+  font-size: 0.76rem; line-height: 1.5; color: var(--ink-2);
+  border-left: var(--hair) solid var(--rule-firm);
+  padding-left: 0.9rem;
+}
+.mn__label {
+  display: block; margin-bottom: 0.35rem;
+  font-family: var(--sans); font-size: 0.6rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);
+}
+.mn__body > :first-child { margin-top: 0; }
+.mn__body > :last-child { margin-bottom: 0; }
+.mn__body p { margin: 0 0 0.5em; }
+.mn__k {
+  font-family: var(--sans); font-size: 0.58rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-3); margin-right: 0.3em;
+}
+.mn__body ul { margin: 0; padding-left: 1.1em; }
+.mn--fence { border-left-color: var(--nat-ink); }
+.mn--notclaimed { border-left-color: var(--warn-ink); }
+.mn--notclaimed .mn__label { color: var(--warn-ink); }
+.mn--source { border-left-color: var(--ink-3); }
+
+@media (max-width: 67.99rem) {
+  .margin { padding-top: 0; margin-top: 2rem; }
+  .mn { background: var(--paper-deep); padding: 0.8rem 0.9rem; }
+}
+
+/* --------------------------------------------------------------------------
+ * 10. Fence boxes - the honest state, stated on the page
+ * ------------------------------------------------------------------------ */
+
+.fencebox, .vocabbox, .pendingbox {
+  margin: 1.6rem 0 2rem; padding: 1rem 1.2rem;
+  border: var(--hair) solid var(--rule-firm);
+  background: var(--paper-deep);
+  font-size: 0.86rem; color: var(--ink-2);
+}
+.fencebox__h, .vocabbox__h {
+  margin: 0 0 0.5rem; font-size: 0.86rem;
+  font-variant-caps: small-caps; letter-spacing: 0.1em; color: var(--ink);
+}
+.fencebox { border-left: 3px solid var(--warn-ink); }
+.fencebox__h { color: var(--warn-ink); }
+.fencebox p { margin: 0 0 0.6em; }
+.fencebox__terms { font-weight: 600; color: var(--ink); }
+.fencebox__auth { font-size: 0.8rem; }
+.census { margin: 0.4rem 0 0.8rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.census__pair { display: inline-flex; align-items: baseline; gap: 0.2rem; }
+
+.vocabbox--uni { border-left: 3px solid var(--uni-ink); }
+.vocabbox--natura { border-left: 3px solid var(--nat-ink); }
+.vocabbox p { margin: 0 0 0.5em; }
+.vocabbox p:last-child { margin-bottom: 0; }
+
+.pendingbox { border: var(--hair) dashed var(--warn-ink); background: var(--warn-bg); }
+.pendingbox__h {
+  margin: 0 0 0.5rem; font-family: var(--sans); font-weight: 700;
+  letter-spacing: 0.18em; color: var(--warn-ink);
+}
+.pendingbox__fals { font-style: italic; margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+ * 11. Plates
+ * ------------------------------------------------------------------------ */
+
+.plate { margin: 2.6rem 0; padding: 0; }
+.plate--full { margin: 2rem 0 3rem; }
+.plate__art {
+  background: var(--plate-paper);
+  border: var(--hair) solid var(--rule-firm);
+  padding: 0.8rem;
+}
+.plate__art svg { display: block; width: 100%; height: auto; }
+.plate__cap {
+  margin-top: 0.7rem; padding-top: 0.5rem;
+  border-top: var(--hair) solid var(--rule);
+  font-size: 0.8rem; color: var(--ink-2); line-height: 1.5;
+}
+.plate__no {
+  font-variant-caps: small-caps; letter-spacing: 0.12em;
+  color: var(--accent); font-weight: 600;
+}
+.plate__title { font-weight: 600; color: var(--ink); }
+.plate__text { display: block; margin-top: 0.35rem; }
+.plate__ref { margin: 0; }
+.pclaims { margin: 2.4rem 0; }
+
+/* --------------------------------------------------------------------------
+ * 12. Front matter, table of contents, wings
+ * ------------------------------------------------------------------------ */
+
+.titlepage { text-align: center; padding: 2.4rem 0 0.6rem; }
+.tp__title {
+  font-size: clamp(2rem, 1.2rem + 3.4vw, 3.2rem); line-height: 1.1;
+  margin: 0 0 0.6rem; font-weight: 600; letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.tp__sub {
+  margin: 0 auto 1rem; max-width: 52ch;
+  font-style: italic; color: var(--ink-2); font-size: 1.02rem;
+}
+.tp__intro { margin: 0 auto; text-align: left; max-width: var(--measure); }
+.titlepage .rule--double { max-width: 30ch; margin-left: auto; margin-right: auto; }
+
+.wing { margin: 3rem 0; }
+.wing__h {
+  display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap;
+  margin: 0 0 0.4rem; padding-bottom: 0.4rem;
+  border-bottom: var(--hair) solid var(--rule-firm);
+}
+.wing__name {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--accent);
+}
+.wing__title { font-size: 1.24rem; font-weight: 600; }
+.wing__blurb { margin: 0.6rem 0 1rem; color: var(--ink-2); font-size: 0.9rem; font-style: italic; }
+
+.toc { list-style: none; margin: 0; padding: 0; }
+.toc__item { margin: 0 0 0.55rem; }
+.toc__link {
+  display: flex; align-items: baseline; gap: 0.5rem;
+  text-decoration: none; color: var(--ink);
+}
+.toc__link:hover .toc__t { color: var(--accent); }
+.toc__id {
+  font-family: var(--mono); font-size: 0.7rem; color: var(--ink-3);
+  letter-spacing: 0.08em; flex: 0 0 auto; min-width: 4.4em;
+}
+.toc__t { flex: 0 1 auto; }
+.toc__leader {
+  flex: 1 1 auto; height: 0.75em; min-width: 1.5em;
+  border-bottom: var(--hair) dotted var(--ink-3);
+}
+.toc__abstract {
+  margin: 0.15rem 0 0 calc(4.4em + 0.5rem);
+  font-size: 0.8rem; color: var(--ink-2); line-height: 1.45;
+}
+.toc__item--empty { color: var(--warn-ink); font-size: 0.84rem; font-style: italic; }
+
+/* --------------------------------------------------------------------------
+ * 13. A-Z index
+ * ------------------------------------------------------------------------ */
+
+.azjump { margin: 1.2rem 0; }
+.azjump__list {
+  display: flex; flex-wrap: wrap; gap: 0.2rem; list-style: none; margin: 0; padding: 0;
+}
+.azjump__list a {
+  display: inline-block; min-width: 1.9em; text-align: center;
+  padding: 0.1em 0.35em; text-decoration: none;
+  border: var(--hair) solid var(--rule); color: var(--ink-2);
+  font-variant-caps: small-caps; font-size: 0.82rem;
+}
+.azjump__list a:hover { border-color: var(--accent); color: var(--accent); }
+
+.filterbar {
+  display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap;
+  margin: 1.4rem 0; padding: 0.6rem 0;
+  border-top: var(--hair) solid var(--rule);
+  border-bottom: var(--hair) solid var(--rule);
+}
+.filterbar__l {
+  font-variant-caps: small-caps; letter-spacing: 0.1em;
+  font-size: 0.74rem; color: var(--ink-3);
+}
+.filterbar__i, .srch__i {
+  font: inherit; font-size: 0.9rem; flex: 1 1 16ch; min-width: 12ch;
+  background: var(--paper-deep); color: var(--ink);
+  border: var(--hair) solid var(--rule-firm); border-radius: 2px;
+  padding: 0.3rem 0.6rem;
+}
+.filterbar__c { font-size: 0.74rem; color: var(--ink-3); }
+
+.azcols { columns: 2 22ch; column-gap: var(--gutter); }
+@media (min-width: 60rem) { .azcols { columns: 3 20ch; } }
+.az__group { break-inside: avoid-column; margin: 0 0 1.4rem; }
+.az__letter {
+  margin: 0 0 0.4rem; font-size: 1.4rem; color: var(--accent);
+  border-bottom: var(--hair) solid var(--rule-firm); line-height: 1.2;
+}
+.az__list { list-style: none; margin: 0; padding: 0; }
+.az__item { margin: 0 0 0.2rem; break-inside: avoid; font-size: 0.86rem; }
+.az__link {
+  display: flex; align-items: baseline; gap: 0.3rem;
+  text-decoration: none; color: var(--ink);
+}
+.az__link:hover .az__term { color: var(--accent); }
+.az__leader {
+  flex: 1 1 auto; height: 0.7em; min-width: 0.8em;
+  border-bottom: var(--hair) dotted var(--ink-3);
+}
+.az__kind {
+  font-family: var(--mono); font-size: 0.62rem; color: var(--ink-3);
+  letter-spacing: 0.06em; flex: 0 0 auto;
+}
+.az__note { display: block; font-size: 0.76rem; color: var(--ink-2); }
+
+/* --------------------------------------------------------------------------
+ * 14. Lexicon
+ * ------------------------------------------------------------------------ */
+
+.lxlist { display: flex; flex-direction: column; gap: 1.6rem; }
+.lx {
+  border: var(--hair) solid var(--rule);
+  border-top: 2px solid var(--rule-firm);
+  padding: 1rem 1.1rem;
+  background: var(--paper);
+}
+.lx__head { margin-bottom: 0.6rem; }
+.lx__term { margin: 0 0 0.2rem; font-size: 1.16rem; font-weight: 600; }
+.lx__id { margin: 0; font-size: 0.72rem; color: var(--ink-3); display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.lx__srcdef {
+  margin: 0 0 0.8rem; font-size: 0.84rem; color: var(--ink-2);
+  padding-left: 0.8rem; border-left: 2px solid var(--rule);
+}
+.lx__grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22ch), 1fr));
+}
+.lx__cell {
+  font-size: 0.8rem; padding: 0.7rem 0.8rem;
+  background: var(--paper-deep);
+  border-top: var(--hair) solid var(--rule);
+}
+.lx__cell--none { color: var(--ink-3); }
+.lx__reg {
+  margin: 0 0 0.4rem; font-family: var(--sans); font-size: 0.6rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);
+}
+.lx__form { margin: 0 0 0.2rem; font-size: 1.12rem; line-height: 1.4; color: var(--ink); }
+.lx__iast { margin: 0 0 0.3rem; font-style: italic; color: var(--ink-2); }
+.lx__status { margin: 0.3rem 0; }
+.lx__gram, .lx__gloss, .lx__pc, .lx__hw { margin: 0.25rem 0; color: var(--ink-2); font-size: 0.76rem; }
+.lx__gloss { font-style: italic; }
+.lx__def { margin: 0.2rem 0 0; color: var(--ink-2); }
+.lx__more { margin-top: 0.5rem; font-size: 0.74rem; }
+.lx__more summary {
+  cursor: pointer; color: var(--ink-3);
+  font-variant-caps: small-caps; letter-spacing: 0.08em;
+}
+.lx__more summary:hover { color: var(--accent); }
+.lx__more p { margin: 0.4rem 0 0; color: var(--ink-2); }
+.lx__cit { font-size: 0.72rem; line-height: 1.5; }
+
+.cen { margin: 2rem 0; }
+.cen__note { font-size: 0.78rem; color: var(--ink-2); margin: 0.4rem 0 0.8rem; }
+.cen__t th { font-variant-caps: small-caps; letter-spacing: 0.08em; white-space: nowrap; }
+.cen__n { white-space: nowrap; }
+
+/* --------------------------------------------------------------------------
+ * 15. Ledgers
+ * ------------------------------------------------------------------------ */
+
+.lg { font-size: 0.78rem; }
+.lg td { line-height: 1.45; }
+.lg__class { white-space: nowrap; }
+
+/* --------------------------------------------------------------------------
+ * 16. See also, prev/next
+ * ------------------------------------------------------------------------ */
+
+.seealso { margin: 2.6rem 0 0; }
+.seealso__list { list-style: none; margin: 0.6rem 0 0; padding: 0; columns: 2 20ch; column-gap: var(--gutter); }
+.seealso__list li { margin: 0 0 0.35rem; break-inside: avoid; font-size: 0.86rem; }
+.seealso__note { display: block; font-size: 0.76rem; color: var(--ink-3); }
+
+.pn {
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  margin: 3rem 0 0; padding-top: 1rem;
+  border-top: var(--hair) solid var(--rule-firm);
+}
+.pn a { text-decoration: none; max-width: 24ch; }
+.pn__next { margin-left: auto; text-align: right; }
+.pn__dir {
+  display: block; font-family: var(--sans); font-size: 0.6rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);
+}
+.pn__t { color: var(--ink); }
+.pn a:hover .pn__t { color: var(--accent); }
+
+/* --------------------------------------------------------------------------
+ * 17. Search
+ * ------------------------------------------------------------------------ */
+
+.srch { display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap; margin: 1.4rem 0 0.6rem; }
+.srch__l { font-variant-caps: small-caps; letter-spacing: 0.1em; font-size: 0.74rem; color: var(--ink-3); }
+.srch__status { font-size: 0.78rem; color: var(--ink-3); margin: 0.4rem 0 1rem; }
+.srch__no { font-size: 0.84rem; color: var(--ink-2); }
+.results { list-style: none; margin: 0; padding: 0; }
+.result { margin: 0 0 1rem; padding-bottom: 0.8rem; border-bottom: var(--hair) solid var(--rule); }
+.result a { font-size: 1.02rem; }
+.result__wing { font-size: 0.7rem; color: var(--ink-3); font-family: var(--mono); letter-spacing: 0.06em; }
+.result__abstract { margin: 0.2rem 0 0; font-size: 0.82rem; color: var(--ink-2); }
+
+/* --------------------------------------------------------------------------
+ * 18. Colophon
+ * ------------------------------------------------------------------------ */
+
+.colo { text-align: center; padding: 2rem 0; }
+.colo__h { font-size: 1.8rem; font-weight: 600; margin: 0 0 0.4rem; }
+.colo .rule--double { max-width: 24ch; margin-left: auto; margin-right: auto; }
+.colo__body { margin: 0 auto; text-align: left; max-width: var(--measure); }
+.colo__stats {
+  display: grid; grid-template-columns: auto auto; gap: 0.3rem 1rem;
+  justify-content: center; margin: 2rem auto; text-align: left;
+  font-size: 0.84rem; max-width: 48ch;
+}
+.colo__stats dt {
+  font-variant-caps: small-caps; letter-spacing: 0.08em; color: var(--ink-3);
+  text-align: right;
+}
+.colo__stats dd { margin: 0; color: var(--ink); }
+.colo__fences { max-width: var(--measure); margin: 2rem auto; text-align: left; }
+.colo__fences h2 {
+  font-size: 0.9rem; font-variant-caps: small-caps; letter-spacing: 0.1em;
+  border-bottom: var(--hair) solid var(--rule); padding-bottom: 0.3rem;
+}
+.colo__fences ul { padding-left: 1.2em; font-size: 0.84rem; color: var(--ink-2); }
+.colo__fences li { margin: 0.4em 0; }
+.colo__mark { font-size: 1.6rem; color: var(--ink-3); margin: 2rem 0 1rem; }
+.colo__set {
+  margin: 0 auto; max-width: 46ch; font-size: 0.78rem;
+  font-style: italic; color: var(--ink-3);
+}
+
+/* --------------------------------------------------------------------------
+ * 19. Provenance footer - a first-class surface, on every page
+ * ------------------------------------------------------------------------ */
+
+.prov {
+  max-width: calc(var(--measure) + var(--margin-col) + var(--gutter));
+  margin: 4rem auto 0; padding: 1.2rem 0 0;
+  border-top: 2px solid var(--rule-firm);
+  font-size: 0.76rem; color: var(--ink-2);
+}
+.prov__h {
+  font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase;
+  font-variant-caps: normal; color: var(--ink-3);
+  border: 0; margin: 0 0 0.6rem; padding: 0;
+}
+.prov__row { display: flex; gap: 0.8rem; padding: 0.18rem 0; align-items: baseline; }
+.prov__k {
+  flex: 0 0 9em; font-variant-caps: small-caps; letter-spacing: 0.08em;
+  color: var(--ink-3); text-align: right;
+}
+.prov__v { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.prov__sha, .prov__commit { font-size: 0.72rem; }
+.prov__absent { color: var(--warn-ink); font-style: italic; }
+.prov__note { margin: 0.9rem 0 0; font-style: italic; color: var(--ink-3); max-width: 62ch; }
+.prov__pending {
+  margin: 0.8rem 0 0; padding: 0.5rem 0.8rem;
+  background: var(--warn-bg); color: var(--warn-ink);
+  border-left: 3px solid var(--warn-ink);
+}
+.prov__more { margin: 0.6rem 0 0; }
+.prov__more summary { cursor: pointer; color: var(--ink-3); font-variant-caps: small-caps; letter-spacing: 0.08em; }
+.prov__list { margin: 0.4rem 0 0; padding-left: 1.2em; font-size: 0.72rem; }
+.prov__sha2 { color: var(--ink-3); }
+
+/* --------------------------------------------------------------------------
+ * 19b. e-reader UX -- sidebar (contents) + top/bottom chrome + TOC overlay +
+ *     Scrivener capture skeleton + text-size / theme controls + sepia theme.
+ *     Applied only to .page--chapter, .page--index, .page--az, .page--lexicon
+ *     (see _ereader_wrap in templates.py). Plate / ledger / colophon / search
+ *     keep the plain volume layout because the chrome would add furniture
+ *     without adding reading.
+ *
+ *     JS CONTRACT -- the reader wires this shell via data-role attributes and
+ *     addEventListener from a vendored script. No on* handlers exist in the
+ *     emitted HTML (the fence forbids them). With scripting off, the sidebar
+ *     is a semantic <ol> of links, the buttons still render, the modal and
+ *     the overlay stay hidden, and the reading pane still reads.
+ * ------------------------------------------------------------------------ */
+
+/* --- sepia theme ---------------------------------------------------------
+ * Warm parchment; warm brown ink. Sits between light and dark on eye load.
+ * Registered on the theme contract (data-theme='light'|'dark'|'sepia') --
+ * plate SVGs currently implement only the light/dark pair, so on a plate
+ * page under sepia the plate falls back to its light rendering. Documented
+ * rather than hidden. */
+:root[data-theme="sepia"] {
+  --paper:      #f2e6ce;
+  --paper-deep: #ead9b8;
+  --paper-edge: #dfcda2;
+  --ink:        #3a2a14;
+  --ink-2:      #5b4526;
+  --ink-3:      #8a7248;
+  --rule:       #c7b385;
+  --rule-firm:  #5b4526;
+  --accent:     #7a2e18;
+  --accent-2:   #6a5220;
+  --uni-ink:    #2b4657;
+  --uni-bg:     #e6dcbe;
+  --nat-ink:    #3d5a37;
+  --nat-bg:     #e2d9b5;
+  --warn-ink:   #6b3410;
+  --warn-bg:    #ecd8b0;
+  --honest-ink: #5a3760;
+  --honest-bg:  #ead9c3;
+  --plate-ink:    #3a2a14;
+  --plate-paper:  #f2e6ce;
+  --plate-rule:   #5b4526;
+  --plate-faint:  #8a7248;
+  --plate-accent: #7a2e18;
+  --plate-wash:   #dfcda2;
+}
+
+/* --- font-size scale ---------------------------------------------------- */
+:root[data-font-size="S"] .prose { font-size: 1rem;  line-height: 1.65; }
+:root[data-font-size="M"] .prose { font-size: 1.06rem; line-height: 1.7; }
+:root[data-font-size="L"] .prose { font-size: 1.16rem; line-height: 1.75; }
+.prose { font-size: clamp(1rem, 0.95rem + 0.2vw, 1.1rem); line-height: 1.7; }
+
+/* --- shell layout ------------------------------------------------------- */
+.ereader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  max-width: 100%;
+  min-height: 100vh;
+}
+@media (min-width: 68rem) {
+  .ereader {
+    grid-template-columns: 22rem minmax(0, 1fr);
+    max-width: none;
+  }
+  :root[data-sidebar="collapsed"] .ereader { grid-template-columns: 3.2rem minmax(0, 1fr); }
+  :root[data-sidebar="hidden"] .ereader { grid-template-columns: minmax(0, 1fr); }
+}
+.reader-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* --- sidebar (left rail: contents) --------------------------------------- */
+.sidebar {
+  border-right: var(--hair) solid var(--rule);
+  background: var(--paper-deep);
+  padding: 1.1rem 1rem 4rem;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  max-height: 100vh;
+}
+@media (max-width: 67.99rem) {
+  /* On narrow viewports the sidebar collapses to a header-height strip; the
+   * corpus tree is still reachable via the TOC overlay (t / topbar button). */
+  .sidebar {
+    position: static; max-height: none; padding: 0.6rem 1rem;
+    border-right: 0; border-bottom: var(--hair) solid var(--rule);
+  }
+  .sidebar .sb__tree { display: none; }
+}
+.sb__head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.6rem; margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem; border-bottom: var(--hair) solid var(--rule);
+}
+.sb__label {
+  font-variant-caps: small-caps; letter-spacing: 0.1em;
+  color: var(--ink-3); font-size: 0.76rem;
+}
+.sb__collapse {
+  font: inherit; font-size: 0.9rem;
+  background: transparent; color: var(--ink-3);
+  border: var(--hair) solid var(--rule);
+  border-radius: 2px; padding: 0.1rem 0.5rem; cursor: pointer;
+}
+.sb__collapse:hover { color: var(--accent); border-color: var(--accent); }
+:root[data-sidebar="collapsed"] .sb__head .sb__label,
+:root[data-sidebar="collapsed"] .sb__tree,
+:root[data-sidebar="collapsed"] .sb__empty { display: none; }
+:root[data-sidebar="hidden"] .sidebar { display: none; }
+
+.sb__tree { list-style: none; margin: 0; padding: 0; }
+.sb__wing { margin: 0.4rem 0; }
+.sb__wing > details > summary {
+  cursor: pointer; list-style: none;
+  display: flex; align-items: baseline; gap: 0.4rem;
+  padding: 0.28rem 0.2rem;
+  font-variant-caps: small-caps; letter-spacing: 0.06em;
+  font-size: 0.8rem; color: var(--ink-2);
+}
+.sb__wing > details > summary::-webkit-details-marker { display: none; }
+.sb__wing > details[open] > summary { color: var(--ink); }
+.sb__wingcode { font-weight: 600; color: var(--ink); }
+.sb__wingtitle { color: var(--ink-3); }
+.sb__chapters { list-style: none; margin: 0.15rem 0 0.4rem; padding: 0 0 0 0.8rem; }
+.sb__ch a {
+  display: flex; align-items: baseline; gap: 0.5rem;
+  padding: 0.18rem 0.35rem;
+  text-decoration: none; color: var(--ink-2);
+  border-left: 2px solid transparent;
+  font-size: 0.86rem;
+}
+.sb__ch a:hover { background: var(--paper); color: var(--ink); border-left-color: var(--accent); }
+.sb__ch--current a {
+  color: var(--ink); background: var(--paper);
+  border-left-color: var(--accent); font-weight: 600;
+}
+.sb__id { color: var(--ink-3); font-family: var(--mono); font-size: 0.72rem; min-width: 5ch; }
+.sb__ch--current .sb__id { color: var(--accent); }
+.sb__empty { color: var(--ink-3); font-style: italic; font-size: 0.85rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* --- topchrome --------------------------------------------------------- */
+.topchrome {
+  display: flex; align-items: center; gap: 0.8rem;
+  padding: 0.55rem 0.9rem;
+  background: var(--paper);
+  border-bottom: var(--hair) solid var(--rule);
+  position: sticky; top: 0; z-index: 4;
+}
+.tc__lead { display: flex; align-items: baseline; gap: 0.6rem; min-width: 0; flex: 1 1 auto; }
+.tc__mid { flex: 0 0 auto; }
+.tc__tail { display: flex; align-items: center; gap: 0.5rem; flex: 0 0 auto; flex-wrap: wrap; justify-content: flex-end; }
+.tc__toc {
+  font: inherit; font-size: 1.1rem;
+  background: transparent; color: var(--ink-2);
+  border: var(--hair) solid var(--rule);
+  border-radius: 2px; padding: 0.05rem 0.55rem; cursor: pointer;
+}
+.tc__toc:hover { color: var(--accent); border-color: var(--accent); }
+.tc__title {
+  margin: 0; font-family: var(--serif); font-size: 0.96rem; font-weight: 600;
+  color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  min-width: 0;
+}
+.tc__pos { color: var(--ink-3); font-size: 0.78rem; font-variant-caps: small-caps; letter-spacing: 0.06em; }
+.tc__nav { display: flex; gap: 0.25rem; }
+.tc__nav a {
+  color: var(--ink-2); text-decoration: none; padding: 0.1rem 0.55rem;
+  border: var(--hair) solid var(--rule); border-radius: 2px;
+}
+.tc__nav a:hover { color: var(--accent); border-color: var(--accent); }
+.tc__group {
+  display: inline-flex; border: var(--hair) solid var(--rule); border-radius: 2px;
+  overflow: hidden;
+}
+.tc__group button {
+  font: inherit; font-size: 0.76rem;
+  background: transparent; color: var(--ink-2);
+  border: 0; padding: 0.14rem 0.5rem; cursor: pointer;
+  border-left: var(--hair) solid var(--rule);
+}
+.tc__group button:first-child { border-left: 0; }
+.tc__group button:hover { background: var(--paper-deep); color: var(--ink); }
+.tc__group[data-value="S"] button[data-size="S"],
+.tc__group[data-value="M"] button[data-size="M"],
+.tc__group[data-value="L"] button[data-size="L"],
+.tc__group[data-value="light"] button[data-theme-choice="light"],
+.tc__group[data-value="sepia"] button[data-theme-choice="sepia"],
+.tc__group[data-value="dark"] button[data-theme-choice="dark"] {
+  background: var(--accent); color: var(--paper);
+}
+.tc__search { display: inline-flex; align-items: center; }
+.tc__search input {
+  font: inherit; font-size: 0.82rem;
+  background: var(--paper-deep); color: var(--ink);
+  border: var(--hair) solid var(--rule); border-radius: 2px;
+  padding: 0.14rem 0.5rem; width: 14ch;
+}
+.tc__search input:focus { border-color: var(--accent); outline: none; }
+.tc__note {
+  font: inherit; font-size: 0.82rem;
+  background: var(--paper-deep); color: var(--ink-2);
+  border: var(--hair) solid var(--rule); border-radius: 2px;
+  padding: 0.16rem 0.6rem; cursor: pointer;
+}
+.tc__note:hover { color: var(--accent); border-color: var(--accent); }
+@media (max-width: 52rem) {
+  .tc__title { font-size: 0.86rem; }
+  .tc__pos, .tc__search { display: none; }
+}
+
+/* --- bottomchrome ------------------------------------------------------ */
+.bottomchrome {
+  border-top: var(--hair) solid var(--rule);
+  background: var(--paper);
+  padding: 0.4rem 0.9rem 0.6rem;
+  position: sticky; bottom: 0; z-index: 3;
+}
+.bc__progress {
+  height: 3px; background: var(--paper-edge); border-radius: 2px;
+  overflow: hidden; margin-bottom: 0.4rem;
+}
+.bc__progressbar {
+  height: 100%; width: 0%;
+  background: var(--accent);
+  transition: width 0.15s linear;
+}
+.bc__row { display: flex; align-items: baseline; justify-content: space-between; gap: 0.8rem; font-size: 0.76rem; flex-wrap: wrap; }
+.bc__prov { color: var(--ink-2); }
+.bc__provlabel { color: var(--ink-3); font-variant-caps: small-caps; letter-spacing: 0.08em; }
+.bc__provvalue { font-family: var(--mono); font-size: 0.74rem; }
+.bc__switch { position: relative; }
+.bc__switch summary {
+  cursor: pointer; list-style: none;
+  color: var(--ink-3); font-variant-caps: small-caps; letter-spacing: 0.08em;
+  padding: 0.1rem 0.4rem; border: var(--hair) solid var(--rule); border-radius: 2px;
+}
+.bc__switch summary::-webkit-details-marker { display: none; }
+.bc__switch[open] summary { color: var(--accent); border-color: var(--accent); }
+.bc__limbs {
+  position: absolute; right: 0; bottom: calc(100% + 0.3rem);
+  list-style: none; margin: 0; padding: 0.4rem 0.5rem;
+  background: var(--paper); border: var(--hair) solid var(--rule);
+  min-width: 12rem; z-index: 5;
+}
+.bc__limbs a { display: block; padding: 0.2rem 0.3rem; color: var(--ink-2); text-decoration: none; }
+.bc__limbs a:hover { color: var(--accent); background: var(--paper-deep); }
+.bc__limbs--empty { color: var(--ink-3); font-style: italic; }
+
+/* --- TOC overlay -------------------------------------------------------- */
+.tocoverlay {
+  position: fixed; inset: 0; z-index: 20;
+  background: color-mix(in srgb, var(--ink) 45%, transparent);
+  display: flex; align-items: stretch; justify-content: flex-start;
+}
+.tocoverlay[hidden] { display: none; }
+.toc__panel {
+  background: var(--paper); color: var(--ink);
+  width: min(38rem, 92vw); max-width: 100%;
+  padding: 1.4rem 1.6rem; overflow-y: auto;
+  border-right: 2px solid var(--rule-firm);
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.toc__head { display: flex; align-items: baseline; justify-content: space-between; }
+.toc__h { margin: 0; font-family: var(--serif); font-size: 1.3rem; }
+.toc__close {
+  font: inherit; font-size: 1.4rem; line-height: 1;
+  background: transparent; color: var(--ink-2);
+  border: var(--hair) solid var(--rule); border-radius: 2px;
+  padding: 0.05rem 0.55rem; cursor: pointer;
+}
+.toc__close:hover { color: var(--accent); border-color: var(--accent); }
+.toc__body { flex: 1 1 auto; }
+.toc__wing { margin: 0 0 1.1rem; }
+.toc__wingh {
+  margin: 0 0 0.4rem; font-family: var(--serif); font-size: 0.86rem;
+  font-variant-caps: small-caps; letter-spacing: 0.08em;
+  color: var(--ink-2); border-bottom: var(--hair) solid var(--rule);
+  padding-bottom: 0.2rem;
+  display: flex; gap: 0.5rem; align-items: baseline;
+}
+.toc__wingcode { color: var(--ink); font-weight: 600; }
+.toc__wingtitle { color: var(--ink-3); }
+.toc__list { list-style: none; margin: 0; padding: 0; }
+.toc__ch { margin: 0.1rem 0; }
+.toc__ch a {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  padding: 0.22rem 0.35rem;
+  text-decoration: none; color: var(--ink-2);
+}
+.toc__ch a:hover { background: var(--paper-deep); color: var(--ink); }
+.toc__ch--current a { color: var(--ink); background: var(--paper-deep); font-weight: 600; }
+.toc__id { color: var(--ink-3); font-family: var(--mono); font-size: 0.74rem; min-width: 6ch; }
+.toc__t { flex: 1 1 auto; }
+.toc__prog {
+  display: inline-block; width: 3rem; height: 3px;
+  background: var(--paper-edge); border-radius: 2px;
+  position: relative;
+}
+.toc__prog::after {
+  content: ""; position: absolute; inset: 0; width: var(--p, 0%);
+  background: var(--accent); border-radius: 2px;
+}
+.toc__foot { border-top: var(--hair) solid var(--rule); padding-top: 0.8rem; }
+.toc__kh {
+  margin: 0 0 0.4rem; font-size: 0.78rem;
+  font-variant-caps: small-caps; letter-spacing: 0.08em; color: var(--ink-3);
+}
+.toc__keys { display: grid; grid-template-columns: auto 1fr; gap: 0.15rem 0.7rem; margin: 0; font-size: 0.8rem; }
+.toc__keys dt { margin: 0; }
+.toc__keys dd { margin: 0; color: var(--ink-2); }
+.toc__keys kbd {
+  font-family: var(--mono); font-size: 0.72rem;
+  background: var(--paper-deep); color: var(--ink);
+  border: var(--hair) solid var(--rule); border-radius: 2px;
+  padding: 0 0.3em;
+}
+.toc__empty { color: var(--ink-3); font-style: italic; }
+
+/* --- Scrivener capture modal skeleton + floating add button ------------- */
+.scriv-modal {
+  position: fixed; inset: 0; z-index: 25;
+  background: color-mix(in srgb, var(--ink) 55%, transparent);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.2rem;
+}
+.scriv-modal[hidden] { display: none; }
+.scriv__panel {
+  background: var(--paper); color: var(--ink);
+  width: min(42rem, 96vw); max-height: 88vh; overflow: auto;
+  border: 2px solid var(--rule-firm);
+  display: flex; flex-direction: column;
+}
+.scriv__head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 1rem 1.2rem 0.6rem; border-bottom: var(--hair) solid var(--rule);
+}
+.scriv__h { margin: 0; font-family: var(--serif); font-size: 1.15rem; }
+.scriv__close {
+  font: inherit; font-size: 1.4rem; line-height: 1;
+  background: transparent; color: var(--ink-2);
+  border: var(--hair) solid var(--rule); border-radius: 2px;
+  padding: 0.05rem 0.55rem; cursor: pointer;
+}
+.scriv__close:hover { color: var(--accent); border-color: var(--accent); }
+.scriv__body { padding: 1rem 1.2rem 1.2rem; }
+.scriv__pending { color: var(--ink-3); font-style: italic; margin: 0; }
+
+.floating-add {
+  position: fixed; right: 1.2rem; bottom: 1.4rem; z-index: 15;
+  font: inherit; font-size: 0.86rem;
+  background: var(--accent); color: var(--paper);
+  border: 0; border-radius: 999px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.floating-add:hover { filter: brightness(1.06); }
+.floating-add[data-scroll="down"] { transform: translateY(120%); opacity: 0; pointer-events: none; }
+.floating-add__l { font-variant-caps: small-caps; letter-spacing: 0.06em; }
+
+/* The e-reader shell replaces the top body gutters for chapter/index/az/lexicon
+ * pages -- body still adds bottom padding for the sticky bottomchrome to rest
+ * above. */
+.page--chapter, .page--index, .page--az, .page--lexicon {
+  padding-left: 0; padding-right: 0;
+}
+.page--chapter .rh, .page--index .rh, .page--az .rh, .page--lexicon .rh,
+.page--chapter .vnav, .page--index .vnav, .page--az .vnav, .page--lexicon .vnav,
+.page--chapter .reg, .page--index .reg, .page--az .reg, .page--lexicon .reg {
+  padding-left: var(--gutter); padding-right: var(--gutter);
+}
+.page--chapter .reader-col > main,
+.page--index .reader-col > main,
+.page--az .reader-col > main,
+.page--lexicon .reader-col > main {
+  padding: 1.6rem var(--gutter);
+}
+
+/* --------------------------------------------------------------------------
+ * 20. Print - it must come off the printer as a page from the volume
+ * ------------------------------------------------------------------------ */
+
+@media print {
+  :root {
+    --paper: #fff; --paper-deep: #fff; --paper-edge: #fff;
+    --ink: #000; --ink-2: #1a1a1a; --ink-3: #555;
+    --rule: #999; --rule-firm: #000; --accent: #000; --accent-2: #333;
+    --uni-ink: #000; --uni-bg: #fff;
+    --nat-ink: #000; --nat-bg: #fff;
+    --warn-ink: #000; --warn-bg: #fff;
+    --honest-ink: #000; --honest-bg: #fff;
+    --plate-ink: #000; --plate-paper: #fff; --plate-rule: #000;
+    --plate-faint: #666; --plate-accent: #000; --plate-wash: #fff;
+  }
+
+  html { font-size: 10.5pt; background: #fff; }
+  body { padding: 0; }
+
+  @page {
+    margin: 18mm 16mm;
+  }
+
+  /* Furniture that is screen-only. */
+  .vnav, .skip, .azjump, .filterbar, .srch, .pn, #themetoggle,
+  .sidebar, .topchrome, .bottomchrome, .tocoverlay,
+  .scriv-modal, .floating-add { display: none !important; }
+  .ereader { display: block; }
+  .reader-col { display: block; }
+  .reg { border: 0; padding: 0; margin: 0 0 0.5rem; }
+  .reg__list { gap: 0.2rem; }
+  .reg__item a { border: 0; padding: 0 0.3em; }
+  .reg__item:not(.reg__item--current) { display: none; }
+
+  .rh {
+    border-bottom: 0.5pt solid #000;
+    position: running(head);
+  }
+
+  .volume, .volume--wide, .prov {
+    display: block; max-width: 100%; margin: 0;
+  }
+  .margin { margin-top: 1.5em; }
+  .mn { background: none; border-left: 0.5pt solid #000; padding: 0 0 0 0.7em; }
+
+  /* Never break these across a page. */
+  .plate, .abstract, .fencebox, .vocabbox, .pendingbox, .mn,
+  .az__group, .lx, .result, figure, tr { break-inside: avoid; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  .ch__title, .pg__title, .tp__title { break-after: avoid; }
+  .numbers, .pclaims { break-before: auto; }
+  .prov { break-before: page; border-top: 1pt solid #000; padding-top: 0.6em; }
+
+  /* Colour is gone; shape and sigil carry the vocabularies. This is exactly why
+   * they were never allowed to depend on colour. */
+  .fence { border: 0.75pt solid #000; box-shadow: none; border-radius: 0; }
+  .fence__sigil { background: #000; color: #fff; }
+  .fence__value { background: #fff; color: #000; }
+  .natura { border: 0.5pt solid #000; border-radius: 999px; }
+  .natura__sigil { background: #000; color: #fff; }
+  .natura__value { background: #fff; color: #000; }
+  .natura--group-fenced { border-style: dashed; }
+  .lex, .store { border: 0.5pt solid #000; }
+
+  /* Details must print open: a falsifier the printer swallows is not a falsifier. */
+  details { display: block; }
+  details > summary { display: none; }
+  .lx__more p, .prov__list { display: block; }
+
+  a { color: #000; text-decoration: none; }
+  .prose a { text-decoration: underline; }
+  /* No href-in-parens expansion: these are relative paths in an offline volume,
+   * so printing them would add noise, not information. */
+
+  table { font-size: 8.5pt; }
+  thead { display: table-header-group; }
+  .tablewrap { overflow: visible; }
+
+  .plate__art { border: 0.5pt solid #000; padding: 0; }
+  .prose pre { border: 0.5pt solid #666; background: none; }
+  .empty { border: 0.5pt dashed #000; }
+}
+
+/* --------------------------------------------------------------------------
+ * 21. Accessibility preferences
+ * ------------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+@media (prefers-contrast: more) {
+  :root { --ink-2: var(--ink); --ink-3: var(--ink); --rule: var(--rule-firm); }
+  .fence, .natura, .lex, .store { border-width: 2px; }
+}
+
+/* --- FIX 2026-07-16 - promote ereader chrome above legacy chrome ------------
+   Diagnosis (JS probe of the served page): the legacy .rh/.vnav/.reg header
+   stack occupies 0-229px above the fold, and the ereader topchrome renders
+   inside .reader-col below them -- so the operator opens the page and sees
+   exactly the pre-ereader layout. This block hides the redundant legacy chrome
+   on ereader pages (ereader has TOC + theme + font + search + +Note in its own
+   topchrome, and the sidebar carries the register-equivalent tree), and makes
+   the topchrome sticky at the very top so the reader controls are the FIRST
+   thing on screen. Register switcher moves to a small strip below the sidebar
+   -- kept in DOM so existing tests still find it. --------------------------- */
+
+@supports selector(:has(*)) {
+  body:has(.ereader) > .rh,
+  body:has(.ereader) > .vnav {
+    display: none;
+  }
+  body:has(.ereader) > .reg {
+    padding: 0.3rem 1rem;
+    font-size: 0.78rem;
+    border-bottom: 1px solid var(--rule, #ddd);
+    opacity: 0.72;
+  }
+}
+
+/* Topchrome must be sticky and dominate the top of the page. */
+.ereader .topchrome {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper, #fdfaf3);
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid var(--rule, #ddd);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+:root[data-theme="dark"] .ereader .topchrome { background: #14161a; }
+:root[data-theme="sepia"] .ereader .topchrome { background: #f4ecd8; }
+
+/* Make the +Note button in the topchrome visually PROMINENT
+   (the floating one bottom-right is fine as a secondary affordance). */
+.ereader .topchrome [data-role="scrivener-open"] {
+  margin-left: auto;
+  background: var(--accent, #5b2a12);
+  color: var(--paper, #fdfaf3);
+  padding: 0.42rem 0.9rem;
+  border-radius: 6px;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ereader .topchrome [data-role="scrivener-open"]:hover { filter: brightness(1.08); }
+
+/* Narrower sidebar so reading pane gets more room (was 396px, too wide). */
+@media (min-width: 900px) {
+  .ereader { grid-template-columns: minmax(220px, 260px) minmax(0, 1fr) !important; }
+}
+@media (max-width: 899px) {
+  .ereader { grid-template-columns: minmax(0, 1fr) !important; }
+  .ereader .sidebar { display: none; }
+}

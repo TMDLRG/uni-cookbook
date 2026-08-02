@@ -1,0 +1,240 @@
+{
+  "id": "PL-01",
+  "title": "The Markov blanket — MIND / BODY / MIND.BODY / WORLD",
+  "caption": "A hand-engraved reference plate of the four-way Markov-blanket partition: internal states μ (MIND), sensory states s, active states a, external states η (WORLD), with the blanket b = {s, a} (BODY). FIG. 1 draws the partition and its two routes — the world reaches the mind only through s, the mind reaches the world only through a — and crosses out the direct route (∂μ̇/∂η = 0, ∂η̇/∂μ = 0), the bypass whose existence would mean I(μ;η|b) > 0 and a partition drawn in the wrong place. MIND.BODY is drawn as callout ③: not a fifth set, but the coupling μ ↔ b, a pair of one-way doors. FIG. 2 states the defining condition as a formula: p(μ,η|b) = p(μ|b)·p(η|b) ⇔ μ ⊥ η | b ⇔ I(μ;η|b) = 0 nats. FIG. 3 draws nesting as blankets-within-blankets and ends the recursion in a NOT-MEASURED stamp, because no count of nested blanket levels in any named organism exists. FIG. 4 quantifies one real blanket — the human visual funnel — with every count carrying units, scope, class, source and falsifier. The plate anchors to kitchen rule M12 and raises nothing: M12 is status: method, and a nature citation is never a UNI gate. The Pearl-vs-Friston caveat is set as a marginal note ON the plate, because the central claim of the source chapter is that a Markov blanket is a modelling choice to be justified per system, not a fact that may be assumed.",
+  "source_chapters": [
+    "encyclopedia/wing-NATURA/NA-04-mind-body-world.md",
+    "encyclopedia/NATURE-LEDGER.md (rows NA04-01 … NA04-14)",
+    "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md (evidence-class vocabulary, amended 2026-07-15)",
+    "cookbook/01-kitchen-rules.md (M12 — WORLD ⊥ BODY ⊥ MIND; the anchor)"
+  ],
+  "anchor": {
+    "rule": "M12",
+    "statement": "WORLD ⊥ BODY ⊥ MIND — two typed Markov blankets; interoception = hardware signals.",
+    "status": "status: method",
+    "note": "A governance pattern, not a capability claim and not an observation about nature. This plate supplies the natural-science reading of the same partition and raises nothing. M12's status is unchanged by every citation on the plate. The operator's fourth term, MIND.BODY, is the one M12 leaves implicit; the plate draws it as callout ③."
+  },
+  "claims": [
+    {
+      "ref": "NA04-01",
+      "symbol": "μ ⊥ η | b",
+      "value": "p(μ,η|b) = p(μ|b)·p(η|b)",
+      "units": "— (definition)",
+      "scope": "any system admitting the 4-way partition",
+      "class": "MODELED",
+      "class_note": "definitional; the assumption is that the partition is GIVEN, not discovered",
+      "source": "Pearl (1988), Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference, Morgan Kaufmann",
+      "falsifier": "Not falsifiable as a definition. The application to system X is falsified by I(μ;η|b) > 0 in X.",
+      "on_plate": "FIG. 2 cartouche; caption 2"
+    },
+    {
+      "ref": "NA04-02",
+      "symbol": "I(μ;η|b)",
+      "value": "0 (required)",
+      "units": "nats",
+      "scope": "the operable blanket test, any system",
+      "class": "NOT-MEASURED",
+      "class_note": "NOT-MEASURED for essentially all real biological systems — the criterion is clean and overwhelmingly unexercised",
+      "source": "criterion: Pearl (1988); attempts: Friston et al. (2021) Netw Neurosci 5(1):211–251; Beck & Ramstead (2025) arXiv:2502.21217",
+      "falsifier": "Estimate it for a named organism's real boundary. Any I > 0 beyond estimator noise refutes that blanket.",
+      "on_plate": "FIG. 2 cartouche; FIG. 1 callout ④; caption 5"
+    },
+    {
+      "ref": "NA04-03",
+      "symbol": "H_μη, H_ημ",
+      "value": "0 (required)",
+      "units": "precision units",
+      "scope": "linear Gaussian / Ornstein–Uhlenbeck systems",
+      "class": "MODELED",
+      "class_note": "holds only in a 'very narrow space of parameters'; assumptions: linearity, weak coupling C² small, homogeneous noise Γ = ς²I",
+      "source": "Aguilera, Millidge, Tschantz & Buckley (2022), Physics of Life Reviews, arXiv:2105.11203",
+      "falsifier": "Exhibit a broad, non-symmetric parameter region of a non-equilibrium system where the blocks vanish.",
+      "on_plate": "marginal note; caption 2"
+    },
+    {
+      "ref": "NA04-04",
+      "symbol": "N_rod",
+      "value": "92 × 10⁶ (range 77.9–107.3 × 10⁶)",
+      "units": "cells",
+      "scope": "human retina; 8 wholemounts, 7 donors, ages 27–44",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Curcio, Sloan, Kalina & Hendrickson (1990), J Comp Neurol 292:497–523, DOI 10.1002/cne.902920402",
+      "falsifier": "Recount in a comparable cohort; a mean outside the stated range refutes.",
+      "on_plate": "FIG. 4 table + funnel"
+    },
+    {
+      "ref": "NA04-05",
+      "symbol": "N_cone",
+      "value": "4.6 × 10⁶ (range 4.08–5.29 × 10⁶)",
+      "units": "cells",
+      "scope": "human retina; 8 wholemounts, 7 donors, ages 27–44",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Curcio et al. (1990)",
+      "falsifier": "Recount in a comparable cohort; a mean outside the stated range refutes.",
+      "on_plate": "FIG. 4 table + funnel"
+    },
+    {
+      "ref": "NA04-06",
+      "symbol": "D_cone,fovea",
+      "value": "199,000 (range 100,000–324,000)",
+      "units": "cones/mm²",
+      "scope": "human foveal peak; same cohort",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Curcio et al. (1990)",
+      "falsifier": "Recount in a comparable cohort; a mean outside the stated range refutes.",
+      "on_plate": "FIG. 4 table"
+    },
+    {
+      "ref": "NA04-07",
+      "symbol": "N_optic",
+      "value": "1,159,000 ± 196,000 (range 816,000–1,502,000)",
+      "units": "axons",
+      "scope": "human optic nerve; 22 nerves, 19 subjects, ages 20–75",
+      "class": "OBSERVED-REPLICATED",
+      "source": "Jonas, Müller-Bergh, Schlötzer-Schrehardt & Naumann (1990), Invest Ophthalmol Vis Sci 31(4):736–744",
+      "falsifier": "Recount; a mean outside the stated range refutes.",
+      "on_plate": "FIG. 4 table + funnel"
+    },
+    {
+      "ref": "NA04-08",
+      "symbol": "r_retina",
+      "value": "≈ 83 : 1",
+      "units": "dimensionless",
+      "scope": "human visual blanket, order-of-magnitude only",
+      "class": "MODELED",
+      "class_note": "NOT a measurement. Assumptions are the fence: (N_rod + N_cone)/N_optic computed across DIFFERENT COHORTS, UNPAIRED, no per-eye matching; ignores non-uniform convergence (foveal ≈ 1:1 vs peripheral ≫ 100:1)",
+      "source": "arithmetic on Curcio et al. (1990) + Jonas et al. (1990)",
+      "falsifier": "Measure both counts in the same eyes. A paired ratio outside ~50–150 : 1 refutes this estimate.",
+      "on_plate": "FIG. 4 headline + table"
+    },
+    {
+      "ref": "NA04-09",
+      "symbol": "f_aff (rat)",
+      "value": "~80% afferent / 20% efferent",
+      "units": "% of fibers",
+      "scope": "RAT, ABDOMINAL vagus",
+      "class": "OBSERVED-CONTESTED",
+      "class_note": "the widely-quoted '80% of the vagus is afferent', routinely cited outside this scope; carried on the plate as a named scope violation — a number quoted outside its scope is a defect even when the number is right",
+      "source": "Prechtl & Powley (1990), Anat Embryol 181:101–115, DOI 10.1007/BF00198950",
+      "falsifier": "Measure the human cervical vagus and obtain 80% ± small. Kronsteiner et al. (2024) did, and did not.",
+      "on_plate": "FIG. 3 interoception note"
+    },
+    {
+      "ref": "NA04-10",
+      "symbol": "f_aff (human)",
+      "value": "sensory 73.9 ± 7.5% (R), 72.4 ± 5.6% (L); sympathetic 13 ± 5.9% / 14.3 ± 4.0%",
+      "units": "% of fibers",
+      "scope": "HUMAN, CERVICAL vagus; 8 cadavers, immunofluorescence",
+      "class": "OBSERVED-CONTESTED",
+      "class_note": "carry with NA04-09; both positions stand",
+      "source": "Kronsteiner et al. (2024), Brain Stimulation 17(3):510–524, DOI 10.1016/j.brs.2024.04.016",
+      "falsifier": "Independent replication in a larger cohort; a sensory fraction outside ~65–82% refutes.",
+      "on_plate": "FIG. 3 interoception note"
+    },
+    {
+      "ref": "NA04-13",
+      "symbol": "n_levels",
+      "value": null,
+      "units": "nested blankets",
+      "scope": "any named organism, established by measurement rather than by choosing a diagram",
+      "class": "NOT-MEASURED",
+      "class_note": "printed as an empty face rather than filled — the recursion in FIG. 3 terminates in a NOT-MEASURED stamp on purpose",
+      "source": "none found",
+      "falsifier": "Estimate I(μ;η|b) at each candidate level of one real organism and count the levels that pass.",
+      "on_plate": "FIG. 3 stamp"
+    },
+    {
+      "ref": "NA04-14",
+      "symbol": "descending motor signal",
+      "value": "proprioceptive prediction, not command",
+      "units": "—",
+      "scope": "vertebrate motor system",
+      "class": "HYPOTHESIZED",
+      "class_note": "mechanism proposed, not settled",
+      "source": "Adams, Shipp & Friston (2013), Brain Struct Funct 218:611–643, DOI 10.1007/s00429-012-0475-5",
+      "falsifier": "Show descending signals encode forces/commands with no proprioceptive-prediction structure, or reflex arcs that do not discharge predicted state.",
+      "on_plate": "caption 4"
+    }
+  ],
+  "structural_statements": [
+    "The partition: a system's states z partition into four DISJOINT subsets — internal μ (MIND), sensory s, active a, external η (WORLD). The blanket is b = {s, a} — BODY.",
+    "The conditional independence, drawn as a formula on the plate: p(μ,η|b) = p(μ|b)·p(η|b) ⇔ μ ⊥ η | b ⇔ I(μ;η|b) = 0 nats.",
+    "Route 1 (world → mind): only via sensory states s. Route 2 (mind → world): only via active states a. Drawn solid/filled-tip and dashed/open-tip respectively, so the distinction survives greyscale.",
+    "The forbidden route: ∂μ̇/∂η = 0 and ∂η̇/∂μ = 0, drawn as an arc bypassing the blanket and crossed out. An actual route there means I(μ;η|b) > 0 and the partition is drawn in the wrong place.",
+    "MIND.BODY is not a fifth set: it is the coupling μ ↔ b, a pair of one-way doors — s the world's only route in, a the mind's only route out.",
+    "Nesting: nothing in the definition fixes a scale; each level's blanket becomes part of the next level's internal states (organelle → cell → tissue → organ → organism → colony → ecosystem). This is a CONSTRUCTION, NOT AN OBSERVATION.",
+    "Interoception is a blanket inside the blanket: from the brain's position, the viscera are η."
+  ],
+  "marginal_note": {
+    "subject": "Pearl blankets vs Friston blankets",
+    "pearl_blanket": "a formal statistical construct — variables in a graph you drew, relative to a model, doing conditional-independence bookkeeping. Cheap, well-defined, unobjectionable. Pearl (1988).",
+    "friston_blanket": "a metaphysical boundary of a thing — a claim that some real system out there genuinely has an inside, a surface, and an outside.",
+    "the_slide": "The field's main error is sliding from the first to the second without paying for it: you define a blanket (free — a modelling choice), then quietly conclude you have discovered where the organism ends (expensive — an empirical claim requiring I(μ;η|b) ≈ 0 in the actual system, which nobody estimated).",
+    "sources": [
+      "Bruineberg, Dołęga, Dewhurst & Baltieri (2022), 'The Emperor's New Markov Blankets', Behavioral and Brain Sciences 45:e183, DOI 10.1017/S0140525X21002351",
+      "Aguilera, Millidge, Tschantz & Buckley (2022), 'How particular is the physics of the free energy principle?', Physics of Life Reviews, arXiv:2105.11203"
+    ],
+    "verdict": "A Markov blanket is a MODELLING CHOICE to be justified per system, not a fact that may be assumed. Any use of the partition in this corpus — including M12 — is a typed engineering choice, warranted by being useful and explicit, never by having been discovered in nature. The plate takes no side beyond insisting the slide be named."
+  },
+  "not_claimed": [
+    "NOT CLAIMED: that a Markov blanket implies a self, an experiencer, awareness, sentience, consciousness, or a point of view. EXPLICITLY DISCLAIMED — nothing in the partition names one, and no falsifier is offered because none exists. Receipt: the same formalism admits partitions for Newton's cradle, a burning fuse and the Lorenz attractor (Beck & Ramstead 2025, arXiv:2502.21217). If a blanket implied a self, it would imply one for the burning fuse. Recorded INADMISSIBLE; never asserted, never mocked.",
+    "NOT CLAIMED: that the free-energy principle is true, that Markov blankets are universal, or that living systems generally satisfy the blanket conditions. The best available exact analysis says those conditions are narrow (Aguilera et al., 2022).",
+    "NOT CLAIMED: that UNI has a Markov blanket in the Friston sense. M12 is a typed engineering partition, status: method, warranted by explicitness and usefulness, never by discovery. No I(μ;η|b) has been estimated for any UNI boundary.",
+    "NOT CLAIMED: that the nesting ladder has a known depth (NA04-13 is NOT-MEASURED), that r_retina is a measured quantity (NA04-08 is MODELED), or that the vagal afferent fraction is settled (NA04-09 / NA04-10 are OBSERVED-CONTESTED).",
+    "NOT CLAIMED: that the number of nested blanket levels in any named organism is known. No such count established by measurement exists; the plate prints the empty face rather than filling it.",
+    "NOT CLAIMED: that anything on this plate raises any UNI rung. A NATURE CITATION IS NEVER A UNI GATE. Every source is published biology, physics or mathematics; M12's status is unchanged; the honest program position stands at ~2 of 11+ developmental rungs earned — a developmental active-inference SIMULATION, a toy world, never a person.",
+    "NOT A TARGET: 'full human' and 'the next evolution beyond human' are QUAESTIO APERTA — permanent open questions, never a milestone, never a deliverable. Nothing in the blanket formalism moves them one step closer.",
+    "NOT CLAIMED: that the plate's diagram is an observation. FIG. 1 draws a partition; drawing it is not evidence that any real system is so partitioned.",
+    "NOT CLAIMED: any value not carried by the corpus. The rods+cones sum implied by r_retina's own definition is deliberately NOT printed, because only the two counts and the derived ratio are carried in the source; the plate prints what the ledger carries and nothing computed by the draughtsman."
+  ],
+  "evidence_classes": [
+    "OBSERVED-REPLICATED",
+    "OBSERVED-CONTESTED",
+    "MODELED",
+    "HYPOTHESIZED",
+    "NOT-MEASURED",
+    "INADMISSIBLE"
+  ],
+  "evidence_class_authority": {
+    "vocabulary": "NATURA — twelve classes in three groups, per encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md, amended 2026-07-15",
+    "sovereignty": "These are NATURA classes, describing nature's observed regularities. They are NOT the UNI 4-value fence (proven / designed / hypothesized / not-yet-built) and NOT the UNI ledger states (PASS / FAIL / NEGATIVE / PENDING). The two vocabularies are sovereign and are never merged on this plate. INADMISSIBLE is used here in its NATURA sense (a claim unfalsifiable as stated, carried with the receipt of why it failed).",
+    "ledger_supremacy": "Where this plate and encyclopedia/NATURE-LEDGER.md disagree, THE LEDGER WINS."
+  },
+  "design_fence": {
+    "design_only": true,
+    "script_elements": 0,
+    "event_handlers": 0,
+    "external_references": 0,
+    "notes": "Pure static SVG. No <script>, no on* handlers, no @import, no webfont, no xlink to a URL, no remote image. The only URI present is the SVG namespace declaration (xmlns='http://www.w3.org/2000/svg'), which is an identifier and is never fetched. No secrets, tokens, keys or private endpoints.",
+    "responsive": "viewBox-based (0 0 1400 2200), preserveAspectRatio='xMidYMid meet', width:100%/height:auto. Renders standalone and inline.",
+    "theming": "CSS-variable palette scoped to .pl01 (never leaks to a host page). Sane hard-coded fallbacks; @media (prefers-color-scheme: dark) for the dark palette; [data-theme='light'|'dark'] overrides win in both directions; host may override via --plate-ink / --plate-paper / --plate-rule / --plate-faint / --plate-accent / --plate-wash.",
+    "greyscale": "Meaning is encoded redundantly in line style and arrowhead (solid + filled tip = sensory; dashed + open tip = active; fine dotted + ✗ = forbidden) and in texture (stipple = η; hatch = b; wash + heavy ring = s, a; blank = μ), never in hue alone."
+  },
+  "verification": {
+    "observed_2026-07-15": [
+      "XML parses (xml.etree): OK.",
+      "Design-only fence: 0 script elements, 0 on* handlers, 0 external references (grep).",
+      "Rendered in headless Chrome at 1400x2200: no text overflows the plate border; every block sits inside its allotted band (measured via getBBox on all 81 text elements).",
+      "Rendered INLINE inside a host HTML page in both light and dark: both legible; CSS custom properties inherit into <pattern> children, so hatch and stipple render in both themes.",
+      "Greyscale render (filter: grayscale(1)): the two routes remain distinguishable by line style and arrowhead; the four textures remain distinguishable.",
+      "Glyph coverage probed by measured advance width: ⊥, ⇔, ∂, μ̇, η̇, ≫, ①, → all compose (μ̇ = 23px vs μ = 26px vs tofu □ = 24.2px — the combining dot attached rather than falling back to a box).",
+      "Every numeric value on the plate traced to NA-04 / NATURE-LEDGER by string match: 17/17 found.",
+      "Every cited ledger row (NA04-01, -02, -03, -04, -05, -06, -07, -08, -09, -10, -13, -14) exists in NATURE-LEDGER.md.",
+      "Class-vocabulary scan: 0 out-of-vocabulary class strings; all classes used are registered in NA-00.",
+      "Banned-in-author-voice scan (verified / proven / secure / guaranteed / certified / self-aware / conscious / AGI / held-PASS): 0 hits."
+    ],
+    "falsifier_for_this_plate": "Any value on the plate that cannot be traced to its named NA04 row; any label lacking units where a number is given; any class string outside the NA-00 twelve; any script element, event handler or external reference; or a claim on the plate that the source chapter does not carry. Any one of these refutes the plate and it must be redrawn."
+  },
+  "plate_geometry": {
+    "viewBox": "0 0 1400 2200",
+    "figures": {
+      "FIG. 1": "the partition and its two routes (+ callouts ① sensory route, ② active route, ③ MIND.BODY coupling, ④ the forbidden route)",
+      "FIG. 2": "the defining condition, as a formula in a cartouche",
+      "FIG. 3": "nesting — blankets within blankets, terminating in a NOT-MEASURED stamp",
+      "FIG. 4": "the blanket quantified — the human visual funnel"
+    },
+    "marginal_note": "right margin of FIG. 1 — the Pearl-vs-Friston caveat, set ON the plate",
+    "key": "three columns — the four sets and the blanket; marks; evidence classes used",
+    "caption": "numbered 1–8; item 6 is the M12 anchor, item 7 is what the plate does NOT claim, item 8 is source + ledger supremacy"
+  }
+}

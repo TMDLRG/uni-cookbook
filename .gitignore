@@ -1,0 +1,10 @@
+# Build artifacts — regenerate with `python reader/build.py`.
+# The repo is the single source of truth; the rendered site is never it.
+reader/dist/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Test-run scratch (authored fixtures ARE tracked)
+test/fixtures/_run_*

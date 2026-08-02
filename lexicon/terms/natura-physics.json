@@ -1,0 +1,1090 @@
+{
+  "schema_version": "1.0.0",
+  "file_id": "natura-physics",
+  "authored_utc": "2026-07-15",
+  "join_key": "concept_id, against lexicon/CONCEPTS.json",
+  "what_this_is": "The five-register lexicon file (Sanskrit / Latin / English / Hindi / Spanish) for the concepts of CONCEPTS.json domain 'natura'. Every rendering here enters PENDING / SUB EXAMINE per rule 18.14 of the operator's charter ('Do not claim perfect translation'). NOTHING in this file is labelled perfect and no back_translation_test in this file has been RUN -- every test is written, none is passed, and a written test is not a result. This file raises no UNI rung, discharges no gate, and states no fact about nature. A nature citation is never a UNI gate. The most valuable fields here are ambiguity_notes and forbidden_mistranslations, not the headwords.",
+
+  "selector_discrepancy": {
+    "severity": "BLOCKING-UNLESS-RESOLVED. Read before using this file.",
+    "requested_selector": "domain == 'natura-physics'",
+    "observed": "The domain 'natura-physics' DOES NOT EXIST in lexicon/CONCEPTS.json. The string 'natura-physics' returns 0 occurrences (ripgrep over CONCEPTS.json, 2026-07-15). CONCEPTS.json's own domains_registered list carries exactly eight domains -- active-inference-math, pomdp-tensors, markov-blanket, method, sovereign-vocabulary, natura, world-context, build-objects -- and 'natura-physics' is not among them.",
+    "nearest_domain": "natura",
+    "nearest_domain_count": "20 (ripgrep of '\"domain\": \"natura\"' over CONCEPTS.json = 20 occurrences, 2026-07-15; the pattern is anchored on the closing quote so it does not also match 'natura' as a substring of another domain name)",
+    "what_was_done": "This file renders the 20 concepts of domain 'natura' and is written to the requested path natura-physics.json. The filename therefore does NOT name a domain that exists upstream. This was recorded rather than guessed away.",
+    "three_readings_not_resolved": [
+      "(a) The orchestrator meant a domain PLANNED but never authored into CONCEPTS.json. Then this file is premature: the domain must be registered upstream first, and this file's term set is an invention of the selector.",
+      "(b) The orchestrator meant 'natura' under a loose name. Then this file is correct in content and misnamed in path.",
+      "(c) The orchestrator meant a PHYSICS-ONLY SUBSET of 'natura'. Then this file is too broad: NATURE_AS_AUTHORITY, ADAPTATIONIST_COUNTERWEIGHT, CONVERGENT_EVOLUTION and CONSTRAINT_OPTIMUM are doctrine and evolutionary biology, not physics, and would have to be split out. Under this reading the honest physics subset is the remaining 16."
+    ],
+    "falsifier": "The orchestrator states which of (a), (b), (c) was meant. Under (a) or (c) this file is rebuilt. Under (b) either the file is renamed to natura.json or CONCEPTS.json registers the alias -- and the two names must not be allowed to drift as silent synonyms.",
+    "why_this_is_not_pedantry": "CONCEPTS.json's own field_contract states that concept_id is 'the join key for every register file' and is 'never renamed once cited'. A register file whose FILENAME asserts a domain the backbone does not carry is the same defect one level up, and it is the kind that gets copied forward by the next reader."
+  },
+
+  "admission_authorities_used": {
+    "sanskrit": "Monier-Williams Sanskrit-English Dictionary 1899, via the Cologne Digital Sanskrit Dictionaries, endpoint https://sanskrit-lexicon.uni-koeln.de/scans/csl-apidev/getword.php?dict=mw&key=<devanagari>&input=deva . All Sanskrit entries below marked CITED were retrieved from this endpoint on 2026-07-15 and are quoted from it. Apte and Boehtlingk-Roth were NOT consulted in this pass.",
+    "latin": "Lewis & Short, A Latin Dictionary, via Perseus, entry URLs of the form http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=<headword> . All Latin entries below marked CITED were retrieved on 2026-07-15 and are quoted from it. Whitaker's WORDS and Allen & Greenough were NOT consulted in this pass.",
+    "hindi": "R. S. McGregor, The Oxford Hindi-English Dictionary (OUP), via the Digital Dictionaries of South Asia, https://dsal.uchicago.edu/cgi-bin/app/mcgregor_query.py . Retrieved 2026-07-15. Page numbers are McGregor's as reported by DSAL.",
+    "spanish": "Diccionario de la lengua española, Espasa-Calpe, 2005, via WordReference (https://www.wordreference.com/definicion/<lemma>). Retrieved 2026-07-15. NOTE AND SCOPE FENCE: the Real Academia Espanola's own Diccionario de la lengua espanola (dle.rae.es) returned HTTP 403 to every automated request in this pass and was NOT read. Espasa-Calpe 2005 is a standard published dictionary and is cited as itself; it is NOT the RAE and must not be reported as the RAE. Falsifier: read dle.rae.es s.v. each lemma by hand and either confirm or strike each Spanish sense below.",
+    "not_an_authority": "No entry in this file is sourced to a crowd-edited or aggregator site. Where an entry could not be sourced to one of the four authorities above, its status is PENDING-CITATION and no gloss is asserted as attested."
+  },
+
+  "status_vocabulary": {
+    "CITED": "The headword was retrieved from the named authority in this pass and the quoted sense is the authority's own wording. The CITATION is what is CITED -- never the suitability of the word for the concept, which is a separate judgement recorded in ambiguity_notes.",
+    "PENDING-CITATION": "Plausible, unverified. The word may well be attested; this pass did not confirm it. Not a claim.",
+    "COINED": "No attested term carries the concept. A compound is PROPOSED and carries its morphological derivation. A coinage is never presented as attested, and where its constituents were themselves unverified this is stated inside the entry rather than implied by silence.",
+    "NOT-ATTEMPTED": "No rendering was attempted in this pass.",
+    "convention_for_coinages": "For every COINED entry the citation field cites the ATTESTED CONSTITUENTS where they were verified, and says plainly which constituents were NOT verified. A coinage built from two cited constituents is still a coinage: the constituents' attestation never transfers to the compound."
+  },
+
+  "honest_position_of_this_file": {
+    "tests_written_not_run": "Every back_translation_test below is WRITTEN and NONE has been RUN. No PASS is claimed anywhere in this file. A pre-registered gate is not an earned result.",
+    "reviewer": "NONE - PENDING EXPERT REVIEW, for every one of the 20 entries without exception. No Sanskritist, Latinist, Hindi lexicographer or Spanish lexicographer has seen this file.",
+    "expected_and_observed_coinage_rate": "The brief predicted many coinages, on the ground that Sanskrit technical vocabulary for modern math and physics largely does not exist as attested classical terms. OBSERVED in this pass, and it is the honest outcome rather than a shortfall: no attested Sanskrit headword was found meaning 'Reynolds number', 'dimensionless number', 'scaling law', 'allometry', 'regime boundary', or 'morphogenesis'. Where a genuine classical term did fit -- prakrti, sopana, parinama, avrtti, anuranana, kosa, pramana, tvac -- it was used and cited.",
+    "the_sharpest_risk_in_this_file": "Sanskrit philosophical vocabulary carries doctrinal freight, and the two heaviest cases here are structural rather than incidental: prakrti imports Samkhya's material principle wherever 'nature' is rendered, and abhivyakti imports satkaryavada -- the doctrine that the effect PRE-EXISTS in the cause and is merely manifested -- which is the exact contradictory of EMERGENCE. A register that renders emergence as abhivyakti has not mistranslated a word; it has quietly asserted a metaphysics that denies the concept."
+  },
+
+  "adversarial_recheck_2026_07_15": {
+    "what_this_was": "An ADVERSARIAL BACK-TRANSLATION PASS run against this file by a second author whose brief was to find fabricated citations and strike them. Every citation in this file that names an authority and quotes a sense was re-queried against that authority, independently of the first pass.",
+    "what_this_was_NOT": "NOT an expert review, and NOT a run of any back_translation_test. Every test in this file remains WRITTEN AND UNRUN, and 'reviewer: NONE - PENDING EXPERT REVIEW' still stands on all 20 entries without exception. A back_translation_test requires handing a rendering COLD to a human Sanskritist, Latinist, or lexicographer and reading back what returns; no such person has been handed anything. This pass could check only that the dictionaries say what this file says they say. THAT IS A CHECK ON THE CITATIONS, NOT ON THE TRANSLATIONS, and the two must not be allowed to merge: a citation establishes that a word exists and carries a sense; it never establishes that the word renders the concept. The RESONANCE entry is the standing proof of the gap -- its Sanskrit citation is sound AND argues against its own rendering.",
+    "scope_checked": "31 citation claims across four authorities. Sanskrit, Monier-Williams 1899 via Cologne (9): sopāna, anuraṇana, abhivyakti, āvṛtti, kośa, tvac, prakṛti, pramāṇa, pariṇāma. Latin, Lewis & Short via Perseus (13): diffusio, evolutio, frequentia, cellula, membrana, proportio, scala, gradus, limes, emergo, resono, ratio, natura. Hindi, McGregor via DSAL (3): kośikā, jhillī, āvṛtti -- page numbers included. Spanish, Espasa-Calpe 2005 via WordReference (6): frecuencia, emergencia, escala, gradiente, razón, naturaleza.",
+    "headline_result": "ZERO FABRICATED CITATIONS FOUND. Every headword checked exists in the authority named, and every one carries the sense this file claims for it. No entry's status was downgraded from CITED to PENDING-CITATION, because none failed. All three McGregor page numbers (96, 218, 395) returned the quoted entries. The two load-bearing NEGATIVE findings this file rests much of its value on -- that L&S evolutio means 'an unrolling or opening of a book; hence, a reading' with no biological sense, and that MW abhivyakti is 'manifestation, distinction' (Pāṇ. viii, 1, 15; Sāh.) and so carries satkāryavāda's freight -- both returned exactly as quoted. So did the diffusio 'Cheerfulness' sense (Sen. Vit. Beat. 5, 1), the frequentia crowd sense, and this file's own self-imposed negative check that MW's kośa entry does NOT itself use the term pañca-kośa.",
+    "why_that_result_is_reported_rather_than_celebrated": "A pass that finds nothing is the weakest kind of evidence that there was nothing to find, and this one was run by a checker with the same failure modes as the author. The instrument is a fetch-and-quote loop, and its POSITIVE CONTROL is that it did in fact return refutations when refutations existed -- it caught six real defects below, and it caught the sense-5 truncation and the natura frequency labels only by reading the FULL entries rather than the quoted fragments. Had it returned clean on everything, the honest reading would have been that the instrument was not working. It did not return clean, so the zero-fabrication result is a measurement rather than a silence.",
+    "defects_found_and_struck": [
+      "GRADUS LOCATOR (RUNG, latin) -- cited 'sense II.A.B.1', a locator that does not exist; L&S nests it as II (Transf.) B. 1. Struck to II.B.1 in both the citation and confidence fields. The quoted sense, the etymology and the archaic gen. sg. graduis all stand.",
+      "NATURA FREQUENCY LABELS (NATURE_AS_AUTHORITY, latin) -- the first pass argued a hazard from the SENSE ORDER ('birth' is L&S sense I) while omitting that L&S marks that sense '(very rare)' and marks sense II '(freq. and class.)'. The omitted labels undercut the argument the quote was deployed to support. The 'birth' hazard is largely struck; a narrower residual survives (natura II.A is a thing's constitution, not the natural world collectively). This is the most substantive downgrade in this pass: a TRUE citation used to argue past its own context.",
+      "ESCALA SENSE 5 TRUNCATION (SCALE_LADDER + SCALING_LAW, spanish) -- quoted as ending at 'ordenada' with no ellipsis. The dictionary continues '...en torno a criterios como la antigüedad, el cargo, el salario, etc.', i.e. an institutional seniority scale, not hierarchy-in-general. The truncation flattered this file's own 'ascent toward mind' hazard claim, which is downgraded to a rank hazard at three sites. Senses 2, 4 and 6 were truncated the same way and are restored.",
+      "RAZÓN OFF-BY-ONE (RATIO, spanish) -- forbidden_mistranslations said 'sixth-in-line' where this file's own citation lists six preceding senses, making sense 7 seventh. Struck.",
+      "MEMBRANA QUOTE BOUNDARY (MEMBRANE, latin, two sites) -- the clause 'an outer layer concealing inner meaning or substance' ran INSIDE the quotation marks around L&S II. It is this file's paraphrase of a Seneca usage L&S illustrates, not L&S's wording. Moved outside the quote and marked as paraphrase. SIGNUM SIGNUM MANET: the signal and the commentary about it travel separately, and a paraphrase inside quotation marks has merged an attribution.",
+      "'EXACT' IN AUTHOR VOICE (RUNG, MEMBRANE) -- 'the fit for rung is exact', 'exact sense fit', 'the exact anatomical sense'. Softened to 'close' and to L&S's own 'class.' marking. A translation fit is a judgement, and this file's own status_vocabulary already says the citation is what is cited, never the suitability of the word."
+    ],
+    "pattern_across_the_defects": "Five of the six are the SAME defect wearing different clothes, and it is not fabrication: it is a real citation trimmed, mislocated, or paraphrased in a direction that helps the author's argument. Every one of the three substantive cases -- natura's frequency labels, escala's truncated sense 5, membrana's paraphrase-in-quotes -- moved the evidence toward the hazard the entry wanted to warn about. None invented a word. This file's declared risk was the pseudopropheta, the invented headword; its OBSERVED risk is a genuine headword quoted just short of the part that would weaken the point. That is the harder failure to catch, because every individual quote survives spot-checking and only the full entry exposes it, and it is the reason this pass read complete entries rather than confirming fragments. It is also the same drift the file already caught in itself once, in tally_correction_note, where the author's hand-count of his own evidence ran optimistic in every direction it moved. Twice now, in one file, the drift has been toward the author's thesis. That is a calibration fact about the author and not about the dictionaries.",
+    "what_remains_open": "Everything the first pass said was open. All 20 entries PENDING EXPERT REVIEW; all back_translation_tests unrun; the selector_discrepancy above (natura vs natura-physics) untouched and still BLOCKING; the RUNG/gradus collision with deployed UNI build-rung vocabulary still a decision for the Tree's naming authority and not for this file; the Spanish register still sourced to Espasa-Calpe 2005 and NOT to the RAE, which returned 403 to this pass as well and remains unread. The PENDING-CITATION entries were not promoted by this pass -- a checker confirming the entries the author DID look up says nothing about the ones he did not.",
+    "falsifier": "Re-query any of the 31 claims above against its named authority. Any headword that is absent, or present but not carrying the quoted sense, refutes this pass's headline result and that entry must be struck to PENDING-CITATION immediately. This block is a receipt for a citation check on 2026-07-15 and expires the moment an authority's text is shown to differ."
+  },
+
+  "counts": {
+    "terms": 20,
+    "source_domain": "natura",
+    "source_file": "lexicon/CONCEPTS.json",
+    "corpus_commit_at_authorship": "2e9acaf",
+    "status_tally_sanskrit": "CITED 5, COINED 13, PENDING-CITATION 2, NOT-ATTEMPTED 0",
+    "status_tally_latin": "CITED 7, COINED 11, PENDING-CITATION 2, NOT-ATTEMPTED 0",
+    "status_tally_hindi": "CITED 3, COINED 0, PENDING-CITATION 3, NOT-ATTEMPTED 14",
+    "status_tally_spanish": "CITED 5, COINED 1, PENDING-CITATION 14, NOT-ATTEMPTED 0",
+    "tally_falsifier": "Recount by parsing this file's terms[].<register>.status. If a tally above disagrees with the parse, the parse wins and this block is wrong.",
+    "tally_correction_note": "THE FALSIFIER ABOVE FIRED, ON FIRST RUN, AGAINST THIS FILE'S OWN AUTHOR. The four tallies were first written by hand, before the entries were finished, as: sanskrit 'CITED 8, COINED 12, PENDING-CITATION 0'; latin 'CITED 11, COINED 9, PENDING-CITATION 0'; hindi 'CITED 3, PENDING-CITATION 17'; spanish 'CITED 6, COINED 8, PENDING-CITATION 6'. ALL FOUR WERE WRONG. The parse measured what now stands above. Every hand-count overstated CITED (sanskrit 8 claimed / 5 measured; latin 11 claimed / 7 measured; spanish 6 claimed / 5 measured) and every one omitted NOT-ATTEMPTED entirely, which erased 14 unrendered Hindi entries by not having a column for them. The prior figures are kept on record here rather than quietly overwritten, per the corpus's own CALIBRATION rule that calibration is down-only and the strike is carried in the open, and following the precedent CONCEPTS.json set for its own 128-vs-137 hand-count. The correction is down in every direction it moved. This is also the receipt for a general fact about this file: an author's summary of his own evidence drifted optimistic within a single sitting, which is the exact reason the tally is machine-recountable and the exact reason the falsifier was written before the count.",
+    "same_defect_elsewhere_falsifier": "The malformed-status check that caught FREQUENCY's Hindi entry (status 'CITED (for recurrence/repetition only; ...)', outside the four-value vocabulary this file declares) is the same class of defect: a qualification smuggled into a status token. It was struck to 'CITED' and the qualification now lives in that entry's gloss, citation and ambiguity_notes, where it can be read but cannot be counted as an attestation. Falsifier for the whole file: parse every terms[].<register>.status and assert membership in {CITED, PENDING-CITATION, COINED, NOT-ATTEMPTED}. Any member outside that set is a status carrying an argument, and a status that argues is not a status."
+  },
+
+  "falsifiers": [
+    "A headword marked CITED is not carried by the named authority, or is not carried in the quoted sense. That entry is a pseudopropheta and must be struck to PENDING-CITATION immediately.",
+    "A COINED entry is presented anywhere as attested, or lacks its morphological derivation.",
+    "A concept_id here does not exist in lexicon/CONCEPTS.json, or its domain there is not 'natura'.",
+    "A back_translation_test is reported as PASSED anywhere in this file. None has been run.",
+    "A rendering lets a translation choice quietly assert a metaphysics that the concept's definition withholds -- the abhivyakti/EMERGENCE case is the canonical instance and is recorded rather than avoided.",
+    "This file is read as raising a UNI rung, or as evidence about nature. It is a lexicon file and does neither.",
+    "The Spanish register is reported as sourced to the RAE. It is sourced to Espasa-Calpe 2005; the RAE returned 403 and was not read."
+  ],
+
+  "terms": [
+    {
+      "concept_id": "NATURE_AS_AUTHORITY",
+      "domain": "natura",
+      "store": "META",
+      "sanskrit": {
+        "devanagari": "प्रकृतिप्रमाणम्",
+        "iast": "prakṛti-pramāṇam",
+        "headword_as_in_lexicon": "COINAGE. Constituents attested separately as प्र-कृति and प्रमाण; the compound is not an attested headword.",
+        "grammar": "n., proposed tatpuruṣa compound: prakṛti (f., stem-form in compound) + pramāṇa (n.)",
+        "literal_gloss": "nature-as-standard / the measure that is nature",
+        "citation": "Monier-Williams 1899 s.v. प्र-कृति (prakṛti) f.: 'the original or natural form or condition of anything'; 'nature, character, constitution, temper, disposition'; in Sāṃkhya 'the original producer of the material world', consisting of the three guṇas. Monier-Williams 1899 s.v. प्रमाण (pramāṇa) n.: 'measure, scale, standard'; 'authority'; 'a means of acquiring pramā or certain knowledge'; also 'proof, testimony, evidence'. Both via Cologne, retrieved 2026-07-15. The COMPOUND is proposed here and is NOT attested.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "auctoritas naturae",
+        "grammar": "f. nom. sg. + gen. sg.",
+        "literal_gloss": "the authority of nature",
+        "citation": "Lewis & Short s.v. nātūra, ae, f., from nascor: 'I. Lit. (very rare) birth'; 'II. Transf. (freq. and class.; syn.: indoles, ingenium) A. The nature, i.e. the natural constitution, property, or quality of a thing'. Via Perseus, retrieved 2026-07-15. FREQUENCY LABELS AND THE 'A.' SUB-LOCATOR RESTORED 2026-07-15 BY ADVERSARIAL RE-CHECK -- they were omitted in the first pass, and their omission was not neutral: see ambiguity_notes. The head noun auctoritas was NOT looked up in this pass and is PENDING-CITATION as a constituent; the two-word phrase is in any case a coinage and is not offered as an attested collocation.",
+        "classical_or_post_classical": "[COINED PHRASE]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "nature as the authority",
+        "definition": "The doctrine, defensible in exactly one form, that nature is authoritative because it is the only system that has already run the experiment -- a very long parallel search under real physical constraints in which the failures were deleted."
+      },
+      "hindi": {
+        "devanagari": "प्रकृति",
+        "transliteration": "prakṛti",
+        "gloss": "nature (proposed; the phrase 'as the authority' is not rendered)",
+        "citation": "NOT looked up in McGregor in this pass.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "la naturaleza como autoridad",
+        "gloss": "nature as the authority",
+        "citation": "Espasa-Calpe 2005 s.v. 'naturaleza', 8 senses, incl. '1. Conjunto de todo lo que forma el universo en cuya creación no ha intervenido el hombre'; '2. Principio o fuerza cósmica que se supone rige y ordena todas las cosas creadas'; '3. Esencia y propiedad característica de cada ser'. Retrieved 2026-07-15. The phrase 'como autoridad' is NOT part of the entry and is a coinage.",
+        "status": "COINED"
+      },
+      "ambiguity_notes": "prakṛti's Sāṃkhya sense is not a nuance, it is a cosmology: MW's own entry gives 'the original producer of the material world' consisting of the three guṇas -- one of two ultimate principles alongside puruṣa. Rendering 'nature' with prakṛti makes this doctrine assert Sāṃkhya dualism, which the concept does not contain. pramāṇa carries the Nyāya epistemology in which a pramāṇa is a means of VALID knowledge; but this doctrine expressly LICENSES HYPOTHESIS GENERATION and is not a proof, so pramāṇa overshoots in precisely the direction ADAPTATIONIST_COUNTERWEIGHT exists to block. Spanish naturaleza sense 2 ('Principio o fuerza cósmica que se supone rige y ordena todas las cosas creadas') is an attested COSMIC GOVERNING FORCE sitting one sense away from the intended reading, and the concept's own note says it must never be rendered mystically -- the mystical reading is not a translator's invention here, it is available in the dictionary. Latin natura's FIRST L&S sense is 'birth', not 'the natural world'; the natural-world reading is sense II.A. HAZARD DOWNGRADED 2026-07-15 BY ADVERSARIAL RE-CHECK, AGAINST THIS FILE'S OWN ARGUMENT: the first pass cited the sense ORDER ('birth' is first) as a hazard while omitting the entry's own frequency labels, which cut the other way. L&S marks sense I 'birth' as '(very rare)' and marks sense II 'Transf.' as '(freq. and class.)'. So the dictionary itself reports that a classical reader meeting natura would OVERWHELMINGLY read the nature/constitution sense, not 'birth'. The ordering hazard as originally stated is therefore largely spurious, and the omission of '(very rare)' is what made it look real -- a true citation deployed to support a claim the unquoted remainder of the same entry undercuts. The residual, and it is much smaller, is that natura's core attested sense II.A is 'the natural constitution, property, or quality OF A THING' -- a thing's nature -- rather than 'the natural world as a whole', so the collective reading the doctrine needs is still not the entry's headline sense. That narrower point survives; the 'birth' point does not. Recorded as a strike rather than an edit, because the defect here is not a wrong quote but a quote used to argue past its own context, which is the harder failure to see and the one SIGNUM SIGNUM MANET exists to catch.",
+      "forbidden_mistranslations": [
+        "प्रकृति (prakṛti) bare -- asserts Sāṃkhya's primordial material principle; a metaphysical claim, not this doctrine.",
+        "स्वभाव (svabhāva) -- 'inherent nature, essence'; imports svabhāva-vāda, the doctrine that things act from their own inherent nature, which is a determinism claim the concept does not make.",
+        "'naturaleza como principio rector' -- lands squarely on Espasa-Calpe sense 2, the cosmic governing force; the mystical reading the concept forbids.",
+        "pramāṇa rendered 'proof' (an attested MW sense) -- the doctrine is explicitly NOT a proof; this single word would convert a hypothesis generator into a warrant.",
+        "'natura magistra' / 'nature the teacher' -- a rhetorical topos asserting intent and pedagogy. Nature deleted failures; it did not teach."
+      ],
+      "back_translation_test": "Hand a translator ONLY the target-register rendering (no English, no concept_id) and ask for one English sentence. PASS requires the output to (a) say nature is authoritative BECAUSE it already ran a long search under real physical constraints in which failures were deleted, AND (b) contain no claim that nature is optimal, intentional, teaching, governing, or proving. FAIL on any output containing 'optimal', 'designed', 'teaches', 'cosmic principle', 'governs', or 'proof'. DISCRIMINATOR (without which this test is not severe): run the identical test on the deliberate wrong rendering 'prakṛti' alone. That must FAIL. If it PASSES, the test cannot tell the doctrine from Sāṃkhya cosmology and the test itself is void.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low -- the Sanskrit and Spanish renderings each sit one attested sense away from a metaphysics the concept refuses."
+    },
+    {
+      "concept_id": "ADAPTATIONIST_COUNTERWEIGHT",
+      "domain": "natura",
+      "store": "META",
+      "sanskrit": {
+        "devanagari": "अनुकूलनप्रतिपक्षः",
+        "iast": "anukūlana-pratipakṣaḥ",
+        "headword_as_in_lexicon": "COINAGE. NO constituent was verified against Monier-Williams in this pass.",
+        "grammar": "m., proposed tatpuruṣa compound",
+        "literal_gloss": "the counter-position to adaptation-talk (proposed)",
+        "citation": "No constituent verified in this pass. anukūlana ('adapting, making favourable') and pratipakṣa ('opposite side, counter-argument') are BOTH PENDING-CITATION. The compound is a coinage built on unverified constituents and is the weakest Sanskrit entry in this file.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "non omnis nota est aptatio",
+        "grammar": "sentential rendering: adj. + noun + copula + noun, nom. sg.",
+        "literal_gloss": "not every trait is an adaptation",
+        "citation": "Rendered as a SENTENCE rather than a term, deliberately: the concept is a proposition, and packing a proposition into a noun is how it gets cited as a thing rather than argued as a claim. No constituent was looked up in this pass; 'aptatio' in particular is PENDING-CITATION and may not be classical in this sense.",
+        "classical_or_post_classical": "[COINED PHRASE] -- constituents unverified; 'aptatio' suspected post-classical or technical.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "the adaptationist counterweight",
+        "definition": "Gould & Lewontin's mandatory companion to nature-as-authority: not every trait is an adaptation, because phylogenetic inertia, drift, developmental constraint, pleiotropy and historical contingency all produce features that are not optimal solutions to anything."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "el contrapeso adaptacionista",
+        "gloss": "the adaptationist counterweight",
+        "citation": "Neither 'contrapeso' nor 'adaptacionista' was looked up in this pass. PENDING-CITATION. The phrase is a calque of the English.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "'Counterweight' is a metaphor in English and every register here reproduces the metaphor rather than the mechanism -- a counterweight BALANCES, and this concept does not balance nature-as-authority, it BOUNDS it: the two do not carry equal weight and the counterweight is not optional. A register that renders it as 'the other side of the argument' turns a mandatory companion into a debating position. The deeper trap is that this concept is attributed (Gould & Lewontin) and SIGNUM SIGNUM MANET applies: the attribution travels separately from the content, and a rendering that folds 'Gould' into the term itself has merged an attribution into the signal.",
+      "forbidden_mistranslations": [
+        "'la crítica de Gould' / 'Gould's critique' -- merges the attribution into the term; SIGNUM SIGNUM MANET says the commentary and the signal travel separately.",
+        "Any rendering via 'balance' or 'equilibrium' roots -- asserts the two considerations carry equal weight. They do not; the counterweight is a bound, not a balance.",
+        "Any rendering implying 'the anti-adaptation view' -- the concept does not deny adaptation, it denies that EVERY trait is one.",
+        "A rendering as a noun that can be cited ('the Counterweight') without its content -- the concept is a proposition with five named mechanisms (phylogenetic inertia, drift, developmental constraint, pleiotropy, historical contingency) and a noun that travels without them is a label for a gap."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that (a) denies that every trait is an adaptation, (b) names at least two of the five mechanisms, and (c) does NOT deny that adaptation occurs. FAIL on 'adaptation is a myth', on any output that names Gould or Lewontin (the attribution must not be recoverable from the term -- if it is, the attribution has been merged in), and on any output that reads the concept as one side of a balanced debate. This entry's honest status: every register is a coinage on unverified constituents, so the test is currently a test of a placeholder.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "very low -- the weakest entry in this file. No constituent verified in any register except English."
+    },
+    {
+      "concept_id": "CONVERGENT_EVOLUTION",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "समापातिपरिणामः",
+        "iast": "samāpāti-pariṇāmaḥ",
+        "headword_as_in_lexicon": "COINAGE on one CITED constituent: परि-णाम (pariṇāma) is attested; samāpāti- is PENDING-CITATION.",
+        "grammar": "m., proposed karmadhāraya/tatpuruṣa compound: samāpāti- (proposed, 'converging') + pariṇāma (m.)",
+        "literal_gloss": "converging transformation (proposed)",
+        "citation": "Monier-Williams 1899 s.v. परि-णाम (pariṇāma) m.: 'change, alteration, transformation into (instr.), development, evolution', with Sāṃkhyak. among the cited sources; also 'ripeness, maturity'; 'alteration of food, digestion'; 'withering, fading'; 'lapse (of time)'; 'result, consequence, issue, end'. Via Cologne, retrieved 2026-07-15. The modifier samāpāti- was NOT verified and the compound is a coinage.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "convergentia formarum",
+        "grammar": "f. nom. sg. + gen. pl.",
+        "literal_gloss": "a converging of forms",
+        "citation": "Offered as a coinage. CRITICAL NEGATIVE FINDING, cited: Lewis & Short s.v. ēvŏlūtĭo, ōnis, f. (from evolvo) gives ONLY 'an unrolling or opening of a book; hence, a reading' (Cic. de Fin.). Classical Latin evolutio does NOT mean biological evolution. Via Perseus, retrieved 2026-07-15. 'convergentia' was not looked up and is PENDING-CITATION.",
+        "classical_or_post_classical": "[POST-CLASSICAL / COINED] -- the biological sense of evolution is post-classical in any Latin rendering; the classical word means unrolling a scroll.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "convergent evolution",
+        "definition": "Independent lineages arriving at the same solution, which is EVIDENCE of a constraint-optimum and never proof of one."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "evolución convergente",
+        "gloss": "convergent evolution",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The Latin false friend here is fully cited and is severe: ēvŏlūtĭo in classical Latin is the UNROLLING OF A BOOK SCROLL and 'hence, a reading' (L&S, Cic. de Fin.) -- a reader with classical Latin who meets 'evolutio' in a UNI document reads 'a reading', not 'evolution'. Any Latin rendering of this concept is post-classical and must be marked so. On the Sanskrit side pariṇāma is attested and genuinely means 'transformation, development, evolution', but MW cites Sāṃkhyak. for that sense, and pariṇāma is the technical term of pariṇāma-vāda -- the Sāṃkhya doctrine that the effect PRE-EXISTS in its cause and the transformation merely unfolds what was already there. That is a directed, teleological unfolding, and this concept is the opposite: independent lineages arriving separately at a solution nothing foreordained. Finally, the concept's own note is load-bearing and easy to lose in translation: convergence is EVIDENCE OF a constraint-optimum and never PROOF of one, and CONSTRAINT_OPTIMUM is a separate concept that must not be rendered with the same term.",
+      "forbidden_mistranslations": [
+        "Latin 'evolutio' for evolution -- L&S: 'an unrolling or opening of a book; hence, a reading'. Cited, and wrong.",
+        "पariṇāma bare, or any rendering that leaves pariṇāma-vāda's freight unmarked -- asserts the effect pre-existed in the cause, i.e. that the convergent solution was latent all along. The concept says lineages ARRIVED at it independently.",
+        "Any rendering conflating this with CONSTRAINT_OPTIMUM -- 'do not render as one term' is CONCEPTS.json's own instruction; one is the evidence, the other is what it is evidence OF.",
+        "Any rendering carrying 'proof', 'demonstrates', or 'shows that' -- convergence is evidence and never proof.",
+        "'Parallel evolution' -- a different technical term in biology (shared ancestral developmental bias), not a synonym."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that (a) has independent lineages arriving at the same solution, and (b) does NOT assert that this proves the solution optimal, and (c) does not describe the outcome as latent, foreordained, unfolded, or pre-existing. FAIL on 'unrolling', 'a reading' (which would catch the evolutio error), on 'proves', and on 'manifested what was already there' (which would catch the pariṇāma-vāda freight). DISCRIMINATOR: run the same test on 'evolutio convergens'. A Latinist must FAIL it on sense grounds; if the test passes that rendering, it is not reading the classical sense and is void.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low for the renderings; HIGH for the two cited negative findings (evolutio, pariṇāma-vāda freight), which are the useful content of this entry."
+    },
+    {
+      "concept_id": "CONSTRAINT_OPTIMUM",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "नियमान्तर्गतश्रेष्ठम्",
+        "iast": "niyamāntargata-śreṣṭham",
+        "headword_as_in_lexicon": "COINAGE. NO constituent verified in this pass.",
+        "grammar": "n., proposed compound: niyama- ('restraint, rule') + antargata- ('contained within') + śreṣṭha- ('best')",
+        "literal_gloss": "the best-within-the-restraints (proposed)",
+        "citation": "No constituent verified in this pass; niyama, antargata and śreṣṭha are all PENDING-CITATION. The compound is deliberately built to carry 'within the constraints' INSIDE the term, because the whole content of the concept is that the optimum is bounded -- a rendering that drops the bound asserts optimality simpliciter.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "optimum intra limites",
+        "grammar": "n. nom. sg. + prep. + acc. pl.",
+        "literal_gloss": "the best thing within the boundaries",
+        "citation": "Built on a CITED constituent: Lewis & Short s.v. līmĕs, ĭtis, m.: 'a cross-path, balk between fields'; a boundary marker of stone or balk separating estates; a fortified boundary-line; and more generally any path, passage, or road. Via Perseus, retrieved 2026-07-15. 'optimum' was not looked up and is PENDING-CITATION. The phrase is a coinage.",
+        "classical_or_post_classical": "[COINED PHRASE] on one cited constituent.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "constraint-optimum",
+        "definition": "A solution repeatedly rediscovered by independent lineages under real physical constraints, which is what convergent evolution is evidence of."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "óptimo bajo restricciones",
+        "gloss": "optimum under constraints",
+        "citation": "Not looked up in this pass. PENDING-CITATION. Rendered with 'bajo restricciones' attached rather than as bare 'óptimo', for the reason given in ambiguity_notes.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "Every register's danger is the SAME and it is structural: 'optimum' is a word that survives the loss of its qualifier. CONCEPTS.json states the bound explicitly -- 'optimal WITHIN the constraints that obtained, not optimal simpliciter, and the inference from convergence to optimality is defeasible'. A term of the shape [OPTIMUM] will be quoted without the constraint clause by the second reader and will then assert exactly what ADAPTATIONIST_COUNTERWEIGHT forbids. That is why every rendering above carries the constraint INSIDE the term rather than in an accompanying note: a note does not travel, and this is a case where the freight must be welded on. Latin līmĕs is well chosen for a different reason than it looks: L&S's first sense is an agricultural balk between fields -- a boundary that is itself a real physical thing, not an abstraction -- which is what 'real physical constraints' means here.",
+      "forbidden_mistranslations": [
+        "Any bare 'optimum' / 'óptimo' / 'śreṣṭha' -- drops the constraint and asserts optimality simpliciter, which the concept explicitly denies.",
+        "'the best solution' / 'la mejor solución' -- same defect, in ordinary language, where it is harder to notice.",
+        "'nature's optimum' -- imports NATURE_AS_AUTHORITY's forbidden optimality claim into a concept whose whole job is to be bounded.",
+        "Any rendering conflating this with CONVERGENT_EVOLUTION -- CONCEPTS.json says do not render as one term.",
+        "Any rendering implying the inference from convergence is secure -- CONCEPTS.json: 'the inference from convergence to optimality is defeasible'."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output containing BOTH (a) a superlative or best-solution reading AND (b) an explicit restriction to the constraints that obtained. FAIL on any output that gives (a) without (b) -- that is the whole test, and it is severe precisely because the failure mode is a partially-correct answer rather than a wrong one. DISCRIMINATOR: run the same test on bare 'optimum'. It must FAIL. If a test cannot fail bare 'optimum', it is not testing this concept.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low for renderings; the ambiguity analysis is the load-bearing part of this entry."
+    },
+    {
+      "concept_id": "RATIO",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "अनुपातः",
+        "iast": "anupātaḥ",
+        "headword_as_in_lexicon": "PENDING-CITATION -- अनुपात was NOT looked up in this pass. It is the standard modern mathematical term and is expected to be attested, but expectation is not attestation.",
+        "grammar": "m. (expected)",
+        "literal_gloss": "ratio, proportion (expected)",
+        "citation": "NOT VERIFIED in this pass. Falsifier: query Cologne getword.php?dict=mw&key=अनुपात&input=deva and either quote the entry or strike this rendering. Note what WAS verified and rejected: प्रमाण (pramāṇa) IS attested with 'measure, scale, standard' (MW, via Cologne, 2026-07-15) and would be the tempting choice, but see forbidden_mistranslations -- it is wrong for this concept for a reason that has nothing to do with mathematics.",
+        "status": "PENDING-CITATION"
+      },
+      "latin": {
+        "form": "proportio",
+        "grammar": "prō-portĭo, ōnis, f.",
+        "literal_gloss": "comparative relation, proportion, symmetry, analogy, likeness",
+        "citation": "Lewis & Short s.v. prō-portĭo, ōnis, f.: 'comparative relation, proportion, symmetry, analogy, likeness', corresponding to Greek ἀνάλογον; Varro identifies it with Greek ἀναλογία (L.L. 10, § 2); Cicero offers Latin 'comparatio' (Tim. 4-5); also Quint. 1.6.3, 1.6.9. Via Perseus, retrieved 2026-07-15. NOTE: L&S's usage examples emphasise conceptual relationship and grammatical analogy rather than strict numerical calculation, so proportio is CITED as a headword but its fit for 'quotient of two measured quantities' is imperfect and is recorded as such.",
+        "classical_or_post_classical": "Classical (Varro, Cicero, Quintilian) -- but in the analogy/proportion sense, not the arithmetic-quotient sense.",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "ratio",
+        "definition": "A quotient of two measured quantities, which usually does NOT survive a change of scale and which must carry its scope, units and class to be admissible."
+      },
+      "hindi": {
+        "devanagari": "अनुपात",
+        "transliteration": "anupāt",
+        "gloss": "ratio, proportion (expected)",
+        "citation": "NOT looked up in McGregor in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "razón",
+        "gloss": "mat. the quotient of two numbers or of two comparable quantities",
+        "citation": "Diccionario de la lengua española, Espasa-Calpe 2005, s.v. 'razón', sense 7: 'mat. Cociente de dos números o de dos cantidades comparables entre sí: la razón de 8/2 es 4.' Via WordReference, retrieved 2026-07-15. Senses 1-6 of the same entry are 'facultad del hombre de pensar o discurrir', 'argumento o demostración', 'motivo o causa', 'acierto o verdad en lo que alguien hace o dice', 'palabras o frases con que se expresa un pensamiento', and 'cuenta, relación, cómputo'.",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "The English word 'ratio' is a loan from Latin ratio, and the loan did not bring the meaning with it. Lewis & Short s.v. rătĭo, ōnis, f. (from reor, ratus) gives sense I as 'a reckoning, account, calculation, computation' and sense II (Trop.) as relation, method, manner -- and the entry does NOT define ratio as a mathematical quotient. So the one word a Latin-writing author would reach for is the one that does not mean it; the arithmetic sense a modern reader assumes is not in the classical entry. Spanish is the mirror image and the happy case: razón inherited the same word and DID develop the arithmetic sense, attested as Espasa-Calpe sense 7 with a worked example ('la razón de 8/2 es 4') -- but it sits SEVENTH, behind 'human faculty of thought', 'argument', 'motive' and 'being right', so an unlabelled 'razón' in a UNI document reads as 'reason' to every ordinary reader. Sanskrit pramāṇa is attested with exactly the wanted core sense ('measure, scale, standard', MW) and must still be refused: the same MW entry gives 'a means of acquiring pramā or certain knowledge' and 'proof, testimony, evidence', which is the whole apparatus of Indian epistemology. In a corpus whose cardinal discipline is that evidence-of-a-claim and a-quotient-of-two-numbers are different objects -- CONCEPTS.json registers exactly this as the EVIDENCE / EVIDENCE_CLASS sovereign homonym -- rendering 'ratio' as pramāṇa would let a quotient read as a warrant.",
+      "forbidden_mistranslations": [
+        "Latin 'ratio' for ratio -- the false friend is total. L&S: 'a reckoning, account, calculation, computation'; no quotient sense. This is the single most likely error in this entry and the English word invites it.",
+        "प्रमाण (pramāṇa) -- attested for 'measure, scale, standard' and therefore tempting, but the SAME MW entry carries 'means of valid knowledge' and 'proof, testimony, evidence'. Using it lets a ratio read as evidence, which is the EVIDENCE/EVIDENCE_CLASS homonym breach one register down.",
+        "Spanish 'razón' left unlabelled -- attested (sense 7) but SEVENTH-in-line, behind six senses headed by 'reason'; admissible ONLY with the 'mat.' label carried, as the dictionary carries it. (Read 'sixth-in-line' before 2026-07-15; struck by adversarial re-check as an off-by-one against this file's own citation, which lists six preceding senses.)",
+        "'proportio' presented as meaning a numerical quotient -- L&S's examples are analogy and grammatical proportion; the fit is partial and must not be reported as exact.",
+        "Any rendering that travels without scope, units and class -- the definition makes those admission conditions, not decoration, so a bare noun in any register is an inadmissible rendering of THIS concept."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that says 'quotient of two quantities' or equivalent AND does not say 'reason', 'account', 'argument', 'evidence' or 'proof'. FAIL on any epistemic word at all. DISCRIMINATOR: run the identical test on bare Latin 'ratio' and on 'pramāṇa'. BOTH must FAIL -- 'ratio' into 'reckoning/reason', 'pramāṇa' into 'means of knowledge/proof'. A test that passes either is not testing the quotient sense and is void. Second criterion: the rendering must be rejected if the translator returns the quotient WITHOUT scope and units, since the definition makes those admissibility conditions.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium for Spanish (cited, with a worked example in the dictionary); low for Latin (cited headword, imperfect fit, honestly recorded); the Sanskrit is unverified and its most tempting candidate is cited-and-rejected on doctrinal grounds."
+    },
+    {
+      "concept_id": "DIMENSIONLESS_NUMBER",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "निर्मात्रसंख्या",
+        "iast": "nirmātra-saṃkhyā",
+        "headword_as_in_lexicon": "COINAGE. Constituents PENDING-CITATION.",
+        "grammar": "f., proposed bahuvrīhi-derived compound: nir- (privative prefix) + mātra ('measure') + saṃkhyā ('number')",
+        "literal_gloss": "a number without measure (proposed)",
+        "citation": "No constituent verified in this pass; nir-, mātra and saṃkhyā are PENDING-CITATION. This is a clear case of the honest expectation stated in the brief: no attested classical Sanskrit term means 'dimensionless number', because the concept requires dimensional analysis, which is nineteenth-century.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "numerus sine dimensionibus",
+        "grammar": "m. nom. sg. + prep. + abl. pl.",
+        "literal_gloss": "a number without dimensions",
+        "citation": "Coinage. Constituents not looked up in this pass; PENDING-CITATION. No classical Latin term is offered for this concept, and none is expected: dimensional analysis postdates classical Latin by roughly two millennia.",
+        "classical_or_post_classical": "[COINED PHRASE / POST-CLASSICAL CONCEPT] -- the concept itself has no classical existence.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "dimensionless number",
+        "definition": "A quotient whose units cancel, which travels across scale precisely because it does, and which is therefore the group to read before any ratio."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "número adimensional",
+        "gloss": "dimensionless number",
+        "citation": "Not looked up in this pass. PENDING-CITATION. This is the standard term in Spanish-language physics and is expected to be attested or at least well-established in usage; expectation is not attestation.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The trap is not lexical, it is that the term sounds like a weaker version of RATIO when it is the stronger one. CONCEPTS.json's instruction is an ORDERING -- read dimensionless numbers BEFORE any ratio, because dimensionless groups survive a change of scale and most ratios do not, 'and reading ratios first is how designers end up with golden ratios in places nature never put one'. A register that renders this as 'a ratio with no units' has quietly demoted it to a special case of RATIO and inverted the reading order. Second trap, cited in the concept's own note: a dimensionless number is NOT defined everywhere -- Reynolds number is meaningless for an atom or a galaxy -- so 'travels across scale' means 'travels across the scales within its domain', not 'travels everywhere', and a rendering suggesting universality is a scope violation of exactly the kind the corpus polices. Sanskrit mātra is a live hazard if pursued: it carries 'measure' but also, in Vedanta and Buddhist usage, 'mere, only, nothing but' (as in the -mātra suffix), so nir-mātra risks reading as 'not-mere' rather than 'without-measure'. This was not verified and the risk is recorded rather than resolved.",
+      "forbidden_mistranslations": [
+        "'a ratio without units' in any register -- makes this a subtype of RATIO and destroys the reading order that is the concept's operative content.",
+        "Any rendering implying validity at all scales -- 'Reynolds number is meaningless for an atom or a galaxy'; the group has a domain and carrying it outside is a scope violation.",
+        "'pure number' -- a real term of art in mathematics with a different extension; a dimensionless GROUP is a physical construction, not merely a number that happens to lack units.",
+        "nir-mātra read as 'not-mere' -- the -mātra suffix's attested 'mere/only' sense may capture the compound; unverified and flagged."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output stating that the units CANCEL and that the quantity therefore carries across scale. FAIL if the output describes it as a kind of ratio, or claims it holds at all scales without domain restriction. DISCRIMINATOR: run the test on the deliberate wrong rendering 'ratio without units'. It must FAIL, because a test that cannot distinguish the two has lost the ordering the concept exists to impose.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low -- all non-English registers are coinages or unverified. The entry's value is the recorded ordering hazard, not the words."
+    },
+    {
+      "concept_id": "REYNOLDS_NUMBER",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "रेनोल्ड्ससंख्या",
+        "iast": "renoldsa-saṃkhyā",
+        "headword_as_in_lexicon": "NOT A LEXICON ENTRY AND MUST NEVER BECOME ONE. This is a TRANSLITERATION of a proper name plus a proposed common noun. No dictionary carries it and none should.",
+        "grammar": "f., proposed compound of a transliterated eponym + saṃkhyā ('number', PENDING-CITATION)",
+        "literal_gloss": "Reynolds-number (transliterated eponym; the eponym is not glossed because a proper name has no gloss)",
+        "citation": "NO CITATION IS POSSIBLE OR APPROPRIATE for the eponym. Osborne Reynolds is a person; his name is transliterated, never translated. The transliteration above is proposed and its Devanagari orthography is UNVERIFIED against any Hindi/Sanskrit scientific style guide -- PENDING-CITATION on the orthography alone. saṃkhyā is PENDING-CITATION.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "numerus Reynoldsii",
+        "grammar": "m. nom. sg. + gen. sg. of a Latinised proper name",
+        "literal_gloss": "the number of Reynolds",
+        "citation": "No citation possible for the eponym. The Latinisation 'Reynoldsii' is proposed and PENDING-CITATION; Latinising a modern surname is a conventional operation but the convention was not checked against a style authority in this pass.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- necessarily: Osborne Reynolds published in 1883.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "Reynolds number",
+        "definition": "Re = rho*v*L/mu = v*L/nu, the ratio of inertial to viscous forces, which spans about thirteen orders of magnitude from bacterium to whale and across which the physics of swimming changes IDENTITY rather than degree."
+      },
+      "hindi": {
+        "devanagari": "रेनॉल्ड्स संख्या",
+        "transliteration": "renŏlḍs saṃkhyā",
+        "gloss": "Reynolds number",
+        "citation": "NOT looked up in McGregor in this pass, and McGregor is unlikely to carry a technical eponym. PENDING-CITATION on orthography.",
+        "status": "PENDING-CITATION"
+      },
+      "spanish": {
+        "term": "número de Reynolds",
+        "gloss": "Reynolds number",
+        "citation": "Not looked up in this pass. PENDING-CITATION. The eponym is not translated in any register and no dictionary entry is expected.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "This entry exists to state a RULE, not to supply a word: an eponym is transliterated and never translated, and no register may render 'Reynolds' by its meaning. The rule generalises to every eponym the corpus will meet and is the same rule CONCEPTS.json states for the POMDP tensors ('The letters A/B/C/D/E are conventional labels, not abbreviations; a register must transliterate or index them, never translate them as words'). The substantive trap is elsewhere and is in the definition: 'the physics of swimming changes IDENTITY rather than degree' across the Re range. A rendering that reads Re as a smooth dial -- 'more or less viscous' -- loses the concept, because at Re about 1e-5 a bacterium cannot coast AT ALL (computed coast distance about 1/16 of a hydrogen atom's diameter) and a reciprocal stroke nets ZERO displacement. That is a change of regime, not a change of amount. And the theorem is premise-bound in a way a translation can silently drop: it holds in an incompressible NEWTONIAN fluid, and withdrawing 'Newtonian' withdraws the theorem, since a micro-scallop does propel in a non-Newtonian fluid. Any rendering that states the scallop theorem without its Newtonian premise has asserted a falsehood.",
+      "forbidden_mistranslations": [
+        "Any translation of the surname 'Reynolds' by meaning, in any register -- it is a person's name.",
+        "Any rendering presenting Re as a matter of degree ('more viscous', 'less inertial') -- the concept is that the physics changes IDENTITY across the range.",
+        "Any rendering of the scallop theorem that drops the 'incompressible Newtonian fluid' premise -- the theorem is false without it; a micro-scallop propels in a non-Newtonian fluid.",
+        "Any rendering that carries Re outside its domain -- 'Reynolds number is meaningless for an atom or a galaxy' (DIMENSIONLESS_NUMBER).",
+        "'número de turbulencia' or any gloss-by-effect -- names a consequence, not the group, and would not survive the laminar case."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires the surname 'Reynolds' to come back INTACT and untranslated, and the output to describe a ratio of inertial to viscous forces. FAIL on any output in which the surname has been glossed by meaning. SECOND, SEPARATE TEST for the definition rather than the term: hand the translator the rendered DEFINITION and require the output to preserve (a) change of identity rather than degree across the range and (b) the Newtonian premise. FAIL on any output that reads Re as a smooth dial or states the scallop theorem unconditionally. This second test is the one that matters; the first is nearly free.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium-high on the RULE (eponyms transliterate) which is not a translation claim; low on every proposed orthography, none of which was checked against a style authority."
+    },
+    {
+      "concept_id": "SCALING_LAW",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "मानपरिवर्तननियमः",
+        "iast": "māna-parivartana-niyamaḥ",
+        "headword_as_in_lexicon": "COINAGE. Constituents PENDING-CITATION.",
+        "grammar": "m., proposed tatpuruṣa compound: māna ('measuring') + parivartana ('change') + niyama ('rule')",
+        "literal_gloss": "rule of change-with-measure (proposed)",
+        "citation": "No constituent verified in this pass. PENDING-CITATION throughout. No attested classical term means 'power law fitted within a regime'.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "lex potentiae intra regionem",
+        "grammar": "f. nom. sg. + gen. sg. + prep. + acc. sg.",
+        "literal_gloss": "a power-law within a region",
+        "citation": "Coinage; constituents not looked up in this pass, PENDING-CITATION. The phrase deliberately welds 'intra regionem' onto the term: see ambiguity_notes -- a scaling law that travels without its regime is the concept's characteristic defect and a term that CAN travel without it will.",
+        "classical_or_post_classical": "[COINED PHRASE / POST-CLASSICAL CONCEPT]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "scaling law",
+        "definition": "A power law fitted within a regime, whose exponent stops being a fact about the world at a regime boundary and which does not extrapolate through one."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "ley de escala",
+        "gloss": "scaling law",
+        "citation": "Not looked up as a phrase in this pass; PENDING-CITATION. Its head noun's register is however CITED and is a problem: Espasa-Calpe 2005 s.v. 'escala' carries nine senses including '1. Escalera de mano hecha de cuerda o madera' (a rope or wooden hand-ladder) and '5. Graduación o clasificación jerárquica ordenada'. See ambiguity_notes.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The word 'law' is the trap and it is in every register: a scaling law is a FIT, not a law, and the English term already overclaims. CONCEPTS.json is emphatic that the exponent 'stops being a fact about the world at a regime boundary' and that the relation does not carry through one -- 'not less accurately past a boundary -- it does not carry'. A rendering via a strong law-word (Latin lex, Sanskrit niyama, Spanish ley) imports permanence and universality, which is the opposite of a regime-bound fit; every rendering above therefore carries the regime restriction inside the term, and even so the head noun fights it. Second, cited from the concept: curvature is a power law's own confession -- a relation needing a quadratic term in log-mass is not a pure power law at all, 'and fitting straight lines to different arcs of one curve is how two groups each reported their arc's slope as a universal constant'. That sentence is the entry's real content and no single word in any register carries it. Third, the Spanish head noun 'escala' is attested with a hierarchical-ranking sense (Espasa-Calpe sense 5, 'Graduación o clasificación jerárquica ordenada en torno a criterios como la antigüedad, el cargo, el salario, etc.' -- quote completed 2026-07-15; this file previously clipped it at 'ordenada'), which remains a hazard given SCALE_LADDER's warning about reading a ladder as an ascent, though the attested sense is an institutional seniority scale rather than an ascent as such.",
+      "forbidden_mistranslations": [
+        "Any bare law-word (lex / niyama / ley) without the regime restriction -- asserts universality; the concept says the exponent stops being a fact about the world at a boundary.",
+        "Any rendering implying degraded accuracy past a boundary ('holds approximately', 'less accurately') -- CONCEPTS.json: it does not carry. Approximation and non-carrying are different claims and the softer one is the wrong one.",
+        "'universal scaling' -- names the exact error the concept documents: two groups reporting their arc's slope as a universal constant.",
+        "Spanish 'escala' read at sense 5 (hierarchical ranking) -- attested, adjacent, and wrong.",
+        "Any rendering that presents the exponent as a measured constant of nature rather than as a fit within a regime."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that (a) restricts the relation to a regime AND (b) says the exponent does not carry through a boundary. FAIL on 'universal', on 'holds approximately outside', and on any output that treats the exponent as a constant of nature. DISCRIMINATOR: run the test on bare 'ley de escala' / 'lex potentiae'. It must FAIL on criterion (a). If a bare law-word passes, the test is not detecting the overclaim that this concept exists to prevent.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low for renderings; the 'law is the wrong word in every register' finding is the entry's content."
+    },
+    {
+      "concept_id": "ALLOMETRY",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "अन्यमानता",
+        "iast": "anya-mānatā",
+        "headword_as_in_lexicon": "COINAGE. Constituents PENDING-CITATION.",
+        "grammar": "f., proposed abstract noun: anya ('other') + māna ('measure') + -tā (abstract suffix)",
+        "literal_gloss": "other-measuredness (proposed; a calque of Greek allos + metron)",
+        "citation": "No constituent verified in this pass. PENDING-CITATION throughout. The coinage is a calque of the Greek and is offered as such; a calque of a Greek compound is not a Sanskrit term and this one has no claim to be idiomatic.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "allometria",
+        "grammar": "f. (Latinised Greek)",
+        "literal_gloss": "allometry",
+        "citation": "Not in Lewis & Short -- not looked up, and not expected: the term is Huxley/Teissier 1936. A Latinised borrowing of the Greek, offered as a coinage. PENDING-CITATION.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- twentieth-century; from Greek ἄλλος + μέτρον.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "allometry",
+        "definition": "The scaling of a biological quantity with body mass, canonically BMR proportional to M^b, whose exponent moves with analysis choices and changes at the major evolutionary transitions."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "alometría",
+        "gloss": "allometry",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The single fact a rendering must not lose is that the exponent MOVES: CONCEPTS.json records that b moves with which taxa are excluded, whether body temperature is normalised, and whether the regression unit is species or order -- 'that mobility IS the dispute, and it is OBSERVED-CONTESTED'. Any register that renders allometry as 'the three-quarter-power law' or attaches a number to the term has converted a contested exponent into a settled constant and, per the CARDINAL_RULE, would then be positioned to be cited as settled -- which is the specific harm. Note the sovereign-vocabulary hazard: OBSERVED-CONTESTED is a NATURA class, and no rendering may let it read as a UNI ledger state; the UNI ledger has no contested state at all. Second, the concept records a curvature finding that is a rung boundary showing up in residuals -- superlinear in prokaryotes, linear in protists, sublinear in metazoans -- so 'the' exponent is not one object across the range, and a definite article in any register is already an overclaim.",
+      "forbidden_mistranslations": [
+        "Any rendering containing '3/4', 'three-quarter power', or 'Kleiber's law' -- attaches a contested value to the term; CONCEPTS.json classes the exponent OBSERVED-CONTESTED and MODELED (West-Brown-Enquist derive 3/4 from three assumptions, and dropping any one means 3/4 does not follow).",
+        "'the metabolic scaling law' with a definite article and no regime -- there is no single exponent across prokaryotes, protists and metazoans; the curvature changes sign.",
+        "Any rendering that presents the exponent as measured rather than as moving with analysis choices -- the mobility is the dispute, not noise around a true value.",
+        "Any rendering that lets OBSERVED-CONTESTED read as a UNI ledger state -- the UNI ledger has no contested state; this is a NATURA class and the two vocabularies are sovereign."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that (a) has a biological quantity scaling with body mass and (b) contains NO numeric exponent. FAIL immediately on any output containing '3/4', '0.75', or 'Kleiber'. That single criterion is the whole test and it is severe: the overwhelmingly likely failure is a correct-sounding answer with a number welded on. DISCRIMINATOR: run the test on the deliberate wrong rendering 'the three-quarter-power law'. It must FAIL.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low for renderings; medium-high for the 'no number may enter the term' rule, which follows directly from CONCEPTS.json's own contested classing."
+    },
+    {
+      "concept_id": "REGIME_BOUNDARY",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "सीमा",
+        "iast": "sīmā",
+        "headword_as_in_lexicon": "PENDING-CITATION -- सीमा was NOT looked up in this pass.",
+        "grammar": "f. (expected)",
+        "literal_gloss": "boundary, limit (expected)",
+        "citation": "NOT VERIFIED. Falsifier: query Cologne getword.php?dict=mw&key=सीमा&input=deva and quote or strike. Even if attested for 'boundary', the fit is poor for the reason in ambiguity_notes: this concept's boundary is a change of dominant TERM, not a line in space, and an ordinary boundary-word renders the metaphor rather than the mechanism.",
+        "status": "PENDING-CITATION"
+      },
+      "latin": {
+        "form": "limes regiminis",
+        "grammar": "m. nom. sg. (līmĕs, ĭtis) + gen. sg.",
+        "literal_gloss": "the boundary of a regime",
+        "citation": "Built on a CITED head noun: Lewis & Short s.v. līmĕs, ĭtis, m., root in līmus, cf. limen and Gr. λέχρις: literally 'a cross-path, balk between fields'; a boundary marker (stone or balk) separating estates; a fortified boundary-line or wall; and more generally any path, passage, or road, with cited uses from field divisions to military installations along the Rhine to poetic light-trails and celestial paths. Via Perseus, retrieved 2026-07-15. 'regimen' in the required sense is PENDING-CITATION and the compound is a coinage.",
+        "classical_or_post_classical": "līmĕs is classical and CITED; the compound is [COINED].",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "regime boundary",
+        "definition": "The point at which the dominant dimensionless group moves by orders of magnitude or the dominant force changes identity, past which a fitted exponent does not carry."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "frontera de régimen",
+        "gloss": "regime boundary",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "Every register offers a SPATIAL boundary word and the concept is not spatial: CONCEPTS.json says a regime boundary is 'A change of DOMINANT TERM, not of coefficient'. Latin līmĕs is the most vivid case of the problem precisely because its cited senses are so concrete -- a balk between fields, a stone marker, a wall on the Rhine -- so the Latin rendering imports a line one could stand on, where the actual referent is a change in which term of an equation dominates. This is a metaphor being rendered, and the entry says so rather than pretending the metaphor is the mechanism. Second, and this is a methodological point the term must not lose: CONCEPTS.json records that 'an independently-motivated break is worth far more than one found by searching residuals, and a break located only by scanning is a fitted artefact until pre-registered'. So a regime boundary is not merely a fact about a curve, it is a claim with an admission condition, and a rendering that makes it a purely descriptive noun drops the condition. Third, Spanish 'régimen' carries a heavy political sense (a political regime) which is entirely absent here and which no reader of a governance-carrying corpus will fail to hear.",
+      "forbidden_mistranslations": [
+        "Any rendering implying a location in space -- the boundary is in the dynamics, not the world; a change of dominant term, not a line.",
+        "Any rendering implying a change of coefficient or of degree -- CONCEPTS.json: a change of DOMINANT TERM, not of coefficient.",
+        "Spanish 'régimen' read politically -- a severe hazard in a corpus that also carries an approval plane and governance rules.",
+        "Any rendering that presents a residual-scanned break as a boundary without the pre-registration condition -- 'a break located only by scanning is a fitted artefact until pre-registered'.",
+        "'phase transition' -- a real and different technical term; borrowing it asserts thermodynamic machinery the definition does not contain."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output in which what changes is WHICH TERM OR FORCE DOMINATES. FAIL on any output describing a location, a line, a coefficient change, or a gradual transition. DISCRIMINATOR: run the test on bare 'limes'. A Latinist must return 'a balk between fields' or 'a frontier' and thereby FAIL, which is the evidence that the bare word does not carry the concept. If bare 'limes' passes, the test is reading the English gloss and not the Latin, and is void.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low -- the head noun is cited but its cited senses are all spatial and the concept is not."
+    },
+    {
+      "concept_id": "SCALE_LADDER",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "सोपानम्",
+        "iast": "sopānam",
+        "headword_as_in_lexicon": "सोपान (sopāna), n.",
+        "grammar": "n.",
+        "literal_gloss": "stairs, steps, a staircase, ladder",
+        "citation": "Monier-Williams 1899 s.v. सोपान: 'सोपान n. (perhaps contracted fr. स + उपायन) stairs, steps, a staircase, ladder to (gen. or comp.), MBh.; Kāv. &c.' Via Cologne, retrieved 2026-07-15. CITED for the ladder sense ONLY; the entry carries no sense of scale, magnitude, or ordered classification, so the compound needed to render THIS concept is not attested and any full rendering is a coinage.",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "scala",
+        "grammar": "scāla, ae, f. -- 'acc. to the ancient grammarians, not used in sing.' (i.e. properly scālae, f. pl.)",
+        "literal_gloss": "a flight of steps or stairs, a staircase; a ladder, scaling-ladder",
+        "citation": "Lewis & Short s.v. scāla, ae, f., for scandla, from scando (cf. mala, from mando): 'a flight of steps or stairs, a staircase; a ladder, scaling-ladder', with numerous classical citations in military and domestic use. Via Perseus, retrieved 2026-07-15. THE ENTRY CONTAINS NO SENSE RELATING TO MAGNITUDE, GRADUATED MEASURE, OR ABSTRACT SCALE -- checked expressly. CITED for 'ladder'; NOT citable for 'scale'.",
+        "classical_or_post_classical": "Classical, and plural by grammarians' rule -- a rendering using the singular 'scala' is already off the cited entry.",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "the scale ladder",
+        "definition": "The sixteen-rung sequence from quark to galaxy ordered by characteristic length, on which Markov blankets appear at the organelle, cell and organism rungs and vanish above and below."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "escala",
+        "gloss": "ladder AND graduated scale -- both attested in one lemma",
+        "citation": "Diccionario de la lengua española, Espasa-Calpe 2005, s.v. 'escala', nine senses, incl. '1. Escalera de mano hecha de cuerda o madera'; '2. Sucesión ordenada de cosas distintas, pero de la misma especie: escala de colores, de valores, de tamaños'; '4. Graduación que utilizan los diversos instrumentos de medición: escala barométrica, térmica, de Ritcher, de Farenheit'; '5. Graduación o clasificación jerárquica ordenada EN TORNO A CRITERIOS COMO LA ANTIGÜEDAD, EL CARGO, EL SALARIO, ETC.'; '6. Tamaño, importancia o proporción en que se desarrolla un plan o idea'. Via WordReference, retrieved 2026-07-15. QUOTE OF SENSE 5 REPAIRED 2026-07-15 BY ADVERSARIAL RE-CHECK: the first pass truncated sense 5 after 'ordenada', with no ellipsis, and the truncation flattered this file's own hazard argument -- see ambiguity_notes. Senses 2, 4 and 6 were likewise truncated mid-definition; their examples are restored here.",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "The English compound is a pun and the registers do not share it. English 'scale' means BOTH a graduated measure and (via 'scale ladder') the rungs themselves, and the term rides both. Latin does not: scāla is a LADDER and, checked expressly against L&S, carries NO magnitude sense whatever -- so 'scala' renders the ladder and silently drops the scale. Spanish is the opposite and is the dangerous one: escala carries both (sense 1 a rope/wood hand-ladder; senses 2-6 graduated measure, size, proportion), which makes it look like the perfect rendering, EXCEPT that sense 5 is an ordered HIERARCHICAL classification. CONCEPTS.json's warning on this very concept is that 'Writing the ladder as an ascent toward mind is a rhetorical move dressed as a measurement', and Spanish escala puts a hierarchy sense within reach of the reader as an attested dictionary sense. HAZARD PARTLY DOWNGRADED 2026-07-15 BY ADVERSARIAL RE-CHECK: the first pass quoted sense 5 as ending at 'ordenada', which made it read as hierarchy-in-general. The dictionary's actual sense 5 continues '...en torno a criterios como la antigüedad, el cargo, el salario, etc.' -- that is an INSTITUTIONAL seniority/rank/pay scale, a civil-service or military ladder, not a metaphysical ascent. So the attested sense is narrower and more concrete than the truncated quote implied, and the claim that escala 'hands the ascent-toward-mind move to the reader as an attested dictionary sense' overreached: what the dictionary hands over is a payroll grade. The hazard is real but downgraded -- a reader can still hear RANK in escala, and rank is what the ladder must not import -- and the mechanism is now stated at its true strength rather than at the strength a clipped quote lent it. The convenient register is still the less safe one, for the narrower reason. Sanskrit sopāna is honestly a ladder and nothing more, which at least fails visibly rather than invisibly. Last: the concept's own instruction is to 'Read the blanket column downward: it is NOT monotone' -- a galaxy is enormous and has no blanket, a mitochondrion is a micron across and has one -- so any rendering suggesting ascent, rank, or progress contradicts the data the ladder carries.",
+      "forbidden_mistranslations": [
+        "Latin 'scala' presented as rendering 'scale' -- L&S carries no magnitude sense; checked. It renders 'ladder' only.",
+        "Spanish 'escala' read at sense 5 ('Graduación o clasificación jerárquica ordenada en torno a criterios como la antigüedad, el cargo, el salario, etc.') -- attested, and it imports RANK, which is what the ladder must not carry. Note the sense is an institutional seniority scale, not a metaphysical ascent: this entry originally quoted the sense truncated at 'ordenada' and claimed it was 'precisely the ascent toward mind rhetorical move the concept forbids', which overstated it. Rank is still forbidden here; the dictionary just is not offering mysticism.",
+        "Any rendering via a rank/hierarchy root -- the ladder is ordered by characteristic LENGTH, and the blanket column is not monotone in it.",
+        "Any rendering implying ascent, progress, or climbing toward something -- 'a rhetorical move dressed as a measurement'.",
+        "Singular 'scala' where L&S records the ancient grammarians' rule that the word is not used in the singular -- a small point, but the entry says it."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that (a) has a sequence ordered by characteristic LENGTH and (b) contains no word of rank, ascent, progress, or hierarchy. FAIL on 'hierarchy', 'ascent', 'climb', 'higher/lower' used evaluatively. DISCRIMINATOR: run the test on Spanish 'escala' alone and ask specifically which of the nine Espasa-Calpe senses the translator used. If the answer is sense 5, the rendering has imported the hierarchy reading and must be struck -- and a test that does not ask WHICH SENSE was used cannot detect this, which is why the sense-identification step is part of the criterion rather than a nicety.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium -- three of five registers cited, and the two cited findings (Latin has no magnitude sense; Spanish has an attested hierarchy sense) are the entry's real content. The English pun is not reproducible in any register checked."
+    },
+    {
+      "concept_id": "RUNG",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "सोपानपदम्",
+        "iast": "sopāna-padam",
+        "headword_as_in_lexicon": "COINAGE on one CITED constituent: सोपान (sopāna) is attested; पद (pada) was NOT looked up in this pass.",
+        "grammar": "n., proposed tatpuruṣa compound: sopāna (n.) + pada (n., PENDING-CITATION)",
+        "literal_gloss": "a step of the staircase (proposed)",
+        "citation": "Monier-Williams 1899 s.v. सोपान n.: 'stairs, steps, a staircase, ladder to (gen. or comp.), MBh.; Kāv. &c.' Via Cologne, retrieved 2026-07-15. pada is PENDING-CITATION; the compound is a coinage.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "gradus",
+        "grammar": "grădus, ūs, m. (archaic gen. sg. graduis)",
+        "literal_gloss": "a step; and specifically 'that on which one steps, a step or round of a ladder, a stair'",
+        "citation": "Lewis & Short s.v. grădus, ūs, m., 'kindr. with Sanscr. kram, to go; v. gradior': sense I (Lit.) 'a step, pace' with classical citations (gradum facere, tollere gradum, celeri gradu); sense II (Transf.) B. 1. (Lit.) 'That on which one steps, a step or round of a ladder, a stair', predominantly in the plural, with examples including gradus templorum. Via Perseus, retrieved 2026-07-15. CITED, and the fit for 'rung' is close at sense II.B.1. LOCATOR STRUCK 2026-07-15 BY ADVERSARIAL RE-CHECK: this citation previously read 'sense II.A.B.1' in both this field and the confidence field. That locator does not exist -- L&S nests the sense as II (Transf.) B. 1., and the stray 'A.' was never in the dictionary. The headword, the etymology, the archaic gen. sg. graduis and the quoted sense wording were all returned by Perseus on re-check and stand; only the section locator was wrong. A malformed locator is the cheapest possible way for a real citation to become uncheckable by the next reader, which is why it is struck in the open rather than quietly repaired.",
+        "classical_or_post_classical": "Classical, and already in UNI operational use (the built organs are numbered gradus iv, gradus v).",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "rung",
+        "definition": "A level that exists only when all three of these hold: a boundary with real conditional independence forms, a characteristic timescale separates from the level below, and the level has its own dynamics that do not require tracking the level below."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "peldaño",
+        "gloss": "rung, step (of a ladder or stair)",
+        "citation": "Not looked up in this pass. PENDING-CITATION. Chosen over 'grado' deliberately: 'grado' carries rank and degree senses that reintroduce the hierarchy reading SCALE_LADDER forbids.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "SOVEREIGN HOMONYM, and it is live in this repository rather than theoretical. CONCEPTS.json states that this rung is NOT a rung of the L0-L12 developmental ladder, where '~2 of 11+ rungs earned' is a UNI BUILD POSITION -- 'two ladders, two senses, never merged'. Latin gradus is CITED and fits sense-perfectly, AND it is already in service in this very program as the UNI build-rung word (the built organs are numbered gradus iv, gradus v). So adopting gradus for the NATURA rung would merge the two ladders in the canonical register, which is the one that governs command names and operator-facing language. That is not a translation risk, it is a collision with deployed vocabulary. The honest options are (i) render the natura rung with a different Latin word and leave gradus to the UNI ladder, or (ii) keep gradus for both and always carry the ladder's name -- and this file does NOT choose, because the choice belongs to the Tree's naming authority and not to a lexicon file. Recorded as an open decision with a falsifier rather than settled by default. Second and separate: the definition is a CONJUNCTION of three conditions, and CONCEPTS.json says 'State all three or you have not identified a level, you have merely named a size' -- so a one-word rendering in any register is structurally incapable of carrying the concept and will be used to name sizes.",
+      "forbidden_mistranslations": [
+        "Any rendering that lets the NATURA rung and the UNI L0-L12 build rung share a term without the ladder being named -- CONCEPTS.json: two ladders, two senses, never merged. In Latin this is not hypothetical: gradus is already the UNI build-rung word in live use.",
+        "Spanish 'grado' -- carries rank and degree; reintroduces the hierarchy reading.",
+        "Any rendering used to name a level on ONE of the three criteria -- 'State all three or you have not identified a level, you have merely named a size'.",
+        "Any rendering via a rank or authority root -- HIERARCHY's note applies: not rank, command, or authority."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that names ALL THREE conditions (a conditional-independence boundary, a separated characteristic timescale, and level-autonomous dynamics). FAIL on any output naming fewer than three -- including an output that is otherwise a good translation of 'rung', which is the point: a bare rung-word cannot pass, and that is the finding, not a defect of the test. SECOND, MANDATORY CHECK, not a back-translation: grep the UNI corpus for 'gradus'. If it returns the built organs' build-rungs (gradus iv, gradus v) AND this file's natura rung, the collision named in ambiguity_notes is live and the naming authority must choose before this rendering is admitted.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium for the Latin citation (close sense fit, L&S II.B.1 -- locator corrected 2026-07-15 from a non-existent 'II.A.B.1'); the entry's operative content is the flagged collision with deployed UNI vocabulary, which is a build fact and not a translation claim."
+    },
+    {
+      "concept_id": "EMERGENCE",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "कालान्तरजातस्वातन्त्र्यम्",
+        "iast": "kālāntara-jāta-svātantryam",
+        "headword_as_in_lexicon": "COINAGE. Constituents PENDING-CITATION. Deliberately built around timescale-separation rather than around 'appearing', for the reason in ambiguity_notes.",
+        "grammar": "n., proposed compound: kāla ('time') + antara ('difference, interval') + jāta ('born, arisen') + svātantrya ('independence, autonomy')",
+        "literal_gloss": "autonomy born of a time-interval-difference (proposed)",
+        "citation": "No constituent verified in this pass; all PENDING-CITATION. THE CITED FINDING IN THIS ENTRY IS A REJECTION, not a proposal: Monier-Williams 1899 s.v. अभि-व्यक्ति (abhivyakti) f. gives 'manifestation, distinction' (Pāṇ. viii, 1, 15; Sāh.), via Cologne, retrieved 2026-07-15 -- and abhivyakti is the obvious candidate and is inadmissible. See forbidden_mistranslations.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "emergentia",
+        "grammar": "f. (post-classical abstract noun on ēmergo)",
+        "literal_gloss": "emergence",
+        "citation": "The VERB is cited; the abstract noun in this sense is not. Lewis & Short s.v. ē-mergo, si, sum, 3, v. a. and n.: active (rare) 'to bring forth, bring to light, raise up'; neuter (far more common) 'to come forth, come up, arise, emerge', with literal water examples ('equus emersit e flumine', 'emersus e palude'). Via Perseus, retrieved 2026-07-15. CHECKED AND NEGATIVE: the entry carries NO sense of a novel property arising from a system. 'emergentia' in the systems sense is [POST-CLASSICAL] and PENDING-CITATION.",
+        "classical_or_post_classical": "[POST-CLASSICAL] -- the verb is classical and means rising out of water; the systems sense is nineteenth/twentieth-century.",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "emergence",
+        "definition": "A statement about spectral gaps in a dynamical system: timescale separation makes a level's own dynamics writable without tracking the level below, so that broken symmetry at each level generates concepts not present in the level below."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "emergencia",
+        "gloss": "INADMISSIBLE AS RENDERED -- see ambiguity_notes. Cited here as a refutation, not as a proposal.",
+        "citation": "Diccionario de la lengua española, Espasa-Calpe 2005, s.v. 'emergencia': '1. f. Accidente o suceso que sobreviene de forma imprevista: estado de emergencia. 2. Brote o surgimiento: la emergencia de un movimiento artístico.' Via WordReference, retrieved 2026-07-15. TWO senses only, and NEITHER is the systems-science sense: sense 1 is an EMERGENCY and sense 2 is the bare act of appearing.",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "THIS IS THE MOST DANGEROUS ENTRY IN THE FILE and the danger is not lexical. The obvious Sanskrit rendering, abhivyakti, is attested ('manifestation, distinction', MW, Pāṇ. viii, 1, 15; Sāh.) and is the technical term of SATKĀRYAVĀDA -- the Sāṃkhya doctrine that the effect PRE-EXISTS in its cause and is merely MANIFESTED, never newly produced. Emergence asserts the exact contradictory: 'broken symmetry at each level generates concepts NOT PRESENT in the level below'. A register that renders emergence as abhivyakti has not mistranslated a word; it has asserted a metaphysics that DENIES the concept, while looking like a scholarly choice because the headword is genuinely attested. This is precisely the failure the operator's own charter predicts when it says Sanskrit does not automatically prevent ambiguity, and it is the reason the Sanskrit coinage above is built around timescale-separation instead. The Spanish case is cruder and just as real: 'emergencia' is attested at Espasa-Calpe with only two senses, the first of which is an EMERGENCY ('estado de emergencia'), so the Spanish cognate that every translator will reach for reads as a crisis. Sense 2 ('brote o surgimiento') is the act of appearing and still is not the concept, which is not about something appearing but about SPECTRAL GAPS -- timescale separation making a level's dynamics writable on their own. Finally the concept's own ordering must survive: 'timescale separation CAUSES the autonomy', not the reverse, and a rendering that makes emergence the cause of the separation has inverted it.",
+      "forbidden_mistranslations": [
+        "अभिव्यक्ति (abhivyakti) -- attested, obvious, and metaphysically contradictory: satkāryavāda says the effect pre-exists and is only manifested; emergence says the concepts are NOT present in the level below. The single worst available rendering in this file.",
+        "Any Sanskrit rendering via प्रादुर्भाव (prādurbhāva, 'appearance, manifestation') or आविर्भाव (āvirbhāva) -- unverified here, but both carry the same manifestation-of-the-pre-existing freight and would import the same denial.",
+        "Spanish 'emergencia' unqualified -- Espasa-Calpe sense 1 is an emergency; sense 2 is bare appearing; neither is the concept.",
+        "Latin 'emergentia' presented as classical -- L&S carries the verb ('to come forth... e flumine') and no systems sense; checked.",
+        "Any rendering as 'the whole is more than the sum of its parts' -- a slogan, not the definition; the definition is about spectral gaps and timescale separation, and the slogan is what lets emergence read as mysticism.",
+        "Any rendering that makes emergence CAUSE the timescale separation -- the ordering is the reverse and CONCEPTS.json states it explicitly."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output that (a) attributes the level's autonomy to TIMESCALE SEPARATION (or spectral gaps), and (b) says the higher level's concepts are NOT PRESENT in the level below. FAIL on any output containing 'manifestation', 'unfolding', 'was already there', 'latent', 'emergency', or 'more than the sum of its parts'. DISCRIMINATOR, and this one is mandatory before the entry may be admitted: run the identical test on 'abhivyakti'. A Sanskritist must return 'manifestation' and the entry must FAIL. If abhivyakti PASSES this test, the test cannot distinguish emergence from satkāryavāda and the TEST is void -- not the rendering. Second discriminator: run it on Spanish 'emergencia'; it must FAIL into 'emergency'.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low for the proposed renderings; HIGH for the two cited refutations (abhivyakti's satkāryavāda freight; emergencia's attested senses), which are the entry's whole value and which a translator without this note would walk straight into."
+    },
+    {
+      "concept_id": "FREQUENCY",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "आवृत्तिः",
+        "iast": "āvṛttiḥ",
+        "headword_as_in_lexicon": "आ-वृत्ति (āvṛtti), f.",
+        "grammar": "f.",
+        "literal_gloss": "turning towards or back; recurrence to the same point; repetition; revolving, going round",
+        "citation": "Monier-Williams 1899 s.v. आ-वृत्ति f.: 'turning towards, entering, turning back or from, reversion, retreat, flight'; 'recurrence to the same point'; 'repetition'; 'repetition (as a figure of rhetoric)'; 'turn of a way, course, direction'; 'occurrence'; 'revolving, going round'; 'worldly existence, the revolution of births'; 'use, employment, application'. Via Cologne, retrieved 2026-07-15. CITED for recurrence/repetition. NOT citable for the physical sense 'cycles per unit time': MW carries no rate sense, because a rate requires a denominator in time and the entry has none.",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "frequentia",
+        "grammar": "frĕquentĭa, ae, f. (from frequens)",
+        "literal_gloss": "an assembling in great numbers, a numerous attendance, concourse; a numerous assembly, multitude, crowd, throng",
+        "citation": "Lewis & Short s.v. frĕquentĭa, ae, f., frequens, II: 'an assembling in great numbers, a numerous attendance, concourse; and more freq. concr., a numerous assembly, multitude, crowd, throng', classical, frequent in Cicero. Via Perseus, retrieved 2026-07-15. CITED AS A REFUTATION: the Latin word means a CROWD OF PEOPLE and carries no sense of a rate of repetition. It is cited here to be refused, not proposed.",
+        "classical_or_post_classical": "Classical in the crowd sense. The physics sense is [POST-CLASSICAL] and has no rendering offered here.",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "frequency",
+        "definition": "A rate of repetition in hertz, admissible only with its measurand and scope, since values landing in the same numeric neighbourhood may be entirely different physics."
+      },
+      "hindi": {
+        "devanagari": "आवृत्ति",
+        "transliteration": "ā-vr̥tti",
+        "gloss": "recurrence, repetition -- NOT, in the cited dictionary, frequency in the physical sense",
+        "citation": "McGregor, The Oxford Hindi-English Dictionary, p. 96: 'आवृत्ति ā-vr̥tti [S.], f. 1. recurrence, repetition. 2. rehearsing, learning by heart (a lesson, &c.). 3. new edition (of a book).' Via DSAL, retrieved 2026-07-15. HONEST NEGATIVE, stated because it would be easy to suppress: McGregor carries NO physics sense of frequency for this word. Modern Hindi scientific usage does employ आवृत्ति for frequency, but that usage is NOT attested in the authority consulted, so the physics sense is PENDING-CITATION against a Hindi scientific-terminology authority and is not claimed here.",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "frecuencia",
+        "gloss": "number of oscillations, vibrations or waves per unit of time in any periodic phenomenon",
+        "citation": "Diccionario de la lengua española, Espasa-Calpe 2005, s.v. 'frecuencia': '1. f. Repetición mayor o menor de un acto o suceso: le veo con mucha frecuencia. 2. Número de veces que se repite un proceso periódico en un intervalo de tiempo determinado: pidió información sobre la frecuencia de paso de los autobuses. 3. Número de oscilaciones, vibraciones u ondas por unidad de tiempo en cualquier fenómeno periódico: frecuencia modulada.' Via WordReference, retrieved 2026-07-15. Sense 3 IS the physical sense and is the only fully-fitting attested rendering found in any register in this pass.",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "Spanish is the only register in this pass with an attested rate sense (Espasa-Calpe sense 3, per unit time). Latin actively misleads: frĕquentĭa is a CROWD -- a numerous assembly, multitude, throng -- and a Latin-reading operator meeting 'frequentia' in a UNI document reads 'a throng', which is not a near-miss but a different category of thing. Sanskrit āvṛtti is attested for recurrence and repetition but has NO denominator in time, and a rate without a denominator is not a rate; worse, MW's own entry carries 'worldly existence, the revolution of births' -- saṃsāra -- so āvṛtti in a Sanskrit register can read as the cycle of rebirth, which is doctrinal freight of the heaviest kind sitting inside an apparently technical word. Hindi McGregor confirms the same gap from the other side: recurrence and repetition, plus 'new edition (of a book)', and no physics. The concept's own trap must also survive rendering and no word carries it: about 7.83 Hz (electromagnetic, planetary cavity), 8-13 Hz (electrical, cortical) and 4-8 Hz (mechanical, whole-body vibration) are three separately measured quantities in one numeric neighbourhood with different MEASURANDS -- 'Each value is earned; the bridge between them is not'. A frequency rendered without its measurand is therefore not merely underspecified, it is the exact shape of the error the concept exists to block.",
+      "forbidden_mistranslations": [
+        "Latin 'frequentia' for frequency -- L&S: a crowd, throng, numerous assembly. Cited, total false friend, and the word an author would reach for first.",
+        "आवृत्ति used for the physics sense without a time denominator -- MW carries recurrence, not rate; Hindi McGregor likewise. Neither authority consulted attests the physics sense.",
+        "आवृत्ति left unmarked where MW's 'worldly existence, the revolution of births' can be heard -- imports saṃsāra into a physics term.",
+        "Any rendering of a frequency VALUE without its measurand -- 7.83 Hz electromagnetic, 8-13 Hz electrical and 4-8 Hz mechanical are different physics in one neighbourhood; a bare number invites the bridge the concept forbids.",
+        "'vibración' or any rendering by effect -- names a phenomenon rather than a rate, and 'vibration' in particular is the doorway to the mystical-adjacent usage RESONANCE warns about."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output containing a rate PER UNIT TIME. FAIL on 'crowd', 'throng', 'assembly' (which catches frequentia), on bare 'repetition' with no time denominator (which catches āvṛtti), and on 'rebirth' or 'worldly existence' (which catches the saṃsāra freight). DISCRIMINATOR: run the test on 'frequentia' alone -- a Latinist must return 'a throng' and FAIL. SEPARATE ADMISSION TEST, since the definition makes it a condition: present the rendering with a bare value and no measurand; the entry must be REJECTED, since 'admissible only with its measurand and scope' is part of the concept and a rendering that admits a bare number has not rendered it.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium-high -- four of five registers cited, and three of the four are cited NEGATIVES (Latin means a crowd; Sanskrit and Hindi have no rate sense). Spanish sense 3 is the only clean fit found."
+    },
+    {
+      "concept_id": "RESONANCE",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "अनुरणनम्",
+        "iast": "anuraṇanam",
+        "headword_as_in_lexicon": "अनु-रणन (anuraṇana), n.",
+        "grammar": "n.",
+        "literal_gloss": "sounding conformably to, echoing",
+        "citation": "Monier-Williams 1899 s.v. अनु-रणन: 'अनु-रणन n. sounding conformably to, echoing, Sāh.' Via Cologne, retrieved 2026-07-15. CITED -- and note the source: Sāh. is the Sāhityadarpaṇa, a work of POETICS, not of physics. The attestation is aesthetic, and that is exactly the problem recorded in ambiguity_notes.",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "resonantia",
+        "grammar": "Attested in L&S only as the present participle of rĕ-sŏno (n. pl. / f. sg. agreeing with its noun), NOT as an abstract noun meaning 'resonance'.",
+        "literal_gloss": "resounding, re-echoing (participial)",
+        "citation": "Lewis & Short s.v. rĕ-sŏno, āvi, 1 (with ante-classical third-conjugation forms): 'to sound or ring again, to resound, re-echo', classical and frequent, with neuter (literal and tropological) and active uses. The form 'resonantia' appears in that entry as a PARTICIPLE in cited phrases -- 'resonantia litora' (Sil.), 'ora Hylan semper resonantia' -- and is listed in the entry-group navigation. Via Perseus, retrieved 2026-07-15. HONEST SCOPE: this cites 'resonantia' as an attested participial FORM. It does NOT establish an attested classical abstract noun meaning 'resonance', and none is claimed.",
+        "classical_or_post_classical": "The verb is classical. The abstract noun in the physics sense is [POST-CLASSICAL] and PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "english": {
+        "term": "resonance",
+        "definition": "The selective amplification of a driven system near a characteristic frequency of a real cavity or oscillator, which licenses the frequency and nothing attached to the frequency."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "resonancia",
+        "gloss": "resonance",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "CONCEPTS.json states flatly that 'Resonance in a metaphorical or affective sense is a different word and must not be rendered alike -- this is where mystical-adjacent claims enter'. The Sanskrit citation is therefore a warning as much as a source: anuraṇana IS attested, but MW cites the Sāhityadarpaṇa, a treatise on POETICS, and anuraṇana belongs to the vocabulary of dhvani theory -- Ānandavardhana's doctrine of suggestion, in which a poem's meaning 'resonates' beyond its words. That is the AFFECTIVE sense, attested, sitting in the only Sanskrit word available. The register that looks scholarly is carrying the exact metaphor the concept forbids. Latin's participial 'resonantia' is likewise attested in poetry (resonantia litora, resounding shores) and the tropological sense L&S records is applied to speech and fame -- again the metaphor, not the mechanism. The concept's operative fence must survive every rendering: resonance 'licenses the frequency and nothing attached to the frequency'. A real Earth-ionosphere cavity resonance is a real thing with a real mechanism; the effect size of that field on human physiology at ambient picotesla strengths is NOT-MEASURED. A rendering that carries an affective root hands the reader the bridge from the real cavity to the human claim, which is the single most-travelled inadmissible inference in this subject area.",
+      "forbidden_mistranslations": [
+        "अनुरणन used without marking its poetics provenance -- MW cites Sāh.; the word belongs to dhvani theory's vocabulary of suggestion, which is the affective sense the concept expressly refuses.",
+        "Any rendering via an affective, sympathetic, or 'it resonates with me' root in any register -- 'this is where mystical-adjacent claims enter'.",
+        "Any rendering that lets the frequency license something attached to the frequency -- the cavity resonance is real; the physiological effect size at ambient strengths is NOT-MEASURED, and the two must not travel as one.",
+        "Latin 'resonantia' presented as an attested classical noun meaning resonance -- L&S carries it as a participle in poetic phrases; the abstract noun in the physics sense is not established here.",
+        "'vibración simpática' / 'sympathetic vibration' -- imports the affective metaphor into an apparently technical phrase."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output describing SELECTIVE AMPLIFICATION of a DRIVEN system near a characteristic frequency of a REAL cavity or oscillator. FAIL on any output containing 'resonates with', 'sympathy', 'suggestion', 'echo of meaning', or any affective reading. DISCRIMINATOR: hand a Sanskritist 'anuraṇana' with no context. If the return is the dhvani/poetics sense, the entry FAILS -- and that is the expected outcome given MW cites Sāh., which is why this rendering is not admitted on the strength of its citation alone. A citation establishes that a word exists; it does not establish that the word means the concept.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low -- the one cited Sanskrit headword is attested in a POETICS source and carries the affective sense the concept forbids, so the citation argues against the rendering rather than for it. This is the clearest case in the file of a CITED status that must not be read as an admission."
+    },
+    {
+      "concept_id": "DIFFUSION",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "यादृच्छिकप्रसरणम्",
+        "iast": "yādṛcchika-prasaraṇam",
+        "headword_as_in_lexicon": "COINAGE. Constituents PENDING-CITATION.",
+        "grammar": "n., proposed compound: yādṛcchika ('random, accidental') + prasaraṇa ('spreading forth')",
+        "literal_gloss": "random spreading (proposed)",
+        "citation": "No constituent verified in this pass; both PENDING-CITATION. The modifier 'random' is welded on deliberately: a bare spreading-word omits the thermal-random mechanism, and it is the randomness that produces the square law that is the concept's whole content.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "diffusio",
+        "grammar": "diffūsĭo, ōnis, f. (from diffundo)",
+        "literal_gloss": "the spreading out, extending",
+        "citation": "Lewis & Short s.v. diffūsĭo, ōnis, f., diffundo: 'I. The spreading out, extending: \"maris,\" Mart. Cap. 6, § 661. II. Cheerfulness: \"animi,\" Sen. Vit. Beat. 5, 1.' Via Perseus, retrieved 2026-07-15. CITED. Sense I fits the spreading, and note the attestation is late (Martianus Capella). Sense II is the trap: see ambiguity_notes.",
+        "classical_or_post_classical": "Attested; sense I cited to Martianus Capella (late antique) and sense II to Seneca. The modern physical sense (transport by random thermal motion) is [POST-CLASSICAL] and is not what L&S attests.",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "diffusion",
+        "definition": "Transport by random thermal motion, whose characteristic time scales as the square of distance and which therefore fails as a delivery mechanism above a characteristic length."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "difusión",
+        "gloss": "diffusion",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "Latin diffūsĭo is attested and its sense I ('the spreading out, extending', of the sea) genuinely fits the spreading -- but L&S's sense II is 'Cheerfulness', cited to Seneca's De Vita Beata: 'diffusio animi' is a spreading-out of the SPIRIT, i.e. good cheer. A Latin register carrying 'diffusio' near any word for mind or spirit can therefore be read as cheerfulness, which is not a subtle risk in a corpus that also carries a Z affect modulator with components named for feelings. More substantively, no register's word carries the concept's actual content, which is not spreading but a SQUARE LAW: characteristic time goes as the square of distance, and that is why diffusion FAILS as a delivery mechanism above a characteristic length. CONCEPTS.json puts the payoff plainly -- 'The square law is why the cell has the size it has, and why tissue needs convection: the constraint is geometric, not biological'. A rendering that says 'spreading' has rendered the picture and dropped the constraint, and the constraint is the reason the concept is in this wing at all.",
+      "forbidden_mistranslations": [
+        "Latin 'diffusio' placed near animus/mens -- L&S sense II is 'Cheerfulness' (diffusio animi, Sen. Vit. Beat. 5, 1). Attested, and absurd in context, which is exactly why it will not be caught by a reader who assumes the technical sense.",
+        "Any bare spreading-word -- drops the random thermal mechanism and the square law, which are the concept.",
+        "Any rendering implying diffusion merely becomes slower at larger sizes -- it FAILS as a delivery mechanism above a characteristic length; degradation and failure are different claims.",
+        "Any rendering implying the size limit is biological -- 'the constraint is geometric, not biological'.",
+        "'dispersión' -- a different physical process (scattering / dispersal); not transport by random thermal motion."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output containing BOTH (a) random thermal motion AND (b) the square-of-distance scaling. FAIL on any output that is merely 'spreading out', and FAIL on 'cheerfulness' (which catches the diffusio animi reading). DISCRIMINATOR: run the test on bare 'diffusio' with a Latinist and no context. If it returns 'spreading' or 'cheerfulness' -- both attested -- and not the square law, the bare word is shown insufficient, which is the finding this entry records.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium for the Latin citation; low for the fit. The cheerfulness sense is a real cited hazard and the square law is carried by no word in any register."
+    },
+    {
+      "concept_id": "GRADIENT",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "क्रमपरिवर्तनम्",
+        "iast": "krama-parivartanam",
+        "headword_as_in_lexicon": "COINAGE. Constituents PENDING-CITATION.",
+        "grammar": "n., proposed tatpuruṣa compound: krama ('step, sequence, order') + parivartana ('change')",
+        "literal_gloss": "step-wise change (proposed)",
+        "citation": "No constituent verified in this pass; both PENDING-CITATION. Of possible interest and NOT verified: Lewis & Short's gradus entry gives the etymology 'kindr. with Sanscr. kram, to go', which would relate krama- to the Latin gradient/gradus family -- but an etymological remark in a Latin dictionary is not an attestation of a Sanskrit headword, and it is recorded here as a lead, not a citation.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "gradiens",
+        "grammar": "pres. part. of gradior ('stepping, walking'); used substantively in the modern mathematical sense.",
+        "literal_gloss": "stepping, walking (participial); the modern sense is a borrowing",
+        "citation": "NOT looked up as a headword in this pass -- PENDING-CITATION. What IS cited and is relevant: Lewis & Short s.v. grădus, ūs, m. gives the etymology 'kindr. with Sanscr. kram, to go; v. gradior', establishing gradus and gradior as one family (via Perseus, retrieved 2026-07-15). The mathematical sense of 'gradient' is nineteenth-century and is [POST-CLASSICAL] in any case.",
+        "classical_or_post_classical": "[POST-CLASSICAL] in the mathematical sense.",
+        "status": "PENDING-CITATION"
+      },
+      "english": {
+        "term": "gradient",
+        "definition": "A spatial variation of a quantity, which is a measured object at one rung and a rhetorical one across rungs unless the measurand, its units, and two rungs measured with it are all stated."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "gradiente",
+        "gloss": "the intensity of increase or decrease of a variable magnitude, and the curve representing it",
+        "citation": "Diccionario de la lengua española, Espasa-Calpe 2005, s.v. 'gradiente': '1. m. Intensidad de aumento o disminución de una magnitud variable, y curva que lo representa. 2. fís. Relación de la diferencia de presión barométrica entre dos puntos. 3. f. amer. Pendiente, declive.' Via WordReference, retrieved 2026-07-15. Sense 1 fits. Note sense 3 is feminine and American, meaning a slope or incline -- a different word by gender.",
+        "status": "CITED"
+      },
+      "ambiguity_notes": "In Latin, gradiens and gradus are the same family -- L&S's gradus entry gives 'kindr. with Sanscr. kram, to go; v. gradior' -- so the Latin register renders GRADIENT and RUNG from one root, and a reader will hear the ladder inside the gradient. Given that RUNG already collides with the UNI build-rung (gradus iv, gradus v in live use), the Latin register is carrying three senses on one root and this file does not resolve it. The Spanish entry supplies a gender trap of its own: gradiente is masculine at sense 1 (the mathematical object) but FEMININE at sense 3 in American usage, where it means a slope or incline -- so 'la gradiente' and 'el gradiente' are different words, and the wrong article makes a physical hillside out of a mathematical object. The concept's own fence is the part no register carries and is the reason the concept exists: across rungs, length and specific power are MEASURED; time is PART-RHETORICAL, because a light-crossing time, a vibrational period, a doubling time and a fuel-exhaustion time are not one measurand and the column is a placement aid that 'must never be regressed'; and 'information density', 'degree of internal model' and 'complexity' are NOT-MEASURED. CONCEPTS.json adds the sting: 'the ladder most invites the second and it has the least behind it'. A bare gradient-word in any register will be used for exactly those NOT-MEASURED columns.",
+      "forbidden_mistranslations": [
+        "Spanish 'la gradiente' where the mathematical object is meant -- Espasa-Calpe sense 3 is feminine, American, and means 'pendiente, declive' (a slope). The article changes the referent.",
+        "Any rendering used for a cross-rung 'gradient' of information density, degree of internal model, or complexity -- all three are NOT-MEASURED and the term would launder them into measured objects.",
+        "Any rendering that permits the time column to be regressed -- time across rungs is PART-RHETORICAL; four different measurands share the column and it is a placement aid.",
+        "Any rendering without measurand, units, and two rungs measured with it -- the definition makes these admission conditions, so a bare noun is an inadmissible rendering of this concept.",
+        "Latin 'gradiens' allowed to blur into 'gradus' -- one root, three live senses (mathematical gradient, natura rung, UNI build-rung), and no disambiguation is offered by the word itself."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output naming a SPATIAL VARIATION OF A NAMED QUANTITY. FAIL on any output that returns a slope, a hillside, or an incline (which catches 'la gradiente'), and FAIL on any output that treats a gradient as available for an unnamed or unmeasured quantity. SECOND ADMISSION TEST, since the definition makes it a condition: present the rendering applied across two rungs WITHOUT a measurand and units. It must be REJECTED. A rendering that admits a cross-rung gradient of 'complexity' has failed, since CONCEPTS.json records complexity across rungs as NOT-MEASURED.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium for Spanish (cited, with the gender split recorded); low for Latin (PENDING, and root-tangled with two other live senses)."
+    },
+    {
+      "concept_id": "MORPHOGENESIS",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "रूपोत्पत्तिः",
+        "iast": "rūpotpattiḥ",
+        "headword_as_in_lexicon": "COINAGE. Constituents PENDING-CITATION -- रूप and उत्पत्ति were NOT looked up in this pass.",
+        "grammar": "f., proposed tatpuruṣa compound: rūpa ('form') + utpatti ('arising, production'), with sandhi rūpa + utpatti > rūpotpatti",
+        "literal_gloss": "the arising of form (proposed)",
+        "citation": "Neither constituent verified in this pass. PENDING-CITATION for both. FLAGGED WITHOUT RESOLUTION: rūpa is expected to be attested for 'form', but it is also the first of the five skandhas in Buddhist analysis and a technical term of several systems, so if it is adopted its freight must be recorded at that time. This file does not adopt it on an unverified basis.",
+        "status": "COINED"
+      },
+      "latin": {
+        "form": "formae generatio",
+        "grammar": "f. gen. sg. + f. nom. sg.",
+        "literal_gloss": "the generation of form",
+        "citation": "Coinage; neither constituent looked up in this pass, both PENDING-CITATION. 'Morphogenesis' itself is Greek (μορφή + γένεσις) and any Latin rendering is a calque or a borrowing.",
+        "classical_or_post_classical": "[COINED PHRASE / POST-CLASSICAL CONCEPT]",
+        "status": "COINED"
+      },
+      "english": {
+        "term": "morphogenesis",
+        "definition": "The generation of form from local rules during growth, in which pattern arises without a blueprint."
+      },
+      "hindi": {
+        "devanagari": "",
+        "transliteration": "",
+        "gloss": "",
+        "citation": "Not attempted in this pass.",
+        "status": "NOT-ATTEMPTED"
+      },
+      "spanish": {
+        "term": "morfogénesis",
+        "gloss": "morphogenesis",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The load-bearing negative is 'WITHOUT A BLUEPRINT', and it is the piece every register will drop, because every available form-word implies a form that was specified somewhere. The concept's earned exemplar makes the stakes concrete: in phyllotaxis 'nothing golden was put in -- repulsion, advection and periodic deposition were put in, and the golden angle came out'. A rendering that implies the form was designed, planned, or encoded inverts that result completely and hands back the blueprint the exemplar refutes. This is also where the Sanskrit risk concentrates: any rendering via a manifestation-root would import satkāryavāda exactly as it does in EMERGENCE -- the form pre-existing and merely being revealed is the precise opposite of pattern arising from local rules -- and rūpa, if adopted, carries its own systems' freight. Note further that CONCEPTS.json says 'Growth is the generator of form', so growth is not the setting in which morphogenesis happens but the generator itself, and a rendering that makes growth a mere backdrop has lost the causal claim.",
+      "forbidden_mistranslations": [
+        "Any rendering implying a plan, blueprint, design, or encoding -- 'pattern arises without a blueprint'; the phyllotaxis exemplar exists to refute exactly this.",
+        "Any Sanskrit rendering via a manifestation-root (abhivyakti and relatives) -- imports satkāryavāda: form pre-existing and being revealed, the opposite of pattern arising from local rules. Same defect as EMERGENCE, same source.",
+        "Any rendering implying the golden angle was an input -- 'nothing golden was put in... the golden angle came out'. This is the corpus's own earned result and inverting it is the worst available error here.",
+        "Any rendering that makes growth the setting rather than the generator -- 'Growth is the generator of form'.",
+        "'formación' / 'formation' -- names the outcome and drops the local-rules mechanism."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output stating that form arises from LOCAL RULES during GROWTH and containing NO word implying a plan, blueprint, design, code, or template. FAIL on 'blueprint', 'plan', 'design', 'encoded', 'programmed', 'revealed', 'manifested'. DISCRIMINATOR: run the test on any manifestation-root rendering. It must FAIL, for the same reason and by the same mechanism as in EMERGENCE -- and if a single test cannot fail both, neither entry's test is doing its job.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "low -- no constituent verified in any register but English."
+    },
+    {
+      "concept_id": "CELL",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "कोशः",
+        "iast": "kośaḥ",
+        "headword_as_in_lexicon": "कोश (kośa)",
+        "grammar": "m. (also n. in some senses)",
+        "literal_gloss": "a cask, vessel for holding liquids; a pail, bucket; a sheath, scabbard; a case, covering, cover",
+        "citation": "Monier-Williams 1899 s.v. कोश: 'a cask, vessel for holding liquids'; 'a pail, bucket'; 'a sheath, scabbard, &c.'; 'a case, covering, cover'; and an extensive passage on the Vedāntic sheaths enveloping the soul, naming ānanda-maya, vijñāna-maya and anna-maya. Via Cologne, retrieved 2026-07-15. CITED for sheath/container. HONEST SCOPE, checked: MW's entry describes the sheaths in these terms and does NOT itself use the term pañca-kośa ('five sheaths'), so the sheath doctrine is cited as MW carries it and no five-sheath claim is made on MW's authority. NOT citable for the biological cell: MW carries no such sense.",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "cellula",
+        "grammar": "cellŭla, ae, f. (dim. of cella)",
+        "literal_gloss": "a small store-room or apartment",
+        "citation": "Lewis & Short s.v. cellŭla, ae, f., dim. cella: 'a small store-room or apartment', with citations to Terence and Columella. Via Perseus, retrieved 2026-07-15. CHECKED AND NEGATIVE: NO biological sense is present in the entry; the word refers exclusively to architectural or storage spaces. The biological sense enters with Hooke's Micrographia (1665) and is therefore [POST-CLASSICAL] -- which, honestly, is WHY the word fits: Hooke named the biological object after the store-room, so the Latin register renders the concept by the same metaphor English took.",
+        "classical_or_post_classical": "[POST-CLASSICAL in the biological sense] -- classical only as a small store-room.",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "cell",
+        "definition": "The design unit of biology and the canonical Markov blanket, plasma-membrane bounded and dominated by viscosity and diffusion at Re of order 1e-5."
+      },
+      "hindi": {
+        "devanagari": "कोशिका",
+        "transliteration": "kośikā",
+        "gloss": "biol. cell",
+        "citation": "McGregor, The Oxford Hindi-English Dictionary, p. 218: 'कोशिका kōśikā ... कोशिका kośikā [S.], f. biol. cell.' Via DSAL, retrieved 2026-07-15. CITED, with the subject label 'biol.' carried in the dictionary itself. This is the cleanest attestation in the whole file: the authority supplies both the sense and the domain label.",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "célula",
+        "gloss": "cell",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "The Hindi register is the strongest in this file -- McGregor gives कोशिका [S.] f. 'biol. cell' with the domain label attached -- and it is built on the Sanskrit kośa that the Sanskrit register cannot safely use bare, which is worth stating because it looks like an inconsistency and is not: the derived Hindi technical term has been fixed to the biological sense by usage, while the Sanskrit source word has not, and MW's own kośa entry runs from buckets to scabbards to the Vedāntic sheaths that envelop the soul (ānanda-maya, vijñāna-maya, anna-maya). A Sanskrit register using kośa for 'cell' therefore sits inside the sheath-of-the-self doctrine, and in a corpus whose MIND entry warns in the strongest terms against importing a self, that is not an acceptable resting place. The second hazard is the concept's own and is heavier: 'the canonical Markov blanket' does NOT mean I(mu;eta|b) was estimated for the cell -- CONCEPTS.json says flatly 'it was not' -- so any rendering that makes the cell canonically-a-blanket asserts a measurement nobody made, which is the BLANKET_SLIDE at the lexicon level. And per the CARDINAL_RULE, 'the canonical case' is a fact about the literature's habits, never a UNI gate.",
+      "forbidden_mistranslations": [
+        "कोश (kośa) bare for the biological cell -- MW carries buckets, scabbards, coverings and the Vedāntic sheaths enveloping the soul; the sheath-of-the-self reading is attested and is a metaphysics. Use the derived कोशिका in Hindi, which McGregor fixes to 'biol.', and do not back-form the Sanskrit.",
+        "Latin 'cellula' presented as classically biological -- L&S has only 'a small store-room or apartment' (Ter., Col.); checked. The biological sense is Hooke 1665.",
+        "Any rendering implying the cell's Markov blanket is established -- 'the canonical case' is a habit of the literature; I(mu;eta|b) was not estimated. Asserting it is the Pearl-to-Friston slide.",
+        "Any rendering via a 'room' or 'chamber' root that loses the membrane -- the concept is plasma-membrane bounded and the boundary is the point.",
+        "Any rendering that lets 'design unit of biology' read as a designed unit -- MORPHOGENESIS forbids the blueprint; the phrase names a unit OF design-analysis, not an artefact of design."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output naming the membrane-bounded biological unit. FAIL on 'store-room', 'scabbard', 'bucket', or 'sheath of the soul' -- each of which is attested for a candidate rendering and each of which catches a specific error above. DISCRIMINATOR: hand a Sanskritist bare 'kośa'. It must FAIL, most likely into 'sheath' or 'treasury'; if it passes as 'cell', the test is reading modern Hindi usage back into Sanskrit and is void. SEPARATE, NON-LINGUISTIC CHECK: the rendering must not be admitted in any sentence asserting the cell HAS a Markov blanket as a measured fact -- that is a claim about an unrun measurement and no translation licenses it.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium-high for Hindi (cited with a domain label, the cleanest attestation in the file) and Latin (cited, with the post-classical shift honestly dated to Hooke); low for Sanskrit, where the only available word carries the sheath-of-the-self doctrine."
+    },
+    {
+      "concept_id": "MEMBRANE",
+      "domain": "natura",
+      "store": "TRUE",
+      "sanskrit": {
+        "devanagari": "त्वच्",
+        "iast": "tvac",
+        "headword_as_in_lexicon": "त्वच् (tvac), f.",
+        "grammar": "f. (also cl. 6 verb त्वच्, 'to cover')",
+        "literal_gloss": "skin (of men, serpents &c.), hide (of goats, cows &c.); bark, rind, peel",
+        "citation": "Monier-Williams 1899 s.v. त्वच्: 'त्वच् cl. 6. ˚चति, to cover'; 'त्वच् f. skin'; 'skin (of men, serpents &c.), hide (of goats, cows &c.)'; 'bark, rind, peel'; with further senses incl. a cow's hide for Soma pressing, a leather bag, a cloud (fig.), Cassia bark, cinnamon, a horse's cover, earth's surface, darkness. Ṛgveda-attested. Via Cologne, retrieved 2026-07-15. CITED for skin/covering. NOT citable for the biological membrane: MW carries no such sense, and 'skin' is an organism-scale word being borrowed for a cell-scale object.",
+        "status": "CITED"
+      },
+      "latin": {
+        "form": "membrana",
+        "grammar": "membrāna, ae, f. (from membrum)",
+        "literal_gloss": "the skin or membrane that covers parts of the body",
+        "citation": "Lewis & Short s.v. membrāna, ae, f., membrum: 'I. the skin or membrane that covers parts of the body (class.)', with literal references to membranes covering eyes, brain tissue, insect wings, and snake sloughs; and, under 'II. Transf.': 'A.' the thin skin of plants and other natural objects (L&S illustrates with the membrane covering garlic and pomegranate); 'B. A skin prepared for writing, etc., parchment'; 'C. The surface, outside of a thing' (poet.). Via Perseus, retrieved 2026-07-15. QUOTE BOUNDARY REPAIRED 2026-07-15 BY ADVERSARIAL RE-CHECK: the first pass ran the clause 'also used tropically to mean an outer layer concealing inner meaning or substance' INSIDE the quotation marks around L&S II. That clause is this file's paraphrase of the Seneca usage L&S illustrates at II.C, not L&S's wording, and it is now outside the quote. The senses themselves were returned by Perseus on re-check and stand. CITED, classical, and the best Latin fit in this file -- the anatomical sense is sense I, marked 'class.', not a transferred one.",
+        "classical_or_post_classical": "Classical in the anatomical sense (L&S marks sense I 'class.').",
+        "status": "CITED"
+      },
+      "english": {
+        "term": "membrane",
+        "definition": "A selectively permeable lipid boundary, which is a surface for reasons of lipid physics and history, and whose satisfying I(mu;eta|b) = 0 is a DIFFERENT question whose answer is NOT-MEASURED."
+      },
+      "hindi": {
+        "devanagari": "झिल्ली",
+        "transliteration": "jhillī",
+        "gloss": "a membrane; lining; film",
+        "citation": "McGregor, The Oxford Hindi-English Dictionary, p. 395: 'झिल्ली jhillī, f. 1. a membrane; lining; film. 2. med. cataract. 3. a chrysalis. 4. parchment.' AND, at the same page, a separate homograph: 'झिल्ली jhillī [S.], f. a cricket.' Via DSAL, retrieved 2026-07-15. CITED for 'a membrane' at sense 1 -- with the homograph recorded, since the dictionary lists two different words under one spelling.",
+        "status": "CITED"
+      },
+      "spanish": {
+        "term": "membrana",
+        "gloss": "membrane",
+        "citation": "Not looked up in this pass. PENDING-CITATION.",
+        "status": "PENDING-CITATION"
+      },
+      "ambiguity_notes": "Latin membrāna is the best-fitting attested word in this file and it carries a hazard in its own transferred senses: L&S II.C gives 'The surface, outside of a thing' (poet.) and illustrates a tropological use from Seneca which this file reads as an outer layer CONCEALING an interior -- that reading is this file's paraphrase, not L&S's wording, and is marked as such since 2026-07-15. On that reading, in a corpus about boundaries between an inside and an outside, the Latin word already suggests that the boundary hides an interior, which is a metaphysical suggestion the concept must not make. The Hindi entry supplies a genuine homograph rather than a shade of meaning: McGregor lists झिल्ली 'a membrane; lining; film' AND, separately, झिल्ली [S.] 'a cricket' -- the insect -- on the same page, so the Hindi rendering is spelled identically to an unrelated word, and 'parchment' (sense 4) is a further collision that Latin membrana ALSO has (L&S II.B). Both registers independently drifted from skin to writing-surface, which is worth recording because a reader may reasonably meet either. The concept's own sting is the part no register can carry and it is the sharpest instance of the whole wing's discipline: a membrane is a surface for reasons of LIPID PHYSICS AND HISTORY, and whether it satisfies I(mu;eta|b) = 0 is a DIFFERENT QUESTION whose answer is NOT-MEASURED. CONCEPTS.json states the rule outright -- 'the observation that organisms have surfaces is not evidence that the surface is a Markov blanket' and 'Do not let a membrane and a blanket be rendered with one term'.",
+      "forbidden_mistranslations": [
+        "Any rendering that renders MEMBRANE and MARKOV_BLANKET with one term -- CONCEPTS.json's explicit instruction. The membrane is a lipid surface; the blanket is an unverified conditional-independence claim about it.",
+        "Any rendering implying the membrane IS the blanket, or that having a surface establishes one -- 'the observation that organisms have surfaces is not evidence that the surface is a Markov blanket'.",
+        "त्वच् (tvac) for the cell membrane -- MW gives skin, hide, bark, and the earth's surface; it is an organism-scale and plant-scale word, and using it at cell scale silently changes rung.",
+        "Latin 'membrana' read at L&S II.C -- L&S's own words are 'The surface, outside of a thing' (poet.); the gloss 'an outer layer concealing inner meaning or substance' is THIS FILE'S paraphrase of the tropological use L&S illustrates from Seneca, and is marked as a paraphrase since 2026-07-15 rather than carried in quotation marks as the dictionary's wording. Either way the risk stands: the word suggests the boundary hides an interior, which is the Friston-blanket reading arriving through a poetic sense.",
+        "Hindi 'झिल्ली' left unmarked where the homograph झिल्ली [S.] 'a cricket' (McGregor p. 395) or sense 4 'parchment' may be heard.",
+        "Any rendering via a parchment/writing-surface root -- attested in BOTH Latin (II.B) and Hindi (sense 4), and wrong in both."
+      ],
+      "back_translation_test": "Hand the translator ONLY the rendering. PASS requires an English output naming a SELECTIVELY PERMEABLE LIPID BOUNDARY. FAIL on 'parchment' (attested in Latin II.B and Hindi sense 4), on 'cricket' (the Hindi homograph), on 'bark' or 'hide' (attested for tvac), and on any output implying the boundary conceals an interior (Latin II.C). SEPARATE AND MANDATORY, since it is the concept's real content: the rendering must be rejected in any sentence that treats the membrane as a Markov blanket. Test it by handing the translator a sentence asserting the membrane IS the cell's blanket; if the rendering makes that sentence read as established fact, the rendering has enabled the Pearl-to-Friston slide and must be struck. No translation licenses a measurement, and I(mu;eta|b) for the membrane is NOT-MEASURED.",
+      "reviewer": "NONE - PENDING EXPERT REVIEW",
+      "confidence": "medium-high -- three of five registers cited, Latin classically in the anatomical sense (L&S marks sense I 'class.'). The strongest citation set in the file, and the entry still turns on a NOT-MEASURED that no word carries."
+    }
+  ]
+}

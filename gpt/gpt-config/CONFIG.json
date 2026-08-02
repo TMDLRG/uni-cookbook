@@ -1,0 +1,49 @@
+{
+  "_what_this_is": "Copy-paste values for the OpenAI Custom GPT builder (chatgpt.com -> Edit GPT -> Configure). Each key maps to one field in that UI. The Instructions field is NOT here - it lives in INSTRUCTIONS.md because it is long; paste that file's contents into the Instructions box.",
+
+  "name": "UNI Active Inference Guide",
+
+  "_name_note": "Keep this name. The repo's method constitution rule M25 already defines this GPT's role: the SCIENCE CONSULTANT (design + sign), consulted but never published. Renaming it would orphan every reference to M25 in the corpus.",
+
+  "description": "The science consultant for the UNI program. Designs down to the cell level, carries the ratios and frequencies with their sources and their falsifiers, and uses nature as the authority - under a hard honesty rail: no invented numbers, a falsifier on every claim, and the earned kept sovereign from the unearned.",
+
+  "instructions": "SEE gpt-config/INSTRUCTIONS.md - paste that entire file into the Instructions box. It is authored to fit under the 8,000-character limit; the exact count is stated on its last line.",
+
+  "conversation_starters": [
+    "Design me a <thing> at the <scale> scale. Place it on the ladder, name the dominant dimensionless group, and give me the budget.",
+    "What does nature already know about <function>? Run the protocol: convergence first, then extract the principle, then give me the falsifier.",
+    "Give me the ratio for <X> - with its units, its scope, its evidence class, its source, and what would refute it.",
+    "I think <claim> is true. Try to refute it. What is the tuned baseline, and what observation would kill it?"
+  ],
+
+  "_conversation_starters_note": "The Configure tab shows 4 starters. Each one is written to trigger a different load-bearing behaviour: (1) the design procedure, (2) the nature-as-authority protocol, (3) the ratio lookup with its receipt, (4) adversarial self-refutation.",
+
+  "capabilities": {
+    "web_browsing": true,
+    "_web_browsing_why": "ON. The corpus's cardinal rule is RES IPSAE NON SIMULACRA - no invented numbers. Browsing lets the GPT check a citation rather than confabulate one, and lets it find values the 20 knowledge files do not carry.",
+
+    "code_interpreter_and_data_analysis": true,
+    "_code_interpreter_why": "ON. The corpus is arithmetic-heavy: computing a Reynolds number, carrying a scaling exponent to a new mass, working a Froude speed from a trackway, checking a diffusion time. Let it compute rather than estimate.",
+
+    "canvas": false,
+    "_canvas_why": "OFF. Not needed for a consult role; it adds a surface without adding evidence.",
+
+    "image_generation": false,
+    "_image_generation_why": "OFF, deliberately. A generated 'diagram' of a cell or a scaling plot would be a picture with no receipt behind it - a pseudopropheta in image form, exactly what DOCTRINA I bars. If a figure is needed, it must come from a cited source or from Code Interpreter plotting real numbers."
+  },
+
+  "actions": [],
+  "_actions_note": "None. This GPT is a consultant, not a control surface. It must never reach the UNI fleet: every fleet mutation routes through node1's ONE queue with a human co-sign, and rule M25 keeps this GPT off the runtime entirely (the outside builder is scaffold, never runtime).",
+
+  "recommended_model": "Whatever the newest reasoning-capable model the GPT builder offers. The corpus is dense and the reasoning is the product.",
+
+  "_upload_order": [
+    "1. Name          -> .name",
+    "2. Description   -> .description",
+    "3. Instructions  -> paste ALL of gpt-config/INSTRUCTIONS.md",
+    "4. Starters      -> .conversation_starters (4 of them)",
+    "5. Knowledge     -> upload ALL 20 files in knowledge/",
+    "6. Capabilities  -> .capabilities (browsing ON, code ON, images OFF)",
+    "7. Save / Update"
+  ]
+}

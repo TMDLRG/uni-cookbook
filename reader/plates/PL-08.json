@@ -1,0 +1,441 @@
+{
+  "id": "PL-08",
+  "title": "The ratios — one plate, many scales",
+  "subtitle": "The log–log allometry plate: Kleiber with both disputed lines drawn, the Strouhal cruise band, and the Froude gait transition.",
+  "caption": "Seven panels on allometry and dimensionless scaling, drawn only from constants this corpus prints. I draws Kleiber's law as a log–log plot carrying BOTH disputed lines: a 3/4 line tangent to the Kolokotrones quadratic at ~4.2 kg and a 2/3 line tangent at ~160 g — the masses at which each exponent is locally true — with the fitted data bracketed (3.6 g … 460 kg) and everything beyond hatched as extrapolation. A residual strip subtracts the curve so the divergence is visible at all: each straight line touches zero ONLY at its own tangent mass and falls away on both sides. The dispute (Rubner's 2/3 surface law vs Kleiber's 3/4 from n=13) is labelled on the plate, and the cost of extrapolating the 3/4 line down to a 3 g shrew is measured at ×1.95. II plots the local slope — linear in log M, so a straight rising line — crossing 2/3 at ~160 g and 3/4 at ~4.2 kg: there is no exponent, there is a curve. III is rule M2 rendered as a confidence-interval ruler: nine fitted exponents against the 2/3 and 3/4 thresholds, annotated that the nine rows are only FIVE papers. IV shows the claim dissolving on its own spread (51% of Glazier's exponents fall outside 0.7–0.8; the intraspecific mode is 0.667). V draws the Strouhal 0.2–0.4 cruise band with the only per-taxon values this corpus carries — odontocetes and one bat — and prints the gap where the others should be. VI draws the Froude gait transition at 0.5, the inverted-pendulum ceiling at 1, and the measured lunar transition of 1.39 ± 0.45 that broke it. VII carries the key, the numbered caption and what the plate does not claim. Every line carries an evidence-class badge. The vertical datum of I is a stated drafting choice: b₀ is not printed in this corpus, so NO absolute metabolic rate and NO prefactor is drawn or claimed. Marks, not colours — the plate must survive greyscale.",
+  "source_chapters": [
+    {
+      "id": "NA-05",
+      "path": "encyclopedia/wing-NATURA/NA-05-ratios-and-scaling-laws.md",
+      "role": "primary — Kleiber, the dispute, the quadratic, the CI verdicts, the spread",
+      "rows": "NA05-01…NA05-47"
+    },
+    {
+      "id": "NA-06",
+      "path": "encyclopedia/wing-NATURA/NA-06-frequencies-rhythm-and-resonance.md",
+      "role": "Strouhal re-analyses; the Froude gait transition and its lunar failure",
+      "rows": "NA06-01…NA06-07"
+    },
+    {
+      "id": "NA-07",
+      "path": "encyclopedia/wing-NATURA/NA-07-dimensionless-numbers.md",
+      "role": "St and Fr definitions, scope, water-walker off-scope band",
+      "rows": "NA07-12, NA07-13, NA07-16"
+    },
+    {
+      "id": "CN-08",
+      "path": "cookbook/recipes-natura/CN-08-dinosaurs.md",
+      "role": "the recorded Froude convention trap (v²/gL vs v/√(gL))",
+      "rows": "CN08-22, CN08-26"
+    },
+    {
+      "id": "CN-10",
+      "path": "cookbook/recipes-natura/CN-10-bats.md",
+      "role": "the only per-taxon Strouhal series this corpus carries besides odontocetes",
+      "rows": "CN10-43, CN10-44"
+    },
+    {
+      "id": "CN-11",
+      "path": "cookbook/recipes-natura/CN-11-humans.md",
+      "role": "Fr_transition, the computed transition speed, the Fr = 1 ceiling",
+      "rows": "CN11-40, CN11-41, CN11-42"
+    },
+    {
+      "id": "NATURE-LEDGER",
+      "path": "encyclopedia/NATURE-LEDGER.md",
+      "role": "the sovereign NATURA ledger every badge cites"
+    },
+    {
+      "id": "NA-00",
+      "path": "encyclopedia/wing-NATURA/NA-00-how-to-read-this-wing.md",
+      "role": "the twelve-class vocabulary (amendment 2026-07-15-A) this plate badges against"
+    }
+  ],
+  "corpus_tip": "f1be794",
+  "claims": [
+    {
+      "panel": "I",
+      "id": "PL08-C01",
+      "statement": "Kleiber's law reports metabolic rate ∝ M^(3/4); the measured slope reported is 0.74.",
+      "value": "3/4",
+      "units": "dimensionless",
+      "scope": "mammal BMR vs body mass, 13 data points",
+      "class": "OBSERVED-CONTESTED",
+      "ledger_row": "NA05-01",
+      "source": "Kleiber 1932, Hilgardia 6:315–353; n=13 per Kolokotrones et al. 2010, Nature 464:753–756",
+      "falsifier": "The dispute IS the falsification record — see every CI row in panel III."
+    },
+    {
+      "panel": "I",
+      "id": "PL08-C02",
+      "statement": "Rubner's surface law argues 2/3: heat leaves through a surface ∝ L², mass grows ∝ L³.",
+      "value": "2/3",
+      "units": "dimensionless",
+      "scope": "surface-law argument; respiration trials on dogs",
+      "class": "OBSERVED-CONTESTED",
+      "ledger_row": "NA05-02",
+      "source": "Rubner 1883",
+      "falsifier": "Data rejecting 2/3 at a stated mass range."
+    },
+    {
+      "panel": "I",
+      "id": "PL08-C03",
+      "statement": "The log–log relation carries significant CONVEX curvature: it is not a power law at all.",
+      "value": "b₂ = 0.0322 ± 0.0053 (P = 9.0×10⁻¹⁰); 0.0294 ± 0.0057 with T",
+      "units": "dimensionless",
+      "scope": "McNab dataset, n = 636 (447 with T); b₂ is unit-scale invariant",
+      "class": "OBSERVED-CONTESTED",
+      "ledger_row": "NA05-07",
+      "source": "Kolokotrones et al. 2010, Nature 464:753–756, Table 1",
+      "falsifier": "MacKay 2011, J Theor Biol 280:194–196; reply Deeds, Savage & Fontana 2011, 280:197–198."
+    },
+    {
+      "panel": "I",
+      "id": "PL08-C04",
+      "statement": "The 3/4 line is drawn TANGENT to the quadratic at ~4.2 kg and the 2/3 line TANGENT at ~160 g, because those are the masses at which each exponent is locally true.",
+      "value": "3/4 at 4.18 kg; 2/3 at 159.8 g",
+      "units": "kg / g",
+      "scope": "temperature-corrected fit; the no-temperature fit moves them to ~1.8 kg and ~93 g",
+      "class": "MODELED",
+      "ledger_row": "NA05-10, NA05-11",
+      "computed_here": true,
+      "source": "Computed from b₁ = 0.5371, b₂ = 0.0294 (NA05-07/08); reproduces the corpus's printed ~4.2 kg / ~160 g",
+      "falsifier": "Arithmetic error — recompute (2/3 − b₁)/(2b₂) and (3/4 − b₁)/(2b₂). See tools/verify_pl08_math.py."
+    },
+    {
+      "panel": "I",
+      "id": "PL08-C05",
+      "statement": "Extrapolating the 3/4 line 3.1 decades down from its own tangent mass underpredicts a 3 g shrew by about a factor of two.",
+      "value": "×1.95 (discrepancy 0.291 in log₁₀)",
+      "units": "dimensionless ratio",
+      "scope": "3/4 line anchored at 4.2 kg vs the quadratic, evaluated at 3 g",
+      "class": "MODELED",
+      "ledger_row": "NA-05 §How to use a ratio",
+      "computed_here": true,
+      "source": "Computed here; reproduces NA-05's printed arithmetic (0.263 − 2.332 = −2.069; 0.75 × (0.477 − 3.623) = −2.360; difference 0.291 → ×1.95)",
+      "falsifier": "Arithmetic error. A 2× error looks like measurement noise — which is the point."
+    },
+    {
+      "panel": "II",
+      "id": "PL08-C06",
+      "statement": "The local slope rises with mass across the fitted data; there is no single exponent.",
+      "value": "0.57 → 0.87",
+      "units": "dimensionless",
+      "scope": "~3.6 g to ~460 kg; slope = b₁ + 2b₂·log₁₀M",
+      "class": "MODELED",
+      "ledger_row": "NA05-09",
+      "computed_here": true,
+      "source": "Computed from Kolokotrones Table 1; matches their stated range",
+      "falsifier": "Arithmetic error."
+    },
+    {
+      "panel": "II",
+      "id": "PL08-C07",
+      "statement": "The mass at which the local slope reaches 1 is an EXTRAPOLATION ~2.2 decades beyond the fitted data, and is drawn dashed and hatched for that reason.",
+      "value": "~7.5e+07 g ≈ 75 t",
+      "units": "g",
+      "scope": "proposed upper bound on animal size; the fitted data END at ~460 kg (local slope 0.87)",
+      "class": "MODELED",
+      "flag": "EXTRAPOLATED",
+      "ledger_row": "NA05-12",
+      "computed_here": true,
+      "source": "Computed here; Kolokotrones et al. state ~10⁸ g (100 t), and hedge it twice: the rise 'may be due to the paucity of data for large animals', and 'If this is correct'",
+      "falsifier": "A larger animal; or the slope not reaching 1."
+    },
+    {
+      "panel": "III",
+      "id": "PL08-C08",
+      "statement": "Savage et al.'s own unbinned fit rejects 3/4; only binning produces the 3/4 headline. The verdict is the CI bound, never the point estimate (rule M2).",
+      "value": "binned 0.737 [0.711, 0.762], n=52 bins; unbinned 0.712 [0.699, 0.724], n=626 spp.",
+      "units": "dimensionless",
+      "scope": "mammal BMR; ONE paper, two treatments",
+      "class": "OBSERVED-CONTESTED",
+      "ledger_row": "NA05-03, NA05-04",
+      "source": "Savage et al. 2004, Funct Ecol 18:257–282",
+      "retrieval_disclosed": "Quoted from search-indexed full text; the PDF returned HTTP 403 and was NOT opened in this pass. Load-bearing, therefore flagged, not laundered.",
+      "falsifier": "If the unbinned CI does not exclude 3/4, the sharpest claim in NA-05's Kleiber section falls and must be struck."
+    },
+    {
+      "panel": "III",
+      "id": "PL08-C09",
+      "statement": "The nine rows drawn are FIVE papers. Rounding-level agreement between restatements of the same regression is not independent corroboration.",
+      "value": "9 rows / 5 papers",
+      "units": "count",
+      "scope": "Kleiber 1932 · Savage 2004 · White & Seymour 2003 · White & Seymour 2005 · MacKay 2011",
+      "class": "OBSERVED-CONTESTED",
+      "ledger_row": "NA05-01, NA05-03…06, NA05-14",
+      "computed_here": true,
+      "source": "Counted from the panel's own row table; NA-05 makes the same catch on its own six rows (three papers)",
+      "falsifier": "Recount the distinct papers behind the rows."
+    },
+    {
+      "panel": "III",
+      "id": "PL08-C10",
+      "statement": "Hou et al.'s ant-colony metabolic exponent decides nothing: its interval excludes 2/3, 3/4 and isometry alike.",
+      "value": "0.81, 95% CI [0.55, 1.08]",
+      "units": "dimensionless",
+      "scope": "12 colonies + 391 unitary insects",
+      "class": "OBSERVED-CONTESTED",
+      "ledger_row": "NA05-38",
+      "source": "Hou et al. 2010, PNAS 107(8):3634–3638",
+      "falsifier": "More colonies; a CI that excludes an alternative. Their production exponent (0.74, CI 0.71–0.76) is the citable row."
+    },
+    {
+      "panel": "IV",
+      "id": "PL08-C11",
+      "statement": "The '3/4 is typical' evidence dissolves on its own spread: a majority of compiled exponents fall OUTSIDE 0.7–0.8.",
+      "value": "mean 0.738 ± 0.018, but 51% of exponents outside 0.7–0.8; range <0.5 to >1.0",
+      "units": "dimensionless",
+      "scope": "146 allometric relations (Peters 1983), 72% vertebrate",
+      "class": "OBSERVED-REPLICATED",
+      "ledger_row": "NA05-45",
+      "source": "Glazier 2005, Biol Rev 80:611–662",
+      "falsifier": "Recount the distribution."
+    },
+    {
+      "panel": "IV",
+      "id": "PL08-C12",
+      "statement": "Intraspecific scaling is wider still, and its MODE is 2/3, not 3/4.",
+      "value": "b = 0.3 to 1.8; mean 0.724; mode 0.667",
+      "units": "dimensionless",
+      "scope": "220 species (Withers 1992)",
+      "class": "OBSERVED-REPLICATED",
+      "ledger_row": "NA05-46",
+      "source": "Glazier 2005",
+      "falsifier": "Recount."
+    },
+    {
+      "panel": "IV",
+      "id": "PL08-C13",
+      "statement": "The exponent does not discriminate the mechanisms: elastic similarity and WBE are incompatible and both predict 3/4. WBE's finite-size form predicts CONCAVE curvature; the data are CONVEX — the wrong sign, not a poor fit.",
+      "value": "M = c₀B + c₁B^(4/3), both c > 0 → concave; data convex",
+      "units": "—",
+      "scope": "what is refuted is the specific 1997 geometry, NOT network explanations as a class",
+      "class": "MODELED",
+      "ledger_row": "NA05-17, NA05-18, NA05-36, NA05-37",
+      "source": "West, Brown & Enquist 1997, Science 276:122–126; Kolokotrones et al. 2010; McMahon 1973, Science 179:1201–1204",
+      "falsifier": "Show c₁ < 0 follows from WBE's own minimisation."
+    },
+    {
+      "panel": "V",
+      "id": "PL08-C14",
+      "statement": "Flying and swimming animals cruise in a narrow Strouhal band of high propulsive efficiency.",
+      "value": "0.2 < St < 0.4",
+      "units": "dimensionless (St = f·A/U; f in Hz, A peak-to-peak in m, U in m·s⁻¹)",
+      "scope": "AT CRUISE ONLY — dolphins, sharks, bony fish; birds, bats, insects. Not takeoff, not manoeuvre, not hovering.",
+      "class": "OBSERVED-REPLICATED",
+      "ledger_row": "NA06-01, NA07-12, NA10-20, CN10-43",
+      "source": "Taylor, Nudds & Thomas 2003, Nature 425:707–711, doi:10.1038/nature02000",
+      "falsifier": "A cruising flyer or swimmer reproducibly outside 0.2 < St < 0.4 at steady cruise, across independent labs."
+    },
+    {
+      "panel": "V",
+      "id": "PL08-C15",
+      "statement": "The band is a CENTRAL TENDENCY, not a law of individuals.",
+      "value": "species averages 0.20–0.40, but only 44% of 248 individual values fall in 0.225–0.275",
+      "units": "dimensionless",
+      "scope": "6 odontocete species, captive",
+      "class": "OBSERVED-REPLICATED",
+      "ledger_row": "NA06-02",
+      "source": "Rohr & Fish 2004, J Exp Biol 207(10):1633–1642, doi:10.1242/jeb.00948 — 'considerable scatter is found in the data both within species and among individuals'",
+      "falsifier": "Re-measure; a tight unimodal distribution would refute 'considerable scatter'."
+    },
+    {
+      "panel": "V",
+      "id": "PL08-C16",
+      "statement": "One bat's efficient cruise sits slightly BELOW the canonical 0.2 bound — the band describes where animals cruise; it is not a law they obey.",
+      "value": "St = 0.17–0.22 at 4–6 m·s⁻¹ (minimum-power speed); 0.25–0.40 at 3.4–4 m·s⁻¹; 0.5–0.68 below 3 m·s⁻¹",
+      "units": "dimensionless",
+      "scope": "Glossophaga soricina, wind tunnel, 1.23–7.52 m·s⁻¹",
+      "class": "OBSERVED-REPLICATED",
+      "ledger_row": "CN10-44",
+      "source": "Lindhe Norberg & Winter 2006, J Exp Biol 209(19):3887–3897, doi:10.1242/jeb.02446",
+      "falsifier": "High-speed replication moving the bands."
+    },
+    {
+      "panel": "V",
+      "id": "PL08-C17",
+      "statement": "The MODELLED optimum is not one band at all — it is size-dependent.",
+      "value": "St_optimal rises 0.15 → 0.8",
+      "units": "dimensionless",
+      "scope": "largest cetaceans → smallest tadpoles; 53 species; Lighthill elongated-body theory",
+      "class": "MODELED",
+      "ledger_row": "NA06-03",
+      "source": "Eloy 2012, J Fluids Struct 30:205–218, doi:10.1016/j.jfluidstructs.2012.02.008. Eloy also notes the flapping-foil experiments peaked at 0.25 < St < 0.35 — tighter than the quoted band.",
+      "falsifier": "Measure small-animal St; values pinned at 0.2–0.4 regardless of size would refute."
+    },
+    {
+      "panel": "V",
+      "id": "PL08-C18",
+      "statement": "Same symbol, different regime: the cruise band does not transfer to water-walkers.",
+      "value": "St = 0.01–0.1 (arthropods); 0.1–1 (large)",
+      "units": "dimensionless",
+      "scope": "air–water interface locomotion",
+      "class": "OBSERVED-REPLICATED",
+      "ledger_row": "NA07-13",
+      "source": "Bush & Hu 2006, Annu Rev Fluid Mech 38:339–369",
+      "falsifier": "Measured water-walker St outside the band."
+    },
+    {
+      "panel": "VI",
+      "id": "PL08-C19",
+      "statement": "Bipeds of differing leg length switch from a walk to a run at different absolute speeds but at approximately the same Froude number.",
+      "value": "Fr ≈ 0.5",
+      "units": "dimensionless (Fr = v²/(g·L), L = hip height [m])",
+      "scope": "bipeds / adult humans, Earth 1 g",
+      "class": "OBSERVED-CONTESTED",
+      "class_note": "LEDGER CLASS CONFLICT, recorded not harmonised: CN11-40 classes this OBSERVED-REPLICATED, NA06-04 classes the same quantity OBSERVED-CONTESTED, and the two rows cite different Alexander papers (1984, Int J Robot Res 3(2):49–59 vs 1983, J. Zool.). NA-05's own rule is that one result cannot hold two classes. The STRICTER class is carried here; that is a choice, not a finding.",
+      "ledger_row": "CN11-40, NA06-04",
+      "source": "Alexander 1984, Int J Robot Res 3(2):49–59 / Alexander 1983, J Zool; Kram, Domingo & Ferris 1997, J Exp Biol 200(4):821–826 — 'at approximately the same Froude number (0.5)'",
+      "falsifier": "A biped switching at a materially different Fr. And: reconcile the two ledger rows — one of them must move."
+    },
+    {
+      "panel": "VI",
+      "id": "PL08-C20",
+      "statement": "Fr ≈ 0.5 IS NOT a universal gait constant. It held on Earth and FAILED off-Earth: dynamic similarity lost its own off-Earth test.",
+      "value": "Fr at transition = 1.39 ± 0.45 (against 0.5 predicted); 6 of 8 subjects chose Fr > 1.0",
+      "units": "dimensionless",
+      "scope": "8 humans, ACTUAL lunar gravity",
+      "class": "OBSERVED-REPLICATED",
+      "flag": "NEGATIVE — a first-class recorded failure",
+      "ledger_row": "NA06-05",
+      "source": "De Witt et al. 2014, J Exp Biol 217(18):3200–3203, doi:10.1242/jeb.105684",
+      "note": "The band [0.94, 1.84] does not reach 0.5 at its lower bound. The prediction did not merely widen; it lost.",
+      "falsifier": "Repeat in reduced g; Fr ≈ 0.5 would restore the hypothesis."
+    },
+    {
+      "panel": "VI",
+      "id": "PL08-C21",
+      "statement": "The mechanical ceiling of an inverted pendulum is Fr = 1; we switch well below it, so the transition is an ENERGETIC CHOICE, not a mechanical limit.",
+      "value": "Fr = 1 → v ≈ 3.0 m·s⁻¹; the transition at Fr = 0.5 → v ≈ 2.1 m·s⁻¹",
+      "units": "m·s⁻¹",
+      "scope": "L = 0.9 m, g = 9.81 m·s⁻². COMPUTED, NOT OBSERVED. Range 2.0–2.2 m·s⁻¹ for L = 0.8–1.0 m.",
+      "class": "MODELED",
+      "ledger_row": "CN11-41, CN11-42",
+      "computed_here": true,
+      "source": "Computed from v = √(Fr·g·L); reproduces the corpus's printed ~2.1 and ~3.0 m·s⁻¹",
+      "falsifier": "Arithmetic error; or a MEASURED preferred transition speed outside 2.0–2.2 m·s⁻¹.",
+      "gap": "A measured absolute preferred transition speed, with its n, is NOT-SOURCED in this pass (Kram et al. paywalled). Only the dimensionless number is sourced."
+    },
+    {
+      "panel": "VI",
+      "id": "PL08-C22",
+      "statement": "The Froude convention trap, drawn as a ghost tick: Fr = v²/(gL) and Fr = v/√(gL) differ BY A SQUARE. A gait threshold quoted without its convention is not a threshold.",
+      "value": "Fr = 0.5 under v²/(gL) is Fr ≈ 0.71 under v/√(gL)",
+      "units": "dimensionless",
+      "scope": "every Froude number on this plate is v²/(g·L), stated",
+      "class": "MODELED",
+      "flag": "NEGATIVE / conflation trap",
+      "ledger_row": "CN08-22",
+      "computed_here": true,
+      "source": "CN-08 records this trap first-class; √0.5 computed here",
+      "falsifier": "Arithmetic error."
+    }
+  ],
+  "not_claimed": [
+    "That metabolic rate scales as M^(3/4). Nor as M^(2/3). Both lines are drawn because both are claimed in the literature; the plate asserts NEITHER. NA-05's position is that the question is malformed as usually asked, because the log–log relation carries curvature — and that THAT position is contested too.",
+    "Any absolute metabolic rate, or any prefactor. The vertical axis of panel I is a difference of logarithms with its datum stated (the 4.2 kg tangent point). b₀ is not printed in this corpus, and a prefactor moves by 1000^b when you change grams to kilograms while the exponent does not move at all. The exponent is the candidate science; the prefactor is bookkeeping.",
+    "That b₁ = 0.5371 is 'the metabolic exponent'. It is the local slope at M₀ = 1 g and changes value if you measure mass in kilograms (b₁′ = b₁ − 2b₂ log k). Only b₂ and the local slope at a NAMED mass survive a change of unit. Quoted as 'the exponent' it is INADMISSIBLE (NA05-08, MacKay 2011).",
+    "That Kolokotrones et al. (2010) settled the dispute, or that the curvature is a law of size rather than a between-Order artifact. That is exactly what is contested — and the reply defending it (Deeds, Savage & Fontana 2011) is by three of the original four authors, a rebuttal by the accused, not an independent corroboration. MacKay's Hayssen & Lacy (1985) receipt and his 70-marsupial fit stand unrebutted.",
+    "Anything to the right of the fitted-data bracket. The 74 t reading is an EXTRAPOLATION ~2.2 decades past the data, hedged twice by its own authors, and is drawn dashed and hatched for that reason. A power law fitted in one range does not extrapolate through a regime change, and the fit will not warn you.",
+    "That St = 0.2–0.4 is a law, that it applies off cruise, or that any animal's St is an adaptation. It is a central tendency at cruise; individual scatter is large (only 44% of 248 odontocete values fall in 0.225–0.275); the modelled optimum is size-dependent (0.15 → 0.8); and one bat's efficient cruise sits BELOW the 0.2 bound.",
+    "Per-taxon Strouhal values for birds, sharks, bony fish or insects. Taylor et al. (2003) NAME those taxa as converging in the band, but this corpus does not carry their individual values, so this plate plots NONE and prints the gap instead of inventing points. Falsifier: read Taylor et al.'s figure and print the per-taxon values it carries.",
+    "That Fr ≈ 0.5 is a universal gait-transition constant, or a mechanical limit. It is scoped to bipeds at 1 g; the mechanical ceiling is Fr = 1; and the measured transition in actual lunar gravity was 1.39 ± 0.45.",
+    "A measured absolute walk→run transition speed. The ~2.1 m·s⁻¹ is computed from Fr and L, not observed; the measured value with its n is NOT-SOURCED in this pass.",
+    "Lunar gravity, or any lunar speed. Only the DIMENSIONLESS lunar result is sourced; converting it to a speed would need a value of g this plate did not source.",
+    "That the trackway application is drawn here. It is not: it is recorded in the caption because a negative that is merely off-topic is still a negative (Alexander's formula ran 1.17×–4.74× measured on guineafowl in mud — Prescott et al. 2025).",
+    "That any exponent, band or threshold here is an OPTIMUM. Per Gould & Lewontin (1979), drift, phylogenetic inertia, developmental constraint, pleiotropy and frozen accidents produce values that optimise nothing — and an exponent is an unusually easy thing to find a story for after the fact. Every number here is a hypothesis generator. Per M7, a design taken from this plate must still beat a TUNED baseline on a PRE-REGISTERED metric with a discriminator that collapses the gain, or it is recorded NEGATIVE.",
+    "That anything here raises any UNI rung. A NATURE CITATION IS NEVER A UNI GATE. This plate contains ZERO UNI claims, and the honest program position is unchanged by it: ~2 of 11+ developmental rungs earned, a developmental active-inference simulation. 'Full human' and 'beyond human' appear nowhere as targets — they are permanent open questions, and reading one into a scaling law would be the exact lane-crossing this wing exists to prevent."
+  ],
+  "evidence_classes": {
+    "vocabulary": "NATURA classes, NA-00 as amended 2026-07-15-A: twelve classes in three groups (measured / derived / fenced). SOVEREIGN from the UNI fence (proven · designed · hypothesized · not-yet-built); the two never merge.",
+    "used_on_this_plate": [
+      {
+        "glyph": "—",
+        "class": "OBSERVED-REPLICATED",
+        "definition": "measured, and independently replicated across labs, datasets or taxa. Drawn as a solid rule or bar."
+      },
+      {
+        "glyph": "‡",
+        "class": "OBSERVED-CONTESTED",
+        "definition": "measured, but the community genuinely disputes it. Both positions carried; the dispute named."
+      },
+      {
+        "glyph": "⊙",
+        "class": "OBSERVED-SINGLE",
+        "definition": "measured once; no independent replication on record. One study is not a literature."
+      },
+      {
+        "glyph": "△",
+        "class": "MODELED",
+        "definition": "derived from a model that fits data. The assumptions are the fence."
+      },
+      {
+        "glyph": "◇",
+        "class": "NOT-SOURCED",
+        "definition": "a value this corpus could not trace to a source. A gap in our homework, NOT in the literature."
+      },
+      {
+        "glyph": "⊘",
+        "class": "INADMISSIBLE",
+        "definition": "cannot be asserted as stated — unfalsifiable, or an artifact of its own units."
+      }
+    ],
+    "used_on_this_plate_note": "These six badges appear on the plate — in the panels and in the numbered caption. They are the six the plate needed; they are not the six 'most important' classes. The claims[] list below carries a class per claim; OBSERVED-SINGLE, NOT-SOURCED and INADMISSIBLE appear on the plate as fences ON claims (e.g. b₁ quoted as 'the exponent' is INADMISSIBLE; the Savage intervals' retrieval and the White & Seymour '±' convention are NOT-SOURCED) rather than as any claim's own class.",
+    "not_a_class": [
+      {
+        "glyph": "✗",
+        "record": "NEGATIVE / trap",
+        "definition": "a conflation, a defect or a failed prediction, recorded first-class — never deleted, never mocked. This is a RECORD, not one of the twelve classes."
+      }
+    ],
+    "registered_but_unused_here": [
+      "HYPOTHESIZED",
+      "MODELED-CONTESTED",
+      "SUPERSEDED",
+      "NOT-CONFIRMED",
+      "NOT-LOCATED",
+      "NOT-MEASURED"
+    ]
+  },
+  "defects_recorded_by_this_plate": [
+    {
+      "id": "PL08-D01",
+      "severity": "class conflict in the corpus's own ledger",
+      "statement": "Fr at walk→run ≈ 0.5 carries TWO different classes: CN11-40 = OBSERVED-REPLICATED, NA06-04 = OBSERVED-CONTESTED — for the same quantity. The two rows also cite different Alexander papers (1984, Int J Robot Res 3(2):49–59 vs 1983, J. Zool.).",
+      "rule_violated": "NA-05's own rule: one result cannot hold two classes (it re-classed NA05-06 for precisely this).",
+      "action_taken": "The plate carries the STRICTER class (OBSERVED-CONTESTED) and prints the conflict rather than harmonising it silently.",
+      "falsifier": "Reconcile CN11-40 and NA06-04 in encyclopedia/NATURE-LEDGER.md — one row must move."
+    },
+    {
+      "id": "PL08-D02",
+      "severity": "class conflict in the corpus's own ledger",
+      "statement": "The Prescott et al. 2025 guineafowl trackway-error ratio (1.17×–4.74×) carries two classes: NA06-07 = OBSERVED-REPLICATED, CN08-26 = OBSERVED-SINGLE (single study, n = 2, one species). The scopes also differ (NA06-07 says '92 strides'; CN08-24 says 'n=2 individuals, 20 trials').",
+      "rule_violated": "Same rule; and by the amendment's own definition a single study with n = 2 of one species cannot be OBSERVED-REPLICATED.",
+      "action_taken": "The plate carries the stricter class (OBSERVED-SINGLE) and prints the conflict. The trackway result is caption-only, not drawn.",
+      "falsifier": "Reconcile NA06-07 and CN08-26 — one row must move."
+    },
+    {
+      "id": "PL08-D03",
+      "severity": "adjacent plate defect, NOT fixed by this plate",
+      "statement": "reader/plates/PL-05.svg declares viewBox '0 0 1440 2700' but its ink reaches y = 2809.6 — the last ~110 px (nine lines of its 'WHAT THIS PLATE DOES NOT CLAIM' block) are clipped when it is rendered standalone.",
+      "action_taken": "Not touched — it is another plate. PL-08 asserts its own viewBox contains its ink and the build fails if it does not.",
+      "falsifier": "Render PL-05.svg standalone and read its final block."
+    }
+  ],
+  "design_fence": {
+    "design_only": "No <script>, no on* event handlers, no external references (no xlink, no @import, no webfont, no remote image). Verified at build time; the build fails otherwise. The only http:// string in the file is the SVG namespace URI, which is a namespace identifier and is never fetched.",
+    "responsive": "viewBox-based with width=100% and preserveAspectRatio; renders standalone AND inline.",
+    "theme": "Light and dark via CSS custom properties with literal fallbacks: @media (prefers-color-scheme:dark) for the standalone case, plus :root[data-theme=…] hooks for the inline harness.",
+    "greyscale": "Marks, not colours: line weight, dash pattern and hatch density carry every distinction colour carries. Checked by rendering to greyscale.",
+    "units": "Every measured label carries its units, or is explicitly dimensionless.",
+    "viewBox": "0 0 1440 3417 — the build asserts the ink's maximum y lies inside it."
+  },
+  "falsifier_for_this_plate": "Every drawn coordinate derives from constants printed in the corpus, and every computed value is checked against the corpus's own printed arithmetic by the pre-registered script tools/verify_pl08_math.py (20 checks: the five local-slope crossings under both fits, the shrew extrapolation and its verbatim intermediates 0.263 − 2.332, the four Froude speeds, √0.5, and the CI-vs-threshold verdicts). If any check fails, the plate is wrong and must not be drawn. Secondary falsifiers are row-local: any number found outside its stated scope under its stated conditions moves that row and only that row.",
+  "generated": {
+    "by": "build_pl08.py (+ build_pl08_json.py)",
+    "corpus_tip": "f1be794",
+    "falsifier_script": "tools/verify_pl08_math.py — run it; exit 0 = the plate's geometry reproduces the corpus.",
+    "note": "The SVG and this sidecar are generated from the same constants so they cannot drift."
+  }
+}
